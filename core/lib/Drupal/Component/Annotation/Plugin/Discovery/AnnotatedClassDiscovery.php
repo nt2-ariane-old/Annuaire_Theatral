@@ -3,15 +3,17 @@
 namespace Drupal\Component\Annotation\Plugin\Discovery;
 
 use Drupal\Component\Annotation\AnnotationInterface;
+use Drupal\Component\FileCache\FileCacheFactory;
 use Drupal\Component\Plugin\Discovery\DiscoveryInterface;
 use Drupal\Component\Annotation\Reflection\MockFileFinder;
 use Doctrine\Common\Annotations\SimpleAnnotationReader;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\Common\Reflection\StaticReflectionParser;
 use Drupal\Component\Plugin\Discovery\DiscoveryTrait;
+use Drupal\Component\Utility\Crypt;
 
 /**
- * Defines a discovery mechanism to find annotated plugins in PSR-0 namespaces.
+ * Defines a discovery mechanism to find annotated plugins in PSR-4 namespaces.
  */
 class AnnotatedClassDiscovery implements DiscoveryInterface {
 
@@ -49,6 +51,13 @@ class AnnotatedClassDiscovery implements DiscoveryInterface {
   protected $annotationNamespaces = [];
 
   /**
+   * The file cache object.
+   *
+   * @var \Drupal\Component\FileCache\FileCacheInterface
+   */
+  protected $fileCache;
+
+  /**
    * Constructs a new instance.
    *
    * @param string[] $plugin_namespaces
@@ -60,10 +69,14 @@ class AnnotatedClassDiscovery implements DiscoveryInterface {
    * @param string[] $annotation_namespaces
    *   (optional) Additional namespaces to be scanned for annotation classes.
    */
-  function __construct($plugin_namespaces = array(), $plugin_definition_annotation_name = 'Drupal\Component\Annotation\Plugin', array $annotation_namespaces = []) {
+  public function __construct($plugin_namespaces = [], $plugin_definition_annotation_name = 'Drupal\Component\Annotation\Plugin', array $annotation_namespaces = []) {
     $this->pluginNamespaces = $plugin_namespaces;
     $this->pluginDefinitionAnnotationName = $plugin_definition_annotation_name;
     $this->annotationNamespaces = $annotation_namespaces;
+
+    $file_cache_suffix = str_replace('\\', '_', $plugin_definition_annotation_name);
+    $file_cache_suffix .= ':' . Crypt::hashBase64(serialize($annotation_namespaces));
+    $this->fileCache = FileCacheFactory::get('annotation_discovery:' . $file_cache_suffix);
   }
 
   /**
@@ -92,7 +105,7 @@ class AnnotatedClassDiscovery implements DiscoveryInterface {
    * {@inheritdoc}
    */
   public function getDefinitions() {
-    $definitions = array();
+    $definitions = [];
 
     $reader = $this->getAnnotationReader();
 
@@ -101,7 +114,7 @@ class AnnotatedClassDiscovery implements DiscoveryInterface {
     // Register the namespaces of classes that can be used for annotations.
     AnnotationRegistry::registerLoader('class_exists');
 
-    // Search for classes within all PSR-0 namespace locations.
+    // Search for classes within all PSR-4 namespace locations.
     foreach ($this->getPluginNamespaces() as $namespace => $dirs) {
       foreach ($dirs as $dir) {
         if (file_exists($dir)) {
@@ -110,6 +123,14 @@ class AnnotatedClassDiscovery implements DiscoveryInterface {
           );
           foreach ($iterator as $fileinfo) {
             if ($fileinfo->getExtension() == 'php') {
+              if ($cached = $this->fileCache->get($fileinfo->getPathName())) {
+                if (isset($cached['id'])) {
+                  // Explicitly unserialize this to create a new object instance.
+                  $definitions[$cached['id']] = unserialize($cached['content']);
+                }
+                continue;
+              }
+
               $sub_path = $iterator->getSubIterator()->getSubPath();
               $sub_path = $sub_path ? str_replace(DIRECTORY_SEPARATOR, '\\', $sub_path) . '\\' : '';
               $class = $namespace . '\\' . $sub_path . $fileinfo->getBasename('.php');
@@ -123,7 +144,16 @@ class AnnotatedClassDiscovery implements DiscoveryInterface {
               /** @var $annotation \Drupal\Component\Annotation\AnnotationInterface */
               if ($annotation = $reader->getClassAnnotation($parser->getReflectionClass(), $this->pluginDefinitionAnnotationName)) {
                 $this->prepareAnnotationDefinition($annotation, $class);
-                $definitions[$annotation->getId()] = $annotation->get();
+
+                $id = $annotation->getId();
+                $content = $annotation->get();
+                $definitions[$id] = $content;
+                // Explicitly serialize this to create a new object instance.
+                $this->fileCache->set($fileinfo->getPathName(), ['id' => $id, 'content' => serialize($content)]);
+              }
+              else {
+                // Store a NULL object, so the file is not reparsed again.
+                $this->fileCache->set($fileinfo->getPathName(), [NULL]);
               }
             }
           }
@@ -150,7 +180,7 @@ class AnnotatedClassDiscovery implements DiscoveryInterface {
   }
 
   /**
-   * Gets an array of PSR-0 namespaces to search for plugin classes.
+   * Gets an array of PSR-4 namespaces to search for plugin classes.
    *
    * @return string[]
    */

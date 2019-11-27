@@ -1,12 +1,11 @@
 type: module
 name: Inline Form Errors
-description: 'Adds WCAG 2.0 accessibility compliance for web form errors. Some form functionality may not work with this experimental module.'
+description: 'Places error messages adjacent to form inputs, for improved usability and accessibility.'
 # version: VERSION
-# core: 8.x
-package: Core (Experimental)
+core: 8.x
+package: Core
 
-# Information added by Drupal.org packaging script on 2016-09-07
-version: '8.1.9'
-core: '8.x'
+# Information added by Drupal.org packaging script on 2019-11-13
+version: '8.7.10'
 project: 'drupal'
-datestamp: 1473276445
+datestamp: 1573688104

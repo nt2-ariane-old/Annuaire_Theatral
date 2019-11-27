@@ -8,15 +8,11 @@
 namespace Drupal\Tests\migrate\Unit\Plugin\migrate\destination;
 
 use Drupal\Core\Entity\ContentEntityInterface;
-use Drupal\Core\Entity\ContentEntityType;
-use Drupal\Core\Entity\EntityManagerInterface;
-use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Field\FieldTypePluginManagerInterface;
-use Drupal\migrate\Plugin\MigrationInterface;
+use Drupal\migrate\MigrateException;
 use Drupal\migrate\Plugin\migrate\destination\EntityContentBase;
 use Drupal\migrate\Plugin\MigrateIdMapInterface;
 use Drupal\migrate\Row;
-use Drupal\Tests\UnitTestCase;
 
 /**
  * Tests base entity migration destination functionality.
@@ -24,33 +20,7 @@ use Drupal\Tests\UnitTestCase;
  * @coversDefaultClass \Drupal\migrate\Plugin\migrate\destination\EntityContentBase
  * @group migrate
  */
-class EntityContentBaseTest extends UnitTestCase {
-
-  /**
-   * @var \Drupal\migrate\Plugin\MigrationInterface
-   */
-  protected $migration;
-
-  /**
-   * @var \Drupal\Core\Entity\EntityStorageInterface
-   */
-  protected $storage;
-
-  /**
-   * @var \Drupal\Core\Entity\EntityManagerInterface
-   */
-  protected $entityManager;
-
-  /**
-   * {@inheritdoc}
-   */
-  protected function setUp() {
-    parent::setUp();
-
-    $this->migration = $this->prophesize(MigrationInterface::class);
-    $this->storage = $this->prophesize(EntityStorageInterface::class);
-    $this->entityManager = $this->prophesize(EntityManagerInterface::class);
-  }
+class EntityContentBaseTest extends EntityTestBase {
 
   /**
    * Test basic entity save.
@@ -74,7 +44,7 @@ class EntityContentBaseTest extends UnitTestCase {
       ->willReturn(5);
     $destination->setEntity($entity->reveal());
     // Ensure the id is saved entity id is returned from import.
-    $this->assertEquals([5], $destination->import(new Row([], [])));
+    $this->assertEquals([5], $destination->import(new Row()));
     // Assert that import set the rollback action.
     $this->assertEquals(MigrateIdMapInterface::ROLLBACK_DELETE, $destination->rollbackAction());
   }
@@ -83,8 +53,6 @@ class EntityContentBaseTest extends UnitTestCase {
    * Test row skipping when we can't get an entity to save.
    *
    * @covers ::import
-   * @expectedException \Drupal\migrate\MigrateException
-   * @expectedExceptionMessage Unable to get entity
    */
   public function testImportEntityLoadFailure() {
     $bundles = [];
@@ -95,25 +63,22 @@ class EntityContentBaseTest extends UnitTestCase {
       $this->entityManager->reveal(),
       $this->prophesize(FieldTypePluginManagerInterface::class)->reveal());
     $destination->setEntity(FALSE);
-    $destination->import(new Row([], []));
+    $this->setExpectedException(MigrateException::class, 'Unable to get entity');
+    $destination->import(new Row());
   }
 
   /**
    * Test that translation destination fails for untranslatable entities.
-   *
-   * @expectedException \Drupal\migrate\MigrateException
-   * @expectedExceptionMessage This entity type does not support translation
    */
   public function testUntranslatable() {
     // An entity type without a language.
-    $entity_type = $this->prophesize(ContentEntityType::class);
-    $entity_type->getKey('langcode')->willReturn('');
-    $entity_type->getKey('id')->willReturn('id');
-
-    $this->storage->getEntityType()->willReturn($entity_type->reveal());
+    $this->entityType->getKey('langcode')->willReturn('');
+    $this->entityType->getKey('id')->willReturn('id');
+    $this->entityManager->getBaseFieldDefinitions('foo')
+      ->willReturn(['id' => BaseFieldDefinitionTest::create('integer')]);
 
     $destination = new EntityTestDestination(
-      [ 'translations' => TRUE ],
+      ['translations' => TRUE],
       '',
       [],
       $this->migration->reveal(),
@@ -122,6 +87,7 @@ class EntityContentBaseTest extends UnitTestCase {
       $this->entityManager->reveal(),
       $this->prophesize(FieldTypePluginManagerInterface::class)->reveal()
     );
+    $this->setExpectedException(MigrateException::class, 'The "foo" entity type does not support translations.');
     $destination->getIds();
   }
 
@@ -142,6 +108,10 @@ class EntityTestDestination extends EntityContentBase {
 
   protected function getEntity(Row $row, array $old_destination_id_values) {
     return $this->entity;
+  }
+
+  public static function getEntityTypeId($plugin_id) {
+    return 'foo';
   }
 
 }

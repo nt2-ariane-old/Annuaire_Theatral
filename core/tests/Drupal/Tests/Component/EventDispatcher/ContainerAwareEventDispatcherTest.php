@@ -6,9 +6,10 @@ namespace Drupal\Tests\Component\EventDispatcher;
 use Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\Tests\CallableClass;
-use Symfony\Component\EventDispatcher\Tests\TestEventListener;
 use Symfony\Component\EventDispatcher\Tests\ContainerAwareEventDispatcherTest as SymfonyContainerAwareEventDispatcherTest;
+use Symfony\Component\EventDispatcher\Tests\TestEventListener;
 
 /**
  * Unit tests for the ContainerAwareEventDispatcher.
@@ -37,7 +38,7 @@ class ContainerAwareEventDispatcherTest extends SymfonyContainerAwareEventDispat
         // When passing in callables exclusively as listeners into the event
         // dispatcher constructor, the event dispatcher must not attempt to
         // resolve any services.
-        $container = $this->getMock('Symfony\Component\DependencyInjection\IntrospectableContainerInterface');
+        $container = $this->getMockBuilder(ContainerInterface::class)->getMock();
         $container->expects($this->never())->method($this->anything());
 
         $firstListener = new CallableClass();
@@ -72,7 +73,7 @@ class ContainerAwareEventDispatcherTest extends SymfonyContainerAwareEventDispat
         // When passing in callables exclusively as listeners into the event
         // dispatcher constructor, the event dispatcher must not attempt to
         // resolve any services.
-        $container = $this->getMock('Symfony\Component\DependencyInjection\IntrospectableContainerInterface');
+        $container = $this->getMockBuilder(ContainerInterface::class)->getMock();
         $container->expects($this->never())->method($this->anything());
 
         $firstListener = new CallableClass();
@@ -172,10 +173,79 @@ class ContainerAwareEventDispatcherTest extends SymfonyContainerAwareEventDispat
         $this->assertTrue($otherService->preFooInvoked);
     }
 
-    public function testGetListenerPriority()
+    public function testGetListenerPriorityWithServices()
     {
-        // Override the parent test as our implementation doesn't define
-        // getListenerPriority().
+        $container = new ContainerBuilder();
+        $container->register('listener_service', TestEventListener::class);
+
+        $listeners = array(
+            'test_event' => array(
+                5 => array(
+                    array('service' => array('listener_service', 'preFoo')),
+                ),
+            ),
+        );
+
+        $dispatcher = new ContainerAwareEventDispatcher($container, $listeners);
+        $listenerService = $container->get('listener_service');
+        $actualPriority = $dispatcher->getListenerPriority('test_event', [$listenerService, 'preFoo']);
+
+        $this->assertSame(5, $actualPriority);
     }
 
+    /**
+     * @expectedDeprecation The Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher class is deprecated since Symfony 3.3 and will be removed in 4.0. Use EventDispatcher with closure factories instead.
+     * @group legacy
+     */
+    public function testAddAListenerService() {
+      parent::testAddAListenerService();
+    }
+
+    /**
+     * @expectedDeprecation The Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher class is deprecated since Symfony 3.3 and will be removed in 4.0. Use EventDispatcher with closure factories instead.
+     * @group legacy
+     */
+    public function testPreventDuplicateListenerService() {
+      parent::testPreventDuplicateListenerService();
+    }
+
+    /**
+     * @expectedDeprecation The Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher class is deprecated since Symfony 3.3 and will be removed in 4.0. Use EventDispatcher with closure factories instead.
+     * @group legacy
+     */
+    public function testAddASubscriberService() {
+      parent::testAddASubscriberService();
+    }
+
+    /**
+     * @expectedDeprecation The Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher class is deprecated since Symfony 3.3 and will be removed in 4.0. Use EventDispatcher with closure factories instead.
+     * @group legacy
+     */
+    public function testHasListenersOnLazyLoad() {
+      parent::testHasListenersOnLazyLoad();
+    }
+
+    /**
+     * @expectedDeprecation The Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher class is deprecated since Symfony 3.3 and will be removed in 4.0. Use EventDispatcher with closure factories instead.
+     * @group legacy
+     */
+    public function testGetListenersOnLazyLoad() {
+      parent::testGetListenersOnLazyLoad();
+    }
+
+    /**
+     * @expectedDeprecation The Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher class is deprecated since Symfony 3.3 and will be removed in 4.0. Use EventDispatcher with closure factories instead.
+     * @group legacy
+     */
+    public function testRemoveAfterDispatch() {
+      parent::testRemoveAfterDispatch();
+    }
+
+    /**
+     * @expectedDeprecation The Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher class is deprecated since Symfony 3.3 and will be removed in 4.0. Use EventDispatcher with closure factories instead.
+     * @group legacy
+     */
+    public function testRemoveBeforeDispatch() {
+      parent::testRemoveBeforeDispatch();
+    }
  }

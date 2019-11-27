@@ -6,8 +6,8 @@
  * upgrade path of https://www.drupal.org/node/507488.
  */
 
-use Drupal\Component\Serialization\Yaml;
 use Drupal\Core\Database\Database;
+use Drupal\Core\Serialization\Yaml;
 
 $connection = Database::getConnection();
 
@@ -31,16 +31,16 @@ foreach ($block_configs as $block_config) {
 
 // Update the config entity query "index".
 $existing_blocks = $connection->select('key_value')
-    ->fields('key_value', ['value'])
-    ->condition('collection', 'config.entity.key_store.block')
-    ->condition('name', 'theme:seven')
-    ->execute()
-    ->fetchField();
+  ->fields('key_value', ['value'])
+  ->condition('collection', 'config.entity.key_store.block')
+  ->condition('name', 'theme:seven')
+  ->execute()
+  ->fetchField();
 $existing_blocks = unserialize($existing_blocks);
 
 $connection->update('key_value')
   ->fields([
-    'value' => serialize(array_merge($existing_blocks, ['block.block.seven_secondary_local_tasks']))
+    'value' => serialize(array_merge($existing_blocks, ['block.block.seven_secondary_local_tasks'])),
   ])
   ->condition('collection', 'config.entity.key_store.block')
   ->condition('name', 'theme:seven')

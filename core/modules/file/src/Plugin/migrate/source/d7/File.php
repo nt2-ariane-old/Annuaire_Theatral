@@ -10,7 +10,8 @@ use Drupal\migrate_drupal\Plugin\migrate\source\DrupalSqlBase;
  * Drupal 7 file source from database.
  *
  * @MigrateSource(
- *   id = "d7_file"
+ *   id = "d7_file",
+ *   source_module = "file"
  * )
  */
 class File extends DrupalSqlBase {
@@ -42,18 +43,21 @@ class File extends DrupalSqlBase {
   public function query() {
     $query = $this->select('file_managed', 'f')
       ->fields('f')
+      ->condition('uri', 'temporary://%', 'NOT LIKE')
       ->orderBy('f.timestamp');
 
     // Filter by scheme(s), if configured.
     if (isset($this->configuration['scheme'])) {
-      $schemes = array();
+      $schemes = [];
+      // Remove 'temporary' scheme.
+      $valid_schemes = array_diff((array) $this->configuration['scheme'], ['temporary']);
       // Accept either a single scheme, or a list.
-      foreach ((array) $this->configuration['scheme'] as $scheme) {
+      foreach ((array) $valid_schemes as $scheme) {
         $schemes[] = rtrim($scheme) . '://';
       }
       $schemes = array_map([$this->getDatabase(), 'escapeLike'], $schemes);
 
-      // uri LIKE 'public://%' OR uri LIKE 'private://%'
+      // Add conditions, uri LIKE 'public://%' OR uri LIKE 'private://%'.
       $conditions = new Condition('OR');
       foreach ($schemes as $scheme) {
         $conditions->condition('uri', $scheme . '%', 'LIKE');
@@ -84,9 +88,7 @@ class File extends DrupalSqlBase {
     // At this point, $path could be an absolute path or a relative path,
     // depending on how the scheme's variable was set. So we need to shear out
     // the source_base_path in order to make them all relative.
-    // @todo https://www.drupal.org/node/2577871 Don't depend on destination
-    //   configuration and figure out if this is even needed at all?
-    $path = str_replace($this->migration->getDestinationConfiguration()['source_base_path'], NULL, $path);
+    $path = str_replace($this->configuration['constants']['source_base_path'], NULL, $path);
     $row->setSourceProperty('filepath', $path);
     return parent::prepareRow($row);
   }
@@ -95,7 +97,7 @@ class File extends DrupalSqlBase {
    * {@inheritdoc}
    */
   public function fields() {
-    return array(
+    return [
       'fid' => $this->t('File ID'),
       'uid' => $this->t('The {users}.uid who added the file. If set to 0, this file was added by an anonymous user.'),
       'filename' => $this->t('File name'),
@@ -103,7 +105,7 @@ class File extends DrupalSqlBase {
       'filemime' => $this->t('File MIME Type'),
       'status' => $this->t('The published status of a file.'),
       'timestamp' => $this->t('The time that the file was added.'),
-    );
+    ];
   }
 
   /**

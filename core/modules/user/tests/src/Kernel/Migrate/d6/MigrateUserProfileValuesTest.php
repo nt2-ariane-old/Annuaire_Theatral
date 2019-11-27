@@ -15,10 +15,16 @@ class MigrateUserProfileValuesTest extends MigrateDrupal6TestBase {
   /**
    * {@inheritdoc}
    */
+  public static $modules = ['language'];
+
+  /**
+   * {@inheritdoc}
+   */
   protected function setUp() {
     parent::setUp();
 
     $this->executeMigrations([
+      'language',
       'user_profile_field',
       'user_profile_field_instance',
       'user_profile_entity_display',
@@ -53,7 +59,13 @@ EOT;
     $this->assertNull($user->profile_blog->title);
     $this->assertIdentical([], $user->profile_blog->options);
     $this->assertIdentical('http://example.com/blog', $user->profile_blog->uri);
-    $this->assertNull($user->profile_love_migrations->value);
+
+    // Check that the source profile field names that are longer than 32
+    // characters have been migrated.
+    $this->assertNotNull($user->getFieldDefinition('profile_really_really_love_mig'));
+    $this->assertNotNull($user->getFieldDefinition('profile_really_really_love_mig1'));
+    $this->assertSame('1', $user->profile_really_really_love_mig->value);
+    $this->assertNull($user->profile_really_really_love_mig1->value);
 
     $user = User::load(8);
     $this->assertIdentical('Forward/slash', $user->profile_sold_to->value);

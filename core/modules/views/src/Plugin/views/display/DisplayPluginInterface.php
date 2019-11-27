@@ -233,7 +233,7 @@ interface DisplayPluginInterface {
    * block display links to a page display, the page display will be returned
    * in both cases.
    *
-   * @return \Drupal\views\Plugin\views\display\DisplayRouterInterface|NULL
+   * @return \Drupal\views\Plugin\views\display\DisplayRouterInterface|null
    */
   public function getRoutedDisplay();
 
@@ -457,7 +457,6 @@ interface DisplayPluginInterface {
    */
   public function execute();
 
-
   /**
    * Builds a basic render array which can be properly render cached.
    *
@@ -497,7 +496,7 @@ interface DisplayPluginInterface {
    *
    * Also might be used for some other AJAXy reason.
    */
-  function preview();
+  public function preview();
 
   /**
    * Returns the display type that this display requires.

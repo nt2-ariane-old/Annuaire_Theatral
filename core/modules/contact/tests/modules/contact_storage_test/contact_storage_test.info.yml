@@ -3,13 +3,12 @@ type: module
 description: 'Tests that contact messages can be stored.'
 package: Testing
 # version: VERSION
-# core: 8.x
+core: 8.x
 dependencies:
-  - contact
-  - user
+  - drupal:contact
+  - drupal:user
 
-# Information added by Drupal.org packaging script on 2016-09-07
-version: '8.1.9'
-core: '8.x'
+# Information added by Drupal.org packaging script on 2019-11-13
+version: '8.7.10'
 project: 'drupal'
-datestamp: 1473276443
+datestamp: 1573688104

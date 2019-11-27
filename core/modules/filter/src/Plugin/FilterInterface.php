@@ -2,8 +2,10 @@
 
 namespace Drupal\filter\Plugin;
 
-use Drupal\Component\Plugin\PluginInspectionInterface;
 use Drupal\Component\Plugin\ConfigurablePluginInterface;
+use Drupal\Component\Plugin\PluginInspectionInterface;
+use Drupal\Component\Plugin\ConfigurableInterface;
+use Drupal\Component\Plugin\DependentPluginInterface;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -32,7 +34,7 @@ use Drupal\Core\Form\FormStateInterface;
  * should then actually change the content: transform URLs into hyperlinks,
  * convert smileys into images, etc.
  *
- * @see filter_process_text()
+ * @see \Drupal\filter\Plugin\FilterInterface::process()
  * @see check_markup()
  *
  * Typically, only text processing is applied, but in more advanced use cases,
@@ -75,27 +77,27 @@ use Drupal\Core\Form\FormStateInterface;
  * @see \Drupal\filter\Plugin\FilterBase
  * @see plugin_api
  */
-interface FilterInterface extends ConfigurablePluginInterface, PluginInspectionInterface {
+interface FilterInterface extends ConfigurableInterface, DependentPluginInterface, ConfigurablePluginInterface, PluginInspectionInterface {
 
-   /**
-    * Non-HTML markup language filters that generate HTML.
-    */
-   const TYPE_MARKUP_LANGUAGE = 0;
+  /**
+   * Non-HTML markup language filters that generate HTML.
+   */
+  const TYPE_MARKUP_LANGUAGE = 0;
 
-   /**
-    * HTML tag and attribute restricting filters to prevent XSS attacks.
-    */
-   const TYPE_HTML_RESTRICTOR = 1;
+  /**
+   * HTML tag and attribute restricting filters to prevent XSS attacks.
+   */
+  const TYPE_HTML_RESTRICTOR = 1;
 
-   /**
-    * Reversible transformation filters.
-    */
-   const TYPE_TRANSFORM_REVERSIBLE = 2;
+  /**
+   * Reversible transformation filters.
+   */
+  const TYPE_TRANSFORM_REVERSIBLE = 2;
 
-   /**
-    * Irreversible transformation filters.
-    */
-   const TYPE_TRANSFORM_IRREVERSIBLE = 3;
+  /**
+   * Irreversible transformation filters.
+   */
+  const TYPE_TRANSFORM_IRREVERSIBLE = 3;
 
   /**
    * Returns the processing type of this filter plugin.
@@ -182,7 +184,7 @@ interface FilterInterface extends ConfigurablePluginInterface, PluginInspectionI
    * a generic manner into which HTML tags and attributes are allowed by a
    * format.
    *
-   * @return array|FALSE
+   * @return array|false
    *   A nested array with *either* of the following keys:
    *     - 'allowed': (optional) the allowed tags as keys, and for each of those
    *       tags (keys) either of the following values:

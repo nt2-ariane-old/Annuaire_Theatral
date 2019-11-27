@@ -5,12 +5,14 @@ namespace Drupal\Core\Form;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
+use Drupal\Core\Logger\LoggerChannelTrait;
 use Drupal\Core\Routing\LinkGeneratorTrait;
 use Drupal\Core\Routing\RedirectDestinationTrait;
 use Drupal\Core\Routing\UrlGeneratorTrait;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Drupal\Core\Messenger\MessengerTrait;
 
 /**
  * Provides a base class for forms.
@@ -43,6 +45,8 @@ abstract class FormBase implements FormInterface, ContainerInjectionInterface {
 
   use DependencySerializationTrait;
   use LinkGeneratorTrait;
+  use LoggerChannelTrait;
+  use MessengerTrait;
   use RedirectDestinationTrait;
   use StringTranslationTrait;
   use UrlGeneratorTrait;
@@ -65,13 +69,6 @@ abstract class FormBase implements FormInterface, ContainerInjectionInterface {
    * @var \Drupal\Core\Config\ConfigFactoryInterface
    */
   protected $configFactory;
-
-  /**
-   * The logger factory.
-   *
-   * @var \Drupal\Core\Logger\LoggerChannelFactoryInterface
-   */
-  protected $loggerFactory;
 
   /**
    * The route match.
@@ -152,7 +149,7 @@ abstract class FormBase implements FormInterface, ContainerInjectionInterface {
   /**
    * Gets the request object.
    *
-   * @return \Symfony\Component\HttpFoundation\Request $request
+   * @return \Symfony\Component\HttpFoundation\Request
    *   The request object.
    */
   protected function getRequest() {
@@ -205,7 +202,7 @@ abstract class FormBase implements FormInterface, ContainerInjectionInterface {
    * \Drupal\Core\DependencyInjection\ContainerInjectionInterface should be used
    * for injecting services.
    *
-   * @return \Symfony\Component\DependencyInjection\ContainerInterface $container
+   * @return \Symfony\Component\DependencyInjection\ContainerInterface
    *   The service container.
    */
   private function container() {
@@ -215,17 +212,18 @@ abstract class FormBase implements FormInterface, ContainerInjectionInterface {
   /**
    * Gets the logger for a specific channel.
    *
+   * This method exists for backward-compatibility between FormBase and
+   * LoggerChannelTrait. Use LoggerChannelTrait::getLogger() instead.
+   *
    * @param string $channel
-   *   The name of the channel.
+   *   The name of the channel. Can be any string, but the general practice is
+   *   to use the name of the subsystem calling this.
    *
    * @return \Psr\Log\LoggerInterface
-   *   The logger for this channel.
+   *   The logger for the given channel.
    */
   protected function logger($channel) {
-    if (!$this->loggerFactory) {
-      $this->loggerFactory = $this->container()->get('logger.factory');
-    }
-    return $this->loggerFactory->get($channel);
+    return $this->getLogger($channel);
   }
 
 }
