@@ -1,0 +1,78 @@
+lano-light:
+  version: VERSION
+  css:
+    theme:
+      css/normalize.css: {}
+      css/base.css: {}
+      css/style.css: {}
+      css/photoswipe.css: {}
+      css/default-skin/default-skin.css: {} 
+      css/animsition.min.css: {}
+      css/royal_preloader.css: {}
+      css/jquery.fullPage.css: {}
+      css/jquery.fancybox.css: {}
+      css/font-awesome.min.css: {}
+      css/animate.css: {}
+      fontastic.css: {}
+      css/update-lano.css: {}
+  js:
+    js/modernizr.js: {}
+    # js/jquery-1.11.3.min.js: {}
+    https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js: {}
+    js/isotope.pkgd.min.js: {}
+    js/imagesloaded.pkgd.min.js: {}
+    js/jquery.animsition.min.js: {}
+    js/jquery.fullPage.min.js: {}
+    js/royal_preloader.min.js: {}
+    js/jquery.fancybox.pack.js: {}
+    js/wow.min.js: {}
+    js/tweecoolmi.js: {}
+    js/jquery.mb-comingsoon.min.js: {}
+    js/photoswipe.min.js: {}
+    js/photoswipe-ui-default.min.js: {}
+    js/idangerous.swiper.min.js: {}
+    js/typed.js: {}
+    js/plugins.js: {}
+    js/scripts.js: {}
+    js/update-lano.js: {}
+  dependencies:
+    - core/jquery
+lano-dark:
+  version: VERSION
+  css:
+    theme:
+      css/normalize.css: {}
+      css/base.css: {}
+      css/style.css: {}
+      css/dark.css: {}
+      css/royal_preloader.css: {}
+      css/animsition.min.css: {}
+      css/jquery.fullPage.css: {}
+      css/jquery.fancybox.css: {}
+      css/font-awesome.min.css: {}
+      css/animate.css: {}
+      css/mb-comingsoon.css: {}
+      fontastic.css: {}
+      css/update-lano.css: {}
+  js:
+    js/modernizr.js: {}
+    # js/jquery-1.11.3.min.js: {}
+    https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js: {}
+    js/isotope.pkgd.min.js: {}
+    js/imagesloaded.pkgd.min.js: {}
+    js/jquery.animsition.min.js: {}
+    js/jquery.fullPage.min.js: {}
+    js/royal_preloader.min.js: {}
+    js/jquery.fancybox.pack.js: {}
+    js/wow.min.js: {}
+    js/tweecoolmi.js: {}
+    js/jquery.mb-comingsoon.min.js: {}
+    js/photoswipe.min.js: {}
+    js/photoswipe-ui-default.min.js: {}
+    js/idangerous.swiper.min.js: {}
+    js/typed.js: {}
+    js/plugins.js: {}
+    js/scripts.js: {}
+    js/update-lano.js: {}
+  dependencies:
+    - core/jquery

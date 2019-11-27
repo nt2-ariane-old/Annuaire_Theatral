@@ -1,0 +1,27 @@
+{% include theme_path ~ "/templates/border/border.html.twig" %}
+
+
+
+    {{page.region_messages}}
+    {{page.region_top}}
+<section class="w-section section-imp more-padding dark-gray page-user-cus">
+        <div class="content">
+            <div class="container">
+                <div class="comments_area pa-0">
+                    <div class="logregform two register-form">
+                        <div class="title">
+                            <h3>REGISTRATION</h3>
+                            <p>Already Registered? &nbsp;<a href="{{ base_path }}user">Log In.</a></p>
+                        </div>
+                        <div class="feildcont">
+                            {{ page.content }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{page.region_mid}}
+    {{page.region_bot}}
+    {{ page.newsletter }}
+    {% include theme_path ~ "/templates/footer.html.twig" %}

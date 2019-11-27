@@ -1,0 +1,454 @@
+{% if id == 'lano_section_content' %}
+	<!-- lano_section_content -->
+	{% if display_id == 'lano_block_view_sidebar_last_post' %}
+		<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
+			{{header}}
+			<div class="w-tab-content">
+				<div data-w-tab="Tab 1" class="w-tab-pane">
+					<ul class="w-list-unstyled">
+						{{ rows }}
+					</ul>
+				</div>
+				
+				<div data-w-tab="Tab 2" class="w-tab-pane w--tab-active">
+					<ul class="w-list-unstyled">
+						{{ attachment_before }}
+					</ul>
+				</div>
+			</div>
+		</div>
+	{% elseif display_id == 'attachment_blog' %}
+		{{ rows }}
+	{% elseif display_id == 'lano_block_view_related_products' %}
+		{{ header }}
+		<div class="grid">
+			{{ rows }}
+		</div>
+	{% elseif display_id == 'lano_block_view_our_team' %}
+		{{ header }}
+		<div class="w-clearfix big-img">
+		{{rows}}
+		</div>
+	{% elseif display_id == 'lano_block_view_service' %}
+		<div class="w-row">
+		{{rows}}
+		</div>
+	{% elseif display_id == 'lano_block_view_clients' %}
+		<div class="w-container">
+			{{header}}
+			<div class="w-row big-imgs">
+			{{rows}}
+			</div>
+		</div>
+	{% elseif display_id == 'lano_block_view_hobbies_interest' %}
+		{{ header }}
+		<div class="w-row">
+			{{ rows }}
+		</div>
+	{% elseif display_id == 'lano_block_view_architecture' %}
+		<div id="fullpage" class="fpage">
+			{{ header }}
+			{{ rows }}
+		</div>
+	{% elseif display_id == 'lano_block_view_blog' %}
+		<div class="w-container">
+			{{header}}
+			<div class="w-row">
+				{{rows}}
+			</div>
+	{% else %}
+		{{ header }}
+	  	{{ rows }}
+	  	{{ attachment_after }}
+	  	{{ attachment_before }}
+	  	{{ empty }}
+	  	{{ footer }}
+	  	{{ pager }}
+	{% endif %}
+{% elseif id == 'lano_section_content_2' %}
+	{% if display_id == 'lano_page_portfolio_classic_grid' %}
+		{{ header }}
+	      <div class="w-clearfix filter-cont">
+	        <div data-ix="open-filter-menu" class="w-clearfix show-filter">
+	          <div class="filter-button">
+	            <div class="w-embed"><i class="fa fa-filter"></i>
+	            </div>
+	          </div>
+	          <div class="w-clearfix filter-effect">
+	            <div data-ix="hide-filter-opacity-0" class="filter-txt">Hide Filter</div>
+	            <div class="filter-txt-hide">Show Filter</div>
+	          </div>
+	        </div>
+	        <div data-ix="move-filter-content-on-load" class="w-clearfix filters button-group">
+	        	{{ footer }}
+	        </div>
+        </div>
+		<div id="grid" class="w-clearfix grid">
+        	<div class="grid-sizer"></div>
+			{{ rows }}
+		</div>
+		{{ pager }}
+	{% elseif display_id == 'lano_page_portfolio_with_lightbox' %}
+		{{ header }}
+	      <div class="w-clearfix filter-cont">
+	        <div data-ix="open-filter-menu" class="w-clearfix show-filter">
+	          <div class="filter-button">
+	            <div class="w-embed"><i class="fa fa-filter"></i>
+	            </div>
+	          </div>
+	          <div class="w-clearfix filter-effect">
+	            <div data-ix="hide-filter-opacity-0" class="filter-txt">Hide Filter</div>
+	            <div class="filter-txt-hide">Show Filter</div>
+	          </div>
+	        </div>
+	        <div data-ix="move-filter-content-on-load" class="w-clearfix filters button-group">
+	        	{{ footer }}
+	        </div>
+        </div>
+		<div id="grid" class="w-clearfix grid">
+        	<div class="grid-sizer"></div>
+			{{ rows }}
+		</div>
+		{{ pager }}
+	{% elseif display_id == 'lano_page_portfolio_not_spaced' %}
+		{{ header }}
+	      <div class="w-clearfix filter-cont">
+	        <div data-ix="open-filter-menu" class="w-clearfix show-filter">
+	          <div class="filter-button">
+	            <div class="w-embed"><i class="fa fa-filter"></i>
+	            </div>
+	          </div>
+	          <div class="w-clearfix filter-effect">
+	            <div data-ix="hide-filter-opacity-0" class="filter-txt">Hide Filter</div>
+	            <div class="filter-txt-hide">Show Filter</div>
+	          </div>
+	        </div>
+	        <div data-ix="move-filter-content-on-load" class="w-clearfix filters button-group">
+	        	{{ footer }}
+	        </div>
+        </div>
+		<div id="grid" class="w-clearfix grid grid-not-margin">
+        	<div class="grid-sizer"></div>
+			{{ rows }}
+		</div>
+		{{ pager }}
+	{% elseif display_id == 'lano_page_portfolio_masonry' %}
+		{{ header }}
+	      <div class="w-clearfix filter-cont">
+	        <div data-ix="open-filter-menu" class="w-clearfix show-filter">
+	          <div class="filter-button">
+	            <div class="w-embed"><i class="fa fa-filter"></i>
+	            </div>
+	          </div>
+	          <div class="w-clearfix filter-effect">
+	            <div data-ix="hide-filter-opacity-0" class="filter-txt">Hide Filter</div>
+	            <div class="filter-txt-hide">Show Filter</div>
+	          </div>
+	        </div>
+	        <div data-ix="move-filter-content-on-load" class="w-clearfix filters button-group">
+	        	{{ footer }}
+	        </div>
+        </div>
+		<div id="grid" class="w-clearfix grid">
+        	<div class="grid-sizer"></div>
+			{{ rows }}
+		</div>
+		{{ pager }}
+	{% elseif display_id == 'attachment_portfolio_hover_effects' %}
+		{% set m = 1 %}
+		{% for k,row in rows.0['#rows'] %}
+			{% if m == 1 %}
+				{{row}}
+				{% set m = m + 1 %}
+			{% elseif m == 2 %}
+				{{row|render|str_replace_first(' portfolio-overlay-bottom ', ' portfolio-overlay-bottom with-gradient')|raw }}
+				{% set m = m + 1 %}
+			{% else %}
+				{{row|render|str_replace_first(' portfolio-overlay-bottom ', ' portfolio-overlay-bottom with-white')|str_replace_first(' no-margin',' no-margin title-dark')|raw }}
+				{% set m = 1 %}
+			{% endif %} 
+		{% endfor %}
+	{% elseif display_id == 'lano_page_portfolio_hover_effects' %}
+		{{header}}
+		<div id="grid" class="w-clearfix grid">
+		{{ rows }}
+		{{ attachment_before }}
+		</div>
+		{{ pager }}
+	{% elseif display_id == 'lano_page_photography' %}
+		<div class="w-container">
+			{{header}}
+         <div class="align-center more-margin">
+             <div class="filters button-group no-float">
+							{{footer}}
+                 <div class="photo-seperator"></div>
+             </div>
+         </div>
+			<div class="grid grid-less">
+				<div class="my-simple-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+					{{rows}}
+				</div>
+			</div>
+		</div>
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="pswp__bg"></div>
+            <div class="pswp__scroll-wrap">
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+                <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                        <div class="pswp__counter"></div>
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                        <button class="pswp__button pswp__button--share" title="Share"></button>
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	{% elseif display_id == 'lano_page_portfolio' %}
+		{{ header }}
+      <div class="w-clearfix filter-cont">
+          <div data-ix="open-filter-menu" class="w-clearfix show-filter">
+              <div class="filter-button">
+                  <div class="w-embed"><i class="fa fa-filter"></i>
+                  </div>
+              </div>
+              <div class="w-clearfix filter-effect">
+                  <div data-ix="hide-filter-opacity-0" class="filter-txt">Hide Filter</div>
+                  <div class="filter-txt-hide">Show Filter</div>
+              </div>
+          </div>
+          <div data-ix="move-filter-content-on-load" class="w-clearfix filters button-group">
+          {{footer}}
+          </div>
+      </div>
+      <div id="grid" class="w-clearfix grid">
+          <div class="grid-sizer"></div>
+          {{rows}}
+      </div>
+	{% elseif display_id == 'lano_page_shops' %}
+		{{ header }}
+		<div id="grid" class="w-clearfix grid">
+		{{ rows }}
+		</div>
+		{{ pager }}
+	{% elseif display_id == 'lano_page_projects_3_columns' %}
+		<div class="w-container">
+			{{ header }}
+			<div class="w-clearfix filter-cont">
+				<div data-ix="open-filter-menu" class="w-clearfix show-filter">
+					<div class="filter-button">
+						<div class="w-embed"><i class="fa fa-filter"></i>
+						</div>
+					</div>
+					<div class="w-clearfix filter-effect">
+						<div data-ix="hide-filter-opacity-0" class="filter-txt">Hide Filter</div>
+						<div class="filter-txt-hide">Show Filter</div>
+					</div>
+				</div>
+				<div data-ix="move-filter-content-on-load" class="w-clearfix filters button-group">
+					{{ footer }}
+				</div>
+			</div>
+		</div>
+		<div id="grid" class="w-clearfix grid grid-not-margin no-bottom">
+			<div class="grid-sizer"></div>
+			{% set m = 1 %}
+			{% for k,row in rows.0['#rows'] %}
+				{% if m == 1 %}
+					{{row}}
+					{% set m = m + 1 %}
+				{% elseif m == 2 %}
+					{{row|render|str_replace_first(' portfolio-overlay-bottom', ' portfolio-overlay-bottom with-gradient')|raw }}
+					{% set m = m + 1 %}
+				{% else %}
+					{{row|render|str_replace_first(' portfolio-overlay-bottom', ' portfolio-overlay-bottom with-white')|str_replace_first(' no-margin',' no-margin title-dark')|raw }}
+					{% set m = 1 %}
+				{% endif %} 
+			{% endfor %}
+		</div>
+		{{ pager }}
+	{% elseif display_id == 'lano_page_projects_4_columns' %}
+		<div class="w-container">
+			{{ header }}
+			<div class="w-clearfix filter-cont">
+				<div data-ix="open-filter-menu" class="w-clearfix show-filter">
+					<div class="filter-button">
+						<div class="w-embed"><i class="fa fa-filter"></i>
+						</div>
+					</div>
+					<div class="w-clearfix filter-effect">
+						<div data-ix="hide-filter-opacity-0" class="filter-txt">Hide Filter</div>
+						<div class="filter-txt-hide">Show Filter</div>
+					</div>
+				</div>
+				<div data-ix="move-filter-content-on-load" class="w-clearfix filters button-group">
+					{{ footer }}
+				</div>
+			</div>
+		</div>
+		<div id="grid" class="w-clearfix grid grid-not-margin no-bottom">
+			<div class="grid-sizer"></div>
+			{{ rows }}
+		</div>
+		{{ pager }}
+	{% elseif display_id == 'lano_page_projects_5_columns' %}
+		<div class="w-container">
+			{{ header }}
+			<div class="w-clearfix filter-cont">
+				<div data-ix="open-filter-menu" class="w-clearfix show-filter">
+					<div class="filter-button">
+						<div class="w-embed"><i class="fa fa-filter"></i>
+						</div>
+					</div>
+					<div class="w-clearfix filter-effect">
+						<div data-ix="hide-filter-opacity-0" class="filter-txt">Hide Filter</div>
+						<div class="filter-txt-hide">Show Filter</div>
+					</div>
+				</div>
+				<div data-ix="move-filter-content-on-load" class="w-clearfix filters button-group">
+					{{ footer }}
+				</div>
+			</div>
+		</div>
+		<div id="grid" class="w-clearfix grid grid-not-margin no-bottom">
+			<div class="grid-sizer"></div>
+			{{ rows }}
+		</div>
+		{{ pager }}
+	{% elseif display_id == 'lano_block_view_product' %}
+		<div class="w-container">
+	      <div class="w-clearfix filter-cont">
+	        <div data-ix="open-filter-menu" class="w-clearfix show-filter">
+	          <div class="filter-button">
+	            <div class="w-embed"><i class="fa fa-filter"></i>
+	            </div>
+	          </div>
+	          <div class="w-clearfix filter-effect">
+	            <div data-ix="hide-filter-opacity-0" class="filter-txt">Hide Filter</div>
+	            <div class="filter-txt-hide">Show Filter</div>
+	          </div>
+	        </div>
+	        <div data-ix="move-filter-content-on-load" class="w-clearfix filters button-group">
+	        	{{ footer }}
+	        </div>
+        </div>
+		<div id="grid" class="w-clearfix grid">
+		
+        	<div class="grid-sizer"></div>
+				{{ rows }}
+			</div>
+		</div>
+	{% else %}
+		{{ header }}
+	  	{{ rows }}
+	  	{{ attachment_after }}
+	  	{{ attachment_before }}
+	  	{{ empty }}
+	  	{{ footer }}
+	  	{{ pager }}
+	{% endif %}
+{% elseif id == 'taxonomy' %}
+	<!-- taxonomy -->
+	{% if display_id == 'lano_block_view_taxonomy_term_tags' %}
+		<div class="w-clearfix tags">
+			{{rows}}
+		</div>
+	{% elseif display_id == 'lano_block_view_taxonomy_term_categories' %}
+		<ul class="w-list-unstyled cat-link">
+			{{ rows }}
+		</ul>
+	{% elseif display_id == 'lano_block_view_taxonomy_term_categories_filter' %}
+		<a href="#" data-filter="*" class="button">All</a>
+		{{rows}}
+	{% elseif display_id == 'lano_block_view_taxonomy_term_portfolio_categories_filter' %}
+		<a href="#" data-filter="*" class="button">All</a>
+		{{rows}}
+	{% elseif display_id == 'lano_block_view_taxonomy_term_portfolio_categories_filter_2' %}
+		<a href="#" data-filter="*" class="button other-dsn">All</a>
+		{{rows}}
+	{% else %}
+		{{ header }}
+	  	{{ rows }}
+	  	{{ attachment_after }}
+	  	{{ attachment_before }}
+	  	{{ empty }}
+	  	{{ footer }}
+	  	{{ pager }}
+	{% endif %}
+{% elseif id == 'blog' %}
+	{% if blog_style == 'grid' %}
+		<div id="grid" class="w-clearfix grid grid-blog">
+			<div class="grid-sizer"></div>
+			{{ rows }}
+		</div>
+		{{ pager }}
+	{% else %}
+		{{ header }}
+	  	{{ rows }}
+	  	{{ attachment_after }}
+	  	{{ attachment_before }}
+	  	{{ empty }}
+	  	{{ footer }}
+	  	{{ pager }}
+	{% endif %}
+{% elseif id == 'taxonomy_term' %}
+	{% if display_id == 'page_term' %}
+		{% if blog_style == 'grid' %}
+			<div id="grid" class="w-clearfix grid grid-blog">
+				<div class="grid-sizer"></div>
+				{{ rows }}
+			</div>
+			{{ pager }}
+		{% else %}
+			{{ header }}
+		  	{{ rows }}
+		  	{{ attachment_after }}
+		  	{{ attachment_before }}
+		  	{{ empty }}
+		  	{{ footer }}
+		  	{{ pager }}
+		{% endif %}
+	{% else %}
+		{{ header }}
+	  	{{ rows }}
+	  	{{ attachment_after }}
+	  	{{ attachment_before }}
+	  	{{ empty }}
+	  	{{ footer }}
+	  	{{ pager }}
+	{% endif %}
+{% else %}
+	{{ header }}
+  	{{ rows }}
+  	{{ attachment_after }}
+  	{{ attachment_before }}
+  	{{ empty }}
+  	{{ footer }}
+  	{{ pager }}
+{% endif %}

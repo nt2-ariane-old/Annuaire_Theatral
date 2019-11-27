@@ -1,0 +1,96 @@
+{% set img = file_url(node.uc_product_image.0.entity.uri.value|image_style_url('img_400x500_')) %}
+{% if page %}<!-- single -->
+   <div class="bottom-space">
+      <div class="w-row">
+         <div class="w-col w-col-6">
+            <div data-animation="slide" data-duration="500" data-infinite="1" data-nav-spacing="5" class="w-slider slider-page">
+               <div class="w-slider-mask">
+                     {% for k,image in node.uc_product_image %}
+                        {% set urs = file_url(image.entity.uri.value) %}
+                        {% if k == 0 %}
+                           <div class="w-slide slide-1"><img src="{{ urs }}" alt=""></div>
+                        {% else %}
+                           <div class="w-slide"><img src="{{ urs }}" alt=""></div>
+                        {% endif %} 
+                     {% endfor %}
+               </div>
+               <div class="w-slider-arrow-left">
+                  <div class="w-icon-slider-left arrow-slider left"></div>
+               </div>
+               <div class="w-slider-arrow-right">
+                  <div class="w-icon-slider-right arrow-slider right"></div>
+               </div>
+               <div class="w-slider-nav w-slider-nav-invert w-round slide-dots"></div>
+            </div>
+         </div>
+         <div class="w-col w-col-6">
+            <div>
+               <div class="title-wrapper left small-space">
+                  <h3>{{ title }}</h3>
+                  {% if node.field_sale.0.value == 1 %}
+                     <div class="circile-hot circle-shop">sale</div>
+                     {% set cls = 'on-sale' %}
+                  {% else %}
+                    {% set cls = 'off-sale' %}
+                  {% endif %}
+                  <div class="sub-text-title">{{ content.model }}</div>
+                  <div><img src="{{ path_to_theme }}/images/sub-handmade.png">
+                  </div>
+               </div>
+               <p class="p-shop biger {{ cls }}">{{ content.price }}</p>
+               <div>
+                  <p>{{ content.field_content }}</p>
+               </div>
+               <div class="w-clearfix product-space">
+                  {{ content.add_to_cart }}
+               </div>
+               <div class="product-space pls-category">
+                  <p>{{ 'Categories: '|t }}{{ content.field_product_categories }}
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="port-item-spc">
+      <div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
+         <div class="w-tab-menu tab-menu left-menu">
+            <a data-w-tab="Tab 1" class="w-tab-link w--current w-inline-block tab-link">
+               <div>{{ 'Description'|t }}</div>
+            </a>
+            <a data-w-tab="Tab 2" class="w-tab-link w-inline-block tab-link">
+               <div>{{ 'reviews'|t }}</div>
+            </a>
+         </div>
+         <div class="w-tab-content">
+            <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+               <p>{{ content.field_description }}</p>
+            </div>
+            <div data-w-tab="Tab 2" class="w-tab-pane">
+            {{ content.comment }}
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
+{% else %} 
+    <div class="item art print">
+      <div class="product-wrapper"><img src="{{ img }}">
+         {% if node.field_sale.0.value == 1 %}
+            <div class="circile-hot circle-shop">sale</div>
+         {% endif %}
+      </div>
+      <div class="w-clearfix">
+        <div class="info-shop-wrapper">
+            <a href="{{ url }}" class="w-inline-block shop-title"><h5>{{ node.getTitle() }}</h5></a>
+            <p class="p-shop">{{ content.price }}</p>
+        </div>
+        <div class="w-clearfix links">
+          <div class="line-links"></div>
+          {{ content.add_to_cart }}
+          <a href="{{ url }}" class="w-inline-block add-to-cart view-details">
+            <p class="p-no-margin">Show Details</p>
+          </a>
+        </div>
+      </div>
+    </div>
+{% endif %}

@@ -1,0 +1,1025 @@
+{% set img = file_url(node.field_portfolio_image.0.entity.uri.value) %}
+{% set style = node.field_portfolio_style.0.value %}
+{% set launch_project = node.field_launch_project.0.value %}
+{% if page %}<!-- single -->
+	{% if style == 'image_list_left_space' %}
+		<section class="w-section section-imp">
+			<div class="w-container">
+				<div class="w-row">
+					<div class="w-col w-col-6">
+						{% for image in node.field_portfolio_image %}
+							{% set urs = file_url(image.entity.uri.value) %}
+							<div class="photo-item-spc"><img src="{{ urs }}"></div>
+						{% endfor %}
+						{% if (node.field_video.0.value) %}
+							<div class="photo-item-spc">{{ content.field_video }}</div>
+						{% endif %}
+					</div>
+					<div class="w-col w-col-6">
+						<div class="item-content">
+							<h1 class="port-item-title">{{ title }}</h1>
+							<div class="share-wrapper">
+								<ul class="w-list-unstyled">
+									<li class="w-clearfix li-share">
+										<a href="#" class="w-clearfix w-inline-block share-link">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-eye"></i>
+												</div>
+											</div>
+											<div class="share-txt">{{ node_stats }}</div>
+										</a>
+									</li>
+									<li class="w-clearfix li-share">
+										<a target="_blank" href="https://facebook.com/sharer.php?u={{ pageURL }}&t={{ title }}" class="w-clearfix w-inline-block share-link facebook">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-facebook"></i>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="w-clearfix li-share">
+										<a  target="_blank" href="https://twitter.com/intent/tweet?url={{ pageURL }}&text={{ title }}" class="w-clearfix w-inline-block share-link twitter">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-twitter"></i>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="w-clearfix li-share no-line">
+										<a target="_blank" href="https://pinterest.com/pin/create/button/?url={{ pageURL }}&media={{ img }}&description={{ node.body.summary }}"  class="w-clearfix w-inline-block share-link pin">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-pinterest-p"></i>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="port-item-spc">
+								{{ content.field_description }}
+							</div>
+							<div class="port-item-spc">
+								<h4 class="post-title">{{ 'Project details'|t }}</h4>
+								<ul class="w-list-unstyled">
+									<li>
+										{{ content.field_client }}
+									</li>
+									<li class="pls-category">
+										{{ content.field_portfolio_categories }}
+									</li>
+									<li>
+										<p>{{ 'Data Created:'|t }} {{ node.created.value|date('F j Y') }}</p>
+									</li>
+									<li class="w-clearfix small-spc"><a href="{{ launch_project }}" target="_blank" class="w-button button">{{ 'Launch Project'|t }}</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="blog-pagination top-space">
+					<div class="w-row">
+						<div class="w-col w-col-4">
+							<div class="center">
+								{{ previous_post|t }}
+							</div>
+						</div>
+						<div class="w-col w-col-4">
+							<div class="align-center">
+								<a href="{{ path('<front>') }}masonry" class="w-inline-block paginaton-but pag-all animsition-link">
+									<div class="w-embed"><i class="fa fa-th"></i>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="w-col w-col-4">
+							<div class="align-right center">
+								{{ next_post|t }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	{% elseif style == 'image_list_left)none_space' %}
+		<section class="w-section section-imp">
+			<div class="w-container">
+				<div class="w-row">
+					<div class="w-col w-col-6">
+						{% for image in node.field_portfolio_image %}
+							{% set urs = file_url(image.entity.uri.value) %}
+							<div><img src="{{ urs }}"></div>
+						{% endfor %}
+						{% if (node.field_video.0.value) %}
+							{{ content.field_video }}
+						{% endif %} 
+					</div>
+					<div class="w-col w-col-6">
+						<div class="item-content">
+							<h1 class="port-item-title">{{ title }}</h1>
+							<div class="share-wrapper">
+								<ul class="w-list-unstyled">
+									<li class="w-clearfix li-share">
+										<a href="#" class="w-clearfix w-inline-block share-link">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-eye"></i>
+												</div>
+											</div>
+											<div class="share-txt">{{ node_stats }}</div>
+										</a>
+									</li>
+									<li class="w-clearfix li-share">
+										<a target="_blank" href="https://facebook.com/sharer.php?u={{ pageURL }}&t={{ title }}" class="w-clearfix w-inline-block share-link facebook">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-facebook"></i>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="w-clearfix li-share">
+										<a  target="_blank" href="https://twitter.com/intent/tweet?url={{ pageURL }}&text={{ title }}" class="w-clearfix w-inline-block share-link twitter">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-twitter"></i>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="w-clearfix li-share no-line">
+										<a target="_blank" href="https://pinterest.com/pin/create/button/?url={{ pageURL }}&media={{ img }}&description={{ node.body.summary }}"  class="w-clearfix w-inline-block share-link pin">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-pinterest-p"></i>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="port-item-spc">
+								{{ content.field_description }}
+							</div>
+							<div class="port-item-spc">
+								<h4 class="post-title">{{ 'Project details'|t }}</h4>
+								<ul class="w-list-unstyled">
+									<li>
+										{{ content.field_client }}
+									</li>
+									<li class="pls-category">
+										{{ content.field_portfolio_categories }}
+									</li>
+									<li>
+										<p>{{ 'Data Created:'|t }} {{ node.created.value|date('F j Y') }}</p>
+									</li>
+									<li class="w-clearfix small-spc"><a href="{{ launch_project }}" target="_blank" class="w-button button">{{ 'Launch Project'|t }}</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="blog-pagination top-space">
+				  <div class="w-row">
+				    <div class="w-col w-col-4">
+				      <div class="center">
+				      	{{ previous_post|t }}
+				      </div>
+				    </div>
+				    <div class="w-col w-col-4">
+				      <div class="align-center">
+				        <a href="{{ path('<front>') }}masonry" class="w-inline-block paginaton-but pag-all animsition-link">
+				          <div class="w-embed"><i class="fa fa-th"></i>
+				          </div>
+				        </a>
+				      </div>
+				    </div>
+				    <div class="w-col w-col-4">
+				      <div class="align-right center">
+				      	{{ next_post|t }}
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</section>
+	{% elseif style == 'image_list_right_space' %}
+		<section class="w-section section-imp">
+			<div class="w-container">
+				<div class="w-row">
+					<div class="w-col w-col-6">
+						<div class="item-content">
+							<h1 class="port-item-title">{{ title }}</h1>
+							<div class="share-wrapper">
+								<ul class="w-list-unstyled">
+									<li class="w-clearfix li-share">
+										<a href="#" class="w-clearfix w-inline-block share-link">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-eye"></i>
+												</div>
+											</div>
+											<div class="share-txt">{{ node_stats }}</div>
+										</a>
+									</li>
+									<li class="w-clearfix li-share">
+										<a target="_blank" href="https://facebook.com/sharer.php?u={{ pageURL }}&t={{ title }}" class="w-clearfix w-inline-block share-link facebook">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-facebook"></i>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="w-clearfix li-share">
+										<a  target="_blank" href="https://twitter.com/intent/tweet?url={{ pageURL }}&text={{ title }}" class="w-clearfix w-inline-block share-link twitter">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-twitter"></i>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="w-clearfix li-share no-line">
+										<a target="_blank" href="https://pinterest.com/pin/create/button/?url={{ pageURL }}&media={{ img }}&description={{ node.body.summary }}"  class="w-clearfix w-inline-block share-link pin">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-pinterest-p"></i>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="port-item-spc">
+								{{ content.field_description }}
+							</div>
+							<div class="port-item-spc">
+								<h4 class="post-title">{{ 'Project details'|t }}</h4>
+								<ul class="w-list-unstyled">
+									<li>
+										{{ content.field_client }}
+									</li>
+									<li class="pls-category">
+										{{ content.field_portfolio_categories }}
+									</li>
+									<li>
+										<p>{{ 'Data Created:'|t }} {{ node.created.value|date('F j Y') }}</p>
+									</li>
+									<li class="w-clearfix small-spc"><a href="{{ launch_project }}" target="_blank" class="w-button button">{{ 'Launch Project'|t }}</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="w-col w-col-6">
+						{% for image in node.field_portfolio_image %}
+							{% set urs = file_url(image.entity.uri.value) %}
+							<div  class="photo-item-spc"><img src="{{ urs }}"></div>
+						{% endfor %}
+						{% if (node.field_video.0.value) %}
+							{{ content.field_video }}
+						{% endif %} 
+					</div>
+				</div>
+				<div class="blog-pagination top-space">
+				  <div class="w-row">
+				    <div class="w-col w-col-4">
+				      <div class="center">
+				      	{{ previous_post|t }}
+				      </div>
+				    </div>
+				    <div class="w-col w-col-4">
+				      <div class="align-center">
+				        <a href="{{ path('<front>') }}masonry" class="w-inline-block paginaton-but pag-all animsition-link">
+				          <div class="w-embed"><i class="fa fa-th"></i>
+				          </div>
+				        </a>
+				      </div>
+				    </div>
+				    <div class="w-col w-col-4">
+				      <div class="align-right center">
+				      	{{ next_post|t }}
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</section>
+	{% elseif style == 'image_list_right_none_space' %}
+		<section class="w-section section-imp">
+			<div class="w-container">
+				<div class="w-row">
+					<div class="w-col w-col-6">
+						<div class="item-content">
+							<h1 class="port-item-title">{{ title }}</h1>
+							<div class="share-wrapper">
+								<ul class="w-list-unstyled">
+									<li class="w-clearfix li-share">
+										<a href="#" class="w-clearfix w-inline-block share-link">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-eye"></i>
+												</div>
+											</div>
+											<div class="share-txt">{{ node_stats }}</div>
+										</a>
+									</li>
+									<li class="w-clearfix li-share">
+										<a target="_blank" href="https://facebook.com/sharer.php?u={{ pageURL }}&t={{ title }}" class="w-clearfix w-inline-block share-link facebook">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-facebook"></i>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="w-clearfix li-share">
+										<a  target="_blank" href="https://twitter.com/intent/tweet?url={{ pageURL }}&text={{ title }}" class="w-clearfix w-inline-block share-link twitter">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-twitter"></i>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="w-clearfix li-share no-line">
+										<a target="_blank" href="https://pinterest.com/pin/create/button/?url={{ pageURL }}&media={{ img }}&description={{ node.body.summary }}"  class="w-clearfix w-inline-block share-link pin">
+											<div class="share-icon">
+												<div class="w-embed"><i class="fa fa-pinterest-p"></i>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="port-item-spc">
+								{{ content.field_description }}
+							</div>
+							<div class="port-item-spc">
+								<h4 class="post-title">{{ 'Project details'|t }}</h4>
+								<ul class="w-list-unstyled">
+									<li>
+										{{ content.field_client }}
+									</li>
+									<li class="pls-category">
+										{{ content.field_portfolio_categories }}
+									</li>
+									<li>
+										<p>{{ 'Data Created:'|t }} {{ node.created.value|date('F j Y') }}</p>
+									</li>
+									<li class="w-clearfix small-spc"><a href="{{ launch_project }}" target="_blank" class="w-button button">{{ 'Launch Project'|t }}</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="w-col w-col-6">
+						{% for image in node.field_portfolio_image %}
+							{% set urs = file_url(image.entity.uri.value) %}
+							<div><img src="{{ urs }}"></div>
+						{% endfor %}
+						{% if (node.field_video.0.value) %}
+							{{ content.field_video }}
+						{% endif %} 
+					</div>
+				</div>
+				<div class="blog-pagination top-space">
+				  <div class="w-row">
+				    <div class="w-col w-col-4">
+				      <div class="center">
+				      	{{ previous_post|t }}
+				      </div>
+				    </div>
+				    <div class="w-col w-col-4">
+				      <div class="align-center">
+				        <a href="{{ path('<front>') }}masonry" class="w-inline-block paginaton-but pag-all animsition-link">
+				          <div class="w-embed"><i class="fa fa-th"></i>
+				          </div>
+				        </a>
+				      </div>
+				    </div>
+				    <div class="w-col w-col-4">
+				      <div class="align-right center">
+				      	{{ next_post|t }}
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</section>
+	{% elseif style == 'image_list_full_slideshow_1' %}
+		<div class="banner in-port-item">
+		 <div data-animation="cross" data-duration="500" data-infinite="1" data-nav-spacing="5" class="w-slider big-slider">
+		   <div class="w-slider-mask">
+				{% for image in node.field_portfolio_image %}
+					{% set urs = file_url(image.entity.uri.value) %}
+					<img class="w-slide slide-1" src="{{ urs }}" alt="" />
+				{% endfor %}
+		   </div>
+		   <div class="w-slider-arrow-left left-arrow"></div>
+		   <div class="w-slider-arrow-right right-arrow"></div>
+		 </div>
+		</div>
+		<section class="w-section section-imp">
+		  <div class="w-container">
+		    <div>
+		      <h1 class="port-item-title">{{ title }}</h1>
+				<div class="share-wrapper">
+					<ul class="w-list-unstyled">
+						<li class="w-clearfix li-share">
+							<a href="#" class="w-clearfix w-inline-block share-link">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-eye"></i>
+									</div>
+								</div>
+								<div class="share-txt">{{ node_stats }}</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share">
+							<a target="_blank" href="https://facebook.com/sharer.php?u={{ pageURL }}&t={{ title }}" class="w-clearfix w-inline-block share-link facebook">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-facebook"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share">
+							<a  target="_blank" href="https://twitter.com/intent/tweet?url={{ pageURL }}&text={{ title }}" class="w-clearfix w-inline-block share-link twitter">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-twitter"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share no-line">
+							<a target="_blank" href="https://pinterest.com/pin/create/button/?url={{ pageURL }}&media={{ img }}&description={{ node.body.summary }}"  class="w-clearfix w-inline-block share-link pin">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-pinterest-p"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+		    </div>
+		    <div class="port-item-spc">
+		      <div class="w-row">
+		        <div class="w-col w-col-8">
+						{{ content.field_description }}
+		        </div>
+		        <div class="w-col w-col-4">
+		          <h4 class="post-title">Project details</h4>
+		          <ul class="w-list-unstyled">
+		            <li>
+		             {{ content.field_client }}
+		            </li>
+		            <li class="pls-category">
+		              {{ content.field_portfolio_categories }}
+		            </li>
+		            <li>
+		              <p>{{ 'Data Created:'|t }} {{ node.created.value|date('F j Y') }}</p>
+		            </li>
+		            <li class="w-clearfix small-spc"><a href="{{ launch_project }}" target="_blank" class="w-button button">Launch Project</a>
+		            </li>
+		          </ul>
+		        </div>
+		      </div>
+		    </div>
+			<div class="blog-pagination top-space">
+			  <div class="w-row">
+			    <div class="w-col w-col-4">
+			      <div class="center">
+			      	{{ previous_post|t }}
+			      </div>
+			    </div>
+			    <div class="w-col w-col-4">
+			      <div class="align-center">
+			        <a href="{{ path('<front>') }}masonry" class="w-inline-block paginaton-but pag-all animsition-link">
+			          <div class="w-embed"><i class="fa fa-th"></i>
+			          </div>
+			        </a>
+			      </div>
+			    </div>
+			    <div class="w-col w-col-4">
+			      <div class="align-right center">
+			      	{{ next_post|t }}
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		  </div>
+		</section>
+	{% elseif style == 'image_list_full_slideshow_2' %}
+	  <section class="w-section section-imp">
+	    <div class="w-container">
+	      <div>
+	        <h1 class="port-item-title">{{ title }}</h1>
+				<div class="share-wrapper">
+					<ul class="w-list-unstyled">
+						<li class="w-clearfix li-share">
+							<a href="#" class="w-clearfix w-inline-block share-link">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-eye"></i>
+									</div>
+								</div>
+								<div class="share-txt">{{ node_stats }}</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share">
+							<a target="_blank" href="https://facebook.com/sharer.php?u={{ pageURL }}&t={{ title }}" class="w-clearfix w-inline-block share-link facebook">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-facebook"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share">
+							<a  target="_blank" href="https://twitter.com/intent/tweet?url={{ pageURL }}&text={{ title }}" class="w-clearfix w-inline-block share-link twitter">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-twitter"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share no-line">
+							<a target="_blank" href="https://pinterest.com/pin/create/button/?url={{ pageURL }}&media={{ img }}&description={{ node.body.summary }}"  class="w-clearfix w-inline-block share-link pin">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-pinterest-p"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+	      </div>
+	      <div class="port-item-spc">
+	        <div data-animation="slide" data-duration="500" data-infinite="1" data-nav-spacing="5" class="w-slider slider-page">
+	          <div class="w-slider-mask">
+		         {% for image in node.field_portfolio_image %}
+						{% set urs = file_url(image.entity.uri.value) %}
+						<div class="w-slide slide-1"><img src="{{ urs }}" alt=""></div>
+					{% endfor %}
+						{% if (node.field_video.0.value) %}
+							<div class="w-slide slide-1">{{ content.field_video }}</div>
+						{% endif %} 
+	          </div>
+	          <div class="w-slider-arrow-left">
+	            <div class="w-icon-slider-left arrow-slider left"></div>
+	          </div>
+	          <div class="w-slider-arrow-right">
+	            <div class="w-icon-slider-right arrow-slider right"></div>
+	          </div>
+	          <div class="w-slider-nav w-slider-nav-invert w-round slide-dots"></div>
+	        </div>
+	      </div>
+	      <div class="port-item-spc">
+		      <div class="w-row">
+		        <div class="w-col w-col-8">
+						{{ content.field_description }}
+		        </div>
+		        <div class="w-col w-col-4">
+		          <h4 class="post-title">Project details</h4>
+		          <ul class="w-list-unstyled">
+		            <li>
+		             {{ content.field_client }}
+		            </li>
+		            <li class="pls-category">
+		              {{ content.field_portfolio_categories }}
+		            </li>
+		            <li>
+		              <p>{{ 'Data Created:'|t }} {{ node.created.value|date('F j Y') }}</p>
+		            </li>
+		            <li class="w-clearfix small-spc"><a href="{{ launch_project }}" target="_blank" class="w-button button">Launch Project</a>
+		            </li>
+		          </ul>
+		        </div>
+		      </div>
+	      </div>
+			<div class="blog-pagination top-space">
+			  <div class="w-row">
+			    <div class="w-col w-col-4">
+			      <div class="center">
+			      	{{ previous_post|t }}
+			      </div>
+			    </div>
+			    <div class="w-col w-col-4">
+			      <div class="align-center">
+			        <a href="{{ path('<front>') }}masonry" class="w-inline-block paginaton-but pag-all animsition-link">
+			          <div class="w-embed"><i class="fa fa-th"></i>
+			          </div>
+			        </a>
+			      </div>
+			    </div>
+			    <div class="w-col w-col-4">
+			      <div class="align-right center">
+			      	{{ next_post|t }}
+			      </div>
+			    </div>
+			  </div>
+			</div>
+	    </div>
+	  </section>	
+	{% elseif style == 'image_list_full_top' %}
+	  <div class="w-section blog-post-banner port-item" style="background-image:url('{{ img }}')">
+	    <div class="arrow-down">
+	      <a href="#coming" class="w-inline-block icon-scroll"></a>
+	    </div>
+	  </div>
+	  
+		<section class="w-section section-imp">
+		  <div class="w-container">
+		    <div id="coming">
+		      <h1 class="port-item-title">{{ title }}</h1>
+				<div class="share-wrapper">
+					<ul class="w-list-unstyled">
+						<li class="w-clearfix li-share">
+							<a href="#" class="w-clearfix w-inline-block share-link">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-eye"></i>
+									</div>
+								</div>
+								<div class="share-txt">{{ node_stats }}</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share">
+							<a target="_blank" href="https://facebook.com/sharer.php?u={{ pageURL }}&t={{ title }}" class="w-clearfix w-inline-block share-link facebook">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-facebook"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share">
+							<a  target="_blank" href="https://twitter.com/intent/tweet?url={{ pageURL }}&text={{ title }}" class="w-clearfix w-inline-block share-link twitter">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-twitter"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share no-line">
+							<a target="_blank" href="https://pinterest.com/pin/create/button/?url={{ pageURL }}&media={{ img }}&description={{ node.body.summary }}"  class="w-clearfix w-inline-block share-link pin">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-pinterest-p"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+		    </div>
+		    <div class="port-item-spc">
+		      <div class="w-row">
+		        <div class="w-col w-col-8">
+						{{ content.field_description }}
+		        </div>
+		        <div class="w-col w-col-4">
+		          <h4 class="post-title">Project details</h4>
+		          <ul class="w-list-unstyled">
+		            <li>
+		             {{ content.field_client }}
+		            </li>
+		            <li class="pls-category">
+		              {{ content.field_portfolio_categories }}
+		            </li>
+		            <li>
+		              <p>{{ 'Data Created:'|t }} {{ node.created.value|date('F j Y') }}</p>
+		            </li>
+		            <li class="w-clearfix small-spc"><a href="{{ launch_project }}" target="_blank" class="w-button button">Launch Project</a>
+		            </li>
+		          </ul>
+		        </div>
+		      </div>
+		    </div>
+			<div class="blog-pagination top-space">
+			  <div class="w-row">
+			    <div class="w-col w-col-4">
+			      <div class="center">
+			      	{{ previous_post|t }}
+			      </div>
+			    </div>
+			    <div class="w-col w-col-4">
+			      <div class="align-center">
+			        <a href="{{ path('<front>') }}masonry" class="w-inline-block paginaton-but pag-all animsition-link">
+			          <div class="w-embed"><i class="fa fa-th"></i>
+			          </div>
+			        </a>
+			      </div>
+			    </div>
+			    <div class="w-col w-col-4">
+			      <div class="align-right center">
+			      	{{ next_post|t }}
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		  </div>
+		</section>
+	{% elseif style == 'image_list_full_bottom' %}
+	  <section class="w-section section-imp">
+	    <div class="w-container">
+	      <div class="align-center">
+	        <h1 class="port-item-title">{{ title }}</h1>
+	      <div class="port-item-spc">
+		      <div class="w-row">
+		        <div class="w-col w-col-8 align-left">
+						{{ content.field_description }}
+		        </div>
+		        <div class="w-col w-col-4 align-left">
+		          <h4 class="post-title">Project details</h4>
+		          <ul class="w-list-unstyled">
+		            <li>
+		             {{ content.field_client }}
+		            </li>
+		            <li class="pls-category">
+		              {{ content.field_portfolio_categories }}
+		            </li>
+		            <li>
+		              <p>{{ 'Data Created:'|t }} {{ node.created.value|date('F j Y') }}</p>
+		            </li>
+		            <li class="w-clearfix small-spc"><a href="{{ launch_project }}" target="_blank" class="w-button button">Launch Project</a>
+		            </li>
+		          </ul>
+		        </div>
+		      </div>
+	      </div>
+				{% for k,image in node.field_portfolio_image %}
+					{% set urs = file_url(image.entity.uri.value) %}
+					{% if k == 0 %}
+						<div class="port-item-spc"><img src="{{ urs }}" alt=""></div>
+					{% endif %} 
+				{% endfor %}
+				{% if (node.field_video.0.value) %}
+					<div class="port-item-spc">{{ content.field_video }}</div>
+	        	{% endif %}
+				{% for k,image in node.field_portfolio_image %}
+					{% set urs = file_url(image.entity.uri.value) %}
+					{% if k != 0 %}
+						<div class="port-item-spc"><img src="{{ urs }}" alt=""></div>
+					{% endif %} 
+				{% endfor %}
+	        <div class="port-item-spc">
+				<div class="share-wrapper">
+					<ul class="w-list-unstyled">
+						<li class="w-clearfix li-share">
+							<a href="#" class="w-clearfix w-inline-block share-link">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-eye"></i>
+									</div>
+								</div>
+								<div class="share-txt">{{ node_stats }}</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share">
+							<a target="_blank" href="https://facebook.com/sharer.php?u={{ pageURL }}&t={{ title }}" class="w-clearfix w-inline-block share-link facebook">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-facebook"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share">
+							<a  target="_blank" href="https://twitter.com/intent/tweet?url={{ pageURL }}&text={{ title }}" class="w-clearfix w-inline-block share-link twitter">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-twitter"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share no-line">
+							<a target="_blank" href="https://pinterest.com/pin/create/button/?url={{ pageURL }}&media={{ img }}&description={{ node.body.summary }}"  class="w-clearfix w-inline-block share-link pin">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-pinterest-p"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+	        </div>
+			<div class="blog-pagination top-space">
+			  <div class="w-row">
+			    <div class="w-col w-col-4">
+			      <div class="center">
+			      	{{ previous_post|t }}
+			      </div>
+			    </div>
+			    <div class="w-col w-col-4">
+			      <div class="align-center">
+			        <a href="{{ path('<front>') }}masonry" class="w-inline-block paginaton-but pag-all animsition-link">
+			          <div class="w-embed"><i class="fa fa-th"></i>
+			          </div>
+			        </a>
+			      </div>
+			    </div>
+			    <div class="w-col w-col-4">
+			      <div class="align-right center">
+			      	{{ next_post|t }}
+			      </div>
+			    </div>
+			  </div>
+			</div>
+	      </div>
+	    </div>
+	  </section>
+	{% elseif style == 'image_list_masonry' %}
+	  <section class="w-section section-imp">
+	    <div class="w-container">
+	      <div>
+	        <h1 class="port-item-title">product computer</h1>
+	        <div class="share-wrapper">
+					<ul class="w-list-unstyled">
+						<li class="w-clearfix li-share">
+							<a href="#" class="w-clearfix w-inline-block share-link">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-eye"></i>
+									</div>
+								</div>
+								<div class="share-txt">{{ node_stats }}</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share">
+							<a target="_blank" href="https://facebook.com/sharer.php?u={{ pageURL }}&t={{ title }}" class="w-clearfix w-inline-block share-link facebook">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-facebook"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share">
+							<a  target="_blank" href="https://twitter.com/intent/tweet?url={{ pageURL }}&text={{ title }}" class="w-clearfix w-inline-block share-link twitter">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-twitter"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="w-clearfix li-share no-line">
+							<a target="_blank" href="https://pinterest.com/pin/create/button/?url={{ pageURL }}&media={{ img }}&description={{ node.body.summary }}"  class="w-clearfix w-inline-block share-link pin">
+								<div class="share-icon">
+									<div class="w-embed"><i class="fa fa-pinterest-p"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+	        </div>
+				<div class="port-item-spc">
+					{{ content.field_description }}
+				</div>
+				<div class="port-item-spc">
+					<h4 class="post-title">{{ 'Project details'|t }}</h4>
+					<ul class="w-list-unstyled">
+						<li>
+							{{ content.field_client }}
+						</li>
+						<li class="pls-category">
+							{{ content.field_portfolio_categories }}
+						</li>
+						<li>
+							<p>{{ 'Data Created:'|t }} {{ node.created.value|date('F j Y') }}</p>
+						</li>
+						<li class="w-clearfix small-spc"><a href="{{ launch_project }}" target="_blank" class="w-button button">{{ 'Launch Project'|t }}</a>
+						</li>
+					</ul>
+				</div>
+	      </div>
+			{% for k,image in node.field_portfolio_image %}
+				{% set urs = file_url(image.entity.uri.value) %}
+				{% if k == 0 %}
+					<div class="port-item-spc"><img src="{{ urs }}" alt=""></div>
+				{% endif %}
+			{% endfor %}
+			{% if (node.field_video.0.value) %}
+				<div class="port-item-spc">{{ content.field_video }}</div>
+			{% endif %}
+	      </div>
+	      <div class="product-space">
+	        <div class="w-row">
+					{% for k,image in node.field_portfolio_image %}
+						{% set urs = file_url(image.entity.uri.value) %}
+						{% if k != 0 %}
+							<div class="w-col w-col-4">
+								<div><img src="{{ urs }}"></div>
+							</div>
+						{% endif %}
+					{% endfor %}
+	        </div>
+	      </div>
+				<div class="blog-pagination top-space">
+				  <div class="w-row">
+				    <div class="w-col w-col-4">
+				      <div class="center">
+				      	{{ previous_post|t }}
+				      </div>
+				    </div>
+				    <div class="w-col w-col-4">
+				      <div class="align-center">
+				        <a href="{{ path('<front>') }}masonry" class="w-inline-block paginaton-but pag-all animsition-link">
+				          <div class="w-embed"><i class="fa fa-th"></i>
+				          </div>
+				        </a>
+				      </div>
+				    </div>
+				    <div class="w-col w-col-4">
+				      <div class="align-right center">
+				      	{{ next_post|t }}
+				      </div>
+				    </div>
+				  </div>
+				</div>
+	    </div>
+	  </section>
+	{% elseif style == 'video_overlay' %}
+	  <div class="video-wrapper">
+	    <div class="w-embed embed-video">
+			{% if (node.field_video.0.value) %}
+				<div style="width:100%; height: auto; position:absolute; z-index: -1;">{{ content.field_video }}</div>
+			{% endif %}
+	    </div>
+	    <div class="video-overlay">
+	      <div data-ix="open-map-on-load-2" class="w-clearfix show-filter show-contact">
+	        <div class="filter-button">
+	          <div class="w-embed"><i class="fa fa-info-circle"></i>
+	          </div>
+	        </div>
+	        <div class="w-clearfix filter-effect">
+	          <div data-ix="hide-filter-opacity-0" class="filter-txt">Hide Project Info</div>
+	          <div class="filter-txt-hide">Show Project Info</div>
+	        </div>
+	      </div>
+	      <div data-ix="dispnay-none-on-load-project-info" class="project-info">
+	        <div class="project-content">
+	          <div class="item-content">
+	            <h1 class="port-item-title">Aenean massa</h1>
+					<div class="share-wrapper">
+						<ul class="w-list-unstyled">
+							<li class="w-clearfix li-share">
+								<a href="#" class="w-clearfix w-inline-block share-link">
+									<div class="share-icon">
+										<div class="w-embed"><i class="fa fa-eye"></i>
+										</div>
+									</div>
+									<div class="share-txt">{{ node_stats }}</div>
+								</a>
+							</li>
+							<li class="w-clearfix li-share">
+								<a target="_blank" href="https://facebook.com/sharer.php?u={{ pageURL }}&t={{ title }}" class="w-clearfix w-inline-block share-link facebook">
+									<div class="share-icon">
+										<div class="w-embed"><i class="fa fa-facebook"></i>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="w-clearfix li-share">
+								<a  target="_blank" href="https://twitter.com/intent/tweet?url={{ pageURL }}&text={{ title }}" class="w-clearfix w-inline-block share-link twitter">
+									<div class="share-icon">
+										<div class="w-embed"><i class="fa fa-twitter"></i>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="w-clearfix li-share no-line">
+								<a target="_blank" href="https://pinterest.com/pin/create/button/?url={{ pageURL }}&media={{ img }}&description={{ node.body.summary }}"  class="w-clearfix w-inline-block share-link pin">
+									<div class="share-icon">
+										<div class="w-embed"><i class="fa fa-pinterest-p"></i>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div >
+						{{ content.field_description }}
+					</div>
+					<div>
+						<h4 class="post-title">{{ 'Project details'|t }}</h4>
+						<ul class="w-list-unstyled">
+							<li>
+								{{ content.field_client }}
+							</li>
+							<li class="pls-category">
+								{{ content.field_portfolio_categories }}
+							</li>
+							<li>
+								<p>{{ 'Data Created:'|t }} {{ node.created.value|date('F j Y') }}</p>
+							</li>
+							<li class="w-clearfix small-spc"><a href="{{ launch_project }}" target="_blank" class="w-button button">{{ 'Launch Project'|t }}</a>
+							</li>
+						</ul>
+					</div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	{% endif %}
+{% else %}
+
+	<div class="item">
+	  <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">
+	{% if node.field_portfolio_image.0.entity.uri.value %}
+		<img src="{{ file_url(node.field_portfolio_image.0.entity.uri.value) }}" alt="">  
+	{% else %}
+		{{ content.field_video }}
+	{% endif %} 
+	    <a href="{{ url }}" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link">
+	      <div class="portfolio-cn-title">
+	        <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title">{{ node.getTitle() }}</h4>
+	      </div>
+	    </a>
+	  </div>
+	</div>
+{% endif %} 
+     

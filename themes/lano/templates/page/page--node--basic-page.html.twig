@@ -1,0 +1,40 @@
+{% if node.field_border_style.0.value %}
+	{% set style = node.field_border_style.0.value %}
+{% else %}
+	{% set style = '' %}
+{% endif %}
+
+{% if node.field_footer_style.0.value %}
+	{% set style_f = node.field_footer_style.0.value %}
+{% else %}
+	{% set style_f = '' %}
+{% endif %}
+
+{% if style == 'minimal-arch' %}
+	{% include theme_path ~ "/templates/border/border-arch.html.twig" %}
+{% elseif style == 'thougts' %}
+	{% include theme_path ~ "/templates/border/border-thougts.html.twig" %}
+{% elseif style == 'photo' %}
+	{% include theme_path ~ "/templates/border/border-photo.html.twig" %}
+{% elseif style == 'one' %}
+	{% include theme_path ~ "/templates/border/border-one.html.twig" %}
+{% elseif style == 'presentation' %}
+	{% include theme_path ~ "/templates/border/border-presentation.html.twig" %}
+{% else %}
+	{% include theme_path ~ "/templates/border/border.html.twig" %}
+{% endif %}
+{{page.region_messages}}
+{{page.region_tab}}
+{{page.region_top}}
+{{ page.content }}
+{% if page.region_mid %}
+	<section class="w-section section-imp more-padding">
+		<div class="w-container">
+			{{page.region_mid}}
+		</div>
+	</section>
+{% endif %}
+{{page.region_bot}}
+{% if style_f != 'none' %}
+	{% include theme_path ~ "/templates/footer.html.twig" %}
+{% endif %}

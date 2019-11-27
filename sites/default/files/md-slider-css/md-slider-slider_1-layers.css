@@ -1,0 +1,48 @@
+.md-layer-4-9-0 {
+z-index: 1000 !important; color: #000000 !important;
+ text-align: left;
+ font-size: 4.8333333333333em;
+ font-weight: 700;
+ font-family: "Lekton";
+}
+.md-layer-4-9-1 {
+z-index: 999 !important; color: #000000 !important;
+ text-align: left;
+ font-size: 1.3333333333333em;
+ font-weight: 400;
+ font-family: "Lekton";
+}
+.md-layer-4-9-2 {
+z-index: 998 !important;}
+.md-layer-4-11-0 {
+z-index: 999 !important; color: #ffffff !important;
+ text-align: center;
+ font-size: 4.8333333333333em;
+ font-weight: 700;
+ font-family: "Lekton";
+}
+.md-layer-4-11-1 {
+z-index: 1000 !important; color: #ffffff !important;
+ text-align: center;
+ font-size: 1.3333333333333em;
+ font-weight: 400;
+ font-family: "Lekton";
+}
+.md-layer-4-11-2 {
+z-index: 998 !important;}
+.md-layer-4-12-0 {
+z-index: 2 !important; color: #000000 !important;
+ text-align: right;
+ font-size: 4.8333333333333em;
+ font-weight: 700;
+ font-family: "Lekton";
+}
+.md-layer-4-12-1 {
+z-index: 2 !important; color: #000000 !important;
+ text-align: right;
+ font-size: 1.3333333333333em;
+ font-weight: 400;
+ font-family: "Lekton";
+}
+.md-layer-4-12-2 {
+z-index: 2 !important;}

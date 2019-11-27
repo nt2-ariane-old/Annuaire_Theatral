@@ -1,0 +1,76 @@
+<!-- TOP BORDER -->
+<div class="top-border">
+  <div class="w-row">
+    <div class="w-col w-col-3 w-clearfix logo-width-55">
+    {{ page.logos_thougts }}
+    </div>
+    <div class="w-col w-col-9 w-clearfix">
+      <div data-ix="show-menu-type-3" class="menu-type-2">
+        <div class="w-embed">
+          <button class="c-hamburger c-hamburger--htx">
+            <span>toggle menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LEFT BORDER -->
+<div class="left-border"></div>
+
+<!-- RIGHT BORDER -->
+<div class="right-border"></div>
+
+<!-- BOTTOM BORDER -->
+<div class="bottom-border"></div>
+
+<!-- VIDEO BACKGROUND -->
+<div data-ix="hide-menu-type-3-on-load" class="video-wrapper fixed">
+  <div class="w-embed embed-video">
+    {{ page.video_menu_thougts }}
+  </div>
+  <div class="w-container port-contatiner">
+    <!-- NAVIGATION -->
+      {{ page.main_menu_thougts }}
+    <!-- END NAVIGATION -->
+  </div>
+  <div class="video-overlay more-darker">
+    <div class="info-menu-type-3">
+      <div class="w-row">
+        <div class="w-col w-col-6">
+          <div class="align-left color-white">
+             {{ border_social|t }}
+          </div>
+        </div>
+        <div class="w-col w-col-6">
+          <div class="w-hidden-medium w-hidden-small w-hidden-tiny title-top-border">
+            <div>{{ border_massage|t }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RESPONSIVE NAVIGATION -->
+<div class="w-hidden-main">
+  <div class="responsive-menu">
+    <div class="w-container logo-width-55">
+        {{ page.logos_thougts }}
+      <div data-ix="open-responsive-menu" class="hamburger">
+        <div class="w-embed">
+          <button class="c-hamburger c-hamburger--htx">
+            <span>toggle menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="responsive-nav">
+    <div class="w-container">
+      {{ page.mobile_menu_thougts }}
+    </div>
+  </div>
+</div>
+<!-- END RESPONSIVE NAVIGATION -->

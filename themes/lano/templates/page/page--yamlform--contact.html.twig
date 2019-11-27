@@ -1,0 +1,37 @@
+{% include theme_path ~ "/templates/border/border.html.twig" %}
+{{ page.region_baner }}
+
+{{page.region_messages}}
+{{page.region_tab}}
+{{page.region_top}}
+<div class="map">
+	<div data-ix="open-map-on-load" class="w-hidden-small w-hidden-tiny w-clearfix show-filter show-contact">
+		<div class="filter-button">
+			<div class="w-embed"><i class="fa fa-map-marker"></i>
+			</div>
+		</div>
+		<div class="w-clearfix filter-effect">
+			<div data-ix="hide-filter-opacity-0" class="filter-txt">{{ 'Hide Map'|t }}</div>
+			<div class="filter-txt-hide">{{ 'Show Map'|t }}</div>
+		</div>
+	</div>
+	<div data-widget-latlng="{{ data_widget_latlng|t }}" data-widget-style="roadmap" data-widget-zoom="15" data-disable-scroll="1" class="w-widget w-widget-map map-wrapper"></div>
+	<div class="w-container container-contact">
+		<div class="cnt-content">
+			<div class="title-wrapper">
+				<h2><rteselectionmarker></rteselectionmarker>{{ 'contact us'|t }}</h2>
+				<div><img src="{{ path_to_theme }}/images/sub-handmade.png">
+				</div>
+			</div>
+			<div>
+				<div class="form-yaml-contact">
+					{{ page.content }}
+					<div id="result"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{page.region_mid}}
+{{page.region_bot}}
+{% include theme_path ~ "/templates/footer.html.twig" %}

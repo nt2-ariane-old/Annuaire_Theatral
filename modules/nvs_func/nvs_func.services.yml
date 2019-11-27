@@ -1,0 +1,17 @@
+services:
+  nvs_func.twig.nvs_func_extension:
+    class: Drupal\nvs_func\Twig\FuncExtension
+    tags:
+      - { name: twig.extension }
+  nvs_func.twig.video_embed_extension:
+    class: Drupal\nvs_func\Twig\VideoEmbedExtension
+    tags:
+      - { name: twig.extension }
+  nvs_func.twig.preg_match_img_extension:
+    class: Drupal\nvs_func\Twig\PregMatchImgExtension
+    tags:
+      - { name: twig.extension }
+  nvs_func.twig.theme_path_hat_extension:
+    class: Drupal\nvs_func\Twig\HatThemePathExtension
+    tags:
+      - { name: twig.extension }

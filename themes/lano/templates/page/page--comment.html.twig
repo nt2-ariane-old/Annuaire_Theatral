@@ -1,0 +1,20 @@
+{% include theme_path ~ "/templates/border/border.html.twig" %}
+{{ page.region_baner }}
+{{page.region_top}}
+{{page.region_messages}}
+{{page.region_tab}}
+<div class="w-section section-imp">
+    <div class="w-container">
+        <div class="title-wrapper">
+        <h2>{{ title }}</h2>
+      </div>
+        <div class="w-row">
+            <div class="w-col w-col-12">
+                {{ page.content }}
+            </div>
+        </div>
+    </div>
+</section>
+{{page.region_mid}}
+{{page.region_bot}}
+{% include theme_path ~ "/templates/footer.html.twig" %}

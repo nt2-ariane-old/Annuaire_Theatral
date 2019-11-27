@@ -1,0 +1,59 @@
+<nav class="navigation-type-2">
+{% import _self as menus %}
+{{ menus.menu_links(items, attributes, 0) }}
+{% macro menu_links(items, attributes, menu_level) %}
+{% import _self as menus %}
+   {% if items %}
+      {% if menu_level == 0 %}
+         <ul class="w-list-unstyled">
+      {% else %}
+         <ul class="w-list-unstyled">
+      {% endif %}
+      {% for item in items %}
+         {%
+         set classes = [
+         menu_level == 0 ? 'dropdown',
+         item.in_active_trail ? 'active',
+         item.in_active ? 'active',
+         ]
+         %}
+         {% if menu_level == 0 %}
+            {% if item.is_expanded %}
+               <li{{ item.attributes.addClass('li-menu-type-2') }}>
+               <a href="{{ item.url }}" data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2">
+               {{ item.title }} 
+               </a>
+               <div data-ix="line-menu-type" class="line-bottom-menu"></div>
+            {% else %}
+              <li{{ item.attributes.addClass('li-menu-type-2') }}>
+               <a href="{{ item.url }}" data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2">
+               <div>{{ item.title }} </div>
+               </a>
+               <div data-ix="line-menu-type" class="line-bottom-menu"></div>
+            {% endif %}
+         {% elseif menu_level == 1 %}
+            {% if item.is_expanded %}
+               <li{{ item.attributes.addClass('li-menu-type-2') }}>
+               <a href="{{ item.url }}" data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2">
+               <div>{{ item.title }} </div>
+               </a>
+            {% else %}
+               <li{{ item.attributes.addClass('li-menu-type-2') }}>
+               <a href="{{ item.url }}" data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2">
+               <div>{{ item.title }} </div>
+               </a>
+               <div data-ix="line-menu-type" class="line-bottom-menu"></div>
+              {% endif %}
+         {% else %}
+            <li{{ item.attributes.addClass(classes) }}>
+            <a href="{{ item.url }}">{{ item.title }}</a>
+         {% endif %}
+            {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+         {% endif %}
+         </li>
+      {% endfor %}
+      </ul>
+   {% endif %}
+{% endmacro %}
+</nav>

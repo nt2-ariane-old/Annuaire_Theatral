@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html {{ html_attributes }}>
+   <head-placeholder token="{{ placeholder_token|raw }}">
+      <!-- SITE TITTLE -->
+      <title>{{ head_title|safe_join(' | ') }}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="generator" content="HTML5 Template">
+      <!-- THEME CSS STYLE -->
+      <css-placeholder token="{{ placeholder_token|raw }}">
+      <js-placeholder token="{{ placeholder_token|raw }}">
+      {% if tracking_code != '' %}
+         {{ tracking_code|t }}
+      {% endif %}
+      {% if custom_css != '' %}
+         <style type="text/css" media="all">
+         {{ custom_css|t }}
+         </style>
+      {% endif %}
+   </head>
+   {%
+   set body_classes = [
+   logged_in ? 'user-logged-in',
+   not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
+   node_type ? 'page-node-' ~ node_type|clean_class,
+   db_offline ? 'db-offline','royal_preloader animsition without-pading',
+   class_theme
+   ]
+   %}
+   
+   <body{{ attributes.addclass(body_classes) }} data-theme-path={{path_to_theme}}>
+      <a href="#main-content" class="visually-hidden focusable">
+         {{ 'Skip to main content'|t }}
+      </a>
+      <!-- ROYAL PRELOADER -->
+      <div id="royal_preloader"></div>
+      {{ page_top }}
+      {{ page }}
+      {{ page_bottom }}
+      <!-- SCROLL TO TOP -->
+      <a href="#0" class="cd-top">Top</a>
+      <!-- JQUERY SCRIPTS -->
+      <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+      <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+   </body>
+</html>
