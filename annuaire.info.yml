@@ -7,14 +7,14 @@ description: 'Thème pour le site de Annuaire Theatral.'
 package: 'Bootstrap'
 
 regions:
-  navigation: 'Navigation'
+  navigation_menu: 'Menu de Navigation'
   nav_social: 'Navigation Media Sociaux'
   header: 'Couverture'
   footer: 'Bas de page'
   content: 'Contenu'
   sidebar_left : 'Sidebar Gauche'
   sidebar_right : 'Sidebar Droite'
-
+  branding: 'Logo'
   
 libraries:
   - 'annuaire/global-styling'
