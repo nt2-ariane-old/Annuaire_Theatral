@@ -1,7 +1,3 @@
-main
-{
-
-}
 
 a:hover
 {
@@ -56,3 +52,42 @@ a:hover
     color:white;
     text-decoration:none;
     }
+
+//SECTIOn
+
+.data-blog
+{
+    padding: 0;
+    text-align: center;
+    line-height: 100px;
+}
+#actualite
+{
+    padding: 1em;
+}
+
+#ext-web
+{
+}
+
+
+//Footer
+
+footer
+{
+    margin: 0;
+    h3
+    {
+        text-align: center;
+    }
+    #menu-secondaire
+    {
+        list-style-type: none;
+        text-align: center;
+        padding: 0;
+        a
+        {
+            color: black;
+        }
+    }
+}
