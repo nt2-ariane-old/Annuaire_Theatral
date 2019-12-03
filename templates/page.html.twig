@@ -1,6 +1,28 @@
+<header class="top-border">
+      <div class="w-row">
+        <div class="w-col w-col-2 w-clearfix">
+          <a href="index.html" class="w-inline-block brand-logo animsition-link"><img width="120" src="images/logo-595x168.jpg" alt="photo-logo">
+          </a>
+        </div>
+        <div class="w-col w-col-8">
+          <div>
+            <!-- NAVIGATION -->
+            <nav class="navigation-type-3">
+              <ul class="w-list-unstyled">
+				{{page.navigation }}
+              </ul>
+            </nav>
+            <!-- END NAVIGATION -->
+          </div>
+        </div>
+        <div class="w-col w-col-2">
+          <div class="social-wrapper">
+            {{page.nav_social}} 
+          </div>
+        </div>
+      </div>
+    </header>
 
-{{page.navigation }}
-{{page.nav_social}}
 {{page.header}}
 {{page.sidebar_left}}
 {{page.content }}
