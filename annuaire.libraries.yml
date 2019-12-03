@@ -1,10 +1,15 @@
 global-styling:
   css:
     theme:
+      css/base.css: {}
       css/font-awesome.min.css: {}
       css/style.css: {}
       css/animate.css: {}
-global-scripts:
+      css/bootstrap.min.css: {}
+      css/theme.css: {}
+      css/style.css: {}
+          
+ global-scripts:
   js:
     js/jquery.min.js: {}
     js/jquery.animsition.min.js: {}
