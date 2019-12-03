@@ -1,0 +1,13 @@
+{# Navbar #}
+{% if page.navigation or page.navigation_collapsible %}
+{% block navbar %}
+{%
+	set navbar_classes = [
+		'navbar',
+		theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
+		theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
+	]
+%}
+{% include theme_path ~ "/templates/header.html.twig" %}
+{% include theme_path ~ "/templates/footer.html.twig" %}
+{% endif %}

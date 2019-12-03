@@ -1,0 +1,30 @@
+<header{{ navbar_attributes.addClass(navbar_classes) }} class="top-border" id="navbar" role="banner">
+      <div class="w-row">
+        
+        <div class="w-col w-col-2 w-clearfix">
+            {% if page.branding %}
+            <a href="index.html" class="w-inline-block brand-logo animsition-link">
+                {{ page.branding }}
+            </a>
+            {% endif %}
+          
+        </div>
+        <div class="w-col w-col-8">
+          <div>
+            <!-- NAVIGATION -->
+            <nav class="navigation-type-3">
+              {{ page.navigation }}
+            </nav>
+            <!-- END NAVIGATION -->
+          </div>
+        </div>
+        <div class="w-col w-col-2">
+        {% if page.nav_social %}	
+          <div class="social-wrapper">
+            {{ page.nav_social }}
+            
+          </div>
+        {% endif %}
+        </div>
+      </div>
+    </header>

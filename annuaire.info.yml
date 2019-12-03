@@ -1,0 +1,22 @@
+core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'annuaire'
+description: 'Thème pour le site de Annuaire Theatral.'
+package: 'Bootstrap'
+
+regions:
+  navigation: 'Navigation'
+  nav_social: 'Navigation Media Sociaux'
+  header: 'Couverture'
+  footer: 'Bas de page'
+  content: 'Contenu'
+  sidebar-left : 'Sidebar Gauche'
+  sidebar-right : 'Sidebar Droite'
+
+  
+libraries:
+  - 'annuaire/global-styling'
+  - 'annuaire/global-scripts'
+

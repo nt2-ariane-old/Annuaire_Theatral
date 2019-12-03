@@ -1,0 +1,25 @@
+global-styling:
+  css:
+    theme:
+      css/font-awesome.min.css: {}
+      css/style.css: {}
+      css/animate.css: {}
+global-scripts:
+  js:
+    js/jquery.min.js: {}
+    js/jquery.animsition.min.js: {}
+    js/jquery.fullPage.min.js: {}
+    js/jquery.fancybox.pack.js: {}
+    js/jquery.mb-comingsoon.min.js: {}
+
+    js/imagesloaded.pkgd.min.js: {}
+    js/isotope.pkgd.min.js: {}
+
+    js/royal_preloader.min.js: {}
+    js/tweecoolmi.js: {}
+    js/typed.js: {}
+    js/wow.js: {}
+    js/plugin.js: {}
+
+    js/theme.js: {}
+    js/scripts.js: {}
