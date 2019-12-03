@@ -12,8 +12,8 @@ regions:
   header: 'Couverture'
   footer: 'Bas de page'
   content: 'Contenu'
-  sidebar-left : 'Sidebar Gauche'
-  sidebar-right : 'Sidebar Droite'
+  sidebar_left : 'Sidebar Gauche'
+  sidebar_right : 'Sidebar Droite'
 
   
 libraries:
