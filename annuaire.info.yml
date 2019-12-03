@@ -9,13 +9,13 @@ package: 'Bootstrap'
 regions:
   navigation_menu: 'Menu de Navigation'
   nav_social: 'Navigation Media Sociaux'
+  branding: 'Logo'
   header: 'Couverture'
   footer: 'Bas de page'
   content: 'Contenu'
   sidebar_left : 'Sidebar Gauche'
   sidebar_right : 'Sidebar Droite'
-  branding: 'Logo'
-  
+  secondary_menu : 'Menu Secondaire'
 libraries:
   - 'annuaire/global-styling'
   - 'annuaire/global-scripts'
