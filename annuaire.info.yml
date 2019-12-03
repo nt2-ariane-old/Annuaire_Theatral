@@ -16,6 +16,7 @@ regions:
   sidebar_left : 'Sidebar Gauche'
   sidebar_right : 'Sidebar Droite'
   secondary_menu : 'Menu Secondaire'
+  partners : 'Partenaires'
 libraries:
   - 'annuaire/global-styling'
   - 'annuaire/global-scripts'
