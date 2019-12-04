@@ -90,9 +90,6 @@
             <div>{{item.title}}</div>
         </a>
         <div data-ix="line-menu-type" class="line-bottom-menu"></div>
-        {% if item.below %}
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-        {% endif %}
       </li>
     {% endfor %}
     </ul>
