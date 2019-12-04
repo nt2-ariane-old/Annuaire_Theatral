@@ -10,7 +10,6 @@ global-styling:
       
 global-scripts:
   js:
-    js/jquery.min.js: {}
     js/jquery.animsition.min.js: {}
     js/jquery.fullPage.min.js: {}
     js/jquery.fancybox.pack.js: {}
