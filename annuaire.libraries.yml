@@ -8,7 +8,7 @@ global-styling:
       css/bootstrap.min.css: {}
       css/theme.css: {}
       css/style.css: {}
-      css/toolbar.admin.css: {}
+      
 global-scripts:
   js:
     js/jquery.min.js: {}
