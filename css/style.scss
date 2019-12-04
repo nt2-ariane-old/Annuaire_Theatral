@@ -69,10 +69,10 @@ div#toolbar-administration {
 //footer
 footer
 {
-    .block
+    nav,section
     {
-        float: left;
-        width: 33%;
         margin: 0;
+        width: 33%;
+        float: left;
     }
 }

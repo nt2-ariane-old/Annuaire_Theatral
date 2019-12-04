@@ -67,9 +67,9 @@ div#toolbar-administration {
   text-decoration: none;
 }
 
-footer .block {
-  float: left;
-  width: 33%;
+footer nav, footer section {
   margin: 0;
+  width: 33%;
+  float: left;
 }
 /*# sourceMappingURL=style.css.map */
