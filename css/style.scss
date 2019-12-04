@@ -8,6 +8,16 @@ a:hover
     color: #111;
     text-decoration: none;
 }
+
+//Toolbar
+div#toolbar-administration {
+    position: fixed;
+    background: black;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
 //SearchBar
 
 .searchbar{

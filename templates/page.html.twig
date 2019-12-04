@@ -1,46 +1,48 @@
 
 <header class="top-border">
 	<div class="w-row">
-        <div class="w-col w-col-2 w-clearfix">
-          <a href="index.html" class="w-inline-block brand-logo animsition-link">
-		  	    {{ page.branding }}
-          </a>
-        </div>
-        <div class="w-col w-col-8">
-          <div>
-            <!-- NAVIGATION -->
-            <nav class="navigation-type-3">
-                {{page.navigation_menu}}
-            </nav>
-            <!-- END NAVIGATION -->
-          </div>
-        </div>
-        <div class="w-col w-col-2">
-          <div class="social-wrapper">
-            {{page.nav_social}} 
-          </div>
-        </div>
+    <div class="w-col w-col-2 w-clearfix">
+      <a href="index.html" class="w-inline-block brand-logo animsition-link">
+		  	{{ page.branding }}
+      </a>
+    </div>
+    <div class="w-col w-col-8">
+      <div> 
+        <nav class="navigation-type-3">
+          {{page.navigation_menu}}
+        </nav>
       </div>
-    </header>
+    </div>
+    <div class="w-col w-col-2">
+      <div class="social-wrapper">
+        {{page.nav_social}} 
+      </div>
+    </div>
+  </div>
+</header>
 
       {{page.sidebar_left}}
       {{page.content }}
       {{page.sidebar_right}}
 
-  <footer class="footer">
-    <div class="w-container">
-      <div class="w-row">
-        {{page.footer}}
-      </div>
+<footer class="footer">
+  <div class="w-container">
+    <div class="w-row">
+      {{page.footer}}
     </div>
-  </footer>
+  </div>
+</footer>
+
+{% if page.copyright %}
   <div class="bottom-border">
     <div class="w-row">
-      <div class="w-col w-col-6">
-        <div class="align-left">
-          {{page.nav_social}}
+      {% if page.nav_social %}
+        <div class="w-col w-col-6">
+          <div class="align-left">
+            {{page.nav_social}}
+          </div>
         </div>
-      </div>
+      {% endif %}
       <div class="w-col w-col-6">
         <div class="w-hidden-medium w-hidden-small w-hidden-tiny title-top-border">
           {{page.copyright}}
@@ -48,3 +50,4 @@
       </div>
     </div>
   </div>
+{% endif %}
