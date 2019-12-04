@@ -26,3 +26,5 @@ global-scripts:
 
     js/theme.js: {}
     js/scripts.js: {}
+  dependencies:
+    - core/jquery
