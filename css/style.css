@@ -3,6 +3,15 @@ a:hover {
   text-decoration: none;
 }
 
+div#toolbar-administration {
+  position: fixed;
+  background: black;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
 .searchbar {
   display: inline-block;
   height: 30px;
@@ -56,5 +65,11 @@ a:hover {
   border-radius: 50%;
   color: white;
   text-decoration: none;
+}
+
+footer .block {
+  float: left;
+  width: 33%;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
