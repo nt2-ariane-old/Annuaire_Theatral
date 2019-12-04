@@ -57,32 +57,4 @@ a:hover {
   color: white;
   text-decoration: none;
 }
-
-.data-blog {
-  padding: 0;
-  text-align: center;
-  line-height: 100px;
-}
-
-#actualite {
-  padding: 1em;
-}
-
-footer {
-  margin: 0;
-}
-
-footer h3 {
-  text-align: center;
-}
-
-footer #menu-secondaire {
-  list-style-type: none;
-  text-align: center;
-  padding: 0;
-}
-
-footer #menu-secondaire a {
-  color: black;
-}
 /*# sourceMappingURL=style.css.map */
