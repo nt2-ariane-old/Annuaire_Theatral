@@ -72,4 +72,9 @@ footer nav, footer section {
   width: 33%;
   float: left;
 }
+
+footer nav *, footer section * {
+  text-align: center;
+  margin: auto;
+}
 /*# sourceMappingURL=style.css.map */
