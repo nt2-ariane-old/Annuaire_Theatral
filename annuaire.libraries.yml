@@ -3,7 +3,6 @@ global-styling:
     theme:
       css/base.css: {}
       css/font-awesome.min.css: {}
-      css/style.css: {}
       css/animate.css: {}
       css/bootstrap.min.css: {}
       css/theme.css: {}
