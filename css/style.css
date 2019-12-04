@@ -3,15 +3,6 @@ a:hover {
   text-decoration: none;
 }
 
-div#toolbar-administration {
-  position: fixed;
-  background: black;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
 .searchbar {
   display: inline-block;
   height: 30px;
