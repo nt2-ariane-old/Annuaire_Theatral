@@ -27,7 +27,10 @@ jquery-scripts:
     js/jquery.fancybox.pack.js: {}
     js/jquery.mb-comingsoon.min.js: {}
 
-
+drupal-scripts:
+  js:
+    js/toolbar.js: {}
+    js/backbone.js: {}
 appearance-scripts:
   js:
     js/imagesloaded.pkgd.min.js: {}
