@@ -10,23 +10,28 @@ global-styling:
       
 global-scripts:
   js:
+    js/scripts.js: {}
+  dependencies:
+    - core/drupal
+    - annuaire/jquery-scripts
+    - annuaire/appearance-scripts
+
+jquery-scripts:
+  js:
     js/jquery.animsition.min.js: {}
     js/jquery.fullPage.min.js: {}
     js/jquery.fancybox.pack.js: {}
     js/jquery.mb-comingsoon.min.js: {}
+    js/plugin.js: {}
+    js/theme.js: {}
+  dependancies:
+    - core/jquery
 
+appearance-scripts:
+  js:
     js/imagesloaded.pkgd.min.js: {}
     js/isotope.pkgd.min.js: {}
-
     js/royal_preloader.min.js: {}
     js/tweecoolmi.js: {}
     js/typed.js: {}
     js/wow.js: {}
-    js/plugin.js: {}
-
-    js/theme.js: {}
-    js/scripts.js: {}
-  dependencies:
-    - core/jquery
-    - core/jquery.once
-    - code/drupal
