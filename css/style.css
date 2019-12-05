@@ -132,6 +132,8 @@ footer nav *, footer section * {
 #intro .views-field-field-numero {
   line-height: 18px;
   display: inline-block;
+  width: 40%;
+  text-align: left;
 }
 
 #intro .views-field-field-numero span.views-label.views-label-field-numero, #intro .views-field-field-numero .field-content {
@@ -145,6 +147,8 @@ footer nav *, footer section * {
 #intro .views-field-field-date-de-sortie {
   display: inline-block;
   line-height: 18px;
+  width: 40%;
+  text-align: right;
 }
 
 #intro .views-field-field-date-de-sortie .field-content {

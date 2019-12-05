@@ -129,6 +129,8 @@ footer
     .views-field-field-numero {
         line-height: 18px;
         display: inline-block;
+        width: 40%;
+        text-align: left;
         span.views-label.views-label-field-numero, .field-content
         {
             display: inline;
@@ -144,6 +146,8 @@ footer
     {
         display: inline-block;
         line-height: 18px;
+        width: 40%;
+        text-align: right;
         .field-content
         {
             display: inline;
