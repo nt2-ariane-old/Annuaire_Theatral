@@ -166,4 +166,8 @@ footer nav *, footer section * {
   line-height: 25px;
   font-weight: 400;
 }
+
+.block-title {
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */
