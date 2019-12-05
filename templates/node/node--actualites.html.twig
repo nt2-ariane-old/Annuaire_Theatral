@@ -1,0 +1,173 @@
+{% set img = file_url(node.field_blog_image.0.entity.uri.value) %}
+{% set comment_count = node.field_blog_comments.comment_count %}
+
+{% set des = node.getRevisionAuthor().field_description.value %}
+
+{% if node.getRevisionAuthor().field_twitter.value %}
+	{% set twitter_au = node.getRevisionAuthor().field_twitter.value %}
+{% else %}
+	{% set twitter_au = '#' %}
+{% endif %}
+
+{% if node.getRevisionAuthor().field_facebook.value %}
+	{% set facebook_au = node.getRevisionAuthor().field_facebook.value %}
+{% else %}
+	{% set facebook_au = '#' %}
+{% endif %}
+
+{% if node.getRevisionAuthor().field_behance.value %}
+	{% set behance_au = node.getRevisionAuthor().field_behance.value %}
+{% else %}
+	{% set behance_au = '#' %}
+{% endif %}
+
+{% set position = node.getRevisionAuthor().field_position.value %}
+{% set img_author = file_url(node.getRevisionAuthor().user_picture.0.entity.uri.value) %}
+
+
+
+{% if page %}<!-- single -->
+	<div class="bottom-space">
+		<h3 class="blog-title in-post">{{ title }}</h3>
+		<p class="meta-tag pls-category">{{ ('Created')|t }}: {{ node.created.value|date('j F Y') }} / {{ content.field_blog_categories }} / {{ node_stats }} / {{ comment_count }} {{ ('Comments')|t }}</p>
+		<div class="seperator"></div>
+	</div>
+	<div class="bottom-space">
+		{{ content.body }}
+		<div class="blog-share">
+			<div class="share-wrapper">
+				<ul class="w-list-unstyled">
+					<li class="w-clearfix li-share">
+						<a target="_blank" href="https://facebook.com/sharer.php?u={{ pageURL }}&t={{ title }}" class="w-clearfix w-inline-block share-link facebook">
+							<div class="share-icon">
+								<div class="w-embed"><i class="fa fa-facebook"></i>
+								</div>
+							</div>
+							<div class="share-txt">Facebook</div>
+						</a>
+					</li>
+					<li class="w-clearfix li-share">
+						<a target="_blank" href="https://twitter.com/intent/tweet?url={{ pageURL }}&text={{ title }}" class="w-clearfix w-inline-block share-link twitter">
+							<div class="share-icon">
+								<div class="w-embed"><i class="fa fa-twitter"></i>
+								</div>
+							</div>
+							<div class="share-txt">Twitter</div>
+						</a>
+					</li>
+					<li class="w-clearfix li-share no-line">
+						<a target="_blank" href="https://pinterest.com/pin/create/button/?url={{ pageURL }}&media={{ img }}&description={{ node.body.summary }}" class="w-clearfix w-inline-block share-link pin">
+							<div class="share-icon">
+								<div class="w-embed"><i class="fa fa-pinterest-p"></i>
+								</div>
+							</div>
+							<div class="share-txt">Pinterest</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-space">
+		<h4 class="post-title">{{ 'About author'|t }}</h4>
+		<div class="w-clearfix author-bg-wrapper">
+			<div class="author-photo" style="background-image:url('{{ img_author }}')"></div>
+			<div class="author-content">
+				<h5 class="name-tag">{{ author_name }}</h5>
+				<p class="meta-tag">{{ position }}</p>
+				<p>{{ des }}</p>
+				<div class="social-author">
+					<a href="{{ facebook_au }}" class="w-inline-block social-icon facebook">
+						<div class="w-embed"><i class="fa fa-facebook"></i>
+						</div>
+					</a>
+					<a href="{{ twitter_au }}" class="w-inline-block social-icon twitter">
+						<div class="w-embed"><i class="fa fa-twitter"></i>
+						</div>
+					</a>
+					<a href="{{ behance_au }}" class="w-inline-block social-icon behance">
+						<div class="w-embed"><i class="fa fa-behance"></i>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{ content.field_blog_comments }}
+{% else %} <!-- listing -->
+	{% if blog_style == 'grid' %}
+		<div class="item music blog-item {% for k,categories in node.field_blog_categories %}{{ ' key'|t }}{{ categories.target_id }}{% endfor %}">
+		<div data-ix="blog-hover-zoom-photo" class="blog-wrapper wow fadeIn">
+		<div class="blog-grid-hiden">
+			<a href="{{ url }}" class="w-inline-block blog-link-2 animsition-link"><img src="{{ img }}">
+			</a>
+			<div class="blog-grid-arrow"></div>
+		</div>
+		<div class="blog-grid-con">
+			<h3 class="blog-title"><a class="blog-title in-grid animsition-link" href="{{ url }}">{{ node.getTitle() }}</a></h3>
+			<p class="meta-tag">{{ ('Created: ')|t }} {{ node.created.value|date('j M Y') }}</p>
+			<div class="seperator"></div>
+			<p>{{ node.body.summary }}</p>
+			<div class="small-spc no-bottom-space"><a href="{{ url }}" class="read-more animsition-link">Read More ›</a>
+		</div>
+		</div>
+		</div>
+		</div>
+	{% elseif blog_style == 'minimal' %}
+		<div class="blog-minimal">
+			<div class="data-blog">
+				<div class="w-embed"><i class="icon-software-pencil"></i>
+				</div>
+			</div>
+			<h3 class="blog-title"><a class="blog-title animsition-link" href="{{ url }}">{{ node.getTitle() }}</a></h3>
+			<p class="meta-tag pls-category">{{ ('Created: ')|t }} {{ node.created.value|date('j M Y') }} / {{ content.field_blog_categories }}</p>
+			<div class="seperator center"></div>
+			<p>{{ node.body.summary }}</p>
+			<div class="small-spc"><a href="{{ url }}" class="read-more animsition-link">Read More ›</a>
+		</div>
+		</div>
+	{% elseif blog_style == 'minimal-arch' %}
+		<div class="blog-minimal">
+			<div class="data-blog">
+				<div class="w-embed"><i class="icon-basic-pencil-ruler"></i>
+				</div>
+			</div>
+			<h3 class="blog-title"><a class="blog-title" href="{{ url }}">{{ node.getTitle() }}</a></h3>
+			<p class="meta-tag pls-category">{{ ('Created: ')|t }} {{ node.created.value|date('j M Y') }} / {{ content.field_blog_categories }}</p>
+			<div class="seperator center"></div>
+			<p>{{ node.body.summary }}</p>
+			<div class="small-spc"><a href="{{ url }}" class="read-more">Read More ›</a>
+		</div>
+		</div>
+	{% elseif blog_style == 'zig-zag' or blog_style == 'thougts' %}
+		<div data-ix="blog-hover-zoom-photo" class="w-clearfix space-mobile">
+		  <div class="blog-zig-zag up-left">
+		    <div class="blog-content">
+		      <h3 class="blog-title"><a class="blog-title animsition-link" href="{{ url }}">{{ node.getTitle() }}</a></h3>
+		      <p class="meta-tag pls-category">{{ ('Created: ')|t }} {{ node.created.value|date('j M Y') }} / {{ content.field_blog_categories }}</p>
+		      <div class="seperator"></div>
+		      <p>{{ node.body.summary }}</p>
+		      <div class="small-spc"><a href="{{ url }}" class="read-more animsition-link">Read More&nbsp;›</a>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="blog-zig-zag">
+		    <a href="{{ url }}" class="w-inline-block blog-link animsition-link big-h-img"><img src="{{ img }}" alt="">
+		    </a>
+		  </div>
+		</div>
+	{% elseif blog_style == 'photo' %}
+		<div class="blog-minimal">
+		  <div class="data-blog">
+		    <div class="w-embed"><i class="icon-software-pencil"></i>
+		    </div>
+		  </div>
+		  <h3 class="blog-title"><a class="blog-title animsition-link" href="{{ url }}">{{ node.getTitle() }}</a></h3>
+		  <p class="meta-tag pls-category">{{ ('Created: ')|t }} {{ node.created.value|date('j M Y') }} / {{ content.field_blog_categories }}</p>
+		  <div class="seperator center"></div>
+		  <p>{{ node.body.summary }}</p>
+		  <div class="small-spc"><a href="{{ url }}" class="read-more animsition-link">Read More&nbsp;›</a>
+		  </div>
+		</div>
+	{% endif %}
+{% endif %}
