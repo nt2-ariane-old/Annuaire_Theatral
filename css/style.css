@@ -86,7 +86,7 @@ footer nav *, footer section * {
   top: 0px;
   left: -21px;
   line-height: 18px;
-  background-color: #a8a8a8;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 #intro .views-field-field-image-du-numero {
