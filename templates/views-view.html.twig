@@ -154,20 +154,6 @@
 			{{ rows }}
 		</div>
 		{{ pager }}
-	{% elseif display_id == 'attachment_portfolio_hover_effects' %}
-		{% set m = 1 %}
-		{% for k,row in rows.0['#rows'] %}
-			{% if m == 1 %}
-				{{row}}
-				{% set m = m + 1 %}
-			{% elseif m == 2 %}
-				{{row|render|str_replace_first(' portfolio-overlay-bottom ', ' portfolio-overlay-bottom with-gradient')|raw }}
-				{% set m = m + 1 %}
-			{% else %}
-				{{row|render|str_replace_first(' portfolio-overlay-bottom ', ' portfolio-overlay-bottom with-white')|str_replace_first(' no-margin',' no-margin title-dark')|raw }}
-				{% set m = 1 %}
-			{% endif %} 
-		{% endfor %}
 	{% elseif display_id == 'lano_page_portfolio_hover_effects' %}
 		{{header}}
 		<div id="grid" class="w-clearfix grid">
@@ -276,22 +262,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="grid" class="w-clearfix grid grid-not-margin no-bottom">
-			<div class="grid-sizer"></div>
-			{% set m = 1 %}
-			{% for k,row in rows.0['#rows'] %}
-				{% if m == 1 %}
-					{{row}}
-					{% set m = m + 1 %}
-				{% elseif m == 2 %}
-					{{row|render|str_replace_first(' portfolio-overlay-bottom', ' portfolio-overlay-bottom with-gradient')|raw }}
-					{% set m = m + 1 %}
-				{% else %}
-					{{row|render|str_replace_first(' portfolio-overlay-bottom', ' portfolio-overlay-bottom with-white')|str_replace_first(' no-margin',' no-margin title-dark')|raw }}
-					{% set m = 1 %}
-				{% endif %} 
-			{% endfor %}
-		</div>
+		
 		{{ pager }}
 	{% elseif display_id == 'lano_page_projects_4_columns' %}
 		<div class="w-container">
