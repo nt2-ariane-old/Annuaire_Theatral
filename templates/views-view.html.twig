@@ -60,8 +60,9 @@
                 </div>
             </div>
 
-            {{fields}}
-            {{fields.title}}
+            {% for i in range(0, 10) %}
+                {{ row.content['#row']._entity.body[i].value|raw }}
+            {% endfor %}
             
             <h3 class="blog-title"><a class="blog-title animsition-link" href="blog-post-page.html">{{fields.title.content}}</a></h3>
             <p class="meta-tag">Publié le : 09&nbsp;Mars 2020&nbsp;</p>
