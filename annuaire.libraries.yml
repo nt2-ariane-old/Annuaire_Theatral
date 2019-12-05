@@ -26,6 +26,7 @@ jquery-scripts:
     js/theme.js: {}
   dependancies:
     - core/jquery
+    - code/jquery-ui
 
 appearance-scripts:
   js:
