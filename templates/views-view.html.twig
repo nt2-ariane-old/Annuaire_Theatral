@@ -52,9 +52,16 @@
   {{ attachment_before }}
 
   {% if rows -%}
-    <div class="view-content test1">
-        {{ rows }}
-    </div>
+    {% if id == 'blog' %}
+       <div class="view-content test2">
+            {{ rows }}
+        </div>
+    {% else %}
+        <div class="view-content test1">
+            {{id}}
+            {{ rows }}
+        </div>
+    {% endif %}
   {% elseif empty -%}
     {{ empty }}
   {% endif %}
