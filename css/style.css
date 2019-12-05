@@ -147,6 +147,8 @@ footer nav *, footer section * {
 #intro .views-field-field-numero::after {
   display: inline-block;
   content: ' , ';
+  color: #a8a8a8;
+  padding: 1em;
 }
 
 #intro .views-field-field-date-de-sortie {
