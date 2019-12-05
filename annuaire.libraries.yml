@@ -16,6 +16,10 @@ global-scripts:
     - annuaire/jquery-scripts
     - annuaire/appearance-scripts
 
+jquery:
+  js:
+    js/jquery.min.js
+
 jquery-scripts:
   js:
     js/jquery.animsition.min.js: {}
@@ -25,8 +29,8 @@ jquery-scripts:
     js/theme.js: {}
     js/plugin.js: {}
   dependancies:
-    - core/jquery
-    - code/jquery-ui
+    - annuaire/jquery
+    - code/drupal
 
 appearance-scripts:
   js:
