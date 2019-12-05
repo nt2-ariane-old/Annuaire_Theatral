@@ -22,8 +22,8 @@ jquery-scripts:
     js/jquery.fullPage.min.js: {}
     js/jquery.fancybox.pack.js: {}
     js/jquery.mb-comingsoon.min.js: {}
-    js/plugin.js: {}
     js/theme.js: {}
+    js/plugin.js: {}
   dependancies:
     - core/jquery
     - code/jquery-ui
