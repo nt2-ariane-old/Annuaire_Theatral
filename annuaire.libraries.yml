@@ -10,6 +10,8 @@ global-styling:
       
 global-scripts:
   js:
+    js/theme.js: {}
+    js/plugin.js: {}
     js/scripts.js: {}
   dependencies:
     - core/drupal
@@ -24,8 +26,7 @@ jquery-scripts:
     js/jquery.fullPage.min.js: {}
     js/jquery.fancybox.pack.js: {}
     js/jquery.mb-comingsoon.min.js: {}
-    js/theme.js: {}
-    js/plugin.js: {}
+
 
 appearance-scripts:
   js:
