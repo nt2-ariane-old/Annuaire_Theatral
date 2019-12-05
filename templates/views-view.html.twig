@@ -59,7 +59,10 @@
                     <i class="fa fa-envelope-o"></i>
                 </div>
             </div>
-            {{rows}}
+
+            {% for item in rows %}
+                {{ item }} 
+            {% endfor %}
         </div>
        <div class="view-content test2">
             {{ rows }}
