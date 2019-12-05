@@ -67,3 +67,65 @@ footer
         }
     }
 }
+
+//COUVERTURE
+
+.views-field-field-image-du-numero {
+    width: 1423px;
+    height: 800px;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: -21px;
+    img
+    {
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
+
+.views-field.views-field-field-titre {
+    .field-content {
+        margin-bottom: 0px;
+        color: white;
+        font-size: 58px;
+        line-height: 80px;
+        letter-spacing: 8px;
+    }
+}
+
+.views-field.views-field-field-sous-titre {
+    .field-content {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: 1.5px;
+    }
+}
+
+.views-field.views-field-field-numero {
+    span.views-label.views-label-field-numero, .field-content
+    {
+        display: inline;
+        color: #a8a8a8;
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 400;
+    }
+    
+}
+
+.views-field.views-field-field-date-de-sortie
+{
+    .field-content
+    {
+        display: inline;
+        color: #a8a8a8;
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 400;
+    }
+}
+
+
