@@ -139,7 +139,7 @@ footer
             line-height: 25px;
             font-weight: 400;
         }
-        &:after
+        &::after
         {
             display: inline-block;
             content: ' , ';

@@ -144,7 +144,7 @@ footer nav *, footer section * {
   font-weight: 400;
 }
 
-#intro .views-field-field-numero:after {
+#intro .views-field-field-numero::after {
   display: inline-block;
   content: ' , ';
 }
