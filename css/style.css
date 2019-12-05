@@ -144,6 +144,11 @@ footer nav *, footer section * {
   font-weight: 400;
 }
 
+#intro .views-field-field-numero:after {
+  display: inline-block;
+  content: ' , ';
+}
+
 #intro .views-field-field-date-de-sortie {
   display: inline-block;
   line-height: 18px;

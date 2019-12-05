@@ -139,6 +139,11 @@ footer
             line-height: 25px;
             font-weight: 400;
         }
+        &:after
+        {
+            display: inline-block;
+            content: ' , ';
+        }
         
     }
     
