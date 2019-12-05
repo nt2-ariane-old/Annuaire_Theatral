@@ -78,6 +78,17 @@ footer nav *, footer section * {
   line-height: 500px;
 }
 
+#intro .grayed {
+  width: 1423px;
+  height: 800px;
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: -21px;
+  line-height: 18px;
+  background-color: #a8a8a8;
+}
+
 #intro .views-field-field-image-du-numero {
   width: 1423px;
   height: 800px;
