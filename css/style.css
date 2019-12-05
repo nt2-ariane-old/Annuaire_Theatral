@@ -75,6 +75,7 @@ footer nav *, footer section * {
 
 #intro .banner-content {
   text-align: center;
+  line-height: 500px;
 }
 
 #intro .views-field-field-image-du-numero {
@@ -84,8 +85,7 @@ footer nav *, footer section * {
   z-index: -1;
   top: 0px;
   left: -21px;
-  display: inline-block;
-  vertical-align: middle;
+  line-height: 18px;
 }
 
 #intro .views-field-field-image-du-numero img {
@@ -94,8 +94,7 @@ footer nav *, footer section * {
 }
 
 #intro .views-field-field-titre {
-  display: inline-block;
-  vertical-align: middle;
+  line-height: 18px;
 }
 
 #intro .views-field-field-titre .field-content {
@@ -107,8 +106,7 @@ footer nav *, footer section * {
 }
 
 #intro .views-field-field-sous-titre {
-  display: inline-block;
-  vertical-align: middle;
+  line-height: 18px;
 }
 
 #intro .views-field-field-sous-titre .field-content {
@@ -120,8 +118,7 @@ footer nav *, footer section * {
 }
 
 #intro .views-field-field-numero {
-  display: inline-block;
-  vertical-align: middle;
+  line-height: 18px;
 }
 
 #intro .views-field-field-numero span.views-label.views-label-field-numero, #intro .views-field-field-numero .field-content {
@@ -133,8 +130,7 @@ footer nav *, footer section * {
 }
 
 #intro .views-field-field-date-de-sortie {
-  display: inline-block;
-  vertical-align: middle;
+  line-height: 18px;
 }
 
 #intro .views-field-field-date-de-sortie .field-content {
