@@ -62,7 +62,10 @@
 
             {% for row in rows %}
                <p> row : {{ row }} </p>
-               <p> rows : {{ rows }} </p>
+               {% for col in row %}
+                    <p> row : {{ col }} </p>
+                
+                {% endfor %}
             {% endfor %}
             
             <h3 class="blog-title"><a class="blog-title animsition-link" href="blog-post-page.html">{{fields.title.content}}</a></h3>
