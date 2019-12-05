@@ -72,6 +72,11 @@ footer
 #intro
 {
     position: relative;
+    .banner-content
+    {
+        text-align: center;
+
+    }
     .views-field-field-image-du-numero {
         width: 1423px;
         height: 800px;
@@ -79,6 +84,8 @@ footer
         z-index: -1;
         top: 0px;
         left: -21px;
+        display: inline-block;
+        vertical-align: middle;
         img
         {
             min-width: 100%;
@@ -87,6 +94,8 @@ footer
     }
     
     .views-field-field-titre {
+        display: inline-block;
+        vertical-align: middle;
         .field-content {
             margin-bottom: 0px;
             color: white;
@@ -97,6 +106,8 @@ footer
     }
     
     .views-field-field-sous-titre {
+        display: inline-block;
+        vertical-align: middle;
         .field-content {
             margin-top: 0px;
             margin-bottom: 10px;
@@ -107,6 +118,8 @@ footer
     }
     
     .views-field-field-numero {
+        display: inline-block;
+        vertical-align: middle;
         span.views-label.views-label-field-numero, .field-content
         {
             display: inline;
@@ -120,6 +133,8 @@ footer
     
     .views-field-field-date-de-sortie
     {
+        display: inline-block;
+        vertical-align: middle;
         .field-content
         {
             display: inline;
