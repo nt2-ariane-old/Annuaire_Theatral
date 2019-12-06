@@ -1,5 +1,9 @@
-<div class="item ">
-    <p> {{fields.field_type_d_article.content }}</p>
+{% if fields.field_type_d_article.content == 'ruche':
+        set class = '.ruche';
+    %}
+<div class="item {{class}}">
+    
+    <p> {{ }}</p>
     <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">
         {{fields.field_image_de_couverture.content}}
         
