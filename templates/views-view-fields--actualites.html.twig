@@ -1,6 +1,12 @@
-<li>
-<p>{{ fields.title.content }}</p>
-<p>{{ fields.body.content }}</p>
-<span>{{ fields.created.content }}</span> 
-<a href="{{ fields.path.content }}" class="readmore"> read more </a> 
-</li>
+<div class="blog-minimal">
+    <div class="data-blog">
+        <i class="fa fa-envelope"></i>
+    </div>
+    <h3 class="blog-title"><a class="blog-title animsition-link" href="blog-post-page.html">{{ fields.title.content }}</a></h3>
+    <p class="meta-tag">Publié le : 09&nbsp;Mars 2020&nbsp;</p>
+    <div class="seperator center"></div>
+    <p>{{ fields.body.content }}</p>
+    <div class="small-spc">
+      <a href="{{ fields.path.content }}" class="read-more animsition-link">Lire la suite&nbsp;›</a>
+    </div>
+</div>
