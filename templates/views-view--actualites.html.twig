@@ -52,30 +52,12 @@
   {{ attachment_before }}
 
   {% if rows -%}
-    {% if id == 'actualites' %}
-       <div class="blog-minimal">
-            <div class="data-blog">
-                <div class="w-embed">
-                    <i class="fa fa-envelope-o"></i>
-                </div>
-            </div>
-            
-            {{rows}}
-            
-            
-            </div>
+   
+      <section id="filter" class="w-section section-imp">
+        <div class="w-container">
+          {{ rows }}
         </div>
-       <div class="view-content test2">
-            {{ rows }}
-        </div>
-    {% elseif id == 'extensions_web' %}
-        <div class="view-content test1">
-            {{id}}
-            {{ rows }}
-        </div>
-    {% else %}
-        {{ rows }}
-    {% endif %}
+      </section>
 
   {% elseif empty -%}
     {{ empty }}
