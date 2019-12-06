@@ -71,6 +71,7 @@ footer nav *, footer section * {
 
 #intro {
   position: relative;
+  width: 100%;
 }
 
 #intro .banner-content {
