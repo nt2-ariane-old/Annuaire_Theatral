@@ -53,26 +53,15 @@
 
   {% if rows -%}
     {% if id == 'actualites' %}
-       <div class="blog-minimal">
-            <div class="data-blog">
-                <div class="w-embed">
-                    <i class="fa fa-envelope-o"></i>
-                </div>
-            </div>
-
-            {% for row in rows %}
-               <p> row : {{ row }} </p>
-            {% endfor %}
-            
-            
-            </div>
-        </div>
-       <div class="view-content test2">
+       <section id="filter" class="w-section section-imp">
+          <div class="w-container">
             {{ rows }}
-        </div>
+          </div>
+        </section
+
     {% elseif id == 'extensions_web' %}
+
         <div class="view-content test1">
-            {{id}}
             {{ rows }}
         </div>
     {% else %}
