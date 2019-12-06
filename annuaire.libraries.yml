@@ -6,6 +6,7 @@ global-styling:
       css/animate.css: {}
       css/bootstrap.min.css: {}
       css/theme.css: {}
+      css/update-lano.css: {}
       css/style.css: {}
       
 global-scripts:
