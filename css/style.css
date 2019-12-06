@@ -163,4 +163,8 @@ footer nav *, footer section * {
 .block-title {
   text-align: center;
 }
+
+.row {
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
