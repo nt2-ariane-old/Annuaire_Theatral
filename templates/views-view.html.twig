@@ -53,21 +53,7 @@
 
   {% if rows -%}
     {{id}}
-    {% if id == 'actualites' %}
-       <section id="filter" class="w-section section-imp">
-          <div class="w-container">
-            {{ rows }}
-          </div>
-        </section>
-
-    {% elseif id == 'extensions_web' %}
-
-        <div class="view-content test1">
-            {{ rows }}
-        </div>
-    {% else %}
-        {{ rows }}
-    {% endif %}
+    {{ rows }}
 
   {% elseif empty -%}
     {{ empty }}
