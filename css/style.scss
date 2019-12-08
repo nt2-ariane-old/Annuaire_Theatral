@@ -73,6 +73,15 @@ footer
 {
     position: relative;
     width:100%;
+    img
+    {
+        width: 1423px;
+        height: 800px;
+        position: absolute;
+        z-index: -1;
+        top: 0px;
+        left: -21px;
+    }
     .banner-content
     {
         text-align: center;
