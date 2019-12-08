@@ -1,9 +1,9 @@
 {% for field in fields %}
-        <p>{{ field.raw }} --> {{ field.class }}</p>
+        <p>{{ field.class }} --> {{ field.content }}</p>
 {% endfor %}
 <div class="video-wrapper">
   <div class="w-embed">
-        {{ fields.cover_image.content }}
+        {{ fields.field_image.content }}
     </div>
     <div class="video-overlay"></div>
   </div>
