@@ -52,6 +52,10 @@
   {{ attachment_before }}
 
   {% if rows -%}
+    {% if id == 'couverture_dernier_numero' %}
+      {{id}}
+      <h2>Couverture</h2>
+    {% endif %}
     {{ rows }}
 
   {% elseif empty -%}
