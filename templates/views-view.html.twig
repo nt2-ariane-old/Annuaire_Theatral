@@ -53,10 +53,12 @@
 
   {% if rows -%}
     {% if id == 'couverture_dernier_numero' %}
-      {{id}}
-      <h2>Couverture</h2>
+      <div id="intro" class="w-section banner-one">
+        {{rows}}
+       </div>
+    {% else %}
+      {{ rows }}
     {% endif %}
-    {{ rows }}
 
   {% elseif empty -%}
     {{ empty }}
