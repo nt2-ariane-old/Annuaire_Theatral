@@ -147,6 +147,11 @@ nav ul li:hover > ul {
     display:inherit;
 }
 
+nav ul li > ul:hover
+{
+    display: inherit;
+}
+
 nav ul ul li {
     min-width:170px;
     display:list-item;
