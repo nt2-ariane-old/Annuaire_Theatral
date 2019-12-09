@@ -75,8 +75,11 @@
 <article{{ attributes }}>
 
   <div{{ content_attributes }}>
-	NOUVELLES
-    {{ content }}
+    {{ content.title }}
+    {{ content.field_nouvelle_date }}
+    {{ content.field_lieu }}
+    {{ content.body }}
+    {{ content.doc }}
   </div>
 
 </article>
