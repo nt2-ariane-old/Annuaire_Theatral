@@ -41,6 +41,17 @@
         <a href='{{item.url}}' data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2 animsition-link">
             <div>{{item.title}}</div>
         </a>
+        {% if item.below %}
+        <ul>
+          {% for child in item.below %}
+            <li{{ child.attributes }} class="li-menu-type-2">
+              <a href='{{child.url}}' data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2 animsition-link">
+                <div>{{child.title}}</div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
         <div data-ix="line-menu-type" class="line-bottom-menu"></div>
       </li>
     {% endfor %}
