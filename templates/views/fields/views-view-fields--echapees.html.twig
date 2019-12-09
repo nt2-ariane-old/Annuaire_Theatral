@@ -1,6 +1,7 @@
     <div class="blog-minimal">
         <div class="data-blog">
-          <div class="w-embed"><i class="icon-software-pencil"></i>
+          <div class="w-embed">
+            {{fields.field_image_de_couverture.content}}
           </div>
         </div>
         <h3 class="blog-title"><a class="blog-title animsition-link" href="{{ fields.view_node.content|striptags}}">{{ fields.title.content|render|striptags|trim }}</a></h3>
