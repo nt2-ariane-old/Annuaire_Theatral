@@ -10,18 +10,7 @@
           </div>
         </div>
 
-          <ul>
-            <li>
-              Sol1 : {{ fields.view_node.content|render|striptags|trim }}
-            </li>
-            <li>
-              Sol2 : {{ fields.view_node.content|striptags }} 
-            </li>
-            <li>
-              Sol4 : {{fields.title.element_attributes}}
-            </li>
-            <li>
-              Sol3 : {{ fields.path.content }} 
-            </li>
-            
-          </ul>
+{% set a = fields.path.content|render|trim|striptags %}
+  <a href = '{{ a|render|trim|striptags }}'>
+    {{ fields.title.content|render|trim|striptags }}
+  </a>
