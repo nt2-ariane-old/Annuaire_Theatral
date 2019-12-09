@@ -1,8 +1,10 @@
 {% if fields.field_type_d_article.content == 'Ruche' -%}
     {% set class = 'ruche' %}
+{% elseif fields.field_type_d_article.content == '' -%}
+    {% set class = 'vivarium' %}
 {% endif %}
 <div class="item {{class}}">
-    <p> {{ class }}</p>
+    <p>{{fields.field_type_d_article.content}}</p>
     <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">
         {{fields.field_image_de_couverture.content}}
         
