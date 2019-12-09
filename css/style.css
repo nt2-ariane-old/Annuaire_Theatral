@@ -106,6 +106,10 @@ footer nav *, footer section * {
   background-color: transparent;
 }
 
+main h1 {
+  text-align: center;
+}
+
 .block-title {
   text-align: center;
 }

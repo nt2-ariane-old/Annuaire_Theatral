@@ -1,0 +1,19 @@
+
+    
+      <div data-ix="blog-hover-zoom-photo" class="w-clearfix space-mobile">
+        <div class="blog-zig-zag">
+          <div class="blog-content">
+            <h3 class="blog-title"><a class="blog-title animsition-link" href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content|render|striptags|trim  }}</a></h3>
+            <p class="meta-tag">Responsable : {{fields.field_responsable_dossier.date.content}}</p>
+            <div class="seperator"></div>
+            <p>{{fields.field_abstract.content}}</p>
+            <div class="small-spc"><a href="{{ fields.path.content|render|striptags|trim }}" class="read-more animsition-link">Lire la suite&nbsp;›</a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-zig-zag">
+          <a href="{{ fields.path.content|render|striptags|trim }}" class="w-inline-block blog-link animsition-link">{{fields.field_image.content}}
+          </a>
+        </div>
+      </div>
+
