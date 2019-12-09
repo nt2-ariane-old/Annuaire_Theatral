@@ -1,0 +1,12 @@
+    <div class="blog-minimal">
+        <div class="data-blog">
+          <div class="w-embed"><i class="icon-software-pencil"></i>
+          </div>
+        </div>
+        <h3 class="blog-title"><a class="blog-title animsition-link" href="{{ fields.view_node.content|striptags}}">{{ fields.title.content|render|striptags|trim }}</a></h3>
+        <p class="meta-tag">{{fields.field_author.content}}</p>
+        <div class="seperator center"></div>
+        <p>{{fields.body.content}}</p>
+        <div class="small-spc"><a href="{{ fields.view_node.content|striptags}}" class="read-more animsition-link">En lire plus&nbsp;›</a>
+        </div>
+    </div>
