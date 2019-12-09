@@ -4,7 +4,7 @@
         <div class="blog-zig-zag">
           <div class="blog-content">
             <h3 class="blog-title"><a class="blog-title animsition-link" href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content|render|striptags|trim  }}</a></h3>
-            <p class="meta-tag">Publié le : {{fields.field_publication_date.content}}</p>
+            <p class="meta-tag">Publié le : {{fields.field_publication_date.date.content}}</p>
             <div class="seperator"></div>
             <p>{{fields.field_abstract.content}}</p>
             <div class="small-spc"><a href="{{ fields.path.content|render|striptags|trim }}" class="read-more animsition-link">Lire la suite&nbsp;›</a>
