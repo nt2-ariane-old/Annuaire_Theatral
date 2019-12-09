@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="blog-zig-zag">
-          <a href="blog-post-page.html" class="w-inline-block blog-link animsition-link">{{fields.field_image.content}}
+          <a href="{{ fields.path.content|render|striptags|trim }}" class="w-inline-block blog-link animsition-link">{{fields.field_image.content}}
           </a>
         </div>
       </div>
