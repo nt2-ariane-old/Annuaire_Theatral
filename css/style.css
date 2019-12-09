@@ -133,12 +133,13 @@ main h1 {
   width: 100%;
 }
 
-#block-textedescriptifnumero,
-#block-textedescriptifvivarium {
+.header-presentation {
   width: 800px;
   margin: auto;
   text-align: justify;
   padding: 2em;
+  font-size: 1.2em;
+  font-weight: 100;
 }
 
 nav ul ul {
