@@ -1,15 +1,10 @@
-        <script>
-            const getURL = (element) =>
-            {
-              console.log(element.querySelector('a').href);
-            }
-          </script>
+
         <div class="item">
           <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">
             {{fields.field_image_de_couverture.content}}
             <a href="{{ fields.view_node.content|striptags}}" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content fancybox">
               <div class="portfolio-cn-title">
-                <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" onload='getURL(this)'>{{fields.title.content}}</h4>
+                <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title">{{fields.title.content}}</h4>
                 <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title">{{fields.field_auteur.content}}</div>
               </div>
             </a>
@@ -17,3 +12,6 @@
           
         </div>
 
+        {{fields.view_node.content}}
+
+        
