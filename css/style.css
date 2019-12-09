@@ -3,6 +3,16 @@ a:hover {
   text-decoration: none;
 }
 
+.data-blog {
+  overflow: hidden;
+  padding: 0;
+}
+
+.data-blog img {
+  min-width: 100%;
+  min-height: 100%;
+}
+
 .searchbar {
   display: inline-block;
   height: 30px;

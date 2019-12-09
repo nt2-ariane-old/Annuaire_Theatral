@@ -4,6 +4,17 @@ a:hover
     text-decoration: none;
 }
 
+.data-blog
+{
+    overflow: hidden;
+    padding: 0;
+    img
+    {
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
+
 //SearchBar
 
 .searchbar{
@@ -160,3 +171,4 @@ nav ul ul li {
     display:list-item;
     position: relative;
 }
+
