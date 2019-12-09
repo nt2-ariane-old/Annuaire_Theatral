@@ -113,4 +113,11 @@ footer nav *, footer section * {
 .row {
   width: 100%;
 }
+
+#block-textedescriptifnumero {
+  width: 800px;
+  margin: auto;
+  text-align: justify;
+  padding: 2em;
+}
 /*# sourceMappingURL=style.css.map */
