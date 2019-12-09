@@ -77,15 +77,15 @@
   <div{{ content_attributes }}>
     <div>
         <h4>Auteur(s)</h4>
-        {{ content.author }}
+        {{ content.field_author }}
     </div>
     <div>
         <h4>Lectures connexes</h4>
-        {{ content.lectures_connexes }}
+        {{ content.field_lectures_connexes }}
     </div>
     <div>
         <h4>Mots-Clés</h4>
-        {{ content.mots_cles}}
+        {{ content.field_mots_cles}}
     </div>
     
     <p>
@@ -104,7 +104,7 @@
         </div>
         <div id="biblio" class="tab-pane fade">
             <h3>Bibliographie</h3>
-            <p>{{content.biblio}}</p>
+            <p>{{content.field_biblio}}</p>
         </div>
     </div>
   </div>
