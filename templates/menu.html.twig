@@ -42,7 +42,7 @@
             <div>{{item.title}}</div>
         </a>
         {% if item.below %}
-        <ul>
+        <ul class="sub-item" >
           {% for child in item.below %}
             <li{{ child.attributes }} class="li-menu-type-2">
               <a href='{{child.url}}' data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2 animsition-link">

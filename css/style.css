@@ -125,4 +125,20 @@ main h1 {
   text-align: justify;
   padding: 2em;
 }
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+
+nav ul li:hover > ul {
+  display: inherit;
+}
+
+nav ul ul li {
+  min-width: 170px;
+  display: list-item;
+  position: relative;
+}
 /*# sourceMappingURL=style.css.map */
