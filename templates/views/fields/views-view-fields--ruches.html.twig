@@ -11,9 +11,21 @@
         </div>
 
         {% for field in fields -%}
-          Content : {{ field.content }}
-          Label : {{ field.label }}
-          Attributs : {{ field.label_attributes }}
-          Type : {{ field.element_type }}
-          Class : {{field.class}}
+          <ul>
+            <li>
+              Content : {{ field.content }}
+            </li>
+            <li>
+            Label : {{ field.label }}
+            </li>
+            <li>
+            Attributs : {{ field.label_attributes }}
+            </li>
+            <li>
+            Type : {{ field.element_type }}
+            </li>
+            <li>
+            Class : {{field.class}}
+            </li>
+          </ul>
         {% endfor %}
