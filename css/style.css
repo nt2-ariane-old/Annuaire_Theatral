@@ -69,6 +69,11 @@ footer nav *, footer section * {
   margin: auto;
 }
 
+.top-border {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 #intro {
   position: relative;
   width: 100%;

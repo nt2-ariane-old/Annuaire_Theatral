@@ -52,7 +52,9 @@
   {{ attachment_before }}
 
   {% if rows -%}
-        {{rows}}
+  <div id="intro" class="w-section banner-one">
+      {{rows}}   
+  </div>
   {% elseif empty -%}
     {{ empty }}
   {% endif %}
