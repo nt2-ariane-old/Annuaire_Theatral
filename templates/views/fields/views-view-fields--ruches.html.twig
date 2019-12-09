@@ -10,7 +10,4 @@
           </div>
         </div>
 
-{% set a = fields.path.content|render|trim|striptags %}
-  <a href = '{{ a|render|trim|striptags }}'>
-    {{ fields.title.content|render|trim|striptags }}
-  </a>
+{{fields.title.content.field_link.0['#url']}}
