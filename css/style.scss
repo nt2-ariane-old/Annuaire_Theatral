@@ -87,93 +87,16 @@ footer
         top: 0px;
         left: -21px;
     }
-    .banner-content
+    .embed-video {
+        position: static;
+    }
+    h2
     {
-        text-align: center;
-        line-height: 500px;
+        font-size: larger;
     }
-    .grayed, .views-field-field-image-du-numero
+    h3
     {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: -1;
-        top: 0px;
-        left: -21px;
-        line-height: 18px;
-    }
-    .grayed
-    {
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-    .views-field-field-image-du-numero {
-        img
-        {
-            min-width: 100%;
-            min-height: 100%;
-        }
-    }
-    
-    .views-field-field-titre {
-        line-height: 18px;
-        .field-content {
-            margin-bottom: 0px;
-            color: white;
-            font-size: 58px;
-            line-height: 80px;
-            letter-spacing: 8px;
-        }
-    }
-    
-    .views-field-field-sous-titre {
-        line-height: 18px;
-        .field-content {
-            margin-top: 0px;
-            margin-bottom: 10px;
-            color: white;
-            font-size: 30px;
-            line-height: 36px;
-            letter-spacing: 1.5px;
-        }
-    }
-    
-    .views-field-field-numero {
-        line-height: 18px;
-        display: inline;
-        text-align: right;
-        span.views-label.views-label-field-numero, .field-content
-        {
-            display: inline;
-            color: #a8a8a8;
-            font-size: 16px;
-            line-height: 25px;
-            font-weight: 400;
-        }
-        &::after
-        {
-            display: inline-block;
-            content: ' , ';
-            color: #a8a8a8;
-            font-size: 16px;
-            line-height: 25px;
-            padding: 1em;
-        }
-        
-    }
-    
-    .views-field-field-date-de-sortie
-    {
-        display: inline;
-        line-height: 18px;
-        text-align: left;
-        .field-content
-        {
-            display: inline;
-            color: #a8a8a8;
-            font-size: 16px;
-            line-height: 25px;
-            font-weight: 400;
-        }
+        font-size: large;
     }
     
 }

@@ -88,90 +88,16 @@ footer nav *, footer section * {
   left: -21px;
 }
 
-#intro .banner-content {
-  text-align: center;
-  line-height: 500px;
+#intro .embed-video {
+  position: static;
 }
 
-#intro .grayed, #intro .views-field-field-image-du-numero {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  top: 0px;
-  left: -21px;
-  line-height: 18px;
+#intro h2 {
+  font-size: larger;
 }
 
-#intro .grayed {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-#intro .views-field-field-image-du-numero img {
-  min-width: 100%;
-  min-height: 100%;
-}
-
-#intro .views-field-field-titre {
-  line-height: 18px;
-}
-
-#intro .views-field-field-titre .field-content {
-  margin-bottom: 0px;
-  color: white;
-  font-size: 58px;
-  line-height: 80px;
-  letter-spacing: 8px;
-}
-
-#intro .views-field-field-sous-titre {
-  line-height: 18px;
-}
-
-#intro .views-field-field-sous-titre .field-content {
-  margin-top: 0px;
-  margin-bottom: 10px;
-  color: white;
-  font-size: 30px;
-  line-height: 36px;
-  letter-spacing: 1.5px;
-}
-
-#intro .views-field-field-numero {
-  line-height: 18px;
-  display: inline;
-  text-align: right;
-}
-
-#intro .views-field-field-numero span.views-label.views-label-field-numero, #intro .views-field-field-numero .field-content {
-  display: inline;
-  color: #a8a8a8;
-  font-size: 16px;
-  line-height: 25px;
-  font-weight: 400;
-}
-
-#intro .views-field-field-numero::after {
-  display: inline-block;
-  content: ' , ';
-  color: #a8a8a8;
-  font-size: 16px;
-  line-height: 25px;
-  padding: 1em;
-}
-
-#intro .views-field-field-date-de-sortie {
-  display: inline;
-  line-height: 18px;
-  text-align: left;
-}
-
-#intro .views-field-field-date-de-sortie .field-content {
-  display: inline;
-  color: #a8a8a8;
-  font-size: 16px;
-  line-height: 25px;
-  font-weight: 400;
+#intro h3 {
+  font-size: large;
 }
 
 .block-title {
