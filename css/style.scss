@@ -85,18 +85,20 @@ footer
         position: absolute;
         z-index: -1;
         top: 0px;
-        left: -21px;
     }
-    .embed-video {
+    
+    .embed-video,
+    .video-wrapper
+    {
         position: static;
     }
     h2
     {
-        font-size: larger;
+        font-size: 50px;
     }
     h3
     {
-        font-size: large;
+        font-size: 30px;
     }
     
 }

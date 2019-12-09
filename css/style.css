@@ -85,19 +85,19 @@ footer nav *, footer section * {
   position: absolute;
   z-index: -1;
   top: 0px;
-  left: -21px;
 }
 
-#intro .embed-video {
+#intro .embed-video,
+#intro .video-wrapper {
   position: static;
 }
 
 #intro h2 {
-  font-size: larger;
+  font-size: 50px;
 }
 
 #intro h3 {
-  font-size: large;
+  font-size: 30px;
 }
 
 .block-title {
