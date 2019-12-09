@@ -1,0 +1,96 @@
+{#
+/**
+ * @file
+ * Default theme implementation for main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A css-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   Javascript.
+ *
+ * @see template_preprocess_views_view()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title }}
+  {{ title_suffix }}
+
+  {% if header %}
+    <header>
+      {{ header }}
+    </header>
+  {% endif %}
+
+  {{ exposed }}
+  {{ attachment_before }}
+
+  {% if rows -%}
+    <div class="w-clearfix filter-cont">
+    <div data-ix="open-filter-menu" class="w-clearfix show-filter">
+      <div class="filter-button">
+        <div class="w-embed">
+          <i class="fa fa-filter"></i>
+        </div>
+      </div>
+      <div class="w-clearfix filter-effect">
+        <div data-ix="hide-filter-opacity-0" class="filter-txt" style="opacity: 0;">Cacher</div>
+        <div class="filter-txt-hide">Voir les filtres</div>
+      </div>
+    </div>
+    <div data-ix="move-filter-content-on-load" class="w-clearfix filters button-group" style="opacity: 0; transform: translateX(0px) translateY(-25px) translateZ(0px); display: none;">
+      <a href="#" data-filter="*" class="button">Tous</a>
+      <a href="#" data-filter=".vivarium" class="button">Dossiers Vivarium</a>
+      <a href="#" data-filter=".ruche" class="button">La Ruche</a>
+      <a href="#" data-filter=".recits" class="button">Récits de pratique</a>
+      <a href="#" data-filter=".echapee" class="button">Échapées</a>
+    </div>
+  </div>
+  <!-- CONTENU -->
+    <section id="filter" class="w-section section-imp">
+        <div class="w-container">
+            {{ rows }}
+        </div>
+    </section>
+  {% elseif empty -%}
+    {{ empty }}
+  {% endif %}
+  {{ pager }}
+
+  {{ attachment_after }}
+  {{ more }}
+
+  {% if footer %}
+    <footer>
+      {{ footer }}
+    </footer>
+  {% endif %}
+  
+  {{ feed_icons }}
+</div>
