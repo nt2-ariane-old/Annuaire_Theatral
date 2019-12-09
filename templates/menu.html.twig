@@ -41,6 +41,7 @@
         <a href='{{item.url}}' data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2 animsition-link">
             <div>{{item.title}}</div>
         </a>
+        <div data-ix="line-menu-type" class="line-bottom-menu"></div>
         {% if item.below %}
         <ul class="sub-item" >
           {% for child in item.below %}
@@ -48,11 +49,11 @@
               <a href='{{child.url}}' data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2 animsition-link">
                 <div>{{child.title}}</div>
               </a>
+              <div data-ix="line-menu-type" class="line-bottom-menu"></div>
             </li>
           {% endfor %}
         </ul>
         {% endif %}
-        <div data-ix="line-menu-type" class="line-bottom-menu"></div>
       </li>
     {% endfor %}
     </ul>
