@@ -18,6 +18,10 @@ a:hover {
   min-height: 100%;
 }
 
+h1 {
+  text-align: center;
+}
+
 .searchbar {
   display: inline-block;
   height: 30px;
