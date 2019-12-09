@@ -9,3 +9,12 @@
             </a>
           </div>
         </div>
+
+        {% for field in fields -%}
+          Content : {{ field.content }}
+          Label : {{ field.label }}
+          Attributs : {{ field.label_attributes }}
+          Type : {{ field.element_type }}
+          Class : {{field.class}}
+        {% endfor %}
+        {{row}}
