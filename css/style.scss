@@ -156,6 +156,7 @@ nav ul li > ul:hover
 }
 
 nav ul ul li {
+    min-width:170px;
     display:list-item;
     position: relative;
 }
