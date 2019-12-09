@@ -75,11 +75,19 @@
 <article{{ attributes }}>
 
   <div{{ content_attributes }}>
-    {{ content.title }}
-    {{ content.field_nouvelle_date }}
-    {{ content.field_lieu }}
-    {{ content.body }}
-    {{ content.doc }}
+    <h1>{{ content.title }}<h1>
+    <ul>
+      <li>{{ content.field_nouvelle_date }}</li>
+      <li>{{ content.field_lieu }}</li>
+    </ul>
+    
+    <p>
+      {{ content.body }}
+    </p>
+    
+    <div>
+      {{ content.field_doc }}
+    </div>
   </div>
 
 </article>
