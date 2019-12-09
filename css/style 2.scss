@@ -28,7 +28,7 @@ a:hover
     line-height: 16px;
     transition: width 0.4s linear;
     }
-
+    
     .searchbar:hover > .search_input{
     padding: 0 10px;
     width: 100px;
@@ -90,4 +90,9 @@ footer
             color: black;
         }
     }
+}
+
+.data-blog
+{
+    overflow: hidden;
 }

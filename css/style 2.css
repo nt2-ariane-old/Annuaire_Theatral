@@ -85,4 +85,8 @@ footer #menu-secondaire {
 footer #menu-secondaire a {
   color: black;
 }
+
+.data-blog {
+  overflow: hidden;
+}
 /*# sourceMappingURL=style 2.css.map */
