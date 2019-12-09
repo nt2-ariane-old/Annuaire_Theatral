@@ -1,7 +1,11 @@
 {% if fields.field_type_d_article.content == 'Ruche' -%}
     {% set class = 'ruche' %}
-{% elseif fields.field_type_d_article.content == '' -%}
+{% elseif fields.field_type_d_article.content == 'Vivarium' -%}
     {% set class = 'vivarium' %}
+{% elseif fields.field_type_d_article.content == 'Échapée' -%}
+    {% set class = 'echapee' %}
+{% elseif fields.field_type_d_article.content == 'Récits' -%}
+    {% set class = 'recits' %}
 {% endif %}
 <div class="item {{class}}">
     <p>{{fields.field_type_d_article.content}}</p>
