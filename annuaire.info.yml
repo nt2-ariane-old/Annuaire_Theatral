@@ -16,7 +16,6 @@ regions:
   sidebar_left : 'Sidebar Gauche'
   sidebar_right : 'Sidebar Droite'
   copyright: 'Copyright'
-  info_filter: 'Informations Filtrer'
 libraries:
   - 'annuaire/global-styling'
   - 'annuaire/global-scripts'

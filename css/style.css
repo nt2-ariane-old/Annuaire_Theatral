@@ -101,6 +101,11 @@ footer nav *, footer section * {
   font-size: 30px;
 }
 
+.section-imp {
+  padding: 40px 20px;
+  background-color: transparent;
+}
+
 .block-title {
   text-align: center;
 }
