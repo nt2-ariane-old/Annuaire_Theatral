@@ -8,6 +8,11 @@ a:hover {
   padding: 0;
 }
 
+.data-blog .w-embed {
+  width: 100%;
+  height: 100%;
+}
+
 .data-blog img {
   min-width: 100%;
   min-height: 100%;
