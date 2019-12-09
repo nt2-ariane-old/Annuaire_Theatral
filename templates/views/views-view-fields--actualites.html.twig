@@ -3,7 +3,7 @@
     <div class="data-blog">
         <i class="fa fa-envelope"></i>
     </div>
-    <h3 class="blog-title"><a class="blog-title animsition-link" href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content|raw  }}</a></h3>
+    <h3 class="blog-title"><a class="blog-title animsition-link" href="{{ fields.path.content|render|striptags|trim }}">{{ fields.title.content|render|striptags|trim  }}</a></h3>
     <p class="meta-tag">Publié le : {{ fields.field_nouvelle_date.content }}</p>
     <div class="seperator center"></div>
     <p>{{ fields.body.content }}</p>
