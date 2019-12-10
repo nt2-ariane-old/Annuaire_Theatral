@@ -84,8 +84,7 @@
         <div class="lectures">
             {% for lecture in content.field_lectures_connexes  %}
                 <div class="lecture-content">
-                    {{lecture.content.field_image_de_couverture}}
-                    {{lecture.node_view.content}}
+                    {{ link(lecture.title, lecture.url, { 'class':['foo', 'bar', 'baz']} ) }}
 
 
                 </div>
