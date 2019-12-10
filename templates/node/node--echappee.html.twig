@@ -85,7 +85,9 @@
         <div class="lectures">
             {% for lecture in content.field_lectures_connexes  %}
                 <div class="lecture-content">
-                    {{lecture}}
+                    {{lecture.content.field_image_de_couverture}}
+                    {{lecture.content.title}}
+
 
                 </div>
             {% endfor %}
