@@ -85,7 +85,7 @@
             {% for lecture in content.field_lectures_connexes  %}
                 <div class="lecture-content">
                     {% for field in lecture %}
-                        {{ field.content }}
+                        {{ dump(field) }}
                     {% endfor %}
 
                 </div>
