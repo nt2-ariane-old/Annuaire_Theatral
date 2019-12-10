@@ -85,7 +85,7 @@
             {% for lecture in content.field_lectures_connexes  %}
                 <div class="lecture-content">
                     {{lecture.content.field_image_de_couverture}}
-                    {{lecture.content}}
+                    {{lecture.node_view.content}}
 
 
                 </div>
