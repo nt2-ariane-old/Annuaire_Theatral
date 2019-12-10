@@ -98,13 +98,35 @@
     </ul>
     
     <div class="tab-content">
-        <div id="citation" class="tab-pane fade in active">
+        <div id="citation" class="tab-pane fade in active show">
             <h3>Citation</h3>
             <p>{{content.field_pour_citer}}</p>
         </div>
-        <div id="biblio" class="tab-pane fade">
+        <div id="biblio" class="tab-pane fade show">
             <h3>Bibliographie</h3>
             <p>{{content.field_biblio}}</p>
+        </div>
+    </div>
+
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+        <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+        <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <h3>HOME</h3>
+            <p>Some content.</p>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3>Menu 1</h3>
+            <p>Some content in menu 1.</p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <h3>Menu 2</h3>
+            <p>Some content in menu 2.</p>
         </div>
     </div>
   </div>
