@@ -75,6 +75,7 @@
 <article{{ attributes }}>
 
   <div{{ content_attributes }}>
+        {{dump(contentßß)}}
     <div>
         <h4>Auteur(s)</h4>
         {{ content.field_author }}
@@ -84,7 +85,7 @@
         <div class="lectures">
             {% for lecture in content.field_lectures_connexes  %}
                 <div class="lecture-content">
-                    {{ dump(lecture) }}
+                    {{  }}
 
                 </div>
             {% endfor %}
