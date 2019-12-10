@@ -84,8 +84,9 @@
         {{ content.field_lectures_connexes }}
         <div class="lectures">
             {% for lecture in content.field_lectures_connexes  %}
-                <div>
+                <div class="lecture-content">
                     {{lecture}}
+
                 </div>
             {% endfor %}
         </div>
