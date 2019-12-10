@@ -39,3 +39,4 @@ appearance-scripts:
     js/tweecoolmi.js: {}
     js/typed.js: {}
     js/wow.js: {}
+    js/bootstrap.min.js: {}
