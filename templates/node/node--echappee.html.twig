@@ -96,6 +96,9 @@
             {% for item in node.field_lectures_connexes %}
                 {{item.entity.title.value}}
                 {{item.entity.path.value}}
+                {% for key in item.entity.path %}
+                    {{key}}
+                {% endfor %}
                 <div class="preview" style='background-image: url({{ file_url(item.entity.field_image.0.entity.fileuri) }})'>
                         
                 </div>
