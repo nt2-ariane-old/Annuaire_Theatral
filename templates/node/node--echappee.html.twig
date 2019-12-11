@@ -79,7 +79,11 @@
         <h4>Auteur(s)</h4>
         {{content.field_author}}
         {% for item in node.field_author %}
-            {{item.entity.parent_field_name.value}}
+            {{.value}}
+            {% for key in item.entity.parent_field_name|keys %}
+                {{key}}
+            {% endfor %}
+            <br>-----------<br>
             {% for key in item.entity|keys %}
                 {{key}}
             {% endfor %}
