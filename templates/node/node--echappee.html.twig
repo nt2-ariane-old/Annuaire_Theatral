@@ -90,11 +90,11 @@
     <div>
         <h4>Lectures connexes</h4>
         <div class="lectures">
-            {% for key in node.field_lectures_connexes.entity|keys %}
+            {# {% for key in node.field_lectures_connexes.entity|keys %}
                 {{key}}
-            {% endfor %}
+            {% endfor %} #}
             {{ node.field_lectures_connexes.entity.field_image_de_couverture }}
-            {{ content.field_lectures_connexes }}
+            {# {{ content.field_lectures_connexes }} #}
            
         </div>
     </div>
