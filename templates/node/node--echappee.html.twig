@@ -95,7 +95,9 @@
             <br>--------------------<br>
             {% for item in node.field_lectures_connexes %}
                 {{item.entity.title.value}}
-                {{item.entity.path.0.value}}
+                {{item.entity.path.0.alias}}
+                {{item.entity.path.0.pid}}
+                {{item.entity.path.0.langcode}}
                 {% for key in item.entity.path.0|keys %}
                     {{key}}
                 {% endfor %}
