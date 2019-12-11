@@ -94,19 +94,14 @@
             {{content.field_lectures_connexes}}
             <br>--------------------<br>
             {% for item in node.field_lectures_connexes %}
-                {{item.target_id}}
+                {% for key in item.entity|keys %}
+                    {{key}}
+                {% endfor %}
             {% endfor %}
-            <br>--------------------<br>
-            {% for key in node.field_lectures_connexes.entity|keys %}
-                {{key}}
-            {% endfor %}
-            <br>--------------------<br>
-            {% for item in node.field_lectures_connexes.entity.title %}
-                {{item.value}}
-            {% endfor %}
+            
             <br>--------------------<br>
             <div class="preview" style='background-image: url({{ file_url(node.field_lectures_connexes.entity.field_image.0.entity.fileuri) }})'>
-                fsfsfsfs
+                {{node.field_lectures_connexes.entity.path.value}}
             </div>
             <img src=>
             {% for item in node.field_lectures_connexes.entity.field_image %}
