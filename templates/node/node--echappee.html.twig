@@ -79,7 +79,7 @@
         <h4>Auteur(s)</h4>
         {{content.field_author}}
         {% for item in node.field_author %}
-            {{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.value}}
+            {{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.body.value}}
            
             <br>-----------<br>
             {% for key in item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity|keys %}
