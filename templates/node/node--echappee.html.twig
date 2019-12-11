@@ -112,13 +112,7 @@
             <div class="preview" style='background-image: url({{ file_url(node.field_lectures_connexes.entity.field_image.0.entity.fileuri) }})'>
                 {{node.field_lectures_connexes.entity.path.value}}
             </div>
-            <img src=>
-            {% for item in node.field_lectures_connexes.entity.field_image %}
-                <img src={{item.entity.fileuri}} width="{{item.width}}" height="{{item.height}}">
-                
-            {% endfor %}
             <br>--------------------<br>
-            {{node.field_lectures_connexes.entity.field_image.value}}
           
   
             {# {{ node.field_lectures_connexes.entity }} #}
