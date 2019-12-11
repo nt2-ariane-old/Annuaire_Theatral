@@ -98,28 +98,8 @@
                 {{key}}
             {% endfor %}
             <br>--------------------<br>
-            {% for item in node.field_lectures_connexes.entity.field_image %}
-                <ul>
-                    <li>
-                        {{item.alt}}
-                    </li>
-                    <li>
-                        {{item.title}}
-
-                    </li>
-                    <li>
-
-                        {{item.width}}
-                    </li>
-                    <li>
-
-                        {{item.height}}
-                    </li>
-                    <li>
-
-                        {{item.target_id}}
-                    </li>
-                </ul>
+            {% for item in node.field_lectures_connexes.entity.title %}
+                {{item.value}}
             {% endfor %}
             <br>--------------------<br>
             {% for item in node.field_lectures_connexes.entity.field_image_de_couverture %}
