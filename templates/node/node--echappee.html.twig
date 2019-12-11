@@ -97,9 +97,8 @@
                 {% for subitem in item.entity %}
                     
                     {{subitem.0.field_image.entity.fileuri}}
-                    {% for key in subitem.0|keys %}
-                    <br>====================<br>
-                        {{key}}
+                    {% for subsubitem in subitem %}
+                        {{subsubitem .value}}
                     {% endfor %}
                 {% endfor %}
             {% endfor %}
