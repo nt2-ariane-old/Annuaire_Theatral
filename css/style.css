@@ -139,6 +139,11 @@ main h1 {
   width: 100%;
 }
 
+.portfolio-overlay img {
+  width: auto;
+  height: auto;
+}
+
 .header-presentation {
   width: 800px;
   margin: auto;
