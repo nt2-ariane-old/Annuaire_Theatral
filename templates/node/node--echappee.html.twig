@@ -107,28 +107,8 @@
             <br>--------------------<br>
             {{ file_url(node.field_lectures_connexes.entity.field_image.0.entity.fileuri) }}
             {% for item in node.field_lectures_connexes.entity.field_image %}
-            
-                <ul>
-                    <li>
-                        {{item.entity.fileuri}}
-                    </li>
-                    <li>
-                        {{item.title}}
-
-                    </li>
-                    <li>
-
-                        {{item.width}}
-                    </li>
-                    <li>
-
-                        {{item.height}}
-                    </li>
-                    <li>
-
-                        {{item.target_id}}
-                    </li>
-                </ul>
+                <img src="{{item.entity.fileuri}}" width="{{item.width}}" height="{{item.height}}">
+                
             {% endfor %}
             <br>--------------------<br>
             {{node.field_lectures_connexes.entity.field_image.value}}
