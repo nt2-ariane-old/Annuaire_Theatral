@@ -95,8 +95,10 @@
             <br>--------------------<br>
             {% for item in node.field_lectures_connexes %}
                 {% for subitem in item.entity %}
+                    
                     {{subitem.field_image.0.entity.fileuri}}
                     {% for key in subitem.0|keys %}
+                    <br>====================<br>
                         {{key}}
                     {% endfor %}
                 {% endfor %}
