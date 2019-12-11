@@ -93,12 +93,13 @@
     <div>
         <h4>Lectures connexes</h4>
         <div class="lectures">
-            {% for lecture in content.field_lectures_connexes  %}
-                <div class="lecture-content">
+            {% for key in content.field_lectures_connexes|keys  %}
+                {{key}}
+                {# <div class="lecture-content">
                     {% for key in lecture|keys %}
                         {{key}}
                     {% endfor %}    
-                </div>
+                </div> #}
             {% endfor %}
         </div>
     </div>
