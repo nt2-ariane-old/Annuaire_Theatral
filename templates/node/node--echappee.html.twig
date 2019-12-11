@@ -77,7 +77,8 @@
   <div{{ content_attributes }}>
     <div>
         <h4>Auteur(s)</h4>
-        {% for item in content.field_author %}
+        {{content.field_author}}
+        {% for item in node.field_author %}
             {% for key in item.entity|keys %}
                 {{key}}
             {% endfor %}
