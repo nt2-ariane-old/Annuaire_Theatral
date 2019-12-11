@@ -94,8 +94,8 @@
             {{content.field_lectures_connexes}}
             <br>--------------------<br>
             {% for item in node.field_lectures_connexes %}
-                {{subitem.title.0.value}}
-                <div class="preview" style='background-image: url({{ file_url(subitem.field_image.0.entity.fileuri) }})'>
+                {{item.title.0.value}}
+                <div class="preview" style='background-image: url({{ file_url(item.field_image.0.entity.fileuri) }})'>
                         
                 </div>
                 {% for subitem in item.entity %}
