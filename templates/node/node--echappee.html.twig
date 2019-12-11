@@ -79,13 +79,16 @@
     <div>
         <h4>Auteur(s)</h4>
         {{ content.field_author }}
+        {% for item in content.field_author %}
+            {{item}}
+        {% endfor %}
     </div>
     <div>
         <h4>Lectures connexes</h4>
         <div class="lectures">
             {% for lecture in content.field_lectures_connexes  %}
                 <div class="lecture-content">
-
+                    
                 </div>
             {% endfor %}
         </div>
