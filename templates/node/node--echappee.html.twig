@@ -117,7 +117,31 @@
                     </li>
                     <li>
 
-   ß                     {{item.target_id}}
+                        {{item.target_id}}
+                    </li>
+                </ul>
+            {% endfor %}
+            <br>--------------------<br>
+            {% for item in node.field_lectures_connexes.entity.field_image_de_couverture %}
+                <ul>
+                    <li>
+                        {{item.alt}}
+                    </li>
+                    <li>
+                        {{item.title}}
+
+                    </li>
+                    <li>
+
+                        {{item.width}}
+                    </li>
+                    <li>
+
+                        {{item.height}}
+                    </li>
+                    <li>
+
+                        {{item.target_id}}
                     </li>
                 </ul>
             {% endfor %}
