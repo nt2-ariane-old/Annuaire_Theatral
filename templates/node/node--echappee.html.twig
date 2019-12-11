@@ -93,7 +93,7 @@
         <div class="lectures">
             {{content.field_lectures_connexes}}
             <br>--------------------<br>
-            {% for key in node.field_lectures_connexes.entity|keys %}
+            {% for key in node.field_lectures_connexes|keys %}
                 {{key}}
             {% endfor %}
             <br>--------------------<br>
