@@ -85,11 +85,6 @@
                 </b>
             </a>
             {{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.body.value|raw}}
-           
-            <br>-----------<br>
-            {% for key in item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity|keys %}
-                {{key}}
-            {% endfor %}
         {% endfor %}
         
     </div>
