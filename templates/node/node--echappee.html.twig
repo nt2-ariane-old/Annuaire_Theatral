@@ -91,8 +91,6 @@
         <h4>Lectures connexes</h4>
             
         <div class="lectures">
-            {{content.field_lectures_connexes}}
-            <br>--------------------<br>
             {% for item in node.field_lectures_connexes %}
                 
                 <a class="lecture-content" href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.path.0.langcode}}{{item.entity.path.0.alias}}'>
@@ -111,11 +109,6 @@
                 </a>
                 
             {% endfor %}
-          
-  
-            {# {{ node.field_lectures_connexes.entity }} #}
-            {# {{ content.field_lectures_connexes }} #}
-           
         </div>
     </div>
     <div>
