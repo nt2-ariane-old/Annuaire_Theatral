@@ -78,13 +78,11 @@
     <div>
         <h4>Auteur(s)</h4>
         {% for item in content.field_author %}
-            {% for subitem in item.items %}
-                {{subitem}}
+            {% for key in item.entity|keys %}
+                {{key}}
             {% endfor %}
         {% endfor %}
-        {% for key in content.field_author|keys %}
-            {{key}}
-        {% endfor %}
+        
     </div>
     <div>
         <h4>Lectures connexes</h4>
