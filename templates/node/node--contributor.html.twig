@@ -73,30 +73,95 @@
  */
 #}
 <article{{ attributes }}>
-    <section{{ content_attributes }}>
+    
+    <section class="w-section section-imp more-padding">
+        <div class="w-container">
         <div class="bottom-space">
             <div class="title-wrapper left">
-                <h2 class="author-name">{{content.field_first_name}} {{content.field_last_name}}</h2>
-                <div>
-                    <img src="{{ base_path ~ directory }}/images/sub-handmade.png">
-                </div>
+            <h2 class="author-name">{{content.field_first_name}} {{content.field_last_name}}</h2>
+            <div><img src="images/sub-handmade.png">
+            </div>
             </div>
             <div>
-                <div class="w-row">
-                    <div class="w-col w-col-6">
-                        <div class="both-padd">
-                            <img width="501" src="{{ base_path ~ directory }}/images/team-3.jpg">
-                        </div>
-                    </div>
-                    <div class="w-col w-col-6">
-                        <div>
-                            <p>{{content.body}}</p>
-                            {{content.field_links}}
-
-                        </div>
-                    </div>
+            <div class="w-row">
+                <div class="w-col w-col-6">
+                <div class="both-padd"><img width="501" src="{{ base_path ~ directory }}/images/team-3.jpg">
+                </div>
+                </div>
+                <div class="w-col w-col-6">
+                <div>
+                    <p>{{content.body}}</p>
+                    {{content.field_links}}
+                </div>
                 </div>
             </div>
+            </div>
+        </div>
+        <div>
+            <div class="title-wrapper left">
+            <h2>Hobbies <span class="font-ch">&amp;</span> Interest</h2>
+            <div><img src="images/sub-handmade.png">
+            </div>
+            </div>
+            <div>
+            <div class="w-row">
+                <div class="w-col w-col-2">
+                <div class="align-center">
+                    <div class="data-blog cont-ico smll-ico">
+                    <div class="w-embed"><i class="fa fa-apple"></i>
+                    </div>
+                    </div>
+                    <div class="cont-sub-txt">Apple</div>
+                </div>
+                </div>
+                <div class="w-col w-col-2">
+                <div class="align-center">
+                    <div class="data-blog cont-ico smll-ico">
+                    <div class="w-embed"><i class="fa fa-music"></i>
+                    </div>
+                    </div>
+                    <div class="cont-sub-txt">Music</div>
+                </div>
+                </div>
+                <div class="w-col w-col-2">
+                <div class="align-center">
+                    <div class="data-blog cont-ico smll-ico">
+                    <div class="w-embed"><i class="fa fa-gamepad"></i>
+                    </div>
+                    </div>
+                    <div class="cont-sub-txt">Games</div>
+                </div>
+                </div>
+                <div class="w-col w-col-2">
+                <div class="align-center">
+                    <div class="data-blog cont-ico smll-ico">
+                    <div class="w-embed"><i class="fa fa-coffee"></i>
+                    </div>
+                    </div>
+                    <div class="cont-sub-txt">Coffee</div>
+                </div>
+                </div>
+                <div class="w-col w-col-2">
+                <div class="align-center">
+                    <div class="data-blog cont-ico smll-ico">
+                    <div class="w-embed"><i class="fa fa-heart"></i>
+                    </div>
+                    </div>
+                    <div class="cont-sub-txt">Love</div>
+                </div>
+                </div>
+                <div class="w-col w-col-2">
+                <div class="align-center">
+                    <div class="data-blog cont-ico smll-ico">
+                    <div class="w-embed"><i class="fa fa-plane"></i>
+                    </div>
+                    </div>
+                    <div class="cont-sub-txt">Travel</div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
         </div>
     </section>
 </article>
