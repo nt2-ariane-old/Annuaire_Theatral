@@ -79,12 +79,9 @@
     <div>
         <h4>Auteur(s)</h4>
         {% for item in content.field_author %}
-            <p>
-                Title : {{item.title}} <br/>
-                view : {{item.view_mode}} <br/>
-                label : {{item.label_display}} <br/>
-                field : {{item.field_name}} <br/>
-            </p>
+            {% for subitem in item.0|keys %}
+                {{subitem}}
+            {% endfor %}
         {% endfor %}
         {% for key in content.field_author|keys %}
             {{key}}
