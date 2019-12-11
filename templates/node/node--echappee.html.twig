@@ -94,8 +94,8 @@
                 {{key}}
             {% endfor %}
             --------------------
-            {% for key in node.field_lectures_connexes.entity.body.0.value|keys %}
-                {{key}}
+            {% for item in node.field_lectures_connexes.entity.body.%}
+                {{item.value}}
             {% endfor %}
   
             {# {{ node.field_lectures_connexes.entity }} #}
