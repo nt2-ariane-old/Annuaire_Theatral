@@ -78,7 +78,11 @@
         {{dump(content)}}
     <div>
         <h4>Auteur(s)</h4>
-        {{ content.field_author }}
+        {% for item in content.field_author %}
+            <p>
+                {{item.title}} 
+            </p>
+        {% endfor %}
         {% for key in content.field_author|keys %}
             {{key}}
         {% endfor %}
