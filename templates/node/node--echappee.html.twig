@@ -80,7 +80,7 @@
         {{content.field_author}}
         {% for item in node.field_author %}
 
-            {% for key in item.entity.parent_field_name|keys %}
+            {% for key in item.entity.parent_field_name.0|keys %}
                 {{key}}
             {% endfor %}
             <br>-----------<br>
