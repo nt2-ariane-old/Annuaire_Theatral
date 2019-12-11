@@ -154,9 +154,15 @@ main h1 {
   font-family: Arial,sans-serif;
 }
 
+.lecture-content {
+  width: 25%;
+  display: inline-block;
+}
+
 .lecture-content * {
   width: 50%;
   display: inline-block;
+  margin: auto;
 }
 
 .preview {
