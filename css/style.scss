@@ -170,15 +170,14 @@ main
 {
     width: 25%;
     display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     *
     {
         width: 50%;
         display: inline-block;
         margin: auto;
-    }
-    span
-    {
-        line-height: 100px;
     }
 }
 .preview
