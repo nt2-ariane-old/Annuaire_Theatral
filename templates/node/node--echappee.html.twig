@@ -96,10 +96,13 @@
             {% for item in node.field_lectures_connexes %}
                 {% for subitem in item.entity %}
                     
-                    {{subitem.field_image.value}}
+                    {{subitem.title.value}}
+                    <div class="preview" style='background-image: url({{ file_url(subitem.field_image.0.entity.fileuri) }})'>
+                        
+                    </div>
                     {% for subsubitem in subitem %}
                         <br>===================<br>
-                        {{subsubitem .value}}
+                        {{subsubitem.value}}
                     {% endfor %}
                 {% endfor %}
             {% endfor %}
