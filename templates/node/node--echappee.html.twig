@@ -95,8 +95,8 @@
             <br>--------------------<br>
             {% for item in node.field_lectures_connexes %}
                 {{item.entity.title.value}}
-                {{item.entity.path.value}}
-                {% for key in item.entity.path|keys %}
+                {{item.entity.path.0.value}}
+                {% for key in item.entity.path.0|keys %}
                     {{key}}
                 {% endfor %}
                 {% if file_url(item.entity.field_image.0.entity.fileuri) != '/' %}
