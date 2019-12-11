@@ -104,18 +104,6 @@
                         
                 </div>
             {% endfor %}
-            <br>--------------------<br>
-            {% for item in node.field_lectures_connexes %}
-                {% for key in item.entity|keys %}
-                    {{key}}
-                {% endfor %}
-            {% endfor %}
-            
-            <br>--------------------<br>
-            <div class="preview" style='background-image: url({{ file_url(node.field_lectures_connexes.entity.field_image.0.entity.fileuri) }})'>
-                {{node.field_lectures_connexes.entity.path.value}}
-            </div>
-            <br>--------------------<br>
           
   
             {# {{ node.field_lectures_connexes.entity }} #}
