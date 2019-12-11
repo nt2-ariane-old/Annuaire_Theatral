@@ -90,6 +90,9 @@
     <div>
         <h4>Lectures connexes</h4>
         <div class="lectures">
+            {% for key in node.field_lectures_connexes.entity|keys %}
+                {{key}}
+            {% endfor %}
             {{ node.field_lectures_connexes.entity.name.value}}
             {{ content.field_lectures_connexes }}
            
