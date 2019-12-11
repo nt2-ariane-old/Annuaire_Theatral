@@ -105,7 +105,10 @@
                 {{item.value}}
             {% endfor %}
             <br>--------------------<br>
-            <img src={{ file_url(node.field_lectures_connexes.entity.field_image.0.entity.fileuri) }}>
+            <div class="preview" style='background-image: url({{ file_url(node.field_lectures_connexes.entity.field_image.0.entity.fileuri) }})'>
+                fsfsfsfs
+            </div>
+            <img src=>
             {% for item in node.field_lectures_connexes.entity.field_image %}
                 <img src={{item.entity.fileuri}} width="{{item.width}}" height="{{item.height}}">
                 
