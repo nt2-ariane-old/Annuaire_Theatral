@@ -79,7 +79,7 @@
     <div>
         <h4>Auteur(s)</h4>
         {% for item in content.field_author %}
-            {% for subitem in item.0|keys %}
+            {% for subitem in items|keys %}
                 {{subitem}}
             {% endfor %}
         {% endfor %}
