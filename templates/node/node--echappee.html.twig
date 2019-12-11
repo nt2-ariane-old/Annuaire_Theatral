@@ -105,7 +105,9 @@
                 {{item.value}}
             {% endfor %}
             <br>--------------------<br>
-            {% for item in node.field_lectures_connexes.entity.field_image_de_couverture %}
+            {{ file_url(node.field_lectures_connexes.entity.field_image.entity.fileuri) }}
+            {% for item in node.field_lectures_connexes.entity.field_image %}
+            
                 <ul>
                     <li>
                         {{item.alt}}
