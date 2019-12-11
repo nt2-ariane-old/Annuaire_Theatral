@@ -90,14 +90,8 @@
     <div>
         <h4>Lectures connexes</h4>
         <div class="lectures">
-            {% for key in content.field_lectures_connexes|keys  %}
-                {{key}}
-                {# <div class="lecture-content">
-                    {% for key in lecture|keys %}
-                        {{key}}
-                    {% endfor %}    
-                </div> #}
-            {% endfor %}
+            {{ content.field_lectures_connexes|keys }}
+           
         </div>
     </div>
     <div>
