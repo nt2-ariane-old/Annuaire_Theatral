@@ -165,6 +165,10 @@ main h1 {
   margin: auto;
 }
 
+.lecture-content span {
+  line-height: 100px;
+}
+
 .preview {
   height: 100px;
   width: 100px;
