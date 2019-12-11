@@ -154,7 +154,7 @@ main h1 {
   font-family: Arial,sans-serif;
 }
 
-.lecture-content {
+.lectures .lecture-content {
   width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,10 +168,16 @@ main h1 {
   float: left;
 }
 
-.lecture-content * {
+.lectures .lecture-content * {
   width: 50%;
   display: inline-block;
   margin: auto;
+}
+
+.lectures::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .preview {
