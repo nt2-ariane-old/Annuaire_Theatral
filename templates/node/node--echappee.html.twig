@@ -99,13 +99,16 @@
                 {% for key in item.entity.path|keys %}
                     {{key}}
                 {% endfor %}
-                <div class="preview" style='background-image: url({{ file_url(item.entity.field_image.0.entity.fileuri) }})'>
-                        
-                </div>
-                {{ file_url(item.entity.field_image_de_couverture.0.entity.fileuri) }}
-                <div class="preview" style='background-image: url({{ file_url(item.entity.field_image_de_couverture.0.entity.fileuri) }})'>
-                        
-                </div>
+                {% if file_url(item.entity.field_image.0.entity.fileuri) != '/' %}
+                    <div class="preview" style='background-image: url({{ file_url(item.entity.field_image.0.entity.fileuri) }})'>
+                            
+                    </div>
+                {% elseif file_url(item.entity.field_image_de_couverture.0.entity.fileuri) != '/' %}
+                    <div class="preview" style='background-image: url({{ file_url(item.entity.field_image_de_couverture.0.entity.fileuri) }})'>
+                            
+                    </div>
+                {% endif %}
+                
             {% endfor %}
           
   
