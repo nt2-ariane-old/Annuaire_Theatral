@@ -93,7 +93,10 @@
             {% for key in node.field_lectures_connexes.entity|keys %}
                 {{key}}
             {% endfor %}
-            {{node.field_lectures_connexes.entity.body}}
+            {% for key in node.field_lectures_connexes.entity.body|keys %}
+                {{key}}
+            {% endfor %}
+  
             {# {{ node.field_lectures_connexes.entity }} #}
             {# {{ content.field_lectures_connexes }} #}
            
