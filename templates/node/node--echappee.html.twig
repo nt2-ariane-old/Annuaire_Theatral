@@ -99,11 +99,27 @@
             {% endfor %}
             <br>--------------------<br>
             {% for item in node.field_lectures_connexes.entity.field_image %}
-                {{item.alt}}
-                {{item.title}}
-                {{item.width}}
-                {{item.height}}
-                {{item.target_id}}
+                <ul>
+                    <li>
+                        {{item.alt}}
+                    </li>
+                    <li>
+                        {{item.title}}
+
+                    </li>
+                    <li>
+
+                        {{item.width}}
+                    </li>
+                    <li>
+
+                        {{item.height}}
+                    </li>
+                    <li>
+
+   ß                     {{item.target_id}}
+                    </li>
+                </ul>
             {% endfor %}
             <br>--------------------<br>
             {{node.field_lectures_connexes.entity.field_image.value}}
