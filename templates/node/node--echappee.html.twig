@@ -82,7 +82,7 @@
             {{item.entity.field_contributor_attributes.0.entity.field_contributor_name.value}}
            
             <br>-----------<br>
-            {% for key in item.entity.field_contributor_attributes.0.entity|keys %}
+            {% for key in item.entity.field_contributor_attributes.0.entity.field_contributor_name|keys %}
                 {{key}}
             {% endfor %}
         {% endfor %}
