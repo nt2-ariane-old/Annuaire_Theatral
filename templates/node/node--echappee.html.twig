@@ -94,11 +94,7 @@
             {{content.field_lectures_connexes}}
             <br>--------------------<br>
             {% for item in node.field_lectures_connexes %}
-                {% for key in item|keys %}
-                    
-                    {{key}}
-                    ===========
-                {% endfor %}
+                {{item.target_id}}
             {% endfor %}
             <br>--------------------<br>
             {% for key in node.field_lectures_connexes.entity|keys %}
