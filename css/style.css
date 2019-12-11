@@ -154,6 +154,14 @@ main h1 {
   font-family: Arial,sans-serif;
 }
 
+.preview {
+  height: 300px;
+  width: 300px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 nav ul ul {
   display: none;
   position: absolute;
