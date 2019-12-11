@@ -1,10 +1,14 @@
 <div{{ attributes }}>
     {% for item in items %}
-        <div{{ item.attributes }}>
+        <div{{ item.attributes }} class='lecture-content'>
             {{ item.content }}
-            {% for key in item|keys %}
-                {{key}}
-            {% endfor %}
+            
+        </div>
+    {% endfor %}
+    {% for key in items|keys %}
+        <div class='lecture-content'>
+            {{ key }}
+            
         </div>
     {% endfor %}
 </div>
