@@ -76,7 +76,7 @@
     <section{{ content_attributes }}>
         <div class="bottom-space">
             <div class="title-wrapper left">
-                <h2 class="author-name">My biography</h2>
+                <h2 class="author-name">{{content.field_first_name}} {{content.field_last_name}}</h2>
                 <div>
                     <img src="/themes/lano/images/sub-handmade.png">
                 </div>
@@ -90,8 +90,10 @@
                     </div>
                     <div class="w-col w-col-6">
                         <div>
-                            <p>Maecenas vestibulum mollis diam. Sed fringilla mauris sit amet nibh. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aenean commodo ligula eget dolor. Nullam accumsan lorem in dui. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Aenean vulputate eleifend tellus. Nullam sagittis. Curabitur ullamcorper ultricies nisi. Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit amet eros. Sed hendrerit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras dapibus. Cras dapibus. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Vivamus elementum semper nisi. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Fusce convallis metus id felis luctus adipiscing. Curabitur turpis. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a grande.</p>
+                            <p>{{content.body}}</p>
+                            
                             <div class="w-clearfix small-spc">
+                                {{content.field_links}}
                                 <div class="w-clearfix show-filter">
                                     <div class="filter-button">
                                         <div class="w-embed">
