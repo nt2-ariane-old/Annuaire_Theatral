@@ -107,7 +107,7 @@
             
             <br>--------------------<br>
             <div class="preview" style='background-image: url({{ file_url(node.field_lectures_connexes.entity.field_image.0.entity.fileuri) }})'>
-                {{node.field_lectures_connexes.entity.path}}
+                {{node.field_lectures_connexes.entity.path.value}}
             </div>
             <img src=>
             {% for item in node.field_lectures_connexes.entity.field_image %}
