@@ -89,15 +89,18 @@
             </div>
         </div>
         <h2>Éditorial</h2>
+        {% for key in content.group_contents|keys %}
+                {{ key }}
+            {% endfor %}
         <section id="editorial">
             {{ content.group_contents.editorial_issue_entity_view_1 }}
             
-            {% for key in content.group_contents.editorial_issue_entity_view_1|keys %}
+            {% for key in content.group_contents.editorial_issue_entity_view_1.0|keys %}
                 {{ key }}
             {% endfor %}
         </section>
-        <section class="views-element-container">
-
+        <section id="dossiers" class="views-element-container">
+            {{ content.group_contents.editorial_issue_entity_view_1 }}
             <div class="w-row">
                 {% set type = ["Documents","Pratiques et Travaux","Parcours Critique","Revue des revues","Notes de lecture"] %}
                 {% for column in type %}
