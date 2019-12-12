@@ -75,7 +75,7 @@
 <article{{ attributes }}>
     {% if not page %}
         <h2{{ title_attributes }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        <a href="{{ url }}" rel="bookmark"></a>
         </h2>
     {% endif %}
     {% for field in content|keys %}
@@ -91,7 +91,7 @@
             </div>
             <div class="w-container container-contact">
                 <div class="align-center">
-                    <h2 class="inner-title">{{ content.title }}</h2>
+                    <h2 class="inner-title">{{ label }}</h2>
                     <p class="sub-text-title">Artiste invité : {{ content.field_artiste_invite|raw}}</p>
                     <p class="sub-text-title">Interviewer : {{ content.field_interviewer|raw}}</p>
                 </div>
