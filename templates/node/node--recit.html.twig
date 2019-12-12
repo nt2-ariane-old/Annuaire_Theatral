@@ -96,8 +96,8 @@
         <div class="w-container container-contact">
             <div class="align-center">
                 <h2 class="inner-title">  {{ title_prefix }} {{ title_suffix }}</h2>
-                <p class="sub-text-title">{{ content.field_artiste_invite}}</p>
-                <p class="sub-text-title">{{ content.field_interviewer}}</p>
+                <p class="sub-text-title">{{ content.field_artiste_invite|raw}}</p>
+                <p class="sub-text-title">{{ content.field_interviewer|raw}}</p>
                 {# {{ fields.field_publication_date.content }} #}
             </div>
         </div>
