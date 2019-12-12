@@ -32,6 +32,10 @@ h1 {
   display: none;
 }
 
+.paragraph-formatter .paragraphs-collapsed-description::after {
+  content: none;
+}
+
 .searchbar {
   display: inline-block;
   height: 30px;
@@ -192,6 +196,13 @@ main h1 {
   content: "";
   clear: both;
   display: table;
+}
+
+.js .paragraphs-collapsed-description {
+  position: static;
+  height: auto;
+  overflow: auto;
+  line-height: inherit;
 }
 
 .preview {

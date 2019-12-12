@@ -28,7 +28,7 @@ h1 {
         display: none;
     }
     .paragraphs-collapsed-description {
-        &:::after {
+        &::after {
             content: none;
         }
     }
@@ -181,6 +181,13 @@ main {
         clear: both;
         display: table;
     }
+}
+
+.js .paragraphs-collapsed-description {
+    position: static;
+    height: auto;
+    overflow: auto;
+    line-height: inherit;
 }
 
 .preview {
