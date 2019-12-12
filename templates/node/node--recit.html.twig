@@ -99,13 +99,21 @@
         <div class="w-col w-col-4">
             <aside>
                 <h3>Artiste</h3>
-                {% for item in node.field_artiste_inviter %}
+                {% for item in node.field_artiste_invite %}
                     {% for key in item.entity|keys %}
                         {{ key }}
                     {% endfor %}
                 {% endfor %}
                 <h3>Interviewer</h3>
                 {% for item in node.field_interviewer %}
+                    <a href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.path.0.langcode}}{{item.entity.path.0.alias}}'>
+                        <b>{{ item.entity.field_first_name.value }} {{ item.entity.field_last_name.value }}</b>
+                        <p>
+                            {% for key in item.entity.field_first_name.0.entity|keys %}
+                                {{ key }}
+                            {% endfor %}
+                        </p>
+                    </a>
                     {% for key in item.entity|keys %}
                         {{ key }}
                     {% endfor %}
