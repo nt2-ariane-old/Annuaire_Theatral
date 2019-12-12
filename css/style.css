@@ -25,7 +25,9 @@ h1 {
 }
 
 .paragraph-formatter {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .paragraph-formatter .paragraph-info {
