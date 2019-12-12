@@ -121,34 +121,7 @@
                         <div class="blog-content">
                             <h3 class="blog-title"><a class="blog-title animsition-link" href="blog-post-page.html">{{ content.dossier_vivarium_entity_view_1.title }}</a></h3>
                             {% for item in content.dossier_vivarium_entity_view_1 %}
-                                {% for key in item.attached|keys %}
-                                    {{ key }}
-                                {% endfor %}
-                                <br>=========<br>
-                                {{ item.type }}
-                                <br>=========<br>
-                                {{ item.name }}
-                                <br>=========<br>
-                                {{ item.display_id }}
-                                <br>=========<br>
-                                {% for key in item.display_id.entity|keys %}
-                                    {{ key }}
-                                {% endfor %}
-                                <br>=========<br>
-                                {{ item.arguments }}
-                                <br>=========<br>
-                                {% for key in item.embed|keys %}
-                                    {{ key }}
-                                {% endfor %}
-                                <br>=========<br>
-                                {% for key in item.view.entity|keys %}
-                                    {{ key }}
-                                {% endfor %}
-                                <br>=========<br>
-                                {% for key in item.view|keys %}
-                                    {{ key }}
-                                {% endfor %}
-                                <br>=========<br>
+                                {{ item }}
                             {% endfor %}
                         </div>
                     </div>
