@@ -94,25 +94,44 @@
         </div>
         <section class="views-element-container">
 
-        <div class="w-row">
-            {% set type = ["Documents","Pratiques et Travaux","Parcours Critique","Revue des revues","Notes de lecture"] %}
-            {% for column in type %}
-                <div class="w-col w-col-6">
-                    <div class="w-clearfix service-wrapper wow fadeIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
-                        <div class="service-icon">
-                            <div class="w-embed">
-                                <i class="fa fa-envelope-o"></i>
+            <div class="w-row">
+                {% set type = ["Documents","Pratiques et Travaux","Parcours Critique","Revue des revues","Notes de lecture"] %}
+                {% for column in type %}
+                    <div class="w-col w-col-6">
+                        <div class="w-clearfix service-wrapper wow fadeIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+                            <div class="service-icon">
+                                <div class="w-embed">
+                                    <i class="fa fa-envelope-o"></i>
+                                </div>
                             </div>
-                        </div>
-                        <div class="service-content">
-                            <h4 class="service-title">{{ column }}</h4>
-                        </div>
-                    </div> 
-                </div>
-            {% endfor %}
+                            <div class="service-content">
+                                <h4 class="service-title">{{ column }}</h4>
+                            </div>
+                        </div> 
+                    </div>
+                {% endfor %}
+                
+            </div>
+        </section>
+        <section id="vivarium" class="w-section section-imp">
+            <div class="w-container">
             
-        </div>
-        {{ content.dossier_vivarium_entity_view_1 }}
+                <div class="w-clearfix space-mobile">
+                    <div class="blog-zig-zag">
+                        <div class="blog-content">
+                            <h3 class="blog-title"><a class="blog-title animsition-link" href="blog-post-page.html">{{ content.dossier_vivarium_entity_view_1.title }}</a></h3>
+                        </div>
+                    </div>
+                    <div class="blog-zig-zag">
+                        <a href="blog-post-page.html" class="w-inline-block blog-link animsition-link">
+                            {{ content.dossier_vivarium_entity_view_1.field_image_de_couverture }}
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
         <div>
             {% for key in node|keys %}
                 {{key}}
@@ -124,7 +143,6 @@
             <br>====================<br>
 
         </div>
-        </section>
         <h2>Pour citer</h2>
     </div>
 
