@@ -90,9 +90,9 @@
         </div>
         <h2>Éditorial</h2>
         <section id="editorial">
-            {{ content.group_contents }}
-            keys
-            {% for key in content.group_contents|keys %}
+            {{ content.group_contents.editorial_issue_entity_view_1 }}
+            
+            {% for key in content.group_contents.editorial_issue_entity_view_1|keys %}
                 {{ key }}
             {% endfor %}
         </section>
