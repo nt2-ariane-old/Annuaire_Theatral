@@ -92,7 +92,7 @@
         <section id="editorial">
             {{ content.group_contents }}
             keys
-            {% for key in group_contents|keys %}
+            {% for key in content.group_contents|keys %}
                 {{ key }}
             {% endfor %}
         </section>
