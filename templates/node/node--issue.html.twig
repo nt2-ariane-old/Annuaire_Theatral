@@ -93,11 +93,7 @@
                 {{ key }}
             {% endfor %}
         <section id="editorial">
-            {{ content.group_contents.editorial_issue_entity_view_1 }}
-            
-            {% for key in content.group_contents.editorial_issue_entity_view_1.0|keys %}
-                {{ key }}
-            {% endfor %}
+            {{ content.group_contents.editorial_issue_entity_view_1.0.view }}
         </section>
         <section id="dossiers" class="views-element-container">
             {{ content.group_contents.dossiers_on_issue_entity_view_1 }}
