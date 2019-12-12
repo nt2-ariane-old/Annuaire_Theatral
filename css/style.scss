@@ -27,6 +27,11 @@ h1 {
     .paragraph-info {
         display: none;
     }
+    .paragraphs-collapsed-description {
+        &:::after {
+            content: none;
+        }
+    }
 }
 
 //SearchBar
