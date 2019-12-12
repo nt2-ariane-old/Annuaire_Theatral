@@ -97,32 +97,8 @@
         </section>
         <section id="dossiers" class="views-element-container">
             {{ content.group_contents.dossiers_on_issue_entity_view_1 }}
-            <div class="w-row">
-                {% set type = ["Documents","Pratiques et Travaux","Parcours Critique","Revue des revues","Notes de lecture"] %}
-                {% for column in type %}
-                    <div class="w-col w-col-6">
-                        <div class="w-clearfix service-wrapper wow fadeIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
-                            <div class="service-icon">
-                                <div class="w-embed">
-                                    <i class="fa fa-envelope-o"></i>
-                                </div>
-                            </div>
-                            <div class="service-content">
-                                <h4 class="service-title">{{ column }}</h4>
-                            </div>
-                        </div> 
-                    </div>
-                {% endfor %}
-                
-            </div>
         </section>
         
-        <div>
-            {% for key in content|keys %}
-                {{key}}
-            {% endfor %}
-
-        </div>
         <h2>Pour citer</h2>
     </div>
 
