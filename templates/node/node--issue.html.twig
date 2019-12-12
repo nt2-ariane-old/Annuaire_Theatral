@@ -120,9 +120,11 @@
                     <div class="blog-zig-zag">
                         <div class="blog-content">
                             <h3 class="blog-title"><a class="blog-title animsition-link" href="blog-post-page.html">{{ content.dossier_vivarium_entity_view_1.title }}</a></h3>
-                            {{ content.dossier_vivarium_entity_view_1.0.view }}
                             {% for item in content.dossier_vivarium_entity_view_1 %}
-                                {{ item }}
+                                {{ item|keys }}
+                                {% for key in item %}
+                                
+                                {% endfor %}
                             {% endfor %}
                         </div>
                     </div>
