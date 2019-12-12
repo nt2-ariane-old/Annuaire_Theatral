@@ -73,18 +73,6 @@
  */
 #}
 <article{{ attributes }}>
-
-
-
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
   <div{{ content_attributes }}>
     <div id="intro" class="w-section banner-one">
         <div class="video-wrapper">
@@ -96,8 +84,8 @@
         <div class="w-container container-contact">
             <div class="align-center">
                 <h2 class="inner-title">  {{ title_prefix }} {{ title_suffix }}</h2>
-                <p class="sub-text-title">{{ content.field_artiste_invite|raw}}</p>
-                <p class="sub-text-title">{{ content.field_interviewer|raw}}</p>
+                <p class="sub-text-title">Artiste invité : {{ content.field_artiste_invite|raw}}</p>
+                <p class="sub-text-title">Interviewer : {{ content.field_interviewer|raw}}</p>
                 {# {{ fields.field_publication_date.content }} #}
             </div>
         </div>
