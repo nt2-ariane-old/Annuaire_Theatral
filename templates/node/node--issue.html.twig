@@ -92,6 +92,27 @@
         <section id="editorial">
             {{ content.group_contents }}
         </section>
+        <section class="views-element-container">
+
+            <div class="w-row">
+                {% set type = ["Documents","Pratiques et Travaux","Parcours Critique","Revue des revues","Notes de lecture"] %}
+                {% for column in type %}
+                    <div class="w-col w-col-6">
+                        <div class="w-clearfix service-wrapper wow fadeIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+                            <div class="service-icon">
+                                <div class="w-embed">
+                                    <i class="fa fa-envelope-o"></i>
+                                </div>
+                            </div>
+                            <div class="service-content">
+                                <h4 class="service-title">{{ column }}</h4>
+                            </div>
+                        </div> 
+                    </div>
+                {% endfor %}
+                
+            </div>
+        </section>
         
         <div>
             {% for key in content|keys %}
