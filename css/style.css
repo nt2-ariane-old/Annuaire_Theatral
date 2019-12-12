@@ -79,13 +79,15 @@ h1 {
   text-decoration: none;
 }
 
-footer nav, footer section {
+footer nav,
+footer section {
   margin: 0;
   width: 33%;
   float: left;
 }
 
-footer nav *, footer section * {
+footer nav *,
+footer section * {
   text-align: center;
   margin: auto;
 }
@@ -151,7 +153,11 @@ main h1 {
   padding: 2em;
   font-size: 1.2em;
   font-weight: 100;
-  font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
+}
+
+#vivarium {
+  border: 1px solid black;
 }
 
 .lectures .lecture-content {
