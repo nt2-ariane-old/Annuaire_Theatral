@@ -1,8 +1,5 @@
 <div class="editorial_infos">
     <h3>{{ fields.title.content }}</h3>
-    <h4>{{ fields.field_author.content }}</h4>
+    <b>Par {{ fields.field_author.content }}</b>
     <p>{{ fields.body.content }}</p>
-    {% for key in view|keys %}
-        {{ key }}
-    {% endfor %}
 </div>
