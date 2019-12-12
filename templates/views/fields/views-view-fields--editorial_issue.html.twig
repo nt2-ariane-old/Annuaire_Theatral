@@ -2,7 +2,7 @@
     <h3>{{ fields.title.content }}</h3>
     <h4>{{ fields.field_author.content }}</h4>
     <p>{{ fields.body.content }}</p>
-    {% for key in fields.field_author|keys %}
+    {% for key in node.field_author|keys %}
         {{ key }}
     {% endfor %}
 </div>
