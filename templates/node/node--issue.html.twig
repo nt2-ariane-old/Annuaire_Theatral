@@ -114,7 +114,15 @@
         </div>
 
         <div>
-            {{ content.copyright }}
+            {% for key in node|keys %}
+                {{key}}
+            {% endfor %}
+            <br>====================<br>
+            {% for key in content|keys %}
+                {{key}}
+            {% endfor %}
+            <br>====================<br>
+
         </div>
         </section>
         <h2>Pour citer</h2>
