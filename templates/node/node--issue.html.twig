@@ -91,6 +91,9 @@
         <h2>Éditorial</h2>
         <section id="editorial">
             {{ content.group_contents }}
+            {% for key in group_contents|keys %}
+                {{ key }}
+            {% endfor %}
         </section>
         <section class="views-element-container">
 
