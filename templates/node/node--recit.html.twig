@@ -73,96 +73,36 @@
  */
 #}
 <article{{ attributes }}>
-    
-    <section class="w-section section-imp more-padding">
-        <div class="w-container">
-        <div class="bottom-space">
-            <div class="title-wrapper left">
-            <h2 class="author-name">{{content.field_first_name}} {{content.field_last_name}}</h2>
-            <div><img src="{{ base_path ~ directory }}/images/sub-handmade.png">
+
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer>
+      {{ author_picture }}
+      <div{{ author_attributes }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+  <div{{ content_attributes }}>
+    <div id="intro" class="w-section banner-one">
+        <div class="video-wrapper">
+            <div class="w-embed embed-video">
+            {{ content.field_image_de_couverture }}
             </div>
-            </div>
-            <div>
-            <div class="w-row">
-                
-                <div class="w-col w-col-12">
-                <div>
-                    <p>{{content.body}}</p>
-                    
-                    {{content.field_links}}
-                    {{content.field_author_digital_identifier}}
-                    {{content.field_bibliographic_reference}}
-                    
-                </div>
-                </div>
-            </div>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="w-container container-contact">
+            <div class="align-center">
+                <h2 class="inner-title">{{content.title}}</h2>
+                <p class="sub-text-title">Invité : {{ content.field_artiste_invite}}</p>
+                <p class="sub-text-title">Interviewer : {{ content.field_interviewer}}</p>
+                {# {{ fields.field_publication_date.content }} #}
             </div>
         </div>
-        <div>
-            <div class="title-wrapper left">
-            <h2>Hobbies <span class="font-ch">&amp;</span> Interest</h2>
-            <div><img src="{{ base_path ~ directory }}/images/sub-handmade.png">
-            </div>
-            </div>
-            <div>
-            <div class="w-row">
-                <div class="w-col w-col-2">
-                <div class="align-center">
-                    <div class="data-blog cont-ico smll-ico">
-                    <div class="w-embed"><i class="fa fa-apple"></i>
-                    </div>
-                    </div>
-                    <div class="cont-sub-txt">Apple</div>
-                </div>
-                </div>
-                <div class="w-col w-col-2">
-                <div class="align-center">
-                    <div class="data-blog cont-ico smll-ico">
-                    <div class="w-embed"><i class="fa fa-music"></i>
-                    </div>
-                    </div>
-                    <div class="cont-sub-txt">Music</div>
-                </div>
-                </div>
-                <div class="w-col w-col-2">
-                <div class="align-center">
-                    <div class="data-blog cont-ico smll-ico">
-                    <div class="w-embed"><i class="fa fa-gamepad"></i>
-                    </div>
-                    </div>
-                    <div class="cont-sub-txt">Games</div>
-                </div>
-                </div>
-                <div class="w-col w-col-2">
-                <div class="align-center">
-                    <div class="data-blog cont-ico smll-ico">
-                    <div class="w-embed"><i class="fa fa-coffee"></i>
-                    </div>
-                    </div>
-                    <div class="cont-sub-txt">Coffee</div>
-                </div>
-                </div>
-                <div class="w-col w-col-2">
-                <div class="align-center">
-                    <div class="data-blog cont-ico smll-ico">
-                    <div class="w-embed"><i class="fa fa-heart"></i>
-                    </div>
-                    </div>
-                    <div class="cont-sub-txt">Love</div>
-                </div>
-                </div>
-                <div class="w-col w-col-2">
-                <div class="align-center">
-                    <div class="data-blog cont-ico smll-ico">
-                    <div class="w-embed"><i class="fa fa-plane"></i>
-                    </div>
-                    </div>
-                    <div class="cont-sub-txt">Travel</div>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    </section>
+    </div>
+  </div>
+
 </article>
