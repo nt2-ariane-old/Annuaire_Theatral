@@ -73,6 +73,11 @@
  */
 #}
 <article{{ attributes }}>
+    {% if not page %}
+        <h2{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h2>
+    {% endif %}
     <div{{ content_attributes }}>
         <div id="intro" class="w-section banner-one">
             <div class="video-wrapper">
@@ -83,7 +88,7 @@
             </div>
             <div class="w-container container-contact">
                 <div class="align-center">
-                    <h2 class="inner-title">  {{ title_prefix }} {{ title_suffix }}</h2>
+                    <h2 class="inner-title">{{ title_prefix }}</h2>
                     <p class="sub-text-title">Artiste invité : {{ content.field_artiste_invite|raw}}</p>
                     <p class="sub-text-title">Interviewer : {{ content.field_interviewer|raw}}</p>
                 </div>
