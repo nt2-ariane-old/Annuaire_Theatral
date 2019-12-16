@@ -5,7 +5,30 @@
     <div class="w-clearfix service-wrapper wow fadeIn" data-wow-delay="0.3s">
         <div class="service-icon">
             <div class="w-embed">
-                <i class="fa fa-envelope-o"></i>
+                {% switch fields.field_article_type.content %}
+                    {% case 'research-article' %}
+                        <i class="fas fa-vial"></i>
+                    {% case "article-commentary" %}
+                        <i class="far fa-comment"></i>
+                    {% case "book-review" %}
+                        <i class="fas fa-book"></i>
+                    {% case "brief-report" %}
+                        <i class="fas fa-hourglass-end"></i>
+                    {% case "case-report" %}
+                        <i class="fas fa-folder"></i>
+                    {% case "correction" %}
+                        <i class="far fa-check-circle"></i>    
+                    {% case "letter" %}
+                        <i class="fas fa-envelope-open-text"></i>
+                    {% case "reply" %}
+                        <i class="fas fa-reply"></i>
+                    {% case "review-article" %}
+                        <i class="far fa-newspaper"></i>
+                    {% default %}
+                        <i class="fa fa-envelope-o"></i>
+                {% endswitch %}
+                
+                
             </div>
         </div>
         <div class="service-content">
