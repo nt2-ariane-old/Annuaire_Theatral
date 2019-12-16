@@ -117,12 +117,12 @@ footer section * {
 }
 
 #intro img {
-  width: 1423px;
-  height: 800px;
   position: absolute;
   z-index: -1;
   top: 0px;
   left: 0px;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 #intro .embed-video,
