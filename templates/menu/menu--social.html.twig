@@ -36,7 +36,7 @@
                 {% for item in items %}
                         <a href="{{item.url}}" title="{{item.title}}"class="w-inline-block social-icon">
 
-                            {{ "facebook" in item.url }}
+                            {{ "facebook" in item.url|raw }}
                             {% if 'facebook' in item.url|raw %}
                                 <i class="fab fa-facebook-f"></i>
                             {% elseif 'twitter' in item.url %}
