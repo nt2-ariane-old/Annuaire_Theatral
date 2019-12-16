@@ -37,7 +37,8 @@
                 {% for item in items %}
                     <li class="li-menu-type-2">
                         <a href="{{item.url}}" class="w-inline-block social-icon facebook">
-                            {% if 'facebook' in item.url %}
+                            {{ item.url }}
+                            {# {% if 'facebook' in item.url %}
                                 <i class="fab fa-facebook-f"></i>
                             {% else if 'twitter' in item.url %}
                                 <i class="fab fa-twitter"></i>
@@ -45,7 +46,7 @@
                                 <i class="fab fa-instagram"></i>
                             {% else %}
                                 <i class="far fa-envelope"></i>
-                            {% endif %}
+                            {% endif %} #}
                         </a>
                     </li>
                 {% endfor %} 
