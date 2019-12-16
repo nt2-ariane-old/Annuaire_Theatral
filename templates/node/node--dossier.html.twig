@@ -93,7 +93,23 @@
   {% endif %}
 
   <div{{ content_attributes }}>
-    :)
+    <div id="intro" class="w-section banner-one">
+        <div class="video-wrapper">
+            <div class="w-embed embed-video">
+                {{ content.field_image }}
+            </div>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="w-container container-contact">
+            <div class="align-center">
+                <h2 class="inner-title">{{ label }}</h2>
+                <p class="sub-text-title">{{ content.field_issue_number|raw}} , {{ content.field_publication_date|raw}} </p>
+            </div>
+        </div>
+    </div>
+    {% for key in content.contents %}
+        {{ key }}
+    {% endfor %}
     {{ content }}
   </div>
 
