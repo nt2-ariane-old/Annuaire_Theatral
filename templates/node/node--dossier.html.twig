@@ -73,32 +73,28 @@
  */
 #}
 <article{{ attributes }}>
-    <div{{ content_attributes }}>
-        <div id="intro" class="w-section banner-one">
-            <div class="video-wrapper">
-                <div class="w-embed embed-video">
-                {{ content.field_image }}
-                </div>
-                <div class="video-overlay"></div>
-            </div>
-            <div class="w-container container-contact">
-                <div class="align-center">
-                    <h2 class="inner-title">{{ label }}</h2>
-                    <p class="sub-text-title">{{ content.field_issue_number|raw}} , {{ content.field_publication_date|raw}} </p>
-                </div>
-            </div>
-        </div>
-        <section id="editorial">
-            {{ content.group_contents.editorial_issue_entity_view_1 }}
-        </section>
-        <section id="dossiers" class="views-element-container">
-            {{ content.group_contents.dossiers_on_issue_entity_view_1 }}
-        </section>
-        <section id="individuel">
-            <div class="w-row">
-                {{content.group_contents.individual_articles_entity_view_1}}
-            </div>
-        </section>
-    </div>
+
+  {{ title_prefix }}
+  {% if not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer>
+      {{ author_picture }}
+      <div{{ author_attributes }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes }}>
+    :)
+    {{ content }}
+  </div>
 
 </article>
