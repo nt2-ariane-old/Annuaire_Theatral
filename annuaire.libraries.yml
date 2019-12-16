@@ -14,6 +14,7 @@ global-scripts:
     js/theme.js: {}
     js/plugin.js: {}
     js/scripts.js: {}
+    js/font-awesome.min.js: {}
   dependencies:
     - core/drupal
     - annuaire/jquery-scripts
