@@ -36,7 +36,7 @@
             <ul class="w-list-unstyled">
                 {% for item in items %}
                     <li class="li-menu-type-2">
-                        <a href="{{item.url}}" class="w-inline-block social-icon facebook">
+                        <a href="{{item.url}}" title="{{item.title}}"class="w-inline-block social-icon facebook">
                             {% if 'facebook' in item.url %}
                                 <i class="fab fa-facebook-f"></i>
                             {% elseif 'twitter' in item.url %}
