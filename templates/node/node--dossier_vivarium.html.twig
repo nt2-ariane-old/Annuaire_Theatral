@@ -93,14 +93,14 @@
   {% endif %}
 
   <div{{ content_attributes }}>
-    <section class="w-section blog-post-banner" style="background-image:url('/sites/default/files/2016-09/blog-post-4_1.jpg')">
+    <section class="w-section blog-post-banner" style="background-image:url('{{ file_url(content.field_image_de_couverture.entity.fileuri) }}')">
         <div class="arrow-down">
             <a href="#sommaire" class="w-inline-block icon-scroll"></a>
         </div>
     </section>
 
     <section id="presentation">
-        Chupa chups macaroon tart wafer. Fruitcake cake bonbon cotton candy chocolate cake. Jujubes cookie macaroon jujubes donut soufflé cake. Liquorice toffee apple pie apple pie tootsie roll. Lemon drops jelly beans halvah topping. Cake pudding gingerbread liquorice tart dessert. Sweet caramels biscuit. Chupa chups dragée icing oat cake apple pie jujubes powder. Jujubes fruitcake gingerbread wafer muffin donut chocolate cake gummi bears. Halvah macaroon sesame snaps bonbon fruitcake candy jelly beans icing. Chupa chups brownie chupa chups wafer gummies dessert cheesecake topping caramels. Jelly beans chocolate bar tootsie roll. Sweet brownie jelly-o bonbon carrot cake oat cake chocolate carrot cake jelly beans.
+        {{ content.body }}
     </section>
 
     <section id="tag">
