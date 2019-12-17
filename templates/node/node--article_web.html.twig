@@ -98,108 +98,55 @@
             <a href="#coming" class="w-inline-block icon-scroll"></a>
         </div>
     </div>
-    <section id="coming" class="w-section section-imp">
+    <main id="coming" class="w-section section-imp">
         <div class="w-container">
-        <div class="w-row">
-        <div class="w-col w-col-3">
+            <div class="w-row">
+                {# SIDEBAR #}
+                <div class="w-col w-col-3">
 
-        <div class="search-block-form sidebar-class" data-drupal-selector="search-block-form" role="search">
-        <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
-        <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
-        <input title="Enter the terms you wish to search for." placeholder="Search..." class="form-control form-search w-input search-field" data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="30" maxlength="128">
-        </div>
-        <div data-drupal-selector="edit-actions" class="form-actions" id="edit-actions">
-        <input class="btn search-input button js-form-submit form-submit w-button button" data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="">
-        </div>
-        </form>
-        </div>
+                    {# Auteurs #}
+                    <div class="sidebar-class">
+                        <h4 class="post-title">Auteur(s)</h4>
+                        {{ content.field_auteur }}
+                    </div>
 
-        <div class="sidebar-class">
-        <h4 class="post-title">About author</h4>
+                    {# Mots-Clés #}
+                    <div class="views-element-container sidebar-class">
+                        <h4 class="post-title">Mots-clés</h4>
 
-        <p>Praesent egestas neque eu enim. Morbi mattis ullamcorper velit. Phasellus ullamcorper ipsum rutrum nunc...</p>
-        </div>
+                        <div class="w-clearfix tags">
+                            {{ content.field_mots_cles }}
+                        </div>
+                    </div>
 
-        <div class="views-element-container sidebar-class">
+                    {# Lectures Connexes #}
+                    <div class="views-element-container sidebar-class">
+                        <div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
+                            <div class="w-tab-menu tab-menu left-menu">
+                                <a data-w-tab="Tab 1" class="w-tab-link w--current w-inline-block tab-link small-txt">
+                                    <div>Lectures Connexes</div>
+                                </a>
+                            </div>
+                            <div class="w-tab-content">
+                                <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+                                    <ul class="w-list-unstyled">
+                                        <li class="w-clearfix li-last">
+                                            <div class="blog-last-photo">
+                                                <img src="/sites/default/files/styles/img_70x70/public/2016-09/blog-post.jpg?itok=1QEhNbCG" width="70" height="70" alt="img" typeof="Image">
+                                            </div>
+                                            <div class="last-content"><a href="/content/blog-post-1" class="last-title">Blog post 1</a>
+                                            <p>21 Sep 2016</p>
+                                            </div>
+                                        </li>
+                                        {{ content.field_lectures_connexes }}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
-        <div class="w-tab-menu tab-menu left-menu">
-        <a data-w-tab="Tab 1" class="w-tab-link w--current w-inline-block tab-link small-txt">
-        <div>Last Post</div>
-        </a>
-        <a data-w-tab="Tab 2" class="w-tab-link w-inline-block tab-link small-txt">
-        <div>POPULAR</div>
-        </a>
-        </div>
-        <div class="w-tab-content">
-        <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
-        <ul class="w-list-unstyled">
-        <li class="w-clearfix li-last">
-        <div class="blog-last-photo"> <img src="/sites/default/files/styles/img_70x70/public/2016-09/blog-post.jpg?itok=1QEhNbCG" width="70" height="70" alt="img" typeof="Image">
-        </div>
-        <div class="last-content"><a href="/content/blog-post-1" class="last-title">Blog post 1</a>
-        <p>21 Sep 2016</p>
-        </div>
-        </li><li class="w-clearfix li-last">
-        <div class="blog-last-photo"> <img src="/sites/default/files/styles/img_70x70/public/2016-09/post-2.jpg?itok=RFTSpJ2V" width="70" height="70" alt="img" typeof="Image">
-        </div>
-        <div class="last-content"><a href="/content/blog-post-11" class="last-title">Blog post 11</a>
-        <p>21 Sep 2016</p>
-        </div>
-        </li><li class="w-clearfix li-last">
-        <div class="blog-last-photo"> <img src="/sites/default/files/styles/img_70x70/public/2016-09/blog-post-6.jpg?itok=NqLylLu5" width="70" height="70" alt="img" typeof="Image">
-        </div>
-        <div class="last-content"><a href="/content/blog-post-7" class="last-title">Blog post 7</a>
-        <p>21 Sep 2016</p>
-        </div>
-        </li>
-        </ul>
-        </div>
-        <div data-w-tab="Tab 2" class="w-tab-pane">
-        <ul class="w-list-unstyled">
-
-        <li class="w-clearfix li-last">
-        <div class="blog-last-photo"> <img src="/sites/default/files/styles/img_70x70/public/2016-09/blog-post-9.jpg?itok=qj5sjy_d" width="70" height="70" alt="img" typeof="Image">
-        </div>
-        <div class="last-content"><a href="/content/blog-post-9" class="last-title">Blog post 9</a>
-        <p>21 Sep 2016</p>
-        </div>
-        </li><li class="w-clearfix li-last">
-        <div class="blog-last-photo"> <img src="/sites/default/files/styles/img_70x70/public/2016-09/blog-post-10.jpg?itok=_J13YOmp" width="70" height="70" alt="img" typeof="Image">
-        </div>
-        <div class="last-content"><a href="/content/blog-post-10" class="last-title">Blog post 10</a>
-        <p>21 Sep 2016</p>
-        </div>
-        </li><li class="w-clearfix li-last">
-        <div class="blog-last-photo"> <img src="/sites/default/files/styles/img_70x70/public/2016-09/blog-post-4_1.jpg?itok=GFOydhSA" width="70" height="70" alt="img" typeof="Image">
-        </div>
-        <div class="last-content"><a href="/content/blog-post-12" class="last-title w--current">Blog post 12</a>
-        <p>21 Sep 2016</p>
-        </div>
-        </li>
-        </ul>
-        </div>
-        </div>
-        </div>
-        </div>
-
-        <div class="views-element-container sidebar-class">
-        <h4 class="post-title">Tags</h4>
-
-        <div class="w-clearfix tags">
-        <a href="/term/2016-0" hreflang="en">2016</a><a href="/term/agency-0" hreflang="en">Agency</a><a href="/term/demo" hreflang="en">Demo</a><a href="/term/photography" hreflang="en">Photography</a>
-        </div>
-        </div>
-
-        <div class="views-element-container sidebar-class">
-        <h4 class="post-title">Categories</h4>
-
-        <ul class="w-list-unstyled cat-link">
-        <li class="li-cat"><a href="/term/2016-0" hreflang="en">2016</a></li><li class="li-cat"><a href="/term/agency-0" hreflang="en">Agency</a></li><li class="li-cat"><a href="/term/demo" hreflang="en">Demo</a></li><li class="li-cat"><a href="/term/photography" hreflang="en">Photography</a></li>
-        </ul>
-        </div>
-        </div>
-        <div class="w-col w-col-9">
+                </div>
+                <div class="w-col w-col-9">
 
         <div class="bottom-space">
         <h3 class="blog-title in-post">Blog post 12</h3>
@@ -344,8 +291,8 @@
         </div>
         </div>
         </div>
-    </section>
-    
+    </main>
+
     {% for key in content|keys %}
         {{ key }}
     {% endfor %}
