@@ -9,9 +9,12 @@
 <div class="w-container container-contact">
   <div class="align-center">
     <h2 class="inner-title">{{fields.field_journal_title.content}}</h2>
-    <h3 class="inner-title">{{fields.field_journal_subtitle.content}}</h3>
+    <h3 class="inner-title">{{fields.title.content}}</h3>
     <p class="sub-text-title">#{{ fields.field_issue_number.content }}</p>
     {# {{ fields.field_publication_date.content }} #}
+    {% for item in fields.field_publication_date|keys %}
+      {{ keys }}
+    {% endfor %}
   </div>
   {% for key in fields|keys %}
     {{ key }}
