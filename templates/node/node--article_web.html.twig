@@ -93,7 +93,14 @@
   {% endif %}
 
   <div{{ content_attributes }}>
-    <div class="w-section blog-post-banner" style="background-image:url('/sites/default/files/2016-09/blog-post-4_1.jpg')">
+    <div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
+        <h2 class="inner-title">{{ label }}</h2>
+        {% if content.field_type_d_article == 'vivarium'  %}
+            <p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
+        {% else %}
+            {{ content.field_type_d_article }}
+        {% endif %}
+
         <div class="arrow-down">
             <a href="#coming" class="w-inline-block icon-scroll"></a>
         </div>
