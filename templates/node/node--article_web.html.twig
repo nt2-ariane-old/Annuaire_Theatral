@@ -113,8 +113,8 @@
                     <div class="sidebar-class">
                         <h4 class="post-title">Auteur(s)</h4>
                         {{ content.field_auteur }}
-                        {% for item in node.field_auteur|keys %}
-                            {{ key }}
+                        {% for item in node.field_auteur %}
+                            {{ item }}
                             {# {% for key in item.entity|keys %}
                                 {{ key }}
                             {% endfor %} #}
