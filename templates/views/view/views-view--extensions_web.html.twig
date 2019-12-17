@@ -51,35 +51,38 @@
   {{ exposed }}
   {{ attachment_before }}
 
-  {% if rows -%}
-    <div class="w-clearfix filter-cont">
-    <div data-ix="open-filter-menu" class="w-clearfix show-filter">
-      <div class="filter-button">
-        <div class="w-embed">
-          <i class="fa fa-filter"></i>
+ {% if rows -%}
+  <section id="filter" class="w-section section-imp">
+    <div class="w-container">
+      <div class="title-wrapper">
+        <h2>{{ label }}</h2>
+        <div><img src="images/sub-handmade.png">
         </div>
       </div>
-      <div class="w-clearfix filter-effect">
-        <div data-ix="hide-filter-opacity-0" class="filter-txt" style="opacity: 0;">Cacher</div>
-        <div class="filter-txt-hide">Voir les filtres</div>
+      <div class="w-clearfix filter-cont">
+        <div data-ix="open-filter-menu" class="w-clearfix show-filter">
+          <div class="filter-button">
+            <div class="w-embed"><i class="fa fa-filter"></i>
+            </div>
+          </div>
+          <div class="w-clearfix filter-effect">
+            <div data-ix="hide-filter-opacity-0" class="filter-txt">Hide Filter</div>
+            <div class="filter-txt-hide">Show Filter</div>
+          </div>
+        </div>
+        <div data-ix="move-filter-content-on-load" class="w-clearfix filters button-group">
+          <a href="#" data-filter="*" class="button">Tous</a>
+          <a href="#" data-filter=".vivarium" class="button">Dossiers Vivarium</a>
+          <a href="#" data-filter=".ruche" class="button">La Ruche</a>
+          <a href="#" data-filter=".recits" class="button">Récits de pratique</a>
+          <a href="#" data-filter=".echapee" class="button">Échapées</a>
+        </div>
+      </div>
+      {{ rows}}
+        
       </div>
     </div>
-    <div data-ix="move-filter-content-on-load" class="w-clearfix filters button-group" style="opacity: 0; transform: translateX(0px) translateY(-25px) translateZ(0px); display: none;">
-      <a href="#" data-filter="*" class="button">Tous</a>
-      <a href="#" data-filter=".vivarium" class="button">Dossiers Vivarium</a>
-      <a href="#" data-filter=".ruche" class="button">La Ruche</a>
-      <a href="#" data-filter=".recits" class="button">Récits de pratique</a>
-      <a href="#" data-filter=".echapee" class="button">Échapées</a>
-    </div>
-  </div>
-  <!-- CONTENU -->
-  <div id="grid" class="w-clearfix grid">
-        <div class="grid-sizer">
-          {{ rows }}
-        </div>
-        
-        
-  </div>
+  </section>
   {% elseif empty -%}
     {{ empty }}
   {% endif %}
