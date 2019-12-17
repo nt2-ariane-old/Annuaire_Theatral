@@ -1,0 +1,241 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ *
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes }}>
+
+  {{ title_prefix }}
+  {% if not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer>
+      {{ author_picture }}
+      <div{{ author_attributes }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes }}>
+    <div class="w-section blog-post-banner" style="background-image:url('/sites/default/files/2016-09/blog-post-4_1.jpg')">
+        <div class="arrow-down">
+            <a href="#sommaire" class="w-inline-block icon-scroll"></a>
+        </div>
+    </div>
+
+    <section id="presentation">
+        Chupa chups macaroon tart wafer. Fruitcake cake bonbon cotton candy chocolate cake. Jujubes cookie macaroon jujubes donut soufflé cake. Liquorice toffee apple pie apple pie tootsie roll. Lemon drops jelly beans halvah topping. Cake pudding gingerbread liquorice tart dessert. Sweet caramels biscuit. Chupa chups dragée icing oat cake apple pie jujubes powder. Jujubes fruitcake gingerbread wafer muffin donut chocolate cake gummi bears. Halvah macaroon sesame snaps bonbon fruitcake candy jelly beans icing. Chupa chups brownie chupa chups wafer gummies dessert cheesecake topping caramels. Jelly beans chocolate bar tootsie roll. Sweet brownie jelly-o bonbon carrot cake oat cake chocolate carrot cake jelly beans.
+    </section>
+
+    <div class="views-element-container">
+        <h4 class="post-title">Tags</h4>
+
+        <div class="w-clearfix tags">
+            <a href="/term/2016-0" hreflang="en">2016</a><a href="/term/agency-0" hreflang="en">Agency</a><a href="/term/demo" hreflang="en">Demo</a><a href="/term/photography" hreflang="en">Photography</a>
+        </div>
+    </div>
+    <div id="grid" class="w-clearfix grid grid-not-margin" style="position: relative; height: 3094px;">
+        <div class="grid-sizer"></div>
+            <div class="item item-not-spaced key14 key16" style="position: absolute; left: 0px; top: 0px;">
+            <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp big-img animated" style="visibility: visible; animation-name: fadeInUp;">
+            <img src="/sites/default/files/styles/img_600x600_/public/video_thumbnails/62504618.jpg?itok=N0p0vAL9" alt="" typeof="Image">
+            <a href="/content/driving-night" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link" style="opacity: 0;">
+            <div class="portfolio-cn-title">
+            <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" style="opacity: 0; transform: scaleX(1.5) scaleY(1.5) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(-40deg);">Driving at Night</h4>
+            <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title" style="opacity: 0; transform: translateX(0px) translateY(20px) translateZ(0px);">Branding Digital Art</div>
+            </div>
+            </a>
+            </div>
+            </div><div class="item item-not-spaced key14 key16" style="position: absolute; left: 364px; top: 0px;">
+            <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp big-img animated" style="visibility: visible; animation-name: fadeInUp;">
+            <img src="/sites/default/files/styles/img_600x600_/public/video_thumbnails/gZrklEy9ohQ.jpg?itok=WAgcgXuR" alt="" typeof="Image">
+            <a href="/content/aenean-massa" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link" style="opacity: 0; transition: opacity 500ms ease 0s;">
+            <div class="portfolio-cn-title">
+            <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" style="opacity: 0; transform: scaleX(1.25) scaleY(1.25) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(-40deg); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">Aenean massa</h4>
+            <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title" style="opacity: 0; transform: translateX(0px) translateY(20px) translateZ(0px); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">Branding Digital Art</div>
+            </div>
+            </a>
+            </div>
+            </div><div class="item item-not-spaced key14 key16" style="position: absolute; left: 0px; top: 364px;">
+            <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp big-img animated" style="visibility: visible; animation-name: fadeInUp;">
+            <img src="/sites/default/files/styles/img_400x600/public/2016-09/blog-post-6_0.jpg?itok=q9_6VkKx" width="400" height="600" alt="img" typeof="Image">
+            <a href="/content/maracana-0" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link" style="opacity: 0; transition: opacity 500ms ease 0s;">
+            <div class="portfolio-cn-title">
+            <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" style="opacity: 0; transform: scaleX(1.25) scaleY(1.25) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(-40deg); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">MARACANÁ</h4>
+            <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title" style="opacity: 0; transform: translateX(0px) translateY(20px) translateZ(0px); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">Branding Digital Art</div>
+            </div>
+            </a>
+            </div>
+            </div><div class="item item-not-spaced key14 key16" style="position: absolute; left: 364px; top: 364px;">
+            <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp big-img animated" style="visibility: visible; animation-name: fadeInUp;">
+            <img src="/sites/default/files/styles/img_400x600/public/2016-09/blog-post-6.jpg?itok=UJWf0ukm" width="400" height="600" alt="img" typeof="Image">
+            <a href="/content/maracana" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link" style="opacity: 0;">
+            <div class="portfolio-cn-title">
+            <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" style="opacity: 0; transform: scaleX(1.5) scaleY(1.5) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(-40deg);">MARACANÁ</h4>
+            <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title" style="opacity: 0; transform: translateX(0px) translateY(20px) translateZ(0px);">Branding Digital Art</div>
+            </div>
+            </a>
+            </div>
+            </div><div class="item item-not-spaced key15 key14 key16 key18" style="position: absolute; left: 0px; top: 910px;">
+            <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp big-img animated" style="visibility: visible; animation-name: fadeInUp;">
+            <img src="/sites/default/files/styles/img_400x600/public/2016-09/blog-post-6.jpg?itok=UJWf0ukm" width="400" height="600" alt="img" typeof="Image">
+            <a href="/content/another-art-0" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link" style="opacity: 0; transition: opacity 500ms ease 0s;">
+            <div class="portfolio-cn-title">
+            <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" style="opacity: 0; transform: scaleX(1.25) scaleY(1.25) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(-40deg); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">Another art</h4>
+            <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title" style="opacity: 0; transform: translateX(0px) translateY(20px) translateZ(0px); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">2016 Branding Digital Art Print</div>
+            </div>
+            </a>
+            </div>
+            </div><div class="item item-not-spaced key15 key14 key16 key18" style="position: absolute; left: 364px; top: 910px;">
+            <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp big-img animated" style="visibility: visible; animation-name: fadeInUp;">
+            <img src="/sites/default/files/styles/img_400x600/public/2016-09/blog-post-10.jpg?itok=x6qf_dEo" width="400" height="600" alt="img" typeof="Image">
+            <a href="/content/another-art" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link" style="opacity: 0;">
+            <div class="portfolio-cn-title">
+            <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" style="opacity: 0; transform: scaleX(1.5) scaleY(1.5) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(-40deg);">Another art</h4>
+            <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title" style="opacity: 0; transform: translateX(0px) translateY(20px) translateZ(0px);">2016 Branding Digital Art Print</div>
+            </div>
+            </a>
+            </div>
+            </div><div class="item item-not-spaced key14 key16 key17 key18" style="position: absolute; left: 0px; top: 1456px;">
+            <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp big-img animated" style="visibility: visible; animation-name: fadeInUp;">
+            <img src="/sites/default/files/styles/img_400x600/public/2016-09/blog-post-4_1.jpg?itok=dsvgDsGH" width="400" height="600" alt="img" typeof="Image">
+            <a href="/content/maecenas-vestibulum-2" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link" style="opacity: 0;">
+            <div class="portfolio-cn-title">
+            <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" style="opacity: 0; transform: scaleX(1.5) scaleY(1.5) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(-40deg);">Maecenas vestibulum</h4>
+            <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title" style="opacity: 0; transform: translateX(0px) translateY(20px) translateZ(0px);">Branding Digital Art Photography Print</div>
+            </div>
+            </a>
+            </div>
+            </div><div class="item item-not-spaced key14 key16 key17 key18" style="position: absolute; left: 364px; top: 1456px;">
+            <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp big-img animated" style="visibility: visible; animation-name: fadeInUp;">
+            <img src="/sites/default/files/styles/img_400x600/public/2016-09/blog-post-8.jpg?itok=c4v0CXEH" width="400" height="600" alt="img" typeof="Image">
+            <a href="/content/maecenas-vestibulum-1" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link" style="opacity: 0; transition: opacity 500ms ease 0s;">
+            <div class="portfolio-cn-title">
+            <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" style="opacity: 0; transform: scaleX(1.25) scaleY(1.25) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(-40deg); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">Maecenas vestibulum</h4>
+            <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title" style="opacity: 0; transform: translateX(0px) translateY(20px) translateZ(0px); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">Branding Digital Art Photography Print</div>
+            </div>
+            </a>
+            </div>
+            </div><div class="item item-not-spaced key14 key17 key18" style="position: absolute; left: 0px; top: 2002px;">
+            <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp big-img animated" style="visibility: visible; animation-name: fadeInUp;">
+            <img src="/sites/default/files/styles/img_400x600/public/2016-09/blog-post.jpg?itok=DNeyVOYT" width="400" height="600" alt="img" typeof="Image">
+            <a href="/content/maecenas-vestibulum-0" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link" style="opacity: 0;">
+            <div class="portfolio-cn-title">
+            <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" style="opacity: 0; transform: scaleX(1.5) scaleY(1.5) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(-40deg);">Maecenas vestibulum</h4>
+            <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title" style="opacity: 0; transform: translateX(0px) translateY(20px) translateZ(0px);">Branding Photography Print</div>
+            </div>
+            </a>
+            </div>
+            </div><div class="item item-not-spaced key14 key17 key18" style="position: absolute; left: 364px; top: 2002px;">
+            <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp big-img animated" style="visibility: visible; animation-name: fadeInUp;">
+            <img src="/sites/default/files/styles/img_400x600/public/2016-09/blog-post-3_1.jpg?itok=oQDMNjO8" width="400" height="600" alt="img" typeof="Image">
+            <a href="/content/maecenas-vestibulum" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link" style="opacity: 0;">
+            <div class="portfolio-cn-title">
+            <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" style="opacity: 0; transform: scaleX(1.5) scaleY(1.5) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(-40deg);">Maecenas vestibulum</h4>
+            <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title" style="opacity: 0; transform: translateX(0px) translateY(20px) translateZ(0px);">Branding Photography Print</div>
+            </div>
+            </a>
+            </div>
+            </div><div class="item item-not-spaced key15 key14 key18" style="position: absolute; left: 0px; top: 2548px;">
+            <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp big-img animated" style="visibility: visible; animation-name: fadeInUp;">
+            <img src="/sites/default/files/styles/img_400x600/public/2016-09/blog-post-9.jpg?itok=SRIZWTzQ" width="400" height="600" alt="img" typeof="Image">
+            <a href="/content/love-earth-0" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link" style="opacity: 0;">
+            <div class="portfolio-cn-title">
+            <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" style="opacity: 0; transform: scaleX(1.5) scaleY(1.5) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(-40deg);">love the earth</h4>
+            <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title" style="opacity: 0; transform: translateX(0px) translateY(20px) translateZ(0px);">2016 Branding Print</div>
+            </div>
+            </a>
+            </div>
+            </div><div class="item item-not-spaced key15 key14 key18" style="position: absolute; left: 364px; top: 2548px;">
+            <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp big-img animated" style="visibility: visible; animation-name: fadeInUp;">
+            <img src="/sites/default/files/styles/img_400x600/public/2016-09/blog-post-6_0.jpg?itok=q9_6VkKx" width="400" height="600" alt="img" typeof="Image">
+            <a href="/content/love-earth" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link" style="opacity: 0;">
+            <div class="portfolio-cn-title">
+            <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" style="opacity: 0; transform: scaleX(1.5) scaleY(1.5) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(-40deg);">love the earth</h4>
+            <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title" style="opacity: 0; transform: translateX(0px) translateY(20px) translateZ(0px);">2016 Branding Print</div>
+            </div>
+            </a>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  
+
+</article>
