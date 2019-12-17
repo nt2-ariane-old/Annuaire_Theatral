@@ -1,19 +1,21 @@
 
 
-<div class="video-wrapper">
-  <div class="w-embed embed-video">
-   {{ fields.field_image.content }}
+<a href='{{fields.view_node.content|striptags}}' >
+  <div class="video-wrapper">
+    <div class="w-embed embed-video">
+    {{ fields.field_image.content }}
+    </div>
+    <div class="video-overlay"></div>
   </div>
-  <div class="video-overlay"></div>
-</div>
-<div class="w-container container-contact">
-  <div class="align-center">
-    <h2 class="inner-title">{{fields.field_journal_title.content}}</h2>
-    <h3 class="inner-title">{{fields.title.content}}</h3>
-    <p class="sub-text-title">#{{ fields.field_issue_number.content }}</p>
-    {# {{ fields.field_publication_date.content }} #}
-    {% for item in fields.field_publication_date|keys %}
-      {{ item }}
-    {% endfor %}
+  <div class="w-container container-contact">
+    <div class="align-center">
+      <h2 class="inner-title">{{fields.field_journal_title.content}}</h2>
+      <h3 class="inner-title">{{fields.title.content}}</h3>
+      <p class="sub-text-title">#{{ fields.field_issue_number.content }}</p>
+      {# {{ fields.field_publication_date.content }} #}
+      {% for item in fields.field_publication_date|keys %}
+        {{ item }}
+      {% endfor %}
+    </div>
   </div>
-</div>
+</a>
