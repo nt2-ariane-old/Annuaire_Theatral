@@ -30,6 +30,10 @@ h1 {
   display: inline-block;
 }
 
+h2 {
+  text-align: center;
+}
+
 .paragraph-formatter {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
