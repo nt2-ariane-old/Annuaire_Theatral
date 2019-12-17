@@ -119,8 +119,7 @@
                                     {{item.entity.field_last_name.value}}
                                 </b>
                             </a>
-                            {{item.entity.body.value}}
-                            {{item.entity.body.summary}}
+                            {{item.entity.body.summary|raw}}
                         {% endfor %}
                     </div>
 
