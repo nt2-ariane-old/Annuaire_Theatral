@@ -1,0 +1,353 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ *
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes }}>
+
+  {{ title_prefix }}
+  {% if not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer>
+      {{ author_picture }}
+      <div{{ author_attributes }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes }}>
+    <div class="w-section blog-post-banner" style="background-image:url('/sites/default/files/2016-09/blog-post-4_1.jpg')">
+        <div class="arrow-down">
+            <a href="#coming" class="w-inline-block icon-scroll"></a>
+        </div>
+    </div>
+    <section id="coming" class="w-section section-imp">
+        <div class="w-container">
+        <div class="w-row">
+        <div class="w-col w-col-3">
+
+        <div class="search-block-form sidebar-class" data-drupal-selector="search-block-form" role="search">
+        <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+        <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+        <input title="Enter the terms you wish to search for." placeholder="Search..." class="form-control form-search w-input search-field" data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="30" maxlength="128">
+        </div>
+        <div data-drupal-selector="edit-actions" class="form-actions" id="edit-actions">
+        <input class="btn search-input button js-form-submit form-submit w-button button" data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="">
+        </div>
+        </form>
+        </div>
+
+        <div class="sidebar-class">
+        <h4 class="post-title">About author</h4>
+
+        <p>Praesent egestas neque eu enim. Morbi mattis ullamcorper velit. Phasellus ullamcorper ipsum rutrum nunc...</p>
+        </div>
+
+        <div class="views-element-container sidebar-class">
+
+        <div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
+        <div class="w-tab-menu tab-menu left-menu">
+        <a data-w-tab="Tab 1" class="w-tab-link w--current w-inline-block tab-link small-txt">
+        <div>Last Post</div>
+        </a>
+        <a data-w-tab="Tab 2" class="w-tab-link w-inline-block tab-link small-txt">
+        <div>POPULAR</div>
+        </a>
+        </div>
+        <div class="w-tab-content">
+        <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+        <ul class="w-list-unstyled">
+        <li class="w-clearfix li-last">
+        <div class="blog-last-photo"> <img src="/sites/default/files/styles/img_70x70/public/2016-09/blog-post.jpg?itok=1QEhNbCG" width="70" height="70" alt="img" typeof="Image">
+        </div>
+        <div class="last-content"><a href="/content/blog-post-1" class="last-title">Blog post 1</a>
+        <p>21 Sep 2016</p>
+        </div>
+        </li><li class="w-clearfix li-last">
+        <div class="blog-last-photo"> <img src="/sites/default/files/styles/img_70x70/public/2016-09/post-2.jpg?itok=RFTSpJ2V" width="70" height="70" alt="img" typeof="Image">
+        </div>
+        <div class="last-content"><a href="/content/blog-post-11" class="last-title">Blog post 11</a>
+        <p>21 Sep 2016</p>
+        </div>
+        </li><li class="w-clearfix li-last">
+        <div class="blog-last-photo"> <img src="/sites/default/files/styles/img_70x70/public/2016-09/blog-post-6.jpg?itok=NqLylLu5" width="70" height="70" alt="img" typeof="Image">
+        </div>
+        <div class="last-content"><a href="/content/blog-post-7" class="last-title">Blog post 7</a>
+        <p>21 Sep 2016</p>
+        </div>
+        </li>
+        </ul>
+        </div>
+        <div data-w-tab="Tab 2" class="w-tab-pane">
+        <ul class="w-list-unstyled">
+
+        <li class="w-clearfix li-last">
+        <div class="blog-last-photo"> <img src="/sites/default/files/styles/img_70x70/public/2016-09/blog-post-9.jpg?itok=qj5sjy_d" width="70" height="70" alt="img" typeof="Image">
+        </div>
+        <div class="last-content"><a href="/content/blog-post-9" class="last-title">Blog post 9</a>
+        <p>21 Sep 2016</p>
+        </div>
+        </li><li class="w-clearfix li-last">
+        <div class="blog-last-photo"> <img src="/sites/default/files/styles/img_70x70/public/2016-09/blog-post-10.jpg?itok=_J13YOmp" width="70" height="70" alt="img" typeof="Image">
+        </div>
+        <div class="last-content"><a href="/content/blog-post-10" class="last-title">Blog post 10</a>
+        <p>21 Sep 2016</p>
+        </div>
+        </li><li class="w-clearfix li-last">
+        <div class="blog-last-photo"> <img src="/sites/default/files/styles/img_70x70/public/2016-09/blog-post-4_1.jpg?itok=GFOydhSA" width="70" height="70" alt="img" typeof="Image">
+        </div>
+        <div class="last-content"><a href="/content/blog-post-12" class="last-title w--current">Blog post 12</a>
+        <p>21 Sep 2016</p>
+        </div>
+        </li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="views-element-container sidebar-class">
+        <h4 class="post-title">Tags</h4>
+
+        <div class="w-clearfix tags">
+        <a href="/term/2016-0" hreflang="en">2016</a><a href="/term/agency-0" hreflang="en">Agency</a><a href="/term/demo" hreflang="en">Demo</a><a href="/term/photography" hreflang="en">Photography</a>
+        </div>
+        </div>
+
+        <div class="views-element-container sidebar-class">
+        <h4 class="post-title">Categories</h4>
+
+        <ul class="w-list-unstyled cat-link">
+        <li class="li-cat"><a href="/term/2016-0" hreflang="en">2016</a></li><li class="li-cat"><a href="/term/agency-0" hreflang="en">Agency</a></li><li class="li-cat"><a href="/term/demo" hreflang="en">Demo</a></li><li class="li-cat"><a href="/term/photography" hreflang="en">Photography</a></li>
+        </ul>
+        </div>
+        </div>
+        <div class="w-col w-col-9">
+
+        <div class="bottom-space">
+        <h3 class="blog-title in-post">Blog post 12</h3>
+        <p class="meta-tag pls-category">Created: 21 September 2016 / 
+        Blog Categories : <a href="/term/2016" hreflang="en">2016</a> ,
+        <a href="/term/agency" hreflang="en">Agency</a> ,
+        <a href="/term/design" hreflang="en">Design</a>
+        / 180 views / 4 Comments</p>
+        <div class="seperator"></div>
+        </div>
+        <div class="bottom-space">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+        <div class="small-spc">
+        <blockquote class="blockqoute">In auctor lobortis lacus &amp; nunc nec neque nunc egestas augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede, aenean imperdiet.</blockquote>
+        </div>
+        <p>Sed lectus. Quisque id odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Vivamus elementum semper nisi. Phasellus a est.
+        <br>
+        <br> In hac habitasse platea dictumst. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Proin faucibus arcu quis ante. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Fusce fermentum odio nec arcu. Nullam dictum felis eu pede mollis pretium. Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit amet eros. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Sed aliquam ultrices mauris.</p>
+        <div class="blog-share">
+        <div class="share-wrapper">
+        <ul class="w-list-unstyled">
+        <li class="w-clearfix li-share">
+        <a target="_blank" href="https://facebook.com/sharer.php?u=http://milano.drupalet.com/content/blog-post-12&amp;t=Blog post 12" class="w-clearfix w-inline-block share-link facebook">
+        <div class="share-icon">
+        <div class="w-embed"><i class="fa fa-facebook"></i>
+        </div>
+        </div>
+        <div class="share-txt">Facebook</div>
+        </a>
+        </li>
+        <li class="w-clearfix li-share">
+        <a target="_blank" href="https://twitter.com/intent/tweet?url=http://milano.drupalet.com/content/blog-post-12&amp;text=Blog post 12" class="w-clearfix w-inline-block share-link twitter">
+        <div class="share-icon">
+        <div class="w-embed"><i class="fa fa-twitter"></i>
+        </div>
+        </div>
+        <div class="share-txt">Twitter</div>
+        </a>
+        </li>
+        <li class="w-clearfix li-share no-line">
+        <a target="_blank" href="https://pinterest.com/pin/create/button/?url=http://milano.drupalet.com/content/blog-post-12&amp;media=/sites/default/files/2016-09/blog-post-4_1.jpg&amp;description=Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet." class="w-clearfix w-inline-block share-link pin">
+        <div class="share-icon">
+        <div class="w-embed"><i class="fa fa-pinterest-p"></i>
+        </div>
+        </div>
+        <div class="share-txt">Pinterest</div>
+        </a>
+        </li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        <div class="bottom-space">
+        <h4 class="post-title">About author</h4>
+        <div class="w-clearfix author-bg-wrapper">
+        <div class="author-photo" style="background-image:url('/sites/default/files/pictures/2016-09/team-1.jpg')"></div>
+        <div class="author-content">
+        <h5 class="name-tag"><span><span lang="" about="/user/admin" typeof="schema:Person" property="schema:name" datatype="">admin</span></span>
+        </h5>
+        <p class="meta-tag">Founder, CEO</p>
+        <p>Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Fusce ac felis sit amet ligula pharetra condimentum. Vivamus euismod mauris.</p>
+        <div class="social-author">
+        <a href="https://facebook.com/user" class="w-inline-block social-icon facebook">
+        <div class="w-embed"><i class="fa fa-facebook"></i>
+        </div>
+        </a>
+        <a href="https://twitter.com/" class="w-inline-block social-icon twitter">
+        <div class="w-embed"><i class="fa fa-twitter"></i>
+        </div>
+        </a>
+        <a href="https://behance.com" class="w-inline-block social-icon behance">
+        <div class="w-embed"><i class="fa fa-behance"></i>
+        </div>
+        </a>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="bottom-space">
+        <h4 class="post-title">4 Comments</h4>
+        <a id="comment-1"></a>
+        <div class="w-clearfix comments-wrapper">
+        <div class="comment-icon" style="background-image:url('/sites/default/files/styles/thumbnail/public/pictures/2016-09/team-1.jpg?itok=m_J0XVc-')"></div>
+        <div class="w-clearfix comment-content">
+        <div class="w-clearfix show-filter reply">
+        <ul class="links inline"><li class="comment-forbidden"></li></ul>
+        </div>
+        <h5 class="name-tag"><span rel="schema:author"><span lang="" about="/user/admin" typeof="schema:Person" property="schema:name" datatype="">admin</span></span>
+        </h5>
+        <p class="meta-tag">17 December 2019 / 11:47:30 AM</p>
+        <p>
+        Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac massa at ligula laoreet iaculis. Nullam quis ante.
+        </p>
+        </div>
+        </div>
+        <div class="indented"><a id="comment-3"></a>
+        <div class="w-clearfix comments-wrapper">
+        <div class="comment-icon" style="background-image:url('/sites/default/files/styles/thumbnail/public/pictures/2016-09/team-1.jpg?itok=m_J0XVc-')"></div>
+        <div class="w-clearfix comment-content">
+        <div class="w-clearfix show-filter reply">
+        <ul class="links inline"><li class="comment-forbidden"></li></ul>
+        </div>
+        <h5 class="name-tag"><span rel="schema:author"><span lang="" about="/user/admin" typeof="schema:Person" property="schema:name" datatype="">admin</span></span>
+        </h5>
+        <p class="meta-tag">17 December 2019 / 11:47:30 AM</p>
+        <p>
+        uis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac massa at ligula laoreet iaculis. Nullam quis ante.
+        </p>
+        </div>
+        </div>
+        <div class="indented"><a id="comment-4"></a>
+        <div class="w-clearfix comments-wrapper">
+        <div class="comment-icon" style="background-image:url('/sites/default/files/styles/thumbnail/public/pictures/2016-09/team-1.jpg?itok=m_J0XVc-')"></div>
+        <div class="w-clearfix comment-content">
+        <div class="w-clearfix show-filter reply">
+        <ul class="links inline"><li class="comment-forbidden"></li></ul>
+        </div>
+        <h5 class="name-tag"><span rel="schema:author"><span lang="" about="/user/admin" typeof="schema:Person" property="schema:name" datatype="">admin</span></span>
+        </h5>
+        <p class="meta-tag">17 December 2019 / 11:47:30 AM</p>
+        <p>
+        uis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac massa at ligula laoreet iaculis. Nullam quis ante.
+        </p>
+        </div>
+        </div></div></div><a id="comment-2"></a>
+        <div class="w-clearfix comments-wrapper">
+        <div class="comment-icon" style="background-image:url('/sites/default/files/styles/thumbnail/public/default_images/author.jpg?itok=haRL7lUx')"></div>
+        <div class="w-clearfix comment-content">
+        <div class="w-clearfix show-filter reply">
+        <ul class="links inline"><li class="comment-forbidden"></li></ul>
+        </div>
+        <h5 class="name-tag"><span rel="schema:author"><span lang="" typeof="schema:Person" property="schema:name" datatype="">jonh (not verified)</span></span>
+        </h5>
+        <p class="meta-tag">17 December 2019 / 11:47:30 AM</p>
+        <p>
+        Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac massa at ligula laoreet iaculis
+        </p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    {% for key in content|keys %}
+        {{ key }}
+    {% endfor %}
+  </div>
+
+</article>
