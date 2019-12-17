@@ -106,8 +106,40 @@
             </div>
         </div>
     </div>
+    <section id="filter" class="w-section section-imp">
+      <div class="w-container">
+        <div class="title-wrapper">
+        <h2>blog Minimal</h2>
+        <div>
 
+        <div><img src="/themes/lano/images/sub-handmade.png"></div>
+        </div>
+        </div>
 
+        {% for key in contents|keys %}
+          {{ key }}
+        {% endfor %}
+        <div class="blog-minimal">
+        <div class="data-blog">
+        <div class="w-embed"><i class="icon-software-pencil"></i>
+        </div>
+        </div>
+        <h3 class="blog-title"><a class="blog-title animsition-link" href="/content/blog-post-12">Blog post 12</a></h3>
+        <p class="meta-tag pls-category">Created: 21 Sep 2016 / 
+        Blog Categories : <a href="/term/2016" hreflang="en">2016</a> ,
+        <a href="/term/agency" hreflang="en">Agency</a> ,
+        <a href="/term/design" hreflang="en">Design</a>
+        </p>
+        <div class="seperator center"></div>
+        <p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet.</p>
+        <div class="small-spc"><a href="/content/blog-post-12" class="read-more animsition-link">Read More ›</a>
+        </div>
+        </div>
+
+        
+
+      </div>
+    </section>
   </div>
 
 </article>
