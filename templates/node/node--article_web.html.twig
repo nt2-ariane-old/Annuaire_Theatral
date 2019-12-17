@@ -144,15 +144,20 @@
                             <div class="w-tab-content">
                                 <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
                                     <ul class="w-list-unstyled">
-                                        <li class="w-clearfix li-last">
-                                            <div class="blog-last-photo">
-                                                <img src="/sites/default/files/styles/img_70x70/public/2016-09/blog-post.jpg?itok=1QEhNbCG" width="70" height="70" alt="img" typeof="Image">
-                                            </div>
-                                            <div class="last-content"><a href="/content/blog-post-1" class="last-title">Blog post 1</a>
-                                            <p>21 Sep 2016</p>
-                                            </div>
-                                        </li>
-                                        {{ content.field_lectures_connexes }}
+                                        {% for item in node.field_lectures_connexes %}
+                                            <li class="w-clearfix li-last">
+                                                <div class="blog-last-photo">
+                                                    {% if file_url(item.entity.field_image.0.entity.fileuri) != '/' %}
+                                                        <img src="file_url(item.entity.field_image.0.entity.fileuri)" width="70" height="70" alt="img" typeof="Image">
+                                                    {% elseif file_url(item.entity.field_image_de_couverture.0.entity.fileuri) != '/' %}
+                                                        <img src="file_url(item.entity.field_image_de_couverture.0.entity.fileuri)" width="70" height="70" alt="img" typeof="Image">
+                                                    {% endif %}
+                                                </div>
+                                               <div class="last-content">
+                                                    <a href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.path.0.langcode}}{{item.entity.path.0.alias}}' class="last-title">{{item.entity.title.value}}</a>
+                                                </div>
+                                            </li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                             </div>
