@@ -98,7 +98,7 @@
         {% if content.field_type_d_article.0.value == "Vivarium"  %}
             <p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
         {% else %}
-            <p>{{ content.field_type_d_article.0 }}</p>
+            <p>{{ node.field_type_d_article.0.value|striptags }}</p>
         {% endif %}
 
         <div class="arrow-down">
