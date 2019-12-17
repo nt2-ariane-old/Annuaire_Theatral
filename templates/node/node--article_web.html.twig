@@ -154,7 +154,27 @@
                 </div>
 
             </div>
-        </div>  
+        </div>
+
+        {# Citation et Biblio #}
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane container active" id="citation">
+                <p>{{content.field_pour_citer}}</p>
+            </div>
+            <div class="tab-pane container fade" id="biblio">
+                <p>{{content.field_biblio}}</p>
+            </div>
+        </div>
     </main>
 
     {% for key in content|keys %}
