@@ -1,7 +1,7 @@
 <div class="item item-not-spaced key14 key16" style="position: absolute; left: 0px; top: 0px;">
     <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp big-img animated" style="visibility: visible; animation-name: fadeInUp;">
         {{ fields.field_image_de_couverture.content }}
-        <a href="/content/driving-night" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link" style="opacity: 0;">
+        <a href="{{ fields.view_node.content|striptags}}" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link" style="opacity: 0;">
             <div class="portfolio-cn-title">
                 <h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" style="opacity: 0; transform: scaleX(1.5) scaleY(1.5) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(-40deg);">{{ fields.title.content }}</h4>
                 <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title" style="opacity: 0; transform: translateX(0px) translateY(20px) translateZ(0px);">{{ fields.field_auteur.content }}</div>
@@ -9,7 +9,3 @@
         </a>
     </div>
 </div>
-
-{% for key in fields|keys  %}
-    {{ key }}
-{% endfor %}
