@@ -6,13 +6,14 @@
     </div>
     <h3 class="blog-title"><a class="blog-title animsition-link" href="{{ fields.view_node.content|render|striptags|trim }}">{{ fields.title.content }}</a></h3>
     <h4>{{ fields.field_article_subtitle.content }}</h3>
-    <p class="meta-tag pls-category">Par {{ fields.field_author.content }}</p>
+    {# <p class="meta-tag pls-category">Par {{ fields.field_author.content }}</p> #}
     <div class="seperator center"></div>
     <p>{{ fields.body.content }}</p>
     <div class="small-spc">
         <a href="{{ fields.view_node.content|render|striptags|trim }}" class="read-more animsition-link">En lire plus ›</a>
     </div>
 </div>
-{% for key in fields|keys %}
+
+{% for key in fields.field_author|keys %}
     {{ key }}
 {% endfor %}
