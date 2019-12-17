@@ -95,17 +95,17 @@
   <div{{ content_attributes }}>
     <div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
         <h2 class="inner-title">{{ label }}</h2>
-        {% if node.field_type_d_article.0.value|striptags == "vivarium"  %}
+        {% if node.field_type_d_article.0.value|striptags === "vivarium"  %}
             <p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
         {% else %}
             <p>{{ node.field_type_d_article.0.value|striptags }}</p>
         {% endif %}
 
         <div class="arrow-down">
-            <a href="#coming" class="w-inline-block icon-scroll"></a>
+            <a href="#contenu" class="w-inline-block icon-scroll"></a>
         </div>
     </div>
-    <main id="coming" class="w-section section-imp">
+    <main id="contenu" class="w-section section-imp">
         <div class="w-container">
             <div class="w-row">
                 {# SIDEBAR #}
