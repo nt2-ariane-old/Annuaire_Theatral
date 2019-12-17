@@ -13,7 +13,7 @@
     <p class="sub-text-title">#{{ fields.field_issue_number.content }}</p>
     {# {{ fields.field_publication_date.content }} #}
     {% for item in fields.field_publication_date|keys %}
-      {{ keys }}
+      {{ item }}
     {% endfor %}
   </div>
   {% for key in fields|keys %}
