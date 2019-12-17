@@ -115,7 +115,7 @@
                         {{ content.field_auteur }}
                         {% for item in node.field_auteur %}
                          
-                            {% for key in item|keys %}
+                            {% for key in item.entity|keys %}
                                 {{ key }}
                             {% endfor %}
                             <a class="lecture-content" href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.langcode}}{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.alias}}'>
