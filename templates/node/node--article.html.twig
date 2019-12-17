@@ -154,8 +154,15 @@
                 <div class="w-col w-col-9">
   
                 {# Body #}
+                
                 <div class="bottom-space">
-                    {{ content.body }}
+                    {% if logged_in %}
+                        {{ content.body }}
+                    {% else %}
+                        <p>Vous n'avez pas acheter l'Article.<br>
+                            En Construction
+                        </p>
+                    {% endif %}
                 </div>
 
             </div>
