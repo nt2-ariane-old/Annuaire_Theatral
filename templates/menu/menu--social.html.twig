@@ -34,12 +34,12 @@
     <div class="w-col w-col-2">
         <div class="social-wrapper">
                 {% for item in items %}
-                        <a href="{{item.title}}" title="{{item.title}}"class="w-inline-block social-icon">
-                            {% if 'Facebook' == item.title %}
+                        <a href="{{item.title}}" title="{{item.title}}"class="w-inline-block social-icon {{item.title|lower}}">
+                            {% if 'facebook' == item.title|lower %}
                                 <i class="fab fa-facebook-f"></i>
-                            {% elseif 'Twitter' == item.title %}
+                            {% elseif 'twitter' == item.title|lower %}
                                 <i class="fab fa-twitter"></i>
-                            {% elseif 'Instagram' == item.title %}
+                            {% elseif 'instagram' == item.title|lower %}
                                 <i class="fab fa-instagram"></i>
                             {% else %}
                                 <i class="far fa-envelope"></i>
