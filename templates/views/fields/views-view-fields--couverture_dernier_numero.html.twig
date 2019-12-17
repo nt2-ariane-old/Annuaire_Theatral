@@ -13,8 +13,8 @@
       <h3 class="inner-title">{{fields.title.content}}</h3>
       <p class="sub-text-title">#{{ fields.field_issue_number.content }}</p>
       {# {{ fields.field_publication_date.content }} #}
-      {% for item in fields.field_publication_date|keys %}
-        {{ item }}
+      {% for item in fields.field_publication_date %}
+        {{ item.content }}
       {% endfor %}
     </div>
   </div>
