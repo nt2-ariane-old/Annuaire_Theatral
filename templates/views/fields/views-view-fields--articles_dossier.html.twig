@@ -1,7 +1,7 @@
 <div class="blog-minimal">
     <div class="data-blog">
         <div class="w-embed">
-            <i class="fa fa-envelope-o"></i>
+            <i class="fa fa-envelope"></i>
         </div>
     </div>
     <h3 class="blog-title"><a class="blog-title animsition-link" href="/content/blog-post-12">Blog post 12</a></h3>
@@ -12,3 +12,6 @@
         <a href="/content/blog-post-12" class="read-more animsition-link">Read More ›</a>
     </div>
 </div>
+{% for key in fields|keys %}
+    {{ key }}
+{% endfor %}
