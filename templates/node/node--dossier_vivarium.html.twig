@@ -93,7 +93,10 @@
   {% endif %}
 
   <div{{ content_attributes }}>
-    <section class="w-section blog-post-banner" style="background-image:url('{{ file_url(content.field_image_de_couverture.entity.fileuri) }}')">
+    <section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
+        <h2 class="inner-title">{{ label }}</h2>
+        <p class="sub-text-title">Responsable {{ content.field_responsable_dossier }}</p>
+        <p class="sub-text-title">{{ content.field_num_pub }} , {{ content.field_date_pub }}</p>
         <div class="arrow-down">
             <a href="#sommaire" class="w-inline-block icon-scroll"></a>
         </div>
@@ -109,7 +112,7 @@
         <div class="w-clearfix tags">
             <a href="/term/2016-0" hreflang="en">2016</a><a href="/term/agency-0" hreflang="en">Agency</a><a href="/term/demo" hreflang="en">Demo</a><a href="/term/photography" hreflang="en">Photography</a>
         </div>
-        
+
         <div class="views-element-container sidebar-class"></div>
     </section>
     
