@@ -116,7 +116,11 @@
         </div>
         </div>
 
-        {% for key in content|keys %}
+        {% for key in content.group_contents|keys %}
+          {{ key }}
+        {% endfor %}
+        <br>==========<br>
+        {% for key in content.group_dossier_informations|keys %}
           {{ key }}
         {% endfor %}
         <div class="blog-minimal">
