@@ -148,9 +148,9 @@
                                             <li class="w-clearfix li-last">
                                                 <div class="blog-last-photo">
                                                     {% if file_url(item.entity.field_image.0.entity.fileuri) != '/' %}
-                                                        <img src="file_url(item.entity.field_image.0.entity.fileuri)" width="70" height="70" alt="img" typeof="Image">
+                                                        <img src="{{file_url(item.entity.field_image.0.entity.fileuri)}}" width="70" height="70" alt="img" typeof="Image">
                                                     {% elseif file_url(item.entity.field_image_de_couverture.0.entity.fileuri) != '/' %}
-                                                        <img src="file_url(item.entity.field_image_de_couverture.0.entity.fileuri)" width="70" height="70" alt="img" typeof="Image">
+                                                        <img src="{{file_url(item.entity.field_image_de_couverture.0.entity.fileuri)}}" width="70" height="70" alt="img" typeof="Image">
                                                     {% endif %}
                                                 </div>
                                                <div class="last-content">
