@@ -33,7 +33,7 @@
   {% if items %}
     <div class="w-col w-col-2">
         <div class="social-wrapper">
-                {% for item == items %}
+                {% for item in items %}
                         <a href="{{item.title}}" title="{{item.title}}"class="w-inline-block social-icon">
                             {% if 'Facebook' == item.title %}
                                 <i class="fab fa-facebook-f"></i>
