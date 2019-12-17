@@ -237,7 +237,7 @@
                 </div>
             </div>
         </div>
-    </section>ß
+    </section>
 
     <section id="citation">
         <h4>Pour citer</h4>
@@ -246,6 +246,10 @@
             Fruitcake cake bonbon cotton candy chocolate cake.
         </p>
     </section>
+
+    {% for key in content|keys %}
+        {{ key }}
+    {% endfor %}
   </div>
 
   
