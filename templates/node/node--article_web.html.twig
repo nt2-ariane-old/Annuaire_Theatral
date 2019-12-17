@@ -112,6 +112,7 @@
                     {# Auteurs #}
                     <div class="sidebar-class">
                         <h4 class="post-title">Auteur(s)</h4>
+                        {{ content.field_auteur }}
                         {% for item in node.field_auteur|keys %}
                             {{ key }}
                             {# {% for key in item.entity|keys %}
