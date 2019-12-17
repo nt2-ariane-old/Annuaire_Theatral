@@ -3,6 +3,10 @@ a:hover {
   text-decoration: none;
 }
 
+body {
+  padding: 0 60px;
+}
+
 .data-blog {
   overflow: hidden;
   padding: 0;
