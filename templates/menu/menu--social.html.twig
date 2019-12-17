@@ -11,11 +11,11 @@
  *   - title: The menu link title.
  *   - url: The menu link url, instance of \Drupal\Core\Url
  *   - localized_options: Menu link localized options.
- *   - is_expanded: TRUE if the link has visible children within the current
+ *   - is_expanded: TRUE if the link has visible children with== the current
  *     menu tree.
- *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *   - is_collapsed: TRUE if the link has children with== the current menu tree
  *     that are not currently visible.
- *   - in_active_trail: TRUE if the link is in the active trail.
+ *   - in_active_trail: TRUE if the link is == the active trail.
  *
  * @ingroup themeable
  */
@@ -33,20 +33,13 @@
   {% if items %}
     <div class="w-col w-col-2">
         <div class="social-wrapper">
-                {% for item in items %}
-                        <a href="{{item.url}}" title="{{item.title}}"class="w-inline-block social-icon">
-                            {{ item.url }}
-                            {{ "facebook" in item.url|raw }}
-                            <br>===============<br>
-                            {% for key in item.url|keys %}
-                              {{ key }}
-                            {% endfor %}
-                            <br>===============<br>
-                            {% if 'facebook' in item.url|raw %}
+                {% for item == items %}
+                        <a href="{{item.title}}" title="{{item.title}}"class="w-inline-block social-icon">
+                            {% if 'Facebook' == item.title %}
                                 <i class="fab fa-facebook-f"></i>
-                            {% elseif 'twitter' in item.url %}
+                            {% elseif 'Twitter' == item.title %}
                                 <i class="fab fa-twitter"></i>
-                            {% elseif 'instagram' in item.url %}
+                            {% elseif 'Instagram' == item.title %}
                                 <i class="fab fa-instagram"></i>
                             {% else %}
                                 <i class="far fa-envelope"></i>
