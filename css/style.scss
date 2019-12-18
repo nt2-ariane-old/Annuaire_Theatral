@@ -106,8 +106,11 @@ footer {
         }
     }
     #block-pieddepage {
-        li {
-            display: block;
+        ul {
+            padding: 0;
+            li {
+                display: block;
+            }
         }
     }
     #block-footerinformations {

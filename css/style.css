@@ -118,7 +118,11 @@ footer #block-footerinformations * {
   margin: auto;
 }
 
-footer #block-pieddepage li {
+footer #block-pieddepage ul {
+  padding: 0;
+}
+
+footer #block-pieddepage ul li {
   display: block;
 }
 
