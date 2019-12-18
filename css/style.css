@@ -137,6 +137,11 @@ footer #block-views-block-partenaires-block-1 .views-row > div {
   float: left;
 }
 
+footer #block-views-block-partenaires-block-1 .views-row > div img {
+  width: auto;
+  height: auto;
+}
+
 .top-border {
   position: -webkit-sticky;
   position: sticky;
