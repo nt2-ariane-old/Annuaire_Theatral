@@ -36,6 +36,9 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    {{ content }}
+    <div class="blog-minimal">
+      <div class="data-blog"><i class="fas fa-address-card"></i></div>
+      <p>{{ content }}</p>
+    </div>
   {% endblock %}
 </div>
