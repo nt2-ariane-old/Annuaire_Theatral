@@ -291,13 +291,10 @@ nav ul ul li {
 
 #block-views-block-couverture-dernier-numero-couverture-dernier-numero .w-section a {
   font-size: inherit;
+  color: inherit;
 }
 
-#block-views-block-couverture-dernier-numero-couverture-dernier-numero h3 {
-  color: white;
-}
-
-#block-views-block-couverture-dernier-numero-couverture-dernier-numero h3:hover {
-  color: white;
+#block-views-block-couverture-dernier-numero-couverture-dernier-numero .w-section a:hover {
+  color: inherit;
 }
 /*# sourceMappingURL=style.css.map */

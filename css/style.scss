@@ -276,11 +276,9 @@ nav ul ul li {
 #block-views-block-couverture-dernier-numero-couverture-dernier-numero {
     .w-section a {
         font-size: inherit;
-    }
-    h3 {
-        color: white;
+        color: inherit;
         &:hover {
-            color: white;
+            color: inherit;
         }
     }
 }
