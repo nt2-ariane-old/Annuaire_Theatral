@@ -288,4 +288,8 @@ nav ul ul li {
   display: list-item;
   position: relative;
 }
+
+#block-views-block-couverture-dernier-numero-couverture-dernier-numero .w-section a {
+  font-size: initial;
+}
 /*# sourceMappingURL=style.css.map */
