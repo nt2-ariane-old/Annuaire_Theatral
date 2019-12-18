@@ -297,4 +297,8 @@ nav ul ul li {
 #block-views-block-couverture-dernier-numero-couverture-dernier-numero .w-section a:hover {
   color: inherit;
 }
+
+#block-views-block-couverture-dernier-numero-couverture-dernier-numero .sub-text-title {
+  font-size: 20px;
+}
 /*# sourceMappingURL=style.css.map */
