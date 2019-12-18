@@ -38,9 +38,6 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {{ title }}
-  {{ title_suffix }}
 
   {% if header %}
     <header>
@@ -56,7 +53,7 @@
   <section id="filter" class="w-section section-imp">
     <div class="w-container">
       <div class="title-wrapper">
-        <h2>{{ label }}</h2>
+        <h2>{{ title }}</h2>
         <div><img src="{{ directory }}/images/sub-handmade.png">
         </div>
       </div>
