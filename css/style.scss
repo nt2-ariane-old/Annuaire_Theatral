@@ -123,15 +123,21 @@ footer {
             text-align: center;
         }
     }
-    #block-views-block-partenaires-block-1 .views-row>div {
-        width: 50%;
-        height: 60px;
-        margin: 0;
-        float: left;
-        padding: 2em;
-        img {
-            width: auto;
-            height: auto;
+    #block-views-block-partenaires-block-1 {
+        .views-row>div {
+            width: 50%;
+            height: 60px;
+            margin: 0;
+            float: left;
+            padding: 0.5em;
+            div {
+                width: 100%;
+                height: 100%;
+                img {
+                    width: auto;
+                    height: auto;
+                }
+            }
         }
     }
 }
