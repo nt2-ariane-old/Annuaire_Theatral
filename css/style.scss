@@ -149,8 +149,11 @@ main {
 
 //PIED DE PAGE
 #block-pieddepage {
-    ul {
-        width: 100%;
+    li {
+        display: block;
+    }
+    p {
+        text-align: center;
     }
 }
 

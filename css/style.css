@@ -159,8 +159,12 @@ main h1 {
   text-align: center;
 }
 
-#block-pieddepage ul {
-  width: 100%;
+#block-pieddepage li {
+  display: block;
+}
+
+#block-pieddepage p {
+  text-align: center;
 }
 
 .block-title {
