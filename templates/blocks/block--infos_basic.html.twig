@@ -32,11 +32,10 @@
   {% if label|render %}
     <div class="title-wrapper">
         <h2{{ title_attributes }}>{{ label }}</h2>
-        <div><img src="http://annuairetheatral.aegir8.uqam.ca/{{ directory }}/images/sub-handmade.png"></div>
     </div>
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    {{ content }} :)
+    {{ content }}
   {% endblock %}
 </div>
