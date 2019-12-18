@@ -1,2 +1,135 @@
 <?php
+    function lano_preprocess(&$variables){
+        $theme = \Drupal::theme()->getActiveTheme()->getName();
+        $variables['theme_path'] = drupal_get_path('theme', $theme);
+          $variables['path_to_theme']= base_path().drupal_get_path('theme', $theme);
+        $variables['path_front'] = base_path();
     
+        if(isset($_GET['style']) && ($_GET['style'] == 'grid' || $_GET['style'] == 'minimal' || $_GET['style'] == 'minimal-arch' || $_GET['style'] == 'zig-zag' || $_GET['style'] == 'thougts' || $_GET['style'] == 'photo' )){
+            $variables['blog_style'] = $_GET['style'];
+          }elseif(theme_get_setting('blog_style', $theme)){
+              $variables['blog_style'] = theme_get_setting('blog_style', $theme);
+          }else{
+              $variables['blog_style'] = 'grid';
+          }
+    }
+    function lano_preprocess_html(&$variables){
+        $theme = \Drupal::theme()->getActiveTheme()->getName();
+      $path = \Drupal::service('path.current')->getPath();
+      $path_args = explode('/', $path);
+      if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') && (is_numeric($path_args[2]))) {
+          $variables['attributes']['class'][] = 'page-node-' . $path_args[2];
+      }else{
+          $variables['attributes']['class'][] = 'page-' . $path_args[1];
+      }
+        $variables['tracking_code'] = theme_get_setting('tracking_code', $theme);
+        $variables['custom_css'] = theme_get_setting('custom_css', $theme);
+  
+        // stars cus themem
+      if(isset($_GET['style']) && ($_GET['style'] == 'grid' || $_GET['style'] == 'minimal' || $_GET['style'] == 'minimal-arch' || $_GET['style'] == 'zig-zag' || $_GET['style'] == 'thougts' || $_GET['style'] == 'photo' )){
+          $variables['blog_style'] = $_GET['style'];
+          $blog_style = $_GET['style'];
+        }elseif(theme_get_setting('blog_style', $theme)){
+            $variables['blog_style'] = theme_get_setting('blog_style', $theme);
+            $blog_style = theme_get_setting('blog_style', $theme);
+        }else{
+            $variables['blog_style'] = 'grid';
+            $blog_style = 'grid';
+        }
+  
+      if ($node = \Drupal::request()->attributes->get('node')) {
+          $node_id = $node->id();
+          $ntype = $node->getType();
+      }else{
+          $node_id = '';
+          $ntype = '';
+      }
+      // print $ntype;
+      $vname = '';
+      if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
+            $term_id = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
+            $term = taxonomy_term_load($term_id);
+            //$term_name = $term_object->get('name')->value;
+          $vname = $term->vid->getValue()[0]['target_id'];
+          $variables['current_term'] = $term;
+      }
+      // print $vname;
+  
+      $cur = \Drupal::service('path.current')->getPath();
+      $current_path = explode('/', $cur);
+      $current_path0 = '';
+      $current_path1 = '';
+      $current_path2 = '';
+      if(isset($current_path[0])){
+          $current_path0 = $current_path[0];
+      }
+      if(isset($current_path[1])){
+          $current_path1 = $current_path[1];
+      }
+      if(isset($current_path[2]) ){
+          $current_path2 = $current_path[2];
+      }
+  
+      // print $current_path0;
+      // print $current_path1;
+      // print $current_path2;
+  
+        $variables [ '#cache' ] [ 'contexts' ] [ ]  =  'route' ;
+        if((\Drupal::service('path.matcher')->isFrontPage()) == '1' && (isset($_GET['theme'])) && (($_GET['theme'] == 'dark') || ($_GET['theme'] == 'light')) ){
+            if($_GET['theme'] == 'dark'){
+              $variables['class_theme'] = 'dark-theme';
+              $variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+            }else{
+              $variables ['#attached']['library'][]  =  'lano/lano-light' ;
+              $variables['class_theme'] = 'light-theme';
+            }
+      }elseif (theme_get_setting('themes_settings', $theme) == 'dark') {
+          if((\Drupal::service('path.matcher')->isFrontPage()) == '1'){
+              $variables['class_theme'] = 'dark-theme';
+              $variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+          }elseif ($ntype == 'blog_post'){
+              $variables['class_theme'] = 'dark-theme';
+              $variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+          }elseif ($current_path1 == 'blog') {
+              if ($blog_style == 'grid' or $blog_style == 'minimal' or $blog_style == 'zig-zag') {
+                  $variables['class_theme'] = 'dark-theme';
+                  $variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+              }else{
+                  $variables ['#attached']['library'][]  =  'lano/lano-light' ;
+                  $variables['class_theme'] = 'light-theme';
+              }
+          }elseif ($vname == 'blog_categories' or $vname == 'tags') {
+              if ($blog_style == 'grid' or $blog_style == 'minimal' or $blog_style == 'zig-zag') {
+                  $variables['class_theme'] = 'dark-theme';
+                  $variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+              }else{
+                  $variables ['#attached']['library'][]  =  'lano/lano-light' ;
+                  $variables['class_theme'] = 'light-theme';
+              }
+          }elseif ($vname == 'portfolio_categories') {
+              $variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+              $variables['class_theme'] = 'dark-theme';
+          }elseif ($ntype == 'portfolio') {
+              $variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+              $variables['class_theme'] = 'dark-theme';
+          }elseif ($current_path1 == 'portfolio-classic-grid' or $current_path1 == 'portfolio-hover-effects' or $current_path1 == 'portfolio-masonry' or $current_path1 == 'portfolio-not-spaced' or $current_path1 == 'portfolio-with-lightbox') {
+              $variables['class_theme'] = 'dark-theme';
+              $variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+          }elseif($current_path1 == 'yamlform' and $current_path2 == 'contact'){
+              $variables['class_theme'] = 'dark-theme';
+              $variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+          }elseif($node_id == 50 ){
+              $variables['class_theme'] = 'dark-theme';
+              $variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+  
+  
+  
+          }else{
+              $variables ['#attached']['library'][]  =  'lano/lano-light' ;
+              $variables['class_theme'] = 'light-theme';
+          }
+      }else{
+          $variables ['#attached']['library'][]  =  'lano/lano-light' ;
+          $variables['class_theme'] = 'light-theme';
+      }
+  }
