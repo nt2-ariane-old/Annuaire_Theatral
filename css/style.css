@@ -135,6 +135,10 @@ footer #block-footerinformations p {
   text-align: center;
 }
 
+footer #block-footerinformations .blog-minimal {
+  padding: 0;
+}
+
 footer #block-views-block-partenaires-block-1 .views-row {
   width: 50%;
   height: 60px;
