@@ -94,14 +94,25 @@ h2 {
 
 //footer
 footer {
-    .w-row>div>nav,
-    .w-row>div>div {
+    #block-partenaires,
+    #block-pieddepage,
+    #block-footerinformations {
         margin: 0;
         width: 33%;
         float: left;
         * {
             text-align: center;
             margin: auto;
+        }
+    }
+    #block-pieddepage {
+        li {
+            display: block;
+        }
+    }
+    #block-footerinformations {
+        p {
+            text-align: center;
         }
     }
 }
@@ -143,19 +154,6 @@ footer {
 
 main {
     h1 {
-        text-align: center;
-    }
-}
-
-//PIED DE PAGE
-#block-pieddepage {
-    li {
-        display: block;
-    }
-}
-
-#block-footerinformations {
-    p {
         text-align: center;
     }
 }

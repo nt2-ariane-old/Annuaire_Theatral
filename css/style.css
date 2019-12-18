@@ -103,17 +103,27 @@ h2 {
   text-decoration: none;
 }
 
-footer .w-row > div > nav,
-footer .w-row > div > div {
+footer #block-partenaires,
+footer #block-pieddepage,
+footer #block-footerinformations {
   margin: 0;
   width: 33%;
   float: left;
 }
 
-footer .w-row > div > nav *,
-footer .w-row > div > div * {
+footer #block-partenaires *,
+footer #block-pieddepage *,
+footer #block-footerinformations * {
   text-align: center;
   margin: auto;
+}
+
+footer #block-pieddepage li {
+  display: block;
+}
+
+footer #block-footerinformations p {
+  text-align: center;
 }
 
 .top-border {
@@ -156,14 +166,6 @@ footer .w-row > div > div * {
 }
 
 main h1 {
-  text-align: center;
-}
-
-#block-pieddepage li {
-  display: block;
-}
-
-#block-footerinformations p {
   text-align: center;
 }
 
