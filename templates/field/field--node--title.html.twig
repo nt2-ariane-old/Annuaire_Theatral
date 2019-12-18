@@ -21,3 +21,8 @@
  * @ingroup themeable
  */
 #}
+<span{{ attributes }}>
+  {%- for item in items -%}
+    {{ item.content }}
+  {%- endfor -%}
+</span>
