@@ -103,15 +103,15 @@ h2 {
   text-decoration: none;
 }
 
-footer nav,
-footer section {
+footer > nav,
+footer > section {
   margin: 0;
   width: 33%;
   float: left;
 }
 
-footer nav *,
-footer section * {
+footer > nav *,
+footer > section * {
   text-align: center;
   margin: auto;
 }

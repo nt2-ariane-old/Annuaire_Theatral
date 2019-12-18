@@ -94,8 +94,8 @@ h2 {
 
 //footer
 footer {
-    nav,
-    section {
+    &>nav,
+    &>section {
         margin: 0;
         width: 33%;
         float: left;
