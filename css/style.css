@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a:hover {
   color: #111;
   text-decoration: none;
@@ -401,9 +402,14 @@ nav ul ul li {
   color: inherit;
 }
 
-.field--name-field-dossier-vivarium .field__item {
+.field--name-field-dossier-vivarium .field__item a {
   font-size: 20px;
   text-align: center;
+  color: white;
+}
+
+.field--name-field-dossier-vivarium .field__item a::before {
+  content: 'Dossier associé :';
 }
 
 .blog-item img {

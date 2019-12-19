@@ -377,8 +377,14 @@ nav ul ul li {
 
 .field--name-field-dossier-vivarium {
     .field__item {
-        font-size: 20px;
-        text-align: center;
+        a {
+            &::before {
+                content: 'Dossier associé :';
+            }
+            font-size: 20px;
+            text-align: center;
+            color: white;
+        }
     }
 }
 
