@@ -360,6 +360,10 @@ nav ul ul li {
   height: 100%;
 }
 
+#intro .video-wrapper * {
+  height: 100%;
+}
+
 #intro img {
   z-index: -1;
   top: 0px;
