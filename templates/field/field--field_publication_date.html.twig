@@ -1,6 +1,6 @@
 <div{{ attributes }} >
     {% for item in items %}
-        {{ item.content }}
+        {{ item.content.date }}
         {% for key in item.content|keys %}
             {{ key }}
         {% endfor %}          
