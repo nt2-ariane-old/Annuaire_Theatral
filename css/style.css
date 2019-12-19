@@ -317,4 +317,10 @@ nav ul ul li {
 #block-views-block-couverture-dernier-numero-couverture-dernier-numero .sub-text-title {
   font-size: 20px;
 }
+
+.paragraph--type--publication-date div {
+  display: inline-block;
+  color: #a8a8a8;
+  font-size: 20px;
+}
 /*# sourceMappingURL=style.css.map */
