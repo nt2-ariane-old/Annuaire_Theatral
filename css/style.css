@@ -387,6 +387,10 @@ nav ul ul li {
   min-width: 100%;
 }
 
+.item.blog-item {
+  width: 33%;
+}
+
 .blog-grid-hiden a {
   width: 100%;
 }
