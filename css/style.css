@@ -394,4 +394,9 @@ nav ul ul li {
 .blog-grid-con {
   height: 500px;
 }
+
+.blog-grid-con .small-spc.no-bottom-space {
+  position: absolute;
+  bottom: 0;
+}
 /*# sourceMappingURL=style.css.map */

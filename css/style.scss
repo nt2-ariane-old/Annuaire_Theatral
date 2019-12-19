@@ -373,4 +373,8 @@ nav ul ul li {
 
 .blog-grid-con {
     height: 500px;
+    .small-spc.no-bottom-space {
+        position: absolute;
+        bottom: 0;
+    }
 }
