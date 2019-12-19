@@ -388,7 +388,7 @@ nav ul ul li {
 }
 
 .item.blog-item {
-  width: 33%;
+  width: 50%;
 }
 
 .blog-grid-hiden a {
@@ -402,5 +402,11 @@ nav ul ul li {
 .blog-grid-con .small-spc.no-bottom-space {
   position: absolute;
   bottom: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .item.blog-item {
+    width: 33%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
