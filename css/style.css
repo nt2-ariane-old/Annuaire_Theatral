@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a:hover {
   color: #111;
   text-decoration: none;
@@ -370,5 +371,9 @@ nav ul ul li {
 
 #intro h3 a:hover {
   color: inherit;
+}
+
+.view-editorial-issue {
+  content: '<h2>Éditorial</h2>';
 }
 /*# sourceMappingURL=style.css.map */
