@@ -379,4 +379,11 @@ nav ul ul li {
 #intro h3 a:hover {
   color: inherit;
 }
+
+.blog-item img {
+  width: auto;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
+}
 /*# sourceMappingURL=style.css.map */

@@ -355,3 +355,12 @@ nav ul ul li {
         }
     }
 }
+
+.blog-item {
+    img {
+        width: auto;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+    }
+}
