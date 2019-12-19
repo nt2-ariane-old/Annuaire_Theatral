@@ -413,6 +413,11 @@ nav ul ul li {
   color: white;
   width: 50%;
   font-weight: 400;
+  font-family: Lekton, sans-serif;
+}
+
+.field--name-field-dossier-vivarium .field__label:after {
+  content: '';
 }
 
 .blog-item img {
