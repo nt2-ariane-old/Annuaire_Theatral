@@ -2,10 +2,14 @@
     <div class="align-center">
         <div class="data-blog cont-ico smll-ico">
             <div class="w-embed">
-                <i class="fa fa-apple"></i>
+                {% if fields.field_image  %}
+                    {{ fields.field_image.content }}
+                {% else if fields.field_image_de_couverture  %}
+                    {{ fields.field_image_de_couverture.content }}
+                {% endif %}
             </div>
         </div>
-        <div class="cont-sub-txt">Apple</div>
+        <div class="cont-sub-txt">{{ fields.title.content }}</div>
         {% for key in fields|keys %}
             {{ key }}
         {% endfor %}
