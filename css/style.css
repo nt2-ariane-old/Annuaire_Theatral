@@ -305,25 +305,25 @@ nav ul ul li {
   position: relative;
 }
 
-#block-views-block-couverture-dernier-numero-couverture-dernier-numero .w-section a {
+#intro .w-section a {
   font-size: inherit;
   color: inherit;
 }
 
-#block-views-block-couverture-dernier-numero-couverture-dernier-numero .w-section a:hover {
+#intro .w-section a:hover {
   color: inherit;
 }
 
-#block-views-block-couverture-dernier-numero-couverture-dernier-numero .sub-text-title {
+#intro .sub-text-title {
   font-size: 20px;
   display: inline;
 }
 
-#block-views-block-couverture-dernier-numero-couverture-dernier-numero .paragraph--type--publication-date {
+#intro .paragraph--type--publication-date {
   display: inline-block;
 }
 
-#block-views-block-couverture-dernier-numero-couverture-dernier-numero .paragraph--type--publication-date:before {
+#intro .paragraph--type--publication-date:before {
   content: ' , ';
   display: inline-block;
   color: #a8a8a8;
@@ -332,7 +332,7 @@ nav ul ul li {
   font-family: Lekton, sans-serif;
 }
 
-#block-views-block-couverture-dernier-numero-couverture-dernier-numero .paragraph--type--publication-date div {
+#intro .paragraph--type--publication-date div {
   display: inline-block;
   color: #a8a8a8;
   font-size: 20px;
