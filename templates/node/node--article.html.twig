@@ -107,16 +107,16 @@
                         <h4 class="post-title">Auteur(s)</h4>
                         {% for item in content.group_article_informations.field_author %}
                             {% for subitem in item.field_author.entity.field_contributor_attributes %}
-                                {% for key in subitem|keys %}
+                                {% for key in subitem.entity|keys %}
                                     {{ key }}
                                 {% endfor %}
                                 <a class="lecture-content" href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.langcode}}{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.alias}}'>
                                 <b>
-                                    {{subitem.field_first_name.value}}
-                                    {{subitem.field_last_name.value}}
+                                    {{subitem.entity.field_first_name.value}}
+                                    {{subitem.entity.field_last_name.value}}
                                 </b>
                             </a>
-                            <p>{{subitem.body.summary|raw}}</p>
+                            <p>{{subitem.entityt.body.summary|raw}}</p>
                             {% endfor %}
                             
                         {% endfor %}
