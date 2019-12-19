@@ -93,9 +93,10 @@
   {% endif %}
 
   <div{{ content_attributes }}>
-    <h2>{{ label }}</h2>
-    <h3 class="sub-text-title">{{ content.field_dossier_vivarium }}</h3>
-
+    
+    {% for key in content|keys %}
+        {{ key }}
+    {% endfor %}
     <main id="contenu" class="w-section section-imp">
         <div class="w-container">
             <div class="w-row">
