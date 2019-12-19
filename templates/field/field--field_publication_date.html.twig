@@ -1,7 +1,7 @@
 <div{{ attributes }} >
     {% for item in items %}
         {{ item }}
-        {% for subitem in item %}
+        {% for subitem in item.content %}
             sub : {{ subitem }}
         {% endfor %}          
     {% endfor %}
