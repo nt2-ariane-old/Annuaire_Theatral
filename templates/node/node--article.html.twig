@@ -105,7 +105,7 @@
                     {# Auteurs #}
                     <div class="sidebar-class">
                         <h4 class="post-title">Auteur(s)</h4>
-                        {% for item in node.field_auteur %}
+                        {% for item in node.group_article_informations.field_auteur %}
                             <a class="lecture-content" href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.langcode}}{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.alias}}'>
                                 <b>
                                     {{item.entity.field_first_name.value}}
@@ -121,7 +121,7 @@
                         <h4 class="post-title">Mots-clés</h4>
 
                         <div class="w-clearfix">
-                            {{ content.field_mots_cles }}
+                            {{ content.field_tags }}
                         </div>
                     </div>
 
@@ -157,7 +157,7 @@
                 
                 <div class="bottom-space">
                     {% if logged_in %}
-                        {{ content.body }}
+                        {{ content.group_article_informations.body }}
                     {% else %}
                         <p>Vous n'avez pas acheter l'Article.<br>
                             En Construction
