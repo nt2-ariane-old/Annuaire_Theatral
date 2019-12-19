@@ -319,6 +319,16 @@ nav ul ul li {
             font-family: Lekton, sans-serif;
         }
     }
+    .field--name-field-issue-number {
+        &::before {
+            content: '#';
+            display: inline-block;
+            color: #a8a8a8;
+            font-size: 20px;
+            font-weight: 400;
+            font-family: Lekton, sans-serif;
+        }
+    }
     .field--name-field-publication-date,
     .field--name-field-issue-number {
         display: inline-block;
