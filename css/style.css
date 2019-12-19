@@ -175,6 +175,7 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
 .blog-zig-zag img {
   min-height: 100%;
   min-width: 100%;
+  max-height: auto;
   width: auto;
   height: auto;
 }
