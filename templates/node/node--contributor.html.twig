@@ -76,37 +76,24 @@
     
     <section class="w-section section-imp more-padding">
         <div class="w-container">
-
-            <div>
-                <div class="w-row">
-                    
-                    <div class="w-col w-col-12">
-                    <div>
-                        <p>{{content.body}}</p>
-                        
-                        {{content.field_links}}
-                        {{content.field_author_digital_identifier}}
-                        {{content.field_bibliographic_reference}}
-                        
-                    </div>
-                    </div>
+            <div class="w-row">
+                <div class="w-col w-col-12">
+                    {{content.body}}
+                    {{content.field_links}}
+                    {{content.field_author_digital_identifier}}
+                    {{content.field_bibliographic_reference}}
                 </div>
             </div>
-        </div>
         <div>
+        {% if  content.contents_on_contributor_entity_view_1 || content.contents_on_contributor_entity_view_2 %}
             <div class="title-wrapper">
-            <div>
                 <h3>Contenu du contributeur</h3>
                 <img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
             </div>
-            </div>
             <div>
-                <div class="w-row">
-                    {{ content.contents_on_contributor_entity_view_1 }}
-                    {{ content.contents_on_contributor_entity_view_2 }}
-                </div>
+                {{ content.contents_on_contributor_entity_view_1 }}
+                {{ content.contents_on_contributor_entity_view_2 }}
             </div>
-        </div>
-        </div>
+        {% endif %} 
     </section>
 </article>
