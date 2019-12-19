@@ -302,6 +302,12 @@ nav ul ul li {
     }
 }
 
+#intro .sub-text-title {
+    p {
+        display: inline;
+    }
+}
+
 .paragraph--type--publication-date {
     display: inline-block;
     &:before {
@@ -309,12 +315,14 @@ nav ul ul li {
         display: inline-block;
         color: #a8a8a8;
         font-size: 20px;
-        font-weight: 100;
+        font-weight: 400;
+        font-family: Lekton, sans-serif;
     }
     div {
         display: inline-block;
         color: #a8a8a8;
         font-size: 20px;
-        font-weight: 100;
+        font-weight: 400;
+        font-family: Lekton, sans-serif;
     }
 }
