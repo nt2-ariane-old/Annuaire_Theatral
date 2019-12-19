@@ -339,4 +339,12 @@ nav ul ul li {
   font-weight: 400;
   font-family: Lekton, sans-serif;
 }
+
+#intro .field__item {
+  display: inline-block;
+  color: #a8a8a8;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: Lekton, sans-serif;
+}
 /*# sourceMappingURL=style.css.map */
