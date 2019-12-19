@@ -75,31 +75,45 @@
 <article{{ attributes }}>
     <div{{ content_attributes }}>
         <div id="intro" class="w-section banner-one">
+            {% if  content.field_image %}
             <div class="video-wrapper">
                 <div class="w-embed embed-video">
                 {{ content.field_image }}
                 </div>
                 <div class="video-overlay"></div>
             </div>
-            <div class="w-container container-contact">
-                <div class="align-center">
-                    <h2 class="inner-title">{{ label }}</h2>
-                    {{ content.field_issue_number|raw}}
-                    {{ content.field_publication_date|raw}}
+            {% endif %}
+            {% if label %}
+                <div class="w-container container-contact">
+                    <div class="align-center">
+                        <h2 class="inner-title">{{ label }}</h2>
+                        {% if content.field_issue_number %}
+                            {{ content.field_issue_number|raw}}
+                        {% endif %}
+                        {% if content.field_publication_date  %}
+                            {{ content.field_publication_date|raw}}
+                        {% endif %}
+                    </div>
                 </div>
-            </div>
+            {% endif %}
+            
         </div>
-        <section id="editorial">
-            {{ content.group_contents.editorial_issue_entity_view_1 }}
-        </section>
-        <section id="dossiers" class="views-element-container">
-            {{ content.group_contents.dossiers_on_issue_entity_view_1 }}
-        </section>
-        <section id="individuel">
-            <div class="w-row">
-                {{content.group_contents.individual_articles_entity_view_1}}
-            </div>
-        </section>
+        {% if content.group_contents.editorial_issue_entity_view_1  %}
+            <section id="editorial">
+                {{ content.group_contents.editorial_issue_entity_view_1 }}
+            </section>
+        {% endif %}
+        {% if content.group_contents.dossiers_on_issue_entity_view_1  %}
+            <section id="dossiers" class="views-element-container">
+                {{ content.group_contents.dossiers_on_issue_entity_view_1 }}
+            </section>
+        {% endif %}
+        {% if content.group_contents.individual_articles_entity_view_1  %}
+            <section id="individuel">
+                <div class="w-row">
+                    {{content.group_contents.individual_articles_entity_view_1}}
+                </div>
+            </section>
+        {% endif %}
     </div>
-
 </article>

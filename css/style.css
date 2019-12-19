@@ -171,33 +171,6 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   width: 100vw;
 }
 
-#intro {
-  position: relative;
-  width: 100%;
-}
-
-#intro img {
-  position: absolute;
-  z-index: -1;
-  top: 0px;
-  left: 0px;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-#intro .embed-video,
-#intro .video-wrapper {
-  position: static;
-}
-
-#intro h2 {
-  font-size: 50px;
-}
-
-#intro h3 {
-  font-size: 30px;
-}
-
 .section-imp {
   padding: 40px 20px;
   background-color: transparent;
@@ -305,6 +278,11 @@ nav ul ul li {
   position: relative;
 }
 
+#intro {
+  position: relative;
+  width: 100%;
+}
+
 #intro .w-section a {
   font-size: inherit;
   color: inherit;
@@ -361,5 +339,36 @@ nav ul ul li {
   font-size: 20px;
   font-weight: 400;
   font-family: Lekton, sans-serif;
+}
+
+#intro img {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#intro .embed-video,
+#intro .video-wrapper {
+  position: static;
+}
+
+#intro h2 {
+  font-size: 50px;
+}
+
+#intro h3 {
+  font-size: 30px;
+}
+
+#intro h3 a {
+  font-size: inherit;
+  color: inherit;
+}
+
+#intro h3 a:hover {
+  color: inherit;
 }
 /*# sourceMappingURL=style.css.map */

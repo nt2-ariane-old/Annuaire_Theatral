@@ -159,29 +159,6 @@ footer {
 }
 
 //COUVERTURE
-#intro {
-    position: relative;
-    width: 100%;
-    img {
-        position: absolute;
-        z-index: -1;
-        top: 0px;
-        left: 0px;
-        min-width: 100%;
-        min-height: 100%;
-    }
-    .embed-video,
-    .video-wrapper {
-        position: static;
-    }
-    h2 {
-        font-size: 50px;
-    }
-    h3 {
-        font-size: 30px;
-    }
-}
-
 .section-imp {
     padding: 40px 20px;
     background-color: transparent;
@@ -338,6 +315,33 @@ nav ul ul li {
             font-size: 20px;
             font-weight: 400;
             font-family: Lekton, sans-serif;
+        }
+    }
+    position: relative;
+    width: 100%;
+    img {
+        position: absolute;
+        z-index: -1;
+        top: 0px;
+        left: 0px;
+        min-width: 100%;
+        min-height: 100%;
+    }
+    .embed-video,
+    .video-wrapper {
+        position: static;
+    }
+    h2 {
+        font-size: 50px;
+    }
+    h3 {
+        font-size: 30px;
+        a {
+            font-size: inherit;
+            color: inherit;
+            &:hover {
+                color: inherit;
+            }
         }
     }
 }
