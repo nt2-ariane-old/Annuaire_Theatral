@@ -113,6 +113,9 @@
                                 </b>
                             </a>
                             <p>{{item.entity.body.summary|raw}}</p>
+                            {% for key in item.entity|keys  %}
+                                {{ key }}
+                            {% endfor %}
                         {% endfor %}
                     </div>
 
