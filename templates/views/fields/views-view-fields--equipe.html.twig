@@ -2,7 +2,7 @@
                 <div data-ix="blog-hover-zoom-photo" class="blog-wrapper wow fadeIn">
                 <div class="blog-grid-hiden">
                     <a href="{{ fields.view_node.content|render|striptags|trim }}" class="w-inline-block blog-link-2 animsition-link">
-                        <img src="{{fields.field_image.content}}">
+                        {{fields.field_image.content}}
                     </a>
                     <div class="blog-grid-arrow"></div>
                 </div>
