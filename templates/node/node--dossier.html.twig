@@ -103,10 +103,7 @@
         <div class="w-container container-contact">
             <div class="align-center">
                 <h2 class="inner-title">{{ label }}</h2>
-                <p class="sub-text-title"></p>
-                {% for key in content.group_dossier_informations|keys %}
-                  {{ key }}
-                {% endfor %}
+                <p class="sub-text-title">{{ content.group_dossier_informations.field_editor }}</p>
             </div>
         </div>
     </div>
