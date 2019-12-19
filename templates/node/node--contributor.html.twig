@@ -76,41 +76,32 @@
     
     <section class="w-section section-imp more-padding">
         <div class="w-container">
-        <div class="bottom-space">
-            <div class="title-wrapper left">
-            <h2 class="author-name">{{content.field_first_name}} {{content.field_last_name}}</h2>
-            <div><img src="http://annuairetheatral.aegir8.uqam.ca/{{ base_path ~ directory }}/images/sub-handmade.png">
-            </div>
-            </div>
+
             <div>
-            <div class="w-row">
-                
-                <div class="w-col w-col-12">
-                <div>
-                    <p>{{content.body}}</p>
+                <div class="w-row">
                     
-                    {{content.field_links}}
-                    {{content.field_author_digital_identifier}}
-                    {{content.field_bibliographic_reference}}
-                    
+                    <div class="w-col w-col-12">
+                    <div>
+                        <p>{{content.body}}</p>
+                        
+                        {{content.field_links}}
+                        {{content.field_author_digital_identifier}}
+                        {{content.field_bibliographic_reference}}
+                        
+                    </div>
+                    </div>
                 </div>
-                </div>
-            </div>
             </div>
         </div>
         <div>
             <div class="title-wrapper left">
             <h2>Contenu du contributeur</h2>
-            {% for key in content|keys %}
-                {{ key }}
-            {% endfor %}
             <div><img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
             </div>
             </div>
             <div>
                 <div class="w-row">
                     {{ content.contents_on_contributor_entity_view_1 }}
-                    
                     {{ content.contents_on_contributor_entity_view_2 }}
                 </div>
             </div>
