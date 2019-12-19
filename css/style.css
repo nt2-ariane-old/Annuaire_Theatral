@@ -316,17 +316,14 @@ nav ul ul li {
 
 #block-views-block-couverture-dernier-numero-couverture-dernier-numero .sub-text-title {
   font-size: 20px;
-}
-
-#block-views-block-couverture-dernier-numero-couverture-dernier-numero .sub-text-title p {
   display: inline;
 }
 
-.paragraph--type--publication-date {
+#block-views-block-couverture-dernier-numero-couverture-dernier-numero .paragraph--type--publication-date {
   display: inline-block;
 }
 
-.paragraph--type--publication-date:before {
+#block-views-block-couverture-dernier-numero-couverture-dernier-numero .paragraph--type--publication-date:before {
   content: ' , ';
   display: inline-block;
   color: #a8a8a8;
@@ -335,7 +332,7 @@ nav ul ul li {
   font-family: Lekton, sans-serif;
 }
 
-.paragraph--type--publication-date div {
+#block-views-block-couverture-dernier-numero-couverture-dernier-numero .paragraph--type--publication-date div {
   display: inline-block;
   color: #a8a8a8;
   font-size: 20px;

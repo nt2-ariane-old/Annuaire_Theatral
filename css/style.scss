@@ -299,30 +299,24 @@ nav ul ul li {
     }
     .sub-text-title {
         font-size: 20px;
-    }
-}
-
-#block-views-block-couverture-dernier-numero-couverture-dernier-numero .sub-text-title {
-    p {
         display: inline;
     }
-}
-
-.paragraph--type--publication-date {
-    display: inline-block;
-    &:before {
-        content: ' , ';
+    .paragraph--type--publication-date {
         display: inline-block;
-        color: #a8a8a8;
-        font-size: 20px;
-        font-weight: 400;
-        font-family: Lekton, sans-serif;
-    }
-    div {
-        display: inline-block;
-        color: #a8a8a8;
-        font-size: 20px;
-        font-weight: 400;
-        font-family: Lekton, sans-serif;
+        &:before {
+            content: ' , ';
+            display: inline-block;
+            color: #a8a8a8;
+            font-size: 20px;
+            font-weight: 400;
+            font-family: Lekton, sans-serif;
+        }
+        div {
+            display: inline-block;
+            color: #a8a8a8;
+            font-size: 20px;
+            font-weight: 400;
+            font-family: Lekton, sans-serif;
+        }
     }
 }
