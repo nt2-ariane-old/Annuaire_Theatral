@@ -340,6 +340,10 @@ nav ul ul li {
   font-family: Lekton, sans-serif;
 }
 
+#intro .field--name-field-issue-number {
+  display: inline-block;
+}
+
 #intro .field--name-field-issue-number .field__item {
   display: inline-block;
   color: #a8a8a8;

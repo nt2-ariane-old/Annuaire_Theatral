@@ -320,7 +320,8 @@ nav ul ul li {
         }
     }
     .field--name-field-issue-number {
-        display: inline-block .field__item {
+        display: inline-block;
+        .field__item {
             display: inline-block;
             color: #a8a8a8;
             font-size: 20px;
