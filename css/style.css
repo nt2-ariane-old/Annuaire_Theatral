@@ -401,6 +401,11 @@ nav ul ul li {
   color: inherit;
 }
 
+.field--name-field-dossier-vivarium .field__item {
+  font-size: 20px;
+  text-align: center;
+}
+
 .blog-item img {
   width: auto;
   height: auto;
