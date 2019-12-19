@@ -390,4 +390,8 @@ nav ul ul li {
 .blog-grid-hiden a {
   width: 100%;
 }
+
+.blog-grid-con {
+  height: 500px;
+}
 /*# sourceMappingURL=style.css.map */
