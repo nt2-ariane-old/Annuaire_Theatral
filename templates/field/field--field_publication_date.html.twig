@@ -1,7 +1,7 @@
 <div{{ attributes }} >
     {% for item in items %}
-        {% for key in item|keys %}
-            {{ key }}
+        {% for subitem in item %}
+            {{ subitem }}
         {% endfor %}          
     {% endfor %}
 </div>
