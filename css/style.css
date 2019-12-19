@@ -43,6 +43,17 @@ a:hover {
   margin-bottom: 30px;
 }
 
+.blog-last-photo {
+  overflow: hidden;
+}
+
+.blog-last-photo img {
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+
 h1 {
   text-align: center;
   width: 100%;

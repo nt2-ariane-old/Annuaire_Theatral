@@ -40,6 +40,16 @@ a {
     margin-bottom: 30px;
 }
 
+.blog-last-photo {
+    overflow: hidden;
+    img {
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
+
 h1 {
     text-align: center;
     width: 100%;
