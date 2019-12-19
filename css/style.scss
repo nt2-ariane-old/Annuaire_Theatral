@@ -303,9 +303,18 @@ nav ul ul li {
 }
 
 .paragraph--type--publication-date {
+    display: inline-block;
+    &:before {
+        content: ' , ';
+        display: inline-block;
+        color: #a8a8a8;
+        font-size: 20px;
+        font-weight: 100;
+    }
     div {
         display: inline-block;
         color: #a8a8a8;
         font-size: 20px;
+        font-weight: 100;
     }
 }

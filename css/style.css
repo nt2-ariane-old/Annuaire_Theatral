@@ -318,9 +318,22 @@ nav ul ul li {
   font-size: 20px;
 }
 
+.paragraph--type--publication-date {
+  display: inline-block;
+}
+
+.paragraph--type--publication-date:before {
+  content: ' , ';
+  display: inline-block;
+  color: #a8a8a8;
+  font-size: 20px;
+  font-weight: 100;
+}
+
 .paragraph--type--publication-date div {
   display: inline-block;
   color: #a8a8a8;
   font-size: 20px;
+  font-weight: 100;
 }
 /*# sourceMappingURL=style.css.map */
