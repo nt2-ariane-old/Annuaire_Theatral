@@ -111,11 +111,11 @@
                             {% endfor %}
                             <a class="lecture-content" href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.langcode}}{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.alias}}'>
                                 <b>
-                                    {{item.field_first_name.value}}
-                                    {{item.field_last_name.value}}
+                                    {{item.field_author.entity.field_contributor_attributes.field_first_name.value}}
+                                    {{item.field_author.entity.field_contributor_attributes.field_last_name.value}}
                                 </b>
                             </a>
-                            <p>{{item.body.summary|raw}}</p> #}
+                            <p>{{item.field_author.entity.field_contributor_attributes.body.summary|raw}}</p> #}
                         {% endfor %}
                     </div>
 
