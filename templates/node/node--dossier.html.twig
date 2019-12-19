@@ -103,6 +103,10 @@
         <div class="w-container container-contact">
             <div class="align-center">
                 <h2 class="inner-title">{{ label }}</h2>
+                <p class="sub-text-title"></p>
+                {% for key in content|keys %}
+                  {{ key }}
+                {% endfor %}
             </div>
         </div>
     </div>
