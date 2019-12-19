@@ -94,9 +94,8 @@
 
   <div{{ content_attributes }}>
     
-    {% for key in content|keys %}
-        {{ key }}
-    {% endfor %}
+    <h3 class="sub-text-title">{{ content.field_article_subtitle }}</h3>
+
     <main id="contenu" class="w-section section-imp">
         <div class="w-container">
             <div class="w-row">
@@ -188,12 +187,20 @@
                 <p>{{content.field_pour_citer}}</p>
             </div>
             <div class="tab-pane container fade" id="biblio">
-                <p>{{content.field_biblio}}</p>
+                <p>{{content.field_bibliographic_reference}}</p>
             </div>
             <div class="tab-pane container fade" id="pdf">
                 <p>{{content.field_biblio}}</p>
             </div>
         </div>
+        {% for key in content.group_article_informations|keys %}
+            {{ key }}
+        {% endfor %}
+        <br>
+        <br>
+        {% for key in group_abstracts|keys %}
+            {{ key }}
+        {% endfor %}
     </main>
 
   </div>
