@@ -104,7 +104,7 @@
             <div class="align-center">
                 <h2 class="inner-title">{{ label }}</h2>
                 <p class="sub-text-title"></p>
-                {% for key in content|keys %}
+                {% for key in content.group_dossier_informations|keys %}
                   {{ key }}
                 {% endfor %}
             </div>
