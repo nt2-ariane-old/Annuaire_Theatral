@@ -22,6 +22,11 @@ body {
 .data-blog img {
   min-width: 100%;
   min-height: 100%;
+  height: auto;
+}
+
+.data-blog.cont-ico.smll-ico {
+  padding: 0;
 }
 
 .title-wrapper {
