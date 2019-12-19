@@ -2,15 +2,10 @@
     <div class="align-center">
         <div class="data-blog cont-ico smll-ico">
             <div class="w-embed">
-                {# {% if fields.field_image  %}
-                    {{ fields.field_image.content }}
-                {% else if fields.field_image_de_couverture  %}
-                    {{ fields.field_image_de_couverture.content }}
-                {% endif %} #}
                 {% if fields.field_image %}
                     {{ fields.field_image.content }}
-                {% else if fields.field_image %}
-                    {{ fields.field_image.content }}
+                {% elseif fields.field_image_de_couverture %}
+                    {{ fields.field_image_de_couverture.content }}
                 {% endif %}
             </div>
         </div>
