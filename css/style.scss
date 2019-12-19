@@ -330,6 +330,7 @@ nav ul ul li {
         }
     }
     img {
+        position: absolute;
         z-index: -1;
         top: 0px;
         left: 0px;
@@ -353,8 +354,4 @@ nav ul ul li {
             }
         }
     }
-}
-
-.view-editorial-issue {
-    content: '<h2>Éditorial</h2>';
 }
