@@ -106,8 +106,11 @@
                     <div class="sidebar-class">
                         <h4 class="post-title">Auteur(s)</h4>
                          {{ content.group_article_informations.field_author }}
-                        {% for key in content.group_article_informations.field_author|keys %}
-                            {{ key }}
+                        {% for item in content.group_article_informations.field_author|keys %}
+                            {{ item }}
+                            {% for key in item|keys %}
+                                {{ key }}
+                            {% endfor %}
                             {# <a class="lecture-content" href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.langcode}}{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.alias}}'>
                                 <b>
                                     {{item.entity.field_first_name.value}}
