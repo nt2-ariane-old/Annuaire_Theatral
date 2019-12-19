@@ -386,4 +386,8 @@ nav ul ul li {
   min-height: 100%;
   min-width: 100%;
 }
+
+.blog-grid-hiden a {
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
