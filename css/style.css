@@ -350,20 +350,6 @@ nav ul ul li {
   font-family: Lekton, sans-serif;
 }
 
-#intro .item-list * {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-#intro .video-wrapper {
-  height: 100%;
-}
-
-#intro .video-wrapper * {
-  height: 100%;
-}
-
 #intro img {
   z-index: -1;
   top: 0px;
