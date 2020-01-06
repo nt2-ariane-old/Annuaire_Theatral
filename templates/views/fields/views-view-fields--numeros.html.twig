@@ -17,7 +17,7 @@
         </div>
       </div> #}
 
-<div data-ix="blog-hover-zoom-photo" class="w-clearfix space-mobile">
+{# <div data-ix="blog-hover-zoom-photo" class="w-clearfix space-mobile">
 	<div class="blog-zig-zag up-left">
 		<div class="blog-content">
 		  <h3 class="blog-title"><a class="blog-title animsition-link" href="{{ fields.view_node.content|striptags}}">{{ fields.title.content|render|striptags|trim  }}</a></h3>
@@ -34,5 +34,23 @@
       {{fields.field_image.content}}
     </a>
   </div>
-</div>
+</div> #}
 
+<div data-ix="blog-hover-zoom-photo" class="w-clearfix space-mobile">
+	<div class="blog-zig-zag up-left">
+		<div class="blog-content">
+		  <h3 class="blog-title"><a class="blog-title animsition-link" href="{{ url }}">{{ node.getTitle() }}</a></h3>
+		  <p class="meta-tag pls-category">{{ ('Created: ')|t }} {{ node.created.value|date('j M Y') }} / {{ content.field_blog_categories }}</p>
+		  <div class="seperator"></div>
+		  <p>{{ node.body.summary }}</p>
+		  <div class="small-spc">
+        <a href="{{ url }}" class="read-more animsition-link">Read More&nbsp;›</a>
+		  </div>
+		</div>
+	</div>
+	<div class="blog-zig-zag">
+		<a href="{{ url }}" class="w-inline-block blog-link animsition-link big-h-img">
+      <img src="{{ img }}" alt="">
+    </a>
+	</div>
+</div>
