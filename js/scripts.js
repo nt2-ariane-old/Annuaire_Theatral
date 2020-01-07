@@ -13,7 +13,7 @@ window.onload = function() {
                     } else {
                         element.style.float = 'right';
                     }
-                    j += 1;
+                    j++;
                 });
             } else {
                 row.style.border = '5px solid blue';
@@ -25,8 +25,8 @@ window.onload = function() {
                 }
 
             }
-            console.log(i)
-            i += 1;
+            console.log(i++)
+
 
         }
     });
