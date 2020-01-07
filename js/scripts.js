@@ -2,7 +2,7 @@ window.onload = function() {
     let rows = document.querySelectorAll('.views-row');
     rows.forEach(row => {
         row.style.backgroundColor = 'red';
-        if (!empty(row.querySelectorAll('.blog-zig-zag'))) {
+        if (row.querySelectorAll('.blog-zig-zag').length > 0) {
             let odd = row.querySelector('space-mobile:odd');
             console.log(odd);
             let even = row.querySelector('space-mobile:even');
