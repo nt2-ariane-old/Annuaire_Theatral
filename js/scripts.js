@@ -1,4 +1,4 @@
-window.onload() {
+window.onload = function() {
     let rows = document.querySelectorAll('.views-row');
     rows.forEach(row => {
         if (!empty(row.querySelectorAll('.blog-zig-zag'))) {
