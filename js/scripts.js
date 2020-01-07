@@ -2,7 +2,6 @@ window.onload = function() {
     let rows = document.querySelectorAll('.views-row');
     rows.forEach(row => {
         i = 1;
-        row.style.backgroundColor = 'red';
         rowContent = row.querySelectorAll('.blog-zig-zag');
         if (rowContent.length > 0) {
             if (this.isEven(i)) {
@@ -11,6 +10,7 @@ window.onload = function() {
                 row.style.border = '5px solid blue';
 
             }
+            console.log(i)
             i++;
 
         }
