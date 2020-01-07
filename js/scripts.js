@@ -1,7 +1,7 @@
 window.onload = function() {
     let rows = document.querySelectorAll('.views-row');
+    i = 1;
     rows.forEach(row => {
-        i = 1;
         rowContent = row.querySelectorAll('.blog-zig-zag');
         if (rowContent.length > 0) {
             if (this.isEven(i)) {
