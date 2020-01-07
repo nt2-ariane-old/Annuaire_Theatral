@@ -13,6 +13,7 @@ window.onload = function() {
                     } else {
                         element.style.float = 'right';
                     }
+                    console.log(j)
                     j += 1;
                 });
             } else {
@@ -24,9 +25,11 @@ window.onload = function() {
                     } else {
                         element.style.float = 'right';
                     }
+                    console.log(j)
                     j += 1;
                 });
             }
+            console.log(i)
             i += 1;
 
         }
