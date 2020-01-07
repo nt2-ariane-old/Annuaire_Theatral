@@ -17,13 +17,15 @@ window.onload = function() {
                 });
             } else {
                 row.style.border = '5px solid blue';
-                if (this.isEven(j)) {
-                    element.style.float = 'right'
-                    ß;
-                } else {
-                    element.style.float = 'left';
-                }
-
+                j = 0;
+                rowContent.forEach(element => {
+                    if (this.isEven(j)) {
+                        element.style.float = 'left';
+                    } else {
+                        element.style.float = 'right';
+                    }
+                    j++;
+                });
             }
             i++;
 
