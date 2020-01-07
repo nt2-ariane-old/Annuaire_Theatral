@@ -375,6 +375,19 @@ nav ul ul li {
     }
 }
 
+.views-row:has(.zig-zag) {
+    &:nth-child(even) {
+        .zig-zag.content {
+            float: left;
+        }
+    }
+    &:nth-child(odd) {
+        .zig-zag.content {
+            float: right;
+        }
+    }
+}
+
 .field--name-field-dossier-vivarium {
     .field__item {
         a {
