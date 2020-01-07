@@ -375,7 +375,7 @@ nav ul ul li {
     }
 }
 
-.views-row:has(.blog-zig-zag) {
+.views-row .blog-zig-zag {
     background-color: red;
     &:nth-child(even) {
         .blog-zig-zag.up-left {
