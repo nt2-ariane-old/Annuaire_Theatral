@@ -5,7 +5,7 @@ window.onload = function() {
         row.style.backgroundColor = 'red';
         rowContent = row.querySelectorAll('.blog-zig-zag');
         if (rowContent.length > 0) {
-            if (i % 2 == 0) {
+            if (this.isEven(i)) {
                 row.style.border = '5px solid red';
             } else {
                 row.style.border = '5px solid blue';
@@ -15,4 +15,12 @@ window.onload = function() {
 
         }
     });
+}
+
+function isEven(n) {
+    return n % 2 == 0;
+}
+
+function isOdd(n) {
+    return Math.abs(n % 2) == 1;
 }
