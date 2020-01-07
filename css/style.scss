@@ -375,14 +375,14 @@ nav ul ul li {
     }
 }
 
-.views-row:has(.zig-zag) {
+.views-row:has(.blog-zig-zag) {
     &:nth-child(even) {
-        .zig-zag.content {
+        .blog-zig-zag.up-left {
             float: left;
         }
     }
     &:nth-child(odd) {
-        .zig-zag.content {
+        .blog-zig-zag.up-left {
             float: right;
         }
     }
