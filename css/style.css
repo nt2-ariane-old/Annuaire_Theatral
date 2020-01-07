@@ -401,6 +401,14 @@ nav ul ul li {
   color: inherit;
 }
 
+.views-row .blog-zig-zag:nth-child(even) .blog-zig-zag.up-left {
+  float: left;
+}
+
+.views-row .blog-zig-zag:nth-child(odd) .blog-zig-zag.up-left {
+  float: right;
+}
+
 .field--name-field-dossier-vivarium .field__item a {
   font-size: 20px;
   text-align: left;
