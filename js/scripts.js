@@ -13,7 +13,7 @@ window.onload = function() {
                     } else {
                         element.style.float = 'right';
                     }
-                    j++;
+                    j += 1;
                 });
             } else {
                 row.style.border = '5px solid blue';
@@ -24,10 +24,10 @@ window.onload = function() {
                     } else {
                         element.style.float = 'right';
                     }
-                    j++;
+                    j += 1;
                 });
             }
-            i++;
+            i += 1;
 
         }
     });
