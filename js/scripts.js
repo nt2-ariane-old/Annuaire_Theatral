@@ -25,8 +25,7 @@ window.onload = function() {
                 }
 
             }
-            console.log(i++)
-
+            i++;
 
         }
     });
