@@ -32,9 +32,9 @@
 	{% import _self as menus %}
 	{% if items %}
 		{% if menu_level == 0 %}
-			<ul{{attributes}}>
+			<ul{{attributes}} class="topnav">
 			{% else %}
-				<ul class="w-list-unstyled">
+				<ul class="w-list-unstyled topnav">
 				{% endif %}
 				<li class="icon">
 					<a onclick="showMenu()"> 
