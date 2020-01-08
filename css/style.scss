@@ -131,7 +131,8 @@
         line-height: 36px;
     }
     
-    .flex-center-child>div {
+    .flex-center-child>div,
+    .flex-center {
         display: flex;
         justify-content: center;
         align-items: center;

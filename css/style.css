@@ -144,7 +144,8 @@ h2 {
   line-height: 36px;
 }
 
-.flex-center-child > div {
+.flex-center-child > div,
+.flex-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
