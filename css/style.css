@@ -191,7 +191,7 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   position: sticky;
 }
 
-.top-border nav .icon {
+.top-border .top-nav .icon {
   display: none;
 }
 
@@ -473,12 +473,25 @@ nav ul ul li {
   .top-border #block-social {
     display: none;
   }
-  .top-border nav a:not(:first-child) {
+  .top-border nav .topnav li:not(:first-child) {
     display: none;
   }
-  .top-border nav a.icon {
+  .top-border nav .topnav li.icon {
     float: right;
     display: block;
+  }
+  .top-border nav .topnav.responsive {
+    position: relative;
+  }
+  .top-border nav .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .top-border nav .topnav.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
 
