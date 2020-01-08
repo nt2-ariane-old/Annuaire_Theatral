@@ -1,6 +1,6 @@
 window.onload = function() {
     let rows = document.querySelectorAll('.views-row');
-    i = 1;
+    i = 0;
     rows.forEach(row => {
         rowContent = row.querySelectorAll('.blog-zig-zag');
         if (rowContent.length > 0) {
