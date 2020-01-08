@@ -173,13 +173,11 @@
     }
     
     .top-border {
-        display: block;
         position: sticky;
-        margin: 0 0 0px -10px;
-        max-width: 980px;
     }
     
-    .bottom-border {
+    .bottom-border,
+    .top-border {
         display: block;
         max-width: 980px;
     }
