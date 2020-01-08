@@ -135,6 +135,10 @@ h2 {
   text-decoration: none;
 }
 
+.title-top-border {
+  text-align: left;
+}
+
 #block-cartbutton {
   position: relative;
   display: inline-block;
