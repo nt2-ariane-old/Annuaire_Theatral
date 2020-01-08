@@ -191,10 +191,16 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   position: sticky;
 }
 
+.top-border nav .icon {
+  display: none;
+}
+
 .bottom-border,
 .top-border {
   display: block;
   max-width: 980px;
+  margin: auto;
+  overflow: hidden;
 }
 
 .blog-zig-zag img {
@@ -466,6 +472,13 @@ nav ul ul li {
 @media (max-width: 992px) {
   .top-border #block-social {
     display: none;
+  }
+  .top-border nav a:not(:first-child) {
+    display: none;
+  }
+  .top-border nav a.icon {
+    float: right;
+    display: block;
   }
 }
 

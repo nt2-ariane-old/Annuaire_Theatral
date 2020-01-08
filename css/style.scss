@@ -174,12 +174,19 @@
     
     .top-border {
         position: sticky;
+        nav {
+            .icon {
+                display: none;
+            }
+        }
     }
     
     .bottom-border,
     .top-border {
         display: block;
         max-width: 980px;
+        margin: auto;
+        overflow: hidden;
     }
     
     .blog-zig-zag {
@@ -446,6 +453,28 @@
         .top-border {
             #block-social {
                 display: none;
+            }
+            nav {
+                li:not(:first-child) {
+                    display: none;
+                }
+                li.icon {
+                    float: right;
+                    display: block;
+                }
+            }
+            nav.responsive {
+                position: relative;
+            }
+            nav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            nav.responsive li {
+                float: none;
+                display: block;
+                text-align: left;
             }
         }
     }

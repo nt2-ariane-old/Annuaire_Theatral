@@ -1,14 +1,16 @@
 <div data-ix="blog-hover-zoom-photo" class="w-clearfix space-mobile">
-    <div class="blog-zig-zag up-left">
-        <div class="blog-content">
-            <h3 class="blog-title"><a class="blog-title animsition-link" href="{{ fields.view_node.content|render|striptags|trim }}">{{ fields.title.content }}</a></h3>
-            <p class="meta-tag">{{ fields.field_editor.content }}</p>
-            
-        </div>
-    </div>
-    <div class="blog-zig-zag">
-        <a href="{{ fields.view_node.content|render|striptags|trim }}" class="w-inline-block blog-link animsition-link">
-            {{ fields.field_image.content }}
-        </a>
-    </div>
+	<div class="blog-zig-zag up-left">
+		<div class="blog-content">
+			<h3 class="blog-title">
+				<a class="blog-title animsition-link" href="{{ fields.view_node.content|render|striptags|trim }}">{{ fields.title.content }}</a>
+			</h3>
+			<p class="meta-tag">{{ fields.field_editor.content }}</p>
+
+		</div>
+	</div>
+	<div class="blog-zig-zag">
+		<a href="{{ fields.view_node.content|render|striptags|trim }}" class="w-inlin§e-block blog-link animsition-link">
+			{{ fields.field_image.content }}
+		</a>
+	</div>
 </div>

@@ -38,3 +38,12 @@ function isEven(n) {
 function isOdd(n) {
     return Math.abs(n % 2) == 1;
 }
+
+function showMenu() {
+    var nav = document.querySelector('.top-border nav');
+    if (nav.getAttribute('class') !== "responsive") {
+        nav.setAttribute('class', 'responsive');
+    } else {
+        nav.setAttribute('class', '')
+    }
+}
