@@ -381,25 +381,6 @@
         }
     }
     
-    .views-row {
-        &:nth-child(even) {
-            .blog-zig-zag {
-                float: right;
-            }
-            .blog-zig-zag.up-left {
-                float: left;
-            }
-        }
-        &:nth-child(odd) {
-            .blog-zig-zag {
-                float: left;
-            }
-            .blog-zig-zag.up-left {
-                float: right;
-            }
-        }
-    }
-    
     .field--name-field-dossier-vivarium {
         .field__item {
             a {
