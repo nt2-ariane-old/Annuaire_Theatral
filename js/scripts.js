@@ -5,7 +5,6 @@ window.onload = function() {
         rowContent = row.querySelectorAll('.blog-zig-zag');
         if (rowContent.length > 0) {
             if (this.isEven(i)) {
-                row.style.border = '5px solid red';
                 j = 0;
                 rowContent.forEach(element => {
                     if (this.isEven(j)) {
@@ -13,11 +12,9 @@ window.onload = function() {
                     } else {
                         element.style.float = 'right';
                     }
-                    console.log('j=' + j)
                     j += 1;
                 });
             } else {
-                row.style.border = '5px solid blue';
                 j = 0;
                 rowContent.forEach(element => {
                     if (this.isEven(j)) {
@@ -25,11 +22,9 @@ window.onload = function() {
                     } else {
                         element.style.float = 'left';
                     }
-                    console.log('j=' + j)
                     j += 1;
                 });
             }
-            console.log('i=' + i)
             i += 1;
 
         }
