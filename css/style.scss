@@ -469,11 +469,6 @@
         }
     }
     
-    .top-border .w-col-1 {
-        width: 8.33333333%;
-        min-width: 60px;
-    }
-    
     @media only screen and (max-width: 650px) {
         .top-border {
             .w-col-9 {
@@ -494,8 +489,11 @@
             #block-social {
                 display: none;
             }
+            .w-col-1 {
+                width: 60px;
+            }
             .w-col-9 {
-                width: calc(100% - 8.33333333%);
+                width: calc(100% - 60px);
             }
         }
     }
