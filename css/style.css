@@ -499,7 +499,7 @@ nav ul ul li {
     display: none;
   }
   .top-border .w-col-8 {
-    width: calc(100% - 16.66666667%);
+    width: calc(100% - 8.33333333%);
   }
 }
 
