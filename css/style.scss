@@ -440,19 +440,7 @@
         .bottom-border {
             display: none;
         }
-    }
-    
-    @media only screen and (min-width: 650px) {
-        .item.blog-item {
-            width: 50%;
-        }
-    }
-    
-    @media (max-width: 992px) {
         .top-border {
-            #block-social {
-                display: none;
-            }
             nav {
                 .top-nav {
                     background-color: red;
@@ -477,6 +465,23 @@
                     display: block;
                     text-align: left;
                 }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 650px) {
+        .item.blog-item {
+            width: 50%;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .top-border {
+            #block-social {
+                display: none;
+            }
+            .w-col-8 {
+                width: calc(100% - 16.66666667%);
             }
         }
     }

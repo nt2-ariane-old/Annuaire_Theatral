@@ -460,18 +460,6 @@ nav ul ul li {
   .bottom-border {
     display: none;
   }
-}
-
-@media only screen and (min-width: 650px) {
-  .item.blog-item {
-    width: 50%;
-  }
-}
-
-@media (max-width: 992px) {
-  .top-border #block-social {
-    display: none;
-  }
   .top-border nav .top-nav {
     background-color: red;
   }
@@ -494,6 +482,21 @@ nav ul ul li {
     float: none;
     display: block;
     text-align: left;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .item.blog-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .top-border #block-social {
+    display: none;
+  }
+  .top-border .w-col-8 {
+    width: calc(100% - 16.66666667%);
   }
 }
 
