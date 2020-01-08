@@ -135,6 +135,17 @@ h2 {
   text-decoration: none;
 }
 
+#block-cartbutton {
+  position: relative;
+  display: inline-block;
+  height: 45px;
+  max-height: 45px;
+  margin-right: 30px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
 footer {
   background-color: #e0e0e0;
 }
@@ -195,7 +206,11 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   position: sticky;
 }
 
-.top-border .top-nav .icon {
+.top-border nav {
+  display: inline-block;
+}
+
+.top-border nav .top-nav .icon {
   display: none;
 }
 
