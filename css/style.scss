@@ -131,6 +131,12 @@
         line-height: 36px;
     }
     
+    .flex-center-child>div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
     nav#block-social {
         display: inline-block;
         line-height: 36px;
