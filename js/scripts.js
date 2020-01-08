@@ -40,6 +40,7 @@ function isOdd(n) {
 }
 
 function showMenu() {
+    console.log('test');
     var nav = document.querySelector('.top-border');
     if (nav.getAttribute('class') !== "responsive") {
         nav.setAttribute('class', 'responsive');
