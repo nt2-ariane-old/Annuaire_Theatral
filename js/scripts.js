@@ -39,7 +39,7 @@ function isOdd(n) {
     return Math.abs(n % 2) == 1;
 }
 
-function showMenu() {
+function showHamburgerMenu() {
     console.log('test');
     var nav = document.querySelector('.top-border');
     if (nav.getAttribute('class') !== "responsive") {
