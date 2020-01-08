@@ -136,7 +136,7 @@ h2 {
 }
 
 footer {
-  background-color: #cfcdcd;
+  background-color: #e0e0e0;
 }
 
 footer #block-views-block-partenaires-block-1,
@@ -223,6 +223,11 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
 .section-imp {
   padding: 40px 20px;
   background-color: transparent;
+}
+
+main {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 main h1 {
