@@ -185,13 +185,18 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   max-height: 100%;
 }
 
-.top-border {
+.views-row .top-border {
   position: -webkit-sticky;
   position: sticky;
 }
 
-.top-border .top-nav .icon {
+.views-row .top-border .top-nav .icon {
   display: none;
+}
+
+#dossiers .views-row,
+.filter .views-row {
+  padding: 1em;
 }
 
 .bottom-border,

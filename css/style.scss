@@ -171,12 +171,19 @@
         }
     }
     
-    .top-border {
+    .views-row .top-border {
         position: sticky;
         .top-nav {
             .icon {
                 display: none;
             }
+        }
+    }
+    
+    #dossiers,
+    .filter {
+        .views-row {
+            padding: 1em;
         }
     }
     
