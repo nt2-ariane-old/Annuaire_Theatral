@@ -41,7 +41,7 @@ function isOdd(n) {
 
 function showHamburgerMenu() {
     console.log('test');
-    var nav = document.querySelector('.top-border');
+    var nav = document.querySelector('.top-nav');
     if (nav.getAttribute('class') !== "responsive") {
         nav.setAttribute('class', 'responsive');
     } else {
