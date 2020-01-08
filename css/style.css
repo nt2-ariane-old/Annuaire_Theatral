@@ -473,6 +473,9 @@ nav ul ul li {
   .top-border #block-social {
     display: none;
   }
+  .top-border nav .topnav {
+    background-color: red;
+  }
   .top-border nav .topnav li:not(:first-child) {
     display: none;
   }

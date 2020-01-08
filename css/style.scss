@@ -456,6 +456,7 @@
             }
             nav {
                 .topnav {
+                    background-color: red;
                     li:not(:first-child) {
                         display: none;
                     }
