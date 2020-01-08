@@ -141,10 +141,12 @@ h2 {
   height: 36px;
   font-size: 14px;
   letter-spacing: 1px;
+  line-height: 36px;
 }
 
 nav#block-social {
   display: inline-block;
+  line-height: 36px;
 }
 
 footer {
