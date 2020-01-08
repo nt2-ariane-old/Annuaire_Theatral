@@ -183,7 +183,7 @@
     .bottom-border,
     .top-border {
         display: block;
-        max-width: 980px;
+        max-width: 992px;
         margin: auto;
         overflow: hidden;
     }
@@ -448,7 +448,7 @@
         }
     }
     
-    @media (max-width: 860px) {
+    @media (max-width: 992px) {
         .top-border {
             #block-social {
                 display: none;
