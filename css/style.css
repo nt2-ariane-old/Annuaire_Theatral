@@ -185,12 +185,12 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   max-height: 100%;
 }
 
-.views-row .top-border {
+.top-border {
   position: -webkit-sticky;
   position: sticky;
 }
 
-.views-row .top-border .top-nav .icon {
+.top-border .top-nav .icon {
   display: none;
 }
 

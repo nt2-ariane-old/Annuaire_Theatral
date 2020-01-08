@@ -43,7 +43,7 @@ function showHamburgerMenu() {
     console.log('test');
     var nav = document.querySelector('.top-nav');
     if (nav.getAttribute('class') !== "responsive") {
-        nav.setAttribute('class', 'responsive');
+        nav.setAttribute('class', 'top-nav responsive');
     } else {
         nav.setAttribute('class', 'top-nav')
     }
