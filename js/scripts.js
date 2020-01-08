@@ -21,9 +21,9 @@ window.onload = function() {
                 j = 0;
                 rowContent.forEach(element => {
                     if (this.isEven(j)) {
-                        element.style.float = 'left';
-                    } else {
                         element.style.float = 'right';
+                    } else {
+                        element.style.float = 'left';
                     }
                     console.log('j=' + j)
                     j += 1;
