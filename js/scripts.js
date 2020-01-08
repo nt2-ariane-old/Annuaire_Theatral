@@ -44,6 +44,6 @@ function showMenu() {
     if (nav.getAttribute('class') !== "responsive") {
         nav.setAttribute('class', 'responsive');
     } else {
-        nav.setAttribute('class', '')
+        nav.setAttribute('class', 'top-nav')
     }
 }
