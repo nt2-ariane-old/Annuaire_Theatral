@@ -106,7 +106,7 @@ h2 {
 
 .searchbar:hover > .search_input {
   padding: 0 10px;
-  width: 200px;
+  width: 150px;
   caret-color: red;
   -webkit-transition: width 0.4s linear;
   transition: width 0.4s linear;
