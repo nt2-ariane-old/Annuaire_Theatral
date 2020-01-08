@@ -4,8 +4,9 @@ a:hover {
 }
 
 body {
-  max-width: 980px;
+  max-width: 992px;
   margin: auto;
+  padding: 0;
 }
 
 a {
@@ -132,6 +133,10 @@ h2 {
   border-radius: 50%;
   color: white;
   text-decoration: none;
+}
+
+footer {
+  background-color: #cfcdcd;
 }
 
 footer #block-views-block-partenaires-block-1,
