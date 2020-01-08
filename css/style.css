@@ -498,7 +498,7 @@ nav ul ul li {
   .top-border #block-social {
     display: none;
   }
-  .top-border .w-col-8 {
+  .top-border .w-col-9 {
     width: calc(100% - 8.33333333%);
   }
 }
