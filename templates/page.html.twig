@@ -72,7 +72,12 @@
 
 {% if page.copyright %}
   <div class="bottom-border">
-    <div class="w-row">
+    <div class="w-row">  
+      <div class="w-col w-col-6">
+        <div class="w-hidden-medium w-hidden-small w-hidden-tiny title-top-border">
+          {{page.copyright}}
+        </div>
+      </div>
       {% if page.nav_social %}
         <div class="w-col w-col-6">
           <div class="align-left flex-center-child">
@@ -80,11 +85,6 @@
           </div>
         </div>
       {% endif %}
-      <div class="w-col w-col-6">
-        <div class="w-hidden-medium w-hidden-small w-hidden-tiny title-top-border">
-          {{page.copyright}}
-        </div>
-      </div>
     </div>
   </div>
 {% endif %}
