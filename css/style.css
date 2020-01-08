@@ -138,11 +138,12 @@ h2 {
 #block-cartbutton {
   position: relative;
   display: inline-block;
-  height: 45px;
-  max-height: 45px;
-  margin-right: 30px;
-  font-size: 13px;
+  height: 36px;
+  font-size: 14px;
   letter-spacing: 1px;
+}
+
+nav#block-social {
   display: inline-block;
 }
 
