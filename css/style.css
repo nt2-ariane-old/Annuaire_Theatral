@@ -512,7 +512,7 @@ nav ul ul li {
 
 .container,
 .row,
-.w-col-12 {
+.col-sm-12 {
   padding: 0;
   margin: auto;
 }
