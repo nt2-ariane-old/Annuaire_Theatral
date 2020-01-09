@@ -49,9 +49,7 @@
   {{ attachment_before }}
 
   {% if rows -%}
-    {{id}}
-    {{ rows }}
-
+        {{ rows }}
   {% elseif empty -%}
     {{ empty }}
   {% endif %}

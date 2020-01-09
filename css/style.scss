@@ -487,6 +487,11 @@
         margin: auto;
     }
     
+    //pages
+    #sommaire {
+        min-height: calc(100vh - 120px);
+    }
+    
     @media (max-width: 650px) {
         .bottom-border {
             display: none;
