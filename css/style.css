@@ -510,6 +510,20 @@ nav ul ul li {
   bottom: 0;
 }
 
+.container {
+  padding: 0;
+}
+
+.row {
+  padding: 0;
+  margin: 0;
+}
+
+.w-col-12 {
+  padding: 0;
+  margin: 0;
+}
+
 @media (max-width: 650px) {
   .bottom-border {
     display: none;
@@ -543,6 +557,10 @@ nav ul ul li {
   .top-border .w-col-9 {
     width: calc(100% - 60px);
   }
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media only screen and (min-width: 650px) {
@@ -564,11 +582,17 @@ nav ul ul li {
   .top-border .w-col-9 {
     width: calc(100% - 60px);
   }
+  .container {
+    max-width: 95%;
+  }
 }
 
 @media only screen and (min-width: 992px) {
   .item.blog-item {
     width: 33%;
+  }
+  .container {
+    max-width: 992px;
   }
 }
 /*# sourceMappingURL=style.css.map */
