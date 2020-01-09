@@ -18,6 +18,10 @@ a:hover {
   opacity: 0.7;
 }
 
+.window-size {
+  height: calc(100vh - 120px);
+}
+
 .data-blog {
   overflow: hidden;
   padding: 0;
