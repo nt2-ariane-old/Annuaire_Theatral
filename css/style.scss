@@ -7,6 +7,7 @@
         max-width: 992px;
         margin: auto;
         padding: 0;
+        background-color: white;
     }
     
     a {
@@ -202,6 +203,10 @@
         }
     }
     
+    #block-copyright {
+        color: black;
+    }
+    
     .top-border {
         position: sticky;
         nav {
@@ -226,6 +231,9 @@
         display: block;
         max-width: 992px;
         margin: auto;
+        color: black;
+        background-color: #e8e8e8;
+        border-radius: 5px;
     }
     
     .blog-zig-zag {

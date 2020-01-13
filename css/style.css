@@ -7,6 +7,7 @@ body {
   max-width: 992px;
   margin: auto;
   padding: 0;
+  background-color: white;
 }
 
 a {
@@ -225,6 +226,10 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   max-height: 100%;
 }
 
+#block-copyright {
+  color: black;
+}
+
 .top-border {
   position: -webkit-sticky;
   position: sticky;
@@ -248,6 +253,9 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   display: block;
   max-width: 992px;
   margin: auto;
+  color: black;
+  background-color: #e8e8e8;
+  border-radius: 5px;
 }
 
 .blog-zig-zag img {
