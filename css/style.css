@@ -226,6 +226,11 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   max-height: 100%;
 }
 
+.informations {
+  min-height: calc(100vh - 120px);
+  padding: 1em;
+}
+
 #block-copyright {
   color: black;
 }

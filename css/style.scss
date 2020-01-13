@@ -203,6 +203,11 @@
         }
     }
     
+    .informations {
+        min-height: calc(100vh - 120px);
+        padding: 1em;
+    }
+    
     #block-copyright {
         color: black;
     }
