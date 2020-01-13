@@ -49,6 +49,9 @@
 						</a>
 						<div data-ix="line-menu-type" class="line-bottom-menu"></div>
 						{% if item.below %}
+							{{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+						{% endif %}
+						{# {% if item.below %}
 							<ul class="sub-item">
 
 								{% for child in item.below %}
@@ -61,7 +64,7 @@
 								{% endfor %}
 
 							</ul>
-						{% endif %}
+						{% endif %} #}
 					</li>
 				{% endfor %}
 				<li class="li-menu-type-2 no-bottom-margin">
