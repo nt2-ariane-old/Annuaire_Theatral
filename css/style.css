@@ -378,6 +378,11 @@ nav ul ul li {
   position: relative;
 }
 
+.sub-item {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+}
+
 #intro {
   position: relative;
   width: 100%;
