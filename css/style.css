@@ -227,7 +227,7 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
 }
 
 .informations {
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px - 64px);
   padding: 1em;
 }
 
