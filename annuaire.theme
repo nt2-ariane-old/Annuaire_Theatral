@@ -501,11 +501,3 @@ function annuaire_theme_suggestions_yamlform_alter(array &$suggestions, array $v
         $suggestions[] = 'yamlform__reque_form';
     }
 }
-
-function annuaire_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-	if ($form_id == 'search_block_form') {
-	  $form['#attributes']['class'][] = 'searchbar';
-	  $form['keys']['#attributes']['placeholder'] = t('Rechercher...');
-	  $form['actions']['submit']['#attributes']['class'][] = '"search_icon-submit fa';
-	}
-}
