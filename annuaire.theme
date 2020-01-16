@@ -501,3 +501,10 @@ function lano_theme_suggestions_yamlform_alter(array &$suggestions, array $varia
         $suggestions[] = 'yamlform__reque_form';
     }
 }
+
+function hook_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+	if ($form_id == 'search_block_form') {
+	  $form['#attributes']['class'][] = 'searchbar';
+	  $form['keys']['#attributes']['placeholder'] = t('Rechercher...');
+	  $form['actions']['submit']['#attributes']['class'][] = 'search_icon';
+	}

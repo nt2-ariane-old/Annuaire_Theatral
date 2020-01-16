@@ -27,29 +27,13 @@
  * @ingroup themeable
  */
 #}
-<div{{attributes}}>
-	{{ title_prefix }}
-	{% if label %}
-		<h2{{title_attributes}}>{{ label }}</h2>
-	{% endif %}
-	{{ title_suffix }}
-	{% block content %}
-		<li class="li-menu-type-2 no-bottom-margin">
-			<div>
-				{% for key in content|keys %}
-					{{ key }}
-				{% endfor %}
-                <br>============<br>
-                {% for item in content.actions.parents %}
-					{{ item }}
-				{% endfor %}
-{{ content.content_attributes }} 
-				<form class="searchbar" action="">
-					<input class="search_input" type="search" name="" placeholder="Rechercher...">
-					<button class="search_icon" type="submit"><i class="fa fa-search"></i></button>
-				</form>				
-				:)
-			</div>
-		</li>
-	{% endblock %}
-</div>
+<div class="infoBar-search">
+  {{ title_prefix }}
+  {% if label %}
+    {{ label }}
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+ </div>
