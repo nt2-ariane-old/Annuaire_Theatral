@@ -318,6 +318,11 @@ main h1 {
   display: table;
 }
 
+.sidebar-class {
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
 .lectures .lecture-content {
   width: 25%;
   display: -webkit-box;
