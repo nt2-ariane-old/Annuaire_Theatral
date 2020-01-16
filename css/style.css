@@ -312,6 +312,12 @@ main h1 {
   border: 1px solid black;
 }
 
+.tags::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .lectures .lecture-content {
   width: 25%;
   display: -webkit-box;

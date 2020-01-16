@@ -293,6 +293,14 @@
         border: 1px solid black;
     }
     
+    .tags {
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    }
+    
     .lectures {
         .lecture-content {
             width: 25%;
