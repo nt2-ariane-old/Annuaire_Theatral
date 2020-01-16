@@ -412,6 +412,10 @@ nav ul ul li {
   padding: 1rem;
 }
 
+.doc {
+  padding: 1rem 0;
+}
+
 #intro {
   position: relative;
   width: 100%;

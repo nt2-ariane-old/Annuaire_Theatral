@@ -73,7 +73,7 @@
  */
 #}
 <article{{ attributes }}>
-  {{title}}
+  {{node.label}}
   <div{{ content_attributes }}>
     <div>{{ content.field_nouvelle_date }}</div>
     <div>{{ content.field_lieu }}</div>
@@ -83,7 +83,7 @@
     </p>
     
     
-    <div>
+    <div class="doc">
       {{ content.field_doc }}
     </div>
   </div>
