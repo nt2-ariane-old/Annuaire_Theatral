@@ -36,9 +36,10 @@
 	{% block content %}
 		<li class="li-menu-type-2 no-bottom-margin">
 			<div>
-				{% for key in |keys %}
+				{% for key in content.actions|keys %}
 					{{ key }}
 				{% endfor %}
+                <br>============<br>
 				{% for key in content.required|keys %}
 					{{ key }}
 				{% endfor %}
