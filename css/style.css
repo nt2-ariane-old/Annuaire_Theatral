@@ -532,7 +532,7 @@ nav ul ul li {
   margin: auto;
   text-align: center;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .blog-post-banner .sub-text-title > div {
@@ -551,6 +551,7 @@ nav ul ul li {
 
 .blog-post-banner .sub-text-title > div a {
   color: white;
+  font-size: 1.5rem;
 }
 
 .container,

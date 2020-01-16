@@ -502,7 +502,7 @@
             margin: auto;
             text-align: center;
             color: white;
-            font-size: 2rem;
+            font-size: 1.5rem;
             &>div {
                 display: inline;
                 color: inherit;
@@ -515,6 +515,7 @@
                 }
                 a {
                     color: white;
+                    font-size: 1.5rem;
                 }
             }
         }
