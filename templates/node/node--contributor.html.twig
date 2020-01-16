@@ -73,6 +73,11 @@
  */
 #}
 <article{{attributes}}>
+	{% if view_mode == 'teaser'  %}
+		<b>{{ node.label }}</b>
+		<p>{{ content.body }}</p>
+		
+	{% else %}
 	<h1> {{ node.label }}</h1>
 	<section class="w-section section-imp more-padding">
 		<div class="w-container">
@@ -98,4 +103,6 @@
 			</div>
 		</div>
 	</section>
+	{% endif %}
+	
 </article>
