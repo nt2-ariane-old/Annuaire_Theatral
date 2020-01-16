@@ -1,5 +1,5 @@
 <?php
-function lano_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+function annuaire_theme_suggestions_page_alter(array &$suggestions, array $variables) {
 	if ($node = \Drupal::routeMatch()->getParameter('node')) {
 		$suggestions[] = 'page__node__' . $node->getType();
 	}
@@ -15,7 +15,7 @@ function lano_theme_suggestions_page_alter(array &$suggestions, array $variables
 		$suggestions[] = 'page__taxanomy__' . $vname;
 	}
 }
-function lano_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+function annuaire_theme_suggestions_node_alter(array &$suggestions, array $variables) {
 	if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
 	  	$term_id = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
 	  	$term = taxonomy_term_load($term_id);
@@ -24,7 +24,7 @@ function lano_theme_suggestions_node_alter(array &$suggestions, array $variables
 		$suggestions[] = 'node__taxanomy__' . $vname;
 	}
 }
-function lano_theme_suggestions_html_alter(array &$suggestions, array $variables) {
+function annuaire_theme_suggestions_html_alter(array &$suggestions, array $variables) {
 	if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
 	  	$term_id = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
 	  	$term = taxonomy_term_load($term_id);
@@ -39,7 +39,7 @@ function lano_theme_suggestions_html_alter(array &$suggestions, array $variables
 	}
 }
 
-function lano_preprocess_block(&$variables) {
+function annuaire_preprocess_block(&$variables) {
 	$theme = \Drupal::theme()->getActiveTheme()->getName();
 	$variables['pathtotheme']= base_path().drupal_get_path('theme', $theme);
 	//get region in block.html.twig
@@ -76,7 +76,7 @@ function lano_preprocess_block(&$variables) {
 	}
   	$variables['data_widget_latlng']= theme_get_setting('data_widget_latlng', $theme);
 }
-function lano_preprocess_node(&$variables) {
+function annuaire_preprocess_node(&$variables) {
 	if ($node = \Drupal::request()->attributes->get('node')) {
 		$node_id = $node->id();
 	}else{
@@ -184,7 +184,7 @@ function lano_preprocess_node(&$variables) {
 		$variables['node_stats'] = \Drupal::translation()->formatPlural($statistics['totalcount'], '1 view', '@count views');
    }
 }
-function lano_preprocess_field(&$variables){
+function annuaire_preprocess_field(&$variables){
 	if ($node = \Drupal::routeMatch()->getParameter('node')) {
 		$ntype = $node->getType();
 		$variables['ntype'] = $ntype;
@@ -192,7 +192,7 @@ function lano_preprocess_field(&$variables){
 		$variables['ntype'] = '';
 	}
 }
-function lano_preprocess_html(&$variables){
+function annuaire_preprocess_html(&$variables){
   	$theme = \Drupal::theme()->getActiveTheme()->getName();
 	$path = \Drupal::service('path.current')->getPath();
 	$path_args = explode('/', $path);
@@ -257,62 +257,62 @@ function lano_preprocess_html(&$variables){
   	if((\Drupal::service('path.matcher')->isFrontPage()) == '1' && (isset($_GET['theme'])) && (($_GET['theme'] == 'dark') || ($_GET['theme'] == 'light')) ){
   		if($_GET['theme'] == 'dark'){
 			$variables['class_theme'] = 'dark-theme';
-			$variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+			$variables ['#attached']['library'][]  =  'annuaire/annuaire-dark' ;
   		}else{
-			$variables ['#attached']['library'][]  =  'lano/lano-light' ;
+			$variables ['#attached']['library'][]  =  'annuaire/annuaire-light' ;
 			$variables['class_theme'] = 'light-theme';
   		}
 	}elseif (theme_get_setting('themes_settings', $theme) == 'dark') {
 		if((\Drupal::service('path.matcher')->isFrontPage()) == '1'){
 			$variables['class_theme'] = 'dark-theme';
-			$variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+			$variables ['#attached']['library'][]  =  'annuaire/annuaire-dark' ;
 		}elseif ($ntype == 'blog_post'){
 			$variables['class_theme'] = 'dark-theme';
-			$variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+			$variables ['#attached']['library'][]  =  'annuaire/annuaire-dark' ;
 		}elseif ($current_path1 == 'blog') {
 			if ($blog_style == 'grid' or $blog_style == 'minimal' or $blog_style == 'zig-zag') {
 				$variables['class_theme'] = 'dark-theme';
-				$variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+				$variables ['#attached']['library'][]  =  'annuaire/annuaire-dark' ;
 			}else{
-				$variables ['#attached']['library'][]  =  'lano/lano-light' ;
+				$variables ['#attached']['library'][]  =  'annuaire/annuaire-light' ;
 				$variables['class_theme'] = 'light-theme';
 			}
 		}elseif ($vname == 'blog_categories' or $vname == 'tags') {
 			if ($blog_style == 'grid' or $blog_style == 'minimal' or $blog_style == 'zig-zag') {
 				$variables['class_theme'] = 'dark-theme';
-				$variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+				$variables ['#attached']['library'][]  =  'annuaire/annuaire-dark' ;
 			}else{
-				$variables ['#attached']['library'][]  =  'lano/lano-light' ;
+				$variables ['#attached']['library'][]  =  'annuaire/annuaire-light' ;
 				$variables['class_theme'] = 'light-theme';
 			}
 		}elseif ($vname == 'portfolio_categories') {
-			$variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+			$variables ['#attached']['library'][]  =  'annuaire/annuaire-dark' ;
 			$variables['class_theme'] = 'dark-theme';
 		}elseif ($ntype == 'portfolio') {
-			$variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+			$variables ['#attached']['library'][]  =  'annuaire/annuaire-dark' ;
 			$variables['class_theme'] = 'dark-theme';
 		}elseif ($current_path1 == 'portfolio-classic-grid' or $current_path1 == 'portfolio-hover-effects' or $current_path1 == 'portfolio-masonry' or $current_path1 == 'portfolio-not-spaced' or $current_path1 == 'portfolio-with-lightbox') {
 			$variables['class_theme'] = 'dark-theme';
-			$variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+			$variables ['#attached']['library'][]  =  'annuaire/annuaire-dark' ;
 		}elseif($current_path1 == 'yamlform' and $current_path2 == 'contact'){
 			$variables['class_theme'] = 'dark-theme';
-			$variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+			$variables ['#attached']['library'][]  =  'annuaire/annuaire-dark' ;
 		}elseif($node_id == 50 ){
 			$variables['class_theme'] = 'dark-theme';
-			$variables ['#attached']['library'][]  =  'lano/lano-dark' ;
+			$variables ['#attached']['library'][]  =  'annuaire/annuaire-dark' ;
 
 
 
 		}else{
-			$variables ['#attached']['library'][]  =  'lano/lano-light' ;
+			$variables ['#attached']['library'][]  =  'annuaire/annuaire-light' ;
 			$variables['class_theme'] = 'light-theme';
 		}
 	}else{
-		$variables ['#attached']['library'][]  =  'lano/lano-light' ;
+		$variables ['#attached']['library'][]  =  'annuaire/annuaire-light' ;
 		$variables['class_theme'] = 'light-theme';
 	}
 }
-function lano_preprocess_page(&$variables) {
+function annuaire_preprocess_page(&$variables) {
 	global $base_url;
 	$theme = \Drupal::theme()->getActiveTheme()->getName();
 	$variables['site_name'] = \Drupal::config('system.site')->get('name');
@@ -374,7 +374,7 @@ function lano_preprocess_page(&$variables) {
 	// print $current_path2;
 
 }
-function lano_js_alter(&$js) {
+function annuaire_js_alter(&$js) {
 	$vname = '';
 	if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
 	  	$term_id = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
@@ -386,11 +386,11 @@ function lano_js_alter(&$js) {
 	$find_match = \Drupal::routeMatch()->getRouteName();
 
 }
-function lano_preprocess_container(&$variables){
+function annuaire_preprocess_container(&$variables){
 	$variables['container_type'] = $variables['element']['#type'];
 }
 
-function lano_breadcrumb(&$variables) {
+function annuaire_breadcrumb(&$variables) {
 	$request = \Drupal::request();
 	if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
 		$current_title = \Drupal::service('title_resolver')->getTitle($request, $route);
@@ -409,7 +409,7 @@ function lano_breadcrumb(&$variables) {
   	}
 	return $output;
 }
-function lano_preprocess(&$variables){
+function annuaire_preprocess(&$variables){
 	$theme = \Drupal::theme()->getActiveTheme()->getName();
 	$variables['theme_path'] = drupal_get_path('theme', $theme);
   	$variables['path_to_theme']= base_path().drupal_get_path('theme', $theme);
@@ -423,7 +423,7 @@ function lano_preprocess(&$variables){
   		$variables['blog_style'] = 'grid';
   	}
 }
-function lano_form_comment_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+function annuaire_form_comment_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
 	// $form['subject']['widget'][0]['value']['#attributes']['class'] = array('form-control');
 	// $form['field_email']['widget'][0]['value']['#attributes']['class'] = array('');
 	// $form['field_comment']['widget'][0]['value']['#attributes']['class'] = array('');
@@ -440,7 +440,7 @@ function lano_form_comment_form_alter(&$form, \Drupal\Core\Form\FormStateInterfa
 	$form['actions']['submit']['#attributes']['value'] = t('Send Comment');
 	$form['#attributes']['class'] = array('comment-blog-form','comments-form','col-lg-12');
 }
-function lano_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function annuaire_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 	if($form_id == 'yamlform_submission_contact_form'){
 		$form['#attributes']['class'] = array('form-contact-yaml');
 		$form['actions']['submit']['#attributes']['value'] = t('Submit Message');
@@ -470,13 +470,13 @@ function lano_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_stat
 	   	$form['keys']['#size'] = 30;
 	}
 }
-function lano_contact_message_feedback_form_form_alter(&$form_id){
+function annuaire_contact_message_feedback_form_form_alter(&$form_id){
 	unset($form['actions']['preview']);
 	$form['actions']['submit']['#attributes']['value'] = t('Send');
 }
 
 
-function lano_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+function annuaire_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
 	$form['#attributes']['class'] = array('form','contact-page');
 	$form['subject']['widget'][0]['value']['#attributes']['class'] = array('form-control');
 	unset($form['subject']['widget'][0]['value']['#title']);
@@ -496,7 +496,7 @@ function lano_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\Form
 	unset($form['actions']['preview']);
 	unset($form['form-item-copy']);
 }
-function lano_theme_suggestions_yamlform_alter(array &$suggestions, array $variables) {
+function annuaire_theme_suggestions_yamlform_alter(array &$suggestions, array $variables) {
     if ($variables['element']['#form_id'] == 'yamlform_submission_request_a_quote_form') {
         $suggestions[] = 'yamlform__reque_form';
     }
