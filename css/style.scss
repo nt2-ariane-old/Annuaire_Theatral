@@ -305,6 +305,9 @@
                 display: inline-block;
                 margin: auto;
             }
+            span {
+                padding: 0 0.5rem;
+            }
         }
         &::after {
             content: "";
@@ -326,7 +329,6 @@
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-        border: 1px solid black;
     }
     
     //POUR ISSUE

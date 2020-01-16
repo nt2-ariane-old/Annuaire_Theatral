@@ -332,6 +332,10 @@ main h1 {
   margin: auto;
 }
 
+.lectures .lecture-content span {
+  padding: 0 0.5rem;
+}
+
 .lectures::after {
   content: "";
   clear: both;
@@ -351,7 +355,6 @@ main h1 {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  border: 1px solid black;
 }
 
 #editorial,
