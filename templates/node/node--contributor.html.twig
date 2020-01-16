@@ -73,6 +73,8 @@
  */
 #}
 <article{{attributes}}>
+
+	{{ view_mode }}
 	{% if view_mode == 'teaser'  %}
 		<b>{{ node.label }}</b>
 		<p>{{ content.body }}</p>
