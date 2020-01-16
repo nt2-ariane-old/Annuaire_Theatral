@@ -354,6 +354,13 @@ main h1 {
 
 .lectures .lecture-content {
   width: 25%;
+  float: left;
+}
+
+.lectures::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .js .paragraphs-collapsed-description {

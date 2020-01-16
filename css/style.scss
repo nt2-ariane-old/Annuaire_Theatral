@@ -336,6 +336,12 @@
     .lectures {
         .lecture-content {
             width: 25%;
+            float: left;
+        }
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
         }
     }
     
