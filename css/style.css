@@ -413,6 +413,11 @@ nav ul ul li {
   width: 100%;
 }
 
+#intro a {
+  font-size: 1.2rem;
+  color: white;
+}
+
 #intro .w-section a {
   font-size: inherit;
   color: white;
