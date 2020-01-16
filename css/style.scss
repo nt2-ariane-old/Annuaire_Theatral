@@ -498,7 +498,8 @@
     
     section.w-section.blog-post-banner {
         .sub-text-title {
-            display: inline-block;
+            display: block;
+            margin: auto;
             &>div {
                 display: inline-block;
                 color: white;

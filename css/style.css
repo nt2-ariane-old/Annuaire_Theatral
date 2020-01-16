@@ -528,7 +528,8 @@ nav ul ul li {
 }
 
 section.w-section.blog-post-banner .sub-text-title {
-  display: inline-block;
+  display: block;
+  margin: auto;
 }
 
 section.w-section.blog-post-banner .sub-text-title > div {
