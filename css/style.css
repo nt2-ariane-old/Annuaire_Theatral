@@ -558,6 +558,19 @@ nav ul ul li {
   content: "#";
 }
 
+#presentation {
+  padding: 1rem;
+}
+
+#citation {
+  padding: 1rem;
+}
+
+#citation .field--name-field-pour-citer {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 .container,
 .row,
 .col-sm-12 {
