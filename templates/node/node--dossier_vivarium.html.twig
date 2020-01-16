@@ -78,15 +78,18 @@
 			<h2 class="inner-title">{{ label }}</h2>
 			<div>
 
-				<span class="sub-text-title">Responsable
-					{{ content.field_responsable_dossier|raw }}</span>
-				<span class="sub-text-title">{{ content.field_num_pub|raw }}
+				<div class="sub-text-title">Responsable
+					{{ content.field_responsable_dossier|raw }}
+				</div>
+				<div class="sub-text-title">
+					{{ content.field_num_pub|raw }}
 					,
-					{{ content.field_date_pub|raw }}</span>
+					{{ content.field_date_pub|raw }}
+				</div>
 
-                {% for key in content.field_date_pub|keys %}
-                    {{ key }}
-                {% endfor %}
+				{% for key in content.field_date_pub|keys %}
+					{{ key }}
+				{% endfor %}
 				<div class="arrow-down">
 					<a href="#sommaire" class="w-inline-block icon-scroll"></a>
 				</div>
