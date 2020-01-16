@@ -401,6 +401,10 @@ main h1 {
   padding: 0;
 }
 
+.nav-link {
+  color: #495057;
+}
+
 #editorial,
 #dossiers,
 #individuel {
