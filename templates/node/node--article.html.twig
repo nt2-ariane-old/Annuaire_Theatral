@@ -73,6 +73,7 @@
  */
 #}
 <article{{attributes}}>
+
 	{% if view_mode == 'teaser'  %}
 			<div class="lecture-content" onclick="window.location='{{ url }}';">
 				<span>{{node.label}}</span>
@@ -81,6 +82,7 @@
 				</div>
 			</div>
 	{% else %}
+		<h1>{{ node.label }}</h1>
 		{{ title_prefix }}
 		{% if not page %}
 			<h2{{title_attributes}}>
