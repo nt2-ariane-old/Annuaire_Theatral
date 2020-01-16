@@ -318,6 +318,12 @@ main h1 {
   display: table;
 }
 
+.tags::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .sidebar-class {
   padding-top: 20px;
   margin-top: 20px;
