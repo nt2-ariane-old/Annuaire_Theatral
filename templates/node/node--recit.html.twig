@@ -91,6 +91,9 @@
                     <h2 class="inner-title">{{ label }}</h2>
                     <div class="sub-text-title">Artiste invité : {{ node.field_artiste_invite.0.label|raw}}</div>
                     <div class="sub-text-title">Interviewer : {{ node.field_interviewer.0.label|raw}}</div>
+                    {% for key in  node.field_interviewer|keys %}
+                    
+                    {% endfor %}
                 </div>
             </div>
         </div>
