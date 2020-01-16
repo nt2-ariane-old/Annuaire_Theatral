@@ -544,9 +544,12 @@
                 .field__item {
                     display: inline;
                     &::before {
-                        content: " : ";
+                        content: " ";
                         color: white;
                     }
+                }
+                .field__items {
+                    display: inline;
                 }
                 a {
                     color: white;
