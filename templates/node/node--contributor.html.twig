@@ -75,36 +75,41 @@
 <article{{attributes}}>
 
 	{% if view_mode == 'teaser'  %}
-	<a href='{{ url }}'>
-		<b>{{ node.label }}</b>
-		<p>{{ content.body.0|raw|striptags }}</p>
-	</a>
+		<a href='{{ url }}'>
+			<b>{{ node.label }}</b>
+			{% set conBody %}
+			{{ content.body }}
+			{% endset %}
+
+			<p>{{ conBody|striptags }}</p>
+		</a>
 	{% else %}
-	<h1> {{ node.label }}</h1>
-	<section class="w-section section-imp more-padding">
-		<div class="w-container">
-			<div class="w-row">
-				<div class="w-col w-col-12">
-					{{content.body}}
-					{{content.field_links}}
-					{{content.field_author_digital_identifier}}
-					{{content.field_bibliographic_reference}}
+		<h1>
+			{{ node.label }}</h1>
+		<section class="w-section section-imp more-padding">
+			<div class="w-container">
+				<div class="w-row">
+					<div class="w-col w-col-12">
+						{{content.body}}
+						{{content.field_links}}
+						{{content.field_author_digital_identifier}}
+						{{content.field_bibliographic_reference}}
+					</div>
+				</div>
+				<div>
+					{% if (content.contents_on_contributor_entity_view_1.value is empty or content.contents_on_contributor_entity_view_2.value is empty) %}
+						<div class="title-wrapper">
+							<h3>Contenu du contributeur</h3>
+							<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
+						</div>
+						<div>
+							{{ content.contents_on_contributor_entity_view_1 }}
+							{{ content.contents_on_contributor_entity_view_2 }}
+						</div>
+					{% endif %}
 				</div>
 			</div>
-			<div>
-				{% if (content.contents_on_contributor_entity_view_1.value is empty or content.contents_on_contributor_entity_view_2.value is empty) %}
-					<div class="title-wrapper">
-						<h3>Contenu du contributeur</h3>
-						<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
-					</div>
-					<div>
-						{{ content.contents_on_contributor_entity_view_1 }}
-						{{ content.contents_on_contributor_entity_view_2 }}
-					</div>
-				{% endif %}
-			</div>
-		</div>
-	</section>
+		</section>
 	{% endif %}
-	
+
 </article>
