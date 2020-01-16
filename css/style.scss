@@ -312,14 +312,6 @@
         margin-top: 20px;
     }
     
-    .lectures {
-        &::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-    }
-    
     .lecture-content {
         width: 25%;
         display: flex;
@@ -334,6 +326,11 @@
         span {
             padding: 0 0.5rem;
             display: inline-block;
+        }
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
         }
     }
     

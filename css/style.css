@@ -329,12 +329,6 @@ main h1 {
   margin-top: 20px;
 }
 
-.lectures::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 .lecture-content {
   width: 25%;
   display: -webkit-box;
@@ -358,6 +352,12 @@ main h1 {
 .lecture-content span {
   padding: 0 0.5rem;
   display: inline-block;
+}
+
+.lecture-content::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .js .paragraphs-collapsed-description {
