@@ -82,7 +82,7 @@
 				</div>
 			</div>
 	{% else %}
-		<h1>{{ node.label }}</h1>
+		
 		{{ title_prefix }}
 		{% if not page %}
 			<h2{{title_attributes}}>
@@ -105,7 +105,7 @@
 		{% endif %}
 
 		<div{{content_attributes}}>
-
+			<h1>{{ node.label }}</h1>
 			<h4 class="title-wrapper">{{ content.field_article_subtitle }}</h4>
 
 			<main id="contenu" class="w-section section-imp">
