@@ -76,9 +76,10 @@
 
 	{{ view_mode }}
 	{% if view_mode == 'teaser'  %}
+	<a href='{{ url }}'>
 		<b>{{ node.label }}</b>
 		<p>{{ content.body }}</p>
-		
+	</a>
 	{% else %}
 	<h1> {{ node.label }}</h1>
 	<section class="w-section section-imp more-padding">
