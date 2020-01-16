@@ -85,7 +85,7 @@
 				</div>
 			</div>
 			<div>
-				{# {% if not (content.contents_on_contributor_entity_view_1.value is empty and content.contents_on_contributor_entity_view_2.value is empty) %} #}
+				{% if (content.contents_on_contributor_entity_view_1.value is empty or content.contents_on_contributor_entity_view_2.value is empty) %}
 					<div class="title-wrapper">
 						<h3>Contenu du contributeur</h3>
 						<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
@@ -94,7 +94,7 @@
 						{{ content.contents_on_contributor_entity_view_1 }}
 						{{ content.contents_on_contributor_entity_view_2 }}
 					</div>
-				{# {% endif %} #}
+				{% endif %}
 			</div>
 		</div>
 	</section>
