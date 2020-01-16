@@ -36,14 +36,12 @@
 	{% block content %}
 		<li class="li-menu-type-2 no-bottom-margin">
 			<div>
-				{% for key in content.actions|keys %}
+				{% for key in content.actions.parents|keys %}
 					{{ key }}
 				{% endfor %}
                 <br>============<br>
-				{% for key in content.required|keys %}
-					{{ key }}
-				{% endfor %}
-				<form {{ content.actions }} class="searchbar" action="" method="{{content.method}}">
+				{{ content.required }}
+				<form {{ content.actions|strip }} class="searchbar" action="" method="{{content.method}}">
 					<input class="search_input" type="search" name="" placeholder="Rechercher...">
 					<button class="search_icon" type="submit"><i class="fa fa-search"></i></button>
 				</form>				
