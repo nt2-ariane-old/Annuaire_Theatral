@@ -36,7 +36,9 @@
 	{% block content %}
 		<li class="li-menu-type-2 no-bottom-margin">
 			<div class="searchbar">
-				{{ content }}
+				{% for key in content|keys %}
+                    {{ key }}
+                {% endfor %}
 				{# <input class="search_input" type="text" name="" placeholder="Rechercher..."> #}
 				<a href="#" class="search_icon">
 					<i class="fa fa-search"></i>
