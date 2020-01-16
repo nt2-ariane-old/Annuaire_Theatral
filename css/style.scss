@@ -527,7 +527,9 @@
     }
     
     #presentation {
-        padding: 1rem;
+        &>div {
+            padding: 1rem;
+        }
     }
     
     #citation {

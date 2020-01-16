@@ -558,7 +558,7 @@ nav ul ul li {
   content: "#";
 }
 
-#presentation {
+#presentation > div {
   padding: 1rem;
 }
 
