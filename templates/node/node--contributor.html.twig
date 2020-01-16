@@ -78,7 +78,7 @@
 	{% if view_mode == 'teaser'  %}
 	<a href='{{ url }}'>
 		<b>{{ node.label }}</b>
-		<p>{{ content.body }}</p>
+		<p>{{ content.body|raw|striptags }}</p>
 	</a>
 	{% else %}
 	<h1> {{ node.label }}</h1>
