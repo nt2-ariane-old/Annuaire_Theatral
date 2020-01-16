@@ -365,11 +365,20 @@ main h1 {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .preview * {
   padding: 0;
   margin: 0;
+}
+
+.preview img {
+  min-width: 100%;
+  min-height: 100%;
+  max-height: none;
+  max-width: none;
+  width: auto;
 }
 
 .preview .field__item {
