@@ -379,8 +379,27 @@
         }
     }
     
+    .sub-information {
+        font-family: Lekton, sans-serif;
+        line-height: 25px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        display: inline-block;
+        margin: auto;
+        text-align: center;
+        color: white;
+        font-size: 1.2rem;
+    }
+    
+    .blog-hover-zoom-photo {
+        padding: 1rem;
+    }
+    
     .nav-link {
         color: #495057;
+        &:hover {
+            color: #ff8686;
+        }
     }
     
     //POUR ISSUE
