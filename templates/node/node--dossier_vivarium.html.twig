@@ -58,7 +58,7 @@
  * - page: Flag for the full page state. Will be true if view_mode is 'full'.
  * - readmore: Flag for more state. Will be true if the teaser content of the
  *   node cannot hold the main body content.
- * - logged_in: Flag for authenticated user status. Will be true when the
+ * - logged_in: Flag for authentæicated user status. Will be true when the
  *   current user is a logged-in member.
  * - is_admin: Flag for admin user status. Will be true when the current user
  *   is an administrator.
@@ -72,48 +72,54 @@
  * @ingroup themeable
  */
 #}
-<article{{ attributes }}>
-  <div{{ content_attributes }}>
-    <section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
-        <h2 class="inner-title">{{ label }}</h2>
-        <p class="sub-text-title">Responsable {{ content.field_responsable_dossier|raw }}</p>
-        <p class="sub-text-title">{{ content.field_num_pub|raw }} , {{ content.field_date_pub|raw }}</p>
-        <div class="arrow-down">
-            <a href="#sommaire" class="w-inline-block icon-scroll"></a>
-        </div>
-    </section>
+<article{{attributes}}>
+	<div{{content_attributes}}>
+		<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
+			<h2 class="inner-title">{{ label }}</h2>
+			<div>
 
-    <section id="presentation">
-        {{ content.body }}
-    </section>
+				<span class="sub-text-title">Responsable
+					{{ content.field_responsable_dossier|raw }}</p>
+				<span class="sub-text-title">{{ content.field_num_pub|raw }}
+					,
+					{{ content.field_date_pub|raw }}</span>
 
-    <section id="tag">
-        <h4 class="post-title">Mots-clés</h4>
-        <div class="w-clearfix">
-            {{ content.field_mots_cles }}
-        </div>
+                {% for key in content.field_date_pub|keys %}
+                    {{ key }}
+                {% endfor %}
+				<div class="arrow-down">
+					<a href="#sommaire" class="w-inline-block icon-scroll"></a>
+				</div>
+			</div>
+		</section>
 
-        <div class="views-element-container sidebar-class"></div>
-    </section>
-    
-    <section id="sommaire">
-        <h4 class="post-title">Sommaire du Dossier Vivarium</h3>
-        <div id="grid" class="w-clearfix grid grid-not-margin" style="position: relative; height: 3094px;">
-            <div class="grid-sizer"></div>
-                {{ content.article_on_dossier_vivarium_entity_view_1 }}
-            </div>
-        </div>
-        
-    </section>
+		<section id="presentation">
+			{{ content.body }}
+		</section>
 
-    <section id="citation">
-        <h4>Pour citer</h4>
-        <p>
-            {{ content.field_pour_citer }}
-        </p>
-    </section>
-  </div>
+		<section id="tag">
+			<h4 class="post-title">Mots-clés</h4>
+			<div class="w-clearfix">
+				{{ content.field_mots_cles }}
+			</div>
 
-  
+			<div class="views-element-container sidebar-class"></div>
+		</section>
 
-</article>
+		<section id="sommaire">
+			<h4 class="post-title">Sommaire du Dossier Vivarium</h3>
+			<div id="grid" class="w-clearfix grid grid-not-margin" style="position: relative; height: 3094px;">
+				<div class="grid-sizer"></div>
+				{{ content.article_on_dossier_vivarium_entity_view_1 }}
+			</div>
+		</div>
+
+	</section>
+
+	<section id="citation">
+		<h4>Pour citer</h4>
+		<p>
+			{{ content.field_pour_citer }}
+		</p>
+	</section>
+</div></article>

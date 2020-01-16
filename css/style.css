@@ -527,6 +527,10 @@ nav ul ul li {
   bottom: 0;
 }
 
+section.w-section.blog-post-banner .sub-text-title {
+  display: inline-block;
+}
+
 .container,
 .row,
 .col-sm-12 {
