@@ -539,6 +539,14 @@ nav ul ul li {
   color: inherit;
 }
 
+.blog-post-banner .sub-text-title > div .field__item {
+  display: inline;
+}
+
+.blog-post-banner .sub-text-title > div .field__item::before {
+  content: " : ";
+}
+
 .blog-post-banner .sub-text-title > div a {
   color: white;
 }

@@ -505,6 +505,12 @@
             &>div {
                 display: inline;
                 color: inherit;
+                .field__item {
+                    display: inline;
+                    &::before {
+                        content: " : ";
+                    }
+                }
                 a {
                     color: white;
                 }
