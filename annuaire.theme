@@ -178,11 +178,8 @@ function annuaire_preprocess_node(&$variables) {
 		}
 	}
 
-	if(\Drupal::routeMatch()->getParameter('node')){
-		$node = \Drupal::routeMatch()->getParameter('node');
-		$statistics = statistics_get($node->id());
-		$variables['node_stats'] = \Drupal::translation()->formatPlural($statistics['totalcount'], '1 view', '@count views');
-   }
+
+   
 }
 function annuaire_preprocess_field(&$variables){
 	if ($node = \Drupal::routeMatch()->getParameter('node')) {
