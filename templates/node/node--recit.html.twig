@@ -75,15 +75,12 @@
 <article{{ attributes }}>
 	{% if view_mode == 'teaser'  %}
 
-		<a href='{{ url }}'>
-			<div class="lecture-content">
+			<div class="lecture-content" onclick="window.location='{{ url }}';">
 				<span>{{node.label}}</span>
 				<div class="preview">
 					{{ content.field_image_de_couverture }}
 				</div>
 			</div>
-
-		</a>
 	{% else %}
     {% if not page %}
         <h2{{ title_attributes }}>

@@ -338,6 +338,7 @@ main h1 {
 .lecture-content {
   width: 100%;
   display: block;
+  cursor: pointer;
 }
 
 .lecture-content > * {
