@@ -324,11 +324,6 @@
             padding: 0 0.5rem;
             display: inline-block;
         }
-        &::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
     }
     
     .js .paragraphs-collapsed-description {
