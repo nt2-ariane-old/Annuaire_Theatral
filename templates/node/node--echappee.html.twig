@@ -77,7 +77,7 @@
 	<div{{content_attributes}}>
 		<section>
 			<h4 class="post-title">Auteur(s)</h4>
-			{% for item in node.field_author %}
+			{# {% for item in node.field_author %}
 				<a class="lecture-content" href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.langcode}}{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.alias}}'>
 					<b>
 						{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.field_first_name.value|raw}}
@@ -85,7 +85,8 @@
 					</b>
 				</a>
 				{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.body.value|raw}}
-			{% endfor %}
+			{% endfor %} #}
+            {{ node.field_author }}
 			<div class="views-element-container sidebar-class"></div>
 		</section>
 		<section>
