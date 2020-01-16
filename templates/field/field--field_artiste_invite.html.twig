@@ -1,5 +1,11 @@
 {% for item in items %}
-    {% for key in item.content|keys %}
-        {{ key }}
-    {% endfor %}
+	{% for key in item.content.options|keys %}
+		{{ key }}
+	{% endfor %}
+	<a href="{{ item.content.url }}">
+		<b>{{ item.content.title }}</b>
+		<p>
+			{{ item.entity.field_first_name.0.entity.body.value|raw }}
+		</p>
+	</a>
 {% endfor %}
