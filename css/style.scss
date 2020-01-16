@@ -313,26 +313,27 @@
     }
     
     .lectures {
-        .lecture-content {
-            width: 25%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            float: left;
-            * {
-                width: 50%;
-                display: inline-block;
-                margin: auto;
-            }
-            span {
-                padding: 0 0.5rem;
-                display: block;
-            }
-        }
         &::after {
             content: "";
             clear: both;
             display: table;
+        }
+    }
+    
+    .lecture-content {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        * {
+            width: 50%;
+            display: inline-block;
+            margin: auto;
+        }
+        span {
+            padding: 0 0.5rem;
+            display: inline-block;
         }
     }
     

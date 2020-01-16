@@ -329,7 +329,13 @@ main h1 {
   margin-top: 20px;
 }
 
-.lectures .lecture-content {
+.lectures::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.lecture-content {
   width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -343,21 +349,15 @@ main h1 {
   float: left;
 }
 
-.lectures .lecture-content * {
+.lecture-content * {
   width: 50%;
   display: inline-block;
   margin: auto;
 }
 
-.lectures .lecture-content span {
+.lecture-content span {
   padding: 0 0.5rem;
-  display: block;
-}
-
-.lectures::after {
-  content: "";
-  clear: both;
-  display: table;
+  display: inline-block;
 }
 
 .js .paragraphs-collapsed-description {
