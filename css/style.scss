@@ -518,6 +518,11 @@
                     font-size: 1.5rem;
                 }
             }
+            .field--name-field-num-pub {
+                &::before {
+                    content: "#";
+                }
+            }
         }
     }
     
