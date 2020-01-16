@@ -530,10 +530,16 @@ nav ul ul li {
 section.w-section.blog-post-banner .sub-text-title {
   display: block;
   margin: auto;
+  text-align: center;
+  color: white;
 }
 
 section.w-section.blog-post-banner .sub-text-title > div {
-  display: inline-block;
+  display: inline;
+  color: inherit;
+}
+
+section.w-section.blog-post-banner .sub-text-title > div a {
   color: white;
 }
 

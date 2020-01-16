@@ -500,9 +500,14 @@
         .sub-text-title {
             display: block;
             margin: auto;
+            text-align: center;
+            color: white;
             &>div {
-                display: inline-block;
-                color: white;
+                display: inline;
+                color: inherit;
+                a {
+                    color: white;
+                }
             }
         }
     }
