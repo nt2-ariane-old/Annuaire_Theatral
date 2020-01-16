@@ -386,7 +386,7 @@ main h1 {
   width: 100px;
 }
 
-.preview .w-section a {
+.preview .field.field--name-field-image.field--type-image.field--label-hidden.field__item a {
   padding: 0;
 }
 
