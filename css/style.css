@@ -376,7 +376,7 @@ main h1 {
 .preview img {
   min-width: 100%;
   min-height: 100%;
-  max-height: none;
+  max-height: 120%;
   max-width: none;
   width: auto;
 }
@@ -386,7 +386,7 @@ main h1 {
   width: 100px;
 }
 
-.preview .tabs a {
+.preview .w-section a {
   padding: 0;
 }
 

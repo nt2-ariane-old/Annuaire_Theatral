@@ -354,7 +354,7 @@
         img {
             min-width: 100%;
             min-height: 100%;
-            max-height: none;
+            max-height: 120%;
             max-width: none;
             width: auto;
         }
@@ -362,7 +362,7 @@
             height: 100px;
             width: 100px;
         }
-        .tabs a {
+        .w-section a {
             padding: 0;
         }
     }
