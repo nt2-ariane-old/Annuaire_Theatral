@@ -408,6 +408,10 @@ nav ul ul li {
   border-radius: 5px;
 }
 
+.field--type-text-with-summary {
+  padding: 1rem;
+}
+
 #intro {
   position: relative;
   width: 100%;
