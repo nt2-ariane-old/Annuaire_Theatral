@@ -561,7 +561,8 @@ nav ul ul li {
   bottom: 0;
 }
 
-.blog-post-banner .sub-text-title {
+.blog-post-banner .sub-text-title,
+#intro .sub-text-title {
   display: block;
   margin: auto;
   text-align: center;
@@ -569,26 +570,31 @@ nav ul ul li {
   font-size: 1.2rem;
 }
 
-.blog-post-banner .sub-text-title > div {
+.blog-post-banner .sub-text-title > div,
+#intro .sub-text-title > div {
   display: inline;
   color: inherit;
 }
 
-.blog-post-banner .sub-text-title > div .field__item {
+.blog-post-banner .sub-text-title > div .field__item,
+#intro .sub-text-title > div .field__item {
   display: inline;
 }
 
-.blog-post-banner .sub-text-title > div .field__item::before {
+.blog-post-banner .sub-text-title > div .field__item::before,
+#intro .sub-text-title > div .field__item::before {
   content: " : ";
   color: white;
 }
 
-.blog-post-banner .sub-text-title > div a {
+.blog-post-banner .sub-text-title > div a,
+#intro .sub-text-title > div a {
   color: white;
   font-size: 1.2rem;
 }
 
-.blog-post-banner .sub-text-title .field--name-field-num-pub::before {
+.blog-post-banner .sub-text-title .field--name-field-num-pub::before,
+#intro .sub-text-title .field--name-field-num-pub::before {
   content: "#";
 }
 
