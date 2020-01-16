@@ -1,3 +1,5 @@
-{% for item in items|keys %}
-    {{ item }}
+{% for item in items %}
+    {% for key in item|keys %}
+        {{ key }}
+    {% endfor %}
 {% endfor %}
