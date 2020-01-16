@@ -72,68 +72,78 @@
  * @ingroup themeable
  */
 #}
-<article{{ attributes }}>
-    {% if not page %}
-        <h2{{ title_attributes }}>
-        <a href="{{ url }}" rel="bookmark"></a>
-        </h2>
-    {% endif %}
-    <div{{ content_attributes }}>
-        <div id="intro" class="w-section banner-one window-size">
-            <div class="video-wrapper">
-                <div class="w-embed embed-video">
-                {{ content.field_image_de_couverture }}
-                </div>
-                <div class="video-overlay"></div>
-            </div>
-            <div class="w-container container-contact">
-                <div class="align-center">
-                    <h2 class="inner-title">{{ label }}</h2>
-                    <div class="sub-text-title">Artiste invité : {{ node.field_artiste_invite.0.entity.label|raw}}</div>
-                    <div class="sub-text-title">Interviewer : {{ node.field_interviewer.0.entity.label|raw}}</div>
-                    {% for key in  node.field_interviewer.0.entity.label|keys %}
-                        {{ key }}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="w-row">
-        <div class="w-col w-col-8">
-            <main>
-                {{content.body}}
-            </main>
-        </div>
-        <div class="w-col w-col-4">
-            <aside>
-                <h3>Artiste</h3>
-                {{ content.field_artiste_invite }}
+<article{{attributes}}>
+	{% if view_mode == 'teaser'  %}
+		<a class="lecture-content" href='{{ url }}'>
+			<span>{{node.label}}</span>
+			<div class="preview">
+				{{ field_image }}
+			</div>
+		</a>
+	{% else %}
+		{% if not page %}
+			<h2{{title_attributes}}>
+				<a href="{{ url }}" rel="bookmark"></a>
+			</h2>
+		{% endif %}
+		<div{{content_attributes}}>
+			<div id="intro" class="w-section banner-one window-size">
+				<div class="video-wrapper">
+					<div class="w-embed embed-video">
+						{{ content.field_image_de_couverture }}
+					</div>
+					<div class="video-overlay"></div>
+				</div>
+				<div class="w-container container-contact">
+					<div class="align-center">
+						<h2 class="inner-title">{{ label }}</h2>
+						<div class="sub-text-title">Artiste invité :
+							{{ node.field_artiste_invite.0.entity.label|raw}}</div>
+						<div class="sub-text-title">Interviewer :
+							{{ node.field_interviewer.0.entity.label|raw}}</div>
+						{% for key in  node.field_interviewer.0.entity.label|keys %}
+							{{ key }}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w-row">
+			<div class="w-col w-col-8">
+				<main>
+					{{content.body}}
+				</main>
+			</div>
+			<div class="w-col w-col-4">
+				<aside>
+					<h3>Artiste</h3>
+					{{ content.field_artiste_invite }}
 
-                <h3>Interviewer</h3>
-                {{ content.field_interviewer }}
-                <h3>Lectures Connexes</h3>
-                {{ content.field_lectures_connexes }}
-            </aside>
-        </div>
-    </div>
+					<h3>Interviewer</h3>
+					{{ content.field_interviewer }}
+					<h3>Lectures Connexes</h3>
+					{{ content.field_lectures_connexes }}
+				</aside>
+			</div>
+		</div>
 
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-        </li>
-    </ul>
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+			</li>
+		</ul>
 
-    <!-- Tab panes -->
-    <div class="tab-content">
-        <div class="tab-pane container active" id="citation">
-            <p>{{content.field_pour_citer}}</p>
-        </div>
-        <div class="tab-pane container fade" id="biblio">
-            <p>{{content.field_biblio}}</p>
-        </div>
-    </div>
-
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div class="tab-pane container active" id="citation">
+				<p>{{content.field_pour_citer}}</p>
+			</div>
+			<div class="tab-pane container fade" id="biblio">
+				<p>{{content.field_biblio}}</p>
+			</div>
+		</div>
+	{% endif %}
 </article>

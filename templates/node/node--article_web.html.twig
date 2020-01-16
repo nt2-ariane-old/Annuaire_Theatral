@@ -72,121 +72,135 @@
  * @ingroup themeable
  */
 #}
-<article{{ attributes }}>
+<article{{attributes}}>
+	{% if view_mode == 'teaser'  %}
+		<a class="lecture-content" href='{{ url }}'>
+			<span>{{node.label}}</span>
+			<div class="preview">
+				{{ field_image }}
+			</div>
+		</a>
+	{% else %}
+		{{ title_prefix }}
+		{% if not page %}
+			<h2{{title_attributes}}>
+				<a href="{{ url }}" rel="bookmark">{{ label }}</a>
+			</h2>
+		{% endif %}
+		{{ title_suffix }}
 
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
+		{% if display_submitted %}
+			<footer>
+				{{ author_picture }}
+				<div{{author_attributes}}>
+					{% trans %}Submitted by
+					{{ author_name }}
+					on
+					{{ date }}{% endtrans %}
+					{{ metadata }}
+				</div>
+			</footer>
+		{% endif %}
 
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
+		<div{{content_attributes}}>
+			<div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
+				<h2 class="inner-title">{{ label }}</h2>
+				<p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
 
-  <div{{ content_attributes }}>
-    <div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
-        <h2 class="inner-title">{{ label }}</h2>
-            <p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
+				<div class="arrow-down">
+					<a href="#contenu" class="w-inline-block icon-scroll"></a>
+				</div>
+			</div>
+			<main id="contenu" class="w-section section-imp">
+				<div class="w-container">
+					<div
+						class="w-row">
+						{# SIDEBAR #}
+						<div
+							class="w-col w-col-3">
 
-        <div class="arrow-down">
-            <a href="#contenu" class="w-inline-block icon-scroll"></a>
-        </div>
-    </div>
-    <main id="contenu" class="w-section section-imp">
-        <div class="w-container">
-            <div class="w-row">
-                {# SIDEBAR #}
-                <div class="w-col w-col-3">
+							{# Auteurs #}
+							<div class="sidebar-class">
+								<h4 class="post-title">Auteur(s)</h4>
+								{% for item in node.field_auteur %}
+									<a class="lecture-content" href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.langcode}}{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.alias}}'>
+										<b>
+											{{item.entity.field_first_name.value}}
+											{{item.entity.field_last_name.value}}
+										</b>
+									</a>
+									<p>{{item.entity.body.summary|raw}}</p>
+								{% endfor %}
+							</div>
 
-                    {# Auteurs #}
-                    <div class="sidebar-class">
-                        <h4 class="post-title">Auteur(s)</h4>
-                        {% for item in node.field_auteur %}
-                            <a class="lecture-content" href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.langcode}}{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.alias}}'>
-                                <b>
-                                    {{item.entity.field_first_name.value}}
-                                    {{item.entity.field_last_name.value}}
-                                </b>
-                            </a>
-                            <p>{{item.entity.body.summary|raw}}</p>
-                        {% endfor %}
-                    </div>
+							{# Mots-Clés #}
+							<div class="views-element-container sidebar-class">
+								<h4 class="post-title">Mots-clés</h4>
 
-                    {# Mots-Clés #}
-                    <div class="views-element-container sidebar-class">
-                        <h4 class="post-title">Mots-clés</h4>
+								<div class="w-clearfix">
+									{{ content.field_mots_cles }}
+								</div>
+							</div>
 
-                        <div class="w-clearfix">
-                            {{ content.field_mots_cles }}
-                        </div>
-                    </div>
+							{# Lectures Connexes #}
+							<div class="views-element-container sidebar-class">
+								<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
+									<h4 class="post-title">Lectures Connexes</h4>
+									<div>
+										<ul class="w-list-unstyled">
+											{% for item in node.field_lectures_connexes %}
+												<li class="w-clearfix li-last">
+													<div class="blog-last-photo">
+														{% if file_url(item.entity.field_image.0.entity.fileuri) != '/' %}
+															<img src="{{file_url(item.entity.field_image.0.entity.fileuri)}}" width="70" height="70" alt="img" typeof="Image">
+														{% elseif file_url(item.entity.field_image_de_couverture.0.entity.fileuri) != '/' %}
+															<img src="{{file_url(item.entity.field_image_de_couverture.0.entity.fileuri)}}" width="70" height="70" alt="img" typeof="Image">
+														{% endif %}
+													</div>
+													<div class="last-content">
+														<a href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.path.0.langcode}}{{item.entity.path.0.alias}}' class="last-title">{{item.entity.title.value}}</a>
+													</div>
+												</li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							</div>
 
-                    {# Lectures Connexes #}
-                    <div class="views-element-container sidebar-class">
-                        <div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
-                            <h4 class="post-title">Lectures Connexes</h4>
-                                <div>
-                                    <ul class="w-list-unstyled">
-                                        {% for item in node.field_lectures_connexes %}
-                                            <li class="w-clearfix li-last">
-                                                <div class="blog-last-photo">
-                                                    {% if file_url(item.entity.field_image.0.entity.fileuri) != '/' %}
-                                                        <img src="{{file_url(item.entity.field_image.0.entity.fileuri)}}" width="70" height="70" alt="img" typeof="Image">
-                                                    {% elseif file_url(item.entity.field_image_de_couverture.0.entity.fileuri) != '/' %}
-                                                        <img src="{{file_url(item.entity.field_image_de_couverture.0.entity.fileuri)}}" width="70" height="70" alt="img" typeof="Image">
-                                                    {% endif %}
-                                                </div>
-                                               <div class="last-content">
-                                                    <a href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.path.0.langcode}}{{item.entity.path.0.alias}}' class="last-title">{{item.entity.title.value}}</a>
-                                                </div>
-                                            </li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                        </div>
-                    </div>
+						</div>
+						<div
+							class="w-col w-col-9">
 
-                </div>
-                <div class="w-col w-col-9">
-  
-                {# Body #}
-                <div class="bottom-space">
-                    {{ content.body }}
-                </div>
+							{# Body #}
+							<div class="bottom-space">
+								{{ content.body }}
+							</div>
 
-            </div>
-        </div>
+						</div>
+					</div>
 
-        {# Citation et Biblio #}
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-            </li>
-        </ul>
+					{# Citation et Biblio #}
+					<ul class="nav nav-tabs">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+						</li>
+					</ul>
 
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <div class="tab-pane container active" id="citation">
-                <p>{{content.field_pour_citer}}</p>
-            </div>
-            <div class="tab-pane container fade" id="biblio">
-                <p>{{content.field_biblio}}</p>
-            </div>
-        </div>
-    </main>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane container active" id="citation">
+							<p>{{content.field_pour_citer}}</p>
+						</div>
+						<div class="tab-pane container fade" id="biblio">
+							<p>{{content.field_biblio}}</p>
+						</div>
+					</div>
+				</div>
+			</main>
 
-  </div>
-
+		</div>
+	{% endif %}
 </article>

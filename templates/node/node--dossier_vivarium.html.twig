@@ -73,51 +73,61 @@
  */
 #}
 <article{{attributes}}>
-	<div{{content_attributes}}>
-		<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
-			<h2 class="inner-title">{{ label }}</h2>
-			<div>
+	{% if view_mode == 'teaser'  %}
+		<a class="lecture-content" href='{{ url }}'>
+			<span>{{node.label}}</span>
+			<div class="preview">
+				{{ field_image }}
+			</div>
+		</a>
+	{% else %}
+		<div{{content_attributes}}>
+			<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
+				<h2 class="inner-title">{{ label }}</h2>
+				<div>
 
-				<div class="sub-text-title"> Responsable :{{ content.field_responsable_dossier|raw }}</div>
-				<div class="sub-text-title">
-					{{ content.field_num_pub|raw }}
-					,
-					{{ content.field_date_pub|raw }}
+					<div class="sub-text-title">
+						Responsable :{{ content.field_responsable_dossier|raw }}</div>
+					<div class="sub-text-title">
+						{{ content.field_num_pub|raw }}
+						,
+						{{ content.field_date_pub|raw }}
+					</div>
+					<div class="arrow-down">
+						<a href="#sommaire" class="w-inline-block icon-scroll"></a>
+					</div>
 				</div>
-				<div class="arrow-down">
-					<a href="#sommaire" class="w-inline-block icon-scroll"></a>
+			</section>
+
+			<section id="presentation">
+				<h4 class="post-title">Présentation</h4>
+				{{ content.body }}
+				<div class="views-element-container sidebar-class"></div>
+			</section>
+
+			<section id="tag">
+				<h4 class="post-title">Mots-clés</h4>
+				<div class="w-clearfix">
+					{{ content.field_mots_cles }}
 				</div>
-			</div>
-		</section>
 
-		<section id="presentation">
-        	<h4 class="post-title">Présentation</h4>
-			{{ content.body }}
-            <div class="views-element-container sidebar-class"></div>
-		</section>
+				<div class="views-element-container sidebar-class"></div>
+			</section>
 
-		<section id="tag">
-			<h4 class="post-title">Mots-clés</h4>
-			<div class="w-clearfix">
-				{{ content.field_mots_cles }}
-			</div>
+			<section id="sommaire">
+				<h4 class="post-title">Sommaire du Dossier Vivarium</h3>
+				<div id="grid" class="w-clearfix grid grid-not-margin" style="position: relative; height: 3094px;">
+					<div class="grid-sizer"></div>
+					{{ content.article_on_dossier_vivarium_entity_view_1 }}
+				</div>
+				<div class="views-element-container sidebar-class"></div>
 
-			<div class="views-element-container sidebar-class"></div>
-		</section>
+			</section>
 
-		<section id="sommaire">
-			<h4 class="post-title">Sommaire du Dossier Vivarium</h3>
-			<div id="grid" class="w-clearfix grid grid-not-margin" style="position: relative; height: 3094px;">
-				<div class="grid-sizer"></div>
-				{{ content.article_on_dossier_vivarium_entity_view_1 }}
-			</div>
-            <div class="views-element-container sidebar-class"></div>
+			<section id="citation">
+				<h4 class="post-title">Citations</h4>
+				{{ content.field_pour_citer }}
+			</section>
 		</div>
-
-	</section>
-
-	<section id="citation">
-		<h4 class="post-title">Citations</h4>
-		{{ content.field_pour_citer }}
-	</section>
-</div></article>
+	{% endif %}
+</article>

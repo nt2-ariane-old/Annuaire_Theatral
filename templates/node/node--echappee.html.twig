@@ -73,71 +73,78 @@
  */
 #}
 <article{{attributes}}>
-
-	<div{{content_attributes}}>
-		<section>
-			<h4 class="post-title">Auteur(s)</h4>
-			{# {% for item in node.field_author %}
-				<a class="lecture-content" href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.langcode}}{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.alias}}'>
-					<b>
-						{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.field_first_name.value|raw}}
-						{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.field_last_name.value|raw}}
-					</b>
-				</a>
-				{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.body.value|raw}}
-			{% endfor %} #}
-            {{ content.field_author }}
-			<div class="views-element-container sidebar-class"></div>
-		</section>
-		<section>
-			<h4 class="post-title">Lectures connexes</h4>
-
-			<div class="lectures">
-				{% for item in node.field_lectures_connexes %}
-
-					<a class="lecture-content" href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.path.0.langcode}}{{item.entity.path.0.alias}}'>
-						{% if file_url(item.entity.field_image.0.entity.fileuri) != '/' %}
-							<div class="preview" style='background-image: url({{ file_url(item.entity.field_image.0.entity.fileuri) }})'></div>
-						{% elseif file_url(item.entity.field_image_de_couverture.0.entity.fileuri) != '/' %}
-							<div class="preview" style='background-image: url({{ file_url(item.entity.field_image_de_couverture.0.entity.fileuri) }})'></div>
-						{% endif %}
-						<span>{{item.entity.title.value}}</span>
-					</a>
-
-				{% endfor %}
+	{% if view_mode == 'teaser'  %}
+		<a class="lecture-content" href='{{ url }}'>
+			<span>{{node.label}}</span>
+			<div class="preview">
+				{{ field_image }}
 			</div>
-			<div class="views-element-container sidebar-class"></div>
-		</section>
-		<div>
-			<h4 class="post-title">Mots-Clés</h4>
-			{{ content.field_mots_cles}}
-            <div class="views-element-container sidebar-class"></div>
+		</a>
+	{% else %}
+		<div{{content_attributes}}>
+			<section>
+				<h4 class="post-title">Auteur(s)</h4>
+				{# {% for item in node.field_author %}
+								<a class="lecture-content" href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.langcode}}{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.alias}}'>
+									<b>
+										{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.field_first_name.value|raw}}
+										{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.field_last_name.value|raw}}
+									</b>
+								</a>
+								{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.body.value|raw}}
+							{% endfor %} #}
+				{{ content.field_author }}
+				<div class="views-element-container sidebar-class"></div>
+			</section>
+			<section>
+				<h4 class="post-title">Lectures connexes</h4>
+
+				<div class="lectures">
+					{% for item in node.field_lectures_connexes %}
+
+						<a class="lecture-content" href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.path.0.langcode}}{{item.entity.path.0.alias}}'>
+							{% if file_url(item.entity.field_image.0.entity.fileuri) != '/' %}
+								<div class="preview" style='background-image: url({{ file_url(item.entity.field_image.0.entity.fileuri) }})'></div>
+							{% elseif file_url(item.entity.field_image_de_couverture.0.entity.fileuri) != '/' %}
+								<div class="preview" style='background-image: url({{ file_url(item.entity.field_image_de_couverture.0.entity.fileuri) }})'></div>
+							{% endif %}
+							<span>{{item.entity.title.value}}</span>
+						</a>
+
+					{% endfor %}
+				</div>
+				<div class="views-element-container sidebar-class"></div>
+			</section>
+			<div>
+				<h4 class="post-title">Mots-Clés</h4>
+				{{ content.field_mots_cles}}
+				<div class="views-element-container sidebar-class"></div>
+			</div>
+
+			<p>
+				{{ content.body }}
+			</p>
+
+
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+				</li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane container active" id="citation">
+					<p>{{content.field_pour_citer}}</p>
+				</div>
+				<div class="tab-pane container fade" id="biblio">
+					<p>{{content.field_biblio}}</p>
+				</div>
+			</div>
 		</div>
-
-		<p>
-			{{ content.body }}
-		</p>
-
-
-		<ul class="nav nav-tabs">
-			<li class="nav-item">
-				<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-			</li>
-		</ul>
-
-		<!-- Tab panes -->
-		<div class="tab-content">
-			<div class="tab-pane container active" id="citation">
-				<p>{{content.field_pour_citer}}</p>
-			</div>
-			<div class="tab-pane container fade" id="biblio">
-				<p>{{content.field_biblio}}</p>
-			</div>
-		</div>
-	</div>
-
+	{% endif %}
 
 </article>
