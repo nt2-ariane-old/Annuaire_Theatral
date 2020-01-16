@@ -117,18 +117,7 @@
 							{# Auteurs #}
 							<div class="sidebar-class">
 								<h4 class="post-title">Auteur(s)</h4>
-								{% for item in content.group_article_informations.field_author %}
-									{% for subitem in item.field_author.entity.field_contributor_attributes %}
-										<a class="lecture-content" href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.langcode}}{{item.entity.field_contributor_attributes.0.entity.field_contributor_name.0.entity.path.0.alias}}'>
-											<b>
-												{{subitem.entity.field_contributor_name.0.entity.field_first_name.value}}
-												{{subitem.entity.field_contributor_name.0.entity.field_last_name.value}}
-											</b>
-										</a>
-										<p>{{subitem.entity.field_contributor_name.0.entity.body.summary|raw}}</p>
-									{% endfor %}
-
-								{% endfor %}
+								{{content.group_article_informations.field_author }}
 							</div>
 
 							{# Mots-Clés #}
@@ -145,8 +134,9 @@
 								<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
 									<h4 class="post-title">Lectures Connexes</h4>
 									{{ content.field_lectures_connexes }}
-							</div>
+								</div>
 
+							</div>
 						</div>
 						<div
 							class="w-col w-col-9">
@@ -190,11 +180,10 @@
 						<div class="tab-pane container fade" id="pdf">
 							<p>{{content.field_biblio}}</p>
 						</div>
-					</div>
-				</main>
+					</main>
 
-			</div>
-		{% endif %}
+				</div>
+			{% endif %}
 
 
-	</article>
+		</article>
