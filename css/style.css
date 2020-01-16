@@ -351,6 +351,7 @@ main h1 {
 
 .lectures .lecture-content span {
   padding: 0 0.5rem;
+  display: block;
 }
 
 .lectures::after {
