@@ -330,20 +330,11 @@ main h1 {
 }
 
 .lecture-content {
-  width: 25%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  float: left;
+  width: 100%;
+  display: block;
 }
 
-.lecture-content * {
+.lecture-content > * {
   width: 50%;
   display: inline-block;
   margin: auto;

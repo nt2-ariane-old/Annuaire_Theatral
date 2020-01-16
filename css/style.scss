@@ -313,12 +313,9 @@
     }
     
     .lecture-content {
-        width: 25%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        float: left;
-        * {
+        width: 100%;
+        display: block;
+        &>* {
             width: 50%;
             display: inline-block;
             margin: auto;
