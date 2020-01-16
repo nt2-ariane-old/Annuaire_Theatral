@@ -1,20 +1,20 @@
-<div{{ attributes }} >
-    {% for item in items %}
-        <div class="w-clearfix small-spc">
-            <div class="w-clearfix show-filter">
-                <div class="filter-button">
-                    <div class="w-embed">
-                        <i class="fa fa-external-link"></i>
-                    </div>
-                </div>
-                <div class="w-clearfix filter-effect">
-                    <div class="filter-txt-hide">
-                        <a{{ item.attributes }}>
-                            {{ item.content }}
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    {% endfor %}
+<div{{attributes}}>
+	{% for item in items %}
+		<div class="w-clearfix small-spc">
+			<div class="w-clearfix show-filter">
+				<div class="filter-button">
+					<div class="w-embed">
+						<i class="fas fa-external-link-alt"></i>
+					</div>
+				</div>
+				<div class="w-clearfix filter-effect">
+					<div class="filter-txt-hide">
+						<a{{item.attributes}}>
+							{{ item.content }}
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
 </div>
