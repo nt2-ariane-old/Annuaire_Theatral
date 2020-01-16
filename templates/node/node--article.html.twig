@@ -77,7 +77,7 @@
 		<a class="lecture-content" href='{{ url }}'>
 			<span>{{node.label}}</span>
 			<div class="preview">
-				{{ field_image }}
+				{{ content.field_image }}
 			</div>
 		</a>
 	{% else %}
@@ -144,25 +144,7 @@
 							<div class="views-element-container sidebar-class">
 								<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
 									<h4 class="post-title">Lectures Connexes</h4>
-									<div>
-										<ul class="w-list-unstyled">
-											{% for item in node.field_lectures_connexes %}
-												<li class="w-clearfix li-last">
-													<div class="blog-last-photo">
-														{% if file_url(item.entity.field_image.0.entity.fileuri) != '/' %}
-															<img src="{{file_url(item.entity.field_image.0.entity.fileuri)}}" width="70" height="70" alt="img" typeof="Image">
-														{% elseif file_url(item.entity.field_image_de_couverture.0.entity.fileuri) != '/' %}
-															<img src="{{file_url(item.entity.field_image_de_couverture.0.entity.fileuri)}}" width="70" height="70" alt="img" typeof="Image">
-														{% endif %}
-													</div>
-													<div class="last-content">
-														<a href='http://annuairetheatral.aegir8.uqam.ca/{{item.entity.path.0.langcode}}{{item.entity.path.0.alias}}' class="last-title">{{item.entity.title.value}}</a>
-													</div>
-												</li>
-											{% endfor %}
-										</ul>
-									</div>
-								</div>
+									{{ content.field_lectures_connexes }}
 							</div>
 
 						</div>
