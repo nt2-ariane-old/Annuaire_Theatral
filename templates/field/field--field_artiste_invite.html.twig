@@ -2,6 +2,7 @@
 	{% for key in item.content.options|keys %}
 		{{ key }}
 	{% endfor %}
+    {{ item.content }}
 	<a href="{{ item.content.url }}">
 		<b>{{ item.content.title }}</b>
 		<p>
