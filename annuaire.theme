@@ -468,14 +468,15 @@ function annuaire_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
 	}
 	elseif($form_id == 'formulairederecherche'){
 	    unset($form['search_block_form']['#title']); // remove label form
-	    $form['actions']['submit']['#value'] = ''; // Change the text on the submit button
-	    $form['actions']['submit']['#attributes']['class'] = array('btn', 'search-input');
-	    $form['keys']['#attributes']['placeholder'] = 'Search...';
-	    $form['keys']['#attributes']['class'] = array('form-control');
+	    $form['actions']['submit']['#value'] = '\f002'; // Change the text on the submit button
+	    $form['actions']['submit']['#attributes']['class'] = array('btn', 'search_icon');
+	    $form['keys']['#attributes']['placeholder'] = 'Rechercher...';
+	    $form['keys']['#attributes']['class'] = array('search_input');
 	    // $form['keys']['#attributes']['id'] = array('s');
 	   	$form['keys']['#size'] = 30;
 	}
 }
+
 function annuaire_contact_message_feedback_form_form_alter(&$form_id){
 	unset($form['actions']['preview']);
 	$form['actions']['submit']['#attributes']['value'] = t('Send');
