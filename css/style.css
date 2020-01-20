@@ -80,6 +80,11 @@ img {
   margin: auto;
 }
 
+.views-view-grid.cols-3 .views-col .views-field-title {
+  position: absolute;
+  bottom: 0;
+}
+
 .data-blog.cont-ico.smll-ico {
   padding: 0;
 }
