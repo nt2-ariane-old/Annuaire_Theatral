@@ -1,12 +1,77 @@
-{% include theme_path ~ "/templates/border/border.html.twig" %}
-{{ page.region_baner }}
+<header class="top-border">
+	<div class="w-row">
+		<div class="w-col w-col-2 w-clearfix">
+			<a href="index.html" class="w-inline-block brand-logo animsition-link">
+				{{ page.branding }}
+			</a>
+		</div>
+		<div class="w-col w-col-10">
+			<div>
+				<nav class="navigation-type-3">
+					{{page.navigation_menu}}
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
 
-{{page.region_messages}}
-{{page.region_tab}}
-{{page.region_top}}
-<section class="w-section section-imp page_search">
-	{{ page.content }}
-</section>
-{{page.region_mid}}
-{{page.region_bot}}
-{% include theme_path ~ "/templates/footer.html.twig" %}
+{% if page.header %}
+	{{page.header}}
+{% endif %}
+
+<main class="container">
+	<div class="row">
+		{% if page.sidebar_left %}
+			{% block sidebar_left %}
+				<section class="col-sm-4 sidebar-left" role="complementary">
+					{{ page.sidebar_left }}
+				</section>
+			{% endblock %}
+		{% endif %}
+
+
+		<section class="w-section section-imp page_search">
+			{{ page.content }}
+		</section>
+
+		{% if page.sidebar_right %}
+			{% block sidebar_right %}
+				<section class="col-lg-4 sidebar-right" role="complementary">
+					{{ page.sidebar_right }}
+				</section>
+			{% endblock %}
+		{% endif %}
+
+	</div>
+
+</main>
+
+
+{% if page.footer %}
+	<footer class="footer">
+		<div class="w-container">
+			<div class="w-row">
+				{{page.footer}}
+			</div>
+		</div>
+	</footer>
+{% endif %}
+
+{% if page.copyright %}
+	<div class="bottom-border">
+		<div class="w-row">
+			<div class="w-col w-col-6">
+				<div class="w-hidden-medium w-hidden-small w-hidden-tiny title-top-border">
+					{{page.copyright}}
+				</div>
+			</div>
+			{% if page.nav_social %}
+				<div class="w-col w-col-6">
+					<div class="align-right flex-center-child">
+						{{page.nav_social}}
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+{% endif %}
