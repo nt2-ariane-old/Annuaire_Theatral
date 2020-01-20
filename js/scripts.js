@@ -29,6 +29,27 @@ window.onload = function() {
 
         }
     });
+
+    let searchbar = document.querySelector('#search-block-form');
+
+    if (searchbar !== undefined) {
+        searchbar.innerHTML = '';
+        searchbar.setAttribute('class', 'searchbar');
+        let input = document.createElement('input');
+        input.setAttribute('type', 'text');
+        input.setAttribute('class', 'search_input');
+        input.setAttribute('placeholder', 'Rechercher...');
+
+        let button = document.createElement('button');
+        button.setAttribute('class', 'search_icon');
+        button.setAttribute('type', 'submit');
+
+        let icon = document.createElement('i');
+        icon.setAttribute('class', 'fa fa-search');
+        button.appendChild(icon);
+        searchbar.appendChild(input);
+        searchbar.appendChild(button);
+    }
 }
 
 function isEven(n) {
