@@ -7,7 +7,7 @@
 
 
 function annuaire_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-
+	var_dump($form);
 	if($form_id == 'search_form'){
 	    unset($form['search_form']['#title']); // remove label form
 	    $form['actions']['submit']['#value'] = 'Loupe'; // Change the text on the submit button
@@ -16,6 +16,10 @@ function annuaire_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
 	    $form['keys']['#attributes']['class'] = array('search_input');
 	    // $form['keys']['#attributes']['id'] = array('s');
 	   	$form['keys']['#size'] = 30;
+	}
+	elseif($form_id == 'search_block_form')
+	{
+		
 	}
 }
 
@@ -47,7 +51,7 @@ function annuaire_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\
 }
 
 function annuaire_form_search_block_form_alter(&$form, &$form_state, $form_id) {
-	var_dump($form);
+	
 	// unset($form['search_block_form']['#title']); // remove label form
     // $form['search_block_form']['#title_display'] = 'invisible'; // Toggle label visibilty
 	// $form['search_block_form']['#size'] = 40;  // define size of the textfield
