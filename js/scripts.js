@@ -28,6 +28,13 @@ window.onload = function() {
         searchbar.style.display = 'inline-block';
     }
 
+    let cart = document.querySelector('.cart-block--summary__icon');
+    cart.innerHTML = '';
+
+    let cart_icon = document.createElement('i');
+    cart_icon.setAttribute('class', 'fas fa-shopping-cart');
+    cart.appendChild(cart_icon);
+
     let rows = document.querySelectorAll('.views-row');
     i = 0;
     rows.forEach(row => {
