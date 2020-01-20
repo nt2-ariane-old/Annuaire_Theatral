@@ -61,7 +61,12 @@ img {
   float: none;
 }
 
-input {
+#block-copyright .field--type-text-with-summary {
+  padding: 0;
+}
+
+input,
+textarea {
   font-family: initial;
 }
 
