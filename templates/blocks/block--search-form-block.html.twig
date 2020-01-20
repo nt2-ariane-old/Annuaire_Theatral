@@ -6,5 +6,8 @@
   {{ title_suffix }}
   {% block content %}
     {{ content }}
+    {% for key in content|keys %}
+        {{ key }}
+    {% endfor %}
   {% endblock %}
 </div>
