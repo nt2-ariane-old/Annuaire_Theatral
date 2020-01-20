@@ -7,6 +7,7 @@
 
 
 function annuaire_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+	echo($form_id);
 	if($form_id == 'search_block_form'){
 	    unset($form['search_block_form']['#title']); // remove label form
 	    $form['actions']['submit']['#value'] = '\f002'; // Change the text on the submit button
