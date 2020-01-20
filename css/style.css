@@ -55,7 +55,7 @@ img {
   display: none;
 }
 
-.search_icon {
+.button--primary.form-submit .search_icon {
   background-color: transparent;
 }
 
