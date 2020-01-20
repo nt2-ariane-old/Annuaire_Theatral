@@ -44,12 +44,20 @@
         }
     }
     
-    .col-1,
-    .col-2,
-    .col-3 {
-        -ms-flex: 1;
-        flex: 1;
-        max-width: 100%;
+    .views-view-grid.cols-3 {
+        .views-row.clearfix {
+            padding: 1rem;
+        }
+        .col-1,
+        .col-2,
+        .col-3 {
+            -ms-flex: 1;
+            flex: 1;
+            max-width: 100%;
+        }
+        .views-col {
+            text-align: center;
+        }
     }
     
     .data-blog.cont-ico.smll-ico {
