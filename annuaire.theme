@@ -7,26 +7,8 @@
 
 
 function annuaire_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-	echo($form_id);
-	if($form_id == 'search_block_form'){
-	    unset($form['search_block_form']['#title']); // remove label form
-	    $form['actions']['submit']['#value'] = 'Loupe'; // Change the text on the submit button
-	    $form['actions']['submit']['#attributes']['class'] = array('btn', 'search_icon');
-	    $form['keys']['#attributes']['placeholder'] = 'Rechercher...';
-	    $form['keys']['#attributes']['class'] = array('search_input');
-	    // $form['keys']['#attributes']['id'] = array('s');
-	   	// $form['keys']['#size'] = 30;
-	}
-	elseif($form_id == 'formulairederecherche'){
-	    unset($form['formulairederecherche']['#title']); // remove label form
-	    $form['actions']['submit']['#value'] = 'Glass'; // Change the text on the submit button
-	    $form['actions']['submit']['#attributes']['class'] = array('btn', 'search_icon');
-	    $form['keys']['#attributes']['placeholder'] = 'Rechercher...';
-	    $form['keys']['#attributes']['class'] = array('search_input');
-	    // $form['keys']['#attributes']['id'] = array('s');
-	   	$form['keys']['#size'] = 30;
-	}
-	elseif($form_id == 'search_form'){
+
+	if($form_id == 'search_form'){
 	    unset($form['search_form']['#title']); // remove label form
 	    $form['actions']['submit']['#value'] = 'Loupe'; // Change the text on the submit button
 	    $form['actions']['submit']['#attributes']['class'] = array('btn', 'search_icon');
@@ -65,12 +47,14 @@ function annuaire_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\
 }
 
 function annuaire_form_search_block_form_alter(&$form, &$form_state, $form_id) {
-    $form['search_block_form']['#title'] = t('Rechercher...'); // Change the text on the label element
+	unset($form['search_block_form']['#title']); // remove label form
     $form['search_block_form']['#title_display'] = 'invisible'; // Toggle label visibilty
-    $form['search_block_form']['#size'] = 40;  // define size of the textfield
+	$form['search_block_form']['#size'] = 40;  // define size of the textfield
+	$form['search_block_form']['#attributes']['class'] = array('search_input');
     $form['search_block_form']['#default_value'] = t('Rechercher...'); // Set a default value for the textfield
     $form['actions']['submit']['#value'] = t(''); // Change the text on the submit button
     $form['actions']['submit'] = array('#type' => 'image_button', '#src' => base_path() .   drupal_get_path('theme', 'annuaire') . '/images/search-icon.png');
+	$form['actions']['submit']['#attributes']['class'] = array('search_icon');
 
     // Add extra attributes to the text box
     $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search';}";
@@ -79,5 +63,5 @@ function annuaire_form_search_block_form_alter(&$form, &$form_state, $form_id) {
     $form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Rechercher...'){ alert('Veuillez entrez une recherche'); return false; }";
 
     // Alternative (HTML5) placeholder attribute instead of using the javascript
-    $form['search_block_form']['#attributes']['placeholder'] = t('Rechercher...');
+	$form['search_block_form']['#attributes']['placeholder'] = t('Rechercher...');
 } 
