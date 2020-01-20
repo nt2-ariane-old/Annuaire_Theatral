@@ -57,6 +57,21 @@
         }
         .views-col {
             text-align: center;
+            height: 390px;
+            width: 300px;
+            position: relative;
+            img {
+                max-height: 100%;
+                max-width: 100%;
+                width: auto;
+                height: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
         }
     }
     
