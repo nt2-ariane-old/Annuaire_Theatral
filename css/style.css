@@ -55,7 +55,13 @@ img {
   display: none;
 }
 
-.button--primary.form-submit .search_icon {
+.button--primary.form-submit {
+  margin: 1rem auto;
+  display: inline-block;
+  float: none;
+}
+
+.search_icon {
   background-color: transparent;
 }
 
