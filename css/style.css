@@ -47,6 +47,15 @@ img {
   height: auto;
 }
 
+.col-1,
+.col-2,
+.col-3 {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+          flex: 1;
+  max-width: 100%;
+}
+
 .data-blog.cont-ico.smll-ico {
   padding: 0;
 }
