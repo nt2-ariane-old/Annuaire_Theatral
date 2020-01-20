@@ -47,6 +47,10 @@ img {
   height: auto;
 }
 
+.search_icon {
+  background-color: transparent;
+}
+
 .views-view-grid.cols-3 .views-row.clearfix {
   padding: 1rem;
 }

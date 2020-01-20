@@ -11,18 +11,6 @@ function annuaire_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
 		// $form['keys']['#attributes']['id'] = array('s');
 		$form['keys']['#size'] = 30;
 	}
-	elseif ($form_id == 'search_block_form') {
-		
-		$form['keys']['#prefix'] ='<div class="searchbar">';
-		$form['keys']['#suffix'] ='<a href="#" onclick="$(this).closest(\'form\').submit()><i class="fa fa-search"></i></a></div>';
-		$form['keys']['#attributes']['class'] = array('search_input');
-		$form['keys']['#attributes']['placeholder'] = 'Rechercher...';
-		$form['actions']['submit']['#prefix'] = '';
-		$form['actions']['submit']['#suffix'] = '';
-		$form['actions']['submit']['#attributes']['class'] = array('hidden');
-		$form['actions']['submit']['#attributes']['#value'] = '';
-
-	  }
 }
 
 function annuaire_contact_message_feedback_form_form_alter(&$form_id)
