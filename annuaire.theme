@@ -1,11 +1,5 @@
 <?php
 
-
-
-
-
-
-
 function annuaire_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 	if($form_id == 'search_form'){
 	    unset($form['search_form']['#title']); // remove label form
@@ -22,7 +16,6 @@ function annuaire_contact_message_feedback_form_form_alter(&$form_id){
 	unset($form['actions']['preview']);
 	$form['actions']['submit']['#attributes']['value'] = t('Envoyer');
 }
-
 
 function annuaire_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
 	$form['#attributes']['class'] = array('form','contact-page');
