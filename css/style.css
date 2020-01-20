@@ -51,6 +51,10 @@ img {
   display: none;
 }
 
+.cart-block--summary__icon {
+  display: none;
+}
+
 .search_icon {
   background-color: transparent;
 }
