@@ -31,6 +31,7 @@ window.onload = function() {
     });
 
     let searchbar = document.querySelector('#search-block-form');
+    let nav = document.querySelector('.top-nav');
 
     if (searchbar !== undefined) {
         searchbar.innerHTML = '';
@@ -49,7 +50,15 @@ window.onload = function() {
         button.appendChild(icon);
         searchbar.appendChild(input);
         searchbar.appendChild(button);
+
+        let li = document.createElement('li');
+        li.setAttribute('class', 'li-menu-type-2');
+
+        li.appendChild(searchbar);
+        nav.appendChild(li);
     }
+
+
 }
 
 function isEven(n) {
