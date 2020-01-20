@@ -68,19 +68,20 @@ img {
 }
 
 .views-view-grid.cols-3 .views-col img {
-  max-height: 100%;
+  max-height: 90%;
   max-width: 100%;
   width: auto;
   height: auto;
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 10%;
   left: 0;
   right: 0;
   margin: auto;
 }
 
 .views-view-grid.cols-3 .views-col .views-field-title {
+  height: 10%;
   position: absolute;
   bottom: 0;
 }
