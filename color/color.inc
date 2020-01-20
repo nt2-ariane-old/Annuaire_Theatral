@@ -213,7 +213,7 @@ $info = array(
 
   // Preview files.
   'preview_image' => 'color/preview.png',
-  'preview_css' => 'color/preview.css',
+  'preview_css' => 'css/style.css',
 
   // Base file for image generation.
   'base_image' => 'color/base.png',
