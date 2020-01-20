@@ -82,6 +82,7 @@ img {
 
 .views-view-grid.cols-3 .views-col .views-field-title {
   height: 10%;
+  width: 100%;
   position: absolute;
   bottom: 0;
 }
