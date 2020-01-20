@@ -1,4 +1,32 @@
 window.onload = function() {
+    let searchbar = document.querySelector('#search-block-form');
+    let nav = document.querySelector('.top-nav');
+
+    if (searchbar !== undefined) {
+        searchbar.innerHTML = '';
+        searchbar.setAttribute('class', 'searchbar');
+        let input = document.createElement('input');
+        input.setAttribute('type', 'text');
+        input.setAttribute('class', 'search_input');
+        input.setAttribute('placeholder', 'Rechercher...');
+
+        let button = document.createElement('button');
+        button.setAttribute('class', 'search_icon');
+        button.setAttribute('type', 'submit');
+
+        let icon = document.createElement('i');
+        icon.setAttribute('class', 'fa fa-search');
+        button.appendChild(icon);
+        searchbar.appendChild(input);
+        searchbar.appendChild(button);
+
+        let li = document.createElement('li');
+        li.setAttribute('class', 'li-menu-type-2 no-bottom-margin');
+
+        li.appendChild(searchbar);
+        nav.appendChild(li);
+    }
+
     let rows = document.querySelectorAll('.views-row');
     i = 0;
     rows.forEach(row => {
@@ -30,33 +58,7 @@ window.onload = function() {
         }
     });
 
-    let searchbar = document.querySelector('#search-block-form');
-    let nav = document.querySelector('.top-nav');
 
-    if (searchbar !== undefined) {
-        searchbar.innerHTML = '';
-        searchbar.setAttribute('class', 'searchbar');
-        let input = document.createElement('input');
-        input.setAttribute('type', 'text');
-        input.setAttribute('class', 'search_input');
-        input.setAttribute('placeholder', 'Rechercher...');
-
-        let button = document.createElement('button');
-        button.setAttribute('class', 'search_icon');
-        button.setAttribute('type', 'submit');
-
-        let icon = document.createElement('i');
-        icon.setAttribute('class', 'fa fa-search');
-        button.appendChild(icon);
-        searchbar.appendChild(input);
-        searchbar.appendChild(button);
-
-        let li = document.createElement('li');
-        li.setAttribute('class', 'li-menu-type-2');
-
-        li.appendChild(searchbar);
-        nav.appendChild(li);
-    }
 
 
 }
