@@ -122,6 +122,18 @@ input {
     }
 }
 
+ul.quicktabs-tabs {
+    margin: 0;
+    padding: 0 0 40px;
+    text-align: center;
+}
+
+ul.quicktabs-tabs li.active a {
+    border: 1px solid #222 !important;
+    padding: 6px 20px 5px;
+    border-radius: 20px;
+}
+
 h1 {
     text-align: center;
     width: 100%;
