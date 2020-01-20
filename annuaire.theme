@@ -20,7 +20,7 @@ function annuaire_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
 		$form['keys']['#attributes']['placeholder'] = 'Rechercher...';
 
 		$form['actions']['submit']['#attributes']['class'] = array('search_icon');
-		$form['actions']['submit']['#value'] = '<i class="fa fa-search"></i>';
+		$form['actions']['submit']['#attributes']['#value'] = '<i class="fa fa-search"></i>';
 
 	  }
 }
