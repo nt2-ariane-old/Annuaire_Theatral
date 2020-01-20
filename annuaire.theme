@@ -16,11 +16,16 @@ function annuaire_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
 		$form['#prefix'] = '<div class="searchbar">';
 		$form['#suffix'] = '</div>';
 
+		
+		$form['keys']['#prefix'] ='';
+		$form['keys']['#suffix'] ='';
 		$form['keys']['#attributes']['class'] = array('search_input');
 		$form['keys']['#attributes']['placeholder'] = 'Rechercher...';
 
+		$form['actions']['submit']['#prefix'] = '';
+		$form['actions']['submit']['#suffix'] = '';
 		$form['actions']['submit']['#attributes']['class'] = array('search_icon');
-		$form['actions']['submit']['#attributes']['#value'] = '<i class="fa fa-search"></i>';
+		$form['actions']['submit']['#attributes']['#value'] = 'Rechercher';
 
 	  }
 }
