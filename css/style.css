@@ -47,6 +47,10 @@ img {
   height: auto;
 }
 
+#search-block-form {
+  display: none;
+}
+
 .search_icon {
   background-color: transparent;
 }

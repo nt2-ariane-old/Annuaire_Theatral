@@ -25,6 +25,7 @@ window.onload = function() {
 
         li.appendChild(searchbar);
         nav.appendChild(li);
+        searchbar.style.display = 'block';
     }
 
     let rows = document.querySelectorAll('.views-row');
