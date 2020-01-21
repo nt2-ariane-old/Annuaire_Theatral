@@ -809,6 +809,7 @@ nav ul ul li {
   .top-border #block-sitebranding-2 {
     width: 100%;
     padding: 5px 50px;
+    max-width: 100%;
   }
   .top-border #block-navigationprincipale {
     display: block;
