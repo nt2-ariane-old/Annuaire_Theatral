@@ -1,18 +1,5 @@
 <header class="top-border">
-	<div class="w-row">
-		<div class="w-col w-col-2 w-clearfix">
-			<a href="index.html" class="w-inline-block brand-logo animsition-link">
-				{{ page.branding }}
-			</a>
-		</div>
-		<div class="w-col w-col-10">
-			<div>
-				<nav class="navigation-type-3">
-					{{page.navigation_menu}}
-				</nav>
-			</div>
-		</div>
-	</div>
+	{{page.navigation_menu}}
 </header>
 
 {% if page.header %}

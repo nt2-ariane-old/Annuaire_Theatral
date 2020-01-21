@@ -7,9 +7,8 @@ description: 'Thème pour le site de Annuaire Theatral.'
 package: 'custom'
 
 regions:
-  navigation_menu: 'Menu de Navigation'
+  top_border: 'Barre du Haut'
   nav_social: 'Navigation Media Sociaux'
-  branding: 'Logo'
   header: 'Couverture'
   footer: 'Bas de page'
   content: 'Contenu'
