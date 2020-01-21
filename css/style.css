@@ -156,20 +156,6 @@ h2 {
   text-align: center;
 }
 
-#block-sitebranding-2 {
-  max-width: 15%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  display: inline-block;
-  overflow: hidden;
-}
-
-#block-sitebranding-2 a {
-  display: block;
-  height: 50px;
-}
-
 .paragraph-formatter {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -340,13 +326,32 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   padding: 5px 50px;
 }
 
-.top-border nav {
+.top-border #block-navigationprincipale {
   display: inline-block;
   height: 50px;
+  vertical-align: middle;
 }
 
-.top-border nav .top-nav .icon {
+.top-border #block-navigationprincipale .top-nav {
+  margin: 0;
+}
+
+.top-border #block-navigationprincipale .top-nav .icon {
   display: none;
+}
+
+.top-border #block-sitebranding-2 {
+  max-width: 15%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.top-border #block-sitebranding-2 a {
+  display: block;
+  height: 50px;
 }
 
 #dossiers .views-row,

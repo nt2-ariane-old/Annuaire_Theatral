@@ -151,19 +151,6 @@ h2 {
     text-align: center;
 }
 
-#block-sitebranding-2 {
-    max-width: 15%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    display: inline-block;
-    overflow: hidden;
-    a {
-        display: block;
-        height: 50px;
-    }
-}
-
 .paragraph-formatter {
     display: inline-flex;
     .paragraph-info {
@@ -312,13 +299,27 @@ footer {
 .top-border {
     position: sticky;
     padding: 5px 50px;
-    nav {
+    #block-navigationprincipale {
         display: inline-block;
         height: 50px;
+        vertical-align: middle;
         .top-nav {
+            margin: 0;
             .icon {
                 display: none;
             }
+        }
+    }
+    #block-sitebranding-2 {
+        max-width: 15%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        display: inline-block;
+        overflow: hidden;
+        a {
+            display: block;
+            height: 50px;
         }
     }
 }
