@@ -826,7 +826,7 @@ nav ul ul li {
     -webkit-transition: all 5ms ease-in-out;
     transition: all 5ms ease-in-out;
   }
-  .top-border #block-navigationprincipale .top-nav.responsive .icon {
+  .top-border #block-navigationprincipale .top-nav .icon {
     position: absolute;
     right: 0;
     top: -50px;
