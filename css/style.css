@@ -791,28 +791,28 @@ nav ul ul li {
   .bottom-border {
     display: none;
   }
-  .top-border nav .top-nav {
+  .top-border #block-navigationprincipale .top-nav {
     background-color: red;
   }
-  .top-border nav .top-nav li:not(:first-child) {
+  .top-border #block-navigationprincipale .top-nav li:not(:first-child) {
     display: none;
   }
-  .top-border nav .top-nav .icon {
+  .top-border #block-navigationprincipale .top-nav .icon {
     float: right;
     display: block;
   }
-  .top-border nav .top-nav .icon a {
+  .top-border #block-navigationprincipale .top-nav .icon a {
     font-size: 20px;
   }
-  .top-border nav .top-nav.responsive {
+  .top-border #block-navigationprincipale .top-nav.responsive {
     position: relative;
   }
-  .top-border nav .top-nav.responsive .icon {
+  .top-border #block-navigationprincipale .top-nav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .top-border nav .top-nav.responsive li {
+  .top-border #block-navigationprincipale .top-nav.responsive li {
     float: none;
     display: block;
     text-align: left;
