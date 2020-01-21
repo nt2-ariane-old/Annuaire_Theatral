@@ -800,9 +800,12 @@ nav ul ul li {
   .top-border nav .top-nav li:not(:first-child) {
     display: none;
   }
-  .top-border nav .top-nav li.icon {
+  .top-border nav .top-nav .icon {
     float: right;
     display: block;
+  }
+  .top-border nav .top-nav .icon a {
+    font-size: 20px;
   }
   .top-border nav .top-nav.responsive {
     position: relative;

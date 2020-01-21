@@ -765,9 +765,12 @@ nav ul ul li {
                 li:not(:first-child) {
                     display: none;
                 }
-                li.icon {
+                .icon {
                     float: right;
                     display: block;
+                    a {
+                        font-size: 20px;
+                    }
                 }
             }
             .top-nav.responsive {
