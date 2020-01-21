@@ -803,6 +803,7 @@ nav ul ul li {
   }
   .top-border #block-navigationprincipale .top-nav .icon a {
     font-size: 24px;
+    cursor: pointer;
   }
   .top-border #block-navigationprincipale .top-nav.responsive {
     position: relative;
