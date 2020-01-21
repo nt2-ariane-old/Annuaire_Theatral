@@ -13,6 +13,10 @@ window.onload = function() {
         let button = document.createElement('button');
         button.setAttribute('class', 'search_icon');
         button.setAttribute('type', 'submit');
+        button.setAttribute('id', 'search-button');
+        button.setAttribute('aria-label', 'Search Button');
+
+
 
         let icon = document.createElement('i');
         icon.setAttribute('class', 'fa fa-search');
