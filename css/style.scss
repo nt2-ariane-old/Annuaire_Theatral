@@ -785,13 +785,11 @@ nav ul ul li {
             }
             .top-nav.responsive {
                 position: relative;
-                top: 50px;
                 transition: all 5ms ease-in-out;
             }
             .top-nav.responsive .icon {
                 position: absolute;
                 right: 0;
-                top: -50px;
             }
             .top-nav.responsive li {
                 float: none;

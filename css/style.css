@@ -823,14 +823,12 @@ nav ul ul li {
   }
   .top-border #block-navigationprincipale .top-nav.responsive {
     position: relative;
-    top: 50px;
     -webkit-transition: all 5ms ease-in-out;
     transition: all 5ms ease-in-out;
   }
   .top-border #block-navigationprincipale .top-nav.responsive .icon {
     position: absolute;
     right: 0;
-    top: -50px;
   }
   .top-border #block-navigationprincipale .top-nav.responsive li {
     float: none;
