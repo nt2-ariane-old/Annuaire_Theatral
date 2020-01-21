@@ -9,6 +9,8 @@ window.onload = function() {
         input.setAttribute('type', 'text');
         input.setAttribute('class', 'search_input');
         input.setAttribute('placeholder', 'Rechercher...');
+        input.setAttribute('aria-label', 'Rechercher sur le site');
+
 
         let button = document.createElement('button');
         button.setAttribute('class', 'search_icon');
