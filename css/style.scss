@@ -766,6 +766,11 @@ nav ul ul li {
         max-width: 95%;
     }
     .top-border {
+        padding: 0;
+        #block-sitebranding-2 {
+            width: 100%;
+            padding: 5px 50px;
+        }
         #block-navigationprincipale {
             display: block;
             width: 100%;
@@ -788,6 +793,11 @@ nav ul ul li {
                 transition: all 5ms ease-in-out;
             }
             .top-nav .icon {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+            .top-nav.responsive .icon {
                 position: absolute;
                 right: 0;
                 top: -50px;
