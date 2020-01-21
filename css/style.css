@@ -791,12 +791,6 @@ nav ul ul li {
     width: 100%;
     max-width: 100%;
   }
-}
-
-@media only screen and (min-width: 700px) {
-  .item.blog-item {
-    width: 50%;
-  }
   .bottom-border {
     display: none;
   }
@@ -822,6 +816,12 @@ nav ul ul li {
     float: none;
     display: block;
     text-align: left;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .item.blog-item {
+    width: 50%;
   }
 }
 
