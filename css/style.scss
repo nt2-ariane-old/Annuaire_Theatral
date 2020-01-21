@@ -753,6 +753,18 @@ nav ul ul li {
     .bottom-border {
         display: none;
     }
+}
+
+@media only screen and (min-width: 700px) {
+    .item.blog-item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 95%;
+    }
     .top-border {
         #block-navigationprincipale {
             .top-nav {
@@ -785,18 +797,6 @@ nav ul ul li {
                 text-align: left;
             }
         }
-    }
-}
-
-@media only screen and (min-width: 700px) {
-    .item.blog-item {
-        width: 50%;
-    }
-}
-
-@media (max-width: 992px) {
-    .container {
-        max-width: 95%;
     }
 }
 
