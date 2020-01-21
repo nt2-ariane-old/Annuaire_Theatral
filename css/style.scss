@@ -311,8 +311,10 @@ footer {
 
 .top-border {
     position: sticky;
+    padding: 5px 50px;
     nav {
         display: inline-block;
+        height: 50px;
         .top-nav {
             .icon {
                 display: none;

@@ -337,10 +337,12 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
 .top-border {
   position: -webkit-sticky;
   position: sticky;
+  padding: 5px 50px;
 }
 
 .top-border nav {
   display: inline-block;
+  height: 50px;
 }
 
 .top-border nav .top-nav .icon {
