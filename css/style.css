@@ -165,6 +165,11 @@ h2 {
   overflow: hidden;
 }
 
+#block-sitebranding-2 a {
+  display: block;
+  height: 50px;
+}
+
 .paragraph-formatter {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
