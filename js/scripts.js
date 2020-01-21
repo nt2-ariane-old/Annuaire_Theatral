@@ -90,7 +90,7 @@ function isOdd(n) {
 function showHamburgerMenu() {
     console.log('test');
     var nav = document.querySelector('.top-nav');
-    if (nav.getAttribute('class') !== "responsive") {
+    if (nav.getAttribute('class') !== "top-nav responsive") {
         nav.setAttribute('class', 'top-nav responsive');
     } else {
         nav.setAttribute('class', 'top-nav')
