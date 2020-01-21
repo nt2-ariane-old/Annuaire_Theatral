@@ -286,7 +286,7 @@ a {
     max-height: 450px;
     padding-top: 120px;
     padding-bottom: 100px;
-    background-color: ##EE2367;
+    background-color: #EE2367;
 }
 
 .section-imp.parallax.img {
@@ -477,7 +477,7 @@ a {
     overflow-y: hidden;
     padding: 13px 21px 10px;
     float: left;
-    background-color: ##EE2367;
+    background-color: #EE2367;
     font-size: 16px;
     text-align: center;
     cursor: pointer;
@@ -698,13 +698,13 @@ a {
 }
 
 .tab-link:hover {
-    color: ##EE2367;
+    color: #EE2367;
 }
 
 .tab-link.w--current {
-    border-bottom: 1px solid ##EE2367;
+    border-bottom: 1px solid #EE2367;
     background-color: transparent;
-    color: ##EE2367;
+    color: #EE2367;
 }
 
 .tabs {
@@ -740,7 +740,7 @@ a {
     width: 80px;
     height: 80px;
     float: left;
-    color: ##EE2367;
+    color: #EE2367;
     font-size: 55px;
 }
 
@@ -815,7 +815,7 @@ a {
 }
 
 .blog-title:hover {
-    color: ##EE2367;
+    color: #EE2367;
 }
 
 .blog-title.in-grid {
@@ -907,9 +907,9 @@ a {
     margin-bottom: 40px;
     margin-left: auto;
     padding-top: 30px;
-    border: 1px solid ##EE2367;
+    border: 1px solid #EE2367;
     border-radius: 300px;
-    color: ##EE2367;
+    color: #EE2367;
     font-size: 38px;
 }
 
@@ -973,7 +973,7 @@ a {
 }
 
 .paginaton-but:hover {
-    background-color: ##EE2367;
+    background-color: #EE2367;
     color: white;
 }
 
@@ -1075,7 +1075,7 @@ a {
 .cont-sub-txt {
     margin-bottom: 20px;
     font-family: 'Playfair Display', sans-serif;
-    color: ##EE2367;
+    color: #EE2367;
     font-size: 13px;
     font-weight: 400;
 }
@@ -1118,7 +1118,7 @@ a {
 }
 
 .text-field:focus {
-    border-color: ##EE2367;
+    border-color: #EE2367;
 }
 
 .text-field.text-area {
@@ -1353,7 +1353,7 @@ a {
 }
 
 .arrow-slider:hover {
-    background-color: ##EE2367;
+    background-color: #EE2367;
 }
 
 .arrow-slider.left {
@@ -1441,13 +1441,13 @@ a {
 .link-nav-2.w--current {
     position: relative;
     z-index: 1;
-    border-bottom: 1px solid ##EE2367;
-    color: ##EE2367;
+    border-bottom: 1px solid #EE2367;
+    color: #EE2367;
 }
 
 .link-nav-2.active-2 {
-    border-bottom: 1px solid ##EE2367;
-    color: ##EE2367;
+    border-bottom: 1px solid #EE2367;
+    color: #EE2367;
 }
 
 .line-bottom-menu {
@@ -1543,12 +1543,12 @@ a {
 }
 
 .author-name.color {
-    color: ##EE2367;
+    color: #EE2367;
     line-height: 40px;
 }
 
 .element-border {
-    color: ##EE2367;
+    color: #EE2367;
     font-size: 40px;
 }
 
@@ -1617,7 +1617,7 @@ a {
 .slide-big-2 {
     padding-right: 20px;
     padding-left: 20px;
-    background-color: ##EE2367;
+    background-color: #EE2367;
     background-image: url('../images/slide-big-2.jpg');
     background-position: 50% 100%;
     background-size: contain;
@@ -2402,7 +2402,7 @@ a {
 }
 
 .title-product:hover {
-    color: ##EE2367;
+    color: #EE2367;
 }
 
 .button-shop {
@@ -2411,7 +2411,7 @@ a {
     margin-bottom: 10px;
     padding: 12px;
     float: left;
-    background-color: ##EE2367;
+    background-color: #EE2367;
     -webkit-transition: all 200ms ease;
     transition: all 200ms ease;
     font-family: Lekton, sans-serif;
@@ -2502,7 +2502,7 @@ a {
 }
 
 .shop-title:hover {
-    color: ##EE2367;
+    color: #EE2367;
 }
 
 .social-icon.shop-cart {
@@ -2524,7 +2524,7 @@ a {
 }
 
 .no-price {
-    color: ##EE2367;
+    color: #EE2367;
     font-weight: 400;
     text-decoration: line-through;
 }
@@ -2537,7 +2537,7 @@ a {
 }
 
 .category:hover {
-    color: ##EE2367;
+    color: #EE2367;
 }
 
 .number-but {
@@ -2563,7 +2563,7 @@ a {
 }
 
 .number-but.pls:hover {
-    background-color: ##EE2367;
+    background-color: #EE2367;
 }
 
 .number-but.pls.minus {
@@ -2694,7 +2694,7 @@ a {
 }
 
 .last-title:hover {
-    color: ##EE2367;
+    color: #EE2367;
 }
 
 .tags {
@@ -2711,7 +2711,7 @@ a {
 }
 
 .tags:hover {
-    background-color: ##EE2367;
+    background-color: #EE2367;
     color: #fff;
 }
 
