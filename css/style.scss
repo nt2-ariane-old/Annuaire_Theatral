@@ -756,7 +756,7 @@ nav ul ul li {
     .top-border {
         #block-navigationprincipale {
             .top-nav {
-                background-color: red;
+                background-color: #e8e8e8;
                 li:not(:first-child) {
                     display: none;
                 }
@@ -776,6 +776,10 @@ nav ul ul li {
                 position: absolute;
                 right: 0;
                 top: 0;
+            }
+            .top-nav.responsive ul {
+                position: relative;
+                top: 50px;
             }
             .top-nav.responsive li {
                 float: none;
