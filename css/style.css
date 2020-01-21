@@ -792,7 +792,7 @@ nav ul ul li {
     display: none;
   }
   .top-border #block-navigationprincipale .top-nav {
-    background-color: #e8e8e8;
+    background-color: #f3f3f3;
   }
   .top-border #block-navigationprincipale .top-nav li:not(:first-child) {
     display: none;
@@ -807,15 +807,14 @@ nav ul ul li {
   }
   .top-border #block-navigationprincipale .top-nav.responsive {
     position: relative;
+    top: 50px;
+    -webkit-transition: all 5ms ease-in-out;
+    transition: all 5ms ease-in-out;
   }
   .top-border #block-navigationprincipale .top-nav.responsive .icon {
     position: absolute;
     right: 0;
-    top: 0;
-  }
-  .top-border #block-navigationprincipale .top-nav.responsive ul {
-    position: relative;
-    top: 50px;
+    top: -50px;
   }
   .top-border #block-navigationprincipale .top-nav.responsive li {
     float: none;

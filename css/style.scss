@@ -756,7 +756,7 @@ nav ul ul li {
     .top-border {
         #block-navigationprincipale {
             .top-nav {
-                background-color: #e8e8e8;
+                background-color: #f3f3f3;
                 li:not(:first-child) {
                     display: none;
                 }
@@ -771,15 +771,13 @@ nav ul ul li {
             }
             .top-nav.responsive {
                 position: relative;
+                top: 50px;
+                transition: all 5ms ease-in-out;
             }
             .top-nav.responsive .icon {
                 position: absolute;
                 right: 0;
-                top: 0;
-            }
-            .top-nav.responsive ul {
-                position: relative;
-                top: 50px;
+                top: -50px;
             }
             .top-nav.responsive li {
                 float: none;
