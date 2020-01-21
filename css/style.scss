@@ -767,6 +767,8 @@ nav ul ul li {
     }
     .top-border {
         #block-navigationprincipale {
+            display: block;
+            width: 100%;
             .top-nav {
                 background-color: #f3f3f3;
                 li:not(:first-child) {

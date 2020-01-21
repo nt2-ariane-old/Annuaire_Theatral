@@ -803,6 +803,10 @@ nav ul ul li {
   .container {
     max-width: 95%;
   }
+  .top-border #block-navigationprincipale {
+    display: block;
+    width: 100%;
+  }
   .top-border #block-navigationprincipale .top-nav {
     background-color: #f3f3f3;
   }
