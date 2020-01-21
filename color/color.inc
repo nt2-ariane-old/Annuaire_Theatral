@@ -22,6 +22,16 @@ $info = array(
         'text' => '#494949',
       ),
     ),
+    'basic' => array(
+      'title' => t('Basic Theme at Creation'),
+      'colors' => array(
+        'base' => '#0072b9',
+        'link' => '#027ac6',
+        'top' => '#2385c2',
+        'bottom' => '#5ab5ee',
+        'text' => '#494949',
+      ),
+    ),
     'ash' => array(
       'title' => t('Ash'),
       'colors' => array(
