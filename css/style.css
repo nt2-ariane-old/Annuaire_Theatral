@@ -330,6 +330,7 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   display: inline-block;
   height: 50px;
   vertical-align: middle;
+  width: 85%;
 }
 
 .top-border #block-navigationprincipale .top-nav {
@@ -347,6 +348,7 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   height: auto;
   display: inline-block;
   overflow: hidden;
+  vertical-align: middle;
 }
 
 .top-border #block-sitebranding-2 a {
