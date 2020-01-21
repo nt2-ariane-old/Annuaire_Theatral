@@ -745,12 +745,13 @@ nav ul ul li {
     color: white;
 }
 
-@media only screen and (max-width: 700px) {
-    .top-border {
-        .w-col-9 {
-            width: calc(100% - 60px);
-        }
+@media (max-width: 992px) {
+    .container {
+        max-width: 95%;
     }
+}
+
+@media only screen and (max-width: 700px) {
     .container {
         width: 100%;
         max-width: 100%;
@@ -793,24 +794,6 @@ nav ul ul li {
 @media only screen and (min-width: 700px) {
     .item.blog-item {
         width: 50%;
-    }
-}
-
-@media (max-width: 992px) {
-    .top-border {
-        padding: 15px;
-        #block-social {
-            display: none;
-        }
-        .w-col-1 {
-            width: 60px;
-        }
-        .w-col-9 {
-            width: calc(100% - 60px);
-        }
-    }
-    .container {
-        max-width: 95%;
     }
 }
 
