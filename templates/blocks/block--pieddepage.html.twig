@@ -1,15 +1,16 @@
 <div class="searchbar">
 	{{ title_prefix }}
 	{% if label %}
-		{{ label }}
-		<div><img alt="soulignement de titre" src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png"></div>
-		
+
+		<div class="page-title" arialabelby="Titre de la Page">
+
+			<h2{{title_attributes}}>{{ label }}</h2>
+			<div><img alt="soulignement de titre" src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png"></div>
+		</div>
+
 	{% endif %}
 	{{ title_suffix }}
 	{% block content %}
 		{{ content }}
-		{% for key in content|keys %}
-			{{ key }}
-		{% endfor %}
 	{% endblock %}
 </div>
