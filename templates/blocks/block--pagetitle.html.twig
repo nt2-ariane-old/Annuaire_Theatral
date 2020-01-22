@@ -37,7 +37,7 @@
 		
 		<div class="page-title" arialabelby="Titre de la Page">
 
-            <h2{{title_attributes}}>{{ content|striptags }}</h2>
+            <h2{{title_attributes}}>{{ content.title|striptags }}</h2>
             {% for key in content|keys %}
                 {{key}}
             {% endfor %}
