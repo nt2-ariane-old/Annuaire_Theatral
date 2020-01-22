@@ -1,13 +1,13 @@
 
-<div class="blog-minimal">
+<div itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="Article d'Actualité" class="blog-minimal">
     <div class="data-blog">
         <i class="fa fa-envelope"></i>
     </div>
-    <h3 class="blog-title"><a class="blog-title animsition-link" href="{{ fields.view_node.content|render|striptags|trim }}">{{ fields.title.content|render|striptags|trim  }}</a></h3>
-    <p class="meta-tag">Publié le : {{ fields.field_nouvelle_date.content }}</p>
+    <h3 itemprop="headline" aria-labelledby="Titre de l'actualité" class="blog-title"><a class="blog-title animsition-link" aria-labelledby="Lien vers Actualite" href="{{ fields.view_node.content|render|striptags|trim }}">{{ fields.title.content|render|striptags|trim  }}</a></h3>
+    <p class="meta-tag" aria-labelledby="Date de Publication" itemprop="datePublished">Publié le : {{ fields.field_nouvelle_date.content }}</p>
     <div class="seperator center"></div>
-    <p>{{ fields.body.content }}</p>
+    <p itemprop="backstory" aria-labelledby="Contenu de l'actualité">{{ fields.body.content }}</p>
     <div class="small-spc">
-      <a href="{{ fields.view_node.content|render|striptags|trim }}" class="read-more animsition-link">Lire la suite&nbsp;›</a>
+      <a aria-labelledby="Lien Lire la suite" href="{{ fields.view_node.content|render|striptags|trim }}" class="read-more animsition-link">Lire la suite ›</a>
     </div>
 </div>
