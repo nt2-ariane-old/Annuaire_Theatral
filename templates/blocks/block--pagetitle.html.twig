@@ -41,6 +41,9 @@
             {% for key in content|keys %}
                 {{key}}
             {% endfor %}
+            {{content.title}}
+            {{content.type}}
+            {{content|title}}
 			<div><img alt="soulignement de titre" src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png"></div>
 		</div>
 	{% endblock %}
