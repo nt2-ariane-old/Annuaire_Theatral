@@ -9,13 +9,11 @@
   </div>
   <div class="w-container container-contact">
     <div class="align-center">
-      <h2 class="inner-title">{{fields.field_journal_title.content}}</h2>
-      <h3 class="inner-title">{{fields.title.content}}</h3>
-      <p class="sub-information">#{{ fields.field_issue_number.content }}</p>
-      {{ fields.field_publication_date.content }}
-      {% for item in fields.field_publication_date.content %}
-        {{ item}}
-      {% endfor %}
+      <h2 class="inner-title" aria-labelby="Titre de la Revue">{{fields.field_journal_title.content}}</h2>
+      <h3 class="inner-title" aria-labelby="Titre du Numéro">{{fields.title.content}}</h3>
+      <p class="sub-information" aria-labelby="Numéro de la Revue">#{{ fields.field_issue_number.content }}</p>
+      <p class="sub-information" aria-labelby="Date de la publication"> {{ fields.field_publication_date.content }}</p>
+
     </div>
   </div>
 </a>
