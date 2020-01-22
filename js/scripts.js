@@ -74,13 +74,13 @@ window.onload = function() {
         }
     });
 
-    // let bloc_abonnement = document.querySelector('#abonnement');
-    // if (bloc_abonnement == undefined) {
-    //     let content = document.querySelector('.bottom-space');
-    //     if (content == undefined) {
-    //         content.innerHTML = bloc_abonnement;
-    //     }
-    // }
+    let bloc_abonnement = document.querySelector('#abonnement');
+    if (bloc_abonnement == undefined) {
+        let content = document.querySelector('.bottom-space');
+        if (content == undefined) {
+            content.innerHTML = bloc_abonnement;
+        }
+    }
 
 }
 
