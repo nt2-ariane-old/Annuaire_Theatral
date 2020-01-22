@@ -38,7 +38,7 @@
 		<div class="page-title" arialabelby="Titre de la Page">
 
             <h2{{title_attributes}}>{{ content.title|striptags }}</h2>
-            {% for key in content.title|keys %}
+            {% for key in content|keys %}
                 {{key}}
             {% endfor %}
 			<div><img alt="soulignement de titre" src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png"></div>
