@@ -153,10 +153,10 @@
 							{# Body #}
 
 							<div class="bottom-space">
-								{% if content.body %}
+								{% if content.body === '' %}
 									{{ content.body }}
 								{% else %}
-									Abonnez-Vous
+									<p>Abonnez-Vous</p>
 								{% endif %}
 							</div>
 
