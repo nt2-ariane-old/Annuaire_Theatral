@@ -256,6 +256,16 @@ nav#block-social {
   line-height: 36px;
 }
 
+.page-title {
+  text-align: center;
+  padding: 2rem;
+}
+
+.page-title h1,
+.page-title h2 {
+  font-size: 36rem;
+}
+
 footer {
   background-color: #e0e0e0;
 }
