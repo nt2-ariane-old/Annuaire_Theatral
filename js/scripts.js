@@ -16,7 +16,7 @@ window.onload = function() {
         button.setAttribute('class', 'search_icon');
         button.setAttribute('type', 'submit');
         button.setAttribute('id', 'search-button');
-        button.setAttribute('aria-label', 'Search Button');
+        button.setAttribute('aria-label', 'Bouton Rechercher');
 
 
 
