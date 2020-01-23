@@ -375,7 +375,7 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   padding: 1em;
 }
 
-.user-page {
+#user-page {
   min-height: calc(100vh - 120px - 30px);
 }
 
