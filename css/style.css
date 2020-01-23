@@ -270,6 +270,28 @@ nav#block-social {
   font-size: 36px;
 }
 
+ul.tabs.primary {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.tabs.primary li {
+  display: inline;
+  border: solid;
+  border-width: 1px 1px 0 1px;
+  margin: 0 5px 0 0;
+}
+
+ul.tabs.primary li a {
+  padding: 0 10px;
+}
+
+ul.tabs.primary li.is-active {
+  padding-bottom: 1px;
+  background: white;
+}
+
 footer {
   background-color: #e0e0e0;
   margin-top: 80px;
