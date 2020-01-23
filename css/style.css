@@ -192,6 +192,10 @@ h2 {
   line-height: 16px;
   -webkit-transition: width 0.4s linear;
   transition: width 0.4s linear;
+  padding: 0 10px;
+  width: 150px;
+  caret-color: red;
+  transition: width 0.4s linear;
 }
 
 .searchbar:hover > .search_input {
@@ -371,7 +375,7 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   padding: 1em;
 }
 
-#block-mainpagecontent {
+.user-page {
   min-height: calc(100vh - 120px - 30px);
 }
 
