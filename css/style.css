@@ -353,6 +353,10 @@ ul.tabs.primary li.is-active:before {
           box-shadow: 2px 2px 0 #FFF;
 }
 
+ul.tabs.primary li.is-active a {
+  background-color: white;
+}
+
 ul.tabs.primary li.is-active:after {
   -webkit-box-shadow: -2px 2px 0 #FFF;
           box-shadow: -2px 2px 0 #FFF;
