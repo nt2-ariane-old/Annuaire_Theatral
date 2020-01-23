@@ -342,6 +342,10 @@ footer {
     }
 }
 
+#block-mainpagecontent {
+    min-height: calc(100vh - 120px - 30px);
+}
+
 .bottom-border,
 .top-border {
     display: block;

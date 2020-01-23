@@ -371,6 +371,10 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   padding: 1em;
 }
 
+#block-mainpagecontent {
+  min-height: calc(100vh - 120px - 30px);
+}
+
 .bottom-border,
 .top-border {
   display: block;
