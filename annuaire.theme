@@ -40,3 +40,20 @@ function annuaire_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\
 	unset($form['actions']['preview']);
 	unset($form['form-item-copy']);
 }
+function annuaire_preprocess_page(&$vars) {
+	global $user;
+	if ($user->uid != 0) {
+	  // if user logged in show logout link
+	  $vars['primary_links'][] = Array (
+		  'href' => '/user/logout',
+		  'title' => t('Se Déconnecter')
+	  );    
+	}
+	else {
+	  // if user logged out show login link
+	  $vars['primary_links'][] = Array (
+		  'href' => '/user/login',
+		  'title' => t('Se Connecter')
+	  );
+	}
+  }

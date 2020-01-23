@@ -185,6 +185,11 @@ h2 {
     caret-color: transparent;
     line-height: 16px;
     transition: width 0.4s linear;
+    // 
+    padding: 0 10px;
+    width: 150px;
+    caret-color: red;
+    transition: width 0.4s linear;
 }
 
 .searchbar:hover>.search_input {
@@ -790,6 +795,7 @@ nav ul ul li {
             width: 100%;
             padding: 5px 50px;
             max-width: 100%;
+            d
         }
         #block-navigationprincipale {
             display: block;
