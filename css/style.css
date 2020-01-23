@@ -375,6 +375,19 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   padding: 1em;
 }
 
+form#views-form-commerce-cart-form-default-12 {
+  font-family: Lekton, sans-serif;
+}
+
+form#views-form-commerce-cart-form-default-12 table td,
+form#views-form-commerce-cart-form-default-12 table th {
+  padding: 0 20px 0 0;
+}
+
+form#views-form-commerce-cart-form-default-12 .order-total-line .order-total-line-label {
+  padding-right: 1em;
+}
+
 #user-page,
 .user-form {
   min-height: calc(100vh - 120px - 30px);

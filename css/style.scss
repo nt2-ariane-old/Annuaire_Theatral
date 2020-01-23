@@ -362,12 +362,11 @@ form#views-form-commerce-cart-form-default-12 {
     }
 }
 
-
-}
 #user-page,
 .user-form {
     min-height: calc(100vh - 120px - 30px);
 }
+
 .bottom-border,
 .top-border {
     display: block;
@@ -377,6 +376,7 @@ form#views-form-commerce-cart-form-default-12 {
     background-color: #e8e8e8;
     border-radius: 5px;
 }
+
 .blog-zig-zag {
     img {
         min-height: 100%;
@@ -386,11 +386,13 @@ form#views-form-commerce-cart-form-default-12 {
         height: auto;
     }
 }
+
 //COUVERTURE
 .section-imp {
     padding: 40px 20px;
     background-color: transparent;
 }
+
 main {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -398,17 +400,21 @@ main {
         text-align: center;
     }
 }
+
 //GENERAL
 .block-title {
     text-align: center;
 }
+
 .row {
     width: 100%;
 }
+
 .portfolio-overlay img {
     width: auto;
     height: auto;
 }
+
 .header-presentation {
     max-width: 800px;
     margin: auto;
@@ -418,9 +424,11 @@ main {
     font-weight: 100;
     font-family: Arial, sans-serif;
 }
+
 #vivarium {
     border: 1px solid black;
 }
+
 .tags {
     &::after {
         content: "";
@@ -428,15 +436,18 @@ main {
         display: table;
     }
 }
+
 .tags::after {
     content: "";
     clear: both;
     display: table;
 }
+
 .sidebar-class {
     padding-top: 20px;
     margin-top: 20px;
 }
+
 .lecture-content {
     width: 100%;
     display: block;
@@ -446,30 +457,31 @@ main {
         display: inline-block;
         margin: auto;
     }
-    
     span {
         padding: 0 0.5rem;
         display: inline-block;
     }
 }
+
 .lectures {
     .lecture-content {
         width: 25%;
         float: left;
     }
-    
     &::after {
         content: "";
         clear: both;
         display: table;
     }
 }
+
 .js .paragraphs-collapsed-description {
     position: static;
     height: auto;
     overflow: auto;
     line-height: 20px;
 }
+
 .preview {
     height: 100px;
     width: 100px;
@@ -481,7 +493,6 @@ main {
         padding: 0;
         margin: 0;
     }
-    
     img {
         min-width: 100%;
         min-height: 100%;
@@ -489,16 +500,15 @@ main {
         max-width: none;
         width: auto;
     }
-    
     .field__item {
         height: 100px;
         width: 100px;
     }
-    
     .field.field--name-field-image.field--type-image.field--label-hidden.field__item a {
         padding: 0;
     }
 }
+
 .sub-information {
     font-family: Lekton, sans-serif;
     line-height: 25px;
@@ -510,21 +520,25 @@ main {
     color: white;
     font-size: 1.2rem;
 }
+
 .blog-hover-zoom-photo {
     padding: 1rem;
 }
+
 .nav-link {
     color: #495057;
     &:hover {
         color: #EE2367;
     }
 }
+
 //POUR ISSUE
 #editorial,
 #dossiers,
 #individuel {
     margin: 2em auto;
 }
+
 //MENU
 nav ul ul {
     display: none;
@@ -534,27 +548,34 @@ nav ul ul {
     background-color: white;
     left: 0;
 }
+
 nav ul li:hover>ul {
     display: inherit;
 }
+
 nav ul li>ul:hover {
     display: inherit;
 }
+
 nav ul ul li {
     min-width: 170px;
     display: list-item;
     position: relative;
 }
+
 .sub-item {
     background-color: #f3f3f3;
     border-radius: 5px;
 }
+
 .field--type-text-with-summary {
     padding: 1rem;
 }
+
 .doc {
     padding: 1rem 0;
 }
+
 //Views
 #intro {
     position: relative;
@@ -563,7 +584,6 @@ nav ul ul li {
         font-size: 1.2rem;
         color: white;
     }
-    
     .w-section a {
         font-size: inherit;
         color: white;
@@ -572,12 +592,10 @@ nav ul ul li {
             color: inherit;
         }
     }
-    
     .sub-text-title {
         font-size: 20px;
         display: inline;
     }
-    
     .paragraph--type--publication-date {
         display: inline-block;
         &:before {
@@ -596,7 +614,6 @@ nav ul ul li {
             font-family: Lekton, sans-serif;
         }
     }
-    
     .field--name-field-issue-number {
         &::before {
             content: '#';
@@ -607,7 +624,6 @@ nav ul ul li {
             font-family: Lekton, sans-serif;
         }
     }
-    
     .field--name-field-publication-date,
     .field--name-field-issue-number {
         display: inline-block;
@@ -619,7 +635,6 @@ nav ul ul li {
             font-family: Lekton, sans-serif;
         }
     }
-    
     img {
         position: absolute;
         z-index: -1;
@@ -629,16 +644,13 @@ nav ul ul li {
         min-height: 100%;
         height: auto;
     }
-    
     .embed-video,
     .video-wrapper {
         position: static;
     }
-    
     h2 {
         font-size: 50px;
     }
-    
     h3 {
         font-size: 30px;
         a {
@@ -650,6 +662,7 @@ nav ul ul li {
         }
     }
 }
+
 .field--name-field-dossier-vivarium {
     .field__item {
         a {
@@ -658,7 +671,6 @@ nav ul ul li {
             color: white;
         }
     }
-    
     .field__label {
         font-size: 20px;
         text-align: right;
@@ -671,6 +683,7 @@ nav ul ul li {
         }
     }
 }
+
 .blog-item {
     img {
         width: auto;
@@ -679,14 +692,17 @@ nav ul ul li {
         min-width: 100%;
     }
 }
+
 .item.blog-item {
     width: 100%;
 }
+
 .blog-grid-hiden {
     a {
         width: 100%;
     }
 }
+
 .blog-grid-con {
     height: 300px;
     overflow: hidden;
@@ -695,6 +711,7 @@ nav ul ul li {
         bottom: 0;
     }
 }
+
 .blog-post-banner,
 #intro {
     .sub-text-title {
@@ -728,11 +745,13 @@ nav ul ul li {
         }
     }
 }
+
 #presentation {
     &>div {
         padding: 1rem;
     }
 }
+
 #citation {
     .field--name-field-pour-citer {
         font-weight: 400;
@@ -742,6 +761,7 @@ nav ul ul li {
         color: rgb(37, 37, 37);
     }
 }
+
 //container
 .container,
 .row,
@@ -749,23 +769,24 @@ nav ul ul li {
     padding: 0;
     margin: auto;
 }
+
 //pages
 #sommaire {
     min-height: calc(100vh - 120px);
 }
+
 .portfolio-cn-title {
     color: white;
 }
+
 @media only screen and (max-width: 700px) {
     .container {
         width: 100%;
         max-width: 100%;
     }
-    
     .bottom-border {
         display: none;
     }
-    
     #block-pieddepage,
     #block-footerinfos,
     #block-views-block-partenaires-block-1 {
@@ -773,16 +794,17 @@ nav ul ul li {
         float: none;
     }
 }
+
 @media only screen and (min-width: 700px) {
     .item.blog-item {
         width: 50%;
     }
 }
+
 @media (max-width: 1100px) {
     .container {
         max-width: 95%;
     }
-    
     .top-border {
         padding: 0;
         #block-sitebranding-2 {
@@ -829,11 +851,11 @@ nav ul ul li {
         }
     }
 }
+
 @media only screen and (min-width: 1100px) {
     .item.blog-item {
         width: 33%;
     }
-    
     .container {
         max-width: 1100px;
     }
