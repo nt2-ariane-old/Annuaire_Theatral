@@ -287,7 +287,7 @@ ul.tabs.primary a {
     text-decoration: none;
 }
 
-ul.tabs.primary li.selected {
+ul.tabs.primary li.is-active {
     background: #FFF;
     color: #333;
     z-index: 2;
@@ -328,11 +328,11 @@ ul.tabs.primary li:after {
     box-shadow: -2px 2px 0 #D1D1D1;
 }
 
-ul.tabs.primary li.selected:before {
+ul.tabs.primary li.is-active:before {
     box-shadow: 2px 2px 0 #FFF;
 }
 
-ul.tabs.primary li.selected:after {
+ul.tabs.primary li.is-active:after {
     box-shadow: -2px 2px 0 #FFF;
 }
 
