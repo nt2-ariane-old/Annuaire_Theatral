@@ -9,5 +9,16 @@
 		<div class="w-container container-contact"></div>
 
 	</div>
-	<h2 aria-labelby="Titre du Produit" >{{product.title}}</h2>
+
+	<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
+		<h2 class="inner-title">{{product.title}}</h2>
+		<div>
+
+			
+			
+			<div class="arrow-down">
+				<a href="#sommaire" class="w-inline-block icon-scroll"></a>
+			</div>
+		</div>
+	</section>
 </div>
