@@ -32,7 +32,7 @@
 	{% import _self as menus %}
 	{% if items %}
 		{% if menu_level == 0 %}
-			<ul{{attributes}} class="top-nav">
+			<ul{{attributes}} id="main_menu" class="top-nav" aria-haspopup="true" aria-expanded="false">
 			{% else %}
 				<ul class="w-list-unstyled top-nav">
 				{% endif %}
@@ -49,7 +49,7 @@
 						</a>
 						<div data-ix="line-menu-type" class="line-bottom-menu"></div>
 						{% if item.below %}
-							<ul class="sub-item">
+							<ul class="sub-item" aria-expanded="false" aria-labelledby="main_menu">
 
 								{% for child in item.below %}
 									<li{{child.attributes}} class="li-menu-type-2">
