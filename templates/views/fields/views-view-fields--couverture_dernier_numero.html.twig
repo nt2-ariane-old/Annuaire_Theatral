@@ -10,15 +10,14 @@
 </div>
 <div class="w-container container-contact">
 	<div class="align-center">
-    <h1 class="inner-title" aria-labelby="Titre de la Revue">{{fields.field_journal_title.content}}</h1>
-    
-    
-		<a class="season-issue" href='{{fields.view_node.content|striptags}}'>
+		<h1 class="inner-title" aria-labelby="Titre de la Revue">{{fields.field_journal_title.content}}</h1>
+	</div>
+	<div class="align-center season-issue">
+		<a href='{{fields.view_node.content|striptags}}'>
 			<h2 class="inner-title" aria-labelby="Titre du Numéro">{{fields.title.content|striptags}}</h2>
 			<p class="sub-information" aria-labelby="Numéro de la Revue">#{{ fields.field_issue_number.content|striptags }}</p>
 			<p class="sub-information" aria-labelby="Date de la publication">
 				{{ fields.field_publication_date.content }}</p>
 		</a>
-
 	</div>
 </div>

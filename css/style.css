@@ -789,6 +789,7 @@ nav ul ul li {
 
 #intro .align-center .season-issue {
   background-color: #FFFFFF60;
+  display: block;
 }
 
 #intro a {
