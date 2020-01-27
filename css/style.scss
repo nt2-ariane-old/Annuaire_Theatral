@@ -455,6 +455,25 @@ footer {
     }
 }
 
+#block-abonnezvous {
+    background: #eaeaea;
+    border: 3px solid black;
+    p,
+    h2 {
+        margin-bottom: 1em;
+    }
+    .paywall_bouton {
+        border-radius: 3px;
+        padding: 12px 13px;
+        font-size: 2em;
+        background: #ee2367;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        display: inline-block;
+    }
+}
+
 #dossiers,
 #filter {
     .views-row {
