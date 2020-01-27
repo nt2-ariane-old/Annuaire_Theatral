@@ -1,6 +1,6 @@
 <div class="video-wrapper">
 
-	<div class="w-embed embed-video">
+	<div aria-labelledby="Image de Couverture du Numéro" class="w-embed embed-video">
 		{{ fields.field_image.content }}
 	</div>
 
@@ -8,15 +8,15 @@
 		<div class="video-overlay"></div>
 	</a>
 </div>
-<div class="w-container container-contact">
+<div itemscope itemtype="https://schema.org/Periodical" class="w-container container-contact">
 	<div class="align-center">
-		<h1 class="inner-title" aria-labelby="Titre de la Revue">{{fields.field_journal_title.content}}</h1>
+		<h1 class="inner-title" aria-labelby="Titre de la Revue" itemprop="name">{{fields.field_journal_title.content}}</h1>
 	</div>
-	<div class="align-center season-issue">
+	<div aria-labelledby="Informations sur le Numéro" itemprop="hasPart" itemscope itemtype="http://schema.org/PublicationVolume" class="align-center season-issue">
 		<a href='{{fields.view_node.content|striptags}}'>
-			<h2 class="inner-title" aria-labelby="Titre du Numéro">{{fields.title.content|striptags}}</h2>
-			<span class="sub-information" aria-labelby="Numéro de la Revue">#{{ fields.field_issue_number.content|striptags }}</span>,
-			<span class="sub-information" aria-labelby="Date de la publication">{{ fields.field_publication_date.content|striptags}}</span>
+			<h2 class="inner-title" aria-labelledby="Titre du Numéro" itemprop="name">{{fields.title.content|striptags}}</h2>
+			#<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ fields.field_issue_number.content|striptags }}</span>,
+			<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ fields.field_publication_date.content|striptags}}</span>
 		</a>
 	</div>
 </div>
