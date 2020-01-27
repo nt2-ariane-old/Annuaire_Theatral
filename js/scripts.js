@@ -71,6 +71,7 @@ window.onload = function() {
     if (bloc_abonnement != null) {
         let content = document.querySelector('.bottom-space');
         console.log(content.innerHTML)
+        console.log(bloc_abonnement)
         content.innerHTML = bloc_abonnement;
     }
 
