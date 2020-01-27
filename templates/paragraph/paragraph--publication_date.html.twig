@@ -1,14 +1,13 @@
 <p class="sub-information">
 	{{content.field_season.title}}
-	{% for key in content.field_season.items|keys %}
-		{{key}}
+	{% for item in content.field_season.items %}
+		{{item}}
 	{% endfor %}
 	{% set season %}
 	{{ content.field_season }}
     {% endset %}
     <span>{{season|striptags}}</span>
 </p>
-<p>{{ conBody|striptags }}</p>
 <!-- <span>{{content.field_date|striptags}}</span>
 	<span>{{content.field_publication_format}}</span>
 	<span>{{content.field_date_type}}</span> --></p>
