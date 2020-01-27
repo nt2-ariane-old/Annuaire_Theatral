@@ -1,19 +1,20 @@
+<div class="video-wrapper">
+	<div class="w-embed embed-video">
+		<a href='{{fields.view_node.content|striptags}}'>
+			{{ fields.field_image.content }}
+		</a>
+	</div>
+	<div class="video-overlay"></div>
+</div>
+<div class="w-container container-contact">
+	<div class="align-center">
+		<h2 class="inner-title" aria-labelby="Titre de la Revue">{{fields.field_journal_title.content}}</h2>
+		<a href='{{fields.view_node.content|striptags}}'>
+			<h3 class="inner-title" aria-labelby="Titre du Numéro">{{fields.title.content}}</h3>
+			<p class="sub-information" aria-labelby="Numéro de la Revue">#{{ fields.field_issue_number.content }}</p>
+			<p class="sub-information" aria-labelby="Date de la publication">
+				{{ fields.field_publication_date.content }}</p>
+		</a>
 
-
-<a href='{{fields.view_node.content|striptags}}' >
-  <div class="video-wrapper">
-    <div class="w-embed embed-video">
-    {{ fields.field_image.content }}
-    </div>
-    <div class="video-overlay"></div>
-  </div>
-  <div class="w-container container-contact">
-    <div class="align-center">
-      <h2 class="inner-title" aria-labelby="Titre de la Revue">{{fields.field_journal_title.content}}</h2>
-      <h3 class="inner-title" aria-labelby="Titre du Numéro">{{fields.title.content}}</h3>
-      <p class="sub-information" aria-labelby="Numéro de la Revue">#{{ fields.field_issue_number.content }}</p>
-      <p class="sub-information" aria-labelby="Date de la publication"> {{ fields.field_publication_date.content }}</p>
-
-    </div>
-  </div>
-</a>
+	</div>
+</div>

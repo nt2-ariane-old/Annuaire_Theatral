@@ -32,7 +32,7 @@ img {
 }
 
 .window-size {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 120px - 4rem);
 }
 
 .data-blog {
@@ -403,7 +403,7 @@ footer {
 }
 
 .informations {
-    min-height: calc(100vh - 120px - 64px);
+    min-height: calc(100vh - 120px - 64px - 4rem);
     padding: 1em;
 }
 
@@ -521,7 +521,7 @@ form#views-form-commerce-cart-form-default-12 {
 
 #user-page,
 .user-form {
-    min-height: calc(100vh - 120px - 30px);
+    min-height: calc(100vh - 120px - 30px - 4rem);
 }
 
 .field--name-field-author {
@@ -926,7 +926,7 @@ nav ul ul li {
 
 //pages
 #sommaire {
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 120px - 4rem);
 }
 
 .portfolio-cn-title {

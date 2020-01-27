@@ -33,7 +33,7 @@ img {
 }
 
 .window-size {
-  height: calc(100vh - 120px);
+  height: calc(100vh - 120px - 4rem);
 }
 
 .data-blog {
@@ -432,7 +432,7 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
 }
 
 .informations {
-  min-height: calc(100vh - 120px - 64px);
+  min-height: calc(100vh - 120px - 64px - 4rem);
   padding: 1em;
 }
 
@@ -570,7 +570,7 @@ form#views-form-commerce-cart-form-default-12 .order-total-line .order-total-lin
 
 #user-page,
 .user-form {
-  min-height: calc(100vh - 120px - 30px);
+  min-height: calc(100vh - 120px - 30px - 4rem);
 }
 
 .field--name-field-author p {
@@ -985,7 +985,7 @@ nav ul ul li {
 }
 
 #sommaire {
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px - 4rem);
 }
 
 .portfolio-cn-title {
