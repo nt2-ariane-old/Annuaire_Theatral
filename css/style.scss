@@ -591,7 +591,8 @@ main {
 
 .lecture-content {
     width: 100%;
-    display: block;
+    display: flex;
+    margin: 0.3rem;
     cursor: pointer;
     &>* {
         width: 50%;
