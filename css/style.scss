@@ -408,6 +408,16 @@ footer {
     color: black;
 }
 
+.bottom-border,
+.top-border {
+    display: block;
+    max-width: 1100px;
+    margin: auto;
+    color: black;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+}
+
 .top-border {
     position: sticky;
     padding: 5px 15px;
@@ -508,16 +518,6 @@ form#views-form-commerce-cart-form-default-12 {
 #user-page,
 .user-form {
     min-height: calc(100vh - 120px - 30px);
-}
-
-.bottom-border,
-.top-border {
-    display: block;
-    max-width: 1100px;
-    margin: auto;
-    color: black;
-    background-color: #e8e8e8;
-    border-radius: 5px;
 }
 
 .field--name-field-author {
@@ -957,6 +957,7 @@ nav ul ul li {
     }
     .top-border {
         padding: 0;
+        margin-bottom: 2rem;
         #block-sitebranding-2 {
             width: 100%;
             padding: 5px 15px;
