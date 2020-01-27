@@ -8,12 +8,12 @@
 </div>
 <div class="w-container container-contact">
 	<div class="align-center">
-		<h2 class="inner-title" aria-labelby="Titre de la Revue">{{fields.field_journal_title.content}}</h2>
+    <h1 class="inner-title" aria-labelby="Titre de la Revue">{{fields.field_journal_title.content}}</h1>
 		<a href='{{fields.view_node.content|striptags}}'>
-			<h3 class="inner-title" aria-labelby="Titre du Numéro">{{fields.title.content}}</h3>
+			<h2 class="inner-title" aria-labelby="Titre du Numéro">{{fields.title.content}}</h2>
 			<p class="sub-information" aria-labelby="Numéro de la Revue">#{{ fields.field_issue_number.content }}</p>
 			<p class="sub-information" aria-labelby="Date de la publication">
-				{{ fields.field_publication_date.content }}</p>
+				{{ fields.field_publication_date.content|raw|striptags }}</p>
 		</a>
 
 	</div>
