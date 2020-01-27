@@ -68,8 +68,11 @@ window.onload = function() {
     });
 
     let bloc_abonnement = document.querySelector('#abonnement');
+    console.log(bloc_abonnement)
     if (bloc_abonnement != null) {
         let content = document.querySelector('.bottom-space');
+        console.log(content)
+
         if (content == null) {
             content.innerHTML = bloc_abonnement;
         }
