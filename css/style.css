@@ -382,6 +382,12 @@ footer #block-footerinfos {
   float: left;
 }
 
+footer #block-views-block-partenaires-block-1 h2,
+footer #block-pieddepage h2,
+footer #block-footerinfos h2 {
+  font-size: 30px;
+}
+
 footer #block-views-block-partenaires-block-1 *,
 footer #block-pieddepage *,
 footer #block-footerinfos * {
