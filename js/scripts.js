@@ -36,7 +36,7 @@ window.onload = function() {
         searchbar.style.display = 'inline-block';
     }
 
-    let rows = document.querySelectorAll('.views-row');
+    let rows = document.querySelectorAll('.blog-hover-zoom-photo');
     i = 0;
     rows.forEach(row => {
         rowContent = row.querySelectorAll('.blog-zig-zag');
