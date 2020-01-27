@@ -10,13 +10,6 @@ body {
   background-color: white;
 }
 
-h2 {
-  display: block;
-  clear: both;
-  line-height: 1.5;
-  font-size: 48px;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -517,6 +510,10 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
 }
 
 #block-abonnezvous p,
+#block-abonnezvous h2 {
+  margin-bottom: 1em;
+}
+
 #block-abonnezvous .paywall_bouton {
   border-radius: 3px;
   padding: 12px 13px;

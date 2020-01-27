@@ -10,13 +10,6 @@ body {
     background-color: white;
 }
 
-h2 {
-    display: block;
-    clear: both;
-    line-height: 1.5;
-    font-size: 48px;
-}
-
 a {
     color: inherit;
     text-decoration: none;
@@ -467,6 +460,9 @@ footer {
     border-radius: 5px;
     text-align: center;
     p,
+    h2 {
+        margin-bottom: 1em;
+    }
     .paywall_bouton {
         border-radius: 3px;
         padding: 12px 13px;
