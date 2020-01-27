@@ -16,7 +16,7 @@
 		<a href='{{fields.view_node.content|striptags}}'>
 			<h2 class="inner-title" aria-labelby="Titre du Numéro">{{fields.title.content|striptags}}</h2>
 			<span class="sub-information" aria-labelby="Numéro de la Revue">#{{ fields.field_issue_number.content|striptags }}</span>
-			<span class="sub-information" aria-labelby="Date de la publication">{{ fields.field_publication_date.content }}</span>
+			<span class="sub-information" aria-labelby="Date de la publication">{{ fields.field_publication_date.content|striptags}}</span>
 		</a>
 	</div>
 </div>
