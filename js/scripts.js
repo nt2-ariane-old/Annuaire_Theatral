@@ -37,6 +37,7 @@ window.onload = function() {
     }
 
     let rows = document.querySelectorAll('.blog-hover-zoom-photo');
+    console.log(rows)
     i = 0;
     rows.forEach(row => {
         rowContent = row.querySelectorAll('.blog-zig-zag');
