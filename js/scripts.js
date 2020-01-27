@@ -70,6 +70,7 @@ window.onload = function() {
     let bloc_abonnement = document.querySelector('#block-abonnezvous');
     if (bloc_abonnement != null) {
         let content = document.querySelector('.bottom-space');
+        console.log(content.innerHTML)
         content.innerHTML = bloc_abonnement;
     }
 
