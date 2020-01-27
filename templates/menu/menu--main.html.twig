@@ -32,9 +32,9 @@
 	{% import _self as menus %}
 	{% if items %}
 		{% if menu_level == 0 %}
-			<ul{{attributes}} id="main_menu" class="top-nav" aria-haspopup="true" aria-expanded="false">
+			<ul{{attributes}} class="top-nav" aria-labelledby="Menu Principal">
 			{% else %}
-				<ul class="w-list-unstyled top-nav">
+				<ul class="w-list-unstyled top-nav" aria-labelledby="Menu Principal">
 				{% endif %}
 				<li class="icon">
 					<a href="javascript:showHamburgerMenu();">
@@ -44,12 +44,12 @@
 				{% for item in items %}
 					<li{{item.attributes}} class="li-menu-type-2">
 
-						<a href='{{item.url}}' data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2 animsition-link">
+						<a  aria-haspopup="true" href='{{item.url}}' data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2 animsition-link">
 							<div>{{item.title|raw}}</div>
 						</a>
 						<div data-ix="line-menu-type" class="line-bottom-menu"></div>
 						{% if item.below %}
-							<ul class="sub-item" aria-expanded="false" aria-labelledby="main_menu">
+							<ul aria-hidden="true" aria-label="submenu" class="sub-item">
 
 								{% for child in item.below %}
 									<li{{child.attributes}} class="li-menu-type-2">
