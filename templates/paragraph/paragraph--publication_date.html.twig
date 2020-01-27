@@ -1,8 +1,8 @@
 <p class="sub-information">
     {{content.field_season.0.value}}
     </br>
-    {{content.field_season|title}}
-    
+    {{content.field_season.title}}
+    </br>
 	{% for item in content.field_season|keys %}
 		{{item}}
     {% endfor %}
