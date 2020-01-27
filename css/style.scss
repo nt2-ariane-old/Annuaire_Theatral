@@ -404,29 +404,53 @@ footer {
 .top-border {
     position: sticky;
     padding: 5px 50px;
-    #block-navigationprincipale {
-        display: inline-block;
-        height: 50px;
-        vertical-align: middle;
-        width: 85%;
-        .top-nav {
-            margin: 0;
-            .icon {
-                display: none;
+    height: 60px;
+    &>div {
+        display: flex;
+        ali #block-navigationprincipale {
+            display: inline-block;
+            height: 50px;
+            vertical-align: middle;
+            width: 85%;
+            .top-nav {
+                margin: 0;
+                display: flex;
+                flex-direction: row;
+                justify-items: center;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+                .icon {
+                    display: none;
+                }
+                .li-menu-type-2 {
+                    height: auto;
+                    max-height: auto;
+                    margin: 0;
+                    &.no-bottom-margin {
+                        #search-block-form {
+                            margin: 0;
+                        }
+                        margin-right: 0;
+                    }
+                    .link-nav-2 {
+                        padding: 0;
+                    }
+                }
             }
         }
-    }
-    #block-sitebranding-2 {
-        max-width: 15%;
-        max-height: 100%;
-        width: auto;
-        height: auto;
-        display: inline-block;
-        overflow: hidden;
-        vertical-align: middle;
-        a {
-            display: block;
-            height: 50px;
+        #block-sitebranding-2 {
+            max-width: 15%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: middle;
+            a {
+                display: block;
+                height: 50px;
+            }
         }
     }
 }
@@ -900,7 +924,7 @@ nav ul ul li {
         padding: 0;
         #block-sitebranding-2 {
             width: 100%;
-            padding: 5px 50px;
+            padding: 5px 15px;
             max-width: 100%;
         }
         #block-navigationprincipale {

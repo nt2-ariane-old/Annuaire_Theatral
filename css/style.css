@@ -431,24 +431,64 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   position: -webkit-sticky;
   position: sticky;
   padding: 5px 50px;
+  height: 60px;
 }
 
-.top-border #block-navigationprincipale {
+.top-border > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-border > div ali #block-navigationprincipale {
   display: inline-block;
   height: 50px;
   vertical-align: middle;
   width: 85%;
 }
 
-.top-border #block-navigationprincipale .top-nav {
+.top-border > div ali #block-navigationprincipale .top-nav {
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
 }
 
-.top-border #block-navigationprincipale .top-nav .icon {
+.top-border > div ali #block-navigationprincipale .top-nav .icon {
   display: none;
 }
 
-.top-border #block-sitebranding-2 {
+.top-border > div ali #block-navigationprincipale .top-nav .li-menu-type-2 {
+  height: auto;
+  max-height: auto;
+  margin: 0;
+}
+
+.top-border > div ali #block-navigationprincipale .top-nav .li-menu-type-2.no-bottom-margin {
+  margin-right: 0;
+}
+
+.top-border > div ali #block-navigationprincipale .top-nav .li-menu-type-2.no-bottom-margin #search-block-form {
+  margin: 0;
+}
+
+.top-border > div ali #block-navigationprincipale .top-nav .li-menu-type-2 .link-nav-2 {
+  padding: 0;
+}
+
+.top-border > div #block-sitebranding-2 {
   max-width: 15%;
   max-height: 100%;
   width: auto;
@@ -458,7 +498,7 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   vertical-align: middle;
 }
 
-.top-border #block-sitebranding-2 a {
+.top-border > div #block-sitebranding-2 a {
   display: block;
   height: 50px;
 }
@@ -939,7 +979,7 @@ nav ul ul li {
   }
   .top-border #block-sitebranding-2 {
     width: 100%;
-    padding: 5px 50px;
+    padding: 5px 15px;
     max-width: 100%;
   }
   .top-border #block-navigationprincipale {
