@@ -783,6 +783,14 @@ nav ul ul li {
   width: 100%;
 }
 
+#intro .align-center {
+  background-color: #EE236760;
+}
+
+#intro .align-center .season-issue {
+  background-color: #FFFFFF60;
+}
+
 #intro a {
   font-size: 1.2rem;
   color: white;
