@@ -512,6 +512,10 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   padding: 0;
 }
 
+.top-border > div #block-navigationprincipale .top-nav .li-menu-type-2 ul .li-menu-type-2 {
+  margin: 0.5rem;
+}
+
 .top-border > div #block-sitebranding-2 {
   max-width: 15%;
   max-height: 100%;
