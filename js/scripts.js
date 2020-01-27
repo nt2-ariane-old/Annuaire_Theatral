@@ -71,7 +71,15 @@ window.onload = function() {
     if (bloc_abonnement != null) {
         let content = document.querySelector('.bottom-space');
         content.appendChild(bloc_abonnement);
-        console.log(content)
+        let blocs = document.querySelectorAll('#block-abonnezvous');
+        if (blocs.length > 1) {
+            for (let i = 1; i < blocs.length; i++) {
+                const element = blocs[i];
+                element.parentNode.removeChild(element);
+
+            }
+        }
+
     }
 
 }
