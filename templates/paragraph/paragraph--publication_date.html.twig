@@ -3,7 +3,7 @@
     </br>
     {{content.field_season.title}}
     </br>
-	{% for item in content.field_season|keys %}
+	{% for item in content.field_season.0|keys %}
 		{{item}}
     {% endfor %}
 </p>
