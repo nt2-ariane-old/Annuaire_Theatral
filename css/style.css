@@ -778,6 +778,21 @@ nav ul ul li {
   padding: 1rem 0;
 }
 
+.subscription-post-banner {
+  position: relative;
+  height: 550px;
+  background-image: url(../images/post-2.jpg);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .product-post-banner {
   position: relative;
   height: 550px;
