@@ -1,14 +1,16 @@
 <div class="video-wrapper">
+
 	<div class="w-embed embed-video">
-		<a href='{{fields.view_node.content|striptags}}'>
-			{{ fields.field_image.content }}
-		</a>
+		{{ fields.field_image.content }}
 	</div>
-	<div class="video-overlay"></div>
+
+	<a href='{{fields.view_node.content|striptags}}'>
+		<div class="video-overlay"></div>
+	</a>
 </div>
 <div class="w-container container-contact">
 	<div class="align-center">
-    <h1 class="inner-title" aria-labelby="Titre de la Revue">{{fields.field_journal_title.content}}</h1>
+		<h1 class="inner-title" aria-labelby="Titre de la Revue">{{fields.field_journal_title.content}}</h1>
 		<a href='{{fields.view_node.content|striptags}}'>
 			<h2 class="inner-title" aria-labelby="Titre du Numéro">{{fields.title.content}}</h2>
 			<p class="sub-information" aria-labelby="Numéro de la Revue">#{{ fields.field_issue_number.content }}</p>
