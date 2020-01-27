@@ -68,7 +68,7 @@ window.onload = function() {
     });
 
     let bloc_abonnement = document.querySelector('#abonnement');
-    if (bloc_abonnement == null) {
+    if (bloc_abonnement != null) {
         let content = document.querySelector('.bottom-space');
         if (content == null) {
             content.innerHTML = bloc_abonnement;
