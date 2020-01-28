@@ -668,6 +668,10 @@ main {
     }
 }
 
+.paragraphs-collapsed-description {
+    color: black;
+}
+
 .season-issue,
 .sub-information {
     color: white;
@@ -678,6 +682,9 @@ main {
     text-align: center;
     margin: auto;
     letter-spacing: 0px;
+    .paragraphs-collapsed-description {
+        color: white;
+    }
 }
 
 .blog-zig-zag .sub-information,
