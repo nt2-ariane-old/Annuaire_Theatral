@@ -1018,10 +1018,16 @@ nav ul ul li {
 .blog-post-banner .sub-text-title,
 #intro .sub-text-title {
   display: block;
-  margin: auto;
+  margin: 0;
   text-align: center;
   color: white;
   font-size: 1.2rem;
+}
+
+.blog-post-banner .sub-text-title a,
+#intro .sub-text-title a {
+  color: white;
+  font-size: 1.3rem;
 }
 
 .blog-post-banner .sub-text-title > div,
