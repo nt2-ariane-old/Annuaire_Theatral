@@ -1,9 +1,10 @@
-<div class="item">
+<div class="item {{class}}">
 	<div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">
 		{{fields.field_image_de_couverture.content}}
-		<a href="{{ fields.view_node.content|render|striptags|trim }}" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content fancybox">
+
+		<a href="{{ fields.view_node.content|striptags}}" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link">
 			<div class="portfolio-cn-title">
-				<h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title">{{fields.title.content}}</h4>
+				<h3 data-ix="scale-portfolio-title-on-load" class="portfolio-title">{{ fields.title.content }}</h3>
 				<div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title">Interviewer :
 					{{fields.field_interviewer.content}}</div>
 				<div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title">Artiste Invité :
