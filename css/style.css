@@ -685,6 +685,19 @@ main h1 {
   line-height: 20px;
 }
 
+#pdf {
+  text-align: center;
+  padding: 2rem;
+}
+
+#pdf .file--application-pdf {
+  background-size: 1.2rem;
+}
+
+#pdf .file--application-pdf a {
+  font-size: 1.3rem;
+}
+
 .preview {
   height: 100px;
   width: 100px;

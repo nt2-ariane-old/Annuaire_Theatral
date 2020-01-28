@@ -641,6 +641,17 @@ main {
     line-height: 20px;
 }
 
+#pdf {
+    text-align: center;
+    padding: 2rem;
+    .file--application-pdf {
+        background-size: 1.2rem;
+        a {
+            font-size: 1.3rem;
+        }
+    }
+}
+
 .preview {
     height: 100px;
     width: 100px;
