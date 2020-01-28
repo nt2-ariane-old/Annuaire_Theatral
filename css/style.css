@@ -729,6 +729,20 @@ main h1 {
   padding: 0;
 }
 
+.preview.article-preview {
+  height: 180px;
+  width: 100%;
+}
+
+.preview.article-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  margin: auto;
+  display: block;
+}
+
 .paragraphs-collapsed-description {
   color: black;
 }
