@@ -486,6 +486,7 @@ footer {
     border-radius: 5px;
     text-align: center;
     margin: 2rem;
+    padding: 1rem;
     p,
     h2 {
         margin-bottom: 1em;
@@ -897,6 +898,11 @@ nav ul ul li {
             }
         }
     }
+}
+
+.line {
+    display: block;
+    width: 100%;
 }
 
 .field--name-field-dossier-vivarium {

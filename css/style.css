@@ -536,6 +536,7 @@ footer #block-views-block-partenaires-block-1 .views-row div img {
   border-radius: 5px;
   text-align: center;
   margin: 2rem;
+  padding: 1rem;
 }
 
 #block-abonnezvous p,
@@ -969,6 +970,11 @@ nav ul ul li {
 
 #intro h3 a:hover {
   color: inherit;
+}
+
+.line {
+  display: block;
+  width: 100%;
 }
 
 .field--name-field-dossier-vivarium .field__item a {
