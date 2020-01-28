@@ -74,12 +74,12 @@
 #}
 <article{{attributes}}>
 	{% if view_mode == 'teaser'  %}
-			<div class="lecture-content" onclick="window.location='{{ url }}';">
-				<span>{{node.label}}</span>
-				<div class="preview">
-					{{ content.field_image }}
-				</div>
+		<div class="lecture-content" onclick="window.location='{{ url }}';">
+			<span>{{node.label}}</span>
+			<div class="preview">
+				{{ content.field_image }}
 			</div>
+		</div>
 	{% else %}
 		{{ title_prefix }}
 		{% if not page %}
@@ -105,30 +105,35 @@
 		<div{{content_attributes}}>
 			<div id="intro" class="w-section banner-one window-size">
 				<div class="video-wrapper">
-					<div class="w-embed embed-video">
+					<div aria-labelledby="Image de couverture du Dossier" class="w-embed embed-video">
 						{{ content.field_image }}
 					</div>
 					<div class="video-overlay"></div>
 				</div>
 				<div class="w-container container-contact">
-					<div class="align-center">
-						<h2 class="inner-title">{{ label }}</h2>
-						<p class="sub-text-title">{{ content.group_dossier_informations.field_editor|raw }}</p>
-					</div>
+
+					<p class="sub-text-title">{{ |raw }}</p>
+				</div>
+				<div class="align-center">
+					<h1 class="inner-title" aria-labelby="Titre du Dossier" itemprop="name">{{ label }}</h1>
+				</div>
+				<div aria-labelledby="Informations sur le Dossier" class="align-center season-issue">
+					<span class="sub-information" aria-labelledby="Editeur du Dossier">{{ content.group_dossier_informations.field_editor}}</span>
 				</div>
 			</div>
-			<section id="sommaire" class="w-section section-imp">
-				<div class="w-container">
-					<div class="title-wrapper">
-						<h2>Sommaire</h2>
-						<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
-					</div>
-					<div>
-						{{ content.group_contents.articles_dossier_entity_view_1 }}
-					</div>
-				</div>
-			</section>
 
 		</div>
-	{% endif %}
-</article>
+		<section id="sommaire" class="w-section section-imp">
+			<div class="w-container">
+				<div class="title-wrapper">
+					<h2>Sommaire</h2>
+					<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
+				</div>
+				<div>
+					{{ content.group_contents.articles_dossier_entity_view_1 }}
+				</div>
+			</div>
+		</section>
+
+	</div>
+{% endif %}</article>
