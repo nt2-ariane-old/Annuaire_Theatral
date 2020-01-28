@@ -98,7 +98,7 @@
 						</div>
 						<div aria-labelledby="Informations sur le Numéro" class="align-center season-issue">
 								#<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number }}</span>,
-								<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date}}</span>
+								<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date|striptags}}</span>
 						</div>
 					</div>
 				{% endif %}
