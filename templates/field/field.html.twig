@@ -37,7 +37,7 @@
  * @see template_preprocess_field()
  */
 #}
-{% if field_name == 'field_season' or field_name == 'field_date' %}
+{% if field_name == 'field_season' or field_name == 'field_date' or field_name == 'field-issue-number' %}
 	<span{{attributes}}>
 		{% for item in items %}
 			{{ item.content }}
