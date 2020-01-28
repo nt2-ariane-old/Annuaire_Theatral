@@ -74,12 +74,26 @@
 #}
 <article{{attributes}}>
 	{% if view_mode == 'teaser'  %}
-		<a class="lecture-content" href='{{ url }}'>
-			<span>{{node.label}}</span>
-			<div class="preview">
-				{{ field_image }}
+		<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
+			<div class="blog-zig-zag up-left">
+				<div class="blog-content">
+					<h3 class="blog-title">
+						<a class="blog-title animsition-link" href="{{ url}}">{{ label  }}</a>
+					</h3>
+					<p class="meta-tag pls-category">{{ content.field_publication_date}}</p>
+					<div class="seperator"></div>
+					<p>{{content.field_abstract}}</p>
+					<div class="small-spc">
+						<a href="{{ url}}" class="read-more animsition-link">Lire la suite ›</a>
+					</div>
+				</div>
 			</div>
-		</a>
+			<div class="blog-zig-zag">
+				<a href="{{ url }}" class="w-inline-block blog-link animsition-link big-h-img">
+					{{content.field_image}}
+				</a>
+			</div>
+		</div>
 	{% else %}
 		<div{{content_attributes}}>
 			<div id="intro" class="w-section banner-one window-size">
@@ -98,8 +112,8 @@
 							<h1 class="inner-title" aria-labelby="Titre du Numero" itemprop="name">{{content.title}}</h1>
 						</div>
 						<div aria-labelledby="Informations sur le Numéro" class="align-center season-issue">
-								#<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number }}</span>,
-								<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date}}</span>
+							#<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number }}</span>,
+							<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date}}</span>
 						</div>
 					</div>
 				{% endif %}
