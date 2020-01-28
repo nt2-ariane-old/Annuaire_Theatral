@@ -988,6 +988,13 @@ nav ul ul li {
     }
 }
 
+.blog-post-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #citation {
     .field--name-field-pour-citer {
         font-weight: 400;
