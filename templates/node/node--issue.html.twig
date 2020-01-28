@@ -73,6 +73,18 @@
  */
 #}
 <article{{attributes}}>
+{% set img %}
+     {{ content.field_image }}
+{% endset %}
+{% set nb %}
+     {{ content.field_issue_number }}
+{% endset %}
+{% set date %}
+     {{ content.field_publication_date }}
+{% endset %}
+{% set abstract %}
+     {{ content.field_abstract }}
+{% endset %}
 	{% if view_mode == 'teaser'  %}
 		<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
 			<div class="blog-zig-zag up-left">
@@ -81,11 +93,11 @@
 						<a class="blog-title animsition-link" href="{{ url}}">{{ label  }}</a>
 					</h3>
 					<p class="meta-tag pls-category">
-						#<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number|striptags }}</span>,
-						<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date|striptags}}</span>
+						#<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ nb|striptags }}</span>,
+						<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ date|striptags}}</span>
 					</p>
 					<div class="seperator"></div>
-					<p>{{content.field_abstract}}</p>
+					<p>{{abstract|striptags}}</p>
 					<div class="small-spc">
 						<a href="{{ url}}" class="read-more animsition-link">Lire la suite ›</a>
 					</div>
@@ -93,7 +105,7 @@
 			</div>
 			<div class="blog-zig-zag">
 				<a href="{{ url }}" class="w-inline-block blog-link animsition-link big-h-img">
-					{{ content.field_image|striptags }}
+					{{ img|striptags }}
 				</a>
 			</div>
 		</div>
