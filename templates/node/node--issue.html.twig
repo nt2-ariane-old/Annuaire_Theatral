@@ -97,10 +97,8 @@
 							<h1 class="inner-title" aria-labelby="Titre du Numero" itemprop="name">{{node.label}}</h1>
 						</div>
 						<div aria-labelledby="Informations sur le Numéro" class="align-center season-issue">
-							<a href='{{content.view_node.content|striptags}}'>
-								#<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number.content|striptags }}</span>,
-								<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date.content|striptags}}</span>
-							</a>
+								#<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number|striptags }}</span>,
+								<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date|striptags}}</span>
 						</div>
 					</div>
 				{% endif %}
