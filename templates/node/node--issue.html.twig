@@ -82,7 +82,7 @@
 					</h3>
 					<p class="meta-tag pls-category">
 						#<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number }}</span>,
-						<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date}}</span>
+						<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date|striptags}}</span>
 					</p>
 					<div class="seperator"></div>
 					<p>{{content.field_abstract}}</p>
