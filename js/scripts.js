@@ -83,11 +83,12 @@ window.onload = function() {
 
     }
 
-    as.forEach(linkA => {
-        if (linkA.innerHTML.isEmpty()) {
-            linkA.parentElement.removeChild(linkA);
-        }
-    })
+    // let allLink = document.querySelectorAll('a');
+    // allLink.forEach(aLink => {
+    //     if (aLink.innerHTML.isEmpty()) {
+    //         aLink.parentElement.removeChild(aLink);
+    //     }
+    // })
 
 }
 
