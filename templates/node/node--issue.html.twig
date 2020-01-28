@@ -92,20 +92,22 @@
 					</div>
 				{% endif %}
 				{% if label %}
-					<div class="w-container container-contact">
+					<div itemscope itemtype="https://schema.org/PublicationVolume" class="w-container container-contact">
 						<div class="align-center">
-							<h2 class="inner-title">{{ label }}</h2>
-							{% if content.field_issue_number %}
-								{{ content.field_issue_number|raw}}
-							{% endif %}
-							{% if content.field_publication_date  %}
-								{{ content.field_publication_date|raw}}
-							{% endif %}
+							<h1 class="inner-title" aria-labelby="Titre du Numero" itemprop="name">{{node.label}}</h1>
+						</div>
+						<div aria-labelledby="Informations sur le Numéro" class="align-center season-issue">
+							<a href='{{content.view_node.content|striptags}}'>
+								#<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number.content|striptags }}</span>,
+								<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date.content|striptags}}</span>
+							</a>
 						</div>
 					</div>
 				{% endif %}
 
 			</div>
+
+
 			{% if content.group_contents.editorial_issue_entity_view_1  %}
 				<section id="editorial">
 					{{ content.group_contents.editorial_issue_entity_view_1 }}
