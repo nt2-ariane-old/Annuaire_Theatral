@@ -83,6 +83,12 @@ window.onload = function() {
 
     }
 
+    as.forEach(linkA => {
+        if (linkA.innerHTML.isEmpty()) {
+            linkA.parentElement.removeChild(linkA);
+        }
+    })
+
 }
 
 function isEven(n) {
@@ -101,4 +107,16 @@ function showHamburgerMenu() {
     } else {
         nav.setAttribute('class', 'top-nav')
     }
+}
+
+String.prototype.isEmpty = function() {
+    return (this.length === 0 || !this.trim());
+};
+
+function isBlank(str) {
+    return (!str || /^\s*$/.test(str));
+}
+
+function isEmpty(str) {
+    return (!str || 0 === str.length);
 }
