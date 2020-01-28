@@ -716,16 +716,20 @@ main h1 {
   padding: 0;
 }
 
+.season-issue,
 .sub-information {
-  font-family: Lekton, sans-serif;
+  color: white;
   line-height: 25px;
   font-weight: 400;
-  letter-spacing: 0px;
-  display: inline-block;
-  margin: auto;
-  text-align: center;
-  color: white;
   font-size: 1.2rem;
+  font-family: Lekton, sans-serif;
+  text-align: center;
+  margin: auto;
+  letter-spacing: 0px;
+}
+
+.sub-information {
+  display: inline-block;
 }
 
 .blog-hover-zoom-photo {
