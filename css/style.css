@@ -177,6 +177,11 @@ h2 {
   content: none;
 }
 
+.w-embed {
+  width: 100%;
+  height: 100%;
+}
+
 .bigger-img {
   width: 100%;
   height: 100%;
@@ -872,6 +877,12 @@ nav ul ul li {
 #intro {
   position: relative;
   width: 100%;
+}
+
+#intro .item-list,
+#intro .item-list * {
+  width: 100%;
+  height: 100%;
 }
 
 #intro .align-center {
