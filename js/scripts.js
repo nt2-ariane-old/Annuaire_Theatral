@@ -12,6 +12,7 @@ window.onload = function() {
         input.setAttribute('class', 'search_input');
         input.setAttribute('placeholder', 'Rechercher...');
         input.setAttribute('aria-label', 'Rechercher sur le site');
+        input.setAttribute('name', 'search_api_fulltext')
 
 
         let button = document.createElement('button');
