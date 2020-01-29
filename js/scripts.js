@@ -1,7 +1,7 @@
 window.onload = function() {
     new WOW().init();
 
-    let searchbar = document.querySelector('#views-exposed-form-general-search-page-s');
+    let searchbar = document.querySelector('#views-exposed-form-general-search-page-1');
     let nav = document.querySelector('.top-nav');
 
     if (searchbar !== null) {
