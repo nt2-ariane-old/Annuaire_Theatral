@@ -1,7 +1,7 @@
 <div class="video-wrapper">
 
 	<div aria-labelledby="Image de Couverture du Numéro" class="w-embed" >
-		<div class="bigger-img" style="background-image:url('{{ file_url(row._entity.field_image.entity.uri.value) }}')"></div>
+		<div class="bigger-img" style="background-image:url('{{ file_url(node.field_image.entity.uri.value) }}')"></div>
 	</div>
 
 	<a href='{{fields.view_node.content|striptags}}'>
