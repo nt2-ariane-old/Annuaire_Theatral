@@ -102,8 +102,8 @@
 			<div id="intro" class="w-section banner-one window-size">
 				{% if  content.field_image %}
 					<div class="video-wrapper">
-						<div class="w-embed embed-video">
-							{{ content.field_image }}
+						<div class="w-embed">
+							<div class="bigger-img" style="background-image:url('{{ file_url(row._entity.field_image.entity.uri.value) }}')"></div>
 						</div>
 						<div class="video-overlay"></div>
 					</div>
