@@ -1,7 +1,8 @@
 <div class="video-wrapper">
 
-	<div aria-labelledby="Image de Couverture du Numéro" class="w-embed embed-video">
-		{{ fields.field_image.content }}
+	<div aria-labelledby="Image de Couverture du Numéro" class="w-embed embed-video" >
+		{# {{ fields.field_image.content }} #}
+		<div class="bigger-img" style="background-image:url('{{ file_url(node.field_image.entity.fileuri) }}')"></div>
 	</div>
 
 	<a href='{{fields.view_node.content|striptags}}'>
