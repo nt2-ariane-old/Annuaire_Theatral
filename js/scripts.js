@@ -4,7 +4,7 @@ window.onload = function() {
     let searchbar = document.querySelector('#search-block-form');
     let nav = document.querySelector('.top-nav');
 
-    if (searchbar !== undefined) {
+    if (searchbar !== null) {
         searchbar.innerHTML = '';
         searchbar.setAttribute('class', 'searchbar');
         let input = document.createElement('input');
