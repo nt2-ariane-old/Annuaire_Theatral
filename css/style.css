@@ -177,11 +177,6 @@ h2 {
   content: none;
 }
 
-.w-embed {
-  width: 100%;
-  height: 100%;
-}
-
 .bigger-img {
   width: 100%;
   height: 100%;
@@ -880,7 +875,10 @@ nav ul ul li {
 }
 
 #intro .item-list,
-#intro .item-list * {
+#intro .item-list ul,
+#intro .item-list li,
+#intro .video-wrapper,
+#intro .w-embed {
   width: 100%;
   height: 100%;
 }

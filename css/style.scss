@@ -170,11 +170,6 @@ h2 {
     }
 }
 
-.w-embed {
-    width: 100%;
-    height: 100%;
-}
-
 .bigger-img {
     width: 100%;
     height: 100%;
@@ -823,7 +818,10 @@ nav ul ul li {
     position: relative;
     width: 100%;
     .item-list,
-    .item-list * {
+    .item-list ul,
+    .item-list li,
+    .video-wrapper,
+    .w-embed {
         width: 100%;
         height: 100%;
     }
