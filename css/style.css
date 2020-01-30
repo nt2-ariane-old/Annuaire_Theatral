@@ -869,6 +869,15 @@ nav ul ul li {
           align-items: center;
 }
 
+.page_search {
+  width: 100%;
+}
+
+.page_search .views-col {
+  max-width: 100%;
+  padding-bottom: 2em;
+}
+
 #intro {
   position: relative;
   width: 100%;

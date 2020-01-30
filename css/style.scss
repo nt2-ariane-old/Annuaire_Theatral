@@ -813,6 +813,14 @@ nav ul ul li {
     align-items: center;
 }
 
+.page_search {
+    width: 100%;
+    .views-col {
+        max-width: 100%;
+        padding-bottom: 2em;
+    }
+}
+
 //Views
 #intro {
     position: relative;
