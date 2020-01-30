@@ -892,6 +892,10 @@ nav ul ul li {
   font-size: 20px;
 }
 
+.page_search .views-col .views-field-type-1 {
+  font-size: 10px;
+}
+
 .page_search .views-col .views-field-title-5 {
   color: black;
   font-size: 13px;
