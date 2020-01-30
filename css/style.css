@@ -893,7 +893,22 @@ nav ul ul li {
 }
 
 .page_search .views-col .views-field-type-1 {
-  font-size: 10px;
+  font-size: 12px;
+}
+
+.page_search .views-col .views-field-field-season,
+.page_search .views-col .views-field-field-issue-number {
+  font-weight: 300;
+  font-size: 12;
+}
+
+.page_search .views-col .views-field-field-issue-number {
+  font-weight: 300;
+  font-size: 12;
+}
+
+.page_search .views-col .views-field-field-issue-number::before {
+  content: '#';
 }
 
 .page_search .views-col .views-field-title-5 {
