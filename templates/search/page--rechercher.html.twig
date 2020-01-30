@@ -1,20 +1,19 @@
-
 <header class="top-border">
-  {{page.top_border}}
+	{{page.top_border}}
 </header>
 {{ page.title }}
 {% if page.header %}
-  {{page.header}}
+	{{page.header}}
 {% endif %}
 
 <main class="container">
 	<div class="row">
-		{% if page.sidebar_left %}	
-		{% block sidebar_left %}
-		<section class="col-sm-4 sidebar-left"  role="complementary">
-			{{ page.sidebar_left }}
-		</section>
-		{% endblock %}
+		{% if page.sidebar_left %}
+			{% block sidebar_left %}
+				<section class="col-sm-4 sidebar-left" role="complementary">
+					{{ page.sidebar_left }}
+				</section>
+			{% endblock %}
 		{% endif %}
 
 
@@ -27,17 +26,18 @@
 		page.sidebar_left is empty and page.sidebar_right is empty ? 'col-sm-12'
 		]
 		%}
-    
-		<section{{ content_attributes.addClass(content_classes) }} class="w-section section-imp page_search">
-			{{ page.content }}
+		<section{{content_attributes.addClass(content_classes)}}>
+			<div class="w-section section-imp page_search">
+				{{ page.content }}
+			</div>
 		</section>
 
 		{% if page.sidebar_right %}
-      {% block sidebar_right %}
-        <section class="col-lg-4 sidebar-right" role="complementary">
-          {{ page.sidebar_right }}
-        </section>
-      {% endblock %}
+			{% block sidebar_right %}
+				<section class="col-lg-4 sidebar-right" role="complementary">
+					{{ page.sidebar_right }}
+				</section>
+			{% endblock %}
 		{% endif %}
 
 	</div>
@@ -46,30 +46,30 @@
 
 
 {% if page.footer %}
-<footer class="footer">
-  <div class="w-container">
-    <div class="w-row">
-      {{page.footer}}
-    </div>
-  </div>
-</footer>
+	<footer class="footer">
+		<div class="w-container">
+			<div class="w-row">
+				{{page.footer}}
+			</div>
+		</div>
+	</footer>
 {% endif %}
 
 {% if page.copyright %}
-  <div class="bottom-border">
-    <div class="w-row">  
-      <div class="w-col w-col-6">
-        <div class="w-hidden-medium w-hidden-small w-hidden-tiny title-top-border">
-          {{page.copyright}}
-        </div>
-      </div>
-      {% if page.nav_social %}
-        <div class="w-col w-col-6">
-          <div class="align-right flex-center-child">
-            {{page.nav_social}}
-          </div>
-        </div>
-      {% endif %}
-    </div>
-  </div>
+	<div class="bottom-border">
+		<div class="w-row">
+			<div class="w-col w-col-6">
+				<div class="w-hidden-medium w-hidden-small w-hidden-tiny title-top-border">
+					{{page.copyright}}
+				</div>
+			</div>
+			{% if page.nav_social %}
+				<div class="w-col w-col-6">
+					<div class="align-right flex-center-child">
+						{{page.nav_social}}
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
 {% endif %}
