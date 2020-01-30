@@ -9,25 +9,35 @@
 
 <main class="container">
 	<div class="row">
-		{% if page.sidebar_left %}
-			{% block sidebar_left %}
-				<section class="col-sm-4 sidebar-left" role="complementary">
-					{{ page.sidebar_left }}
-				</section>
-			{% endblock %}
+		{% if page.sidebar_left %}	
+		{% block sidebar_left %}
+		<section class="col-sm-4 sidebar-left"  role="complementary">
+			{{ page.sidebar_left }}
+		</section>
+		{% endblock %}
 		{% endif %}
 
 
+		{# Content #}
+		{%
+		set content_classes = [
+		page.sidebar_left and page.sidebar_right ? 'col-sm-4',
+		page.sidebar_left and page.sidebar_right is empty ? 'col-sm-8',
+		page.sidebar_right and page.sidebar_left is empty ? 'col-sm-8',
+		page.sidebar_left is empty and page.sidebar_right is empty ? 'col-sm-12'
+		]
+		%}
+    
 		<section class="w-section section-imp page_search">
 			{{ page.content }}
 		</section>
 
 		{% if page.sidebar_right %}
-			{% block sidebar_right %}
-				<section class="col-lg-4 sidebar-right" role="complementary">
-					{{ page.sidebar_right }}
-				</section>
-			{% endblock %}
+      {% block sidebar_right %}
+        <section class="col-lg-4 sidebar-right" role="complementary">
+          {{ page.sidebar_right }}
+        </section>
+      {% endblock %}
 		{% endif %}
 
 	</div>
