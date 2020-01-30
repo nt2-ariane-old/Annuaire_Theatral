@@ -1,9 +1,10 @@
-<header class="top-border">
-	{{page.navigation_menu}}
-</header>
 
+<header class="top-border">
+  {{page.top_border}}
+</header>
+{{ page.title }}
 {% if page.header %}
-	{{page.header}}
+  {{page.header}}
 {% endif %}
 
 <main class="container">
@@ -35,30 +36,30 @@
 
 
 {% if page.footer %}
-	<footer class="footer">
-		<div class="w-container">
-			<div class="w-row">
-				{{page.footer}}
-			</div>
-		</div>
-	</footer>
+<footer class="footer">
+  <div class="w-container">
+    <div class="w-row">
+      {{page.footer}}
+    </div>
+  </div>
+</footer>
 {% endif %}
 
 {% if page.copyright %}
-	<div class="bottom-border">
-		<div class="w-row">
-			<div class="w-col w-col-6">
-				<div class="w-hidden-medium w-hidden-small w-hidden-tiny title-top-border">
-					{{page.copyright}}
-				</div>
-			</div>
-			{% if page.nav_social %}
-				<div class="w-col w-col-6">
-					<div class="align-right flex-center-child">
-						{{page.nav_social}}
-					</div>
-				</div>
-			{% endif %}
-		</div>
-	</div>
+  <div class="bottom-border">
+    <div class="w-row">  
+      <div class="w-col w-col-6">
+        <div class="w-hidden-medium w-hidden-small w-hidden-tiny title-top-border">
+          {{page.copyright}}
+        </div>
+      </div>
+      {% if page.nav_social %}
+        <div class="w-col w-col-6">
+          <div class="align-right flex-center-child">
+            {{page.nav_social}}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
 {% endif %}
