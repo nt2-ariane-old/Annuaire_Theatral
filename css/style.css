@@ -896,21 +896,6 @@ nav ul ul li {
   font-size: 12px;
 }
 
-.page_search .views-col .views-field-field-season,
-.page_search .views-col .views-field-field-issue-number {
-  font-weight: 300;
-  font-size: 12;
-}
-
-.page_search .views-col .views-field-field-issue-number {
-  font-weight: 300;
-  font-size: 12;
-}
-
-.page_search .views-col .views-field-field-issue-number::before {
-  content: '#';
-}
-
 .page_search .views-col .views-field-title-5 {
   color: black;
   font-size: 13px;
@@ -926,6 +911,28 @@ nav ul ul li {
   letter-spacing: 5px;
   color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
+}
+
+.sidebar-right .title-wrapper h2 {
+  font-size: 25px;
+}
+
+.sidebar-right #views-exposed-form-general-search-page-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.facet-item {
+  font-weight: 400;
+  font-family: Lekton, sans-serif;
+  letter-spacing: 3px;
 }
 
 #intro {

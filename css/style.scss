@@ -833,20 +833,6 @@ nav ul ul li {
         .views-field-type-1 {
             font-size: 12px;
         }
-        .views-field-title-1 {}
-        .views-field-title-3 {}
-        .views-field-field-season,
-        .views-field-field-issue-number {
-            font-weight: 300;
-            font-size: 12;
-        }
-        .views-field-field-issue-number {
-            font-weight: 300;
-            font-size: 12;
-            &::before {
-                content: '#';
-            }
-        }
         .views-field-title-5 {
             color: black;
             font-size: 13px;
@@ -863,6 +849,25 @@ nav ul ul li {
             text-transform: uppercase;
         }
     }
+}
+
+.sidebar-right {
+    .title-wrapper {
+        h2 {
+            font-size: 25px;
+        }
+    }
+    #views-exposed-form-general-search-page-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.facet-item {
+    font-weight: 400;
+    font-family: Lekton, sans-serif;
+    letter-spacing: 3px;
 }
 
 #intro {
