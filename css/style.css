@@ -883,9 +883,32 @@ nav ul ul li {
   color: inherit;
 }
 
+.page_search .views-col .views-field-title-1,
+.page_search .views-col .views-field-title-2,
+.page_search .views-col .views-field-title-3,
+.page_search .views-col .views-field-title-4,
+.page_search .views-col .views-field-title-5,
+.page_search .views-col .views-field-field-season,
+.page_search .views-col .views-field-type-1 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
 .page_search .views-col .views-field-title-5 {
   color: black;
   font-size: 13px;
+}
+
+.page_search .views-col .views-field-title-5,
+.page_search .views-col .views-field-field-individu,
+.page_search .views-col .views-field-created,
+.page_search .views-col .list-film-cat,
+.page_search .views-col .page-node-type-ouvrage-critique .field--name-field-auteur {
+  font-family: "pb-bold";
+  font-size: 0.75em;
+  letter-spacing: 5px;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
 }
 
 #intro {
