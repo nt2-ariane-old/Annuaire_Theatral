@@ -818,10 +818,22 @@ nav ul ul li {
     .views-col {
         max-width: 100%;
         padding-bottom: 2em;
+        .views-field a {
+            font-size: inherit;
+            color: inherit;
+        }
+        .views-field-type-1 {}
+        .views-field-title-1 {}
+        .views-field-title-3 {}
+        .views-field-field-season {}
+        .views-field-title-5 {
+            color: black;
+            font-size: 13px;
+        }
     }
 }
 
-//Views
+.facet-item //Views
 #intro {
     position: relative;
     width: 100%;
