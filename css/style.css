@@ -917,7 +917,7 @@ nav ul ul li {
   font-size: 25px;
 }
 
-.sidebar-right #views-exposed-form-general-search-page-1 {
+.sidebar-right #views-exposed-form-general-search-page-1 .form--inline.clearfix {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

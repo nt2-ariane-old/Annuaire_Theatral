@@ -858,9 +858,11 @@ nav ul ul li {
         }
     }
     #views-exposed-form-general-search-page-1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        .form--inline.clearfix {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
 
