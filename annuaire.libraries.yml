@@ -17,8 +17,8 @@ global-scripts:
     js/scripts.js: {}
   dependencies:
     - core/drupal
-    - annuaire/jquery-scripts
-    - annuaire/appearance-scripts
+    - percees/jquery-scripts
+    - percees/appearance-scripts
 
 jquery-scripts:
   js:

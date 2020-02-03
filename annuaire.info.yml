@@ -2,8 +2,8 @@ core: 8.x
 type: theme
 base theme: classy
 
-name: 'annuaire'
-description: 'Thème pour le site de Annuaire Theatral.'
+name: 'percees'
+description: 'Thème pour le site de percees Theatral.'
 package: 'custom'
 
 regions:
@@ -16,6 +16,6 @@ regions:
   sidebar_right : 'Sidebar Droite'
   copyright: 'Copyright'
 libraries:
-  - 'annuaire/global-styling'
-  - 'annuaire/global-scripts'
+  - 'percees/global-styling'
+  - 'percees/global-scripts'
 
