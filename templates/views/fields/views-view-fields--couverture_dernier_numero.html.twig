@@ -11,11 +11,12 @@
 <div itemscope itemtype="https://schema.org/Periodical" class="w-container container-contact">
 	<div class="align-center">
 		<h1 class="inner-title" aria-labelby="Titre de la Revue" itemprop="name">{{fields.field_journal_title.content}}</h1>
+		<h2 class="inner-title" aria-labelby="Titre de la Revue" itemprop="name">{{fields.field_journal_subtitle.content}}</h2>
 	</div>
 	<div aria-labelledby="Informations sur le Numéro" itemprop="hasPart" itemscope itemtype="http://schema.org/PublicationVolume" class="align-center season-issue">
 		<a href='{{fields.view_node.content|striptags}}'>
 			<h2 class="inner-title" aria-labelledby="Titre du Numéro" itemprop="name">{{fields.title.content}}</h2>
-			#<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ fields.field_issue_number.content|striptags }}</span>,
+			<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ fields.field_issue_number.content|striptags }}</span><span> - </span>
 			<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ fields.field_publication_date.content|striptags}}</span>
 		</a>
 	</div>
