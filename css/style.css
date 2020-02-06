@@ -664,7 +664,7 @@ main h1 {
   margin-top: 20px;
 }
 
-.extension-preview a {
+.extension-preview .preview-image {
   width: 300px;
   height: 200px;
   overflow: hidden;
