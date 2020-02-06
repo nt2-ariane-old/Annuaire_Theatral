@@ -1,1 +1,18 @@
-{{ fields.title.content|raw|striptags }}
+{% if fields.field_type_d_article.content == 'Ruche' -%}
+	{% set class = 'ruche' %}
+{% elseif fields.field_type_d_article.content == 'Vivarium' -%}
+	{% set class = 'vivarium' %}
+{% elseif fields.field_type_d_article.content == 'Échappée' -%}
+	{% set class = 'echappee' %}
+{% elseif fields.field_type_d_article.content == 'Récits' -%}
+	{% set class = 'recits' %}
+{% endif %}
+<div class="item {{class}}">
+	<a href="{{ fields.view_node.content|striptags}}">
+		{{fields.field_image_de_couverture.content}}
+	</a>
+	<a href="{{ fields.view_node.content|striptags}}">
+		<h3 data-ix="scale-portfolio-title-on-load" class="portfolio-title">{{ fields.title.content|raw|striptags }}</h3>
+	</a>
+	<div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title">{{fields.field_mots_cles.content|raw|striptags}}</div>
+</div>
