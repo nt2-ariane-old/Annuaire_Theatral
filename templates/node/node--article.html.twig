@@ -75,12 +75,7 @@
 <article{{attributes}}>
 
 	{% if view_mode == 'teaser'  %}
-		<div class="lecture-content" onclick="window.location='{{ url }}';">
-			<span>{{node.label}}</span>
-			<div class="preview">
-				{{ content.field_image }}
-			</div>
-		</div>
+			<a class="lecture-content" href="{{ url }}">{{node.label}}</a>
 	{% else %}
 
 		{{ title_prefix }}
