@@ -664,6 +664,22 @@ main h1 {
   margin-top: 20px;
 }
 
+.extension-preview a {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.extension-preview img {
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  width: 100%;
+}
+
 .lecture-content {
   width: 100%;
   display: -webkit-box;

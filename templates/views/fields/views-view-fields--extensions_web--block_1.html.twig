@@ -1,13 +1,4 @@
-{% if fields.field_type_d_article.content == 'Ruche' -%}
-	{% set class = 'ruche' %}
-{% elseif fields.field_type_d_article.content == 'Vivarium' -%}
-	{% set class = 'vivarium' %}
-{% elseif fields.field_type_d_article.content == 'Échappée' -%}
-	{% set class = 'echappee' %}
-{% elseif fields.field_type_d_article.content == 'Récits' -%}
-	{% set class = 'recits' %}
-{% endif %}
-<div class="item {{class}}">
+<div class="extension-preview">
 	<a href="{{ fields.view_node.content|striptags}}">
 		{{fields.field_image_de_couverture.content}}
 	</a>
