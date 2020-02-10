@@ -2,24 +2,16 @@
     <div class="w-clearfix service-wrapper wow fadeIn" data-wow-delay="0.3s">
         <div class="service-icon">
             <div class="w-embed">
-                {% if fields.field_type_dossier.content == 'research-article' %}
-                    <i class="fas fa-vial"></i>
-                {% elseif fields.field_type_dossier.content == "article-commentary" %}
-                    <i class="far fa-comment"></i>
-                {% elseif fields.field_type_dossier.content ==  "book-review" %}
-                        <i class="fas fa-book"></i>
-                {% elseif fields.field_type_dossier.content ==  "brief-report" %}
-                    <i class="fas fa-hourglass-end"></i>
-                {% elseif fields.field_type_dossier.content ==  "elseif fields.field_type_dossier.content == -report" %}
+                {% if fields.field_type_dossier.content == 'Documents' %}
                     <i class="fas fa-folder"></i>
-                {% elseif fields.field_type_dossier.content ==  "correction" %}
-                    <i class="far fa-check-circle"></i>    
-                {% elseif fields.field_type_dossier.content ==  "letter" %}
-                    <i class="fas fa-envelope-open-text"></i>
-                {% elseif fields.field_type_dossier.content ==  "reply" %}
-                    <i class="fas fa-reply"></i>
-                {% elseif fields.field_type_dossier.content ==  "review-article" %}
-                    <i class="far fa-newspaper"></i>
+                {% elseif fields.field_type_dossier.content == "Pratiques et travaux" %}
+                    <i class="far fa-comment"></i>
+                {% elseif fields.field_type_dossier.content ==  "Parcours critique" %}
+                        <i class="fas fa-book"></i>
+                {% elseif fields.field_type_dossier.content ==  "Revue des revues" %}
+                    <i class="fas fa-hourglass-end"></i>
+                {% elseif fields.field_type_dossier.content ==  "Notes de lecture" %}
+                    <i class="fas fa-vial"></i>
                 {% else %}
                     <i class="fa fa-envelope-o"></i>
                 {% endif %}    
