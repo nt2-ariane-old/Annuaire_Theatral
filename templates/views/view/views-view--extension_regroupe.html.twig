@@ -54,7 +54,7 @@
 	{% if rows -%}
 
 		{{ rows }}
-        {% for key in rows|keys %}
+        {% for key in rows.0|keys %}
             {{ key }}
         {% endfor %}
 
