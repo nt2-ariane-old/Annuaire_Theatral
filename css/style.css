@@ -689,6 +689,10 @@ main h1 {
   border-bottom: 1px solid black;
 }
 
+.center-titles {
+  text-align: center;
+}
+
 .extension-preview .preview-image {
   width: 100%;
   height: 200px;
