@@ -20,7 +20,7 @@
 #}
 
 {% if view.id == 'extension_echappees' or  view.id == 'extension_ruches' or view.id == 'extension_recits' or view.id == 'extension_vivariums' %}
-	{# <div class="extension-preview">
+	<div class="extension-preview">
 		<a class="preview-image" href="{{ fields.view_node.content|striptags}}">
 			{{fields.field_image_de_couverture.content}}
 		</a>
@@ -28,8 +28,7 @@
 			<h3>{{ fields.title.content|raw|striptags }}</h3>
 		</a>
 		<div class="portfolio-sub-title">{{fields.field_mots_cles.content|raw}}</div>
-	</div> #}
-	{{ output -}}
+	</div>
 
 {% else %}
 	{{ output -}}
