@@ -635,16 +635,16 @@ main {
 
 .add-border {
     &.left {
-        border-left: 1px solid black;
+        border-left: 1px solid #dee2e6;
     }
     &.right {
-        border-right: 1px solid black;
+        border-right: 1px solid #dee2e6;
     }
     &.top {
-        border-top: 1px solid black;
+        border-top: 1px solid #dee2e6;
     }
     &.bottom {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #dee2e6;
     }
 }
 

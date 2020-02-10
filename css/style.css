@@ -674,19 +674,19 @@ main h1 {
 }
 
 .add-border.left {
-  border-left: 1px solid black;
+  border-left: 1px solid #dee2e6;
 }
 
 .add-border.right {
-  border-right: 1px solid black;
+  border-right: 1px solid #dee2e6;
 }
 
 .add-border.top {
-  border-top: 1px solid black;
+  border-top: 1px solid #dee2e6;
 }
 
 .add-border.bottom {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #dee2e6;
 }
 
 .center-titles {
