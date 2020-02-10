@@ -673,19 +673,19 @@ main h1 {
   margin-top: 20px;
 }
 
-.border.left {
+.add-border.left {
   border-left: 1px solid black;
 }
 
-.border.right {
+.add-border.right {
   border-right: 1px solid black;
 }
 
-.border.top {
+.add-border.top {
   border-top: 1px solid black;
 }
 
-.border.bottom {
+.add-border.bottom {
   border-bottom: 1px solid black;
 }
 
