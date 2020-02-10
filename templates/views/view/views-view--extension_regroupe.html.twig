@@ -52,13 +52,7 @@
 	{{ attachment_before }}
 
 	{% if rows -%}
-        <div class="row">
-            {% for row in rows %}
-                <div class="col-md-6">
-                    {{ row }}
-                </div>
-            {% endfor %}
-        </div>
+        {{ rows }}
 	{% elseif empty -%}
 		{{ empty }}
 	{% endif %}
