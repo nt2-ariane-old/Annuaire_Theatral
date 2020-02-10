@@ -1,12 +1,9 @@
-	<div class="extension-preview">
-		<a class="preview-image" href="{{ fields.view_node.content|striptags}}">
-			{{fields.field_image_de_couverture.content}}
-		</a>
-		<a href="{{ fields.view_node.content|striptags}}">
-			<h3>{{ fields.title.content|raw|striptags }}</h3>
-		</a>
-		<div class="portfolio-sub-title">{{fields.field_mots_cles.content|raw}}</div>
-	</div>
-{% for key in fields|keys  %}
+
+  <div class="col-md-6">
+    {{ output -}}
+  </div>
+
+
+{% for key in field|keys  %}
 {{ key }}
 {% endfor %}
