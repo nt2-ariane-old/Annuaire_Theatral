@@ -54,9 +54,21 @@
 	{% if rows -%}
 
 		{{ rows }}
-        {% for key in rows.0|keys %}
+        {% for key in rows.0.rows|keys %}
             {{ key }}
         {% endfor %}
+
+        <br>=======<br>
+        {{ rows.0.theme }}
+        <br>=======<br>
+        {{ rows.0.view }}
+        <br>=======<br>
+        {{ rows.0.rows }}
+        <br>=======<br>
+        {{ rows.0.grouping_levels }}
+        <br>=======<br>
+        {{ rows.0.title }}
+        <br>=======<br>
 
 	{% elseif empty -%}
 		{{ empty }}
