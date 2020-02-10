@@ -1,9 +1,7 @@
+<div class="col-md-6">
+	{{ output -}}
 
-  <div class="col-md-6">
-    {{ output -}}
-  </div>
-
-
-{% for key in field|keys  %}
-{{ key }}
-{% endfor %}
+	{% for key in field|keys  %}
+		{{ key }}
+	{% endfor %}
+</div>
