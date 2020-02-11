@@ -74,6 +74,7 @@
 #}
 <article{{attributes}}>
 	{% if view_mode == 'teaser'  %}
+		{{ content.field_type_dossier }}
 		{% if  content.field_type_dossier == "Dossier" %}
 			<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
 				<div class="blog-zig-zag up-left">
@@ -88,16 +89,16 @@
 
 					</div>
 				</div>
-				<div class="blog-zig-zag">
-					<p><a href="{{ url }}" class="w-inlin§e-block blog-link animsition-link">{{ content.field_type_dossier|striptags }}</a> du numéro {{ content.field_image }}</p>
-					
-				</div>
+
 			</div>
 		{% else %}
 			<div class="blog-zig-zag">
-				<a href="{{ url }}" class="w-inlin§e-block blog-link animsition-link">
+				<p>
+					<a href="{{ url }}" class="w-inlin§e-block blog-link animsition-link">{{ content.field_type_dossier }}</a>
+					dans le numéro
 					{{ content.group_dossier_informations.field_issue}}
-				</a>
+				</p>
+
 			</div>
 		{% endif %}
 

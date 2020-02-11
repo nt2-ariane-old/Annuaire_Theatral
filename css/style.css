@@ -34,6 +34,8 @@ a:hover {
 img {
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   height: 100%;
 }
 
@@ -654,6 +656,10 @@ main h1 {
   display: block;
   margin: 0;
   padding: 0;
+}
+
+.extension-preview .preview-image img {
+  width: 100%;
 }
 
 .extension-preview .portfolio-title {

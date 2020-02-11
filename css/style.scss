@@ -32,6 +32,7 @@ a {
 
 img {
     object-fit: cover;
+    object-position: center;
     height: 100%
 }
 
@@ -627,6 +628,9 @@ main {
         display: block;
         margin: 0;
         padding: 0;
+        img {
+            width: 100%;
+        }
     }
     .portfolio-title {
         color: black;
