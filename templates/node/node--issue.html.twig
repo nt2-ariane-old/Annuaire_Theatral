@@ -81,7 +81,10 @@
 						<a class="blog-title animsition-link" href="{{ url}}">{{ label  }}</a>
 					</h3>
 					<p class="meta-tag pls-category">
-						<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number }}</span><span> - </span>
+						<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number }}</span>
+						<span>
+							-
+						</span>
 						<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date}}</span>
 					</p>
 					<div class="seperator"></div>
@@ -127,14 +130,17 @@
 				</section>
 			{% endif %}
 			{% if content.group_contents.dossiers_on_issue_entity_view_1  %}
-				<section id="dossiers" class="w-row">
-					{{ content.group_contents.dossiers_on_issue_entity_view_1 }}
+				<section id="dossiers">
+					<div class="w-row">
+						{{ content.group_contents.dossiers_on_issue_entity_view_1 }}
+					</div>
 				</section>
 			{% endif %}
 			{% if content.group_contents.hors_dossiers_on_issue_entity_view_1  %}
-				<section id="hors-dossiers" class="w-row">
-					div
-					{{ content.group_contents.hors_dossiers_on_issue_entity_view_1 }}
+				<section id="hors-dossiers">
+					<div class="w-row">
+						{{ content.group_contents.hors_dossiers_on_issue_entity_view_1 }}
+					</div>
 				</section>
 			{% endif %}
 			{% if content.group_contents.individual_articles_entity_view_1  %}
