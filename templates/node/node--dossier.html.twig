@@ -74,25 +74,33 @@
 #}
 <article{{attributes}}>
 	{% if view_mode == 'teaser'  %}
-		<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
-			<div class="blog-zig-zag up-left">
-				<div class="blog-content">
-					<h3 class="blog-title">
-						<a class="blog-title animsition-link" href="{{ url }}">{{ label }}</a>
-					</h3>
-					{% if content.field_editor  %}
-						<div class="meta-tag">Sous la responsabilité de
-							{{ content.field_editor }}</div>
-					{% endif %}
+		{% if  content.field_type_dossier == "Dossier" %}
+			<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
+				<div class="blog-zig-zag up-left">
+					<div class="blog-content">
+						<h3 class="blog-title">
+							<a class="blog-title animsition-link" href="{{ url }}">{{ label }}</a>
+						</h3>
+						{% if content.field_editor  %}
+							<div class="meta-tag">Sous la responsabilité de
+								{{ content.field_editor }}</div>
+						{% endif %}
 
+					</div>
+				</div>
+				<div class="blog-zig-zag">
+					<p><a href="{{ url }}" class="w-inlin§e-block blog-link animsition-link">{{ content.field_type_dossier|striptags }}</a> du numéro {{ content.field_image }}</p>
+					
 				</div>
 			</div>
+		{% else %}
 			<div class="blog-zig-zag">
 				<a href="{{ url }}" class="w-inlin§e-block blog-link animsition-link">
-					{{ content.field_image }}
+					{{ content.group_dossier_informations.field_issue}}
 				</a>
 			</div>
-		</div>
+		{% endif %}
+
 
 	{% else %}
 		{{ title_prefix }}
@@ -140,7 +148,10 @@
 					</div>
 				</div>
 			{% else %}
-				<h1 aria-labelby="Titre du Dossier" itemprop="name">{{ content.field_type_dossier }} - {{ content.group_dossier_informations.field_issue }} </h1>
+				<h1 aria-labelby="Titre du Dossier" itemprop="name">{{ content.field_type_dossier|striptags }}
+					-
+					{{ content.group_dossier_informations.field_issue }}
+				</h1>
 			{% endif %}
 
 		</div>
