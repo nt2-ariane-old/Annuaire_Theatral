@@ -77,8 +77,6 @@
 		{% set type %}
 		{{ content.field_type_dossier }}
 		{% endset %}
-
-		<p>{{ type|striptags|trim }}</p>
 		{% if  type|striptags|trim == "Dossier" %}
 			<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
 				<div class="blog-zig-zag up-left">
@@ -93,11 +91,11 @@
 
 					</div>
 				</div>
-			<div class="blog-zig-zag">
-				<a href="{{ url }}" class="w-inline-block blog-link animsition-link big-h-img">
-					{{ content.field_image }}
-				</a>
-			</div>
+				<div class="blog-zig-zag">
+					<a href="{{ url }}" class="w-inline-block blog-link animsition-link big-h-img">
+						{{ content.field_image }}
+					</a>
+				</div>
 			</div>
 		{% else %}
 			<div class="w-col w-col-6">
@@ -153,6 +151,9 @@
 		{% endif %}
 
 		<div{{content_attributes}}>
+			{% set type %}
+			{{ content.field_type_dossier }}
+			{% endset %}
 			{% if type|striptags|trim == "Dossier" %}
 
 				<div id="intro" class="w-section banner-one window-size">
