@@ -104,20 +104,6 @@ textarea {
   max-width: 100%;
 }
 
-.views-view-grid.cols-3 .views-col {
-  text-align: center;
-  height: 390px;
-  width: 300px;
-  position: relative;
-}
-
-.views-view-grid.cols-3 .views-col .views-field-title {
-  height: 10%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-}
-
 .data-blog.cont-ico.smll-ico {
   padding: 0;
 }
