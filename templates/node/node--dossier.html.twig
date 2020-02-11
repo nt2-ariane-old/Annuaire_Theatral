@@ -81,7 +81,8 @@
 						<a class="blog-title animsition-link" href="{{ url }}">{{ label }}</a>
 					</h3>
 					{% if content.field_editor  %}
-						<div class="meta-tag">Sous la responsabilité de {{ content.field_editor }}</div>
+						<div class="meta-tag">Sous la responsabilité de
+							{{ content.field_editor }}</div>
 					{% endif %}
 
 				</div>
@@ -116,26 +117,31 @@
 		{% endif %}
 
 		<div{{content_attributes}}>
-			<div id="intro" class="w-section banner-one window-size">
-				<div class="video-wrapper">
-					<div aria-labelledby="Image de couverture du Dossier" class="w-embed embed-video">
-						{{ content.field_image }}
-					</div>
-					<div class="video-overlay"></div>
-				</div>
-				<div class="w-container container-contact">
+			{% if content.field_type_dossier == "Dossier" %}
 
-					<div class="align-center">
-						<h1 class="inner-title" aria-labelby="Titre du Dossier" itemprop="name">{{ label }}</h1>
+				<div id="intro" class="w-section banner-one window-size">
+					<div class="video-wrapper">
+						<div aria-labelledby="Image de couverture du Dossier" class="w-embed embed-video">
+							{{ content.field_image }}
+						</div>
+						<div class="video-overlay"></div>
 					</div>
-					<div aria-labelledby="Informations sur le Dossier" class="align-center season-issue">
-						<div class="sub-information line" aria-labelledby="Editeur du Dossier">Sous la responsabilité de
-							{{ content.group_dossier_informations.field_editor}}</div>
-						<div class="sub-information line" aria-labelledby="Revue Parent du Dossier">Dans le numéro 
-							{{ content.group_dossier_informations.field_issue}}</div>
+					<div class="w-container container-contact">
+
+						<div class="align-center">
+							<h1 class="inner-title" aria-labelby="Titre du Dossier" itemprop="name">{{ label }}</h1>
+						</div>
+						<div aria-labelledby="Informations sur le Dossier" class="align-center season-issue">
+							<div class="sub-information line" aria-labelledby="Editeur du Dossier">Sous la responsabilité de
+								{{ content.group_dossier_informations.field_editor}}</div>
+							<div class="sub-information line" aria-labelledby="Revue Parent du Dossier">Dans le numéro
+								{{ content.group_dossier_informations.field_issue}}</div>
+						</div>
 					</div>
 				</div>
-			</div>
+			{% else %}
+				<h1 aria-labelby="Titre du Dossier" itemprop="name">{{ content.field_type_dossier }} - {{ content.group_dossier_informations.field_issue }} </h1>
+			{% endif %}
 
 		</div>
 		<section id="sommaire" class="w-section section-imp">
