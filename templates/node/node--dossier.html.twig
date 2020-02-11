@@ -78,8 +78,8 @@
 		{{ content.field_type_dossier }}
 		{% endset %}
 
-		<p>{{ type|striptags }}</p>
-		{% if  type|striptags == "Dossier" %}
+		<p>{{ type|striptags|trim }}</p>
+		{% if  type|striptags|trim == "Dossier" %}
 			<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
 				<div class="blog-zig-zag up-left">
 					<div class="blog-content">
@@ -117,7 +117,7 @@
 					</div>
 					<div class="service-content">
 						<a href="{{ url }}">
-							<h4 class="service-title">{{ type|striptags }}</h4>
+							<h4 class="service-title">{{ type|striptags|trim }}</h4>
 						</a>
 					</div>
 				</div>
