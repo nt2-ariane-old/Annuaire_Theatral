@@ -75,7 +75,7 @@
 <article{{attributes}}>
 	{% if view_mode == 'teaser'  %}
 		<p>{{ content.field_type_dossier|raw }}</p>
-		{% if  content.field_type_dossier|raw|striptags == "Dossier" %}
+		{% if  content.field_type_dossier|striptags == "Dossier" %}
 			<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
 				<div class="blog-zig-zag up-left">
 					<div class="blog-content">
