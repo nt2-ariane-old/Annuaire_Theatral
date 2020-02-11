@@ -32,9 +32,9 @@ a:hover {
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
 
 .window-size {
@@ -51,12 +51,6 @@ img {
 .data-blog .w-embed {
   width: 100%;
   height: 100%;
-}
-
-.data-blog img {
-  min-width: 100%;
-  min-height: 100%;
-  height: auto;
 }
 
 #search-block-form {
@@ -133,11 +127,6 @@ textarea {
 
 .blog-last-photo {
   overflow: hidden;
-}
-
-.blog-last-photo img {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 ul.quicktabs-tabs {
@@ -434,13 +423,6 @@ footer #block-views-block-partenaires-block-1 .views-row div {
   height: 100%;
 }
 
-footer #block-views-block-partenaires-block-1 .views-row div img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .informations {
   min-height: calc(100vh - 120px - 64px - 4rem);
   padding: 1em;
@@ -592,14 +574,6 @@ form#views-form-commerce-cart-form-default-12 .order-total-line .order-total-lin
   text-align: justify;
 }
 
-.blog-zig-zag img {
-  min-height: 100%;
-  min-width: 100%;
-  max-height: auto;
-  width: auto;
-  height: auto;
-}
-
 .section-imp {
   padding: 40px 20px;
   background-color: transparent;
@@ -620,11 +594,6 @@ main h1 {
 
 .row {
   width: 100%;
-}
-
-.portfolio-overlay img {
-  width: auto;
-  height: auto;
 }
 
 .header-presentation {
@@ -689,11 +658,6 @@ main h1 {
 
 .extension-preview .portfolio-title {
   color: black;
-}
-
-.extension-preview img {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .lecture-content {
@@ -765,11 +729,6 @@ main h1 {
   margin: 0;
 }
 
-.preview img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .preview .field__item {
   height: 100px;
   width: 100px;
@@ -785,8 +744,6 @@ main h1 {
 }
 
 .preview.article-preview img {
-  -o-object-fit: cover;
-     object-fit: cover;
   margin: auto;
   display: block;
 }
@@ -1067,8 +1024,6 @@ nav ul ul li {
   z-index: -1;
   top: 0px;
   left: 0px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 #intro .embed-video,
@@ -1115,11 +1070,6 @@ nav ul ul li {
 
 .field--name-field-dossier-vivarium .field__label:after {
   content: '';
-}
-
-.blog-item img {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .item.blog-item {
