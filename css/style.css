@@ -91,6 +91,11 @@ textarea {
   max-width: 100%;
 }
 
+.big-h-img img {
+  height: 100%;
+  width: 100%;
+}
+
 .views-view-grid.cols-3 .views-row.clearfix {
   padding: 1rem;
 }
