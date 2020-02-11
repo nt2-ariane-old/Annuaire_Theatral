@@ -153,7 +153,7 @@
 		{% endif %}
 
 		<div{{content_attributes}}>
-			{% if content.field_type_dossier == "Dossier" %}
+			{% if type|striptags|trim == "Dossier" %}
 
 				<div id="intro" class="w-section banner-one window-size">
 					<div class="video-wrapper">
@@ -176,7 +176,7 @@
 					</div>
 				</div>
 			{% else %}
-				<h1 aria-labelby="Titre du Dossier" itemprop="name">{{ content.field_type_dossier|striptags }}
+				<h1 aria-labelby="Titre du Dossier" itemprop="name">{{ type|striptags|trim }}
 					-
 					{{ content.group_dossier_informations.field_issue }}
 				</h1>
