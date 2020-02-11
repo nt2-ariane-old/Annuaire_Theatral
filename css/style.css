@@ -115,19 +115,6 @@ textarea {
   position: relative;
 }
 
-.views-view-grid.cols-3 .views-col img {
-  max-height: 90%;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 0;
-  bottom: 10%;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
 .views-view-grid.cols-3 .views-col .views-field-title {
   height: 10%;
   width: 100%;
@@ -149,10 +136,8 @@ textarea {
 }
 
 .blog-last-photo img {
-  width: auto;
-  height: auto;
-  min-width: 100%;
-  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 ul.quicktabs-tabs {
@@ -707,12 +692,8 @@ main h1 {
 }
 
 .extension-preview img {
-  min-width: 100%;
-  max-width: 130%;
-  min-height: 100%;
-  max-height: auto;
-  height: auto;
-  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .lecture-content {
@@ -785,11 +766,8 @@ main h1 {
 }
 
 .preview img {
-  min-width: 100%;
-  min-height: 100%;
-  max-height: 120%;
-  max-width: none;
-  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .preview .field__item {
@@ -807,12 +785,8 @@ main h1 {
 }
 
 .preview.article-preview img {
-  max-width: 100%;
-  max-height: 100%;
-  min-width: auto;
-  min-height: auto;
-  height: auto;
-  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: auto;
   display: block;
 }
@@ -1093,9 +1067,8 @@ nav ul ul li {
   z-index: -1;
   top: 0px;
   left: 0px;
-  min-width: 100%;
-  min-height: 100%;
-  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #intro .embed-video,
@@ -1145,10 +1118,8 @@ nav ul ul li {
 }
 
 .blog-item img {
-  width: auto;
-  height: auto;
-  min-height: 100%;
-  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .item.blog-item {
