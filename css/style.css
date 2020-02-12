@@ -609,6 +609,15 @@ main h1 {
   display: table;
 }
 
+.tags:hover a {
+  color: white;
+}
+
+.tags a:hover {
+  color: white;
+  opacity: 1;
+}
+
 .tags::after {
   content: "";
   clear: both;

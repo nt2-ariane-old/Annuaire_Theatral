@@ -593,6 +593,18 @@ main {
         clear: both;
         display: table;
     }
+    &:hover
+    {
+        a
+        {
+            color: white;
+        }
+    }
+    a:hover
+    {
+        color: white;
+        opacity: 1;
+    }
 }
 
 .tags::after {
