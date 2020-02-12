@@ -908,11 +908,7 @@ nav ul ul li {
     font-family: Lekton, sans-serif;
     letter-spacing: 3px;
 }
-
-#intro {
-    position: relative;
-    width: 100%;
-    .item-list,
+.item-list,
     .item-list ul,
     .item-list li,
     .video-wrapper,
@@ -922,6 +918,9 @@ nav ul ul li {
         padding: 0;
         margin: 0;
     }
+#intro {
+    position: relative;
+    width: 100%;
     .align-center {
         background-color: #EE236760;
         margin: 1em 2em;
