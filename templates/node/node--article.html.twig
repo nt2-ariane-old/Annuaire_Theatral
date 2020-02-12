@@ -169,11 +169,13 @@
 							<li class="nav-item">
 								<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
 							</li>
-						{% elseif content.field_bibliographic_reference %}
+						{% endif %}
+						{% if content.field_bibliographic_reference %}
 							<li class="nav-item">
 								<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
 							</li>
-						{% elseif content.field_pdf %}
+						{% endif %}
+						{% if content.field_pdf %}
 							<li class="nav-item">
 								<a class="nav-link" data-toggle="tab" href="#pdf">Article PDF</a>
 							</li>
@@ -186,11 +188,13 @@
 							<div class="tab-pane container active" id="citation">
 								<p>{{content.field_pour_citer}}</p>
 							</div>
-						{% elseif content.field_bibliographic_reference %}
+						{% endif %}
+						{% if content.field_bibliographic_reference %}
 							<div class="tab-pane container fade" id="biblio">
 								<p>{{content.field_bibliographic_reference}}</p>
 							</div>
-						{% elseif content.field_pdf %}
+						{% endif %}
+						{% if content.field_pdf %}
 							<div class="tab-pane container fade" id="pdf">
 								<p>{{content.field_pdf}}</p>
 							</div>
