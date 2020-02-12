@@ -114,7 +114,7 @@
 							
 							{% endfor %}
 							{# Auteurs #}
-							{% if node.group_article_informations.value|render|trim not empty  %}
+							{% if content.group_article_informations.field_author  is not empty  %}
 								<div class="sidebar-class">
 									<h4 class="post-title">Auteur(s)</h4>
 									{{content.group_article_informations.field_author }}
