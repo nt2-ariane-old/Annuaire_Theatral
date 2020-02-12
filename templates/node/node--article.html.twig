@@ -75,7 +75,7 @@
 <article{{attributes}}>
 
 	{% if view_mode == 'teaser'  %}
-			<a class="lecture-content" href="{{ url }}">{{node.label}}</a>
+		<a class="lecture-content" href="{{ url }}">{{node.label}}</a>
 	{% else %}
 
 		{{ title_prefix }}
@@ -165,28 +165,36 @@
 
 					{# Citation et Biblio #}
 					<ul class="nav nav-tabs">
-						<li class="nav-item">
-							<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#pdf">Article PDF</a>
-						</li>
+						{% if content.field_pour_citer  %}
+							<li class="nav-item">
+								<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
+							</li>
+						{% else if content.field_bibliographic_reference %}
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+							</li>
+						{% else if content.field_pdf %}
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#pdf">Article PDF</a>
+							</li>
+						{% endif %}
 					</ul>
 
 					<!-- Tab panes -->
 					<div class="tab-content">
-						<div class="tab-pane container active" id="citation">
-							<p>{{content.field_pour_citer}}</p>
-						</div>
-						<div class="tab-pane container fade" id="biblio">
-							<p>{{content.field_bibliographic_reference}}</p>
-						</div>
-						<div class="tab-pane container fade" id="pdf">
-							<p>{{content.field_pdf}}</p>
-						</div>
+						{% if content.field_pour_citer  %}
+							<div class="tab-pane container active" id="citation">
+								<p>{{content.field_pour_citer}}</p>
+							</div>
+						{% else if content.field_bibliographic_reference %}
+							<div class="tab-pane container fade" id="biblio">
+								<p>{{content.field_bibliographic_reference}}</p>
+							</div>
+						{% else if content.field_pdf %}
+							<div class="tab-pane container fade" id="pdf">
+								<p>{{content.field_pdf}}</p>
+							</div>
+						{% endif %}
 					</main>
 
 				</div>
