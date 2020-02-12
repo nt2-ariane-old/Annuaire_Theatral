@@ -110,6 +110,9 @@
 						<div
 							class="w-col w-col-3">
 
+							{% for key in node.group_article_informations|keys %}
+							
+							{% endfor %}
 							{# Auteurs #}
 							{% if node.group_article_informations.value  %}
 								<div class="sidebar-class">
