@@ -165,17 +165,17 @@
 
 					{# Citation et Biblio #}
 					<ul class="nav nav-tabs">
-						{% if content.field_pour_citer  %}
+						{% if node.field_pour_citer.value  %}
 							<li class="nav-item">
 								<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
 							</li>
 						{% endif %}
-						{% if content.field_bibliographic_reference %}
+						{% if node.field_bibliographic_reference.value %}
 							<li class="nav-item">
 								<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
 							</li>
 						{% endif %}
-						{% if content.field_pdf %}
+						{% if node.field_pdf.value %}
 							<li class="nav-item">
 								<a class="nav-link" data-toggle="tab" href="#pdf">Article PDF</a>
 							</li>
@@ -184,17 +184,17 @@
 
 					<!-- Tab panes -->
 					<div class="tab-content">
-						{% if content.field_pour_citer  %}
+						{% if node.field_pour_citer.value   %}
 							<div class="tab-pane container active" id="citation">
 								<p>{{content.field_pour_citer}}</p>
 							</div>
 						{% endif %}
-						{% if content.field_bibliographic_reference %}
+						{% if  node.field_bibliographic_reference.value %}
 							<div class="tab-pane container fade" id="biblio">
 								<p>{{content.field_bibliographic_reference}}</p>
 							</div>
 						{% endif %}
-						{% if content.field_pdf %}
+						{% if node.field_pdf.value %}
 							<div class="tab-pane container fade" id="pdf">
 								<p>{{content.field_pdf}}</p>
 							</div>
