@@ -114,12 +114,13 @@
 							
 							{% endfor %}
 							{# Auteurs #}
-							{% if node.group_article_informations.value  %}
+							{% if node.group_article_informations.value|render|trim not empty  %}
 								<div class="sidebar-class">
 									<h4 class="post-title">Auteur(s)</h4>
 									{{content.group_article_informations.field_author }}
 								</div>
 
+							{% if  content.group_article_informations.field_tags|render|trim %}
 							{# Mots-Clés #}
 								<div class="views-element-container sidebar-class">
 									<h4 class="post-title">Mots-clés</h4>
