@@ -586,7 +586,13 @@ main {
 #vivarium {
     border: 1px solid black;
 }
-
+.blog-content
+{
+    .sub-information
+    {
+        text-align: left;
+    }
+}
 .tags {
     &::after {
         content: "";

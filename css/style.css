@@ -603,6 +603,10 @@ main h1 {
   border: 1px solid black;
 }
 
+.blog-content .sub-information {
+  text-align: left;
+}
+
 .tags::after {
   content: "";
   clear: both;
