@@ -100,21 +100,9 @@
 		{% endif %}
 
 		<div{{content_attributes}}>
-			<div class="w-container">
-				<div class="w-row">
-					<div class="w-col w-col-3">
-						<div class="preview article-preview">
-							{{ content.field_image }}
-						</div>
-					</div>
-					<div class="w-col w-col-9">
-						<h2>{{ node.label }}</h2>
-						<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
-					</div>
-				</div>
-			</div>
-
 			<main id="contenu" class="w-section section-imp">
+				<h2>{{ node.label }}</h2>
+				<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
 				<div class="w-container">
 					<div
 						class="w-row">
@@ -123,28 +111,36 @@
 							class="w-col w-col-3">
 
 							{# Auteurs #}
-							<div class="sidebar-class">
-								<h4 class="post-title">Auteur(s)</h4>
-								{{content.group_article_informations.field_author }}
-							</div>
+							{% if node.group_article_informations.field_author.value  %}
+								<div class="sidebar-class">
+									<h4 class="post-title">Auteur(s)</h4>
+									{{content.group_article_informations.field_author }}
+								</div>
+							{% endif %}
 
 							{# Mots-Clés #}
-							<div class="views-element-container sidebar-class">
-								<h4 class="post-title">Mots-clés</h4>
+							{% if node.group_article_informations.field_tags.value  %}
+								<div class="views-element-container sidebar-class">
+									<h4 class="post-title">Mots-clés</h4>
 
-								<div class="w-clearfix">
-									{{ content.group_article_informations.field_tags }}
+									<div class="w-clearfix">
+										{{ content.group_article_informations.field_tags }}
+									</div>
 								</div>
-							</div>
+							{% endif %}
+
 
 							{# Lectures Connexes #}
-							<div class="views-element-container sidebar-class">
-								<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
-									<h4 class="post-title">Lectures Connexes</h4>
-									{{ content.field_lectures_connexes }}
-								</div>
+							{% if node.field_lectures_connexes.value  %}
+								<div class="views-element-container sidebar-class">
+									<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
+										<h4 class="post-title">Lectures Connexes</h4>
+										{{ content.field_lectures_connexes }}
+									</div>
 
-							</div>
+								</div>
+							{% endif %}
+
 						</div>
 						<div
 							class="w-col w-col-9">
@@ -152,8 +148,7 @@
 							{# Body #}
 
 							<div class="bottom-space">
-								{{ kint(content.body) }}
-								{% if content.body  %}
+								{% if node.body.value  %}
 									{{ content.body }}
 								{% else %}
 									<p>Abonnez-Vous</p>
