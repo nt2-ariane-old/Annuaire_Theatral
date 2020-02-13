@@ -1,5 +1,8 @@
 {# AFFICHAGE SI C'EST SEULEMENT UN TEASER  #}
-{{ node.bundle_entity_type }}
+{{ node.entity.0.node_type }}
+{% for key in node|keys %}
+
+{% endfor %}
 {% if teaser and node.isPublished() %}
 	{# EN FONCTION DU TYPE DE NODE #}
 	{% if node.id == "article" %}
