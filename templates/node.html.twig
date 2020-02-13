@@ -1,39 +1,111 @@
 {# AFFICHAGE SI C'EST SEULEMENT UN TEASER  #}
 {% if view_mode == 'teaser'  %}
-{# EN FONCTION DU TYPE DE NODE #}
-	{% switch node.id %}
-		{% case "article" %}
-			<div class="lecture-content" onclick="window.location='{{ url }}';">
-				<span>{{node.label}}</span>
-			</div>
-		{% case "contributor" %}
-			<a href='{{ url }}'>
-				<b>{{ node.label }}</b>
-				{% set conBody %}
-				{{ content.body }}
-				{% endset %}
+	{# EN FONCTION DU TYPE DE NODE #}
+	{% if node.id == "article" %}
+		<div class="lecture-content" onclick="window.location='{{ url }}';">
+			<span>{{node.label}}</span>
+		</div>
+	{% elseif node.id == "contributor" %}
+		<a href='{{ url }}'>
+			<b>{{ node.label }}</b>
+			{% set conBody %}
+			{{ content.body }}
+			{% endset %}
 
-				<p>{{ conBody|striptags }}</p>
-			</a>
-		{% case "issue" %}
+			<p>{{ conBody|striptags }}</p>
+		</a>
+	{% elseif node.id == "issue" %}
+		<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
+			<div class="blog-zig-zag up-left">
+				<div class="blog-content">
+					<h3 class="blog-title">
+						<a class="blog-title animsition-link" href="{{ url}}">{{ label  }}</a>
+					</h3>
+					<p class="meta-tag pls-category">
+						<div class="sub-information">
+							<span aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number }}</span>
+							-
+							<span aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date}}</span>
+						</div>
+					</p>
+					<div class="seperator"></div>
+					<p>{{content.field_abstract}}</p>
+					<div class="small-spc">
+						<a href="{{ url}}" class="read-more animsition-link">Lire la suite ›</a>
+					</div>
+				</div>
+			</div>
+			<div class="blog-zig-zag">
+				<a href="{{ url }}" class="w-inline-block blog-link animsition-link big-h-img">
+					{{ content.field_image }}
+				</a>
+			</div>
+		</div>
+	{% elseif node.id == "nouvelles" %}
+
+		<div itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="Article d'Actualité" class="blog-minimal">
+			<div class="data-blog">
+				<i class="fa fa-envelope"></i>
+			</div>
+			<h3 itemprop="headline" aria-labelledby="Titre de l'actualité" class="blog-title">
+				<a class="blog-title animsition-link" aria-labelledby="Lien vers Actualite" href="{{ fields.view_node.content|render|striptags|trim }}">{{ fields.title.content|render|striptags|trim  }}</a>
+			</h3>
+			<p class="meta-tag" aria-labelledby="Date de Publication" itemprop="datePublished">Publié le :
+				{{ fields.field_nouvelle_date.content }}</p>
+			<div class="seperator center"></div>
+			<p itemprop="backstory" aria-labelledby="Contenu de l'actualité">{{ fields.body.content }}</p>
+			<div class="small-spc">
+				<a aria-labelledby="Lien Lire la suite" href="{{ fields.view_node.content|render|striptags|trim }}" class="read-more animsition-link">Lire la suite ›</a>
+			</div>
+		</div>
+	{% elseif node.id == "dossier_vivarium" %}
+		<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
+			<div class="blog-zig-zag">
+				<div class="blog-content">
+					<h3 class="blog-title">
+						<a class="blog-title animsition-link" href="{{ fields.view_node.content|striptags}}">{{ fields.title.content|render|striptags|trim  }}</a>
+					</h3>
+					<p class="meta-tag">Responsable :
+						{{fields.field_responsable_dossier.date.content}}</p>
+					<div class="seperator"></div>
+					<p>{{fields.body.content}}</p>
+					<div class="small-spc">
+						<a href="{{ fields.view_node.content|striptags}}" class="read-more animsition-link">Lire la suite&nbsp;›</a>
+					</div>
+				</div>
+			</div>
+			<div class="blog-zig-zag">
+				<a href="{{ fields.view_node.content|striptags}}" class="w-inline-block blog-link animsition-link">
+					{{fields.field_image_de_couverture.content}}
+				</a>
+			</div>
+		</div>
+	{% elseif node.id == "partenaires" %}
+
+	{% elseif node.id == "recit" or node.id == "la_ruche" or node.id == "echappee" or node.id == "article_web" %}
+		<div class="lecture-content" onclick="window.location='{{ url }}';">
+			<span>{{node.label}}</span>
+			<div class="preview">
+				{{ content.field_image_de_couverture }}
+			</div>
+		</div>
+
+	{% elseif node.id == "dossier" %}
+		{% set type %}
+		{{ content.field_type_dossier }}
+		{% endset %}
+		{% if  type|striptags|trim == "Dossier" %}
 			<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
 				<div class="blog-zig-zag up-left">
 					<div class="blog-content">
 						<h3 class="blog-title">
-							<a class="blog-title animsition-link" href="{{ url}}">{{ label  }}</a>
+							<a class="blog-title animsition-link" href="{{ url }}">{{ label }}</a>
 						</h3>
-						<p class="meta-tag pls-category">
-							<div class="sub-information">
-								<span aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number }}</span>
-								-
-								<span aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date}}</span>
-							</div>
-						</p>
-						<div class="seperator"></div>
-						<p>{{content.field_abstract}}</p>
-						<div class="small-spc">
-							<a href="{{ url}}" class="read-more animsition-link">Lire la suite ›</a>
-						</div>
+						{% if content.field_editor  %}
+							<div class="meta-tag">Sous la responsabilité de
+								{{ content.field_editor }}</div>
+						{% endif %}
+
 					</div>
 				</div>
 				<div class="blog-zig-zag">
@@ -42,117 +114,44 @@
 					</a>
 				</div>
 			</div>
-		{% case "nouvelles" %}
-
-			<div itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="Article d'Actualité" class="blog-minimal">
-				<div class="data-blog">
-					<i class="fa fa-envelope"></i>
-				</div>
-				<h3 itemprop="headline" aria-labelledby="Titre de l'actualité" class="blog-title">
-					<a class="blog-title animsition-link" aria-labelledby="Lien vers Actualite" href="{{ fields.view_node.content|render|striptags|trim }}">{{ fields.title.content|render|striptags|trim  }}</a>
-				</h3>
-				<p class="meta-tag" aria-labelledby="Date de Publication" itemprop="datePublished">Publié le :
-					{{ fields.field_nouvelle_date.content }}</p>
-				<div class="seperator center"></div>
-				<p itemprop="backstory" aria-labelledby="Contenu de l'actualité">{{ fields.body.content }}</p>
-				<div class="small-spc">
-					<a aria-labelledby="Lien Lire la suite" href="{{ fields.view_node.content|render|striptags|trim }}" class="read-more animsition-link">Lire la suite ›</a>
-				</div>
-			</div>
-		{% case "dossier_vivarium" %}
-			<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
-				<div class="blog-zig-zag">
-					<div class="blog-content">
-						<h3 class="blog-title">
-							<a class="blog-title animsition-link" href="{{ fields.view_node.content|striptags}}">{{ fields.title.content|render|striptags|trim  }}</a>
-						</h3>
-						<p class="meta-tag">Responsable :
-							{{fields.field_responsable_dossier.date.content}}</p>
-						<div class="seperator"></div>
-						<p>{{fields.body.content}}</p>
-						<div class="small-spc">
-							<a href="{{ fields.view_node.content|striptags}}" class="read-more animsition-link">Lire la suite&nbsp;›</a>
-						</div>
-					</div>
-				</div>
-				<div class="blog-zig-zag">
-					<a href="{{ fields.view_node.content|striptags}}" class="w-inline-block blog-link animsition-link">
-						{{fields.field_image_de_couverture.content}}
-					</a>
-				</div>
-			</div>
-		{% case "partenaires" %}
-
-		{% case "recit" or "la_ruche" or "echappee" or "article_web" %}
-			<div class="lecture-content" onclick="window.location='{{ url }}';">
-				<span>{{node.label}}</span>
-				<div class="preview">
-					{{ content.field_image_de_couverture }}
-				</div>
-			</div>
-
-		{% case "dossier" %}
-			{% set type %}
-			{{ content.field_type_dossier }}
-			{% endset %}
-			{% if  type|striptags|trim == "Dossier" %}
-				<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
-					<div class="blog-zig-zag up-left">
-						<div class="blog-content">
-							<h3 class="blog-title">
-								<a class="blog-title animsition-link" href="{{ url }}">{{ label }}</a>
-							</h3>
-							{% if content.field_editor  %}
-								<div class="meta-tag">Sous la responsabilité de
-									{{ content.field_editor }}</div>
+		{% else %}
+			<div class="w-col w-col-6">
+				<div class="w-clearfix service-wrapper wow fadeIn" data-wow-delay="0.3s">
+					<div class="service-icon">
+						<div class="w-embed">
+							{% if fields.field_type_dossier.content == 'Documents' %}
+								<i class="fas fa-folder"></i>
+							{% elseif fields.field_type_dossier.content == "Pratiques et travaux" %}
+								<i class="far fa-comment"></i>
+							{% elseif fields.field_type_dossier.content ==  "Parcours critique" %}
+								<i class="fas fa-book"></i>
+							{% elseif fields.field_type_dossier.content ==  "Revue des revues" %}
+								<i class="fas fa-hourglass-end"></i>
+							{% elseif fields.field_type_dossier.content ==  "Notes de lecture" %}
+								<i class="fas fa-vial"></i>
+							{% else %}
+								<i class="fa fa-envelope-o"></i>
 							{% endif %}
-
 						</div>
 					</div>
-					<div class="blog-zig-zag">
-						<a href="{{ url }}" class="w-inline-block blog-link animsition-link big-h-img">
-							{{ content.field_image }}
+					<div class="service-content">
+						<a href="{{ url }}">
+							<h4 class="service-title">{{ type|striptags|trim }}</h4>
 						</a>
 					</div>
 				</div>
-			{% else %}
-				<div class="w-col w-col-6">
-					<div class="w-clearfix service-wrapper wow fadeIn" data-wow-delay="0.3s">
-						<div class="service-icon">
-							<div class="w-embed">
-								{% if fields.field_type_dossier.content == 'Documents' %}
-									<i class="fas fa-folder"></i>
-								{% elseif fields.field_type_dossier.content == "Pratiques et travaux" %}
-									<i class="far fa-comment"></i>
-								{% elseif fields.field_type_dossier.content ==  "Parcours critique" %}
-									<i class="fas fa-book"></i>
-								{% elseif fields.field_type_dossier.content ==  "Revue des revues" %}
-									<i class="fas fa-hourglass-end"></i>
-								{% elseif fields.field_type_dossier.content ==  "Notes de lecture" %}
-									<i class="fas fa-vial"></i>
-								{% else %}
-									<i class="fa fa-envelope-o"></i>
-								{% endif %}
-							</div>
-						</div>
-						<div class="service-content">
-							<a href="{{ url }}">
-								<h4 class="service-title">{{ type|striptags|trim }}</h4>
-							</a>
-						</div>
-					</div>
-				</div>
-			{% endif %}
-		{% case "a_propos" %}
-			<div class="informations">
-				{{ content }}
 			</div>
-
-		{% default %}
+		{% endif %}
+	{% elseif node.id == "a_propos" %}
+		<div class="informations">
 			{{ content }}
+		</div>
 
-	{% endswitch %}
-{# AFFICHAGE SI C'EST L'AFFICHAGE COMPLET  #}
+	{% else %}
+		{{ content }}
+
+	{% endif %}
+	{# AFFICHAGE SI C'EST L'AFFICHAGE COMPLET  #}
 {% else %}
 	<article{{attributes}}>
 
@@ -179,553 +178,552 @@
 
 		<div{{content_attributes}}>
 
-{# EN FONCTION DU TYPE DE NODE #}
-			{% switch node.id %}
+			{# EN FONCTION DU TYPE DE NODE #}
 
-				{% case "article" %}
-					<main id="contenu" class="w-section section-imp">
-						<h2>{{ node.label }}</h2>
-						<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
-						<div class="w-container">
+			{% if node.id == "article" %}
+				<main id="contenu" class="w-section section-imp">
+					<h2>{{ node.label }}</h2>
+					<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
+					<div class="w-container">
+						<div
+							class="w-row">
+							{# SIDEBAR #}
 							<div
-								class="w-row">
-								{# SIDEBAR #}
-								<div
-									class="w-col w-col-3">
+								class="w-col w-col-3">
 
-									{# Auteurs #}
-									{% if content.group_article_informations.field_author is not empty  %}
-										<div class="sidebar-class">
-											<h4 class="post-title">Auteur(s)</h4>
-											{{content.group_article_informations.field_author }}
-										</div>
-									{% endif %}
-									{% if  content.group_article_informations.field_tags is not empty %}
-										{# Mots-Clés #}
-										<div class="views-element-container sidebar-class">
-											<h4 class="post-title">Mots-clés</h4>
-
-											<div class="w-clearfix">
-												{{ content.group_article_informations.field_tags }}
-											</div>
-										</div>
-									{% endif %}
-
-
-									{# Lectures Connexes #}
-									{% if node.field_lectures_connexes.value  %}
-										<div class="views-element-container sidebar-class">
-											<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
-												<h4 class="post-title">Lectures Connexes</h4>
-												{{ content.field_lectures_connexes }}
-											</div>
-
-										</div>
-									{% endif %}
-
-								</div>
-								<div
-									class="w-col w-col-9">
-
-									{# Body #}
-
-									<div class="bottom-space">
-										{% if node.body.value  %}
-											{{ content.body }}
-										{% else %}
-											<p>Abonnez-Vous</p>
-										{% endif %}
-									</div>
-
-								</div>
-							</div>
-
-							{# Citation et Biblio #}
-							<ul class="nav nav-tabs">
-								{% if node.field_pour_citer.value  %}
-									<li class="nav-item">
-										<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
-									</li>
-								{% endif %}
-								{% if node.field_bibliographic_reference.value %}
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-									</li>
-								{% endif %}
-								{% if node.field_pdf.value %}
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#pdf">Article PDF</a>
-									</li>
-								{% endif %}
-							</ul>
-
-							<!-- Tab panes -->
-							<div class="tab-content">
-								{% if node.field_pour_citer.value   %}
-									<div class="tab-pane container active" id="citation">
-										<p>{{content.field_pour_citer}}</p>
-									</div>
-								{% endif %}
-								{% if  node.field_bibliographic_reference.value %}
-									<div class="tab-pane container fade" id="biblio">
-										<p>{{content.field_bibliographic_reference}}</p>
-									</div>
-								{% endif %}
-								{% if node.field_pdf.value %}
-									<div class="tab-pane container fade" id="pdf">
-										<p>{{content.field_pdf}}</p>
-									</div>
-								{% endif %}
-							</div>
-						</div>
-					</main>
-				{% case "echappee" %}
-					<section>
-						<h4 class="post-title">Auteur(s)</h4>
-						{{ content.field_author }}
-						<div class="views-element-container sidebar-class"></div>
-					</section>
-					<section>
-						<h4 class="post-title">Lectures connexes</h4>
-
-						<div class="lectures">
-							{{ content.field_lectures_connexes }}
-						</div>
-						<div class="views-element-container sidebar-class"></div>
-					</section>
-					<div>
-						<h4 class="post-title">Mots-Clés</h4>
-
-						<div class="w-clearfix">
-							{{ content.field_mots_cles}}
-						</div>
-						<div class="views-element-container sidebar-class"></div>
-					</div>
-
-					<p>
-						{{ content.body }}
-					</p>
-
-
-					<ul class="nav nav-tabs">
-						<li class="nav-item">
-							<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-						</li>
-					</ul>
-
-					<!-- Tab panes -->
-					<div class="tab-content">
-						<div class="tab-pane container active" id="citation">
-							<p>{{content.field_pour_citer}}</p>
-						</div>
-						<div class="tab-pane container fade" id="biblio">
-							<p>{{content.field_biblio}}</p>
-						</div>
-					</div>
-				{% case "contributor" %}
-					<main class="w-section section-imp more-padding">
-						<div class="w-container">
-							<div class="w-row">
-								<div class="w-col w-col-12">
-									{{content.body}}
-									{{content.field_links}}
-									{{content.field_author_digital_identifier}}
-									{{content.field_bibliographic_reference}}
-								</div>
-							</div>
-							<div>
-								{% if (content.contents_on_contributor_entity_view_1.value is empty or content.contents_on_contributor_entity_view_2.value is empty) %}
-									<div class="title-wrapper">
-										<h3>Contenu du contributeur</h3>
-										<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
-									</div>
-									<div>
-										{{ content.contents_on_contributor_entity_view_1 }}
-										{{ content.contents_on_contributor_entity_view_2 }}
-									</div>
-								{% endif %}
-							</div>
-						</div>
-					</main>
-				{% case "partenaires" %}
-
-
-				{% case "a_propos" %}
-					<div class="informations">
-						{{ content }}
-					</div>
-				{% case "dossier_vivarium" %}
-
-					<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
-						<h2 class="inner-title">{{ label }}</h2>
-						<div>
-
-							<div class="sub-text-title">
-								Responsable :{{ content.field_responsable_dossier|raw }}</div>
-							<div class="sub-text-title">
-								#
-								{{ content.field_num_pub|raw }}
-								,
-								{{ content.field_date_pub|raw }}
-							</div>
-							<div class="arrow-down">
-								<a href="#sommaire" class="w-inline-block icon-scroll"></a>
-							</div>
-						</div>
-					</section>
-
-					<section id="presentation">
-						<h4 class="post-title">Présentation</h4>
-						{{ content.body }}
-						<div class="views-element-container sidebar-class"></div>
-					</section>
-
-					<section id="tag">
-						<h4 class="post-title">Mots-clés</h4>
-						<div class="w-clearfix">
-							{{ content.field_mots_cles }}
-						</div>
-
-						<div class="views-element-container sidebar-class"></div>
-					</section>
-
-					<section id="sommaire">
-						<h4 class="post-title">Sommaire du Vivarium</h3>
-						<div id="grid" class="w-clearfix grid grid-not-margin" style="position: relative; height: 3094px;">
-							<div class="grid-sizer"></div>
-							{{ content.article_on_dossier_vivarium_entity_view_1 }}
-						</div>
-						<div class="views-element-container sidebar-class"></div>
-
-					</section>
-
-					<section id="citation">
-						<h4 class="post-title">Citations</h4>
-						<p>{{ content.field_pour_citer }}</p>
-					</section>
-				{% case "recit" %}
-					<div id="intro" class="w-section banner-one window-size">
-						<div class="video-wrapper">
-							<div class="w-embed embed-video">
-								{{ content.field_image_de_couverture }}
-							</div>
-							<div class="video-overlay"></div>
-						</div>
-						<div class="w-container container-contact">
-							<div class="align-center">
-								<h2 class="inner-title">{{ label }}</h2>
-								<div class="sub-text-title">Artiste invité :
-									{{ node.field_artiste_invite.0.entity.label|raw}}</div>
-								<div class="sub-text-title">Interviewer :
-									{{ node.field_interviewer.0.entity.label|raw}}</div>
-								{% for key in  node.field_interviewer.0.entity.label|keys %}
-									{{ key }}
-								{% endfor %}
-							</div>
-						</div>
-					</div>
-
-					<main>
-						<div class="w-row">
-							<div class="w-col w-col-8">
-
-								{{content.body}}
-
-							</div>
-							<div class="w-col w-col-4">
-								<aside>
-									<h4 class="post-title">Artiste</h4>
-									{{ content.field_artiste_invite }}
-
-									<h4 class="post-title">Interviewer</h4>
-									{{ content.field_interviewer }}
-									<h4 class="post-title">Lectures Connexes</h4>
-									{{ content.field_lectures_connexes }}
-								</aside>
-							</div>
-						</div>
-					</main>
-
-					<ul class="nav nav-tabs">
-						<li class="nav-item">
-							<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-						</li>
-					</ul>
-
-					<!-- Tab panes -->
-					<div class="tab-content">
-						<div class="tab-pane container active" id="citation">
-							<p>{{content.field_pour_citer}}</p>
-						</div>
-						<div class="tab-pane container fade" id="biblio">
-							<p>{{content.field_biblio}}</p>
-						</div>
-					</div>
-				{% case "dossier" %}
-					{% set type %}
-					{{ content.field_type_dossier }}
-					{% endset %}
-					{% if type|striptags|trim == "Dossier" %}
-
-						<div id="intro" class="w-section banner-one window-size">
-							<div class="video-wrapper">
-								<div aria-labelledby="Image de couverture du Dossier" class="w-embed embed-video">
-									{{ content.field_image }}
-								</div>
-								<div class="video-overlay"></div>
-							</div>
-							<div class="w-container container-contact">
-
-								<div class="align-center">
-									<h1 class="inner-title" aria-labelby="Titre du Dossier" itemprop="name">{{ label }}</h1>
-								</div>
-								<div aria-labelledby="Informations sur le Dossier" class="align-center season-issue">
-									<div class="sub-information line" aria-labelledby="Editeur du Dossier">Sous la responsabilité de
-										{{ content.group_dossier_informations.field_editor}}</div>
-									<div class="sub-information line" aria-labelledby="Revue Parent du Dossier">Dans le numéro
-										{{ content.group_dossier_informations.field_issue}}</div>
-								</div>
-							</div>
-						</div>
-					{% else %}
-						<h1 aria-labelby="Titre du Dossier" itemprop="name">{{ type|striptags|trim }}
-							-
-							{{ content.group_dossier_informations.field_issue }}
-						</h1>
-					{% endif %}
-
-
-					<section id="sommaire" class="w-section section-imp">
-						<div class="w-container">
-							<div class="title-wrapper">
-								<h2>Sommaire</h2>
-								<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
-							</div>
-							<div>
-								{{ content.group_contents.articles_dossier_entity_view_1 }}
-							</div>
-						</div>
-					</section>
-
-				{% case "nouvelles" %}
-					<div>{{ content.field_nouvelle_date }}</div>
-					<div>{{ content.field_lieu }}</div>
-
-					<p>
-						{{ content.body }}
-					</p>
-
-
-					<div class="doc">
-						{{ content.field_doc }}
-					</div>
-				{% case "la_ruche" %}
-					<div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
-						<h2 class="inner-title">{{ label }}</h2>
-
-						<div class="arrow-down">
-							<a href="#contenu" class="w-inline-block icon-scroll"></a>
-						</div>
-					</div>
-					<main id="contenu" class="w-section section-imp">
-						<div class="w-container">
-							<div
-								class="w-row">
-								{# SIDEBAR #}
-								<div
-									class="w-col w-col-3">
-
-
-									{# Auteurs #}
+								{# Auteurs #}
+								{% if content.group_article_informations.field_author is not empty  %}
 									<div class="sidebar-class">
 										<h4 class="post-title">Auteur(s)</h4>
-										{{content.field_auteur }}
+										{{content.group_article_informations.field_author }}
 									</div>
-
+								{% endif %}
+								{% if  content.group_article_informations.field_tags is not empty %}
 									{# Mots-Clés #}
 									<div class="views-element-container sidebar-class">
 										<h4 class="post-title">Mots-clés</h4>
 
 										<div class="w-clearfix">
-											{{ content.field_mots_cles }}
+											{{ content.group_article_informations.field_tags }}
 										</div>
 									</div>
-
-									{# Lectures Connexes #}
-									<div class="views-element-container sidebar-class">
-										<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
-											<h4 class="post-title">Lectures Connexes</h4>
-											<div>
-												{{ content.field_lectures_connexes }}
-											</div>
-										</div>
-									</div>
-
-								</div>
-								<div
-									class="w-col w-col-9">
-
-									{# Body #}
-									<div class="bottom-space">
-										{{ content.body }}
-									</div>
-
-								</div>
-							</div>
-
-							{# Citation et Biblio #}
-							<ul class="nav nav-tabs">
-								<li class="nav-item">
-									<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-								</li>
-							</ul>
-
-							<!-- Tab panes -->
-							<div class="tab-content">
-								<div class="tab-pane container active" id="citation">
-									<p>{{content.field_pour_citer}}</p>
-								</div>
-								<div class="tab-pane container fade" id="biblio">
-									<p>{{content.field_biblio}}</p>
-								</div>
-							</div>
-						</div>
-					</main>
-				{% case "issue" %}
-					<div id="intro" class="w-section banner-one window-size">
-						{% if  content.field_image %}
-							<div class="video-wrapper">
-								<div class="w-embed">
-									<div class="bigger-img" style="background-image:url('{{ file_url(node.field_image.entity.fileuri) }}')"></div>
-								</div>
-								<div class="video-overlay"></div>
-							</div>
-						{% endif %}
-						{% if label %}
-							<div itemscope itemtype="https://schema.org/PublicationVolume" class="w-container container-contact">
-								<div class="align-center">
-									<h1 class="inner-title" aria-labelby="Titre du Numero" itemprop="name">{{node.label}}</h1>
-									<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number }}</span>
-									<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date}}</span>
-								</div>
-							</div>
-						{% endif %}
-
-					</div>
+								{% endif %}
 
 
-					{% if content.group_contents.editorial_issue_entity_view_1  %}
-						<section id="editorial">
-							{{ content.group_contents.editorial_issue_entity_view_1 }}
-						</section>
-					{% endif %}
-					{% if content.group_contents.dossiers_on_issue_entity_view_1  %}
-						<section id="dossiers">
-							<div class="w-row">
-								{{ content.group_contents.dossiers_on_issue_entity_view_1 }}
-							</div>
-						</section>
-					{% endif %}
-					{% if content.group_contents.hors_dossiers_on_issue_entity_view_1  %}
-						<section id="hors-dossiers">
-							<div class="w-row">
-								{{ content.group_contents.hors_dossiers_on_issue_entity_view_1 }}
-							</div>
-						</section>
-					{% endif %}
-					{% if content.group_contents.individual_articles_entity_view_1  %}
-						<section id="individuel">
-							<div class="w-row">
-								{{content.group_contents.individual_articles_entity_view_1}}
-							</div>
-						</section>
-					{% endif %}
-				{% case "article_web" %}
-					<div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
-						<h2 class="inner-title">{{ label }}</h2>
-						<p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
-
-						<div class="arrow-down">
-							<a href="#contenu" class="w-inline-block icon-scroll"></a>
-						</div>
-					</div>
-					<main id="contenu" class="w-section section-imp">
-						<div class="w-container">
-							<div
-								class="w-row">
-								{# SIDEBAR #}
-								<div
-									class="w-col w-col-3">
-
-									{# Auteurs #}
-									<div class="sidebar-class">
-										<h4 class="post-title">Auteur(s)</h4>
-										{{content.field_auteur }}
-									</div>
-
-									{# Mots-Clés #}
-									<div class="views-element-container sidebar-class">
-										<h4 class="post-title">Mots-clés</h4>
-
-										<div class="w-clearfix">
-											{{ content.field_mots_cles }}
-										</div>
-									</div>
-
-									{# Lectures Connexes #}
+								{# Lectures Connexes #}
+								{% if node.field_lectures_connexes.value  %}
 									<div class="views-element-container sidebar-class">
 										<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
 											<h4 class="post-title">Lectures Connexes</h4>
 											{{ content.field_lectures_connexes }}
 										</div>
+
 									</div>
+								{% endif %}
 
-								</div>
-								<div
-									class="w-col w-col-9">
-
-									{# Body #}
-									<div class="bottom-space">
-										{{ content.body }}
-									</div>
-
-								</div>
 							</div>
+							<div
+								class="w-col w-col-9">
 
-							{# Citation et Biblio #}
-							<ul class="nav nav-tabs">
+								{# Body #}
+
+								<div class="bottom-space">
+									{% if node.body.value  %}
+										{{ content.body }}
+									{% else %}
+										<p>Abonnez-Vous</p>
+									{% endif %}
+								</div>
+
+							</div>
+						</div>
+
+						{# Citation et Biblio #}
+						<ul class="nav nav-tabs">
+							{% if node.field_pour_citer.value  %}
 								<li class="nav-item">
 									<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
 								</li>
+							{% endif %}
+							{% if node.field_bibliographic_reference.value %}
 								<li class="nav-item">
 									<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
 								</li>
-							</ul>
+							{% endif %}
+							{% if node.field_pdf.value %}
+								<li class="nav-item">
+									<a class="nav-link" data-toggle="tab" href="#pdf">Article PDF</a>
+								</li>
+							{% endif %}
+						</ul>
 
-							<!-- Tab panes -->
-							<div class="tab-content">
+						<!-- Tab panes -->
+						<div class="tab-content">
+							{% if node.field_pour_citer.value   %}
 								<div class="tab-pane container active" id="citation">
 									<p>{{content.field_pour_citer}}</p>
 								</div>
+							{% endif %}
+							{% if  node.field_bibliographic_reference.value %}
 								<div class="tab-pane container fade" id="biblio">
-									<p>{{content.field_biblio}}</p>
+									<p>{{content.field_bibliographic_reference}}</p>
 								</div>
+							{% endif %}
+							{% if node.field_pdf.value %}
+								<div class="tab-pane container fade" id="pdf">
+									<p>{{content.field_pdf}}</p>
+								</div>
+							{% endif %}
+						</div>
+					</div>
+				</main>
+			{% elseif node.id == "echappee" %}
+				<section>
+					<h4 class="post-title">Auteur(s)</h4>
+					{{ content.field_author }}
+					<div class="views-element-container sidebar-class"></div>
+				</section>
+				<section>
+					<h4 class="post-title">Lectures connexes</h4>
+
+					<div class="lectures">
+						{{ content.field_lectures_connexes }}
+					</div>
+					<div class="views-element-container sidebar-class"></div>
+				</section>
+				<div>
+					<h4 class="post-title">Mots-Clés</h4>
+
+					<div class="w-clearfix">
+						{{ content.field_mots_cles}}
+					</div>
+					<div class="views-element-container sidebar-class"></div>
+				</div>
+
+				<p>
+					{{ content.body }}
+				</p>
+
+
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+					</li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane container active" id="citation">
+						<p>{{content.field_pour_citer}}</p>
+					</div>
+					<div class="tab-pane container fade" id="biblio">
+						<p>{{content.field_biblio}}</p>
+					</div>
+				</div>
+			{% elseif node.id == "contributor" %}
+				<main class="w-section section-imp more-padding">
+					<div class="w-container">
+						<div class="w-row">
+							<div class="w-col w-col-12">
+								{{content.body}}
+								{{content.field_links}}
+								{{content.field_author_digital_identifier}}
+								{{content.field_bibliographic_reference}}
 							</div>
 						</div>
-					</main>
-				{% default %}
-					{{ content }}
+						<div>
+							{% if (content.contents_on_contributor_entity_view_1.value is empty or content.contents_on_contributor_entity_view_2.value is empty) %}
+								<div class="title-wrapper">
+									<h3>Contenu du contributeur</h3>
+									<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
+								</div>
+								<div>
+									{{ content.contents_on_contributor_entity_view_1 }}
+									{{ content.contents_on_contributor_entity_view_2 }}
+								</div>
+							{% endif %}
+						</div>
+					</div>
+				</main>
+			{% elseif node.id == "partenaires" %}
 
-			{% endswitch %}
+
+			{% elseif node.id == "a_propos" %}
+				<div class="informations">
+					{{ content }}
+				</div>
+			{% elseif node.id == "dossier_vivarium" %}
+
+				<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
+					<h2 class="inner-title">{{ label }}</h2>
+					<div>
+
+						<div class="sub-text-title">
+							Responsable :{{ content.field_responsable_dossier|raw }}</div>
+						<div class="sub-text-title">
+							#
+							{{ content.field_num_pub|raw }}
+							,
+							{{ content.field_date_pub|raw }}
+						</div>
+						<div class="arrow-down">
+							<a href="#sommaire" class="w-inline-block icon-scroll"></a>
+						</div>
+					</div>
+				</section>
+
+				<section id="presentation">
+					<h4 class="post-title">Présentation</h4>
+					{{ content.body }}
+					<div class="views-element-container sidebar-class"></div>
+				</section>
+
+				<section id="tag">
+					<h4 class="post-title">Mots-clés</h4>
+					<div class="w-clearfix">
+						{{ content.field_mots_cles }}
+					</div>
+
+					<div class="views-element-container sidebar-class"></div>
+				</section>
+
+				<section id="sommaire">
+					<h4 class="post-title">Sommaire du Vivarium</h3>
+					<div id="grid" class="w-clearfix grid grid-not-margin" style="position: relative; height: 3094px;">
+						<div class="grid-sizer"></div>
+						{{ content.article_on_dossier_vivarium_entity_view_1 }}
+					</div>
+					<div class="views-element-container sidebar-class"></div>
+
+				</section>
+
+				<section id="citation">
+					<h4 class="post-title">Citations</h4>
+					<p>{{ content.field_pour_citer }}</p>
+				</section>
+			{% elseif node.id == "recit" %}
+				<div id="intro" class="w-section banner-one window-size">
+					<div class="video-wrapper">
+						<div class="w-embed embed-video">
+							{{ content.field_image_de_couverture }}
+						</div>
+						<div class="video-overlay"></div>
+					</div>
+					<div class="w-container container-contact">
+						<div class="align-center">
+							<h2 class="inner-title">{{ label }}</h2>
+							<div class="sub-text-title">Artiste invité :
+								{{ node.field_artiste_invite.0.entity.label|raw}}</div>
+							<div class="sub-text-title">Interviewer :
+								{{ node.field_interviewer.0.entity.label|raw}}</div>
+							{% for key in  node.field_interviewer.0.entity.label|keys %}
+								{{ key }}
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+
+				<main>
+					<div class="w-row">
+						<div class="w-col w-col-8">
+
+							{{content.body}}
+
+						</div>
+						<div class="w-col w-col-4">
+							<aside>
+								<h4 class="post-title">Artiste</h4>
+								{{ content.field_artiste_invite }}
+
+								<h4 class="post-title">Interviewer</h4>
+								{{ content.field_interviewer }}
+								<h4 class="post-title">Lectures Connexes</h4>
+								{{ content.field_lectures_connexes }}
+							</aside>
+						</div>
+					</div>
+				</main>
+
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+					</li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane container active" id="citation">
+						<p>{{content.field_pour_citer}}</p>
+					</div>
+					<div class="tab-pane container fade" id="biblio">
+						<p>{{content.field_biblio}}</p>
+					</div>
+				</div>
+			{% elseif node.id == "dossier" %}
+				{% set type %}
+				{{ content.field_type_dossier }}
+				{% endset %}
+				{% if type|striptags|trim == "Dossier" %}
+
+					<div id="intro" class="w-section banner-one window-size">
+						<div class="video-wrapper">
+							<div aria-labelledby="Image de couverture du Dossier" class="w-embed embed-video">
+								{{ content.field_image }}
+							</div>
+							<div class="video-overlay"></div>
+						</div>
+						<div class="w-container container-contact">
+
+							<div class="align-center">
+								<h1 class="inner-title" aria-labelby="Titre du Dossier" itemprop="name">{{ label }}</h1>
+							</div>
+							<div aria-labelledby="Informations sur le Dossier" class="align-center season-issue">
+								<div class="sub-information line" aria-labelledby="Editeur du Dossier">Sous la responsabilité de
+									{{ content.group_dossier_informations.field_editor}}</div>
+								<div class="sub-information line" aria-labelledby="Revue Parent du Dossier">Dans le numéro
+									{{ content.group_dossier_informations.field_issue}}</div>
+							</div>
+						</div>
+					</div>
+				{% else %}
+					<h1 aria-labelby="Titre du Dossier" itemprop="name">{{ type|striptags|trim }}
+						-
+						{{ content.group_dossier_informations.field_issue }}
+					</h1>
+				{% endif %}
+
+
+				<section id="sommaire" class="w-section section-imp">
+					<div class="w-container">
+						<div class="title-wrapper">
+							<h2>Sommaire</h2>
+							<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
+						</div>
+						<div>
+							{{ content.group_contents.articles_dossier_entity_view_1 }}
+						</div>
+					</div>
+				</section>
+
+			{% elseif node.id == "nouvelles" %}
+				<div>{{ content.field_nouvelle_date }}</div>
+				<div>{{ content.field_lieu }}</div>
+
+				<p>
+					{{ content.body }}
+				</p>
+
+
+				<div class="doc">
+					{{ content.field_doc }}
+				</div>
+			{% elseif node.id == "la_ruche" %}
+				<div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
+					<h2 class="inner-title">{{ label }}</h2>
+
+					<div class="arrow-down">
+						<a href="#contenu" class="w-inline-block icon-scroll"></a>
+					</div>
+				</div>
+				<main id="contenu" class="w-section section-imp">
+					<div class="w-container">
+						<div
+							class="w-row">
+							{# SIDEBAR #}
+							<div
+								class="w-col w-col-3">
+
+
+								{# Auteurs #}
+								<div class="sidebar-class">
+									<h4 class="post-title">Auteur(s)</h4>
+									{{content.field_auteur }}
+								</div>
+
+								{# Mots-Clés #}
+								<div class="views-element-container sidebar-class">
+									<h4 class="post-title">Mots-clés</h4>
+
+									<div class="w-clearfix">
+										{{ content.field_mots_cles }}
+									</div>
+								</div>
+
+								{# Lectures Connexes #}
+								<div class="views-element-container sidebar-class">
+									<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
+										<h4 class="post-title">Lectures Connexes</h4>
+										<div>
+											{{ content.field_lectures_connexes }}
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div
+								class="w-col w-col-9">
+
+								{# Body #}
+								<div class="bottom-space">
+									{{ content.body }}
+								</div>
+
+							</div>
+						</div>
+
+						{# Citation et Biblio #}
+						<ul class="nav nav-tabs">
+							<li class="nav-item">
+								<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+							</li>
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div class="tab-pane container active" id="citation">
+								<p>{{content.field_pour_citer}}</p>
+							</div>
+							<div class="tab-pane container fade" id="biblio">
+								<p>{{content.field_biblio}}</p>
+							</div>
+						</div>
+					</div>
+				</main>
+			{% elseif node.id == "issue" %}
+				<div id="intro" class="w-section banner-one window-size">
+					{% if  content.field_image %}
+						<div class="video-wrapper">
+							<div class="w-embed">
+								<div class="bigger-img" style="background-image:url('{{ file_url(node.field_image.entity.fileuri) }}')"></div>
+							</div>
+							<div class="video-overlay"></div>
+						</div>
+					{% endif %}
+					{% if label %}
+						<div itemscope itemtype="https://schema.org/PublicationVolume" class="w-container container-contact">
+							<div class="align-center">
+								<h1 class="inner-title" aria-labelby="Titre du Numero" itemprop="name">{{node.label}}</h1>
+								<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number }}</span>
+								<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date}}</span>
+							</div>
+						</div>
+					{% endif %}
+
+				</div>
+
+
+				{% if content.group_contents.editorial_issue_entity_view_1  %}
+					<section id="editorial">
+						{{ content.group_contents.editorial_issue_entity_view_1 }}
+					</section>
+				{% endif %}
+				{% if content.group_contents.dossiers_on_issue_entity_view_1  %}
+					<section id="dossiers">
+						<div class="w-row">
+							{{ content.group_contents.dossiers_on_issue_entity_view_1 }}
+						</div>
+					</section>
+				{% endif %}
+				{% if content.group_contents.hors_dossiers_on_issue_entity_view_1  %}
+					<section id="hors-dossiers">
+						<div class="w-row">
+							{{ content.group_contents.hors_dossiers_on_issue_entity_view_1 }}
+						</div>
+					</section>
+				{% endif %}
+				{% if content.group_contents.individual_articles_entity_view_1  %}
+					<section id="individuel">
+						<div class="w-row">
+							{{content.group_contents.individual_articles_entity_view_1}}
+						</div>
+					</section>
+				{% endif %}
+			{% elseif node.id == "article_web" %}
+				<div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
+					<h2 class="inner-title">{{ label }}</h2>
+					<p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
+
+					<div class="arrow-down">
+						<a href="#contenu" class="w-inline-block icon-scroll"></a>
+					</div>
+				</div>
+				<main id="contenu" class="w-section section-imp">
+					<div class="w-container">
+						<div
+							class="w-row">
+							{# SIDEBAR #}
+							<div
+								class="w-col w-col-3">
+
+								{# Auteurs #}
+								<div class="sidebar-class">
+									<h4 class="post-title">Auteur(s)</h4>
+									{{content.field_auteur }}
+								</div>
+
+								{# Mots-Clés #}
+								<div class="views-element-container sidebar-class">
+									<h4 class="post-title">Mots-clés</h4>
+
+									<div class="w-clearfix">
+										{{ content.field_mots_cles }}
+									</div>
+								</div>
+
+								{# Lectures Connexes #}
+								<div class="views-element-container sidebar-class">
+									<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
+										<h4 class="post-title">Lectures Connexes</h4>
+										{{ content.field_lectures_connexes }}
+									</div>
+								</div>
+
+							</div>
+							<div
+								class="w-col w-col-9">
+
+								{# Body #}
+								<div class="bottom-space">
+									{{ content.body }}
+								</div>
+
+							</div>
+						</div>
+
+						{# Citation et Biblio #}
+						<ul class="nav nav-tabs">
+							<li class="nav-item">
+								<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+							</li>
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div class="tab-pane container active" id="citation">
+								<p>{{content.field_pour_citer}}</p>
+							</div>
+							<div class="tab-pane container fade" id="biblio">
+								<p>{{content.field_biblio}}</p>
+							</div>
+						</div>
+					</div>
+				</main>
+			{% else %}
+				{{ content }}
+
+			{% endif %}
 
 
 		</div>
