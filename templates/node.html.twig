@@ -1,7 +1,7 @@
 {# AFFICHAGE SI C'EST SEULEMENT UN TEASER  #}
 {{ node.entity.0.node_type }}
 {% for key in node|keys %}
-
+{{ key }}
 {% endfor %}
 {% if teaser and node.isPublished() %}
 	{# EN FONCTION DU TYPE DE NODE #}
