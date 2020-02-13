@@ -1,6 +1,6 @@
 {# AFFICHAGE SI C'EST SEULEMENT UN TEASER  #}
-{{ node.id }}
-{% if view_mode == 'teaser'  %}
+{{ node.bundle_entity_type }}
+{% if teaser and node.isPublished() %}
 	{# EN FONCTION DU TYPE DE NODE #}
 	{% if node.id == "article" %}
 		<div class="lecture-content" onclick="window.location='{{ url }}';">
