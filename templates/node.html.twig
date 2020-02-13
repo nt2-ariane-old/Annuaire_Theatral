@@ -5,11 +5,11 @@
 {% endfor %}
 {% if teaser and node.isPublished() %}
 	{# EN FONCTION DU TYPE DE NODE #}
-	{% if node.id == "article" %}
+	{% if node.type == "article" %}
 		<div class="lecture-content" onclick="window.location='{{ url }}';">
 			<span>{{node.label}}</span>
 		</div>
-	{% elseif node.id == "contributor" %}
+	{% elseif node.type == "contributor" %}
 		<a href='{{ url }}'>
 			<b>{{ node.label }}</b>
 			{% set conBody %}
@@ -18,7 +18,7 @@
 
 			<p>{{ conBody|striptags }}</p>
 		</a>
-	{% elseif node.id == "issue" %}
+	{% elseif node.type == "issue" %}
 		<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
 			<div class="blog-zig-zag up-left">
 				<div class="blog-content">
@@ -45,7 +45,7 @@
 				</a>
 			</div>
 		</div>
-	{% elseif node.id == "nouvelles" %}
+	{% elseif node.type == "nouvelles" %}
 
 		<div itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="Article d'Actualité" class="blog-minimal">
 			<div class="data-blog">
@@ -62,7 +62,7 @@
 				<a aria-labelledby="Lien Lire la suite" href="{{ fields.view_node.content|render|striptags|trim }}" class="read-more animsition-link">Lire la suite ›</a>
 			</div>
 		</div>
-	{% elseif node.id == "dossier_vivarium" %}
+	{% elseif node.type == "dossier_vivarium" %}
 		<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
 			<div class="blog-zig-zag">
 				<div class="blog-content">
@@ -84,9 +84,9 @@
 				</a>
 			</div>
 		</div>
-	{% elseif node.id == "partenaires" %}
+	{% elseif node.type == "partenaires" %}
 
-	{% elseif node.id == "recit" or node.id == "la_ruche" or node.id == "echappee" or node.id == "article_web" %}
+	{% elseif node.type == "recit" or node.type == "la_ruche" or node.type == "echappee" or node.type == "article_web" %}
 		<div class="lecture-content" onclick="window.location='{{ url }}';">
 			<span>{{node.label}}</span>
 			<div class="preview">
@@ -94,7 +94,7 @@
 			</div>
 		</div>
 
-	{% elseif node.id == "dossier" %}
+	{% elseif node.type == "dossier" %}
 		{% set type %}
 		{{ content.field_type_dossier }}
 		{% endset %}
@@ -146,7 +146,7 @@
 				</div>
 			</div>
 		{% endif %}
-	{% elseif node.id == "a_propos" %}
+	{% elseif node.type == "a_propos" %}
 		<div class="informations">
 			{{ content }}
 		</div>
@@ -184,7 +184,7 @@
 
 			{# EN FONCTION DU TYPE DE NODE #}
 
-			{% if node.id == "article" %}
+			{% if node.type == "article" %}
 				<main id="contenu" class="w-section section-imp">
 					<h2>{{ node.label }}</h2>
 					<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
@@ -281,7 +281,7 @@
 						</div>
 					</div>
 				</main>
-			{% elseif node.id == "echappee" %}
+			{% elseif node.type == "echappee" %}
 				<section>
 					<h4 class="post-title">Auteur(s)</h4>
 					{{ content.field_author }}
@@ -327,7 +327,7 @@
 						<p>{{content.field_biblio}}</p>
 					</div>
 				</div>
-			{% elseif node.id == "contributor" %}
+			{% elseif node.type == "contributor" %}
 				<main class="w-section section-imp more-padding">
 					<div class="w-container">
 						<div class="w-row">
@@ -352,14 +352,14 @@
 						</div>
 					</div>
 				</main>
-			{% elseif node.id == "partenaires" %}
+			{% elseif node.type == "partenaires" %}
 
 
-			{% elseif node.id == "a_propos" %}
+			{% elseif node.type == "a_propos" %}
 				<div class="informations">
 					{{ content }}
 				</div>
-			{% elseif node.id == "dossier_vivarium" %}
+			{% elseif node.type == "dossier_vivarium" %}
 
 				<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
 					<h2 class="inner-title">{{ label }}</h2>
@@ -408,7 +408,7 @@
 					<h4 class="post-title">Citations</h4>
 					<p>{{ content.field_pour_citer }}</p>
 				</section>
-			{% elseif node.id == "recit" %}
+			{% elseif node.type == "recit" %}
 				<div id="intro" class="w-section banner-one window-size">
 					<div class="video-wrapper">
 						<div class="w-embed embed-video">
@@ -469,7 +469,7 @@
 						<p>{{content.field_biblio}}</p>
 					</div>
 				</div>
-			{% elseif node.id == "dossier" %}
+			{% elseif node.type == "dossier" %}
 				{% set type %}
 				{{ content.field_type_dossier }}
 				{% endset %}
@@ -515,7 +515,7 @@
 					</div>
 				</section>
 
-			{% elseif node.id == "nouvelles" %}
+			{% elseif node.type == "nouvelles" %}
 				<div>{{ content.field_nouvelle_date }}</div>
 				<div>{{ content.field_lieu }}</div>
 
@@ -527,7 +527,7 @@
 				<div class="doc">
 					{{ content.field_doc }}
 				</div>
-			{% elseif node.id == "la_ruche" %}
+			{% elseif node.type == "la_ruche" %}
 				<div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
 					<h2 class="inner-title">{{ label }}</h2>
 
@@ -602,7 +602,7 @@
 						</div>
 					</div>
 				</main>
-			{% elseif node.id == "issue" %}
+			{% elseif node.type == "issue" %}
 				<div id="intro" class="w-section banner-one window-size">
 					{% if  content.field_image %}
 						<div class="video-wrapper">
@@ -651,7 +651,7 @@
 						</div>
 					</section>
 				{% endif %}
-			{% elseif node.id == "article_web" %}
+			{% elseif node.type == "article_web" %}
 				<div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
 					<h2 class="inner-title">{{ label }}</h2>
 					<p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
