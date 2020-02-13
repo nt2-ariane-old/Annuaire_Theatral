@@ -283,18 +283,18 @@ ul.tabs.primary {
 }
 
 ul.tabs.primary li {
-  border: 1px solid #AAA;
-  background: #D1D1D1;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ECECEC), to(#D1D1D1));
-  background: linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+  border: 1px solid #aaa;
+  background: #d1d1d1;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ececec), to(#d1d1d1));
+  background: linear-gradient(top, #ececec 50%, #d1d1d1 100%);
   display: inline-block;
   position: relative;
   z-index: 0;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
-  text-shadow: 0 1px #FFF;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #fff;
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #fff;
+  text-shadow: 0 1px #fff;
   margin: 0 -5px;
   padding: 0 20px;
 }
@@ -305,10 +305,10 @@ ul.tabs.primary a {
 }
 
 ul.tabs.primary li.is-active {
-  background: #FFF;
+  background: #fff;
   color: #333;
   z-index: 2;
-  border-bottom-color: #FFF;
+  border-bottom-color: #fff;
 }
 
 ul.tabs.primary:before {
@@ -317,13 +317,13 @@ ul.tabs.primary:before {
   width: 100%;
   bottom: 0;
   left: 0;
-  border-bottom: 1px solid #AAA;
+  border-bottom: 1px solid #aaa;
   z-index: 1;
 }
 
 ul.tabs.primary li:before,
 ul.tabs.primary li:after {
-  border: 1px solid #AAA;
+  border: 1px solid #aaa;
   position: absolute;
   bottom: -1px;
   width: 5px;
@@ -335,21 +335,21 @@ ul.tabs.primary li:before {
   left: -6px;
   border-bottom-right-radius: 6px;
   border-width: 0 1px 1px 0;
-  -webkit-box-shadow: 2px 2px 0 #D1D1D1;
-          box-shadow: 2px 2px 0 #D1D1D1;
+  -webkit-box-shadow: 2px 2px 0 #d1d1d1;
+          box-shadow: 2px 2px 0 #d1d1d1;
 }
 
 ul.tabs.primary li:after {
   right: -6px;
   border-bottom-left-radius: 6px;
   border-width: 0 0 1px 1px;
-  -webkit-box-shadow: -2px 2px 0 #D1D1D1;
-          box-shadow: -2px 2px 0 #D1D1D1;
+  -webkit-box-shadow: -2px 2px 0 #d1d1d1;
+          box-shadow: -2px 2px 0 #d1d1d1;
 }
 
 ul.tabs.primary li.is-active:before {
-  -webkit-box-shadow: 2px 2px 0 #FFF;
-          box-shadow: 2px 2px 0 #FFF;
+  -webkit-box-shadow: 2px 2px 0 #fff;
+          box-shadow: 2px 2px 0 #fff;
 }
 
 ul.tabs.primary li.is-active a {
@@ -357,8 +357,8 @@ ul.tabs.primary li.is-active a {
 }
 
 ul.tabs.primary li.is-active:after {
-  -webkit-box-shadow: -2px 2px 0 #FFF;
-          box-shadow: -2px 2px 0 #FFF;
+  -webkit-box-shadow: -2px 2px 0 #fff;
+          box-shadow: -2px 2px 0 #fff;
 }
 
 footer {
@@ -798,7 +798,7 @@ main h1 {
 }
 
 .nav-link:hover {
-  color: #EE2367;
+  color: #ee2367;
 }
 
 #editorial,
@@ -918,6 +918,10 @@ nav ul ul li {
   text-transform: uppercase;
 }
 
+ul.quicktabs-tabs li a {
+  padding: 6px 20px 5px;
+}
+
 .sidebar-right .title-wrapper h2 {
   font-size: 25px;
 }
@@ -957,12 +961,12 @@ nav ul ul li {
 }
 
 #intro .align-center {
-  background-color: #EE236760;
+  background-color: #ee236760;
   margin: 1em 2em;
 }
 
 #intro .align-center.season-issue {
-  background-color: #FFFFFF60;
+  background-color: #ffffff60;
 }
 
 #intro a {
@@ -990,7 +994,7 @@ nav ul ul li {
 }
 
 #intro .paragraph--type--publication-date:before {
-  content: ' , ';
+  content: " , ";
   display: inline-block;
   color: white;
   font-size: 1.2rem;
@@ -1007,7 +1011,7 @@ nav ul ul li {
 }
 
 #intro .field--name-field-issue-number::before {
-  content: '#';
+  content: "#";
   display: inline-block;
   color: #a8a8a8;
   font-size: 20px;
@@ -1079,7 +1083,7 @@ nav ul ul li {
 }
 
 .field--name-field-dossier-vivarium .field__label:after {
-  content: '';
+  content: "";
 }
 
 .item.blog-item {
