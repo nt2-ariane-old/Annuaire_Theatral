@@ -1,5 +1,6 @@
 {# AFFICHAGE SI C'EST SEULEMENT UN TEASER  #}
-{% for key in node.type.0.entity|keys %}
+{{ node.type.0.value }} | {{ node.type.0.target_id }}
+{% for key in node.type.0.value|keys %}
 	{{ key }}
 {% endfor %}
 {% if teaser and node.isPublished() %}
