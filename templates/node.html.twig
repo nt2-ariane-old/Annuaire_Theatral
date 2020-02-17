@@ -5,7 +5,6 @@
 {% endspaceless %}
 {% endset %}
 <span>{{ type }}</span>
-{{ type == 'article' ? 'Un article' : 'Autre' }}
 {% if teaser %}
 	{# EN FONCTION DU TYPE DE NODE #}
 
@@ -188,7 +187,7 @@
 
 			{# EN FONCTION DU TYPE DE NODE #}
 
-			{% if type is same as("article") %}
+			{% if type == "article" %}
 				<main id="contenu" class="w-section section-imp">
 					<h2>{{ node.label }}</h2>
 					<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
