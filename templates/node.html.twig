@@ -4,7 +4,6 @@
 	{{ node.type.0.target_id|raw|trim|lower }}
 {% endspaceless %}
 {% endset %}
-<span>{{ type }}</span>
 {% if teaser %}
 	{# EN FONCTION DU TYPE DE NODE #}
 
@@ -88,7 +87,9 @@
 			</div>
 		</div>
 	{% elseif type == "partenaires" %}
-
+		<div class="logo">
+			{{ content.field_logo }}
+		</div>
 	{% elseif type == "recit" or type == "la_ruche" or type == "echappee" or type == "article_web" %}
 		<div class="lecture-content" onclick="window.location='{{ url }}';">
 			<span>{{node.label}}</span>
@@ -356,7 +357,14 @@
 					</div>
 				</main>
 			{% elseif type == "partenaires" %}
-
+				<div class="w-row">
+					<div class="w-col w-col-3">
+						{{content.field_logo}}
+					</div>
+					<div class="w-col w-col-9">
+						{{content.body}}
+					</div>
+				</div>
 
 			{% elseif type == "a_propos" %}
 				<div class="informations">
@@ -371,7 +379,6 @@
 						<div class="sub-text-title">
 							Responsable :{{ content.field_responsable_dossier|raw }}</div>
 						<div class="sub-text-title">
-							#
 							{{ content.field_num_pub|raw }}
 							,
 							{{ content.field_date_pub|raw }}
