@@ -4,7 +4,7 @@
 {% endset %}
 <p>{{ type }}</p>
 <script>console.log({{ type  }})</script>
-{% if teaser and node.isPublished() %}
+{% if teaser %}
 	{# EN FONCTION DU TYPE DE NODE #}
 	{% if type == "article" %}
 		
