@@ -1,13 +1,17 @@
 {# AFFICHAGE SI C'EST SEULEMENT UN TEASER  #}
 {% set type %}
-	{{ node.type.0.target_id|raw|trim }}
+{{ node.type.0.target_id|raw|trim|json_encode }}
 {% endset %}
 <p>{{ type }}</p>
-<script>console.log({{ type  }})</script>
+<script>
+	console.log({{ type }})
+</script>
 {% if teaser %}
 	{# EN FONCTION DU TYPE DE NODE #}
 	{% if type == "article" %}
-		
+		<div class="lecture-content" onclick="window.location='{{ url }}';">
+			<span>{{node.label}}</span>
+		</div>
 	{% elseif type == "contributor" %}
 		<a href='{{ url }}'>
 			<b>{{ node.label }}</b>
@@ -184,7 +188,102 @@
 			{# EN FONCTION DU TYPE DE NODE #}
 
 			{% if type == "article" %}
-				
+				<main id="contenu" class="w-section section-imp">
+					<h2>{{ node.label }}</h2>
+					<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
+					<div class="w-container">
+						<div
+							class="w-row">
+							{# SIDEBAR #}
+							<div
+								class="w-col w-col-3">
+
+								{# Auteurs #}
+								{% if content.group_article_informations.field_author is not empty  %}
+									<div class="sidebar-class">
+										<h4 class="post-title">Auteur(s)</h4>
+										{{content.group_article_informations.field_author }}
+									</div>
+								{% endif %}
+								{% if  content.group_article_informations.field_tags is not empty %}
+									{# Mots-Clés #}
+									<div class="views-element-container sidebar-class">
+										<h4 class="post-title">Mots-clés</h4>
+
+										<div class="w-clearfix">
+											{{ content.group_article_informations.field_tags }}
+										</div>
+									</div>
+								{% endif %}
+
+
+								{# Lectures Connexes #}
+								{% if node.field_lectures_connexes.value  %}
+									<div class="views-element-container sidebar-class">
+										<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
+											<h4 class="post-title">Lectures Connexes</h4>
+											{{ content.field_lectures_connexes }}
+										</div>
+
+									</div>
+								{% endif %}
+
+							</div>
+							<div
+								class="w-col w-col-9">
+
+								{# Body #}
+
+								<div class="bottom-space">
+									{% if node.body.value  %}
+										{{ content.body }}
+									{% else %}
+										<p>Abonnez-Vous</p>
+									{% endif %}
+								</div>
+
+							</div>
+						</div>
+
+						{# Citation et Biblio #}
+						<ul class="nav nav-tabs">
+							{% if node.field_pour_citer.value  %}
+								<li class="nav-item">
+									<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
+								</li>
+							{% endif %}
+							{% if node.field_bibliographic_reference.value %}
+								<li class="nav-item">
+									<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+								</li>
+							{% endif %}
+							{% if node.field_pdf.value %}
+								<li class="nav-item">
+									<a class="nav-link" data-toggle="tab" href="#pdf">Article PDF</a>
+								</li>
+							{% endif %}
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+							{% if node.field_pour_citer.value   %}
+								<div class="tab-pane container active" id="citation">
+									<p>{{content.field_pour_citer}}</p>
+								</div>
+							{% endif %}
+							{% if  node.field_bibliographic_reference.value %}
+								<div class="tab-pane container fade" id="biblio">
+									<p>{{content.field_bibliographic_reference}}</p>
+								</div>
+							{% endif %}
+							{% if node.field_pdf.value %}
+								<div class="tab-pane container fade" id="pdf">
+									<p>{{content.field_pdf}}</p>
+								</div>
+							{% endif %}
+						</div>
+					</div>
+				</main>
 			{% elseif type == "echappee" %}
 				<section>
 					<h4 class="post-title">Auteur(s)</h4>
