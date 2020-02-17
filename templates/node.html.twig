@@ -8,8 +8,8 @@
 </script>
 {% if teaser %}
 	{# EN FONCTION DU TYPE DE NODE #}
-	{{ type == "article" }}
-	{% if type == "article" %}
+	{{ "article" }}
+	{% if "article" in type %}
 		<div class="lecture-content" onclick="window.location='{{ url }}';">
 			<span>{{node.label}}</span>
 		</div>
