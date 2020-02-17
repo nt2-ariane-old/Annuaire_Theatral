@@ -1,6 +1,6 @@
 {# AFFICHAGE SI C'EST SEULEMENT UN TEASER  #}
 {% set type %}
-{{ node.type.0.target_id|raw|trim|json_encode }}
+{{ node.type.0.target_id|raw|trim }}
 {% endset %}
 <p>{{ type }}</p>
 <script>
@@ -8,6 +8,7 @@
 </script>
 {% if teaser %}
 	{# EN FONCTION DU TYPE DE NODE #}
+	{{ type == "article" }}
 	{% if type == "article" %}
 		<div class="lecture-content" onclick="window.location='{{ url }}';">
 			<span>{{node.label}}</span>
