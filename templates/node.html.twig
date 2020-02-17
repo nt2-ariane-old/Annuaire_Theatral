@@ -1,9 +1,9 @@
 {# AFFICHAGE SI C'EST SEULEMENT UN TEASER  #}
 {% set type %}
-	{{ node.type.0.target_id|raw|trim }}
+	{{ node.type.0.target_id|raw|trim|json_encode }}
 {% endset %}
 <p>{{ type }}</p>
-<script>console.log({{ type|json_encode|raw  }})</script>
+<script>console.log({{ type  }})</script>
 {% if teaser and node.isPublished() %}
 	{# EN FONCTION DU TYPE DE NODE #}
 	{% if type == "article" %}
