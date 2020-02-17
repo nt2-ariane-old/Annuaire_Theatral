@@ -2,7 +2,7 @@
 {{ node.type.0.target_id }}
 
 {% set type %}
-	{{ node.type.0.target_id }}
+	{{ node.type.0.target_id|trim }}
 {% endset %}
 {{ type }}
 {% if teaser and node.isPublished() %}
