@@ -1,12 +1,14 @@
 {# AFFICHAGE SI C'EST SEULEMENT UN TEASER  #}
 {% set type %}
-{{ node.type.0.target_id|raw|trim|lower }}
+{% spaceless %}
+	{{ node.type.0.target_id|raw|trim|lower }}
+{% endspaceless %}
 {% endset %}
 <span>{{ type }}</span>
 {{ type == 'article' ? 'Un article' : 'Autre' }}
 {% if teaser %}
 	{# EN FONCTION DU TYPE DE NODE #}
-	
+
 	{% if "article" in type %}
 		<div class="lecture-content" onclick="window.location='{{ url }}';">
 			<span>{{node.label}}</span>
