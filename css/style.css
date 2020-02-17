@@ -923,6 +923,13 @@ ul.quicktabs-tabs li a {
   border-radius: 20px;
 }
 
+.logo {
+  width: 50%;
+  margin: 0;
+  padding: 1rem;
+  float: left;
+}
+
 .sidebar-right .title-wrapper h2 {
   font-size: 25px;
 }

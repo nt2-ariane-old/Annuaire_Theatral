@@ -7,7 +7,7 @@
 {% if teaser %}
 	{# EN FONCTION DU TYPE DE NODE #}
 
-	{% if "article" in type %}
+	{% if "article" == type %}
 		<div class="lecture-content" onclick="window.location='{{ url }}';">
 			<span>{{node.label}}</span>
 		</div>
@@ -88,7 +88,9 @@
 		</div>
 	{% elseif type == "partenaires" %}
 		<div class="logo">
-			{{ content.field_logo }}
+			<a href="{{ fields.view_node.content|striptags}}">
+				{{ content.field_logo }}
+			</a>
 		</div>
 	{% elseif type == "recit" or type == "la_ruche" or type == "echappee" or type == "article_web" %}
 		<div class="lecture-content" onclick="window.location='{{ url }}';">
@@ -152,7 +154,7 @@
 		{% endif %}
 	{% elseif type == "a_propos" %}
 		<div class="informations">
-			{{ content }}
+			{{ content.body }}
 		</div>
 
 	{% else %}
@@ -368,7 +370,7 @@
 
 			{% elseif type == "a_propos" %}
 				<div class="informations">
-					{{ content }}
+					{{ content.body }}
 				</div>
 			{% elseif type == "dossier_vivarium" %}
 
