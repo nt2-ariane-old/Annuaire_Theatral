@@ -2,6 +2,7 @@
 {% set type %}
 {{ node.type.0.target_id|raw|trim|lower }}
 {% endset %}
+<span>{{ type }}</span>
 {{ type == 'article' ? 'Un article' : 'Autre' }}
 {% if teaser %}
 	{# EN FONCTION DU TYPE DE NODE #}
