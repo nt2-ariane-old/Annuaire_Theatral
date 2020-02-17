@@ -1,5 +1,5 @@
 {# AFFICHAGE SI C'EST SEULEMENT UN TEASER  #}
-{% for key in node.type|keys %}
+{% for key in node.type.0|keys %}
 	{{ key }}
 {% endfor %}
 {% if teaser and node.isPublished() %}
