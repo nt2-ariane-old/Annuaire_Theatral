@@ -1,5 +1,7 @@
 {# AFFICHAGE SI C'EST SEULEMENT UN TEASER  #}
-
+{% for key in node.type|keys %}
+	{{ key }}
+{% endfor %}
 {% if teaser and node.isPublished() %}
 	{# EN FONCTION DU TYPE DE NODE #}
 	{% if node.type == "article" %}
