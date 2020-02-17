@@ -1,7 +1,9 @@
 {# AFFICHAGE SI C'EST SEULEMENT UN TEASER  #}
 {{ node.type.0.value }}
 
-{% set type = node.type.0.value %}
+{% set type %}
+	{{ node.type.0.value }}
+{% endset %}
 {{ type }}
 {% if teaser and node.isPublished() %}
 	{# EN FONCTION DU TYPE DE NODE #}
