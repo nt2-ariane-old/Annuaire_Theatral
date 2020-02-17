@@ -2,6 +2,7 @@
 {{ node.type.0.value }}
 
 {% set type = node.type.0.value %}
+{{ type }}
 {% if teaser and node.isPublished() %}
 	{# EN FONCTION DU TYPE DE NODE #}
 	{% if type == "article" %}
