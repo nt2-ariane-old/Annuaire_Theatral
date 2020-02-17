@@ -3,7 +3,7 @@
 	{{ node.type.0.target_id|trim }}
 {% endset %}
 <p>{{ type }}</p>
-<script>console.log({{ type }})</script>
+<script>console.log({{ type|json_encode|raw  }})</script>
 {% if teaser and node.isPublished() %}
 	{# EN FONCTION DU TYPE DE NODE #}
 	{% if type == "article" %}
