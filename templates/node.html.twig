@@ -101,10 +101,10 @@
 		</div>
 
 	{% elseif type == "dossier" %}
-		{% set type %}
-		{{ content.field_type_dossier }}
+		{% set type_dossier %}
+		{{ content.field_type_dossier|striptags|trim }}
 		{% endset %}
-		{% if  type|striptags|trim == "Dossier" %}
+		{% if type_dossier == "Dossier" %}
 			<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
 				<div class="blog-zig-zag up-left">
 					<div class="blog-content">
@@ -129,15 +129,15 @@
 				<div class="w-clearfix service-wrapper wow fadeIn" data-wow-delay="0.3s">
 					<div class="service-icon">
 						<div class="w-embed">
-							{% if fields.field_type_dossier.content == 'Documents' %}
+							{% if type_dossier == 'Documents' %}
 								<i class="fas fa-folder"></i>
-							{% elseif fields.field_type_dossier.content == "Pratiques et travaux" %}
+							{% elseif type_dossier == "pratiques et travaux" %}
 								<i class="far fa-comment"></i>
-							{% elseif fields.field_type_dossier.content ==  "Parcours critique" %}
+							{% elseif type_dossier ==  "Parcours critique" %}
 								<i class="fas fa-book"></i>
-							{% elseif fields.field_type_dossier.content ==  "Revue des revues" %}
+							{% elseif type_dossier ==  "Revue des revues" %}
 								<i class="fas fa-hourglass-end"></i>
-							{% elseif fields.field_type_dossier.content ==  "Notes de lecture" %}
+							{% elseif type_dossier ==  "Notes de lecture" %}
 								<i class="fas fa-vial"></i>
 							{% else %}
 								<i class="fa fa-envelope-o"></i>
@@ -146,7 +146,7 @@
 					</div>
 					<div class="service-content">
 						<a href="{{ url }}">
-							<h4 class="service-title">{{ type|striptags|trim }}</h4>
+							<h4 class="service-title">{{ type_dossier }}</h4>
 						</a>
 					</div>
 				</div>
