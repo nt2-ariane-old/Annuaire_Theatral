@@ -2,7 +2,7 @@ window.onload = function() {
     new WOW().init();
 
     let searchbar = document.querySelector('#views-exposed-form-general-search-page-1');
-    let nav = document.querySelector('.top-nav');
+    let nav = document.querySelector('.topnav');
 
     if (searchbar !== null) {
         searchbar.innerHTML = '';
@@ -29,8 +29,7 @@ window.onload = function() {
         searchbar.appendChild(input);
         searchbar.appendChild(button);
 
-        let li = document.createElement('li');
-        li.setAttribute('class', 'li-menu-type-2 no-bottom-margin');
+        let li = document.createElement('div');
 
         li.appendChild(searchbar);
         nav.appendChild(li);
@@ -38,7 +37,7 @@ window.onload = function() {
     }
 
     let rows = document.querySelectorAll('.line-zig-zag');
-    console.log(rows)
+
     i = 0;
     rows.forEach(row => {
         rowContent = row.querySelectorAll('.blog-zig-zag');
@@ -84,12 +83,6 @@ window.onload = function() {
 
     }
 
-    // let allLink = document.querySelectorAll('a');
-    // allLink.forEach(aLink => {
-    //     if (aLink.innerHTML.isEmpty()) {
-    //         aLink.parentElement.removeChild(aLink);
-    //     }
-    // })
 
 }
 

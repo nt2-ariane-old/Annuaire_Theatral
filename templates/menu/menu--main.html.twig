@@ -36,9 +36,9 @@
 			{% for item in items %}
 				{% if item.below %}
 					<div class="dropdown">
-						<button class="dropbtn">{{item.title|raw}}
+						<a href='{{item.url}}' class="dropbtn underline">{{item.title|raw}}
 							<i class="fa fa-caret-down"></i>
-						</button>
+						</a>
 						<div class="dropdown-content">
 							{% for child in item.below %}
 								<a{{child.attributes}} href="{{child.url}}" class="underline">{{child.title}}</a>
