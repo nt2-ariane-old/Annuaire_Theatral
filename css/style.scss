@@ -1174,7 +1174,6 @@ ul.quicktabs-tabs li a {
       display: block;
       width: 100%;
       .top-nav {
-        background-color: #f3f3f3;
         li:not(:first-child) {
           display: none;
         }
@@ -1196,11 +1195,7 @@ ul.quicktabs-tabs li a {
         right: 20px;
         top: 20px;
       }
-      .top-nav.responsive .icon {
-        position: absolute;
-        right: 20px;
-        top: -40px;
-      }
+
       .top-nav.responsive li {
         float: none;
         display: block;

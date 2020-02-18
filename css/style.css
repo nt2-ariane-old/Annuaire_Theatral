@@ -1242,9 +1242,6 @@ ul.quicktabs-tabs li a {
     display: block;
     width: 100%;
   }
-  .top-border #block-navigationprincipale .top-nav {
-    background-color: #f3f3f3;
-  }
   .top-border #block-navigationprincipale .top-nav li:not(:first-child) {
     display: none;
   }
@@ -1265,11 +1262,6 @@ ul.quicktabs-tabs li a {
     position: absolute;
     right: 20px;
     top: 20px;
-  }
-  .top-border #block-navigationprincipale .top-nav.responsive .icon {
-    position: absolute;
-    right: 20px;
-    top: -40px;
   }
   .top-border #block-navigationprincipale .top-nav.responsive li {
     float: none;
