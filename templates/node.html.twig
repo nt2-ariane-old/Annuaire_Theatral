@@ -102,8 +102,9 @@
 
 	{% elseif type == "dossier" %}
 		{% set type_dossier %}
-		{{ content.field_type_dossier|striptags|trim }}
+		{{ content.field_type_dossier }}
 		{% endset %}
+		{% set type_dossier = type_dossier|striptags|trim %}
 		{% if type_dossier == "Dossier" %}
 			<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
 				<div class="blog-zig-zag up-left">
