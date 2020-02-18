@@ -562,7 +562,17 @@ footer #block-views-block-partenaires-block-1 .views-row div {
           transition-timing-function: ease-out;
 }
 
-.underline:hover:after,
+.underline.w--curent::after {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 100%;
+  bottom: -5px;
+  background: #ee2367;
+  height: 2px;
+}
+
+.underline .underline:hover:after,
 .underline:focus:after,
 .underline:active:after {
   left: 0;
