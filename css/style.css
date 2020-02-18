@@ -458,6 +458,7 @@ footer #block-views-block-partenaires-block-1 .views-row div {
 
 .top-border > div #block-navigationprincipale .top-nav {
   margin: 0;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1236,6 +1237,15 @@ ul.quicktabs-tabs li a {
   .top-border > div #block-navigationprincipale {
     display: block;
     width: 100%;
+  }
+  .top-border > div #block-navigationprincipale .top-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .top-border > div #block-navigationprincipale .top-nav li:not(:first-child) {
     display: none;

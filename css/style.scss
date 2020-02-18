@@ -449,6 +449,7 @@ footer {
       width: 85%;
       .top-nav {
         margin: 0;
+        overflow: hidden;
         display: flex;
         flex-direction: row;
         justify-items: center;
@@ -1169,6 +1170,8 @@ ul.quicktabs-tabs li a {
         display: block;
         width: 100%;
         .top-nav {
+          display: flex;
+          flex-direction: column;
           li:not(:first-child) {
             display: none;
           }

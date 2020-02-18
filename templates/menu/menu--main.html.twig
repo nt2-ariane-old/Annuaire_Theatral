@@ -31,41 +31,25 @@
 {% macro menu_links(items, attributes, menu_level) %}
 	{% import _self as menus %}
 	{% if items %}
-		{% if menu_level == 0 %}
-			<ul{{attributes}} class="top-nav" aria-labelledby="Menu Principal">
-			{% else %}
-				<ul class="w-list-unstyled top-nav" aria-labelledby="Menu Principal">
+		<div{{attributes}} class="topnav" id="menu_principal">
+
+			{% for item in items %}
+				{% if item.below %}
+					<div class="dropdown">
+						<button class="dropbtn">{{item.title|raw}}
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							{% for child in item.below %}
+								<a{{child.attributes}} href="{{child.url}}">{{child.title}}</a>
+							{% endfor %}
+						</div>
+					</div>
+				{% else %}
+					<a{{item.attributes}} href='{{item.url}}'>{{item.title|raw}}</a>
 				{% endif %}
-				<li class="icon">
-					<a href="javascript:showHamburgerMenu();">
-						<i class="fas fa-bars"></i>
-					</a>
-				</li>
-				{% for item in items %}
-					<li{{item.attributes}} class="li-menu-type-2">
-
-						<a  aria-haspopup="true" href='{{item.url}}' data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2 animsition-link">
-							<div>{{item.title|raw}}</div>
-						</a>
-						<div data-ix="line-menu-type" class="line-bottom-menu"></div>
-						{% if item.below %}
-							<ul aria-hidden="true" aria-label="submenu" class="sub-item">
-
-								{% for child in item.below %}
-									<li{{child.attributes}} class="li-menu-type-2">
-										<a href='{{child.url}}' data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2 animsition-link">
-											<div>{{child.title}}</div>
-										</a>
-										<div data-ix="line-menu-type" class="line-bottom-menu"></div>
-									</li>
-								{% endfor %}
-
-							</ul>
-						{% endif %}
-					</li>
-				{% endfor %}
-			</ul>
-		{% endif %}
-	{% endmacro %}
-
-
+			{% endfor %}
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+	{% endif %}
+{% endmacro %}
