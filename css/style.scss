@@ -540,13 +540,8 @@ footer {
     transition-timing-function: ease-out;
   }
   &.w--curent::after {
-    position: absolute;
-    z-index: -1;
-    right: 0;
     width: 100%;
-    bottom: -5px;
     background: #ee2367;
-    height: 2px;
   }
 }
 .underline .underline:hover:after,
@@ -557,6 +552,12 @@ footer {
   width: 100%;
 }
 
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 #block-abonnezvous {
   background: #eaeaea;
   border-radius: 5px;

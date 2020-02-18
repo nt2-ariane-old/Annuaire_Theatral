@@ -563,13 +563,8 @@ footer #block-views-block-partenaires-block-1 .views-row div {
 }
 
 .underline.w--curent::after {
-  position: absolute;
-  z-index: -1;
-  right: 0;
   width: 100%;
-  bottom: -5px;
   background: #ee2367;
-  height: 2px;
 }
 
 .underline .underline:hover:after,
@@ -578,6 +573,22 @@ footer #block-views-block-partenaires-block-1 .views-row div {
   left: 0;
   right: auto;
   width: 100%;
+}
+
+.centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #block-abonnezvous {

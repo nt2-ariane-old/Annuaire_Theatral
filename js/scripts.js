@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
     new WOW().init();
 
     let searchbar = document.querySelector('#views-exposed-form-general-search-page-1');
@@ -30,7 +30,7 @@ window.onload = function() {
         searchbar.appendChild(button);
 
         let li = document.createElement('div');
-
+        li.setAttribute('class', 'centered');
         li.appendChild(searchbar);
         nav.appendChild(li);
         searchbar.style.display = 'inline-block';
@@ -95,16 +95,15 @@ function isOdd(n) {
 }
 
 function showHamburgerMenu() {
-    console.log('test');
-    var nav = document.querySelector('.top-nav');
-    if (nav.getAttribute('class') !== "top-nav responsive") {
-        nav.setAttribute('class', 'top-nav responsive');
+    var x = document.getElementById("menu_principal");
+    if (x.className === "topnav") {
+        x.className += " responsive";
     } else {
-        nav.setAttribute('class', 'top-nav')
+        x.className = "topnav";
     }
 }
 
-String.prototype.isEmpty = function() {
+String.prototype.isEmpty = function () {
     return (this.length === 0 || !this.trim());
 };
 
