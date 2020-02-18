@@ -41,12 +41,12 @@
 						</button>
 						<div class="dropdown-content">
 							{% for child in item.below %}
-								<a{{child.attributes}} href="{{child.url}}">{{child.title}}</a>
+								<a{{child.attributes}} href="{{child.url}}" class="underline">{{child.title}}</a>
 							{% endfor %}
 						</div>
 					</div>
 				{% else %}
-					<a{{item.attributes}} href='{{item.url}}'>{{item.title|raw}}</a>
+					<a{{item.attributes}} href='{{item.url}}' class="underline">{{item.title|raw}}</a>
 				{% endif %}
 			{% endfor %}
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
