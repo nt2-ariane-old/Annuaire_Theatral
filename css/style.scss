@@ -461,8 +461,23 @@ footer {
         }
         a:hover,
         .dropdown:hover .dropbtn {
-          background-color: #555;
-          color: white;
+          &:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            width: 0;
+            bottom: -5px;
+            background: #000;
+            height: 2px;
+            transition-property: width;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+          }
+          &.w--curent::after {
+            width: 100%;
+            background: #ee2367;
+          }
         }
         .icon {
           display: none;
@@ -526,23 +541,6 @@ footer {
   display: inline;
   position: relative;
   overflow: hidden;
-  &:after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    right: 0;
-    width: 0;
-    bottom: -5px;
-    background: #000;
-    height: 2px;
-    transition-property: width;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-  }
-  &.w--curent::after {
-    width: 100%;
-    background: #ee2367;
-  }
 }
 .underline .underline:hover:after,
 .underline:focus:after,
