@@ -505,21 +505,6 @@ footer #block-views-block-partenaires-block-1 .views-row div {
   display: none;
 }
 
-.top-border > div #block-navigationprincipale .topnav .dropdown {
-  overflow: hidden;
-}
-
-.top-border > div #block-navigationprincipale .topnav .dropdown .dropbtn {
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: black;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
 .top-border > div #block-navigationprincipale .topnav .dropdown .dropdown-content {
   display: none;
   position: absolute;
