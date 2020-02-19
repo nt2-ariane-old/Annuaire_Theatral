@@ -450,10 +450,13 @@ footer {
 
       .topnav {
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: space-around;
         a {
-          float: left;
           display: block;
-          color: #f2f2f2;
+          color: black;
           text-align: center;
           padding: 14px 16px;
           text-decoration: none;
@@ -483,13 +486,12 @@ footer {
           display: none;
         }
         .dropdown {
-          float: left;
           overflow: hidden;
           .dropbtn {
             font-size: 17px;
             border: none;
             outline: none;
-            color: white;
+            color: black;
             padding: 14px 16px;
             background-color: inherit;
             font-family: inherit;
