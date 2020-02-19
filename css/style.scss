@@ -386,6 +386,13 @@ footer {
     }
   }
   #block-pieddepage {
+    #menu_principal {
+      display: flex;
+      flex-direction: column;
+      .icon {
+        display: none;
+      }
+    }
     ul {
       padding: 0;
       li {
@@ -1204,21 +1211,6 @@ ul.quicktabs-tabs li a {
       #block-navigationprincipale {
         display: block;
         width: 100%;
-        .top-nav {
-          display: flex;
-          flex-direction: column;
-          li:not(:first-child) {
-            display: none;
-          }
-          .icon {
-            float: right;
-            display: block;
-            a {
-              font-size: 24px;
-              cursor: pointer;
-            }
-          }
-        }
       }
     }
     #block-sitebranding-2 {
