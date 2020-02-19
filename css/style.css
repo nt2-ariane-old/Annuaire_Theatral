@@ -1330,7 +1330,6 @@ ul.quicktabs-tabs li a {
         -ms-flex-align: start;
             align-items: flex-start;
     background-color: #e8e8e8;
-    padding: 1rem;
   }
   .top-border > div #block-navigationprincipale .topnav a,
   .top-border > div #block-navigationprincipale .topnav .dropbtn {
@@ -1342,6 +1341,9 @@ ul.quicktabs-tabs li a {
     right: 10px;
     top: -25px;
     font-size: 30px;
+  }
+  .top-border > div #block-navigationprincipale .topnav.responsive {
+    padding: 1rem;
   }
   .top-border > div #block-navigationprincipale .topnav.responsive a,
   .top-border > div #block-navigationprincipale .topnav.responsive .dropbtn {
