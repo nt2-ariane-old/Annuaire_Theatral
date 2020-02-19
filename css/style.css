@@ -468,40 +468,6 @@ footer #block-views-block-partenaires-block-1 .views-row div {
           justify-content: space-between;
 }
 
-.top-border > div #block-navigationprincipale .topnav a {
-  display: inline-block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  position: relative;
-}
-
-.top-border > div #block-navigationprincipale .topnav a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 3px;
-  display: block;
-  margin-top: 5px;
-  left: 0;
-  background: black;
-  transition: width 0.4s ease;
-  -webkit-transition: width 0.4s ease;
-}
-
-.top-border > div #block-navigationprincipale .topnav a:hover::after {
-  width: 100%;
-  left: 0;
-  background: black;
-}
-
-.top-border > div #block-navigationprincipale .topnav a.w--current::after {
-  width: 100%;
-  background: #ee2367;
-}
-
 .top-border > div #block-navigationprincipale .topnav .icon {
   display: none;
 }
@@ -541,6 +507,40 @@ footer #block-views-block-partenaires-block-1 .views-row div {
 .top-border > div #block-sitebranding-2 a {
   display: block;
   height: 50px;
+}
+
+.menu-link {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+}
+
+.menu-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  left: 0;
+  background: black;
+  transition: width 0.4s ease;
+  -webkit-transition: width 0.4s ease;
+}
+
+.menu-link:hover::after {
+  width: 100%;
+  left: 0;
+  background: black;
+}
+
+.menu-link.w--current::after {
+  width: 100%;
+  background: #ee2367;
 }
 
 .centered {
@@ -1313,6 +1313,30 @@ ul.quicktabs-tabs li a {
   }
   .container {
     max-width: 1100px;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 900px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

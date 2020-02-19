@@ -36,17 +36,17 @@
 			{% for item in items %}
 				{% if item.below %}
 					<div class="dropdown">
-						<a href='{{item.url}}' class="dropbtn underline">{{item.title|raw}}
+						<a href='{{item.url}}' class="dropbtn menu-link">{{item.title|raw}}
 							<i class="fa fa-caret-down"></i>
 						</a>
 						<div class="dropdown-content">
 							{% for child in item.below %}
-								<a{{child.attributes}} href="{{child.url}}" class="underline">{{child.title}}</a>
+								<a{{child.attributes}} href="{{child.url}}" class="menu-link">{{child.title}}</a>
 							{% endfor %}
 						</div>
 					</div>
 				{% else %}
-					<a{{item.attributes}} href='{{item.url}}' class="underline">{{item.title|raw}}</a>
+					<a{{item.attributes}} href='{{item.url}}' class="menu-link">{{item.title|raw}}</a>
 				{% endif %}
 			{% endfor %}
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
