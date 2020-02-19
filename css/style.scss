@@ -1235,13 +1235,12 @@ ul.quicktabs-tabs li a {
   #block-navigationprincipale {
     .topnav {
       flex-direction: column;
-
-      .icon {
-        display: block;
-      }
       a,
       .dropbtn {
         display: none;
+      }
+      .icon {
+        display: block;
       }
       &.responsive {
         position: relative;

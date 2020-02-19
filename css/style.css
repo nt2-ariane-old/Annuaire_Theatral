@@ -1318,12 +1318,12 @@ ul.quicktabs-tabs li a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #block-navigationprincipale .topnav .icon {
-    display: block;
-  }
   #block-navigationprincipale .topnav a,
   #block-navigationprincipale .topnav .dropbtn {
     display: none;
+  }
+  #block-navigationprincipale .topnav .icon {
+    display: block;
   }
   #block-navigationprincipale .topnav.responsive {
     position: relative;
