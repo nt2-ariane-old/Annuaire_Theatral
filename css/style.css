@@ -496,7 +496,7 @@ footer #block-views-block-partenaires-block-1 .views-row div {
   background: black;
 }
 
-.top-border > div #block-navigationprincipale .topnav a.w--curent::after {
+.top-border > div #block-navigationprincipale .topnav a.w--current::after {
   width: 100%;
   background: #ee2367;
 }
