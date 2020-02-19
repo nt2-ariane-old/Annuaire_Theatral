@@ -484,16 +484,16 @@ footer #block-views-block-partenaires-block-1 .views-row div {
   height: 3px;
   display: block;
   margin-top: 5px;
-  right: 0;
-  background: #fff;
-  transition: width 0.2s ease;
-  -webkit-transition: width 0.2s ease;
+  left: 0;
+  background: black;
+  transition: width 0.4s ease;
+  -webkit-transition: width 0.4s ease;
 }
 
 .top-border > div #block-navigationprincipale .topnav a:hover::after {
   width: 100%;
   left: 0;
-  background: #fff;
+  background: black;
 }
 
 .top-border > div #block-navigationprincipale .topnav a.w--curent::after {
