@@ -477,8 +477,7 @@ footer #block-views-block-partenaires-block-1 .views-row div {
   font-size: 17px;
 }
 
-.top-border > div #block-navigationprincipale .topnav a:after,
-.top-border > div #block-navigationprincipale .topnav .dropdown:after {
+.top-border > div #block-navigationprincipale .topnav a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -491,15 +490,13 @@ footer #block-views-block-partenaires-block-1 .views-row div {
   -webkit-transition: width 0.2s ease;
 }
 
-.top-border > div #block-navigationprincipale .topnav a:hover:after,
-.top-border > div #block-navigationprincipale .topnav .dropdown:hover:after {
+.top-border > div #block-navigationprincipale .topnav a:hover::after {
   width: 100%;
   left: 0;
   background: #fff;
 }
 
-.top-border > div #block-navigationprincipale .topnav a.w--curent::after,
-.top-border > div #block-navigationprincipale .topnav .dropdown.w--curent::after {
+.top-border > div #block-navigationprincipale .topnav a.w--curent::after {
   width: 100%;
   background: #ee2367;
 }
