@@ -1268,11 +1268,26 @@ ul.quicktabs-tabs li a {
   .bottom-border {
     display: none;
   }
-  #block-pieddepage,
-  #block-footerinfos,
-  #block-views-block-partenaires-block-1 {
+  ul.quicktabs-tabs {
+    text-align: left;
+  }
+  ul.quicktabs-tabs li {
+    display: block;
+    margin: 0.3rem;
+    padding: 0;
+  }
+  ul.quicktabs-tabs li.active {
+    border: none !important;
+    border-bottom: 1px solid #222 !important;
+    border-radius: 0;
+  }
+  footer #block-pieddepage,
+  footer #block-footerinfos,
+  footer #block-views-block-partenaires-block-1 {
     width: 100%;
     float: none;
+    border-bottom: 1px solid #e3e3e3;
+    padding: 1rem 0;
   }
 }
 
