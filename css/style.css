@@ -457,18 +457,15 @@ footer #block-views-block-partenaires-block-1 .views-row div {
 }
 
 .top-border > div #block-navigationprincipale .topnav {
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .top-border > div #block-navigationprincipale .topnav a {

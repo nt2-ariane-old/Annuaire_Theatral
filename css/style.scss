@@ -449,11 +449,9 @@ footer {
       width: 85%;
 
       .topnav {
-        overflow: hidden;
         display: flex;
-        justify-content: center;
         align-items: center;
-        align-content: space-around;
+        justify-content: space-between;
         a {
           display: block;
           color: black;
