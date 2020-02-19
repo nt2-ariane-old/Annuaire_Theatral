@@ -1317,6 +1317,10 @@ ul.quicktabs-tabs li a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    background-color: #e8e8e8;
   }
   #block-navigationprincipale .topnav a,
   #block-navigationprincipale .topnav .dropbtn {
@@ -1333,7 +1337,8 @@ ul.quicktabs-tabs li a {
     right: 0;
     top: 0;
   }
-  #block-navigationprincipale .topnav.responsive a {
+  #block-navigationprincipale .topnav.responsive a,
+  #block-navigationprincipale .topnav.responsive .dropbtn {
     float: none;
     display: block;
     text-align: left;
@@ -1346,7 +1351,7 @@ ul.quicktabs-tabs li a {
     width: 100%;
     text-align: left;
   }
-  #block-navigationprincipale .topnav.responsive .dropdown-content {
+  #block-navigationprincipale .topnav.responsive .dropdown .dropdown-content {
     position: relative;
   }
   #block-navigationprincipale .topnav .dropdown .dropdown-content {
