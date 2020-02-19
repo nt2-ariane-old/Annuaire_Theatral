@@ -1294,11 +1294,6 @@ ul.quicktabs-tabs li a {
     display: block;
     width: 100%;
   }
-  .top-border #block-sitebranding-2 {
-    width: 100%;
-    padding: 5px 15px;
-    max-width: 100%;
-  }
 }
 
 @media only screen and (min-width: 1100px) {
@@ -1312,6 +1307,19 @@ ul.quicktabs-tabs li a {
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1000px) {
+  .top-border > div {
+    position: relative;
+  }
+  .top-border > div #block-sitebranding-2 {
+    width: 100%;
+    padding: 5px 15px;
+    max-width: 100%;
+  }
+  .top-border > div #block-navigationprincipale {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+  }
   .top-border > div #block-navigationprincipale .topnav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1330,9 +1338,6 @@ ul.quicktabs-tabs li a {
   .top-border > div #block-navigationprincipale .topnav .icon {
     display: block;
   }
-  .top-border > div #block-navigationprincipale .topnav.responsive {
-    position: relative;
-  }
   .top-border > div #block-navigationprincipale .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -1346,6 +1351,7 @@ ul.quicktabs-tabs li a {
   }
   .top-border > div #block-navigationprincipale .topnav.responsive .dropdown {
     float: none;
+    width: 100%;
   }
   .top-border > div #block-navigationprincipale .topnav.responsive .dropdown .dropbtn {
     display: inline-block;

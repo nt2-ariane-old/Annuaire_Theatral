@@ -1213,11 +1213,6 @@ ul.quicktabs-tabs li a {
         width: 100%;
       }
     }
-    #block-sitebranding-2 {
-      width: 100%;
-      padding: 5px 15px;
-      max-width: 100%;
-    }
   }
 }
 
@@ -1234,7 +1229,16 @@ ul.quicktabs-tabs li a {
 @media screen and (max-width: 1000px) {
   .top-border {
     & > div {
+      position: relative;
+      #block-sitebranding-2 {
+        width: 100%;
+        padding: 5px 15px;
+        max-width: 100%;
+      }
       #block-navigationprincipale {
+        position: absolute;
+        top: 50px;
+        width: 100%;
         .topnav {
           flex-direction: column;
           align-items: flex-start;
@@ -1248,7 +1252,6 @@ ul.quicktabs-tabs li a {
             display: block;
           }
           &.responsive {
-            position: relative;
 
             .icon {
               position: absolute;
@@ -1263,6 +1266,7 @@ ul.quicktabs-tabs li a {
             }
             .dropdown {
               float: none;
+              width: 100%;
               .dropbtn {
                 display: inline-block;
                 width: 100%;
