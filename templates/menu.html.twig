@@ -31,33 +31,25 @@
 {% macro menu_links(items, attributes, menu_level) %}
 	{% import _self as menus %}
 	{% if items %}
-		{% if menu_level == 0 %}
-			<ul{{attributes}} class="top-nav">
-			{% else %}
-				<ul class="w-list-unstyled top-nav">
-				{% endif %}
-				{% for item in items %}
-					<li{{item.attributes}} class="li-menu-type-2">
-
-						<a href='{{item.url}}' data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2 animsition-link">
-							<div>{{item.title}}</div>
+		<div{{attributes}} class="topnav" id="menu_principal">
+			
+			{% for item in items %}
+				{% if item.below %}
+					<div class="dropdown">
+						<a href='{{item.url}}' class="dropbtn menu-link">{{item.title|raw}}
+							<i class="fa fa-caret-down"></i>
 						</a>
-						<div data-ix="line-menu-type" class="line-bottom-menu"></div>
-						{% if item.below %}
-							<ul class="sub-item">
-
-								{% for child in item.below %}
-									<li{{child.attributes}} class="li-menu-type-2">
-										<a href='{{child.url}}' data-ix="show-line-menu-type-2" class="w-inline-block link-nav-2 animsition-link">
-											<div>{{child.title}}</div>
-										</a>
-										<div data-ix="line-menu-type" class="line-bottom-menu"></div>
-									</li>
-								{% endfor %}
-							</ul>
-						{% endif %}
-					</li>
-				{% endfor %}
-			</ul>
-		{% endif %}
-	{% endmacro %}
+						<div class="dropdown-content">
+							{% for child in item.below %}
+								<a{{child.attributes}} href="{{child.url}}" class="menu-link">{{child.title}}</a>
+							{% endfor %}
+						</div>
+					</div>
+				{% else %}
+					<a{{item.attributes}} href='{{item.url}}' class="menu-link">{{item.title|raw}}</a>
+				{% endif %}
+			{% endfor %}
+			<a href="javascript:void(0);" class="icon" onclick="showHamburgerMenu()">&#9776;</a>
+		</div>
+	{% endif %}
+{% endmacro %}
