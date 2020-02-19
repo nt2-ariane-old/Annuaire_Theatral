@@ -529,18 +529,6 @@ footer {
   }
 }
 
-.underline {
-  display: inline;
-  position: relative;
-  overflow: hidden;
-}
-.underline .underline:hover:after,
-.underline:focus:after,
-.underline:active:after {
-  left: 0;
-  right: auto;
-  width: 100%;
-}
 
 .centered {
   display: flex;
