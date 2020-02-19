@@ -1237,9 +1237,9 @@ ul.quicktabs-tabs li a {
       #block-navigationprincipale {
         .topnav {
           flex-direction: column;
-          align-items: left;
+          align-items: flex-start;
           background-color: #e8e8e8;
-
+          padding: 1rem;
           a,
           .dropbtn {
             display: none;
@@ -1258,13 +1258,13 @@ ul.quicktabs-tabs li a {
             a,
             .dropbtn {
               float: none;
-              display: block;
+              display: inline-block;
               text-align: left;
             }
             .dropdown {
               float: none;
               .dropbtn {
-                display: block;
+                display: inline-block;
                 width: 100%;
                 text-align: left;
               }
@@ -1291,6 +1291,8 @@ ul.quicktabs-tabs li a {
             }
             &:hover .dropdown-content {
               display: block;
+              display: flex;
+              flex-direction: column;
             }
           }
         }
