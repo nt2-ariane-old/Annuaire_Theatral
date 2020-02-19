@@ -1279,6 +1279,7 @@ ul.quicktabs-tabs li a {
     padding: 0;
   }
   ul.quicktabs-tabs li.active a {
+    padding: 0;
     border: none !important;
     border-bottom: 1px solid #222 !important;
     border-radius: 0;

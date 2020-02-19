@@ -1196,6 +1196,7 @@ ul.quicktabs-tabs li a {
       }
       &.active {
         a {
+          padding: 0;
           border: none !important;
           border-bottom: 1px solid #222 !important;
           border-radius: 0;
