@@ -1322,7 +1322,7 @@ ul.quicktabs-tabs li a {
     display: block;
   }
   #block-navigationprincipale .topnav a,
-  #block-navigationprincipale .topnav form {
+  #block-navigationprincipale .topnav .dropbtn {
     display: none;
   }
   #block-navigationprincipale .topnav.responsive {

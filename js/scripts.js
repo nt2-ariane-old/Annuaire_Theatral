@@ -30,7 +30,7 @@ window.onload = function () {
         searchbar.appendChild(button);
 
         let li = document.createElement('div');
-        li.setAttribute('class', 'centered');
+        li.setAttribute('class', 'centered dropbtn');
         li.appendChild(searchbar);
         nav.appendChild(li);
         searchbar.style.display = 'inline-block';
