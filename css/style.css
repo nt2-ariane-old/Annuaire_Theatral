@@ -477,26 +477,29 @@ footer #block-views-block-partenaires-block-1 .views-row div {
   font-size: 17px;
 }
 
-.top-border > div #block-navigationprincipale .topnav a:hover:after,
-.top-border > div #block-navigationprincipale .topnav .dropdown:hover .dropbtn:after {
+.top-border > div #block-navigationprincipale .topnav a:after,
+.top-border > div #block-navigationprincipale .topnav .dropdown:after {
   content: "";
   position: absolute;
-  z-index: -1;
-  right: 0;
   width: 0;
-  bottom: -5px;
-  background: #000;
-  height: 2px;
-  -webkit-transition-property: width;
-  transition-property: width;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  height: 3px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #fff;
+  transition: width 0.2s ease;
+  -webkit-transition: width 0.2s ease;
 }
 
-.top-border > div #block-navigationprincipale .topnav a:hover.w--curent::after,
-.top-border > div #block-navigationprincipale .topnav .dropdown:hover .dropbtn.w--curent::after {
+.top-border > div #block-navigationprincipale .topnav a:hover:after,
+.top-border > div #block-navigationprincipale .topnav .dropdown:hover:after {
+  width: 100%;
+  left: 0;
+  background: #fff;
+}
+
+.top-border > div #block-navigationprincipale .topnav a.w--curent::after,
+.top-border > div #block-navigationprincipale .topnav .dropdown.w--curent::after {
   width: 100%;
   background: #ee2367;
 }

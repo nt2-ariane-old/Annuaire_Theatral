@@ -452,6 +452,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         a {
           display: block;
           color: black;
@@ -460,20 +461,25 @@ footer {
           text-decoration: none;
           font-size: 17px;
         }
-        a:hover,
-        .dropdown:hover .dropbtn {
+        a,
+        .dropdown {
           &:after {
             content: "";
             position: absolute;
-            z-index: -1;
-            right: 0;
             width: 0;
-            bottom: -5px;
-            background: #000;
-            height: 2px;
-            transition-property: width;
-            transition-duration: 0.3s;
-            transition-timing-function: ease-out;
+            height: 3px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: #fff;
+            transition: width 0.2s ease;
+            -webkit-transition: width 0.2s ease;
+          }
+
+          &:hover:after {
+            width: 100%;
+            left: 0;
+            background: #fff;
           }
           &.w--curent::after {
             width: 100%;
