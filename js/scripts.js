@@ -90,11 +90,13 @@ window.onload = function () {
         element.addEventListener("mouseout", function (event) {
             this.setAttribute('aria-expanded', false);
             menu.hidden = true;
+            console.log('out')
         })
         element.addEventListener("mouseenter", function (event) {
             this.setAttribute('aria-expanded', true);
             menu.hidden = false;
-        }, false);
+            console.log('enter')
+        });
         button.addEventListener('click', function () {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
             this.setAttribute('aria-expanded', !expanded);
