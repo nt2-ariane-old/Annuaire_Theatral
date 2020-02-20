@@ -91,7 +91,7 @@ window.onload = function () {
             let menu = this.nextElementSibling;
             menu.hidden = !menu.hidden;
         });
-        test.addEventListener("mouseenter", function (event) {
+        element.addEventListener("mouseenter", function (event) {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
             this.setAttribute('aria-expanded', !expanded);
             let menu = this.nextElementSibling;
