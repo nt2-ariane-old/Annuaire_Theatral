@@ -85,7 +85,7 @@ window.onload = function () {
 
     var navButton = document.querySelectorAll('.dropdown button');
     navButton.forEach(element => {
-        navButton.addEventListener('click', function () {
+        element.addEventListener('click', function () {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
             this.setAttribute('aria-expanded', !expanded);
             let menu = this.nextElementSibling;
