@@ -90,7 +90,7 @@ window.onload = function () {
         element.addEventListener("mouseout", function (event) {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
             this.setAttribute('aria-expanded', !expanded);
-            menu.hidden = !menu.hidden;
+            menu.hidden = True;
         })
         button.addEventListener('click', function () {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
