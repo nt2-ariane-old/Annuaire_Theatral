@@ -85,19 +85,18 @@ window.onload = function () {
 
     var navButton = document.querySelectorAll('.dropdown button');
     navButton.forEach(element => {
+        let menu = this.nextElementSibling;
+        menu.addEventListener("mouseout", function (event) {
+            menu.hidden = !menu.hidden;
+        })
         element.addEventListener('click', function () {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
             this.setAttribute('aria-expanded', !expanded);
-            let menu = this.nextElementSibling;
             menu.hidden = !menu.hidden;
         });
         element.addEventListener("mouseenter", function (event) {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
             this.setAttribute('aria-expanded', !expanded);
-            let menu = this.nextElementSibling;
-            menu.addEventListener("mouseout", function (event) {
-                menu.hidden = !menu.hidden;
-            })
             menu.hidden = !menu.hidden;
         }, false);
     });
