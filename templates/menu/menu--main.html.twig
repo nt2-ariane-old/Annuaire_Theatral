@@ -32,16 +32,20 @@
 	{% import _self as menus %}
 	{% if items %}
 		<div{{attributes}} class="topnav" id="menu_principal">
-			
+
 			{% for item in items %}
 				{% if item.below %}
-					<div class="dropdown">
-						<a href='{{item.url}}' class="dropbtn menu-link" aria-haspopup="true" aria-expanded="false">{{item.title|raw}}
-							<i class="fa fa-caret-down"></i>
-						</a>
-						<div class="dropdown-content">
+
+
+					<div class="dropdown" role="menu">
+						<button aria-expanded="false" aria-controls="menu-list">
+							<a href='{{item.url}}' class="dropbtn menu-link" aria-labelledby="Lien principal du sous-menu">{{item.title|raw}}
+								<i class="fa fa-caret-down"></i>
+							</a>
+						</button>
+						<div class="dropdown-content" hidden>
 							{% for child in item.below %}
-								<a{{child.attributes}} href="{{child.url}}" class="menu-link">{{child.title}}</a>
+								<a role="menuitem" {{child.attributes}} href="{{child.url}}" class="menu-link">{{child.title}}</a>
 							{% endfor %}
 						</div>
 					</div>
