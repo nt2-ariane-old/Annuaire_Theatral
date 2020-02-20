@@ -84,29 +84,34 @@ window.onload = function () {
     }
 
     var dropdown = document.querySelectorAll('.dropdown');
+    $('.dropdown').hover(() => {
+        this.setAttribute('aria-expanded', true);
+        menu.hidden = false;
+        console.log('enter')
+    })
     dropdown.forEach(element => {
         let button = element.querySelector('.dropbtn')
         let menu = element.querySelector('.dropdown-content')
-        button.addEventListener("mouseout", function (event) {
-            this.setAttribute('aria-expanded', false);
-            menu.hidden = true;
-            console.log('out')
-        })
-        button.addEventListener("mouseenter", function (event) {
-            this.setAttribute('aria-expanded', true);
-            menu.hidden = false;
-            console.log('enter')
-        });
-        menu.addEventListener("mouseout", function (event) {
-            this.setAttribute('aria-expanded', false);
-            menu.hidden = true;
-            console.log('out')
-        })
-        menu.addEventListener("mouseenter", function (event) {
-            this.setAttribute('aria-expanded', true);
-            menu.hidden = false;
-            console.log('enter')
-        });
+        // button.addEventListener("mouseout", function (event) {
+        //     this.setAttribute('aria-expanded', false);
+        //     menu.hidden = true;
+        //     console.log('out')
+        // })
+        // button.addEventListener("mouseenter", function (event) {
+        //     this.setAttribute('aria-expanded', true);
+        //     menu.hidden = false;
+        //     console.log('enter')
+        // });
+        // menu.addEventListener("mouseout", function (event) {
+        //     this.setAttribute('aria-expanded', false);
+        //     menu.hidden = true;
+        //     console.log('out')
+        // })
+        // menu.addEventListener("mouseenter", function (event) {
+        //     this.setAttribute('aria-expanded', true);
+        //     menu.hidden = false;
+        //     console.log('enter')
+        // });
 
         button.addEventListener('click', function () {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
