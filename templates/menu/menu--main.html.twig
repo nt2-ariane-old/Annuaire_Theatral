@@ -39,9 +39,8 @@
 
 					<div class="dropdown" role="menu">
 						<button aria-expanded="false" aria-controls="menu-list">
-							<a href='{{item.url}}' class="dropbtn menu-link" aria-labelledby="Lien principal du sous-menu">{{item.title|raw}}
-								<i class="fa fa-caret-down"></i>
-							</a>
+							{{item.title|raw}}
+							<i class="fa fa-caret-down"></i>
 						</button>
 						<div class="dropdown-content" hidden>
 							{% for child in item.below %}
