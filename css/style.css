@@ -487,6 +487,17 @@ footer #block-views-block-partenaires-block-1 .views-row div {
   display: none;
 }
 
+.top-border > div #block-navigationprincipale .topnav .dropdown .dropbtn {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+  background-color: transparent;
+}
+
 .top-border > div #block-navigationprincipale .topnav .dropdown .dropdown-content {
   position: absolute;
   background-color: #f9f9f9;

@@ -465,6 +465,16 @@ footer {
           display: none;
         }
         .dropdown {
+          .dropbtn {
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            position: relative;
+            background-color: transparent;
+          }
           .dropdown-content {
             // display: none;
             position: absolute;
