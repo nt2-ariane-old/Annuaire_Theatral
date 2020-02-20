@@ -85,7 +85,7 @@ window.onload = function () {
 
     var dropdown = document.querySelectorAll('.dropdown');
     $('.dropdown').hover(() => {
-        this.setAttribute('aria-expanded', true);
+        this.attr('aria-expanded', true);
         menu.hidden = false;
         console.log('enter')
     })
