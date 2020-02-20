@@ -88,20 +88,18 @@ window.onload = function () {
         let button = element.querySelector('.dropbtn')
         let menu = element.querySelector('.dropdown-content')
         element.addEventListener("mouseout", function (event) {
-            let expanded = this.getAttribute('aria-expanded') === 'true' || false;
-            this.setAttribute('aria-expanded', !expanded);
-            menu.hidden = True;
+            this.setAttribute('aria-expanded', false);
+            menu.hidden = true;
         })
+        element.addEventListener("mouseenter", function (event) {
+            this.setAttribute('aria-expanded', true);
+            menu.hidden = false;
+        }, false);
         button.addEventListener('click', function () {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
             this.setAttribute('aria-expanded', !expanded);
             menu.hidden = !menu.hidden;
         });
-        element.addEventListener("mouseenter", function (event) {
-            let expanded = this.getAttribute('aria-expanded') === 'true' || false;
-            this.setAttribute('aria-expanded', !expanded);
-            menu.hidden = !menu.hidden;
-        }, false);
     });
 
 
