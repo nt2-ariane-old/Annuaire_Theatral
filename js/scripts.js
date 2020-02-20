@@ -95,6 +95,9 @@ window.onload = function () {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
             this.setAttribute('aria-expanded', !expanded);
             let menu = this.nextElementSibling;
+            menu.addEventListener("mouseout", function (event) {
+                menu.hidden = !menu.hidden;
+            })
             menu.hidden = !menu.hidden;
         }, false);
     });
