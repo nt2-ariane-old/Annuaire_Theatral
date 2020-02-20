@@ -83,7 +83,7 @@ window.onload = function () {
 
     }
 
-    var navButton = document.querySelector('.dropdown button');
+    var navButton = document.querySelectorAll('.dropdown button');
     navButton.forEach(element => {
         navButton.addEventListener('click', function () {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
