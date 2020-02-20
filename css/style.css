@@ -1332,6 +1332,10 @@ ul.quicktabs-tabs li a {
   .inner-title {
     line-height: 65px;
   }
+  #intro .align-center {
+    margin: 0;
+    padding: 1rem 0;
+  }
   .top-border > div {
     position: relative;
   }

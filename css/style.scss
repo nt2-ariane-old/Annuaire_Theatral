@@ -465,7 +465,6 @@ footer {
           display: none;
         }
         .dropdown {
-          
           .dropdown-content {
             display: none;
             position: absolute;
@@ -473,7 +472,7 @@ footer {
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
-            
+
             a {
               float: none;
               color: black;
@@ -1186,10 +1185,9 @@ ul.quicktabs-tabs li a {
     width: 100%;
     max-width: 100%;
   }
-  .views-col
-  {
+  .views-col {
     width: 100% !important;
-  }  
+  }
   .bottom-border {
     display: none;
   }
@@ -1256,9 +1254,14 @@ ul.quicktabs-tabs li a {
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1000px) {
-  .inner-title
-  {
-      line-height: 65px;
+  .inner-title {
+    line-height: 65px;
+  }
+  #intro {
+    .align-center {
+      margin: 0;
+      padding: 1rem 0;
+    }
   }
   .top-border {
     & > div {
