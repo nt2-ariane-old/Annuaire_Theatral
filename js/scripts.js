@@ -87,16 +87,27 @@ window.onload = function () {
     dropdown.forEach(element => {
         let button = element.querySelector('.dropbtn')
         let menu = element.querySelector('.dropdown-content')
-        element.addEventListener("mouseout", function (event) {
+        button.addEventListener("mouseout", function (event) {
             this.setAttribute('aria-expanded', false);
             menu.hidden = true;
             console.log('out')
         })
-        element.addEventListener("mouseenter", function (event) {
+        button.addEventListener("mouseenter", function (event) {
             this.setAttribute('aria-expanded', true);
             menu.hidden = false;
             console.log('enter')
         });
+        menu.addEventListener("mouseout", function (event) {
+            this.setAttribute('aria-expanded', false);
+            menu.hidden = true;
+            console.log('out')
+        })
+        menu.addEventListener("mouseenter", function (event) {
+            this.setAttribute('aria-expanded', true);
+            menu.hidden = false;
+            console.log('enter')
+        });
+
         button.addEventListener('click', function () {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
             this.setAttribute('aria-expanded', !expanded);
