@@ -465,7 +465,7 @@ footer {
           display: none;
         }
         .dropdown {
-          margin: 1rem auto;
+          
           .dropdown-content {
             display: none;
             position: absolute;
@@ -1256,6 +1256,10 @@ ul.quicktabs-tabs li a {
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1000px) {
+  .inner-title
+  {
+      line-height: 65px;
+  }
   .top-border {
     & > div {
       position: relative;
@@ -1295,6 +1299,7 @@ ul.quicktabs-tabs li a {
             }
             .dropdown {
               float: none;
+              margin: 1rem auto;
               width: 100%;
               .dropbtn {
                 display: inline-block;
