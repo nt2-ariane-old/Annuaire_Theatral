@@ -85,7 +85,7 @@ window.onload = function () {
 
     var navButton = document.querySelectorAll('.dropdown button');
     navButton.forEach(element => {
-        let menu = navButton.nextElementSibling;
+        let menu = navButton.nextSibling;
         menu.addEventListener("mouseout", function (event) {
             menu.hidden = !menu.hidden;
         })
