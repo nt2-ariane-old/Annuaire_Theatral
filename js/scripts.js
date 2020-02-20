@@ -83,13 +83,14 @@ window.onload = function () {
 
     }
 
-    var navButton = document.querySelectorAll('.dropdown button');
-    navButton.forEach(element => {
-        let menu = element.nextElementSibling
-        menu.addEventListener("mouseout", function (event) {
+    var dropdown = document.querySelectorAll('.dropdown');
+    dropdown.forEach(element => {
+        let button = element.querySelector('.dropbtn')
+        let menu = element.querySelector('.dropdown-content')
+        element.addEventListener("mouseout", function (event) {
             menu.hidden = !menu.hidden;
         })
-        element.addEventListener('click', function () {
+        button.addEventListener('click', function () {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
             this.setAttribute('aria-expanded', !expanded);
             menu.hidden = !menu.hidden;
