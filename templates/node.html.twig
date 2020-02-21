@@ -54,14 +54,14 @@
 				<i class="fa fa-envelope"></i>
 			</div>
 			<h3 itemprop="headline" aria-labelledby="Titre de l'actualité" class="blog-title">
-				<a class="blog-title animsition-link" aria-labelledby="Lien vers Actualite" href="{{ fields.view_node.content|render|striptags|trim }}">{{ fields.title.content|render|striptags|trim  }}</a>
+				<a class="blog-title animsition-link" aria-labelledby="Lien vers Actualite" href="{{ content.view_node|render|striptags|trim }}">{{ content.title|render|striptags|trim  }}</a>
 			</h3>
 			<p class="meta-tag" aria-labelledby="Date de Publication" itemprop="datePublished">Publié le :
-				{{ fields.field_nouvelle_date.content }}</p>
+				{{ content.field_nouvelle_date }}</p>
 			<div class="seperator center"></div>
-			<p itemprop="backstory" aria-labelledby="Contenu de l'actualité">{{ fields.body.content }}</p>
+			<p itemprop="backstory" aria-labelledby="Contenu de l'actualité">{{ content.body }}</p>
 			<div class="small-spc">
-				<a aria-labelledby="Lien Lire la suite" href="{{ fields.view_node.content|render|striptags|trim }}" class="read-more animsition-link">Lire la suite ›</a>
+				<a aria-labelledby="Lien Lire la suite" href="{{ content.view_node|render|striptags|trim }}" class="read-more animsition-link">Lire la suite ›</a>
 			</div>
 		</div>
 	{% elseif type == "dossier_vivarium" %}
@@ -69,12 +69,12 @@
 			<div class="blog-zig-zag">
 				<div class="blog-content">
 					<h3 class="blog-title">
-						<a class="blog-title animsition-link" href="{{ url}}">{{ fields.title.content|render|striptags|trim  }}</a>
+						<a class="blog-title animsition-link" href="{{ url}}">{{ content.title|render|striptags|trim  }}</a>
 					</h3>
 					<p class="meta-tag">Responsable :
-						{{fields.field_responsable_dossier.date.content}}</p>
+						{{content.field_responsable_dossier.date}}</p>
 					<div class="seperator"></div>
-					<p>{{fields.body.content}}</p>
+					<p>{{content.body}}</p>
 					<div class="small-spc">
 						<a href="{{ url}}" class="read-more animsition-link">Lire la suite&nbsp;›</a>
 					</div>
@@ -82,7 +82,7 @@
 			</div>
 			<div class="blog-zig-zag">
 				<a href="{{ url}}" class="w-inline-block blog-link animsition-link">
-					{{fields.field_image_de_couverture.content}}
+					{{content.field_image_de_couverture}}
 				</a>
 			</div>
 		</div>
@@ -332,14 +332,14 @@
 							</div>
 						</div>
 						<div>
-							{% if (content.contents_on_contributor_entity_view_1.value is empty or content.contents_on_contributor_entity_view_2.value is empty) %}
+							{% if (contents_on_contributor_entity_view_1.value is empty or contents_on_contributor_entity_view_2.value is empty) %}
 								<div class="title-wrapper">
 									<h3>Contenu du contributeur</h3>
 									<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
 								</div>
 								<div>
-									{{ content.contents_on_contributor_entity_view_1 }}
-									{{ content.contents_on_contributor_entity_view_2 }}
+									{{ contents_on_contributor_entity_view_1 }}
+									{{ contents_on_contributor_entity_view_2 }}
 								</div>
 							{% endif %}
 						</div>
