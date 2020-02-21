@@ -53,8 +53,8 @@
 											</button>
 										</a>
 										<div class="dropdown-content">
-											{% for child in item.below %}
-												<a role="menuitem" {{child.attributes}} href="{{child.url}}" class="menu-link">{{child.title}}</a>
+											{% for subchild in child.below %}
+												<a role="menuitem" {{subchild.attributes}} href="{{subchild.url}}" class="menu-link">{{subchild.title}}</a>
 
 											{% endfor %}
 										</div>
