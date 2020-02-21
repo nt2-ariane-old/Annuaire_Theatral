@@ -54,14 +54,14 @@
 				<i class="fa fa-envelope"></i>
 			</div>
 			<h3 itemprop="headline" aria-labelledby="Titre de l'actualité" class="blog-title">
-				<a class="blog-title animsition-link" aria-labelledby="Lien vers Actualite" href="{{ content.view_node|render|striptags|trim }}">{{ content.title|render|striptags|trim  }}</a>
+				<a class="blog-title animsition-link" aria-labelledby="Lien vers Actualite" href="{{url }}">{{ label  }}</a>
 			</h3>
 			<p class="meta-tag" aria-labelledby="Date de Publication" itemprop="datePublished">Publié le :
 				{{ content.field_nouvelle_date }}</p>
 			<div class="seperator center"></div>
 			<p itemprop="backstory" aria-labelledby="Contenu de l'actualité">{{ content.body }}</p>
 			<div class="small-spc">
-				<a aria-labelledby="Lien Lire la suite" href="{{ content.view_node|render|striptags|trim }}" class="read-more animsition-link">Lire la suite ›</a>
+				<a aria-labelledby="Lien Lire la suite" href="{{ url }}" class="read-more animsition-link">Lire la suite ›</a>
 			</div>
 		</div>
 	{% elseif type == "dossier_vivarium" %}
@@ -69,7 +69,7 @@
 			<div class="blog-zig-zag">
 				<div class="blog-content">
 					<h3 class="blog-title">
-						<a class="blog-title animsition-link" href="{{ url}}">{{ content.title|render|striptags|trim  }}</a>
+						<a class="blog-title animsition-link" href="{{ url}}">{{ label  }}</a>
 					</h3>
 					<p class="meta-tag">Responsable :
 						{{content.field_responsable_dossier.date}}</p>
