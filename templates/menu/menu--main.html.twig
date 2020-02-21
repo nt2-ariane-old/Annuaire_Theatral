@@ -38,10 +38,11 @@
 
 
 					<div class="dropdown" role="menu">
-						<a{{item.attributes}} href='{{item.url}}' class="menu-link"><button class="dropbtn" aria-expanded="false" aria-controls="menu-list">
+						<a{{item.attributes}} href='{{item.url}}' class="menu-link">
 							{{item.title|raw}}
 							<i class="fa fa-caret-down"></i>
-						</button></a>
+						</a>
+						<button class="dropbtn" aria-expanded="false" aria-controls="menu-list" aria-label="Open Menu"></button>
 						<div class="dropdown-content">
 							{% for child in item.below %}
 								{% if child.below  %}
