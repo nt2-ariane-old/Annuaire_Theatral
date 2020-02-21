@@ -499,6 +499,7 @@ footer #block-views-block-partenaires-block-1 .views-row div {
 }
 
 .top-border > div #block-navigationprincipale .topnav .dropdown .dropdown-content {
+  display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
