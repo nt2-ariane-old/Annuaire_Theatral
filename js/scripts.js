@@ -115,9 +115,11 @@ window.onload = function () {
             if(!expanded)
             {
                 menu.style.display = "block"
+                button.style.backgroundColor = "white"
             }
             else
             {
+                button.style.backgroundColor = "transparent"
                 menu.style.display = "none";
             }
             console.log(style)
