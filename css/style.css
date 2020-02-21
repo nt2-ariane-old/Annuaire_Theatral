@@ -37,6 +37,7 @@ img {
   -o-object-position: center;
      object-position: center;
   height: 100%;
+  width: 100%;
 }
 
 .window-size {
