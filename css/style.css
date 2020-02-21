@@ -516,7 +516,7 @@ footer #block-views-block-partenaires-block-1 .views-row div {
 }
 
 .top-border > div #block-navigationprincipale .topnav .dropdown:hover .dropdown-content {
-  display: block;
+  display: block !important;
 }
 
 .top-border > div #block-sitebranding-2 {
