@@ -34,7 +34,7 @@ img {
   object-fit: cover;
   object-position: center;
   height: 100%;
-  width: 100%;
+  
 }
 
 .window-size {
@@ -816,7 +816,10 @@ main {
     color: white;
   }
 }
-
+.blog-zig-zag img
+{
+  width: 100%;
+}
 .blog-zig-zag .sub-information,
 .blog-zig-zag .season-issue {
   color: black;

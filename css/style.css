@@ -37,7 +37,6 @@ img {
   -o-object-position: center;
      object-position: center;
   height: 100%;
-  width: 100%;
 }
 
 .window-size {
@@ -855,6 +854,10 @@ main h1 {
 .season-issue .paragraphs-collapsed-description,
 .sub-information .paragraphs-collapsed-description {
   color: white;
+}
+
+.blog-zig-zag img {
+  width: 100%;
 }
 
 .blog-zig-zag .sub-information,
