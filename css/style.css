@@ -1284,6 +1284,13 @@ ul.quicktabs-tabs li a {
   color: white;
 }
 
+@media (max-width: 479px) {
+  .inner-title {
+    font-size: 43px;
+    line-height: 65px;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .container {
     width: 100%;
