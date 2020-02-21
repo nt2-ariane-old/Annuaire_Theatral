@@ -465,16 +465,6 @@ footer {
           display: none;
         }
         .dropdown {
-          .dropbtn {
-            display: inline-block;
-            color: black;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-            position: relative;
-            background-color: transparent;
-          }
           .dropdown-content {
             display: none;
             position: absolute;
@@ -1315,9 +1305,12 @@ ul.quicktabs-tabs li a {
               margin: 1rem auto;
               width: 100%;
               .dropbtn {
-                display: inline-block;
-                width: 100%;
-                text-align: left;
+                width: 0;
+                height: 0;
+                padding: 0;
+                background-color: transparent;
+
+                margin: 0;
               }
               .dropdown-content {
                 position: relative;

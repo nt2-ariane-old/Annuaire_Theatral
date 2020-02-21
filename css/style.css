@@ -487,17 +487,6 @@ footer #block-views-block-partenaires-block-1 .views-row div {
   display: none;
 }
 
-.top-border > div #block-navigationprincipale .topnav .dropdown .dropbtn {
-  display: inline-block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  position: relative;
-  background-color: transparent;
-}
-
 .top-border > div #block-navigationprincipale .topnav .dropdown .dropdown-content {
   display: none;
   position: absolute;
@@ -1397,9 +1386,11 @@ ul.quicktabs-tabs li a {
     width: 100%;
   }
   .top-border > div #block-navigationprincipale .topnav.responsive .dropdown .dropbtn {
-    display: inline-block;
-    width: 100%;
-    text-align: left;
+    width: 0;
+    height: 0;
+    padding: 0;
+    background-color: transparent;
+    margin: 0;
   }
   .top-border > div #block-navigationprincipale .topnav.responsive .dropdown .dropdown-content {
     position: relative;
