@@ -69,26 +69,26 @@
 			<div class="blog-zig-zag">
 				<div class="blog-content">
 					<h3 class="blog-title">
-						<a class="blog-title animsition-link" href="{{ fields.view_node.content|striptags}}">{{ fields.title.content|render|striptags|trim  }}</a>
+						<a class="blog-title animsition-link" href="{{ url}}">{{ fields.title.content|render|striptags|trim  }}</a>
 					</h3>
 					<p class="meta-tag">Responsable :
 						{{fields.field_responsable_dossier.date.content}}</p>
 					<div class="seperator"></div>
 					<p>{{fields.body.content}}</p>
 					<div class="small-spc">
-						<a href="{{ fields.view_node.content|striptags}}" class="read-more animsition-link">Lire la suite&nbsp;›</a>
+						<a href="{{ url}}" class="read-more animsition-link">Lire la suite&nbsp;›</a>
 					</div>
 				</div>
 			</div>
 			<div class="blog-zig-zag">
-				<a href="{{ fields.view_node.content|striptags}}" class="w-inline-block blog-link animsition-link">
+				<a href="{{ url}}" class="w-inline-block blog-link animsition-link">
 					{{fields.field_image_de_couverture.content}}
 				</a>
 			</div>
 		</div>
 	{% elseif type == "partenaires" %}
 		<div class="logo">
-			<a href="{{ fields.view_node.content|striptags}}">
+			<a href="{{ url}}">
 				{{ content.field_logo }}
 			</a>
 		</div>
