@@ -42,7 +42,7 @@
 							{{item.title|raw}}
 							<i class="fa fa-caret-down"></i>
 						</button>
-						<div class="dropdown-content" hidden>
+						<div class="dropdown-content">
 							{% for child in item.below %}
 								<a role="menuitem" {{child.attributes}} href="{{child.url}}" class="menu-link">{{child.title}}</a>
 							{% endfor %}

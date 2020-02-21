@@ -84,11 +84,6 @@ window.onload = function () {
     }
 
     var dropdown = document.querySelectorAll('.dropdown');
-    $('.dropdown').hover(() => {
-        this.attr('aria-expanded', true);
-        menu.hidden = false;
-        console.log('enter')
-    })
     dropdown.forEach(element => {
         let button = element.querySelector('.dropbtn')
         let menu = element.querySelector('.dropdown-content')
@@ -116,7 +111,9 @@ window.onload = function () {
         button.addEventListener('click', function () {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
             this.setAttribute('aria-expanded', !expanded);
-            menu.hidden = !menu.hidden;
+            let style = menu.style.display
+            console.log(style)
+           // menu.hidden = !menu.hidden;
         });
     });
 
