@@ -430,6 +430,11 @@ footer #block-views-block-partenaires-block-1 .views-row div {
   height: 100%;
 }
 
+footer #block-views-block-partenaires-block-1 img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .informations {
   min-height: calc(100vh - 120px - 64px - 4rem);
   padding: 1em;
