@@ -465,6 +465,14 @@ footer {
           display: none;
         }
         .dropdown {
+          .dropbtn {
+            width: 0;
+            height: 0;
+            padding: 0;
+            background-color: transparent;
+
+            margin: 0;
+          }
           .dropdown-content {
             display: none;
             position: absolute;
