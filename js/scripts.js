@@ -112,6 +112,14 @@ window.onload = function () {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
             this.setAttribute('aria-expanded', !expanded);
             let style = menu.style.display
+            if(!expanded)
+            {
+                menu.style.display = "block"
+            }
+            else
+            {
+                menu.style.display = "none";
+            }
             console.log(style)
            // menu.hidden = !menu.hidden;
         });
