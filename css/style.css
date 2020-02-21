@@ -1151,6 +1151,10 @@ ul.quicktabs-tabs li a {
   color: inherit;
 }
 
+input {
+  max-width: 100%;
+}
+
 .line {
   display: block;
   width: 100%;
