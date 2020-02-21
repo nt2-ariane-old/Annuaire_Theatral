@@ -44,7 +44,25 @@
 						</button>
 						<div class="dropdown-content">
 							{% for child in item.below %}
-								<a role="menuitem" {{child.attributes}} href="{{child.url}}" class="menu-link">{{child.title}}</a>
+								{% if child.below  %}
+									<div class="dropdown" role="menu">
+										<a role="menuitem" {{child.attributes}} href="{{child.url}}" class="menu-link">
+											<button class="dropbtn" aria-expanded="false" aria-controls="menu-list">
+												{{child.title|raw}}
+												<i class="fa fa-caret-down"></i>
+											</button>
+										</a>
+										<div class="dropdown-content">
+											{% for child in item.below %}
+												<a role="menuitem" {{child.attributes}} href="{{child.url}}" class="menu-link">{{child.title}}</a>
+
+											{% endfor %}
+										</div>
+									</div>
+								{% else %}
+									<a role="menuitem" {{child.attributes}} href="{{child.url}}" class="menu-link">{{child.title}}</a>
+
+								{% endif %}
 							{% endfor %}
 						</div>
 					</div>
