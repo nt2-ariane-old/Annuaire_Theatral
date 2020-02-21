@@ -415,9 +415,15 @@ footer {
       margin: 0;
       float: left;
       padding: 0.5em;
+      a
+    {
+      width: 100%;
+      height: 100%;
+    }  
       div {
         width: 100%;
         height: 100%;
+        padding: 0;
       }
     }
     img

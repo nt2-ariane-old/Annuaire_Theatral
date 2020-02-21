@@ -425,9 +425,15 @@ footer #block-views-block-partenaires-block-1 .views-row {
   padding: 0.5em;
 }
 
+footer #block-views-block-partenaires-block-1 .views-row a {
+  width: 100%;
+  height: 100%;
+}
+
 footer #block-views-block-partenaires-block-1 .views-row div {
   width: 100%;
   height: 100%;
+  padding: 0;
 }
 
 footer #block-views-block-partenaires-block-1 img {
