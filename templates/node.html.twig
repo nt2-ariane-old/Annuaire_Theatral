@@ -441,13 +441,17 @@
 					<div class="w-container container-contact">
 						<div class="align-center">
 							<h2 class="inner-title">{{ label }}</h2>
-							<div class="sub-text-title">Artiste invité :
-								{{ node.field_artiste_invite.0.entity.label|raw}}</div>
-							<div class="sub-text-title">Interviewer :
-								{{ node.field_interviewer.0.entity.label|raw}}</div>
-							{% for key in  node.field_interviewer.0.entity.label|keys %}
-								{{ key }}
-							{% endfor %}
+							{% if   %}{% endif %}
+							<div class="sub-text-title">
+								Artiste invité :
+								{{ content.field_artiste_invite }}
+								{# {{ node.field_artiste_invite.0.entity.label|raw}} #}
+							</div>
+							<div class="sub-text-title">
+								Interviewer :
+								{{ content.field_interviewer}}
+								{# {{ node.field_interviewer.0.entity.label|raw}} #}
+							</div>
 						</div>
 					</div>
 				</div>
