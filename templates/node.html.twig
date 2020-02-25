@@ -71,7 +71,8 @@
 					<h3 class="blog-title">
 						<a class="blog-title animsition-link" href="{{ url}}">{{ label  }}</a>
 					</h3>
-					<p class="meta-tag">Sous la responsabilité de {{content.field_responsable_dossier.date}}</p>
+					<p class="meta-tag">Sous la responsabilité de
+						{{content.field_responsable_dossier.date}}</p>
 					<div class="seperator"></div>
 					<p>{{content.body}}</p>
 					<div class="small-spc">
@@ -365,7 +366,8 @@
 					<div>
 						{% if node.field_responsable_dossier.value  %}
 							<div class="sub-text-title">
-								Sous la responsabilité de {{ content.field_responsable_dossier|raw }}
+								Sous la responsabilité de
+								{{ content.field_responsable_dossier|raw }}
 							</div>
 						{% endif %}
 
@@ -406,18 +408,16 @@
 					</section>
 				{% endif %}
 
-				{% if node.article_on_dossier_vivarium_entity_view_1.value  %}
+				<section id="sommaire">
+					<h4 class="post-title">Sommaire du Vivarium</h3>
+					<div id="grid" class="w-clearfix grid grid-not-margin" style="position: relative; height: 3094px;">
+						<div class="grid-sizer"></div>
+						{{ content.article_on_dossier_vivarium_entity_view_1 }}
+					</div>
+					<div class="views-element-container sidebar-class"></div>
 
-					<section id="sommaire">
-						<h4 class="post-title">Sommaire du Vivarium</h3>
-						<div id="grid" class="w-clearfix grid grid-not-margin" style="position: relative; height: 3094px;">
-							<div class="grid-sizer"></div>
-							{{ content.article_on_dossier_vivarium_entity_view_1 }}
-						</div>
-						<div class="views-element-container sidebar-class"></div>
+				</section>
 
-					</section>
-				{% endif %}
 
 				{% if node.field_pour_citer.value  %}
 					<section id="citation">
