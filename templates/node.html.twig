@@ -71,8 +71,7 @@
 					<h3 class="blog-title">
 						<a class="blog-title animsition-link" href="{{ url}}">{{ label  }}</a>
 					</h3>
-					<p class="meta-tag">Responsable :
-						{{content.field_responsable_dossier.date}}</p>
+					<p class="meta-tag">Sous la responsabilité de {{content.field_responsable_dossier.date}}</p>
 					<div class="seperator"></div>
 					<p>{{content.body}}</p>
 					<div class="small-spc">
@@ -189,13 +188,13 @@
 								class="w-col w-col-3">
 
 								{# Auteurs #}
-								{% if content.group_article_informations.field_author is not empty  %}
+								{% if node.group_article_informations.field_author.value %}
 									<div class="sidebar-class">
 										<h4 class="post-title">Auteur(s)</h4>
 										{{content.group_article_informations.field_author }}
 									</div>
 								{% endif %}
-								{% if  content.group_article_informations.field_tags is not empty %}
+								{% if  node.group_article_informations.field_tags.value%}
 									{# Mots-Clés #}
 									<div class="views-element-container sidebar-class">
 										<h4 class="post-title">Mots-clés</h4>
@@ -208,7 +207,7 @@
 
 
 								{# Lectures Connexes #}
-								{% if content.field_lectures_connexes is not empty   %}
+								{% if node.field_lectures_connexes.value  %}
 									<div class="views-element-container sidebar-class">
 										<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
 											<h4 class="post-title">Lectures Connexes</h4>
@@ -225,7 +224,7 @@
 								{# Body #}
 
 								<div class="bottom-space">
-									{% if content.body is not empty   %}
+									{% if node.body.value  %}
 										{{ content.body }}
 									{% else %}
 										<p>Abonnez-Vous</p>
@@ -237,17 +236,17 @@
 
 						{# Citation et Biblio #}
 						<ul class="nav nav-tabs">
-							{% if content.field_pour_citer is not empty   %}
+							{% if node.field_pour_citer.value  %}
 								<li class="nav-item">
 									<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
 								</li>
 							{% endif %}
-							{% if contentde.field_bibliographic_reference is not empty  %}
+							{% if node.field_bibliographic_reference.value %}
 								<li class="nav-item">
 									<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
 								</li>
 							{% endif %}
-							{% if content.field_pdf is not empty  %}
+							{% if node.field_pdf.value %}
 								<li class="nav-item">
 									<a class="nav-link" data-toggle="tab" href="#pdf">Article PDF</a>
 								</li>
@@ -256,17 +255,17 @@
 
 						<!-- Tab panes -->
 						<div class="tab-content">
-							{% if content.field_pour_citer is not empty    %}
+							{% if node.field_pour_citer.value   %}
 								<div class="tab-pane container active" id="citation">
 									<p>{{content.field_pour_citer}}</p>
 								</div>
 							{% endif %}
-							{% if  content.field_bibliographic_reference is not empty  %}
+							{% if  node.field_bibliographic_reference.value %}
 								<div class="tab-pane container fade" id="biblio">
 									<p>{{content.field_bibliographic_reference}}</p>
 								</div>
 							{% endif %}
-							{% if content.field_pdf is not empty  %}
+							{% if node.field_pdf.value %}
 								<div class="tab-pane container fade" id="pdf">
 									<p>{{content.field_pdf}}</p>
 								</div>
@@ -332,7 +331,7 @@
 							</div>
 						</div>
 						<div>
-							{% if (contents_on_contributor_entity_view_1 is not empty  is empty or contents_on_contributor_entity_view_2 is not empty  is empty) %}
+							{% if (contents_on_contributor_entity_view_1.value is empty or contents_on_contributor_entity_view_2.value is empty) %}
 								<div class="title-wrapper">
 									<h3>Contenu du contributeur</h3>
 									<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
@@ -364,20 +363,20 @@
 				<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
 					<h2 class="inner-title">{{ label }}</h2>
 					<div>
-						{% if content.field_responsable_dossier is not empty   %}
+						{% if node.field_responsable_dossier.value  %}
 							<div class="sub-text-title">
-								Responsable :{{ content.field_responsable_dossier|raw }}
+								Sous la responsabilité de {{ content.field_responsable_dossier|raw }}
 							</div>
 						{% endif %}
 
 						<div class="sub-text-title">
-							{% if content.field_num_pub is not empty   %}
+							{% if node.field_num_pub.value  %}
 								{{ content.field_num_pub|raw }}
 							{% endif %}
-							{% if content.field_date_pub is not empty  and content.field_num_pub is not empty  %}
+							{% if node.field_date_pub.value and node.field_num_pub.value %}
 								,
 							{% endif %}
-							{% if content.field_date_pub is not empty   %}
+							{% if node.field_date_pub.value  %}
 								{{ content.field_date_pub|raw }}
 							{% endif %}
 						</div>
@@ -387,7 +386,7 @@
 					</div>
 				</section>
 
-				{% if content.body is not empty   %}
+				{% if node.body.value  %}
 					<section id="presentation">
 						<h4 class="post-title">Présentation</h4>
 						{{ content.body }}
@@ -395,7 +394,7 @@
 					</section>
 				{% endif %}
 
-				{% if content.field_mots_cles is not empty   %}
+				{% if node.field_mots_cles.value  %}
 
 					<section id="tag">
 						<h4 class="post-title">Mots-clés</h4>
@@ -407,7 +406,7 @@
 					</section>
 				{% endif %}
 
-				{% if content.article_on_dossier_vivarium_entity_view_1 is not empty   %}
+				{% if node.article_on_dossier_vivarium_entity_view_1.value  %}
 
 					<section id="sommaire">
 						<h4 class="post-title">Sommaire du Vivarium</h3>
@@ -420,7 +419,7 @@
 					</section>
 				{% endif %}
 
-				{% if content.field_pour_citer is not empty   %}
+				{% if node.field_pour_citer.value  %}
 					<section id="citation">
 						<h4 class="post-title">Citations</h4>
 						<p>{{ content.field_pour_citer }}</p>
