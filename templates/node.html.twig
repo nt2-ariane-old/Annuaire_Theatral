@@ -663,34 +663,36 @@
 
 								</div>
 							</div>
+							{% if node.field_pour_citer.value or node.field_biblio.value %}
 
-							{# Citation et Biblio #}
-							<ul class="nav nav-tabs">
-								{% if node.field_pour_citer.value %}
-									<li class="nav-item">
-										<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
-									</li>
-								{% endif %}
-								{% if node.field_biblio.value %}
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-									</li>
-								{% endif %}
-							</ul>
+								{# Citation et Biblio #}
+								<ul class="nav nav-tabs">
+									{% if node.field_pour_citer.value %}
+										<li class="nav-item">
+											<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
+										</li>
+									{% endif %}
+									{% if node.field_biblio.value %}
+										<li class="nav-item">
+											<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+										</li>
+									{% endif %}
+								</ul>
 
-							<!-- Tab panes -->
-							<div class="tab-content">
-								{% if node.field_pour_citer.value %}
-									<div class="tab-pane container active" id="citation">
-										<p>{{content.field_pour_citer}}</p>
-									</div>
-								{% endif %}
-								{% if node.field_biblio.value %}
-									<div class="tab-pane container fade" id="biblio">
-										<p>{{content.field_biblio}}</p>
-									</div>
-								{% endif %}
-							</div>
+								<!-- Tab panes -->
+								<div class="tab-content">
+									{% if node.field_pour_citer.value %}
+										<div class="tab-pane container active" id="citation">
+											<p>{{content.field_pour_citer}}</p>
+										</div>
+									{% endif %}
+									{% if node.field_biblio.value %}
+										<div class="tab-pane container fade" id="biblio">
+											<p>{{content.field_biblio}}</p>
+										</div>
+									{% endif %}
+								</div>
+							{% endif %}
 						</div>
 					</main>
 				{% else %}
