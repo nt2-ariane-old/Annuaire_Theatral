@@ -441,17 +441,20 @@
 					<div class="w-container container-contact">
 						<div class="align-center">
 							<h2 class="inner-title">{{ label }}</h2>
-							{% if   %}{% endif %}
-							<div class="sub-text-title">
-								Artiste invité :
-								{{ content.field_artiste_invite }}
-								{# {{ node.field_artiste_invite.0.entity.label|raw}} #}
-							</div>
-							<div class="sub-text-title">
-								Interviewer :
-								{{ content.field_interviewer}}
-								{# {{ node.field_interviewer.0.entity.label|raw}} #}
-							</div>
+							{% if  node.field_artiste_invite.value %}
+								<div class="sub-text-title">
+									Artiste invité :
+									{{ content.field_artiste_invite }}
+									{# {{ node.field_artiste_invite.0.entity.label|raw}} #}
+								</div>
+							{% endif %}
+							{% if  node.field_interviewer.value %}
+								<div class="sub-text-title">
+									Interviewer :
+									{{ content.field_interviewer}}
+									{# {{ node.field_interviewer.0.entity.label|raw}} #}
+								</div>
+							{% endif %}
 						</div>
 					</div>
 				</div>
