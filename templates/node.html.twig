@@ -452,8 +452,8 @@
 								<div class="sub-text-title">
 									Interviewer :
 									{# {{ content.field_interviewer}} #}
-									{{ path('entity.node.canonical', {'node': node.field_interviewer.0.entity.uid}) }}
 									{{ node.field_interviewer.0.entity.label|raw}}
+									{{ node.field_interviewer.0.entity.uri.value|raw}}
 									
 								</div>
 							{% endif %}
