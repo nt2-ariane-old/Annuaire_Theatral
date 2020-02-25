@@ -99,7 +99,9 @@
 			<div class="preview">
 				{{ content.field_image_de_couverture }}
 			</div>
-			<a href="{{url}}"><span>{{node.label}}</span></a>
+			<a href="{{url}}">
+				<span>{{node.label}}</span>
+			</a>
 		</div>
 
 	{% elseif type == "dossier" %}
@@ -547,81 +549,7 @@
 				<div class="doc">
 					{{ content.field_doc }}
 				</div>
-			{% elseif type == "la_ruche" %}
-				<div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
-					<h2 class="inner-title">{{ label }}</h2>
 
-					<div class="arrow-down">
-						<a href="#contenu" class="w-inline-block icon-scroll"></a>
-					</div>
-				</div>
-				<main id="contenu" class="w-section section-imp">
-					<div class="w-container">
-						<div
-							class="w-row">
-							{# SIDEBAR #}
-							<div
-								class="w-col w-col-3">
-
-
-								{# Auteurs #}
-								<div class="sidebar-class">
-									<h4 class="post-title">Auteur(s)</h4>
-									{{content.field_auteur }}
-								</div>
-
-								{# Mots-Clés #}
-								<div class="views-element-container sidebar-class">
-									<h4 class="post-title">Mots-clés</h4>
-
-									<div class="w-clearfix">
-										{{ content.field_mots_cles }}
-									</div>
-								</div>
-
-								{# Lectures Connexes #}
-								<div class="views-element-container sidebar-class">
-									<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
-										<h4 class="post-title">Lectures Connexes</h4>
-										<div>
-											{{ content.field_lectures_connexes }}
-										</div>
-									</div>
-								</div>
-
-							</div>
-							<div
-								class="w-col w-col-9">
-
-								{# Body #}
-								<div class="bottom-space">
-									{{ content.body }}
-								</div>
-
-							</div>
-						</div>
-
-						{# Citation et Biblio #}
-						<ul class="nav nav-tabs">
-							<li class="nav-item">
-								<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-							</li>
-						</ul>
-
-						<!-- Tab panes -->
-						<div class="tab-content">
-							<div class="tab-pane container active" id="citation">
-								<p>{{content.field_pour_citer}}</p>
-							</div>
-							<div class="tab-pane container fade" id="biblio">
-								<p>{{content.field_biblio}}</p>
-							</div>
-						</div>
-					</div>
-				</main>
 			{% elseif type == "issue" %}
 				<div id="intro" class="w-section banner-one window-size">
 					{% if  content.field_image %}
@@ -671,10 +599,14 @@
 						</div>
 					</section>
 				{% endif %}
-			{% elseif type == "article_web" %}
+			{% elseif type == "article_web" or type == "la_ruche"%}
 				<div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
 					<h2 class="inner-title">{{ label }}</h2>
-					<p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
+					{% if content.field_dossier_vivarium  %}
+						{% if node.field_dossier_vivarium.value  %}
+							<p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
+						{% endif %}
+					{% endif %}
 
 					<div class="arrow-down">
 						<a href="#contenu" class="w-inline-block icon-scroll"></a>
@@ -685,72 +617,81 @@
 						<div
 							class="w-row">
 							{# SIDEBAR #}
-							<div
-								class="w-col w-col-3">
+							{% if node.field_auteur.value or node.field_mots_cles.value or node.field_lectures_connexes.value %}
+								<div
+									class="w-col w-col-3">
 
-								{# Auteurs #}
-								<div class="sidebar-class">
-									<h4 class="post-title">Auteur(s)</h4>
-									{{content.field_auteur }}
+									{# Auteurs #}
+									{% if node.field_auteur.value  %}
+										<div class="sidebar-class">
+											<h4 class="post-title">Auteur(s)</h4>
+											{{content.field_auteur }}
+										</div>
+									{% endif %}
+
+									{# Mots-Clés #}
+									{% if  node.field_mots_cles.value %}
+										<div class="views-element-container sidebar-class">
+											<h4 class="post-title">Mots-clés</h4>
+
+											<div class="w-clearfix">
+												{{ content.field_mots_cles }}
+											</div>
+										</div>
+									{% endif %}
+
+									{# Lectures Connexes #}
+									{% if node.field_lectures_connexes.value  %}
+
+										<div class="views-element-container sidebar-class">
+											<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
+												<h4 class="post-title">Lectures Connexes</h4>
+												{{ content.field_lectures_connexes }}
+											</div>
+										</div>
+									{% endif %}
+
 								</div>
-
-								{# Mots-Clés #}
-								<div class="views-element-container sidebar-class">
-									<h4 class="post-title">Mots-clés</h4>
-
-									<div class="w-clearfix">
-										{{ content.field_mots_cles }}
+								<div class="w-col w-col-12">
+								{% else %}
+									<div class="w-col w-col-9">
+									{% endif %}
+									{# Body #}
+									<div class="bottom-space">
+										{{ content.body }}
 									</div>
-								</div>
 
-								{# Lectures Connexes #}
-								<div class="views-element-container sidebar-class">
-									<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
-										<h4 class="post-title">Lectures Connexes</h4>
-										{{ content.field_lectures_connexes }}
-									</div>
 								</div>
-
 							</div>
-							<div
-								class="w-col w-col-9">
 
-								{# Body #}
-								<div class="bottom-space">
-									{{ content.body }}
+							{# Citation et Biblio #}
+							<ul class="nav nav-tabs">
+								<li class="nav-item">
+									<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+								</li>
+							</ul>
+
+							<!-- Tab panes -->
+							<div class="tab-content">
+								<div class="tab-pane container active" id="citation">
+									<p>{{content.field_pour_citer}}</p>
 								</div>
-
+								<div class="tab-pane container fade" id="biblio">
+									<p>{{content.field_biblio}}</p>
+								</div>
 							</div>
 						</div>
+					</main>
+				{% else %}
+					{{ content }}
 
-						{# Citation et Biblio #}
-						<ul class="nav nav-tabs">
-							<li class="nav-item">
-								<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-							</li>
-						</ul>
-
-						<!-- Tab panes -->
-						<div class="tab-content">
-							<div class="tab-pane container active" id="citation">
-								<p>{{content.field_pour_citer}}</p>
-							</div>
-							<div class="tab-pane container fade" id="biblio">
-								<p>{{content.field_biblio}}</p>
-							</div>
-						</div>
-					</div>
-				</main>
-			{% else %}
-				{{ content }}
-
-			{% endif %}
+				{% endif %}
 
 
-		</div>
+			</div>
 
-	</article>
-{% endif %}
+		</article>
+	{% endif %}
