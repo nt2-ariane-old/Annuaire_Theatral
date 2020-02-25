@@ -666,22 +666,30 @@
 
 							{# Citation et Biblio #}
 							<ul class="nav nav-tabs">
-								<li class="nav-item">
-									<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-								</li>
+								{% if node.field_pour_citer.value %}
+									<li class="nav-item">
+										<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
+									</li>
+								{% endif %}
+								{% if node.field_biblio.value %}
+									<li class="nav-item">
+										<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+									</li>
+								{% endif %}
 							</ul>
 
 							<!-- Tab panes -->
 							<div class="tab-content">
-								<div class="tab-pane container active" id="citation">
-									<p>{{content.field_pour_citer}}</p>
-								</div>
-								<div class="tab-pane container fade" id="biblio">
-									<p>{{content.field_biblio}}</p>
-								</div>
+								{% if node.field_pour_citer.value %}
+									<div class="tab-pane container active" id="citation">
+										<p>{{content.field_pour_citer}}</p>
+									</div>
+								{% endif %}
+								{% if node.field_biblio.value %}
+									<div class="tab-pane container fade" id="biblio">
+										<p>{{content.field_biblio}}</p>
+									</div>
+								{% endif %}
 							</div>
 						</div>
 					</main>
