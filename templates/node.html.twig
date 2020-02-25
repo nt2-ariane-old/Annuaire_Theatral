@@ -453,6 +453,9 @@
 									Interviewer :
 									{# {{ content.field_interviewer}} #}
 									{{ node.field_interviewer.0.entity.label|raw}}
+									{% for key in node.field_interviewer.0.entity|keys %}
+										{{ key }}
+									{% endfor %}
 								</div>
 							{% endif %}
 						</div>
