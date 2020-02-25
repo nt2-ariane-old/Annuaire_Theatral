@@ -445,7 +445,9 @@
 								<div class="sub-text-title">
 									Artiste invité :
 									{# {{ content.field_artiste_invite }} #}
-									{{ node.field_artiste_invite.0.entity.label|raw}}
+									<a href="{{ node.field_artiste_invite.0.entity.path.value|raw}}">
+										{{ node.field_artiste_invite.0.entity.label|raw}}
+									</a>
 								</div>
 							{% endif %}
 							{% if  node.field_interviewer.value %}
@@ -455,10 +457,6 @@
 									<a href="{{ node.field_interviewer.0.entity.path.value|raw}}">
 										{{ node.field_interviewer.0.entity.label|raw}}
 									</a>
-
-									{% for key  in node.field_interviewer.0.entity|keys %}
-										{{ key }}
-									{% endfor %}
 
 								</div>
 							{% endif %}
