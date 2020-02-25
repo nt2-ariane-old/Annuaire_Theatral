@@ -444,15 +444,15 @@
 							{% if  node.field_artiste_invite.value %}
 								<div class="sub-text-title">
 									Artiste invité :
-									{{ content.field_artiste_invite }}
-									{# {{ node.field_artiste_invite.0.entity.label|raw}} #}
+									{# {{ content.field_artiste_invite }} #}
+									{{ node.field_artiste_invite.0.entity.label|raw}}
 								</div>
 							{% endif %}
 							{% if  node.field_interviewer.value %}
 								<div class="sub-text-title">
 									Interviewer :
-									{{ content.field_interviewer}}
-									{# {{ node.field_interviewer.0.entity.label|raw}} #}
+									{# {{ content.field_interviewer}} #}
+									{{ node.field_interviewer.0.entity.label|raw}}
 								</div>
 							{% endif %}
 						</div>
@@ -468,36 +468,53 @@
 						</div>
 						<div class="w-col w-col-4">
 							<aside>
-								<h4 class="post-title">Artiste</h4>
-								{{ content.field_artiste_invite }}
-
-								<h4 class="post-title">Interviewer</h4>
-								{{ content.field_interviewer }}
-								<h4 class="post-title">Lectures Connexes</h4>
-								{{ content.field_lectures_connexes }}
+								{% if  node.field_artiste_invite.value %}
+									<h4 class="post-title">Artiste</h4>
+									{{ content.field_artiste_invite }}
+								{% endif %}
+								{% if  node.field_interviewer.value %}
+									<h4 class="post-title">Interviewer</h4>
+									{{ content.field_interviewer }}
+								{% endif %}
+								{% if node.field_lectures_connexes.value  %}
+									<h4 class="post-title">Lectures Connexes</h4>
+									{{ content.field_lectures_connexes }}
+								{% endif %}
 							</aside>
 						</div>
 					</div>
 				</main>
+				{% if  node.field_pour_citer.value or node.field_biblio.value %}
 
-				<ul class="nav nav-tabs">
-					<li class="nav-item">
-						<a class="nav-link active" data-toggle="tab" href="#Notes">Notes</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-					</li>
-				</ul>
+					<ul class="nav nav-tabs">
 
-				<!-- Tab panes -->
-				<div class="tab-content">
-					<div class="tab-pane container active" id="Notes">
-						<p>{{content.field_pour_citer}}</p>
+
+						{% if node.field_pour_citer.value  %}
+							<li class="nav-item">
+								<a class="nav-link active" data-toggle="tab" href="#Notes">Notes</a>
+							</li>
+						{% endif %}
+						{% if node.field_biblio.value  %}
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+							</li>
+						{% endif %}
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						{% if node.field_pour_citer.value  %}
+							<div class="tab-pane container active" id="Notes">
+								<p>{{content.field_pour_citer}}</p>
+							</div>
+						{% endif %}
+						{% if node.field_biblio.value  %}
+							<div class="tab-pane container fade" id="biblio">
+								<p>{{content.field_biblio}}</p>
+							</div>
+						{% endif %}
 					</div>
-					<div class="tab-pane container fade" id="biblio">
-						<p>{{content.field_biblio}}</p>
-					</div>
-				</div>
+				{% endif %}
 			{% elseif type == "dossier" %}
 				{% set type %}
 				{{ content.field_type_dossier }}
