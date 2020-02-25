@@ -422,7 +422,7 @@ footer #block-views-block-partenaires-block-1 .views-row {
   height: 60px;
   margin: 0;
   float: left;
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 
 footer #block-views-block-partenaires-block-1 .views-row a {
@@ -443,7 +443,7 @@ footer #block-views-block-partenaires-block-1 img {
 
 .informations {
   min-height: calc(100vh - 120px - 64px - 4rem);
-  padding: 1em;
+  padding: 1rem;
 }
 
 #block-copyright {
@@ -603,13 +603,13 @@ footer #block-views-block-partenaires-block-1 img {
 
 #block-abonnezvous p,
 #block-abonnezvous h2 {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 #block-abonnezvous .paywall_bouton {
   border-radius: 3px;
   padding: 12px 13px;
-  font-size: 2em;
+  font-size: 2rem;
   background: #ee2367;
   color: #fff;
   font-weight: bold;
@@ -619,7 +619,7 @@ footer #block-views-block-partenaires-block-1 img {
 
 #dossiers .views-row,
 #filter .views-row {
-  padding: 1em;
+  padding: 1rem;
 }
 
 form#views-form-commerce-cart-form-default-12 {
@@ -632,7 +632,7 @@ form#views-form-commerce-cart-form-default-12 table th {
 }
 
 form#views-form-commerce-cart-form-default-12 .order-total-line .order-total-line-label {
-  padding-right: 1em;
+  padding-right: 1rem;
 }
 
 #user-page,
@@ -961,7 +961,7 @@ nav ul ul li {
 
 .page_search .views-col {
   max-width: 100%;
-  padding-bottom: 2em;
+  padding-bottom: 2rem;
 }
 
 .page_search .views-col .views-field a {
@@ -993,7 +993,7 @@ nav ul ul li {
 .page_search .views-col .list-film-cat,
 .page_search .views-col .page-node-type-ouvrage-critique .field--name-field-auteur {
   font-family: "pb-bold";
-  font-size: 0.75em;
+  font-size: 0.75rem;
   letter-spacing: 5px;
   color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
@@ -1051,7 +1051,7 @@ ul.quicktabs-tabs li a {
 
 #intro .align-center {
   background-color: #ee236760;
-  margin: 1em 2em;
+  margin: 1rem 2rem;
 }
 
 #intro .align-center.season-issue {
