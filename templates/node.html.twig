@@ -8,18 +8,20 @@
 	{# EN FONCTION DU TYPE DE NODE #}
 
 	{% if "article" == type %}
-		<div class="lecture-content" onclick="window.location='{{ url }}';">
+		<a class="lecture-content" href="{{ url }}">
 			<span>{{node.label}}</span>
-		</div>
+		</a>
 	{% elseif type == "contributor" %}
 		<a href='{{ url }}'>
 			<b>{{ node.label }}</b>
-			{% set conBody %}
-			{{ content.body }}
-			{% endset %}
-
-			<p>{{ conBody|striptags }}</p>
 		</a>
+
+		{% set conBody %}
+		{{ content.body }}
+		{% endset %}
+
+		<p>{{ conBody|striptags }}</p>
+
 	{% elseif type == "issue" %}
 		<div data-ix="blog-hover-zoom-photo" data-wow-duration="0.5s" class="wow slideInLeft w-clearfix space-mobile line-zig-zag">
 			<div class="blog-zig-zag up-left">
@@ -93,11 +95,11 @@
 			</a>
 		</div>
 	{% elseif type == "recit" or type == "la_ruche" or type == "echappee" or type == "article_web" %}
-		<div class="lecture-content" onclick="window.location='{{ url }}';">
-			<span>{{node.label}}</span>
+		<div class="lecture-content">
 			<div class="preview">
 				{{ content.field_image_de_couverture }}
 			</div>
+			<a href="{{url}}"><span>{{node.label}}</span></a>
 		</div>
 
 	{% elseif type == "dossier" %}
