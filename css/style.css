@@ -769,6 +769,7 @@ main h1 {
   font-weight: 400;
   color: #818181;
   font-size: 15px;
+  width: 100%;
 }
 
 .lectures .lecture-content {
