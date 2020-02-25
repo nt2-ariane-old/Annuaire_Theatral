@@ -179,7 +179,7 @@
 
 			{% if type == "article" %}
 				<main id="contenu" class="w-section section-imp">
-					<h2>{{ node.label }}</h2>
+					<h2>{{ label }}</h2>
 					<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
 					<div class="w-container">
 						<div
@@ -208,7 +208,7 @@
 
 
 								{# Lectures Connexes #}
-								{% if node.field_lectures_connexes.value  %}
+								{% if content.field_lectures_connexes is not empty   %}
 									<div class="views-element-container sidebar-class">
 										<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
 											<h4 class="post-title">Lectures Connexes</h4>
@@ -225,7 +225,7 @@
 								{# Body #}
 
 								<div class="bottom-space">
-									{% if node.body.value  %}
+									{% if content.body is not empty   %}
 										{{ content.body }}
 									{% else %}
 										<p>Abonnez-Vous</p>
@@ -237,17 +237,17 @@
 
 						{# Citation et Biblio #}
 						<ul class="nav nav-tabs">
-							{% if node.field_pour_citer.value  %}
+							{% if content.field_pour_citer is not empty   %}
 								<li class="nav-item">
 									<a class="nav-link active" data-toggle="tab" href="#citation">Citation</a>
 								</li>
 							{% endif %}
-							{% if node.field_bibliographic_reference.value %}
+							{% if contentde.field_bibliographic_reference is not empty  %}
 								<li class="nav-item">
 									<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
 								</li>
 							{% endif %}
-							{% if node.field_pdf.value %}
+							{% if content.field_pdf is not empty  %}
 								<li class="nav-item">
 									<a class="nav-link" data-toggle="tab" href="#pdf">Article PDF</a>
 								</li>
@@ -256,17 +256,17 @@
 
 						<!-- Tab panes -->
 						<div class="tab-content">
-							{% if node.field_pour_citer.value   %}
+							{% if content.field_pour_citer is not empty    %}
 								<div class="tab-pane container active" id="citation">
 									<p>{{content.field_pour_citer}}</p>
 								</div>
 							{% endif %}
-							{% if  node.field_bibliographic_reference.value %}
+							{% if  content.field_bibliographic_reference is not empty  %}
 								<div class="tab-pane container fade" id="biblio">
 									<p>{{content.field_bibliographic_reference}}</p>
 								</div>
 							{% endif %}
-							{% if node.field_pdf.value %}
+							{% if content.field_pdf is not empty  %}
 								<div class="tab-pane container fade" id="pdf">
 									<p>{{content.field_pdf}}</p>
 								</div>
@@ -332,7 +332,7 @@
 							</div>
 						</div>
 						<div>
-							{% if (contents_on_contributor_entity_view_1.value is empty or contents_on_contributor_entity_view_2.value is empty) %}
+							{% if (contents_on_contributor_entity_view_1 is not empty  is empty or contents_on_contributor_entity_view_2 is not empty  is empty) %}
 								<div class="title-wrapper">
 									<h3>Contenu du contributeur</h3>
 									<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
@@ -364,20 +364,20 @@
 				<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
 					<h2 class="inner-title">{{ label }}</h2>
 					<div>
-						{% if content.field_responsable_dossier.value  %}
+						{% if content.field_responsable_dossier is not empty   %}
 							<div class="sub-text-title">
 								Responsable :{{ content.field_responsable_dossier|raw }}
 							</div>
 						{% endif %}
 
 						<div class="sub-text-title">
-							{% if content.field_num_pub.value  %}
+							{% if content.field_num_pub is not empty   %}
 								{{ content.field_num_pub|raw }}
 							{% endif %}
-							{% if content.field_date_pub.value and content.field_num_pub.value %}
+							{% if content.field_date_pub is not empty  and content.field_num_pub is not empty  %}
 								,
 							{% endif %}
-							{% if content.field_date_pub.value  %}
+							{% if content.field_date_pub is not empty   %}
 								{{ content.field_date_pub|raw }}
 							{% endif %}
 						</div>
@@ -387,7 +387,7 @@
 					</div>
 				</section>
 
-				{% if content.body.value  %}
+				{% if content.body is not empty   %}
 					<section id="presentation">
 						<h4 class="post-title">Présentation</h4>
 						{{ content.body }}
@@ -395,7 +395,7 @@
 					</section>
 				{% endif %}
 
-				{% if content.field_mots_cles.value  %}
+				{% if content.field_mots_cles is not empty   %}
 
 					<section id="tag">
 						<h4 class="post-title">Mots-clés</h4>
@@ -407,7 +407,7 @@
 					</section>
 				{% endif %}
 
-				{% if content.article_on_dossier_vivarium_entity_view_1.value  %}
+				{% if content.article_on_dossier_vivarium_entity_view_1 is not empty   %}
 
 					<section id="sommaire">
 						<h4 class="post-title">Sommaire du Vivarium</h3>
@@ -420,7 +420,7 @@
 					</section>
 				{% endif %}
 
-				{% if content.field_pour_citer.value  %}
+				{% if content.field_pour_citer is not empty   %}
 					<section id="citation">
 						<h4 class="post-title">Citations</h4>
 						<p>{{ content.field_pour_citer }}</p>
