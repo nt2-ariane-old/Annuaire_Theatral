@@ -452,12 +452,14 @@
 								<div class="sub-text-title">
 									Interviewer :
 									{# {{ content.field_interviewer}} #}
-									{{ node.field_interviewer.0.entity.label|raw}}
-									{{ node.field_interviewer.0.entity.uri.value|raw}}
+									<a href="{{ node.field_interviewer.0.entity.path|raw}}">
+										{{ node.field_interviewer.0.entity.label|raw}}
+									</a>
+
 									{% for key  in node.field_interviewer.0.entity|keys %}
 										{{ key }}
 									{% endfor %}
-									
+
 								</div>
 							{% endif %}
 						</div>
