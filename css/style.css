@@ -7,7 +7,7 @@ body {
   max-width: 1100px;
   margin: auto;
   padding: 0;
-  background-color: white;
+  background-color: #fff;
 }
 
 h2 {
@@ -178,7 +178,7 @@ h2 {
 }
 
 .search_input {
-  color: white;
+  color: #fff;
   border: 0;
   outline: 0;
   background: none;
@@ -206,7 +206,7 @@ h2 {
 }
 
 .searchbar:hover > .search_icon {
-  background: white;
+  background: #fff;
   color: #e74c3c;
 }
 
@@ -224,7 +224,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 50%;
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -353,7 +353,7 @@ ul.tabs.primary li.is-active:before {
 }
 
 ul.tabs.primary li.is-active a {
-  background-color: white;
+  background-color: #fff;
 }
 
 ul.tabs.primary li.is-active:after {
@@ -447,7 +447,7 @@ footer #block-views-block-partenaires-block-1 img {
 }
 
 #block-copyright {
-  color: black;
+  color: #000;
 }
 
 .bottom-border,
@@ -455,7 +455,7 @@ footer #block-views-block-partenaires-block-1 img {
   display: block;
   max-width: 1100px;
   margin: auto;
-  color: black;
+  color: #000;
   background-color: #e8e8e8;
   border-radius: 5px;
 }
@@ -518,7 +518,7 @@ footer #block-views-block-partenaires-block-1 img {
 
 .top-border > div #block-navigationprincipale .topnav .dropdown .dropdown-content a {
   float: none;
-  color: black;
+  color: #000;
   padding: 12px 16px;
   text-decoration: none;
   text-align: left;
@@ -545,7 +545,7 @@ footer #block-views-block-partenaires-block-1 img {
 
 .menu-link {
   display: inline-block;
-  color: black;
+  color: #000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -561,7 +561,7 @@ footer #block-views-block-partenaires-block-1 img {
   display: block;
   margin-top: 5px;
   left: 0;
-  background: black;
+  background: #000;
   transition: width 0.4s ease;
   -webkit-transition: width 0.4s ease;
 }
@@ -569,7 +569,7 @@ footer #block-views-block-partenaires-block-1 img {
 .menu-link:hover::after {
   width: 100%;
   left: 0;
-  background: black;
+  background: #000;
 }
 
 .menu-link.w--current::after {
@@ -677,7 +677,7 @@ main h1 {
 }
 
 #vivarium {
-  border: 1px solid black;
+  border: 1px solid #000;
 }
 
 .blog-content .sub-information {
@@ -691,11 +691,11 @@ main h1 {
 }
 
 .tags:hover a {
-  color: white;
+  color: #fff;
 }
 
 .tags a:hover {
-  color: white;
+  color: #fff;
   opacity: 1;
 }
 
@@ -744,7 +744,7 @@ main h1 {
 }
 
 .extension-preview .portfolio-title {
-  color: black;
+  color: #000;
 }
 
 .lecture-content {
@@ -837,12 +837,12 @@ main h1 {
 }
 
 .paragraphs-collapsed-description {
-  color: black;
+  color: #000;
 }
 
 .season-issue,
 .sub-information {
-  color: white;
+  color: #fff;
   line-height: 25px;
   font-weight: 400;
   font-size: 1.2rem;
@@ -854,7 +854,7 @@ main h1 {
 
 .season-issue .paragraphs-collapsed-description,
 .sub-information .paragraphs-collapsed-description {
-  color: white;
+  color: #fff;
 }
 
 .blog-zig-zag img {
@@ -863,7 +863,7 @@ main h1 {
 
 .blog-zig-zag .sub-information,
 .blog-zig-zag .season-issue {
-  color: black;
+  color: #000;
   font-size: 1rem;
 }
 
@@ -894,7 +894,7 @@ nav ul ul {
   position: absolute;
   top: 100%;
   z-index: 1;
-  background-color: white;
+  background-color: #fff;
   left: 0;
 }
 
@@ -984,7 +984,7 @@ nav ul ul li {
 }
 
 .page_search .views-col .views-field-title-5 {
-  color: black;
+  color: #000;
   font-size: 13px;
 }
 
@@ -1061,12 +1061,12 @@ ul.quicktabs-tabs li a {
 
 #intro a {
   font-size: 1.2rem;
-  color: white;
+  color: #fff;
 }
 
 #intro .w-section a {
   font-size: inherit;
-  color: white;
+  color: #fff;
   font-size: 1.2rem;
 }
 
@@ -1086,7 +1086,7 @@ ul.quicktabs-tabs li a {
 #intro .paragraph--type--publication-date:before {
   content: " , ";
   display: inline-block;
-  color: white;
+  color: #fff;
   font-size: 1.2rem;
   font-weight: 400;
   font-family: Lekton, sans-serif;
@@ -1094,7 +1094,7 @@ ul.quicktabs-tabs li a {
 
 #intro .paragraph--type--publication-date div {
   display: inline-block;
-  color: white;
+  color: #fff;
   font-size: 1.2rem;
   font-weight: 400;
   font-family: Lekton, sans-serif;
@@ -1164,13 +1164,13 @@ input {
 .field--name-field-dossier-vivarium .field__item a {
   font-size: 20px;
   text-align: left;
-  color: white;
+  color: #fff;
 }
 
 .field--name-field-dossier-vivarium .field__label {
   font-size: 20px;
   text-align: right;
-  color: white;
+  color: #fff;
   width: 50%;
   font-weight: 400;
   font-family: Lekton, sans-serif;
@@ -1203,13 +1203,13 @@ input {
   display: block;
   margin: 0;
   text-align: center;
-  color: white;
+  color: #fff;
   font-size: 1.2rem;
 }
 
 .blog-post-banner .sub-text-title a,
 #intro .sub-text-title a {
-  color: white;
+  color: #fff;
   font-size: 1.3rem;
 }
 
@@ -1227,7 +1227,7 @@ input {
 .blog-post-banner .sub-text-title > div .field__item::before,
 #intro .sub-text-title > div .field__item::before {
   content: " ";
-  color: white;
+  color: #fff;
 }
 
 .blog-post-banner .sub-text-title > div .field__items,
@@ -1237,7 +1237,7 @@ input {
 
 .blog-post-banner .sub-text-title > div a,
 #intro .sub-text-title > div a {
-  color: white;
+  color: #fff;
   font-size: 1.2rem;
 }
 
@@ -1286,7 +1286,7 @@ input {
 }
 
 .portfolio-cn-title {
-  color: white;
+  color: #fff;
 }
 
 @media (max-width: 479px) {
@@ -1444,7 +1444,7 @@ input {
   }
   .top-border > div #block-navigationprincipale .topnav .dropdown .dropdown-content a {
     float: none;
-    color: black;
+    color: #000;
     padding: 12px 16px;
     text-decoration: none;
     text-align: left;
