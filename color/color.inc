@@ -69,7 +69,7 @@ $info = array(
             ],
         ],
         'sug5' => [
-            'title' => t('Passion'),
+            'title' => t('Teinte de Rouge'),
             'colors' => [
                 'top' => '#41020C',
                 'secondary' => '#8D192B',
