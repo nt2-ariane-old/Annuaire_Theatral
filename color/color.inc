@@ -36,11 +36,31 @@ $info = array(
                 'primary' => '#0E5587',
                 'secondary' => '#054B7D',
                 'footer' => '#5583A6',
-                'text' => '#2C333D',
+                'text' => '#00070D',
                 'background' => '#F2F2F2'
             ],
         ],
-       
+        'sug4' => [
+            'title' => t('Coucher de Soleil'),
+            'colors' => [
+                'primary' => '#F2AE30',
+                'secondary' => '#F27B35',
+                'footer' => '#F28F38',
+                'text' => '#000000',
+                'background' => '#A66844'
+            ],
+        ],
+                'sug3' => [
+            'title' => t('Teinte de Vert'),
+            'colors' => [
+                'primary' => '#838C61',
+                'secondary' => '#1A3940',
+                'footer' => '#BABF8F',
+                'text' => '#00070D',
+                'background' => '#F2F2DF'
+            ],
+        ],
+
     ]
 );
 // CSS files (excluding @import) to rewrite with new color scheme.
