@@ -41,16 +41,26 @@ $info = array(
             ],
         ],
         'sug4' => [
-            'title' => t('Coucher de Soleil'),
+            'title' => t('Teinte de Brun Alternatif'),
             'colors' => [
-                'primary' => '#F2AE30',
-                'secondary' => '#F27B35',
-                'footer' => '#F28F38',
-                'text' => '#000000',
-                'background' => '#A66844'
+                'primary' => '#D9CDBF',
+                'secondary' => '#402F20',
+                'footer' => '#A6886D',
+                'text' => '#0B0B0D',
+                'background' => '#F2F2F0'
             ],
         ],
         'sug5' => [
+            'title' => t('Passion'),
+            'colors' => [
+                'primary' => '#41020C',
+                'secondary' => '#8D192B',
+                'footer' => '#425B70',
+                'text' => '#1A2B3F',
+                'background' => '#D9BEB6'
+            ],
+        ],
+        'sug6' => [
             'title' => t('Teinte de Vert'),
             'colors' => [
                 'primary' => '#838C61',
