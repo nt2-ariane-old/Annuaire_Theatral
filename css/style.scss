@@ -430,9 +430,10 @@ ul.tabs.primary li.is-active:after {
   display: block;
   max-width: 1100px;
   margin: auto;
-  color: #000000;
+  color: #1a2b3f;
   background-color: #e8e8e8;
   border-radius: 5px;
+  
 }
 
 .top-border {
@@ -453,7 +454,10 @@ ul.tabs.primary li.is-active:after {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        *
+        {
+          color: #1a2b3f;
+        }  
         .icon {
           display: none;
         }
