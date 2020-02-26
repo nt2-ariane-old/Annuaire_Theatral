@@ -11,7 +11,7 @@ $info = array(
     // Pre-defined color schemes.
     'schemes' => [
         'default' => [
-            'title' => t('Default'),
+            'title' => t('Suggestion 1 (Default)'),
             'colors' => [
                 'primary' => '#e8e8e8',
                 'secondary' => '#ee2367',
@@ -20,16 +20,17 @@ $info = array(
                 'background' => '#ffffff'
             ],
         ],
-        'red' => [
-            'title' => t('Red'),
+        'sug2' => [
+            'title' => t('Suggestion 2 '),
             'colors' => [
-                'primary' => '#f44336',
-                'secondary' => '#ffcdd2',
-                'footer' => '#ffaabb',
-                'text' => '#600000',
-                'background' => '#ffffff'
-            ]
-        ]
+                'primary' => '#ffffff',
+                'secondary' => '#215479',
+                'footer' => '#f3f3f3',
+                'text' => '#000000',
+                'background' => '#f7f7f7'
+            ],
+        ],
+       
     ]
 );
 // CSS files (excluding @import) to rewrite with new color scheme.
