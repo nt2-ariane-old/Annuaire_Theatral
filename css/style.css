@@ -177,6 +177,15 @@ h2 {
   background-repeat: no-repeat;
 }
 
+.blog-content {
+  background-color: #ffffff;
+}
+
+.w-section a,
+details {
+  color: #000000;
+}
+
 .searchbar {
   display: inline-block;
   height: 30px;
@@ -186,6 +195,11 @@ h2 {
   background-color: #353a48;
   border-radius: 30px;
   line-height: 30px;
+}
+
+.cart-form td,
+.cart-form th {
+  padding: 1rem;
 }
 
 .search_input {
@@ -469,6 +483,11 @@ ul.tabs.primary li.is-active:after {
   color: #1a2b3f;
   background-color: #e8e8e8;
   border-radius: 5px;
+}
+
+.bottom-border *,
+.top-border * {
+  color: #1a2b3f;
 }
 
 .top-border {
