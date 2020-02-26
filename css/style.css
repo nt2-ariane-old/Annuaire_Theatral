@@ -183,7 +183,7 @@ h2 {
   max-height: 30px;
   font-size: 13px;
   letter-spacing: 1px;
-  background-color: #353b48;
+  background-color: #353a48;
   border-radius: 30px;
   line-height: 30px;
 }
@@ -466,7 +466,7 @@ ul.tabs.primary li.is-active:after {
   display: block;
   max-width: 1100px;
   margin: auto;
-  color: #000000;
+  color: #1a2b3f;
   background-color: #e8e8e8;
   border-radius: 5px;
 }
@@ -503,6 +503,10 @@ ul.tabs.primary li.is-active:after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.top-border > div #block-navigationprincipale .topnav * {
+  color: #1a2b3f;
 }
 
 .top-border > div #block-navigationprincipale .topnav .icon {
