@@ -15,7 +15,7 @@ $info = array(
             'colors' => [
                 'primary' => '#e8e8e8',
                 'secondary' => '#ee2367',
-                'footer' => '#e0e0e0',
+                'footer' => '#f3f3f3',
                 'text' => '#000000',
                 'background' => '#ffffff'
             ],
