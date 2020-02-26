@@ -1,5 +1,5 @@
 <?php
-$info = [
+$info = array(
     // Available colors and color labels used in theme.
     'fields' => [
         'primary' => t('Primary Color'),
@@ -28,6 +28,6 @@ $info = [
             ]
         ]
     ]
-];
+);
 // CSS files (excluding @import) to rewrite with new color scheme.
 $info['css'] = ['css/style.css'];
