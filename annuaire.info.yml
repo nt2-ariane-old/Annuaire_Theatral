@@ -16,6 +16,7 @@ regions:
   sidebar_right : 'Sidebar Droite'
   copyright: 'Copyright'
 libraries:
+  - 'annuaire/color'
   - 'annuaire/global-styling'
   - 'annuaire/global-scripts'
 
