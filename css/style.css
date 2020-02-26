@@ -207,7 +207,7 @@ h2 {
 
 .searchbar:hover > .search_icon {
   background: #fff;
-  color: #e74c3c;
+  color: #ee2367;
 }
 
 .search_icon {
@@ -447,7 +447,7 @@ footer #block-views-block-partenaires-block-1 img {
 }
 
 #block-copyright {
-  color: #000;
+  color: #000000;
 }
 
 .bottom-border,
@@ -455,7 +455,7 @@ footer #block-views-block-partenaires-block-1 img {
   display: block;
   max-width: 1100px;
   margin: auto;
-  color: #000;
+  color: #000000;
   background-color: #e8e8e8;
   border-radius: 5px;
 }
@@ -518,7 +518,7 @@ footer #block-views-block-partenaires-block-1 img {
 
 .top-border > div #block-navigationprincipale .topnav .dropdown .dropdown-content a {
   float: none;
-  color: #000;
+  color: #000000;
   padding: 12px 16px;
   text-decoration: none;
   text-align: left;
@@ -545,7 +545,7 @@ footer #block-views-block-partenaires-block-1 img {
 
 .menu-link {
   display: inline-block;
-  color: #000;
+  color: #000000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -561,7 +561,7 @@ footer #block-views-block-partenaires-block-1 img {
   display: block;
   margin-top: 5px;
   left: 0;
-  background: #000;
+  background: #000000;
   transition: width 0.4s ease;
   -webkit-transition: width 0.4s ease;
 }
@@ -569,7 +569,7 @@ footer #block-views-block-partenaires-block-1 img {
 .menu-link:hover::after {
   width: 100%;
   left: 0;
-  background: #000;
+  background: #000000;
 }
 
 .menu-link.w--current::after {
@@ -677,7 +677,7 @@ main h1 {
 }
 
 #vivarium {
-  border: 1px solid #000;
+  border: 1px solid #000000;
 }
 
 .blog-content .sub-information {
@@ -744,7 +744,7 @@ main h1 {
 }
 
 .extension-preview .portfolio-title {
-  color: #000;
+  color: #000000;
 }
 
 .lecture-content {
@@ -837,7 +837,7 @@ main h1 {
 }
 
 .paragraphs-collapsed-description {
-  color: #000;
+  color: #000000;
 }
 
 .season-issue,
@@ -863,7 +863,7 @@ main h1 {
 
 .blog-zig-zag .sub-information,
 .blog-zig-zag .season-issue {
-  color: #000;
+  color: #000000;
   font-size: 1rem;
 }
 
@@ -984,7 +984,7 @@ nav ul ul li {
 }
 
 .page_search .views-col .views-field-title-5 {
-  color: #000;
+  color: #000000;
   font-size: 13px;
 }
 
@@ -1444,7 +1444,7 @@ input {
   }
   .top-border > div #block-navigationprincipale .topnav .dropdown .dropdown-content a {
     float: none;
-    color: #000;
+    color: #000000;
     padding: 12px 16px;
     text-decoration: none;
     text-align: left;

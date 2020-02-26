@@ -7,6 +7,7 @@ global-styling:
       css/bootstrap.min.css: {}
       css/theme.css: {}
       css/update-lano.css: {}
+      css/colors.css: {}
       css/style.css: {}
       
 global-scripts:

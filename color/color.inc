@@ -15,11 +15,11 @@ $info = array(
     'default' => array(
       'title' => t('Annuaire Basic (Default)'),
       'colors' => array(
-        'base' => 'white',
-        'link' => '#e74c3c',
+        'base' => '#ffffff',
+        'link' => '#ee2367',
         'top' => '#e8e8e8',
         'bottom' => '#e3e3e3',
-        'text' => '#000',
+        'text' => '#000000',
       ),
     ),
     'lagoon' => array(
@@ -188,7 +188,7 @@ $info = array(
 
   // CSS files (excluding @import) to rewrite with new color scheme.
   'css' => array(
-    'style.scss',
+    'style.css',
   ),
 
   // Gradient definitions.
