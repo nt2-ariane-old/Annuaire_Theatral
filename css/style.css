@@ -48,11 +48,17 @@ img {
   padding: 0;
   font-size: 50px;
   line-height: 110px;
+  color: #ee2367;
+  border: 1px solid #ee2367;
 }
 
 .data-blog .w-embed {
   width: 100%;
   height: 100%;
+}
+
+.show-filter {
+  background-color: #ee2367;
 }
 
 #search-block-form {
