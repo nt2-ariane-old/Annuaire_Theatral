@@ -157,11 +157,6 @@
 				</div>
 			</div>
 		{% endif %}
-	{% elseif type == "a_propos" %}
-		<div class="informations">
-			{{ content.body }}
-		</div>
-
 	{% else %}
 		{{ content }}
 	{% endif %}
@@ -357,11 +352,6 @@
 					<div class="w-col w-col-9">
 						{{content.body}}
 					</div>
-				</div>
-
-			{% elseif type == "a_propos" %}
-				<div class="informations">
-					{{ content.body }}
 				</div>
 			{% elseif type == "dossier_vivarium" %}
 
