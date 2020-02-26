@@ -23,11 +23,11 @@ $info = array(
         'sug2' => [
             'title' => t('Suggestion 2 '),
             'colors' => [
-                'primary' => '#ffffff',
+                'primary' => '#B79E96',
                 'secondary' => '#215479',
-                'footer' => '#f3f3f3',
-                'text' => '#000000',
-                'background' => '#f7f7f7'
+                'footer' => '#60687B',
+                'text' => '#2C333D',
+                'background' => '#F9F8FC'
             ],
         ],
        
