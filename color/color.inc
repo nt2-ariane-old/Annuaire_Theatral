@@ -6,6 +6,7 @@ $info = array(
         'secondary' => t('Numéro en cours'),
         'footer' => t('Pied de Page'),
         'text' => t('Texte'),
+        'searchbar' => t('Bar de Recherche'),
         'text_menu' => t('Texte Menu'),
         'background' => t('Couleur de fond')
     ],
@@ -18,7 +19,8 @@ $info = array(
                 'secondary' => '#ee2367',
                 'footer' => '#f3f3f3',
                 'text' => '#000000',
-                'text_menu' => '#000001',
+                'text_menu' => '#1a2b3f',
+                'searchbar' => '#353a48',
                 'background' => '#ffffff'
             ],
         ],
@@ -29,7 +31,9 @@ $info = array(
                 'secondary' => '#215479',
                 'footer' => '#BEA694',
                 'text' => '#2C333D',
-                'text_menu' => '#000001',
+                'text_menu' => '#1a2b3f',
+                'searchbar' => '#353a48',
+
                 'background' => '#F9F8FC'
             ],
         ],
@@ -41,6 +45,8 @@ $info = array(
                 'footer' => '#5583A6',
                 'text' => '#00070D',
                 'text_menu' => '#ffffff',
+                'searchbar' => '#000000',
+
                 'background' => '#F2F2F2'
             ],
         ],
@@ -51,6 +57,8 @@ $info = array(
                 'secondary' => '#402F20',
                 'footer' => '#A6886D',
                 'text' => '#0B0B0D',
+                'text_menu' => '#1a2b3f',
+                'searchbar' => '#353a48',
                 'background' => '#F2F2F0'
             ],
         ],
@@ -62,6 +70,7 @@ $info = array(
                 'footer' => '#425B70',
                 'text' => '#1A2B3F',
                 'text_menu' => '#ffffff',
+                'searchbar' => '#ffffff',
                 'background' => '#D9BEB6'
             ],
         ],
@@ -72,6 +81,8 @@ $info = array(
                 'secondary' => '#1A3940',
                 'footer' => '#BABF8F',
                 'text' => '#00070D',
+                'text_menu' => '#1a2b3f',
+                'searchbar' => '#353a48',
                 'background' => '#F2F2DF'
             ],
         ],
