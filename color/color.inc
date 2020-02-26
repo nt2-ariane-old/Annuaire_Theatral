@@ -10,6 +10,7 @@ $info = array(
         'searchbar' => t('Bar de Recherche'),
         'base' => t('Couleur de fond'),
         'link' => t('Link color'),
+        'button' => t('Bouton'),
     ],
     // Pre-defined color schemes.
     'schemes' => [
@@ -24,6 +25,7 @@ $info = array(
                 'searchbar' => '#353a48',
                 'base' => '#ffffff',
                 'link' => '#000000',
+                'button' => '#eaeaea',
 
             ],
         ],
@@ -39,6 +41,7 @@ $info = array(
 
                 'base' => '#F9F8FC',
                 'link' => '#2C333D',
+                'button' => '#eaeaea',
             ],
         ],
         'sug3' => [
@@ -53,6 +56,7 @@ $info = array(
 
                 'base' => '#F2F2F2',
                 'link' => '#00070D',
+                'button' => '#eaeaea',
             ],
         ],
         'sug4' => [
@@ -66,6 +70,7 @@ $info = array(
                 'searchbar' => '#353a48',
                 'base' => '#F2F2F0',
                 'link' => '#0B0B0D',
+                'button' => '#eaeaea',
             ],
         ],
         'sug5' => [
@@ -92,6 +97,7 @@ $info = array(
                 'searchbar' => '#353a48',
                 'base' => '#F2F2DF',
                 'link' => '#00070D',
+                'button' => '#eaeaea',
             ],
         ],
 

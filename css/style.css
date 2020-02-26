@@ -740,6 +740,10 @@ main h1 {
   display: table;
 }
 
+.button, .read-more {
+  background-color: #eaeaea;
+}
+
 .sidebar-class {
   padding-top: 20px;
   margin-top: 20px;
