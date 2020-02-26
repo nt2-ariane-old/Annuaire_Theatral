@@ -1,4 +1,4 @@
-{% if fields.field_type_d_article.content == 'Ruche' -%}
+{# {% if fields.field_type_d_article.content == 'Ruche' -%}
     {% set class = 'ruche' %}
 {% elseif fields.field_type_d_article.content == 'Vivarium' -%}
     {% set class = 'vivarium' %}
@@ -6,8 +6,12 @@
     {% set class = 'echappee' %}
 {% elseif fields.field_type_d_article.content == 'Récits' -%}
     {% set class = 'recits' %}
+{% endif %} #}
+{% if view.  %}
+
 {% endif %}
-<div class="item {{class}}">
+{{ fields.element_type }}
+<div class="item">
     <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">
         {{fields.field_image_de_couverture.content}}
         
