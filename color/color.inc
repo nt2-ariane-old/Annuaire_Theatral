@@ -2,13 +2,14 @@
 $info = array(
     // Available colors and color labels used in theme.
     'fields' => [
-        'primary' => t('Haut et du Bas'),
+        'top' => t('Haut et du Bas'),
         'secondary' => t('Numéro en cours'),
-        'footer' => t('Pied de Page'),
+        'bottom' => t('Pied de Page'),
         'text' => t('Texte'),
         'searchbar' => t('Bar de Recherche'),
         'text_menu' => t('Texte Menu'),
-        'background' => t('Couleur de fond')
+        'base' => t('Couleur de fond'),
+        'link' => t('Link color'),
     ],
     // Pre-defined color schemes.
     'schemes' => [
@@ -21,7 +22,9 @@ $info = array(
                 'text' => '#000000',
                 'text_menu' => '#1a2b3f',
                 'searchbar' => '#353a48',
-                'background' => '#ffffff'
+                'base' => '#ffffff',
+                'link' => '#000000',
+
             ],
         ],
         'sug2' => [
@@ -34,7 +37,8 @@ $info = array(
                 'text_menu' => '#1a2b3f',
                 'searchbar' => '#353a48',
 
-                'background' => '#F9F8FC'
+                'base' => '#F9F8FC',
+                'link' => '#2C333D',
             ],
         ],
         'sug3' => [
@@ -47,7 +51,8 @@ $info = array(
                 'text_menu' => '#ffffff',
                 'searchbar' => '#000000',
 
-                'background' => '#F2F2F2'
+                'base' => '#F2F2F2',
+                'link' => '#00070D',
             ],
         ],
         'sug4' => [
@@ -59,7 +64,8 @@ $info = array(
                 'text' => '#0B0B0D',
                 'text_menu' => '#1a2b3f',
                 'searchbar' => '#353a48',
-                'background' => '#F2F2F0'
+                'base' => '#F2F2F0',
+                'link' => '#0B0B0D',
             ],
         ],
         'sug5' => [
@@ -71,7 +77,8 @@ $info = array(
                 'text' => '#1A2B3F',
                 'text_menu' => '#ffffff',
                 'searchbar' => '#ffffff',
-                'background' => '#D9BEB6'
+                'base' => '#D9BEB6',
+                'link' => '#1A2B3F',
             ],
         ],
         'sug6' => [
@@ -83,7 +90,8 @@ $info = array(
                 'text' => '#00070D',
                 'text_menu' => '#1a2b3f',
                 'searchbar' => '#353a48',
-                'background' => '#F2F2DF'
+                'base' => '#F2F2DF',
+                'link' => '#00070D',
             ],
         ],
 
