@@ -23,7 +23,7 @@ $info = array(
       ),
     ),
     'lagoon' => array(
-      'title' => t('Blue Lagoon (Default)'),
+      'title' => t('Blue Lagoon'),
       'colors' => array(
         'base' => '#0072b9',
         'link' => '#027ac6',
