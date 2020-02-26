@@ -50,7 +50,7 @@ $info = array(
                 'background' => '#A66844'
             ],
         ],
-                'sug3' => [
+        'sug5' => [
             'title' => t('Teinte de Vert'),
             'colors' => [
                 'primary' => '#838C61',
