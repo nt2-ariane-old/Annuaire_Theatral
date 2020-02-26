@@ -2,16 +2,16 @@
 $info = array(
     // Available colors and color labels used in theme.
     'fields' => [
-        'primary' => t('Primary Color'),
-        'secondary' => t('Secondary Color'),
-        'footer' => t('Footer'),
-        'text' => t('Text Color'),
-        'background' => t('Background Color')
+        'primary' => t('Haut et du Bas'),
+        'secondary' => t('Numéro en cours'),
+        'footer' => t('Pied de Page'),
+        'text' => t('Texte'),
+        'background' => t('Couleur de fond')
     ],
     // Pre-defined color schemes.
     'schemes' => [
         'default' => [
-            'title' => t('Suggestion 1 (Default)'),
+            'title' => t('Teinte de Gris (Default)'),
             'colors' => [
                 'primary' => '#e8e8e8',
                 'secondary' => '#ee2367',
@@ -21,13 +21,23 @@ $info = array(
             ],
         ],
         'sug2' => [
-            'title' => t('Suggestion 2 '),
+            'title' => t('Teinte de Brun'),
             'colors' => [
                 'primary' => '#B79E96',
                 'secondary' => '#215479',
-                'footer' => '#60687B',
+                'footer' => '#BEA694',
                 'text' => '#2C333D',
                 'background' => '#F9F8FC'
+            ],
+        ],
+        'sug3' => [
+            'title' => t('Teinte de Bleu'),
+            'colors' => [
+                'primary' => '#0E5587',
+                'secondary' => '#054B7D',
+                'footer' => '#5583A6',
+                'text' => '#2C333D',
+                'background' => '#F2F2F2'
             ],
         ],
        
