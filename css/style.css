@@ -24,8 +24,13 @@ a:hover {
   color: inherit;
 }
 
-p {
+p,
+.meta-tag {
   color: #000000;
+}
+
+.separator {
+  background-color: #ffffff;
 }
 
 .inner-title {
@@ -740,7 +745,8 @@ main h1 {
   display: table;
 }
 
-.button, .read-more {
+.button,
+.read-more {
   background-color: #eaeaea;
 }
 

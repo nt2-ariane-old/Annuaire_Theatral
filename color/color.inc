@@ -11,6 +11,8 @@ $info = array(
         'base' => t('Couleur de fond'),
         'link' => t('Link color'),
         'button' => t('Bouton'),
+        'underline' => t('Sous-Lignement'),
+
     ],
     // Pre-defined color schemes.
     'schemes' => [
@@ -26,6 +28,7 @@ $info = array(
                 'base' => '#ffffff',
                 'link' => '#000000',
                 'button' => '#eaeaea',
+                'underline' => '#B8B1AF',
 
             ],
         ],
@@ -42,6 +45,8 @@ $info = array(
                 'base' => '#F9F8FC',
                 'link' => '#2C333D',
                 'button' => '#eaeaea',
+                'underline' => '#000000',
+
             ],
         ],
         'sug3' => [
@@ -57,6 +62,8 @@ $info = array(
                 'base' => '#F2F2F2',
                 'link' => '#00070D',
                 'button' => '#eaeaea',
+                'underline' => '#000000',
+
             ],
         ],
         'sug4' => [
@@ -71,6 +78,8 @@ $info = array(
                 'base' => '#F2F2F0',
                 'link' => '#0B0B0D',
                 'button' => '#eaeaea',
+                'underline' => '#000000',
+
             ],
         ],
         'sug5' => [
@@ -84,6 +93,8 @@ $info = array(
                 'searchbar' => '#ffffff',
                 'base' => '#D9BEB6',
                 'link' => '#1A2B3F',
+                'underline' => '#000000',
+
             ],
         ],
         'sug6' => [
@@ -98,6 +109,8 @@ $info = array(
                 'base' => '#F2F2DF',
                 'link' => '#00070D',
                 'button' => '#eaeaea',
+                'underline' => '#000000',
+
             ],
         ],
 
