@@ -324,9 +324,9 @@
 					<div class="w-container">
 						<div class="w-row">
 							<div class="w-col w-col-12">
-							{# {% for key in content|keys %}
+							{% for key in content.group_contributor_informations|keys %}
 								{{ key }}
-							{% endfor %} #}
+							{% endfor %}
 
 								{{content.field_statut_individu}}
 								{{content.group_contributor_informations}}
