@@ -24,9 +24,13 @@ a:hover {
   color: inherit;
 }
 
+.infos-auteur {
+  padding: 1rem 0;
+}
+
 .infos-auteur a {
   display: block;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: 900;
 }
 
