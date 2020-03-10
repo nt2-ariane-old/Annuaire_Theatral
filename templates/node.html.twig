@@ -324,6 +324,9 @@
 					<div class="w-container">
 						<div class="w-row">
 							<div class="w-col w-col-12">
+							{% for key in content|keys %}
+								{{ key }}
+							{% endfor %}
 								{{content.body}}
 								{{content.field_links}}
 								{{content.field_author_digital_identifier}}
