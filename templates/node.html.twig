@@ -194,7 +194,7 @@
 										{{content.group_article_informations.field_author }}
 									</div>
 								{% endif %}
-								{% if  node.group_article_informations.field_tags.value%}
+								{% if  node.group_article_informations.field_tags.value %}
 									{# Mots-Clés #}
 									<div class="views-element-container sidebar-class">
 										<h4 class="post-title">Mots-clés</h4>
@@ -324,16 +324,26 @@
 					<div class="w-container">
 						<div class="w-row">
 							<div class="w-col w-col-12">
-							{% for key in content.group_contributor_informations|keys %}
-								{{ key }}
-							{% endfor %}
+								{% for key in content.group_contributor_informations|keys %}
+									{{ key }}
+								{% endfor %}
 
 								{{content.field_statut_individu}}
-								{{content.group_contributor_informations}}
-								{{content.body}}
-								{{content.field_links}}
-								{{content.field_author_digital_identifier}}
-								{{content.field_bibliographic_reference}}
+								{% if  node.group_contributor_informations.field_institution.value  %}
+									{{content.group_contributor_informations.field_institution}}
+								{% endif %}
+								{% if  node.group_contributor_informations.field_author_digital_identifier.value  %}
+									{{content.group_contributor_informations.field_author_digital_identifier}}
+								{% endif %}
+								{% if  node.body.value  %}
+									{{content.body}}
+								{% endif %}
+								{% if  node.field_links.value  %}
+									{{content.field_links}}
+								{% endif %}
+								{% if  node.field_bibliographic_reference.value  %}
+									{{content.field_bibliographic_reference}}
+								{% endif %}
 							</div>
 						</div>
 						<div>
