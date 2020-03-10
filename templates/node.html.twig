@@ -324,11 +324,9 @@
 					<div class="w-container">
 						<div class="w-row">
 							<div class="w-col w-col-12">
-								{% for key in content.group_contributor_informations|keys %}
-									{{ key }}
-								{% endfor %}
-
-								{{content.field_statut_individu}}
+								{% if  node.field_statut_individu.value  %}
+									{{content.field_statut_individu}}
+								{% endif %}
 								{% if  node.group_contributor_informations.field_institution.value  %}
 									{{content.group_contributor_informations.field_institution}}
 								{% endif %}
