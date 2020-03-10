@@ -328,7 +328,7 @@
 									{{content.field_statut_individu}}
 								{% endif %}
 								{{content.group_contributor_informations.field_institution}}
-								{% for key in content.group_contributor_informations.field_institution.0|keys %}
+								{% for key in content.group_contributor_informations.field_institution.0.entity|keys %}
 									{{ key }}
 								{% endfor %}
 								{% if  node.group_contributor_informations.field_institution.value  %}
