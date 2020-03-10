@@ -25,6 +25,17 @@ a:hover {
   color: inherit;
 }
 
+.media {
+  display: block;
+  text-align: center;
+}
+
+.media p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  text-align: justify;
+}
+
 .infos-auteur {
   padding: 1rem 0;
 }
