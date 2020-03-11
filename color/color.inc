@@ -70,14 +70,14 @@ $info = array(
             'title' => t('Teinte de Rouge'),
             'colors' => [
                 'top' => '#73020C',
-                'secondary' => '#ff042b',
+                'secondary' => '#E94347',
                 'bottom' => '#EBEDF3',
                 'text' => '#29384C',
                 'text_menu' => '#ffffff',
                 'searchbar' => '#BF0413',
                 'base' => '#ffffff',
                 'link' => '#29384C',
-                'button' => '#E94347',
+                'button' => '#EBEDF3',
                 'underline' => '#29384C',
 
             ],
