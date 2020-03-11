@@ -36,8 +36,8 @@ $info = array(
             'title' => t('Teinte de Brun'),
             'colors' => [
                 'top' => '#B79E96',
-                'secondary' => '#215479',
-                'bottom' => '#BEA694',
+                'secondary' => '#cbaa8e',
+                'bottom' => '#ebd8ca',
                 'text' => '#2C333D',
                 'text_menu' => '#1a2b3f',
                 'searchbar' => '#353a48',
@@ -54,7 +54,7 @@ $info = array(
             'colors' => [
                 'top' => '#0E5587',
                 'secondary' => '#054B7D',
-                'bottom' => '#5583A6',
+                'bottom' => '#bed0dd',
                 'text' => '#00070D',
                 'text_menu' => '#ffffff',
                 'searchbar' => '#000000',
@@ -66,34 +66,19 @@ $info = array(
 
             ],
         ],
-        'sug4' => [
-            'title' => t('Teinte de Beige'),
-            'colors' => [
-                'top' => '#DBC8C1',
-                'secondary' => '#6D9EAC',
-                'bottom' => '#C29679',
-                'text' => '#0B0B0D',
-                'text_menu' => '#1a2b3f',
-                'searchbar' => '#353a48',
-                'base' => '#F2F2F0',
-                'link' => '#0B0B0D',
-                'button' => '#eaeaea',
-                'underline' => '#000000',
-
-            ],
-        ],
         'sug5' => [
             'title' => t('Teinte de Rouge'),
             'colors' => [
-                'top' => '#41020C',
-                'secondary' => '#8D192B',
-                'bottom' => '#8E4D64',
-                'text' => '#1A2B3F',
+                'top' => '#73020C',
+                'secondary' => '#ff042b',
+                'bottom' => '#EBEDF3',
+                'text' => '#29384C',
                 'text_menu' => '#ffffff',
-                'searchbar' => '#ffffff',
-                'base' => '#D9BEB6',
-                'link' => '#1A2B3F',
-                'underline' => '#000000',
+                'searchbar' => '#BF0413',
+                'base' => '#ffffff',
+                'link' => '#29384C',
+                'button' => '#E94347',
+                'underline' => '#29384C',
 
             ],
         ],
