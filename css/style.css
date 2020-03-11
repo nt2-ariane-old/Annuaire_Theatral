@@ -75,9 +75,11 @@ img {
   overflow: hidden;
   padding: 0;
   font-size: 50px;
-  line-height: 110px;
   color: #ee2367;
   border: 1px solid #ee2367;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .data-blog .w-embed {
