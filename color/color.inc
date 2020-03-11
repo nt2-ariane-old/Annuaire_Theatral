@@ -86,14 +86,14 @@ $info = array(
             'title' => t('Teinte de Vert'),
             'colors' => [
                 'top' => '#838C61',
-                'secondary' => '#1A3940',
+                'secondary' => '#6b7af8',
                 'bottom' => '#BABF8F',
                 'text' => '#00070D',
                 'text_menu' => '#1a2b3f',
                 'searchbar' => '#353a48',
-                'base' => '#F2F2DF',
+                'base' => '#F2F2F2',
                 'link' => '#00070D',
-                'button' => '#eaeaea',
+                'button' => '#F2F2DF',
                 'underline' => '#000000',
 
             ],
