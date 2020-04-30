@@ -611,6 +611,10 @@ ul.tabs.primary li.is-active:after {
   height: 50px;
 }
 
+.toolbar-fixed .top-border {
+  top: 40px;
+}
+
 .menu-link {
   display: inline-block;
   color: #000000;

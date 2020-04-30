@@ -49,8 +49,7 @@ p,
   line-height: 5.5rem;
 }
 
-h3
-{
+h3 {
   padding: 1rem;
 }
 
@@ -540,6 +539,11 @@ ul.tabs.primary li.is-active:after {
     }
   }
 }
+.toolbar-fixed {
+  .top-border {
+    top: 40px;
+  }
+}
 .menu-link {
   display: inline-block;
   color: #000000;
@@ -921,8 +925,7 @@ nav ul ul li {
   align-items: center;
 }
 
-.banner-one
-{
+.banner-one {
   height: calc(100vh - 60px - 60px);
 }
 .product-post-banner {
