@@ -58,7 +58,7 @@ p,
 }
 
 h3 {
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 img {
@@ -168,6 +168,10 @@ textarea {
 
 .blog-last-photo {
   overflow: hidden;
+}
+
+.blog-title a {
+  font-size: 1.3rem;
 }
 
 ul.quicktabs-tabs {
@@ -433,6 +437,7 @@ ul.tabs.primary li.is-active:after {
 .footer #block-footerinfos {
   margin: 0;
   width: 33%;
+  padding: 0 1rem;
   float: left;
 }
 
@@ -526,7 +531,8 @@ ul.tabs.primary li.is-active:after {
 }
 
 .top-border {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   padding: 5px 15px;
   height: 60px;
   margin-bottom: 2rem;
