@@ -1000,6 +1000,8 @@ ul.quicktabs-tabs li a {
     }
   }
   #views-exposed-form-general-search-page-1 {
+    opacity: 0;
+    transition: opacity 500ms linear;
     .form--inline.clearfix {
       display: flex;
       align-items: center;

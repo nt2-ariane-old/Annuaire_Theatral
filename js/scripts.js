@@ -34,6 +34,7 @@ window.onload = function () {
         li.appendChild(searchbar);
         nav.appendChild(li);
         searchbar.style.display = 'inline-block';
+        searchbar.style.opacity = '1'
     }
 
     let rows = document.querySelectorAll('.line-zig-zag');
