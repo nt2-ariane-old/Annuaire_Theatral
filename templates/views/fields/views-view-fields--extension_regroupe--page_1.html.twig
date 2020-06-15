@@ -9,7 +9,7 @@
 {% endif %}
 
 
-{% for category in fields.type %}
+{% for category in fields|keys %}
 	{{ category }}
 {% endfor %}
 {{ dump(fields.type)}}
