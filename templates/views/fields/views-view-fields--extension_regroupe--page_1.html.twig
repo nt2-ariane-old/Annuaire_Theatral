@@ -14,11 +14,8 @@
 		=======
 		<div>
 			{{ key }}
-			<div>-----</div>
-			{% for key2 in value|keys %}
-				{{ key2 }}
-			{% endfor %}
-			<div>-----</div>
+            {{ value.content }}
+			
 		</div>
 	</div>
 {% endfor %}
