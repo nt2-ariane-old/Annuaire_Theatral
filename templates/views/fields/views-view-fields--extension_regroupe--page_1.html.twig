@@ -1,31 +1,12 @@
-{% if fields.type.content == 'Ruche' -%}
+{% if fields.type.content == 'Article La Ruche' -%}
 	{% set class = 'ruche' %}
-{% elseif fields.type.content == 'Vivarium' -%}
+{% elseif fields.type.content == 'Le Vivarium - Dossier' -%}
 	{% set class = 'vivarium' %}
-{% elseif fields.type.content == 'Échappée' -%}
+{% elseif fields.type.content == 'Échappées' -%}
 	{% set class = 'echappee' %}
-{% elseif fields.type.content == 'Récits' -%}
+{% elseif fields.type.content == 'Récit de pratique' -%}
 	{% set class = 'recits' %}
 {% endif %}
-
-
-{% for key, value in fields %}
-	<div>
-		=======
-		<div>
-			{{ key }}
-            {{ value.content }}
-			
-		</div>
-	</div>
-{% endfor %}
-{% for key in fields.type|keys %}
-	{{key}}
-{% endfor %}
----------------------
-{% for key in fields.type_1|keys %}
-	{{key}}
-{% endfor %}
 
 <div class="item {{class}}">
 	<div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">
