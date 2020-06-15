@@ -1,23 +1,25 @@
 {% if fields.field_type_d_article.content == 'Ruche' -%}
-    {% set class = 'ruche' %}
+	{% set class = 'ruche' %}
 {% elseif fields.field_type_d_article.content == 'Vivarium' -%}
-    {% set class = 'vivarium' %}
+	{% set class = 'vivarium' %}
 {% elseif fields.field_type_d_article.content == 'Échappée' -%}
-    {% set class = 'echappee' %}
+	{% set class = 'echappee' %}
 {% elseif fields.field_type_d_article.content == 'Récits' -%}
-    {% set class = 'recits' %}
+	{% set class = 'recits' %}
 {% endif %}
 
-{{ fields.element_type }}
+{{ fields.field_type_d_article.content }}
+{{ dump(fields) }}
+
 <div class="item {{class}}">
-    <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">
-        {{fields.field_image_de_couverture.content}}
-        
-        <a href="{{ fields.view_node.content|striptags}}" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link">
-            <div class="portfolio-cn-title">
-                <h3 data-ix="scale-portfolio-title-on-load" class="portfolio-title">{{ fields.title.content|raw|striptags }}</h3>
-                <div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title">{{fields.field_mots_cles.content|raw|striptags}}</div>
-            </div>
-        </a>
-    </div>
+	<div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">
+		{{fields.field_image_de_couverture.content}}
+
+		<a href="{{ fields.view_node.content|striptags}}" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link">
+			<div class="portfolio-cn-title">
+				<h3 data-ix="scale-portfolio-title-on-load" class="portfolio-title">{{ fields.title.content|raw|striptags }}</h3>
+				<div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title">{{fields.field_mots_cles.content|raw|striptags}}</div>
+			</div>
+		</a>
+	</div>
 </div>
