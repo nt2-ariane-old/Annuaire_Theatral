@@ -1,17 +1,16 @@
-{% if fields.field_type_d_article.content == 'Ruche' -%}
+{% if fields.type.content == 'Ruche' -%}
 	{% set class = 'ruche' %}
-{% elseif fields.field_type_d_article.content == 'Vivarium' -%}
+{% elseif fields.type.content == 'Vivarium' -%}
 	{% set class = 'vivarium' %}
-{% elseif fields.field_type_d_article.content == 'Échappée' -%}
+{% elseif fields.type.content == 'Échappée' -%}
 	{% set class = 'echappee' %}
-{% elseif fields.field_type_d_article.content == 'Récits' -%}
+{% elseif fields.type.content == 'Récits' -%}
 	{% set class = 'recits' %}
 {% endif %}
 
 
 {% for key, value in fields %}
 
-    {{ key }} - {{ value|json_decode() }}
     {{ key }} - {{ value|json_encode() }}
     
 {% endfor %}
