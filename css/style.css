@@ -535,7 +535,6 @@ ul.tabs.primary li.is-active:after {
   position: sticky;
   padding: 5px 15px;
   height: 60px;
-  margin-bottom: 2rem;
 }
 
 .top-border > div {
