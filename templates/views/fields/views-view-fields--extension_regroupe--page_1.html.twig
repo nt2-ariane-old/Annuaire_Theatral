@@ -9,8 +9,8 @@
 {% endif %}
 
 
-{% for category in fields|keys %}
-	{{ category }}
+{% for key, value in fields %}
+    {{ key }} - {{ value }}
 {% endfor %}
 {{ dump(fields.type)}}
 
