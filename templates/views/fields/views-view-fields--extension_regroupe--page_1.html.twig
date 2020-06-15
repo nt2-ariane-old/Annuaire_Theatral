@@ -14,7 +14,11 @@
     {{ key }} - {{ value|json_encode() }}
     
 {% endfor %}
-{% for key in fields.type.entity|keys %}
+{% for key in fields.type|keys %}
+{{key}}
+{% endfor %}
+---------------------
+{% for key in fields.type_1|keys %}
 {{key}}
 {% endfor %}
 
