@@ -9,10 +9,10 @@
 {% endif %}
 
 
-{% for category in fields.type|keys %}
+{% for category in fields.type %}
 	{{ category }}
 {% endfor %}
-{# {{field s.type}} #}
+{{fields.type}}
 
 <div class="item {{class}}">
 	<div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">
