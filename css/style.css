@@ -1102,13 +1102,13 @@ ul.quicktabs-tabs li a {
   font-size: 25px;
 }
 
-.sidebar-right #views-exposed-form-general-search-page-1 {
+#views-exposed-form-general-search-page-1 {
   opacity: 0;
   -webkit-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
 }
 
-.sidebar-right #views-exposed-form-general-search-page-1 .form--inline.clearfix {
+#views-exposed-form-general-search-page-1 .form--inline.clearfix {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
