@@ -8,8 +8,10 @@
 	{% set class = 'recits' %}
 {% endif %}
 
-{{ fields.field_type_d_article.content }}
-{{ dump(fields) }}
+
+{% for category in fields %}
+    {{ dump(category) }}
+{% endfor %}
 
 <div class="item {{class}}">
 	<div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">
