@@ -10,16 +10,24 @@
 
 
 {% for key, value in fields %}
-
-    {{ key }} - {{ value|json_encode() }}
-    
+	<div>
+		=======
+		<div>
+			{{ key }}
+			<div>-----</div>
+			{% for key2 in value|keys %}
+				{{ key2 }}
+			{% endfor %}
+			<div>-----</div>
+		</div>
+	</div>
 {% endfor %}
 {% for key in fields.type|keys %}
-{{key}}
+	{{key}}
 {% endfor %}
 ---------------------
 {% for key in fields.type_1|keys %}
-{{key}}
+	{{key}}
 {% endfor %}
 
 <div class="item {{class}}">
