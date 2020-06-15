@@ -10,7 +10,10 @@
 
 
 {% for key, value in fields %}
-    {{ key }} - {{ value|json_encode }}
+
+    {{ key }} - {{ value|json_decode() }}
+    {{ key }} - {{ value|json_encode() }}
+    
 {% endfor %}
 {{ dump(fields.type)}}
 
