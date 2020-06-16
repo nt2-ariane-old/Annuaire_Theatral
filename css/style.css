@@ -796,7 +796,7 @@ ul.tabs.primary:before {
 }
 
 .footer {
-  background-color: var(--bg_05);
+  background-color: var(--footer-bg-color);
   margin-top: 80px;
 }
 
