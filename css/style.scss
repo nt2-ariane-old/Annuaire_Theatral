@@ -24,7 +24,7 @@
   --gray_color_01: #262626;
   --gray_color_01: #737373;
 
-  --text_01: #262626;
+  --main-txt-color: #262626;
 
   --banner_01: #ee2367;
 }
@@ -33,7 +33,7 @@
 body {
   margin: 0;
   padding: 0;
-  color: var(--text_01);
+  color: var(--main-txt-color);
 }
 h1,
 h2 {
@@ -246,7 +246,7 @@ ul.quicktabs-tabs li.active a {
 
 .w-section a,
 details {
-  color: var(--text_01);
+  color: var(--main-txt-color);
 }
 //SearchBar
 .searchbar {
@@ -500,17 +500,17 @@ ul.tabs.primary li.is-active:after {
 }
 
 #block-copyright {
-  color: var(--text_01);
+  color: var(--main-txt-color);
 }
 
 .bottom-border,
 .top-border {
   display: block;
   margin: auto;
-  color: var(--text_01);
+  color: var(--main-txt-color);
   background-color: var(--bar-bg-color);
   * {
-    color: var(--text_01);
+    color: var(--main-txt-color);
   }
 }
 
@@ -557,7 +557,7 @@ ul.tabs.primary li.is-active:after {
 
             a {
               float: none;
-              color: var(--text_01);
+              color: var(--main-txt-color);
               padding: 12px 16px;
               text-decoration: none;
               text-align: left;
@@ -592,7 +592,7 @@ ul.tabs.primary li.is-active:after {
 }
 .menu-link {
   display: inline-block;
-  color: var(--text_01);
+  color: var(--main-txt-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -786,7 +786,7 @@ main {
     }
   }
   .portfolio-title {
-    color: var(--text_01);
+    color: var(--main-txt-color);
   }
 }
 
@@ -871,7 +871,7 @@ main {
 }
 
 .paragraphs-collapsed-description {
-  color: var(--text_01);
+  color: var(--main-txt-color);
 }
 
 .season-issue,
@@ -893,7 +893,7 @@ main {
 }
 .blog-zig-zag .sub-information,
 .blog-zig-zag .season-issue {
-  color: var(--text_01);
+  color: var(--main-txt-color);
   font-size: 1rem;
 }
 
@@ -1007,7 +1007,7 @@ nav ul ul li {
       font-size: 12px;
     }
     .views-field-title-5 {
-      color: var(--text_01);
+      color: var(--main-txt-color);
       font-size: 13px;
     }
     .views-field-title-5,
@@ -1282,7 +1282,7 @@ input {
     font-size: 15px;
     font-family: Lekton, sans-serif;
     padding: 1rem;
-    color: var(--text_01);
+    color: var(--main-txt-color);
   }
 }
 
@@ -1458,7 +1458,7 @@ input {
               z-index: 1;
               a {
                 float: none;
-                color: var(--text_01);
+                color: var(--main-txt-color);
                 padding: 12px 16px;
                 text-decoration: none;
                 text-align: left;
