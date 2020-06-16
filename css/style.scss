@@ -507,10 +507,10 @@ ul.tabs.primary li.is-active:after {
 .top-border {
   display: block;
   margin: auto;
-  color: #1a2b3f;
-  background-color: var(--text_04);
+  color: var(--text_01);
+  background-color: var(--bar-bg-color);
   * {
-    color: #1a2b3f;
+    color: var(--text_01);
   }
 }
 
