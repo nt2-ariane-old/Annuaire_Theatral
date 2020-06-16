@@ -1457,7 +1457,7 @@ input {
   ul.quicktabs-tabs li.active a {
     padding: 0;
     border: none !important;
-    border-bottom: 1px solid var(--text_01) !important;
+    border-bottom: 1px solid var(--main-txt-color) !important;
     border-radius: 0;
   }
   .footer #block-pieddepage,
@@ -1465,7 +1465,7 @@ input {
   .footer #block-views-block-partenaires-block-1 {
     width: 100%;
     float: none;
-    border-bottom: 1px solid var(--text_04);
+    border-bottom: 1px solid var(--main-txt-color);
     padding: 1rem 0;
   }
 }
@@ -1530,8 +1530,8 @@ input {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    background-color: var(--text_04);
-    color: var(--text_01);
+    background-color: var(--bar-bg-color);
+    color: var(--main-txt-color);
   }
   .top-border > div #block-navigationprincipale .topnav a,
   .top-border > div #block-navigationprincipale .topnav .dropbtn {
@@ -1571,7 +1571,7 @@ input {
   .top-border > div #block-navigationprincipale .topnav .dropdown .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--text_04);
+    background-color: var(--main-txt-color);
     min-width: 160px;
     -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
