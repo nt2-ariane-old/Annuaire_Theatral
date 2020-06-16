@@ -82,12 +82,12 @@ textarea {
   font-family: initial;
 }
 
-main {
+main.container {
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-main h1 {
+main.container h1 {
   text-align: center;
 }
 
