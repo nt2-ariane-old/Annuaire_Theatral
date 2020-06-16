@@ -87,10 +87,6 @@ main.container {
   padding: 0 1rem;
 }
 
-main.container h1 {
-  text-align: center;
-}
-
 nav ul li > ul:hover,
 nav ul li:hover > ul {
   display: inherit;
