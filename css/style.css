@@ -1,5 +1,10 @@
 :root {
-  --text_01: #000000;
+  --main-bg-color: #f2f2f2;
+  --bar-bg-color: #a6a6a6;
+  --footer-bg-color: #737373;
+  --other-bg-color: #404040;
+  --banner-color: #a60540;
+  --main-txt-color: #262626;
   --text_02: #ffffff;
   --text_03: #a8a8a8;
   --text_04: #f9f9f9;
@@ -8,6 +13,12 @@
   --bg_03: #353a48;
   --bg_04: #f8f8f8;
   --bg_05: #f3f3f3;
+  --gray_color_01: #a6a6a6;
+  --gray_color_02: #f2f2f2;
+  --gray_color_01: #404040;
+  --gray_color_01: #262626;
+  --gray_color_01: #737373;
+  --text_01: #262626;
   --banner_01: #ee2367;
 }
 
@@ -17,11 +28,22 @@ body {
   color: var(--text_01);
 }
 
+h1,
 h2 {
+  text-align: center;
   display: block;
+  width: 100%;
   clear: both;
   line-height: 1.5;
+}
+
+h2 {
   font-size: 48px;
+  text-align: center;
+}
+
+h3 {
+  padding: 1rem 0;
 }
 
 a {
@@ -35,6 +57,28 @@ a:hover {
   color: inherit;
 }
 
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+}
+
+input,
+textarea {
+  font-family: initial;
+}
+
+p,
+.meta-tag {
+  color: var(--main-txt-color);
+}
+
+.window-size {
+  min-height: calc(100vh - 60px - 60px);
+}
+
 .media {
   display: block;
   text-align: center;
@@ -44,6 +88,11 @@ a:hover {
   font-size: 0.8rem;
   opacity: 0.8;
   text-align: justify;
+}
+
+.inner-title {
+  font-size: 4rem;
+  line-height: 5.5rem;
 }
 
 .infos-auteur {
@@ -56,65 +105,8 @@ a:hover {
   font-weight: 900;
 }
 
-p,
-.meta-tag {
-  color: var(--text_01);
-}
-
-.separator {
-  background-color: var(--bg_01);
-}
-
-.inner-title {
-  font-size: 4rem;
-  line-height: 5.5rem;
-}
-
-h3 {
-  padding: 1rem 0;
-}
-
-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  height: 100%;
-}
-
-.window-size {
-  min-height: calc(100vh - 60px - 60px);
-}
-
-.data-blog {
-  overflow: hidden;
-  padding: 0;
-  font-size: 50px;
-  color: var(--banner_01);
-  border: 1px solid var(--banner_01);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 auto;
-}
-
-.data-blog .w-embed {
-  width: 100%;
-  height: 100%;
-}
-
 .show-filter {
-  background-color: var(--banner_01);
-}
-
-#search-block-form {
-  display: none;
+  background-color: var(--banner-color);
 }
 
 .cart-block--summary__icon {
@@ -128,20 +120,7 @@ img {
 }
 
 .portfolio-sub-title {
-  color: var(--text_01);
-}
-
-#block-copyright .field--type-text-with-summary {
-  padding: 0;
-}
-
-input,
-textarea {
-  font-family: initial;
-}
-
-.search_icon {
-  background-color: transparent;
+  color: var(--main-txt-color);
 }
 
 .col-1,
@@ -151,6 +130,10 @@ textarea {
   -webkit-box-flex: 1;
           flex: 1;
   max-width: 100%;
+}
+
+.search_icon {
+  background-color: transparent;
 }
 
 .big-h-img img {
@@ -171,13 +154,44 @@ textarea {
   max-width: 100%;
 }
 
-.data-blog.cont-ico.smll-ico {
+#search-block-form {
+  display: none;
+}
+
+#block-copyright .field--type-text-with-summary {
   padding: 0;
 }
 
 .title-wrapper {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.data-blog {
+  overflow: hidden;
+  padding: 0;
+  font-size: 50px;
+  color: var(--banner-color);
+  border: 1px solid var(--banner-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.data-blog .w-embed {
+  width: 100%;
+  height: 100%;
+}
+
+.data-blog.cont-ico.smll-ico {
+  padding: 0;
 }
 
 .blog-last-photo {
@@ -188,6 +202,14 @@ textarea {
   font-size: 1.3rem;
 }
 
+.blog-content {
+  background-color: var(--main-bg-color);
+}
+
+.blog-item.fashion .blog-grid-con {
+  background: var(--other-bg-color);
+}
+
 ul.quicktabs-tabs {
   margin: 0;
   padding: 0 0 40px;
@@ -195,19 +217,9 @@ ul.quicktabs-tabs {
 }
 
 ul.quicktabs-tabs li.active a {
-  border: 1px solid var(--text_01) !important;
+  border: 1px solid var(--main-txt-color) !important;
   padding: 6px 20px 5px;
   border-radius: 20px;
-}
-
-h1 {
-  text-align: center;
-  width: 100%;
-  display: inline-block;
-}
-
-h2 {
-  text-align: center;
 }
 
 .paragraph-formatter {
@@ -230,10 +242,6 @@ h2 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.blog-content {
-  background-color: var(--bg_01);
 }
 
 .w-section a,
@@ -271,10 +279,6 @@ details {
   width: 150px;
   caret-color: var(--banner_01);
   transition: width 0.4s linear;
-}
-
-.blog-item.fashion .blog-grid-con {
-  background: var(--bg_04);
 }
 
 .searchbar:hover > .search_input {
