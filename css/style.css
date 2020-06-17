@@ -118,22 +118,22 @@ p,
   color: var(--main-txt-color);
 }
 
-.quicktabs-tabs {
-  margin: 2rem auto;
+ul.quicktabs-tabs {
+  margin: 2rem auto !important;
   padding: 0 0 40px;
   text-align: center;
 }
 
-.quicktabs-tabs li {
+ul.quicktabs-tabs li {
   font-size: 1.1rem;
 }
 
-.quicktabs-tabs li a {
+ul.quicktabs-tabs li a {
   border-radius: 20px;
   padding: 6px 20px 5px;
 }
 
-.quicktabs-tabs li.active a {
+ul.quicktabs-tabs li.active a {
   border: 1px solid var(--main-txt-color) !important;
   border-radius: 20px;
   padding: 6px 20px 5px;
