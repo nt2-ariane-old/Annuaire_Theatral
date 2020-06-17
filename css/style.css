@@ -118,22 +118,22 @@ p,
   color: var(--main-txt-color);
 }
 
-ul.quicktabs-tabs {
+.quicktabs-tabs {
   margin: 2rem auto;
   padding: 0 0 40px;
   text-align: center;
 }
 
-ul.quicktabs-tabs li {
+.quicktabs-tabs li {
   font-size: 1.1rem;
 }
 
-ul.quicktabs-tabs li a {
+.quicktabs-tabs li a {
   border-radius: 20px;
   padding: 6px 20px 5px;
 }
 
-ul.quicktabs-tabs li.active a {
+.quicktabs-tabs li.active a {
   border: 1px solid var(--main-txt-color) !important;
   border-radius: 20px;
   padding: 6px 20px 5px;
