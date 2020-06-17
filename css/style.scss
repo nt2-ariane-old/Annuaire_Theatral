@@ -2,12 +2,13 @@
   --banner_01: #ee2367;
   --banner-color: #a60540;
   --bar-bg-color: #ffffff;
+  --btn-bg-color: #dbdae5;
   --bg_01: #ffffff;
   --bg_02: #000000;
   --bg_03: #353a48;
   --bg_04: #f8f8f8;
   --bg_05: #f3f3f3;
-  --footer-bg-color: #CECECE;
+  --footer-bg-color: #cecece;
   --gray_color_01: #a6a6a6;
   --gray_color_02: #f2f2f2;
   --gray_color_03: #404040;
@@ -122,11 +123,12 @@ p,
 
 ul {
   &.quicktabs-tabs {
-    margin: 0;
+    margin: 2rem auto;
     padding: 0 0 40px;
     text-align: center;
 
     li {
+      font-size: 1.1rem;
       a {
         border-radius: 20px;
         padding: 6px 20px 5px;
@@ -639,7 +641,7 @@ ul {
 
 .button,
 .read-more {
-  background-color: var(--bg_05);
+  background-color: var(--btn-bg-color);
 }
 
 .button--primary.form-submit {
