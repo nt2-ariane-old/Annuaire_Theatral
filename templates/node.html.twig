@@ -191,18 +191,18 @@
 							{% for key in node|keys %}
 								{{ key }}
 							{% endfor %}
-							{% if  node.group_article_informations.field_author.value or  node.group_article_informations.field_tags.value or node.field_lectures_connexes.value %}
+							{% if  node.field_author.value or  node.field_tags.value or node.field_lectures_connexes.value %}
 								<div
 									class="w-col w-col-3">
 
 									{# Auteurs #}
-									{% if node.group_article_informations.field_author.value %}
+									{% if node.field_author.value %}
 										<div class="sidebar-class">
 											<h4 class="post-title">Auteur(s)</h4>
 											{{content.group_article_informations.field_author }}
 										</div>
 									{% endif %}
-									{% if  node.group_article_informations.field_tags.value %}
+									{% if  node.field_tags.value %}
 										{# Mots-Clés #}
 										<div class="views-element-container sidebar-class">
 											<h4 class="post-title">Mots-clés</h4>
@@ -338,8 +338,10 @@
 										{% if  node.field_statut_individu.value  %}
 											{{content.field_statut_individu}}
 										{% endif %}
-										{{content.group_contributor_informations.field_institution}}
-										{% if  node.group_contributor_informations.field_author_digital_identifier.value  %}
+										{% if  node.field_institution.value %}
+											{{content.group_contributor_informations.field_institution}}
+										{% endif %}
+										{% if  node.field_author_digital_identifier.value  %}
 											{{content.group_contributor_informations.field_author_digital_identifier}}
 										{% endif %}
 									</div>
@@ -616,28 +618,28 @@
 					</div>
 
 
-					{% if content.group_contents.editorial_issue_entity_view_1  %}
+					{% if node.editorial_issue_entity_view_1.value  %}
 
 						<section id="editorial">
 							<span class="editorial-name">Editorial</span>
 							{{ content.group_contents.editorial_issue_entity_view_1 }}
 						</section>
 					{% endif %}
-					{% if content.group_contents.dossiers_on_issue_entity_view_1  %}
+					{% if node.dossiers_on_issue_entity_view_1.value  %}
 						<section id="dossiers">
 							<div class="w-row">
 								{{ content.group_contents.dossiers_on_issue_entity_view_1 }}
 							</div>
 						</section>
 					{% endif %}
-					{% if content.group_contents.hors_dossiers_on_issue_entity_view_1  %}
+					{% if node.hors_dossiers_on_issue_entity_view_1.value  %}
 						<section id="hors-dossiers">
 							<div class="w-row">
 								{{ content.group_contents.hors_dossiers_on_issue_entity_view_1 }}
 							</div>
 						</section>
 					{% endif %}
-					{% if content.group_contents.individual_articles_entity_view_1  %}
+					{% if node.individual_articles_entity_view_1.value  %}
 						<section id="individuel">
 							<div class="w-row">
 								{{content.group_contents.individual_articles_entity_view_1}}
