@@ -188,505 +188,37 @@
 						<div
 							class="w-row">
 							{# SIDEBAR #}
-							<div
-								class="w-col w-col-3">
-
-								{# Auteurs #}
-								{% if node.group_article_informations.field_author.value %}
-									<div class="sidebar-class">
-										<h4 class="post-title">Auteur(s)</h4>
-										{{content.group_article_informations.field_author }}
-									</div>
-								{% endif %}
-								{% if  node.group_article_informations.field_tags.value %}
-									{# Mots-Clés #}
-									<div class="views-element-container sidebar-class">
-										<h4 class="post-title">Mots-clés</h4>
-
-										<div class="w-clearfix">
-											{{ content.group_article_informations.field_tags }}
-										</div>
-									</div>
-								{% endif %}
-
-
-								{# Lectures Connexes #}
-								{% if node.field_lectures_connexes.value  %}
-									<div class="views-element-container sidebar-class">
-										<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
-											<h4 class="post-title">Lectures Connexes</h4>
-											{{ content.field_lectures_connexes }}
-										</div>
-
-									</div>
-								{% endif %}
-
-							</div>
-							<div
-								class="w-col w-col-9">
-
-								{# Body #}
-
-								<div class="bottom-space">
-									{% if node.body.value  %}
-										{{ content.body }}
-									{% else %}
-										<p>Abonnez-Vous</p>
-									{% endif %}
-								</div>
-
-							</div>
-						</div>
-
-						{# Notes et Biblio #}
-						<ul class="nav nav-tabs">
-							{% if node.field_pour_citer.value  %}
-								<li class="nav-item">
-									<a class="nav-link active" data-toggle="tab" href="#Notes">Notes</a>
-								</li>
-							{% endif %}
-							{% if node.field_bibliographic_reference.value %}
-								<li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-								</li>
-							{% endif %}
-							{% if node.field_pdf.value %}
-								<li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#pdf">Article PDF</a>
-								</li>
-							{% endif %}
-						</ul>
-
-						<!-- Tab panes -->
-						<div class="tab-content">
-							{% if node.field_pour_citer.value   %}
-								<div class="tab-pane container active" id="Notes">
-									<p>{{content.field_pour_citer}}</p>
-								</div>
-							{% endif %}
-							{% if  node.field_bibliographic_reference.value %}
-								<div class="tab-pane container fade" id="biblio">
-									<p>{{content.field_bibliographic_reference}}</p>
-								</div>
-							{% endif %}
-							{% if node.field_pdf.value %}
-								<div class="tab-pane container fade" id="pdf">
-									<p>{{content.field_pdf}}</p>
-								</div>
-							{% endif %}
-						</div>
-					</div>
-				</main>
-			{% elseif type == "echappee" %}
-				<section>
-					<h4 class="post-title">Auteur(s)</h4>
-					{{ content.field_author }}
-					<div class="views-element-container sidebar-class"></div>
-				</section>
-				<section>
-					<h4 class="post-title">Lectures connexes</h4>
-
-					<div class="lectures">
-						{{ content.field_lectures_connexes }}
-					</div>
-					<div class="views-element-container sidebar-class"></div>
-				</section>
-				<div>
-					<h4 class="post-title">Mots-Clés</h4>
-
-					<div class="w-clearfix">
-						{{ content.field_mots_cles}}
-					</div>
-					<div class="views-element-container sidebar-class"></div>
-				</div>
-
-				<p>
-					{{ content.body }}
-				</p>
-
-
-				<ul class="nav nav-tabs">
-					<li class="nav-item">
-						<a class="nav-link active" data-toggle="tab" href="#Notes">Notes</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-					</li>
-				</ul>
-
-				<!-- Tab panes -->
-				<div class="tab-content">
-					<div class="tab-pane container active" id="Notes">
-						<p>{{content.field_pour_citer}}</p>
-					</div>
-					<div class="tab-pane container fade" id="biblio">
-						<p>{{content.field_biblio}}</p>
-					</div>
-				</div>
-			{% elseif type == "contributor" %}
-				<main class="w-section section-imp more-padding">
-					<div class="w-container">
-						<div class="w-row">
-							<div class="w-col w-col-12 ">
-								<div class="infos-auteur">
-									{% if  node.field_statut_individu.value  %}
-										{{content.field_statut_individu}}
-									{% endif %}
-									{{content.group_contributor_informations.field_institution}}
-									{% if  node.group_contributor_informations.field_author_digital_identifier.value  %}
-										{{content.group_contributor_informations.field_author_digital_identifier}}
-									{% endif %}
-								</div>
-								{% if  node.body.value  %}
-									{{content.body}}
-								{% endif %}
-								{% if  node.field_links.value  %}
-									{{content.field_links}}
-								{% endif %}
-								{% if  node.field_bibliographic_reference.value  %}
-									{{content.field_bibliographic_reference}}
-								{% endif %}
-							</div>
-						</div>
-						<div>
-							{% if (contents_on_contributor_entity_view_1.value is empty or contents_on_contributor_entity_view_2.value is empty) %}
-								<div class="title-wrapper">
-									<h3>Contenu du contributeur</h3>
-									<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
-								</div>
-								<div>
-									{{ contents_on_contributor_entity_view_1 }}
-									{{ contents_on_contributor_entity_view_2 }}
-								</div>
-							{% endif %}
-						</div>
-					</div>
-				</main>
-			{% elseif type == "partenaire" %}
-				<div class="w-row">
-					<div class="w-col w-col-3">
-						{{content.field_logo}}
-					</div>
-					<div class="w-col w-col-9">
-						{{content.body}}
-					</div>
-				</div>
-			{% elseif type == "dossier_vivarium" %}
-
-				<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
-					<h2 class="inner-title">{{ label }}</h2>
-					<div>
-						{% if node.field_responsable_dossier.value  %}
-							<div class="sub-text-title">
-								Sous la responsabilité de
-								{{ content.field_responsable_dossier|raw }}
-							</div>
-						{% endif %}
-
-						<div class="sub-text-title">
-							{% if node.field_num_pub.value  %}
-								{{ content.field_num_pub|raw }}
-							{% endif %}
-							{% if node.field_date_pub.value and node.field_num_pub.value %}
-								,
-							{% endif %}
-							{% if node.field_date_pub.value  %}
-								{{ content.field_date_pub|raw }}
-							{% endif %}
-						</div>
-						<div class="arrow-down">
-							<a href="#sommaire" class="w-inline-block icon-scroll"></a>
-						</div>
-					</div>
-				</section>
-
-				{% if node.body.value  %}
-					<section id="presentation">
-						<h4 class="post-title">Présentation</h4>
-						{{ content.body }}
-						<div class="views-element-container sidebar-class"></div>
-					</section>
-				{% endif %}
-
-				{% if node.field_mots_cles.value  %}
-
-					<section id="tag">
-						<h4 class="post-title">Mots-clés</h4>
-						<div class="w-clearfix">
-							{{ content.field_mots_cles }}
-						</div>
-
-						<div class="views-element-container sidebar-class"></div>
-					</section>
-				{% endif %}
-
-				<section id="sommaire">
-					<h4 class="post-title">Sommaire du Vivarium</h3>
-					<div id="grid" class="w-clearfix grid grid-not-margin" style="position: relative; height: 3094px;">
-						<div class="grid-sizer"></div>
-						{{ content.article_on_dossier_vivarium_entity_view_1 }}
-					</div>
-					<div class="views-element-container sidebar-class"></div>
-
-				</section>
-
-
-				{% if node.field_pour_citer.value  %}
-					<section id="Notes">
-						<h4 class="post-title">Notes</h4>
-						<p>{{ content.field_pour_citer }}</p>
-					</section>
-				{% endif %}
-
-			{% elseif type == "recit" %}
-				<div id="intro" class="w-section banner-one window-size">
-					<div class="video-wrapper">
-						<div class="w-embed embed-video">
-							{{ content.field_image_de_couverture }}
-						</div>
-						<div class="video-overlay"></div>
-					</div>
-					<div class="w-container container-contact">
-						<div class="align-center issue-banner">
-							<h2 class="inner-title">{{ label }}</h2>
-							{% if  node.field_artiste_invite.value %}
-								<div class="sub-text-title">
-									Artiste invité :
-									{# {{ content.field_artiste_invite }} #}
-									<a href="{{ node.field_artiste_invite.0.entity.path.value|raw}}">
-										{{ node.field_artiste_invite.0.entity.label|raw}}
-									</a>
-								</div>
-							{% endif %}
-							{% if  node.field_interviewer.value %}
-								<div class="sub-text-title">
-									Interviewer :
-									{# {{ content.field_interviewer}} #}
-									<a href="{{ node.field_interviewer.0.entity.path.value|raw}}">
-										{{ node.field_interviewer.0.entity.label|raw}}
-									</a>
-
-								</div>
-							{% endif %}
-						</div>
-					</div>
-				</div>
-
-				<main>
-					<div class="w-row">
-						<div class="w-col w-col-8">
-
-							{{content.body}}
-
-						</div>
-						<div class="w-col w-col-4">
-							<aside>
-								{% if  node.field_artiste_invite.value %}
-									<h4 class="post-title">Artiste</h4>
-									{{ content.field_artiste_invite }}
-								{% endif %}
-								{% if  node.field_interviewer.value %}
-									<h4 class="post-title">Interviewer</h4>
-									{{ content.field_interviewer }}
-								{% endif %}
-								{% if node.field_lectures_connexes.value  %}
-									<h4 class="post-title">Lectures Connexes</h4>
-									{{ content.field_lectures_connexes }}
-								{% endif %}
-							</aside>
-						</div>
-					</div>
-				</main>
-				{% if  node.field_pour_citer.value or node.field_biblio.value %}
-
-					<ul class="nav nav-tabs">
-
-
-						{% if node.field_pour_citer.value  %}
-							<li class="nav-item">
-								<a class="nav-link active" data-toggle="tab" href="#Notes">Notes</a>
-							</li>
-						{% endif %}
-						{% if node.field_biblio.value  %}
-							<li class="nav-item">
-								<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-							</li>
-						{% endif %}
-					</ul>
-
-					<!-- Tab panes -->
-					<div class="tab-content">
-						{% if node.field_pour_citer.value  %}
-							<div class="tab-pane container active" id="Notes">
-								<p>{{content.field_pour_citer}}</p>
-							</div>
-						{% endif %}
-						{% if node.field_biblio.value  %}
-							<div class="tab-pane container fade" id="biblio">
-								<p>{{content.field_biblio}}</p>
-							</div>
-						{% endif %}
-					</div>
-				{% endif %}
-			{% elseif type == "dossier" %}
-				{% set type %}
-				{{ content.field_type_dossier }}
-				{% endset %}
-				{% if type|striptags|trim == "Dossier" %}
-
-					<div id="intro" class="w-section banner-one window-size">
-						<div class="video-wrapper">
-							<div aria-labelledby="Image de couverture du Dossier" class="w-embed embed-video">
-								{{ content.field_image }}
-							</div>
-							<div class="video-overlay"></div>
-						</div>
-						<div class="w-container container-contact">
-
-							<div class="align-center issue-banner">
-								<h1 class="inner-title" aria-labelby="Titre du Dossier" itemprop="name">{{ label }}</h1>
-							</div>
-							<div aria-labelledby="Informations sur le Dossier" class="align-center season-issue">
-								<div class="sub-information line" aria-labelledby="Editeur du Dossier">Sous la responsabilité de
-									{{ content.group_dossier_informations.field_editor}}</div>
-								<div class="sub-information line" aria-labelledby="Revue Parent du Dossier">Dans le numéro
-									{{ content.group_dossier_informations.field_issue}}</div>
-							</div>
-						</div>
-					</div>
-				{% else %}
-					<h1 aria-labelby="Titre du Dossier" itemprop="name">{{ type|striptags|trim }}
-						-
-						{{ content.group_dossier_informations.field_issue }}
-					</h1>
-				{% endif %}
-
-
-				<section id="sommaire" class="w-section section-imp">
-					<div class="w-container">
-						<div class="title-wrapper">
-							<h2>Sommaire</h2>
-							<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
-						</div>
-						<div>
-							{{ content.group_contents.articles_dossier_entity_view_1 }}
-						</div>
-					</div>
-				</section>
-
-			{% elseif type == "nouvelles" %}
-				<div>{{ content.field_nouvelle_date }}</div>
-				<div>{{ content.field_lieu }}</div>
-
-				<p>
-					{{ content.body }}
-				</p>
-
-
-				<div class="doc">
-					{{ content.field_doc }}
-				</div>
-
-			{% elseif type == "issue" %}
-				<div id="intro" class="w-section banner-one window-size">
-					{% if  content.field_image %}
-						<div class="video-wrapper">
-							<div class="w-embed">
-								<div class="bigger-img" style="background-image:url('{{ file_url(node.field_image.entity.fileuri) }}')"></div>
-							</div>
-							<div class="video-overlay"></div>
-						</div>
-					{% endif %}
-					{% if label %}
-						<div itemscope itemtype="https://schema.org/PublicationVolume" class="w-container container-contact">
-							<div class="align-center issue-banner">
-								<h1 class="inner-title" aria-labelby="Titre du Numero" itemprop="name">{{node.label}}</h1>
-								<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number }}</span>
-								<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date}}</span>
-							</div>
-						</div>
-					{% endif %}
-
-				</div>
-
-
-				{% if content.group_contents.editorial_issue_entity_view_1  %}
-
-					<section id="editorial">
-						<span class="editorial-name">Editorial</span>
-						{{ content.group_contents.editorial_issue_entity_view_1 }}
-					</section>
-				{% endif %}
-				{% if content.group_contents.dossiers_on_issue_entity_view_1  %}
-					<section id="dossiers">
-						<div class="w-row">
-							{{ content.group_contents.dossiers_on_issue_entity_view_1 }}
-						</div>
-					</section>
-				{% endif %}
-				{% if content.group_contents.hors_dossiers_on_issue_entity_view_1  %}
-					<section id="hors-dossiers">
-						<div class="w-row">
-							{{ content.group_contents.hors_dossiers_on_issue_entity_view_1 }}
-						</div>
-					</section>
-				{% endif %}
-				{% if content.group_contents.individual_articles_entity_view_1  %}
-					<section id="individuel">
-						<div class="w-row">
-							{{content.group_contents.individual_articles_entity_view_1}}
-						</div>
-					</section>
-				{% endif %}
-			{% elseif type == "article_web" or type == "la_ruche"%}
-				<div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
-					<h2 class="inner-title">{{ label }}</h2>
-					{% if content.field_dossier_vivarium  %}
-						{% if node.field_dossier_vivarium.value  %}
-							<p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
-						{% endif %}
-					{% endif %}
-
-					<div class="arrow-down">
-						<a href="#contenu" class="w-inline-block icon-scroll"></a>
-					</div>
-				</div>
-				<main id="contenu" class="w-section section-imp">
-					<div class="w-container">
-						<div
-							class="w-row">
-							{# SIDEBAR #}
-							{% if node.field_auteur.value or node.field_mots_cles.value or node.field_lectures_connexes.value %}
+							{% if  node.group_article_informations.field_author.value ||  node.group_article_informations.field_tags.value || node.field_lectures_connexes.value %}
 								<div
 									class="w-col w-col-3">
 
 									{# Auteurs #}
-									{% if node.field_auteur.value  %}
+									{% if node.group_article_informations.field_author.value %}
 										<div class="sidebar-class">
 											<h4 class="post-title">Auteur(s)</h4>
-											{{content.field_auteur }}
+											{{content.group_article_informations.field_author }}
 										</div>
 									{% endif %}
-
-									{# Mots-Clés #}
-									{% if  node.field_mots_cles.value %}
+									{% if  node.group_article_informations.field_tags.value %}
+										{# Mots-Clés #}
 										<div class="views-element-container sidebar-class">
 											<h4 class="post-title">Mots-clés</h4>
 
 											<div class="w-clearfix">
-												{{ content.field_mots_cles }}
+												{{ content.group_article_informations.field_tags }}
 											</div>
 										</div>
 									{% endif %}
 
+
 									{# Lectures Connexes #}
 									{% if node.field_lectures_connexes.value  %}
-
 										<div class="views-element-container sidebar-class">
 											<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
 												<h4 class="post-title">Lectures Connexes</h4>
 												{{ content.field_lectures_connexes }}
 											</div>
+
 										</div>
 									{% endif %}
 
@@ -695,52 +227,523 @@
 								{% else %}
 									<div class="w-col w-col-12">
 									{% endif %}
+
 									{# Body #}
+
 									<div class="bottom-space">
-										{{ content.body }}
+										{% if node.body.value  %}
+											{{ content.body }}
+										{% else %}
+											<p>Abonnez-Vous</p>
+										{% endif %}
 									</div>
 
 								</div>
 							</div>
-							{% if node.field_pour_citer.value or node.field_biblio.value %}
 
-								{# Notes et Biblio #}
-								<ul class="nav nav-tabs">
-									{% if node.field_pour_citer.value %}
-										<li class="nav-item">
-											<a class="nav-link active" data-toggle="tab" href="#Notes">Notes</a>
-										</li>
-									{% endif %}
-									{% if node.field_biblio.value %}
-										<li class="nav-item">
-											<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
-										</li>
-									{% endif %}
-								</ul>
+							{# Notes et Biblio #}
+							<ul class="nav nav-tabs">
+								{% if node.field_pour_citer.value  %}
+									<li class="nav-item">
+										<a class="nav-link active" data-toggle="tab" href="#Notes">Notes</a>
+									</li>
+								{% endif %}
+								{% if node.field_bibliographic_reference.value %}
+									<li class="nav-item">
+										<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+									</li>
+								{% endif %}
+								{% if node.field_pdf.value %}
+									<li class="nav-item">
+										<a class="nav-link" data-toggle="tab" href="#pdf">Article PDF</a>
+									</li>
+								{% endif %}
+							</ul>
 
-								<!-- Tab panes -->
-								<div class="tab-content">
-									{% if node.field_pour_citer.value %}
-										<div class="tab-pane container active" id="Notes">
-											<p>{{content.field_pour_citer}}</p>
-										</div>
+							<!-- Tab panes -->
+							<div class="tab-content">
+								{% if node.field_pour_citer.value   %}
+									<div class="tab-pane container active" id="Notes">
+										<p>{{content.field_pour_citer}}</p>
+									</div>
+								{% endif %}
+								{% if  node.field_bibliographic_reference.value %}
+									<div class="tab-pane container fade" id="biblio">
+										<p>{{content.field_bibliographic_reference}}</p>
+									</div>
+								{% endif %}
+								{% if node.field_pdf.value %}
+									<div class="tab-pane container fade" id="pdf">
+										<p>{{content.field_pdf}}</p>
+									</div>
+								{% endif %}
+							</div>
+						</div>
+					</main>
+				{% elseif type == "echappee" %}
+					<section>
+						<h4 class="post-title">Auteur(s)</h4>
+						{{ content.field_author }}
+						<div class="views-element-container sidebar-class"></div>
+					</section>
+					<section>
+						<h4 class="post-title">Lectures connexes</h4>
+
+						<div class="lectures">
+							{{ content.field_lectures_connexes }}
+						</div>
+						<div class="views-element-container sidebar-class"></div>
+					</section>
+					<div>
+						<h4 class="post-title">Mots-Clés</h4>
+
+						<div class="w-clearfix">
+							{{ content.field_mots_cles}}
+						</div>
+						<div class="views-element-container sidebar-class"></div>
+					</div>
+
+					<p>
+						{{ content.body }}
+					</p>
+
+
+					<ul class="nav nav-tabs">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#Notes">Notes</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+						</li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane container active" id="Notes">
+							<p>{{content.field_pour_citer}}</p>
+						</div>
+						<div class="tab-pane container fade" id="biblio">
+							<p>{{content.field_biblio}}</p>
+						</div>
+					</div>
+				{% elseif type == "contributor" %}
+					<main class="w-section section-imp more-padding">
+						<div class="w-container">
+							<div class="w-row">
+								<div class="w-col w-col-12 ">
+									<div class="infos-auteur">
+										{% if  node.field_statut_individu.value  %}
+											{{content.field_statut_individu}}
+										{% endif %}
+										{{content.group_contributor_informations.field_institution}}
+										{% if  node.group_contributor_informations.field_author_digital_identifier.value  %}
+											{{content.group_contributor_informations.field_author_digital_identifier}}
+										{% endif %}
+									</div>
+									{% if  node.body.value  %}
+										{{content.body}}
 									{% endif %}
-									{% if node.field_biblio.value %}
-										<div class="tab-pane container fade" id="biblio">
-											<p>{{content.field_biblio}}</p>
-										</div>
+									{% if  node.field_links.value  %}
+										{{content.field_links}}
 									{% endif %}
+									{% if  node.field_bibliographic_reference.value  %}
+										{{content.field_bibliographic_reference}}
+									{% endif %}
+								</div>
+							</div>
+							<div>
+								{% if (contents_on_contributor_entity_view_1.value is empty or contents_on_contributor_entity_view_2.value is empty) %}
+									<div class="title-wrapper">
+										<h3>Contenu du contributeur</h3>
+										<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
+									</div>
+									<div>
+										{{ contents_on_contributor_entity_view_1 }}
+										{{ contents_on_contributor_entity_view_2 }}
+									</div>
+								{% endif %}
+							</div>
+						</div>
+					</main>
+				{% elseif type == "partenaire" %}
+					<div class="w-row">
+						<div class="w-col w-col-3">
+							{{content.field_logo}}
+						</div>
+						<div class="w-col w-col-9">
+							{{content.body}}
+						</div>
+					</div>
+				{% elseif type == "dossier_vivarium" %}
+
+					<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
+						<h2 class="inner-title">{{ label }}</h2>
+						<div>
+							{% if node.field_responsable_dossier.value  %}
+								<div class="sub-text-title">
+									Sous la responsabilité de
+									{{ content.field_responsable_dossier|raw }}
+								</div>
+							{% endif %}
+
+							<div class="sub-text-title">
+								{% if node.field_num_pub.value  %}
+									{{ content.field_num_pub|raw }}
+								{% endif %}
+								{% if node.field_date_pub.value and node.field_num_pub.value %}
+									,
+								{% endif %}
+								{% if node.field_date_pub.value  %}
+									{{ content.field_date_pub|raw }}
+								{% endif %}
+							</div>
+							<div class="arrow-down">
+								<a href="#sommaire" class="w-inline-block icon-scroll"></a>
+							</div>
+						</div>
+					</section>
+
+					{% if node.body.value  %}
+						<section id="presentation">
+							<h4 class="post-title">Présentation</h4>
+							{{ content.body }}
+							<div class="views-element-container sidebar-class"></div>
+						</section>
+					{% endif %}
+
+					{% if node.field_mots_cles.value  %}
+
+						<section id="tag">
+							<h4 class="post-title">Mots-clés</h4>
+							<div class="w-clearfix">
+								{{ content.field_mots_cles }}
+							</div>
+
+							<div class="views-element-container sidebar-class"></div>
+						</section>
+					{% endif %}
+
+					<section id="sommaire">
+						<h4 class="post-title">Sommaire du Vivarium</h3>
+						<div id="grid" class="w-clearfix grid grid-not-margin" style="position: relative; height: 3094px;">
+							<div class="grid-sizer"></div>
+							{{ content.article_on_dossier_vivarium_entity_view_1 }}
+						</div>
+						<div class="views-element-container sidebar-class"></div>
+
+					</section>
+
+
+					{% if node.field_pour_citer.value  %}
+						<section id="Notes">
+							<h4 class="post-title">Notes</h4>
+							<p>{{ content.field_pour_citer }}</p>
+						</section>
+					{% endif %}
+
+				{% elseif type == "recit" %}
+					<div id="intro" class="w-section banner-one window-size">
+						<div class="video-wrapper">
+							<div class="w-embed embed-video">
+								{{ content.field_image_de_couverture }}
+							</div>
+							<div class="video-overlay"></div>
+						</div>
+						<div class="w-container container-contact">
+							<div class="align-center issue-banner">
+								<h2 class="inner-title">{{ label }}</h2>
+								{% if  node.field_artiste_invite.value %}
+									<div class="sub-text-title">
+										Artiste invité :
+										{# {{ content.field_artiste_invite }} #}
+										<a href="{{ node.field_artiste_invite.0.entity.path.value|raw}}">
+											{{ node.field_artiste_invite.0.entity.label|raw}}
+										</a>
+									</div>
+								{% endif %}
+								{% if  node.field_interviewer.value %}
+									<div class="sub-text-title">
+										Interviewer :
+										{# {{ content.field_interviewer}} #}
+										<a href="{{ node.field_interviewer.0.entity.path.value|raw}}">
+											{{ node.field_interviewer.0.entity.label|raw}}
+										</a>
+
+									</div>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+
+					<main>
+						<div class="w-row">
+							<div class="w-col w-col-8">
+
+								{{content.body}}
+
+							</div>
+							<div class="w-col w-col-4">
+								<aside>
+									{% if  node.field_artiste_invite.value %}
+										<h4 class="post-title">Artiste</h4>
+										{{ content.field_artiste_invite }}
+									{% endif %}
+									{% if  node.field_interviewer.value %}
+										<h4 class="post-title">Interviewer</h4>
+										{{ content.field_interviewer }}
+									{% endif %}
+									{% if node.field_lectures_connexes.value  %}
+										<h4 class="post-title">Lectures Connexes</h4>
+										{{ content.field_lectures_connexes }}
+									{% endif %}
+								</aside>
+							</div>
+						</div>
+					</main>
+					{% if  node.field_pour_citer.value or node.field_biblio.value %}
+
+						<ul class="nav nav-tabs">
+
+
+							{% if node.field_pour_citer.value  %}
+								<li class="nav-item">
+									<a class="nav-link active" data-toggle="tab" href="#Notes">Notes</a>
+								</li>
+							{% endif %}
+							{% if node.field_biblio.value  %}
+								<li class="nav-item">
+									<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+								</li>
+							{% endif %}
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+							{% if node.field_pour_citer.value  %}
+								<div class="tab-pane container active" id="Notes">
+									<p>{{content.field_pour_citer}}</p>
+								</div>
+							{% endif %}
+							{% if node.field_biblio.value  %}
+								<div class="tab-pane container fade" id="biblio">
+									<p>{{content.field_biblio}}</p>
 								</div>
 							{% endif %}
 						</div>
-					</main>
-				{% else %}
-					{{ content }}
+					{% endif %}
+				{% elseif type == "dossier" %}
+					{% set type %}
+					{{ content.field_type_dossier }}
+					{% endset %}
+					{% if type|striptags|trim == "Dossier" %}
 
-				{% endif %}
+						<div id="intro" class="w-section banner-one window-size">
+							<div class="video-wrapper">
+								<div aria-labelledby="Image de couverture du Dossier" class="w-embed embed-video">
+									{{ content.field_image }}
+								</div>
+								<div class="video-overlay"></div>
+							</div>
+							<div class="w-container container-contact">
+
+								<div class="align-center issue-banner">
+									<h1 class="inner-title" aria-labelby="Titre du Dossier" itemprop="name">{{ label }}</h1>
+								</div>
+								<div aria-labelledby="Informations sur le Dossier" class="align-center season-issue">
+									<div class="sub-information line" aria-labelledby="Editeur du Dossier">Sous la responsabilité de
+										{{ content.group_dossier_informations.field_editor}}</div>
+									<div class="sub-information line" aria-labelledby="Revue Parent du Dossier">Dans le numéro
+										{{ content.group_dossier_informations.field_issue}}</div>
+								</div>
+							</div>
+						</div>
+					{% else %}
+						<h1 aria-labelby="Titre du Dossier" itemprop="name">{{ type|striptags|trim }}
+							-
+							{{ content.group_dossier_informations.field_issue }}
+						</h1>
+					{% endif %}
 
 
-			</div>
+					<section id="sommaire" class="w-section section-imp">
+						<div class="w-container">
+							<div class="title-wrapper">
+								<h2>Sommaire</h2>
+								<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
+							</div>
+							<div>
+								{{ content.group_contents.articles_dossier_entity_view_1 }}
+							</div>
+						</div>
+					</section>
 
-		</article>
-	{% endif %}
+				{% elseif type == "nouvelles" %}
+					<div>{{ content.field_nouvelle_date }}</div>
+					<div>{{ content.field_lieu }}</div>
+
+					<p>
+						{{ content.body }}
+					</p>
+
+
+					<div class="doc">
+						{{ content.field_doc }}
+					</div>
+
+				{% elseif type == "issue" %}
+					<div id="intro" class="w-section banner-one window-size">
+						{% if  content.field_image %}
+							<div class="video-wrapper">
+								<div class="w-embed">
+									<div class="bigger-img" style="background-image:url('{{ file_url(node.field_image.entity.fileuri) }}')"></div>
+								</div>
+								<div class="video-overlay"></div>
+							</div>
+						{% endif %}
+						{% if label %}
+							<div itemscope itemtype="https://schema.org/PublicationVolume" class="w-container container-contact">
+								<div class="align-center issue-banner">
+									<h1 class="inner-title" aria-labelby="Titre du Numero" itemprop="name">{{node.label}}</h1>
+									<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number }}</span>
+									<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date}}</span>
+								</div>
+							</div>
+						{% endif %}
+
+					</div>
+
+
+					{% if content.group_contents.editorial_issue_entity_view_1  %}
+
+						<section id="editorial">
+							<span class="editorial-name">Editorial</span>
+							{{ content.group_contents.editorial_issue_entity_view_1 }}
+						</section>
+					{% endif %}
+					{% if content.group_contents.dossiers_on_issue_entity_view_1  %}
+						<section id="dossiers">
+							<div class="w-row">
+								{{ content.group_contents.dossiers_on_issue_entity_view_1 }}
+							</div>
+						</section>
+					{% endif %}
+					{% if content.group_contents.hors_dossiers_on_issue_entity_view_1  %}
+						<section id="hors-dossiers">
+							<div class="w-row">
+								{{ content.group_contents.hors_dossiers_on_issue_entity_view_1 }}
+							</div>
+						</section>
+					{% endif %}
+					{% if content.group_contents.individual_articles_entity_view_1  %}
+						<section id="individuel">
+							<div class="w-row">
+								{{content.group_contents.individual_articles_entity_view_1}}
+							</div>
+						</section>
+					{% endif %}
+				{% elseif type == "article_web" or type == "la_ruche"%}
+					<div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
+						<h2 class="inner-title">{{ label }}</h2>
+						{% if content.field_dossier_vivarium  %}
+							{% if node.field_dossier_vivarium.value  %}
+								<p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
+							{% endif %}
+						{% endif %}
+
+						<div class="arrow-down">
+							<a href="#contenu" class="w-inline-block icon-scroll"></a>
+						</div>
+					</div>
+					<main id="contenu" class="w-section section-imp">
+						<div class="w-container">
+							<div
+								class="w-row">
+								{# SIDEBAR #}
+								{% if node.field_auteur.value or node.field_mots_cles.value or node.field_lectures_connexes.value %}
+									<div
+										class="w-col w-col-3">
+
+										{# Auteurs #}
+										{% if node.field_auteur.value  %}
+											<div class="sidebar-class">
+												<h4 class="post-title">Auteur(s)</h4>
+												{{content.field_auteur }}
+											</div>
+										{% endif %}
+
+										{# Mots-Clés #}
+										{% if  node.field_mots_cles.value %}
+											<div class="views-element-container sidebar-class">
+												<h4 class="post-title">Mots-clés</h4>
+
+												<div class="w-clearfix">
+													{{ content.field_mots_cles }}
+												</div>
+											</div>
+										{% endif %}
+
+										{# Lectures Connexes #}
+										{% if node.field_lectures_connexes.value  %}
+
+											<div class="views-element-container sidebar-class">
+												<div data-duration-in="300" data-duration-out="100" class="w-tabs tabs left-alg">
+													<h4 class="post-title">Lectures Connexes</h4>
+													{{ content.field_lectures_connexes }}
+												</div>
+											</div>
+										{% endif %}
+
+									</div>
+									<div class="w-col w-col-9">
+									{% else %}
+										<div class="w-col w-col-12">
+										{% endif %}
+										{# Body #}
+										<div class="bottom-space">
+											{{ content.body }}
+										</div>
+
+									</div>
+								</div>
+								{% if node.field_pour_citer.value or node.field_biblio.value %}
+
+									{# Notes et Biblio #}
+									<ul class="nav nav-tabs">
+										{% if node.field_pour_citer.value %}
+											<li class="nav-item">
+												<a class="nav-link active" data-toggle="tab" href="#Notes">Notes</a>
+											</li>
+										{% endif %}
+										{% if node.field_biblio.value %}
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
+											</li>
+										{% endif %}
+									</ul>
+
+									<!-- Tab panes -->
+									<div class="tab-content">
+										{% if node.field_pour_citer.value %}
+											<div class="tab-pane container active" id="Notes">
+												<p>{{content.field_pour_citer}}</p>
+											</div>
+										{% endif %}
+										{% if node.field_biblio.value %}
+											<div class="tab-pane container fade" id="biblio">
+												<p>{{content.field_biblio}}</p>
+											</div>
+										{% endif %}
+									</div>
+								{% endif %}
+							</div>
+						</main>
+					{% else %}
+						{{ content }}
+
+					{% endif %}
+
+
+				</div>
+
+			</article>
+		{% endif %}
