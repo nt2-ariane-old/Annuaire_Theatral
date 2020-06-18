@@ -299,6 +299,10 @@ ul.tabs.primary:before {
   font-weight: bolder;
 }
 
+#editorial h3 {
+  padding: 0;
+}
+
 #intro {
   position: relative;
   width: 100%;
