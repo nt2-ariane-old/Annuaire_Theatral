@@ -303,8 +303,8 @@ ul.tabs.primary:before {
   margin: 1rem 2rem;
 }
 
-#intro .align-center ::before {
-  background-color: var(--banner_01);
+#intro .align-center::before {
+  background-color: var(--banner-color);
   content: "";
   height: 100%;
   left: 0;
@@ -315,8 +315,8 @@ ul.tabs.primary:before {
   z-index: -1;
 }
 
-#intro .align-center.season-issue ::before {
-  background-color: var(--bg_02);
+#intro .align-center.season-issue::before {
+  background-color: var(--other-bg-color);
   content: "";
   height: 100%;
   left: 0;

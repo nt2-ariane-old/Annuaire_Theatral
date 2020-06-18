@@ -300,8 +300,8 @@ ul {
   .align-center {
     margin: 1rem 2rem;
 
-    ::before {
-      background-color: var(--banner_01);
+    &::before {
+      background-color: var(--banner-color);
       content: "";
       height: 100%;
       left: 0;
@@ -312,8 +312,8 @@ ul {
       z-index: -1;
     }
 
-    &.season-issue ::before {
-      background-color: var(--bg_02);
+    &.season-issue::before {
+      background-color: var(--other-bg-color);
       content: "";
       height: 100%;
       left: 0;
