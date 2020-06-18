@@ -447,7 +447,7 @@
 						<div class="video-overlay"></div>
 					</div>
 					<div class="w-container container-contact">
-						<div class="align-center">
+						<div class="align-center issue-banner">
 							<h2 class="inner-title">{{ label }}</h2>
 							{% if  node.field_artiste_invite.value %}
 								<div class="sub-text-title">
@@ -543,7 +543,7 @@
 						</div>
 						<div class="w-container container-contact">
 
-							<div class="align-center">
+							<div class="align-center issue-banner">
 								<h1 class="inner-title" aria-labelby="Titre du Dossier" itemprop="name">{{ label }}</h1>
 							</div>
 							<div aria-labelledby="Informations sur le Dossier" class="align-center season-issue">
@@ -599,7 +599,7 @@
 					{% endif %}
 					{% if label %}
 						<div itemscope itemtype="https://schema.org/PublicationVolume" class="w-container container-contact">
-							<div class="align-center">
+							<div class="align-center issue-banner">
 								<h1 class="inner-title" aria-labelby="Titre du Numero" itemprop="name">{{node.label}}</h1>
 								<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ content.field_issue_number }}</span>
 								<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ content.field_publication_date}}</span>
