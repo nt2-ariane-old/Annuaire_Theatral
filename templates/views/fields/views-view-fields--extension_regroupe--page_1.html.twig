@@ -8,8 +8,8 @@
 	{% set class = 'recits' %}
 {% endif %}
 
-{% for key in fields|keys %}
-	{{key}} : {{fields[key]["content"]}}
+{% for key,value in fields %}
+	{{key}} : {{value.content}}
 {% endfor %}
 <div class="item {{class}}">
 	<div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">
