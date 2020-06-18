@@ -294,15 +294,12 @@ ul {
   margin: 2em auto;
 }
 
-#editorial
-{
-  .editorial-name
-  {
+#editorial {
+  .editorial-name {
     font-size: 1.1rem;
     font-weight: bolder;
   }
-  h3
-  {
+  h3 {
     padding: 0;
   }
 }
@@ -523,7 +520,7 @@ ul {
 }
 
 .blog-content {
-  background-color: var(--main-bg-color);
+  background-color: var(--bar-bg-color);
 
   .sub-information {
     text-align: left;
@@ -1218,7 +1215,9 @@ ul {
     }
   }
 }
-
+.service-icon {
+  color: var(--banner-color);
+}
 .season-issue .paragraphs-collapsed-description,
 .sub-information .paragraphs-collapsed-description {
   color: var(--bg_01);

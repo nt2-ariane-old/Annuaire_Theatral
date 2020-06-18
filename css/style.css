@@ -527,7 +527,7 @@ ul.tabs.primary:before {
 }
 
 .blog-content {
-  background-color: var(--main-bg-color);
+  background-color: var(--bar-bg-color);
 }
 
 .blog-content .sub-information {
@@ -1262,6 +1262,10 @@ ul.tabs.primary:before {
   -webkit-transition: width 0.4s linear;
   transition: width 0.4s linear;
   width: 150px;
+}
+
+.service-icon {
+  color: var(--banner-color);
 }
 
 .season-issue .paragraphs-collapsed-description,

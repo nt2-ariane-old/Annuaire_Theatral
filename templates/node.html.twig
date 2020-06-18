@@ -188,6 +188,9 @@
 						<div
 							class="w-row">
 							{# SIDEBAR #}
+							{% for key in node|keys %}
+								{{ key }}
+							{% endfor %}
 							{% if  node.group_article_informations.field_author.value or  node.group_article_informations.field_tags.value or node.field_lectures_connexes.value %}
 								<div
 									class="w-col w-col-3">
