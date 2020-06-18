@@ -9,7 +9,7 @@
 {% endif %}
 
 {% for key in fields|keys %}
-	{{key}}
+	{{key}} : {{fields[key]["content"]}}
 {% endfor %}
 <div class="item {{class}}">
 	<div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">
