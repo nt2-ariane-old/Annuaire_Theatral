@@ -1412,6 +1412,11 @@ ul.tabs.primary:before {
   min-width: 160px;
   position: absolute;
   z-index: 1;
+  white-space: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .top-border > div #block-navigationprincipale .topnav .dropdown .dropdown-content a {
@@ -1423,7 +1428,9 @@ ul.tabs.primary:before {
 }
 
 .top-border > div #block-navigationprincipale .topnav .dropdown:hover .dropdown-content {
-  display: block !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .top-border > div #block-navigationprincipale .topnav .icon {
