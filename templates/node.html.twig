@@ -617,28 +617,28 @@
 						{{ key }}
 					{% endfor %}
 
-					{% if node.editorial_issue_entity_view_1.value  %}
+					{% if content.group_contents.editorial_issue_entity_view_1   %}
 
 						<section id="editorial">
 							<span class="editorial-name">Editorial</span>
 							{{ content.group_contents.editorial_issue_entity_view_1 }}
 						</section>
 					{% endif %}
-					{% if node.dossiers_on_issue_entity_view_1.value  %}
+					{% if content.group_contents.dossiers_on_issue_entity_view_1  %}
 						<section id="dossiers">
 							<div class="w-row">
 								{{ content.group_contents.dossiers_on_issue_entity_view_1 }}
 							</div>
 						</section>
 					{% endif %}
-					{% if node.hors_dossiers_on_issue_entity_view_1.value  %}
+					{% if content.group_contents.hors_dossiers_on_issue_entity_view_1  %}
 						<section id="hors-dossiers">
 							<div class="w-row">
 								{{ content.group_contents.hors_dossiers_on_issue_entity_view_1 }}
 							</div>
 						</section>
 					{% endif %}
-					{% if node.individual_articles_entity_view_1.value  %}
+					{% if content.group_contents.individual_articles_entity_view_1  %}
 						<section id="individuel">
 							<div class="w-row">
 								{{content.group_contents.individual_articles_entity_view_1}}
