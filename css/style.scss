@@ -504,6 +504,10 @@ ul {
 .bibcite-reference {
   display: block;
   width: 95%;
+  .field--name-author
+  {
+    text-transform: uppercase;
+  }
   * {
     display: inline-block;
   }
