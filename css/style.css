@@ -510,7 +510,7 @@ ul.tabs.primary:before {
 }
 
 .bibcite-reference {
-  display: inline-block;
+  display: block;
   width: 95%;
 }
 
