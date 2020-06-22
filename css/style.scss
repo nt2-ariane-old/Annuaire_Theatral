@@ -501,7 +501,13 @@ ul {
 .banner-one {
   height: calc(100vh - 60px - 60px);
 }
-
+.bibcite-reference {
+  display: inline-block;
+  width: 95%;
+  * {
+    display: inline-block;
+  }
+}
 .bigger-img {
   background-position: center;
   background-repeat: no-repeat;
@@ -897,6 +903,9 @@ ul {
   line-height: 5.5rem;
 }
 
+.issue-article {
+  text-align: justify;
+}
 .item.blog-item {
   width: 100%;
 }
