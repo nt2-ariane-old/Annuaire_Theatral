@@ -514,12 +514,9 @@ ul.tabs.primary:before {
   width: 95%;
 }
 
-.bibcite-reference .field--name-author {
-  text-transform: uppercase;
-}
-
-.bibcite-reference * {
+.bibcite-reference .csl-entry {
   display: inline-block;
+  padding: 1rem 0;
 }
 
 .bigger-img {

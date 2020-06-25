@@ -504,12 +504,10 @@ ul {
 .bibcite-reference {
   display: block;
   width: 95%;
-  .field--name-author
+  .csl-entry
   {
-    text-transform: uppercase;
-  }
-  * {
     display: inline-block;
+    padding: 1rem 0;
   }
 }
 .bigger-img {
