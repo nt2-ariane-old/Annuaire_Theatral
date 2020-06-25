@@ -516,8 +516,13 @@ ul.tabs.primary:before {
 
 .bibcite-reference .bibcite-citation {
   display: inline-block;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   text-align: left;
+  font-size: 1rem;
+}
+
+.bibcite-reference .bibcite-citation .citeproc-title {
+  font-style: italic;
 }
 
 .bigger-img {
@@ -1245,7 +1250,7 @@ ul.tabs.primary:before {
   border: 0;
   caret-color: transparent;
   caret-color: var(--banner_01);
-  color: var(--text_02);
+  color: var(--main-bg-color);
   line-height: 16px;
   outline: 0;
   padding: 0 10px;
@@ -1420,7 +1425,7 @@ ul.tabs.primary:before {
 }
 
 .top-border > div #block-navigationprincipale .topnav .dropdown .dropdown-content {
-  background-color: var(--text_04);
+  background-color: var(--bar-bg-color);
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   display: none;

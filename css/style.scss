@@ -504,11 +504,14 @@ ul {
 .bibcite-reference {
   display: block;
   width: 95%;
-  .bibcite-citation
-  {
+  .bibcite-citation {
     display: inline-block;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     text-align: left;
+    font-size: 1rem;
+    .citeproc-title {
+      font-style: italic;
+    }
   }
 }
 .bigger-img {
@@ -1194,7 +1197,7 @@ ul {
   border: 0;
   caret-color: transparent;
   caret-color: var(--banner_01);
-  color: var(--text_02);
+  color: var(--main-bg-color);
   line-height: 16px;
   outline: 0;
   padding: 0 10px;
@@ -1353,7 +1356,7 @@ ul {
           }
 
           .dropdown-content {
-            background-color: var(--text_04);
+            background-color: var(--bar-bg-color);
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             display: none;
             min-width: 160px;
