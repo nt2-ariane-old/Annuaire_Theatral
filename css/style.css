@@ -1416,6 +1416,10 @@ ul.tabs.primary:before {
   color: var(--bg_03);
 }
 
+.top-border > div #block-navigationprincipale .topnav .search_input {
+  color: var(--main-bg-color);
+}
+
 .top-border > div #block-navigationprincipale .topnav .dropdown .dropbtn {
   background-color: transparent;
   height: 0;
@@ -1604,20 +1608,14 @@ details {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    ms-flex-align: start;
-    ms-flex-direction: column;
-    webkit-box-align: start;
-    webkit-box-direction: normal;
-    webkit-box-orient: vertical;
   }
   .top-border > div #block-navigationprincipale .topnav .dropdown .dropdown-content {
-    background-color: var(--main-txt-color);
+    background-color: var(--bar-bg-color);
     -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     display: none;
     min-width: 160px;
     position: absolute;
-    webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
   .top-border > div #block-navigationprincipale .topnav .dropdown .dropdown-content a {
@@ -1629,16 +1627,13 @@ details {
   }
   .top-border > div #block-navigationprincipale .topnav .dropdown:hover .dropdown-content {
     display: block;
-    display: flex;
-    display: -ms-flexbox;
     display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    ms-flex-direction: column;
-    webkit-box-direction: normal;
-    webkit-box-orient: vertical;
   }
   .top-border > div #block-navigationprincipale .topnav .icon {
     display: block;

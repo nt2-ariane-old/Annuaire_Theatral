@@ -1345,6 +1345,9 @@ ul {
         * {
           color: var(--bg_03);
         }
+        .search_input {
+          color: var(--main-bg-color);
+        }
 
         .dropdown {
           .dropbtn {
@@ -1540,20 +1543,13 @@ details {
         background-color: var(--bar-bg-color);
         color: var(--main-txt-color);
         flex-direction: column;
-        ms-flex-align: start;
-        ms-flex-direction: column;
-        webkit-box-align: start;
-        webkit-box-direction: normal;
-        webkit-box-orient: vertical;
-
         .dropdown {
           .dropdown-content {
-            background-color: var(--main-txt-color);
+            background-color: var(--bar-bg-color);
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             display: none;
             min-width: 160px;
             position: absolute;
-            webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
 
             a {
@@ -1568,12 +1564,7 @@ details {
           &:hover .dropdown-content {
             display: block;
             display: flex;
-            display: -ms-flexbox;
-            display: -webkit-box;
             flex-direction: column;
-            ms-flex-direction: column;
-            webkit-box-direction: normal;
-            webkit-box-orient: vertical;
           }
         }
 
