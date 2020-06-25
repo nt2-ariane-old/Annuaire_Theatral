@@ -514,9 +514,10 @@ ul.tabs.primary:before {
   width: 95%;
 }
 
-.bibcite-reference .csl-entry {
+.bibcite-reference .bibcite-citation {
   display: inline-block;
   padding: 1rem 0;
+  text-align: left;
 }
 
 .bigger-img {

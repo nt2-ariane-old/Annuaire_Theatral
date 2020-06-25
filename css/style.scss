@@ -504,10 +504,11 @@ ul {
 .bibcite-reference {
   display: block;
   width: 95%;
-  .csl-entry
+  .bibcite-citation
   {
     display: inline-block;
     padding: 1rem 0;
+    text-align: left;
   }
 }
 .bigger-img {
