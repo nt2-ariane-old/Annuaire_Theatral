@@ -1312,7 +1312,7 @@ ul.tabs.primary:before {
 }
 
 .see-footnote {
-  font-size: 0.8rem;
+  font-size: 0.8rem !important;
 }
 
 .show-filter {
