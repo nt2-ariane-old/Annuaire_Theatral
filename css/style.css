@@ -1393,6 +1393,7 @@ ul.tabs.primary:before {
 .field--name-bibcite-custom7,
 .field--name-bibcite-custom8 {
   display: inline-block;
+  font-size: 1rem;
 }
 
 .top-border {
