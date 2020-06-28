@@ -533,7 +533,7 @@ ul {
 
 .blog-content {
   background-color: var(--bar-bg-color);
-
+  overflow-y: auto;
   .sub-information {
     text-align: left;
   }
@@ -1254,7 +1254,9 @@ ul {
   background-color: transparent;
   padding: 40px 20px;
 }
-
+.see-footnote {
+    font-size: 0.8rem;
+}
 .show-filter {
   background-color: var(--banner-color);
 }

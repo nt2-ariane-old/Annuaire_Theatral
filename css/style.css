@@ -544,6 +544,7 @@ ul.tabs.primary:before {
 
 .blog-content {
   background-color: var(--bar-bg-color);
+  overflow-y: auto;
 }
 
 .blog-content .sub-information {
@@ -1308,6 +1309,10 @@ ul.tabs.primary:before {
 .section-imp {
   background-color: transparent;
   padding: 40px 20px;
+}
+
+.see-footnote {
+  font-size: 0.8rem;
 }
 
 .show-filter {
