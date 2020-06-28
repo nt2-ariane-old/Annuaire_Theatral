@@ -1313,6 +1313,7 @@ ul.tabs.primary:before {
 
 .see-footnote {
   font-size: 0.8rem !important;
+  padding: 3px;
 }
 
 .show-filter {
@@ -1381,6 +1382,17 @@ ul.tabs.primary:before {
 
 .toolbar-fixed .top-border {
   top: 40px;
+}
+
+.field--name-bibcite-custom1,
+.field--name-bibcite-custom2,
+.field--name-bibcite-custom3,
+.field--name-bibcite-custom4,
+.field--name-bibcite-custom5,
+.field--name-bibcite-custom6,
+.field--name-bibcite-custom7,
+.field--name-bibcite-custom8 {
+  display: inline-block;
 }
 
 .top-border {
