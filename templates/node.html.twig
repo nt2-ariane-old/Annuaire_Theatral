@@ -561,7 +561,7 @@
 							</div>
 						</div>
 					{% else %}
-					{% for key in content|keys %}
+					{% for key in content.group_dossier_informations|keys %}
 						{{ key }}
 					{% endfor %}
 						<h1 aria-labelby="Titre du Dossier" itemprop="name">{{ type|striptags|trim }}
