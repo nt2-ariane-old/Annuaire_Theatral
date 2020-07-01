@@ -555,15 +555,15 @@
 								<div aria-labelledby="Informations sur le Dossier" class="align-center season-issue">
 									<div class="sub-information line" aria-labelledby="Editeur du Dossier">Sous la responsabilité de
 										{{ content.group_dossier_informations.field_editor}}</div>
-									<div class="sub-information line" aria-labelledby="Revue Parent du Dossier">Dans le numéro
-										{{ content.group_dossier_informations.field_issue}}</div>
+									<div class="sub-information line" aria-labelledby="Revue Parent du Dossier">Dans le
+										{{ content.group_dossier_informations.field_issue_number}}</div>
 								</div>
 							</div>
 						</div>
 					{% else %}
 						<h1 aria-labelby="Titre du Dossier" itemprop="name">{{ type|striptags|trim }}
 							-
-							{{ content.group_dossier_informations.field_issue }}
+							{{ content.group_dossier_informations.field_issue_number }}
 						</h1>
 					{% endif %}
 
