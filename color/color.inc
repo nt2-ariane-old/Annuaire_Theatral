@@ -11,7 +11,7 @@ $info = array(
         'searchbar' => t('Bar de Recherche'),
         'base' => t('Couleur de fond'),
         'button' => t('Bouton'),
-        'other-bg' => t('Sous-Lignement'),
+        'other-bg' => t('Autre'),
 
     ],
     // Pre-defined color schemes.
