@@ -1,4 +1,5 @@
 <?php
+
 $info = array(
     // Available colors and color labels used in theme.
     'fields' => [
@@ -6,12 +7,11 @@ $info = array(
         'secondary' => t('Numéro en cours'),
         'bottom' => t('Pied de Page'),
         'text' => t('Texte'),
-        'text_menu' => t('Texte Menu'),
+        'second_text' => t('Seconde couleur de Texte'),
         'searchbar' => t('Bar de Recherche'),
         'base' => t('Couleur de fond'),
-        'link' => t('Link color'),
         'button' => t('Bouton'),
-        'underline' => t('Sous-Lignement'),
+        'other-bg' => t('Sous-Lignement'),
 
     ],
     // Pre-defined color schemes.
@@ -19,33 +19,33 @@ $info = array(
         'default' => [
             'title' => t('Teinte de Gris (Default)'),
             'colors' => [
-                'top' => '#e8e8e8',
-                'secondary' => '#ee2367',
-                'bottom' => '#f3f3f3',
-                'text' => '#000000',
-                'text_menu' => '#1a2b3f',
+                'top' => '#ffffff',
+                'secondary' => '#a60540',
+                'bottom' => '#e0e0e0',
+                'text' => '#262626',
+                'second_text' => '#1a2b3f',
                 'searchbar' => '#353a48',
-                'base' => '#ffffff',
+                'base' => '#f7f7f7',
                 'link' => '#000000',
-                'button' => '#eaeaea',
-                'underline' => '#B8B1AF',
+                'button' => '#dbdae5',
+                'other-bg' => '#404040',
 
             ],
         ],
         'sug2' => [
             'title' => t('Teinte de Brun'),
             'colors' => [
-                'top' => '#B79E96',
+                'top' => '#ffffff',
                 'secondary' => '#cbaa8e',
                 'bottom' => '#ebd8ca',
                 'text' => '#2C333D',
-                'text_menu' => '#1a2b3f',
+                'second_text' => '#a8a8a8',
                 'searchbar' => '#353a48',
 
                 'base' => '#F9F8FC',
                 'link' => '#2C333D',
                 'button' => '#eaeaea',
-                'underline' => '#000000',
+                'other-bg' => '#000000',
 
             ],
         ],
@@ -56,13 +56,13 @@ $info = array(
                 'secondary' => '#054B7D',
                 'bottom' => '#bed0dd',
                 'text' => '#00070D',
-                'text_menu' => '#ffffff',
+                'second_text' => '#ffffff',
                 'searchbar' => '#000000',
 
                 'base' => '#F2F2F2',
                 'link' => '#00070D',
                 'button' => '#eaeaea',
-                'underline' => '#000000',
+                'other-bg' => '#000000',
 
             ],
         ],
@@ -73,12 +73,12 @@ $info = array(
                 'secondary' => '#E94347',
                 'bottom' => '#EBEDF3',
                 'text' => '#29384C',
-                'text_menu' => '#ffffff',
+                'second_text' => '#ffffff',
                 'searchbar' => '#BF0413',
                 'base' => '#ffffff',
                 'link' => '#29384C',
                 'button' => '#EBEDF3',
-                'underline' => '#29384C',
+                'other-bg' => '#29384C',
 
             ],
         ],
@@ -89,12 +89,12 @@ $info = array(
                 'secondary' => '#6b7af8',
                 'bottom' => '#BABF8F',
                 'text' => '#00070D',
-                'text_menu' => '#1a2b3f',
+                'second_text' => '#1a2b3f',
                 'searchbar' => '#353a48',
                 'base' => '#F2F2F2',
                 'link' => '#00070D',
                 'button' => '#F2F2DF',
-                'underline' => '#000000',
+                'other-bg' => '#000000',
 
             ],
         ],
