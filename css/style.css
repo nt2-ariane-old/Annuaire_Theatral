@@ -265,6 +265,7 @@ ul.tabs.primary:before {
   text-align: center;
   float: none;
   background-color: var(--banner-color);
+  color: var(--main-txt-color);
 }
 
 #block-cartbutton {
