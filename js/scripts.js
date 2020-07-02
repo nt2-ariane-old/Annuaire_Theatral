@@ -1,6 +1,9 @@
 window.onload = function () {
     new WOW().init();
 
+    let goback = document.querySelector('#block-gobackblock .button')
+    goback.innerHTML = 'Retour'
+    
     let searchbar = document.querySelector('#views-exposed-form-general-search-page-1');
     let nav = document.querySelector('.topnav');
 
