@@ -878,9 +878,11 @@ ul {
     width: 33%;
   }
 }
-#grid
-{
-  height: 160px;
+#grid {
+  .item {
+    height: 160px;
+    
+  }
 }
 .header-presentation {
   h3 {

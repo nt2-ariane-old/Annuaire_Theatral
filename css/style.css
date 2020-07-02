@@ -929,7 +929,7 @@ ul.tabs.primary:before {
   width: 33%;
 }
 
-#grid {
+#grid .item {
   height: 160px;
 }
 
