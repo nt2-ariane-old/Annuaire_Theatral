@@ -245,7 +245,19 @@ ul {
     margin-bottom: 1rem;
   }
 }
-
+#block-gobackblock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 1rem 0;
+  .button {
+    display: block;
+    width: 100px;
+    text-align: center;
+    float: none;
+    background-color: var(--banner-color);
+  }
+}
 #block-cartbutton {
   display: inline-block;
   font-size: 14px;

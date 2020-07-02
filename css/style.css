@@ -245,6 +245,28 @@ ul.tabs.primary:before {
   margin-bottom: 1rem;
 }
 
+#block-gobackblock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 1rem 0;
+}
+
+#block-gobackblock .button {
+  display: block;
+  width: 100px;
+  text-align: center;
+  float: none;
+  background-color: var(--banner-color);
+}
+
 #block-cartbutton {
   display: inline-block;
   font-size: 14px;
