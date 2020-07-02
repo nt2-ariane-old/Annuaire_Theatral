@@ -3,7 +3,7 @@
   --second-text-color: #a8a8a8;
 
   --banner-color: #a60540;
-  
+
   --main-bg-color: #ffffff;
   --body-bg-color: #f7f7f7;
   --bar-bg-color: #ffffff;
@@ -13,7 +13,6 @@
   --black-bg-color: #000000;
   --footer-bg-color: #e0e0e0;
   --other-bg-color: #404040;
-
 }
 a {
   color: inherit;
@@ -869,13 +868,18 @@ ul {
 }
 
 .header-presentation {
-  font-family: Arial, sans-serif;
-  font-size: 1.2em;
-  font-weight: 100;
-  margin: auto;
-  max-width: 800px;
-  padding: 2em;
-  text-align: justify;
+  h3 {
+    text-align: center;
+  }
+  p {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: 100;
+    margin: auto;
+    max-width: 800px;
+    padding: 2em;
+    text-align: justify;
+  }
 }
 
 .informations {

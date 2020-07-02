@@ -907,7 +907,11 @@ ul.tabs.primary:before {
   width: 33%;
 }
 
-.header-presentation {
+.header-presentation h3 {
+  text-align: center;
+}
+
+.header-presentation p {
   font-family: Arial, sans-serif;
   font-size: 1.2em;
   font-weight: 100;
