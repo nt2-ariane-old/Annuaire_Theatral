@@ -930,6 +930,10 @@ ul.tabs.primary:before {
   width: 33%;
 }
 
+#grid {
+  height: 160px;
+}
+
 .header-presentation h3 {
   text-align: center;
 }
