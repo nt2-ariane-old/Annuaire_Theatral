@@ -1168,6 +1168,18 @@ p.exergue {
   min-height: 82px;
 }
 
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.oblic {
+  font-style: oblique;
+}
+
 .page-title {
   padding: 2rem;
   text-align: center;
