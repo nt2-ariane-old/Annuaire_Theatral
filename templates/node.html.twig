@@ -230,7 +230,11 @@
 									{% endif %}
 
 									{# Body #}
-
+									{% if node.field_pour_citer.value  %}
+										<li class="pour_citer">
+											<p>{{content.field_pour_citer}}</p>
+										</li>
+									{% endif %}
 									<div class="bottom-space">
 										{% if node.body.value  %}
 											{{ content.body }}
@@ -244,11 +248,7 @@
 
 							{# Notes et Biblio #}
 							<ul class="nav nav-tabs">
-								{% if node.field_pour_citer.value  %}
-									<li class="nav-item">
-										<a class="nav-link active" data-toggle="tab" href="#Notes">Notes</a>
-									</li>
-								{% endif %}
+
 								{% if node.field_bibliographic_reference.value %}
 									<li class="nav-item">
 										<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
@@ -263,11 +263,7 @@
 
 							<!-- Tab panes -->
 							<div class="tab-content">
-								{% if node.field_pour_citer.value   %}
-									<div class="tab-pane container active" id="Notes">
-										<p>{{content.field_pour_citer}}</p>
-									</div>
-								{% endif %}
+								
 								{% if  node.field_bibliographic_reference.value %}
 									<div class="tab-pane container fade" id="biblio">
 										<p>{{content.field_bibliographic_reference}}</p>

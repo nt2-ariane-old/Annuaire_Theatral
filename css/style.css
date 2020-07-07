@@ -1159,6 +1159,15 @@ p.exergue {
   font-size: 12px;
 }
 
+.pour_citer {
+  display: block;
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 0;
+  border: 1px solid #333;
+  min-height: 82px;
+}
+
 .page-title {
   padding: 2rem;
   text-align: center;

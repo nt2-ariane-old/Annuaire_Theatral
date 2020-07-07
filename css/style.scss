@@ -747,8 +747,7 @@ ul {
   }
 }
 
-p.exergue
-{
+p.exergue {
   font-size: 0.8rem;
   font-weight: normal;
 }
@@ -887,7 +886,6 @@ p.exergue
 #grid {
   .item {
     height: 160px;
-    
   }
 }
 .header-presentation {
@@ -1111,7 +1109,14 @@ p.exergue
     }
   }
 }
-
+.pour_citer {
+  display: block;
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 0;
+  border: 1px solid #333;
+  min-height: 82px;
+}
 .page-title {
   padding: 2rem;
   text-align: center;
