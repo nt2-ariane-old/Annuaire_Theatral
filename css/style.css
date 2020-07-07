@@ -793,7 +793,8 @@ ul.tabs.primary:before {
   width: 100%;
 }
 
-p.exergue {
+p.exergue,
+.exergue {
   font-size: 0.8rem;
   font-weight: normal;
 }
@@ -1168,14 +1169,17 @@ p.exergue {
   min-height: 82px;
 }
 
+p.italic,
 .italic {
   font-style: italic;
 }
 
+p.bold,
 .bold {
   font-weight: bolder;
 }
 
+p.oblic,
 .oblic {
   font-style: oblique;
 }

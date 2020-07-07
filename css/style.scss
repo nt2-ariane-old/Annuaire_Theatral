@@ -747,7 +747,8 @@ ul {
   }
 }
 
-p.exergue {
+p.exergue,
+.exergue {
   font-size: 0.8rem;
   font-weight: normal;
 }
@@ -1117,16 +1118,16 @@ p.exergue {
   border: 1px solid #333;
   min-height: 82px;
 }
-.italic
-{
+p.italic,
+.italic {
   font-style: italic;
 }
-.bold
-{
+p.bold,
+.bold {
   font-weight: bolder;
 }
-.oblic
-{
+p.oblic,
+.oblic {
   font-style: oblique;
 }
 .page-title {
