@@ -19,4 +19,6 @@ libraries:
   - 'annuaire/color'
   - 'annuaire/global-styling'
   - 'annuaire/global-scripts'
+ckeditor_stylesheets:
+  - css/style.css
 
