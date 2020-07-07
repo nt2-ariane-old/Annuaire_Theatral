@@ -3,7 +3,6 @@ global-styling:
   css:
     theme:
       css/base.css: {}
-      # css/font-awesome.min.css: {}
       css/animate.css: {}
       css/bootstrap.min.css: {}
       css/theme.css: {}
@@ -15,7 +14,6 @@ global-scripts:
   js:
     js/theme.js: {}
     js/plugin.js: {}
-    # js/font-awesome.min.js: {}
     js/scripts.js: {}
   dependencies:
     - core/drupal
