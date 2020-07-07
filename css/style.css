@@ -795,6 +795,7 @@ ul.tabs.primary:before {
 
 p.exergue {
   font-size: 0.8rem;
+  font-weight: normal;
 }
 
 .facet-item {
