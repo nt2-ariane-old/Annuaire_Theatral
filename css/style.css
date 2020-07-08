@@ -606,6 +606,11 @@ ul.tabs.primary:before {
   content: "#";
 }
 
+.blog-post-banner h2, .blog-post-banner h3 {
+  text-align: center;
+  color: white;
+}
+
 #intro .sub-text-title .field--name-field-num-pub::before {
   content: "#";
 }

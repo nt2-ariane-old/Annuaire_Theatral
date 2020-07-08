@@ -575,6 +575,11 @@ ul {
   .sub-text-title .field--name-field-num-pub::before {
     content: "#";
   }
+  h2,h3
+  {
+    text-align: center;
+    color: white;
+  }
 }
 
 #intro .sub-text-title .field--name-field-num-pub::before {
