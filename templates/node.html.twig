@@ -182,9 +182,15 @@
 
 			{% if type == "article" %}
 				<main id="contenu" class="w-section section-imp">
-					<h2>{{ label }}</h2>
-
-					<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
+					{% if  node.field_image.value %}
+						<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image.entity.fileuri) }}')">
+							<h2 class="inner-title">{{ label }}</h2>
+							<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
+						</section>
+					{% else %}
+						<h2>{{ label }}</h2>
+						<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
+					{% endif %}
 					<div class="w-container issue-article">
 						<div
 							class="w-row">
@@ -236,11 +242,7 @@
 										</li>
 									{% endif %}
 									<div class="bottom-space">
-										{% if node.body.value  %}
-											{{ content.body }}
-										{% else %}
-											<p>Abonnez-Vous</p>
-										{% endif %}
+										{{ content.body }}
 									</div>
 
 								</div>
@@ -263,7 +265,7 @@
 
 							<!-- Tab panes -->
 							<div class="tab-content">
-								
+
 								{% if  node.field_bibliographic_reference.value %}
 									<div class="tab-pane container fade" id="biblio">
 										<p>{{content.field_bibliographic_reference}}</p>
