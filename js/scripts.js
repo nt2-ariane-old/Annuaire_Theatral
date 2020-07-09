@@ -2,8 +2,9 @@ window.onload = function () {
     new WOW().init();
 
     let goback = document.querySelector('#block-gobackblock .button')
-    goback.innerHTML = 'Retour'
-    
+    if (goback)test
+        goback.innerHTML = 'Retour'
+
     let searchbar = document.querySelector('views-exposed-form-general-search-page-1');
     let nav = document.querySelector('.topnav');
 
@@ -116,18 +117,16 @@ window.onload = function () {
             let expanded = this.getAttribute('aria-expanded') === 'true' || false;
             this.setAttribute('aria-expanded', !expanded);
             let style = menu.style.display
-            if(!expanded)
-            {
+            if (!expanded) {
                 menu.style.display = "block"
                 button.style.backgroundColor = "white"
             }
-            else
-            {
+            else {
                 button.style.backgroundColor = "transparent"
                 menu.style.display = "none";
             }
             console.log(style)
-           // menu.hidden = !menu.hidden;
+            // menu.hidden = !menu.hidden;
         });
     });
 
