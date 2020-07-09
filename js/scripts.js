@@ -5,7 +5,8 @@ window.onload = function () {
     if (goback)
         goback.innerHTML = 'Retour'
 
-    let searchbar = document.querySelector('views-exposed-form-general-search-page-1');
+    let searchbar = document.querySelector('#views-exposed-form-general-search-page-1');
+    // let searchbar = document.querySelector('.searchbar');
     let nav = document.querySelector('.topnav');
 
     if (searchbar !== null) {
