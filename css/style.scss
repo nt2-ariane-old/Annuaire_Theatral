@@ -1400,8 +1400,14 @@ p.oblic,
         justify-content: space-between;
         padding: 0 1rem;
 
+
+
         * {
           color: var(--search-bar-bg-color);
+        }
+        .views-element-container
+        {
+          display: none;
         }
         .search_input {
           color: var(--body-bg-color);

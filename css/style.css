@@ -1491,6 +1491,10 @@ p.oblic,
   color: var(--search-bar-bg-color);
 }
 
+.top-border > div #block-navigationprincipale .topnav .views-element-container {
+  display: none;
+}
+
 .top-border > div #block-navigationprincipale .topnav .search_input {
   color: var(--body-bg-color);
 }
