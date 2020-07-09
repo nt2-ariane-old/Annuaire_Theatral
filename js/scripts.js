@@ -2,7 +2,7 @@ window.onload = function () {
     new WOW().init();
 
     let goback = document.querySelector('#block-gobackblock .button')
-    if (goback)test
+    if (goback)
         goback.innerHTML = 'Retour'
 
     let searchbar = document.querySelector('views-exposed-form-general-search-page-1');
