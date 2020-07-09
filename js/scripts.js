@@ -10,40 +10,40 @@ window.onload = function () {
     // let searchbar = document.querySelector('.searchbar');
     let nav = document.querySelector('.topnav');
 
-    // if (searchbar !== null) {
-    //     searchbar.innerHTML = '';
-    //     searchbar.style.opacity = '0'
-    //     searchbar.setAttribute('class', 'searchbar');
+    if (searchbar !== null) {
+        searchbar.innerHTML = '';
+        searchbar.style.opacity = '0'
+        searchbar.setAttribute('class', 'searchbar');
 
-    //     let input = document.createElement('input');
-    //     input.setAttribute('type', 'text');
-    //     input.setAttribute('class', 'search_input');
-    //     input.setAttribute('placeholder', 'Rechercher...');
-    //     input.setAttribute('aria-label', 'Rechercher sur le site');
-    //     input.setAttribute('name', 'search_api_fulltext')
-
-
-    //     let button = document.createElement('button');
-    //     button.setAttribute('class', 'search_icon');
-    //     button.setAttribute('type', 'submit');
-    //     button.setAttribute('id', 'search-button');
-    //     button.setAttribute('aria-label', 'Bouton Rechercher');
+        let input = document.createElement('input');
+        input.setAttribute('type', 'text');
+        input.setAttribute('class', 'search_input');
+        input.setAttribute('placeholder', 'Rechercher...');
+        input.setAttribute('aria-label', 'Rechercher sur le site');
+        input.setAttribute('name', 'search_api_fulltext')
 
 
+        let button = document.createElement('button');
+        button.setAttribute('class', 'search_icon');
+        button.setAttribute('type', 'submit');
+        button.setAttribute('id', 'search-button');
+        button.setAttribute('aria-label', 'Bouton Rechercher');
 
-    //     let icon = document.createElement('i');
-    //     icon.setAttribute('class', 'fa fa-search');
-    //     button.appendChild(icon);
-    //     searchbar.appendChild(input);
-    //     searchbar.appendChild(button);
 
-    //     // let li = document.createElement('div');
-    //     // li.setAttribute('class', 'centered dropbtn');
-    //     // li.appendChild(searchbar);
-    //     // nav.appendChild(li);
-    //     searchbar.style.display = 'inline-block';
-    //     searchbar.style.opacity = '1'
-    // }
+
+        let icon = document.createElement('i');
+        icon.setAttribute('class', 'fa fa-search');
+        button.appendChild(icon);
+        searchbar.appendChild(input);
+        searchbar.appendChild(button);
+
+        // let li = document.createElement('div');
+        // li.setAttribute('class', 'centered dropbtn');
+        // li.appendChild(searchbar);
+        // nav.appendChild(li);
+        searchbar.style.display = 'inline-block';
+        searchbar.style.opacity = '1'
+    }
 
     let rows = document.querySelectorAll('.line-zig-zag');
 
