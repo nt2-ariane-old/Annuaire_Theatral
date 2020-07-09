@@ -464,7 +464,7 @@ ul.tabs.primary:before {
 }
 
 #views-exposed-form-general-search-page-1 {
-  opacity: 1;
+  opacity: 0;
   -webkit-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
 }
@@ -1316,7 +1316,7 @@ p.oblic,
 }
 
 .searchbar {
-  opacity: 0;
+  opacity: 1;
   background-color: var(--search-bar-bg-color);
   border-radius: 30px;
   display: inline-block;
