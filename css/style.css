@@ -608,7 +608,8 @@ ul.tabs.primary:before {
   content: "#";
 }
 
-.blog-post-banner h2, .blog-post-banner h3 {
+.blog-post-banner h2,
+.blog-post-banner h3 {
   text-align: center;
   color: white;
 }
@@ -1491,7 +1492,8 @@ p.oblic,
   color: var(--search-bar-bg-color);
 }
 
-.top-border > div #block-navigationprincipale .topnav .views-element-container {
+.top-border > div #block-navigationprincipale .topnav .views-view-grid,
+.top-border > div #block-navigationprincipale .topnav .pager {
   display: none;
 }
 

@@ -576,8 +576,8 @@ ul {
   .sub-text-title .field--name-field-num-pub::before {
     content: "#";
   }
-  h2,h3
-  {
+  h2,
+  h3 {
     text-align: center;
     color: white;
   }
@@ -1400,13 +1400,11 @@ p.oblic,
         justify-content: space-between;
         padding: 0 1rem;
 
-
-
         * {
           color: var(--search-bar-bg-color);
         }
-        .views-element-container
-        {
+        .views-view-grid,
+        .pager {
           display: none;
         }
         .search_input {
