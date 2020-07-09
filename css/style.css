@@ -451,7 +451,7 @@ ul.tabs.primary:before {
 }
 
 #search-block-form {
-  display: none;
+  display: block;
 }
 
 #sommaire {
