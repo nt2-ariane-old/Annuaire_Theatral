@@ -38,10 +38,17 @@
 
 
 					<div class="dropdown" role="menu">
-						<a{{item.attributes}} href='{{item.url}}' class="menu-link">
-							{{item.title|raw}}
-							<i class="fa fa-caret-down"></i>
-						</a>
+						{% if item.url  %}
+							<a{{item.attributes}} href='{{item.url}}' class="menu-link">
+								{{item.title|raw}}
+								<i class="fa fa-caret-down"></i>
+							</a>
+						{% else %}
+							<div class="menu-link">
+								{{item.title|raw}}
+								<i class="fa fa-caret-down"></i>
+							</div>
+						{% endif %}
 						<button class="dropbtn" aria-expanded="false" aria-controls="menu-list" aria-label="Ouvrir ou Fermer Menu"></button>
 						<div class="dropdown-content">
 							{% for child in item.below %}
@@ -68,7 +75,11 @@
 						</div>
 					</div>
 				{% else %}
-					<a{{item.attributes}} href='{{item.url}}' class="menu-link">{{item.title|raw}}</a>
+					{% if item.url  %}
+						<a{{item.attributes}} href='{{item.url}}' class="menu-link">{{item.title|raw}}</a>
+					{% else %}
+						<div class="menu-link">{{item.title|raw}}</div>
+					{% endif %}
 				{% endif %}
 			{% endfor %}
 			<a href="javascript:void(0);" class="icon" onclick="showHamburgerMenu()">&#9776;</a>
