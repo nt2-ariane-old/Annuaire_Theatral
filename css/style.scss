@@ -452,6 +452,7 @@ ul {
   min-height: calc(100vh - 120px - 30px - 4rem);
 }
 
+#views-exposed-form-general-search-default,
 #views-exposed-form-general-search-page-1 {
   opacity: 0;
   transition: opacity 500ms linear;
