@@ -458,6 +458,10 @@ ul {
   width: 150px;
   overflow: hidden;
   transition: opacity 500ms linear;
+  .form-item
+  {
+    margin: 0;
+  }
   .button
   {
     padding: 0;

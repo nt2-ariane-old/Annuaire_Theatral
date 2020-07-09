@@ -472,6 +472,11 @@ ul.tabs.primary:before {
   transition: opacity 500ms linear;
 }
 
+#views-exposed-form-general-search-default .form-item,
+#views-exposed-form-general-search-page-1 .form-item {
+  margin: 0;
+}
+
 #views-exposed-form-general-search-default .button,
 #views-exposed-form-general-search-page-1 .button {
   padding: 0;
