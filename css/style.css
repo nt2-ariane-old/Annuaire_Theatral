@@ -532,6 +532,14 @@ ul.tabs.primary:before {
   height: calc(100vh - 60px - 60px);
 }
 
+.bottom-space ul {
+  font-size: 12px;
+}
+
+.bottom-space ul a {
+  font-size: 12px;
+}
+
 .bibcite-reference {
   display: block;
   width: 95%;
