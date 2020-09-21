@@ -26,6 +26,7 @@ a:hover {
 
 body {
   color: var(--main-txt-color);
+  background-color: red;
   margin: 0;
   padding: 0;
 }
