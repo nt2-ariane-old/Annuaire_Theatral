@@ -1106,14 +1106,6 @@ p.exergue,
   text-decoration: none;
 }
 
-.menu-link.w--current:not([href]) {
-  color: brown;
-}
-
-.menu-link.w--current:link {
-  color: blue;
-}
-
 .menu-link.w--current:not([href=""]) ::after {
   background: var(--banner-color);
   width: 100%;
