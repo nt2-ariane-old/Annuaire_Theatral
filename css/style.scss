@@ -1067,13 +1067,13 @@ p.exergue,
     }
   }
 
-  :link {
+  &:link {
     color: blueviolet;
   }
-  :not([href]) {
+  &:not([href]) {
     color: crimson;
   }
-  :not([href=]) {
+  &:not([href=""]) {
     color: chartreuse;
   }
 

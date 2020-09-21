@@ -1119,6 +1119,18 @@ p.exergue,
   width: 100%;
 }
 
+.menu-link:link {
+  color: blueviolet;
+}
+
+.menu-link:not([href]) {
+  color: crimson;
+}
+
+.menu-link:not([href=""]) {
+  color: chartreuse;
+}
+
 .menu-link::after {
   background: var(--bg_02);
   content: "";
