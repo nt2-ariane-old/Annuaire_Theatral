@@ -458,12 +458,10 @@ ul {
   width: 150px;
   overflow: hidden;
   transition: opacity 500ms linear;
-  .form-item
-  {
+  .form-item {
     margin: 0;
   }
-  .button
-  {
+  .button {
     padding: 0;
   }
   .form--inline.clearfix {
@@ -512,13 +510,10 @@ ul {
 .banner-one {
   height: calc(100vh - 60px - 60px);
 }
-.bottom-space
-{
-  ul
-  {
+.bottom-space {
+  ul {
     font-size: 14px;
-    a
-    {
+    a {
       font-size: 14px;
     }
   }
@@ -1059,9 +1054,14 @@ p.exergue,
   text-align: center;
   text-decoration: none;
 
-  &.w--current::after {
-    background: var(--banner-color);
-    width: 100%;
+  &.w--current {
+    a:not([href]) {
+      color: brown;
+    }
+    ::after {
+      background: var(--banner-color);
+      width: 100%;
+    }
   }
 
   &::after {
