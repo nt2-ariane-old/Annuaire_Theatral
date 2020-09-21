@@ -1114,24 +1114,12 @@ p.exergue,
   color: blue;
 }
 
-.menu-link.w--current ::after {
+.menu-link.w--current:not([href=""]) ::after {
   background: var(--banner-color);
   width: 100%;
 }
 
-.menu-link:link {
-  color: blueviolet;
-}
-
-.menu-link:not([href]) {
-  color: crimson;
-}
-
-.menu-link:not([href=""]) {
-  color: chartreuse;
-}
-
-.menu-link::after {
+.menu-link:not([href=""])::after {
   background: var(--bg_02);
   content: "";
   display: block;

@@ -1061,32 +1061,25 @@ p.exergue,
     &:link {
       color: blue;
     }
-    ::after {
-      background: var(--banner-color);
-      width: 100%;
+    &:not([href=""]) {
+      ::after {
+        background: var(--banner-color);
+        width: 100%;
+      }
     }
   }
-
-  &:link {
-    color: blueviolet;
-  }
-  &:not([href]) {
-    color: crimson;
-  }
   &:not([href=""]) {
-    color: chartreuse;
-  }
-
-  &::after {
-    background: var(--bg_02);
-    content: "";
-    display: block;
-    height: 2px;
-    left: 0;
-    margin-top: 5px;
-    position: absolute;
-    transition: width 0.4s ease;
-    width: 0;
+    &::after {
+      background: var(--bg_02);
+      content: "";
+      display: block;
+      height: 2px;
+      left: 0;
+      margin-top: 5px;
+      position: absolute;
+      transition: width 0.4s ease;
+      width: 0;
+    }
   }
 
   &:hover::after {
