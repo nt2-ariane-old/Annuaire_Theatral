@@ -28,7 +28,7 @@ a {
 
 body {
   color: var(--main-txt-color);
-  background-color: red;
+  // background-color: red;
   margin: 0;
   padding: 0;
 }
@@ -1023,7 +1023,11 @@ p.exergue,
     display: table;
   }
 }
-
+.legende {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  text-align: justify;
+}
 .line {
   display: block;
   width: 100%;
