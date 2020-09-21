@@ -1067,6 +1067,16 @@ p.exergue,
     }
   }
 
+  :link {
+    color: blueviolet;
+  }
+  :not([href]) {
+    color: crimson;
+  }
+  :not([href=]) {
+    color: chartreuse;
+  }
+
   &::after {
     background: var(--bg_02);
     content: "";
