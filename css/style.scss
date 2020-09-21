@@ -1055,8 +1055,11 @@ p.exergue,
   text-decoration: none;
 
   &.w--current {
-    a:not([href]) {
+    &:not([href]) {
       color: brown;
+    }
+    &:link {
+      color: blue;
     }
     ::after {
       background: var(--banner-color);

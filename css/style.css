@@ -1106,8 +1106,12 @@ p.exergue,
   text-decoration: none;
 }
 
-.menu-link.w--current a:not([href]) {
+.menu-link.w--current:not([href]) {
   color: brown;
+}
+
+.menu-link.w--current:link {
+  color: blue;
 }
 
 .menu-link.w--current ::after {
