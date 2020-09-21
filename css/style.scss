@@ -15,8 +15,7 @@
   --other-bg-color: #404040;
 }
 
-li
-{
+li {
   list-style: inherit;
 }
 
@@ -1066,11 +1065,9 @@ p.exergue,
   text-decoration: none;
 
   &.w--current {
-    &:not([href=""]) {
-      ::after {
-        background: var(--banner-color);
-        width: 100%;
-      }
+    ::after {
+      background: var(--banner-color);
+      width: 100%;
     }
   }
   &:not([href=""]) {

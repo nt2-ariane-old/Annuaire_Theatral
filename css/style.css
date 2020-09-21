@@ -1116,7 +1116,7 @@ p.exergue,
   text-decoration: none;
 }
 
-.menu-link.w--current:not([href=""]) ::after {
+.menu-link.w--current ::after {
   background: var(--banner-color);
   width: 100%;
 }
