@@ -593,6 +593,9 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: auto;
+  background-size: contain;
+  background-attachment: inherit;
 
   .sub-text-title .field--name-field-num-pub::before {
     content: "#";
@@ -603,6 +606,7 @@ ul {
     color: white;
   }
 }
+
 
 #intro .sub-text-title .field--name-field-num-pub::before {
   content: "#";
