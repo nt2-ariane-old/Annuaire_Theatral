@@ -225,6 +225,14 @@ ul.tabs.primary:before {
   z-index: 1;
 }
 
+#bandeau-intro {
+  height: 430px;
+}
+
+#bandeau-intro img {
+  margin: auto;
+}
+
 #block-abonnezvous {
   background: #eaeaea;
   border-radius: 5px;

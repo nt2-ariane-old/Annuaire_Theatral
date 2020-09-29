@@ -11,16 +11,21 @@
 	</div>
 	<div itemscope itemtype="https://schema.org/Periodical" class="w-container container-contact">
 		<div aria-labelledby="Informations sur le Numéro Informations sur la revue" class="align-center issue-banner">
-			<a href='/' aria-labelledby="Lien vers l'Accueil">
 
-				{% if fields.field_bandeau_intro %}
-					{{ fields.field_bandeau_intro.content }}
-				{% else %}
+			{% if fields.field_bandeau_intro %}
+
+				<a href='/' aria-labelledby="Lien vers l'Accueil">
+					<div id="bandeau-intro">
+						{{ fields.field_bandeau_intro.content }}
+					</div>
+				</a>
+			{% else %}
+				<a href='/' aria-labelledby="Lien vers l'Accueil">
 					<h1 class="inner-title" aria-labelby="Titre de la Revue" itemprop="name">{{fields.field_journal_title.content}}</h1>
-					<h2 class="inner-title" aria-labelby="Titre de la Revue" itemprop="name">{{fields.field_journal_subtitle.content}}</h2>
-				{% endif %}
+				</a>
+				<h2 class="inner-title" aria-labelby="Titre de la Revue" itemprop="name">{{fields.field_journal_subtitle.content}}</h2>
+			{% endif %}
 
-			</a>
 		</div>
 		<div aria-labelledby="Informations sur le Numéro" itemprop="hasPart" itemscope itemtype="http://schema.org/PublicationVolume" class="align-center issue-banner single-issue">
 			{% if fields.field_bandeau_numero %}
