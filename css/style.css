@@ -330,7 +330,6 @@ ul.tabs.primary:before {
 
 #intro .issue-banner::before {
   content: "";
-  background-color: var(--banner-color);
   position: absolute;
   top: 0;
   left: 0;
