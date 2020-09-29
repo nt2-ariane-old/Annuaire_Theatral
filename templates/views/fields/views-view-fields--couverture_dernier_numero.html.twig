@@ -17,10 +17,10 @@
 					{{ fields.field_bandeau_intro.content }}
 				{% else %}
 					<h1 class="inner-title" aria-labelby="Titre de la Revue" itemprop="name">{{fields.field_journal_title.content}}</h1>
+					<h2 class="inner-title" aria-labelby="Titre de la Revue" itemprop="name">{{fields.field_journal_subtitle.content}}</h2>
 				{% endif %}
 
 			</a>
-			<h2 class="inner-title" aria-labelby="Titre de la Revue" itemprop="name">{{fields.field_journal_subtitle.content}}</h2>
 		</div>
 		<div aria-labelledby="Informations sur le Numéro" itemprop="hasPart" itemscope itemtype="http://schema.org/PublicationVolume" class="align-center issue-banner single-issue">
 			{% if fields.field_bandeau_numero %}
