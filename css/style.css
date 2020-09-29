@@ -225,18 +225,6 @@ ul.tabs.primary:before {
   z-index: 1;
 }
 
-#bandeau-intro {
-  height: 430px;
-}
-
-#bandeau-intro img {
-  margin: auto;
-  position: static;
-  width: 1000px;
-  height: 430px;
-  max-width: none;
-}
-
 #block-abonnezvous {
   background: #eaeaea;
   border-radius: 5px;
@@ -447,6 +435,18 @@ ul.tabs.primary:before {
   position: absolute;
   top: 0px;
   z-index: -1;
+}
+
+#bandeau-intro {
+  height: 430px;
+}
+
+#bandeau-intro img {
+  margin: auto;
+  position: static;
+  width: 1000px;
+  height: 430px;
+  max-width: none;
 }
 
 #pdf {
