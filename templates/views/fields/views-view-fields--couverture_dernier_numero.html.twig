@@ -12,19 +12,29 @@
 	<div itemscope itemtype="https://schema.org/Periodical" class="w-container container-contact">
 		<div aria-labelledby="Informations sur le Numéro Informations sur la revue" class="align-center issue-banner">
 			<a href='/' aria-labelledby="Lien vers l'Accueil">
-				<h1 class="inner-title" aria-labelby="Titre de la Revue" itemprop="name">{{fields.field_journal_title.content}}</h1>
+
+				{% if fields.field_bandeau_intro %}
+					{{ fields.field_bandeau_intro.content }}
+				{% else %}
+					<h1 class="inner-title" aria-labelby="Titre de la Revue" itemprop="name">{{fields.field_journal_title.content}}</h1>
+				{% endif %}
+
 			</a>
 			<h2 class="inner-title" aria-labelby="Titre de la Revue" itemprop="name">{{fields.field_journal_subtitle.content}}</h2>
 		</div>
 		<div aria-labelledby="Informations sur le Numéro" itemprop="hasPart" itemscope itemtype="http://schema.org/PublicationVolume" class="align-center issue-banner single-issue">
-			<a href='{{fields.view_node.content|striptags}}'>
-				<h2 class="inner-title" aria-labelledby="Titre du Numéro" itemprop="name">{{fields.title.content}}</h2>
-			</a>
-			<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ fields.field_issue_number.content|striptags }}</span>
-			<span>
-				-
-			</span>
-			<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ fields.field_publication_date.content|striptags}}</span>
+			{% if fields.field_bandeau_numero %}
+				{{ fields.field_bandeau_numero.content }}
+			{% else %}
+				<a href='{{fields.view_node.content|striptags}}'>
+					<h2 class="inner-title" aria-labelledby="Titre du Numéro" itemprop="name">{{fields.title.content}}</h2>
+				</a>
+				<span class="sub-information" aria-labelledby="Numéro de la Revue" itemprop="issueNumber">{{ fields.field_issue_number.content|striptags }}</span>
+				<span>
+					-
+				</span>
+				<span class="sub-information" aria-labelledby="Date de la publication" itemprop="datePublished">{{ fields.field_publication_date.content|striptags}}</span>
+			{% endif %}
 		</div>
 	</div>
 </div>
