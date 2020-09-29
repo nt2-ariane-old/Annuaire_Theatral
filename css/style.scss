@@ -227,12 +227,14 @@ ul {
     }
   }
 }
-#bandeau-intro
-{
+#bandeau-intro {
   height: 430px;
-  img
-  {
+  img {
     margin: auto;
+    position: static;;
+    width: 1000px;
+    height: 430px;
+    max-width: none;
   }
 }
 #block-abonnezvous {
@@ -613,7 +615,6 @@ ul {
     color: white;
   }
 }
-
 
 #intro .sub-text-title .field--name-field-num-pub::before {
   content: "#";

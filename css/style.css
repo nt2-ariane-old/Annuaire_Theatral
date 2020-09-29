@@ -231,6 +231,10 @@ ul.tabs.primary:before {
 
 #bandeau-intro img {
   margin: auto;
+  position: static;
+  width: 1000px;
+  height: 430px;
+  max-width: none;
 }
 
 #block-abonnezvous {
