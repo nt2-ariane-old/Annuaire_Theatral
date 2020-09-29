@@ -12,7 +12,7 @@
 	<div itemscope itemtype="https://schema.org/Periodical" class="w-container container-contact">
 		<div aria-labelledby="Informations sur le Numéro Informations sur la revue" class="align-center issue-banner">
 
-			{% if fields.field_bandeau_intro %}
+			{% if fields.field_bandeau_intro.centent %}
 
 				<a href='/' aria-labelledby="Lien vers l'Accueil">
 					<div id="bandeau-intro">
@@ -28,7 +28,7 @@
 
 		</div>
 		<div aria-labelledby="Informations sur le Numéro" itemprop="hasPart" itemscope itemtype="http://schema.org/PublicationVolume" class="align-center issue-banner single-issue">
-			{% if fields.field_bandeau_numero %}
+			{% if fields.field_bandeau_numero.content %}
 				<a href='{{fields.view_node.content|striptags}}'>
 					<div id="bandeau-numero">
 						{{ fields.field_bandeau_numero.content }}

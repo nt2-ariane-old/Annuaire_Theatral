@@ -324,8 +324,7 @@ ul.tabs.primary:before {
 
 #intro .issue-banner {
   position: relative;
-  margin: 1rem 2rem;
-  padding: 1rem 0;
+  margin: 3rem auto;
 }
 
 #intro .issue-banner::before {
@@ -337,10 +336,6 @@ ul.tabs.primary:before {
   height: 100%;
   opacity: 0.7;
   z-index: -1;
-}
-
-#intro .issue-banner.single-issue::before {
-  background-color: var(--other-bg-color);
 }
 
 #intro .embed-video,
@@ -557,7 +552,7 @@ ul.tabs.primary:before {
 }
 
 .banner-one {
-  height: calc(100vh - 60px - 60px);
+  height: auto;
 }
 
 .bottom-space ul {
