@@ -436,16 +436,29 @@ ul.tabs.primary:before {
   z-index: -1;
 }
 
+#bandeau-numero img,
+#bandeau-intro img {
+  margin: auto;
+  position: static;
+  max-width: none;
+}
+
+#bandeau-numero {
+  height: 258px;
+}
+
+#bandeau-numero img {
+  width: 1000px;
+  height: 258px;
+}
+
 #bandeau-intro {
   height: 430px;
 }
 
 #bandeau-intro img {
-  margin: auto;
-  position: static;
   width: 1000px;
   height: 430px;
-  max-width: none;
 }
 
 #pdf {

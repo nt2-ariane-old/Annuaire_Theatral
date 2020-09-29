@@ -427,14 +427,26 @@ ul {
     z-index: -1;
   }
 }
+#bandeau-numero,
+#bandeau-intro {
+  img {
+    margin: auto;
+    position: static;
+    max-width: none;
+  }
+}
+#bandeau-numero {
+  height: 258px;
+  img {
+    width: 1000px;
+    height: 258px;
+  }
+}
 #bandeau-intro {
   height: 430px;
   img {
-    margin: auto;
-    position: static;;
     width: 1000px;
     height: 430px;
-    max-width: none;
   }
 }
 #pdf {
