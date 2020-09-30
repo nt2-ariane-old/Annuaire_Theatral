@@ -437,8 +437,12 @@ ul.tabs.primary:before {
 }
 
 #bandeau-numero img {
-  width: 1000px;
+  max-width: 1000px;
   height: 258px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 #bandeau-intro {
@@ -446,8 +450,12 @@ ul.tabs.primary:before {
 }
 
 #bandeau-intro img {
-  width: 1000px;
+  max-width: 1000px;
   height: 430px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 #pdf {

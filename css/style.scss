@@ -439,15 +439,19 @@ ul {
 #bandeau-numero {
   height: 258px;
   img {
-    width: 1000px;
+    max-width: 1000px;
     height: 258px;
+    object-fit: cover;
+    object-position: center;
   }
 }
 #bandeau-intro {
   height: 430px;
   img {
-    width: 1000px;
+    max-width: 1000px;
     height: 430px;
+    object-fit: cover;
+    object-position: center;
   }
 }
 #pdf {
