@@ -320,7 +320,7 @@ ul.tabs.primary:before {
 #intro {
   position: relative;
   width: 100%;
-  height: calc(100vh - 60px - 60px);
+  height: auto;
 }
 
 #intro .issue-banner {
@@ -423,13 +423,6 @@ ul.tabs.primary:before {
 
 #intro h3 a:hover {
   color: inherit;
-}
-
-#intro img {
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  z-index: -1;
 }
 
 #bandeau-numero img,
@@ -1013,6 +1006,22 @@ p.exergue,
 .informations {
   min-height: calc(100vh - 120px - 64px - 4rem);
   padding: 1rem;
+}
+
+.img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.img-bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .infos-auteur {
