@@ -1,15 +1,14 @@
 <div id="intro" class="w-section banner-one window-size">
-	<div class="video-wrapper">
-
+	<div class="img-bg">
 		<div aria-labelledby="Image de Couverture du Numéro" class="w-embed">
-			<div class="bigger-img" style="background-image:url('{{ file_url(row._entity.field_image.entity.uri.value) }}')"></div>
+			{{fields.field_image.content}}
+			{# <div class="bigger-img" style="background-image:url('{{ file_url(row._entity.field_image.entity.uri.value) }}')"></div> #}
 		</div>
-
 		<a href='{{fields.view_node.content|striptags}}'>
 			<div class="video-overlay"></div>
 		</a>
 	</div>
-	<div itemscope itemtype="https://schema.org/Periodical" class="w-container container-contact">
+	<div itemscope itemtype="https://schema.org/Periodical" class="w-container">
 		<div aria-labelledby="Informations sur le Numéro Informations sur la revue" class="align-center issue-banner">
 
 			{% if fields.field_bandeau_intro.content %}
