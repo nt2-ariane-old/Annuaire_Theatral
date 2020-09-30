@@ -969,7 +969,8 @@ p.exergue,
   min-height: calc(100vh - 120px - 64px - 4rem);
   padding: 1rem;
 }
-.img-bg {
+.img-bg,
+.img-bg-issue {
   position: absolute;
   top: 0;
   left: 0;
@@ -981,6 +982,10 @@ p.exergue,
     height: 100%;
     object-fit: cover;
   }
+}
+.img-bg-issue
+{
+  position: static;
 }
 
 .infos-auteur {
