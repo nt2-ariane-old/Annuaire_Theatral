@@ -438,6 +438,7 @@ ul.tabs.primary:before {
 
 #bandeau-numero img {
   max-width: 1000px;
+  width: 100%;
   height: 258px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -451,6 +452,7 @@ ul.tabs.primary:before {
 
 #bandeau-intro img {
   max-width: 1000px;
+  width: 100%;
   height: 430px;
   -o-object-fit: cover;
      object-fit: cover;
