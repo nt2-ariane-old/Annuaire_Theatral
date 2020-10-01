@@ -1048,7 +1048,15 @@ p.exergue,
   width: 100%;
 }
 
-.item-list ul {
+.item-list ul,
+.item-list li {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.quicktabs-tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1060,7 +1068,7 @@ p.exergue,
   width: 100%;
 }
 
-.item-list li {
+.quicktabs-tabs li {
   display: block;
   width: auto;
   margin: 0.5rem;
