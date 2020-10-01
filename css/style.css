@@ -1033,7 +1033,7 @@ p.exergue,
 }
 
 .inner-title {
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 5.5rem;
 }
 
@@ -1679,7 +1679,7 @@ details {
 
 @media (max-width: 479px) {
   .inner-title {
-    font-size: 43px;
+    font-size: 2rem;
     line-height: 65px;
   }
 }
