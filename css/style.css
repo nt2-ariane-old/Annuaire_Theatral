@@ -455,6 +455,10 @@ ul.tabs.primary:before {
   padding: 1rem;
 }
 
+#quicktabs-contributeurs .views-row {
+  padding: 1rem 0;
+}
+
 #search-block-form {
   display: block;
 }
