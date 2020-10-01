@@ -1003,12 +1003,20 @@ p.exergue,
   padding: 0;
   width: 100%;
 
-  ul,
-  li {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
     height: 100%;
     margin: 0;
     padding: 0;
     width: 100%;
+  }
+  li
+  {
+    display: block;
+    width: auto;
+    margin: 0.5rem;
+    padding: 0;
   }
 }
 
