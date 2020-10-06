@@ -37,36 +37,39 @@
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
-<div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {{ title }}
-  {{ title_suffix }}
+<div{{attributes.addClass(classes)}}>
+	{# {% if title  %}
 
-  {% if header %}
-    <header class="header-presentation">
-      {{ header }}
-    </header>
-  {% endif %}
+		{{ title_prefix }}
+		{{ title }}
+		{{ title_suffix }}
+	{% endif %} #}
 
-  {{ exposed }}
-  {{ attachment_before }}
+	{% if header %}
+		<header class="header-presentation">
+			{{ header }}
+		</header>
+	{% endif %}
 
-  {% if rows -%}
-    {{ rows }}
+	{{ exposed }}
+	{{ attachment_before }}
 
-  {% elseif empty -%}
-    {{ empty }}
-  {% endif %}
-  {{ pager }}
+	{% if rows -%}
+		{{ rows }}
 
-  {{ attachment_after }}
-  {{ more }}
+	{% elseif empty -%}
+		{{ empty }}
+	{% endif %}
+	{{ pager }}
 
-  {% if footer %}
-    <footer>
-      {{ footer }}
-    </footer>
-  {% endif %}
-  
-  {{ feed_icons }}
+	{{ attachment_after }}
+	{{ more }}
+
+	{% if footer %}
+		<footer>
+			{{ footer }}
+		</footer>
+	{% endif %}
+
+	{{ feed_icons }}
 </div>

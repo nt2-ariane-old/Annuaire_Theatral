@@ -171,8 +171,12 @@
 		{{ title_prefix }}
 		{% if not page %}
 			<h2{{title_attributes}}>
-				<a href="{{ url }}" rel="bookmark">{{ label }}</a>
+				{% autoescape %}
+					<a href="{{ url }}" rel="bookmark">{{label|raw}}</a>
+
+				{% endautoescape %}
 			</h2>
+
 		{% endif %}
 		{{ title_suffix }}
 
@@ -184,11 +188,21 @@
 				<main id="contenu" class="w-section section-imp">
 					{% if  node.field_image.value %}
 						<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image.entity.fileuri) }}')">
-							<h2 class="inner-title">{{ label }}</h2>
+							<h2{{title_attributes}} class="inner-title">
+								{% autoescape %}
+									{{label|raw}}
+								{% endautoescape %}
+							</h2>
+
 							<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
 						</section>
 					{% else %}
-						<h2>{{ label }}</h2>
+						<h2{{title_attributes}}>
+							{% autoescape %}
+								{{label|raw}}
+							{% endautoescape %}
+						</h2>
+
 						<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
 					{% endif %}
 					<div class="w-container issue-article">
@@ -378,7 +392,13 @@
 				{% elseif type == "dossier_vivarium" %}
 
 					<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
-						<h2 class="inner-title">{{ label }}</h2>
+						<h2{{title_attributes}} class="inner-title">
+							{% autoescape %}
+								{{label|raw}}
+							{% endautoescape %}
+						</h2>
+
+
 						<div>
 							{% if node.field_responsable_dossier.value  %}
 								<div class="sub-text-title">
@@ -449,7 +469,13 @@
 						</div>
 						<div class="w-container container-contact">
 							<div class="align-center issue-banner">
-								<h2 class="inner-title">{{ label }}</h2>
+								<h2{{title_attributes}} class="inner-title">
+									{% autoescape %}
+										{{label|raw}}
+									{% endautoescape %}
+								</h2>
+
+
 								{% if  node.field_artiste_invite.value %}
 									<div class="sub-text-title">
 										Artiste invité :
@@ -630,8 +656,15 @@
 					{% endif %}
 				{% elseif type == "article_web" or type == "la_ruche"%}
 					<div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
-						<h2 class="inner-title">{{ label }}</h2>
+						<h2{{title_attributes}} class="inner-title">
+							{% autoescape %}
+								{{label|raw}}
+							{% endautoescape %}
+						</h2>
+
+
 						{% if content.field_dossier_vivarium  %}
+
 							{% if node.field_dossier_vivarium.value  %}
 								<p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
 							{% endif %}
