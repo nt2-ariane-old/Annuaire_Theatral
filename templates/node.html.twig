@@ -197,10 +197,9 @@
 	<article{{attributes}}>
 
 		{{ title_prefix }}
-		{% if not page %}
+		{# {% if not page %}
 			<h2{{title_attributes}}>
 				{% autoescape %}
-					<a href="{{ url }}" rel="bookmark">{{label|raw}}</a>
 					<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
 						{% autoescape %}
 							{{label|raw}}
@@ -210,7 +209,7 @@
 				{% endautoescape %}
 			</h2>
 
-		{% endif %}
+		{% endif %} #}
 		{{ title_suffix }}
 
 		<div{{content_attributes}}>
