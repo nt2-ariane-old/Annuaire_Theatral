@@ -31,7 +31,11 @@
 	{{ title_prefix }}
 	{% if label|render %}
 		<div class="title-wrapper" aria-label="Titre de la page">
-			<h2{{title_attributes}}>{{ label }}</h2>
+			<h2 {{title_attributes}}>
+				{% autoescape %}
+					{{label|raw}}
+				{% endautoescape %}
+			</h2>
 			<div><img alt="soulignement de titre" src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png"></div>
 		</div>
 	{% endif %}

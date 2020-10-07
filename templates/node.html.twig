@@ -9,11 +9,19 @@
 
 	{% if "article" == type %}
 		<a class="lecture-content" href="{{ url }}">
-			<span>{{node.label}}</span>
+			<span {{title_attributes}}>
+				{% autoescape %}
+					{{node.label|raw}}
+				{% endautoescape %}
+			</span>
 		</a>
 	{% elseif type == "contributor" %}
 		<a href='{{ url }}'>
-			<b>{{ node.label }}</b>
+			<b {{title_attributes}}>
+				{% autoescape %}
+					{{node.label|raw}}
+				{% endautoescape %}
+			</b>
 		</a>
 
 		{% set conBody %}
@@ -27,7 +35,11 @@
 			<div class="blog-zig-zag up-left">
 				<div class="blog-content">
 					<h3 class="blog-title">
-						<a class="blog-title animsition-link" href="{{ url}}">{{ label  }}</a>
+						<a class="blog-title animsition-link" href="{{ url}}" {{title_attributes}}>
+							{% autoescape %}
+								{{label|raw}}
+							{% endautoescape %}
+						</a>
 					</h3>
 					<p class="meta-tag pls-category">
 						<div class="sub-information">
@@ -56,7 +68,11 @@
 				<i class="fa fa-envelope"></i>
 			</div>
 			<h3 itemprop="headline" aria-labelledby="Titre de l'actualité" class="blog-title">
-				<a class="blog-title animsition-link" aria-labelledby="Lien vers Actualite" href="{{url }}">{{ label  }}</a>
+				<a class="blog-title animsition-link" aria-labelledby="Lien vers Actualite" href="{{ url}}" {{title_attributes}}>
+					{% autoescape %}
+						{{label|raw}}
+					{% endautoescape %}
+				</a>
 			</h3>
 			<p class="meta-tag" aria-labelledby="Date de Publication" itemprop="datePublished">Publié le :
 				{{ content.field_nouvelle_date }}</p>
@@ -75,7 +91,11 @@
 					{% endif %}
 
 					<h3 class="blog-title">
-						<a class="blog-title animsition-link" href="{{ url}}">{{ label  }}</a>
+						<a class="blog-title animsition-link" href="{{ url}}" {{title_attributes}}>
+							{% autoescape %}
+								{{label|raw}}
+							{% endautoescape %}
+						</a>
 					</h3>
 					<p class="meta-tag">Sous la responsabilité de
 						{{ content.field_responsable_dossier|raw }}</p>
@@ -104,7 +124,11 @@
 				{{ content.field_image_de_couverture }}
 			</div>
 			<a href="{{url}}">
-				<span>{{node.label}}</span>
+				<span {{title_attributes}}>
+					{% autoescape %}
+						{{node.label|raw}}
+					{% endautoescape %}
+				</span>
 			</a>
 		</div>
 
@@ -118,7 +142,11 @@
 				<div class="blog-zig-zag up-left">
 					<div class="blog-content">
 						<h3 class="blog-title">
-							<a class="blog-title animsition-link" href="{{ url }}">{{ label }}</a>
+							<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
+								{% autoescape %}
+									{{label|raw}}
+								{% endautoescape %}
+							</a>
 						</h3>
 						{% if content.field_editor  %}
 							<div class="meta-tag">Sous la responsabilité de
@@ -173,6 +201,11 @@
 			<h2{{title_attributes}}>
 				{% autoescape %}
 					<a href="{{ url }}" rel="bookmark">{{label|raw}}</a>
+					<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
+						{% autoescape %}
+							{{label|raw}}
+						{% endautoescape %}
+					</a>
 
 				{% endautoescape %}
 			</h2>
