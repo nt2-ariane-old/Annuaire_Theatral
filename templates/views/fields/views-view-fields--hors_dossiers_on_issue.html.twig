@@ -1,24 +1,28 @@
 <div class="w-col w-col-6">
-    <div class="w-clearfix service-wrapper wow fadeIn" data-wow-delay="0.3s">
-        <div class="service-icon">
-            <div class="w-embed">
-                {% if fields.field_type_dossier.content == 'Documents' %}
-                    <i class="fas fa-folder"></i>
-                {% elseif fields.field_type_dossier.content == "Pratiques et travaux" %}
-                    <i class="far fa-comment"></i>
-                {% elseif fields.field_type_dossier.content ==  "Parcours critique" %}
-                        <i class="fas fa-book"></i>
-                {% elseif fields.field_type_dossier.content ==  "Revue des revues" %}
-                    <i class="fas fa-hourglass-end"></i>
-                {% elseif fields.field_type_dossier.content ==  "Notes de lecture" %}
-                    <i class="fas fa-vial"></i>
-                {% else %}
-                    <i class="fa fa-envelope-o"></i>
-                {% endif %}    
-            </div>
-        </div>
-        <div class="service-content">
-            <h4 class="service-title">{{ fields.field_type_dossier.content }}</h4>
-        </div>
-    </div>
+	<div class="w-clearfix service-wrapper wow fadeIn" data-wow-delay="0.3s">
+		<div class="service-icon">
+			<div class="w-embed">
+				{% if fields.field_type_dossier.content == 'Documents' %}
+					<i class="fas fa-folder"></i>
+				{% elseif fields.field_type_dossier.content == "Pratiques et travaux" %}
+					<i class="far fa-comment"></i>
+				{% elseif fields.field_type_dossier.content ==  "Parcours critique" %}
+					<i class="fas fa-book"></i>
+				{% elseif fields.field_type_dossier.content ==  "Revue des revues" %}
+					<i class="fas fa-hourglass-end"></i>
+				{% elseif fields.field_type_dossier.content ==  "Notes de lecture" %}
+					<i class="fas fa-vial"></i>
+				{% else %}
+					<i class="fa fa-envelope-o"></i>
+				{% endif %}
+			</div>
+		</div>
+		<div class="service-content">
+			<h4 class="service-title" {{title_attributes}}>
+				{% autoescape %}
+					{{fields.field_type_dossier.content |raw}}
+				{% endautoescape %}
+			</h4>
+		</div>
+	</div>
 </div>
