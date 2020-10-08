@@ -638,6 +638,21 @@ ul.tabs.primary:before {
   height: auto;
   background-size: contain;
   background-attachment: inherit;
+  position: relative;
+}
+
+.blog-post-banner .with-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.blog-post-banner .bg-img {
+  width: 100%;
+  height: auto;
 }
 
 .blog-post-banner .sub-text-title .field--name-field-num-pub::before {

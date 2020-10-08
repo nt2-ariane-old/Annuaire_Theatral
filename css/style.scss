@@ -617,7 +617,19 @@ ul {
   height: auto;
   background-size: contain;
   background-attachment: inherit;
-
+  position: relative;
+  .with-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+  .bg-img {
+    width: 100%;
+    height: auto;
+  }
   .sub-text-title .field--name-field-num-pub::before {
     content: "#";
   }
