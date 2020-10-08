@@ -429,7 +429,6 @@ ul.tabs.primary:before {
 #bandeau-intro img {
   margin: auto;
   position: static;
-  max-width: 1000px;
   width: 100%;
   height: auto;
   -o-object-fit: contain;
