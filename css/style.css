@@ -705,6 +705,9 @@ ul.tabs.primary:before {
 
 .blog-zig-zag img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .bottom-border *,
@@ -990,8 +993,6 @@ p.exergue,
   font-size: 1.2em;
   font-weight: 100;
   margin: auto;
-  max-width: 1000px;
-  padding: 2em;
   text-align: justify;
 }
 
