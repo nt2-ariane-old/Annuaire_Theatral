@@ -1050,6 +1050,7 @@ p.exergue,
 
 .item-list ul,
 .item-list li {
+  list-style-type: none;
   height: 100%;
   margin: 0;
   padding: 0;
