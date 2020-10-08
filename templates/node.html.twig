@@ -198,18 +198,18 @@
 
 		{{ title_prefix }}
 		{# {% if not page %}
-																					<h2{{title_attributes}}>
-																						{% autoescape %}
-																							<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
-																								{% autoescape %}
-																									{{label|raw}}
-																								{% endautoescape %}
-																							</a>
-																		
-																						{% endautoescape %}
-																					</h2>
-																		
-																				{% endif %} #}
+																															<h2{{title_attributes}}>
+																																{% autoescape %}
+																																	<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
+																																		{% autoescape %}
+																																			{{label|raw}}
+																																		{% endautoescape %}
+																																	</a>
+																												
+																																{% endautoescape %}
+																															</h2>
+																												
+																														{% endif %} #}
 		{{ title_suffix }}
 
 		<div{{content_attributes}}>
@@ -223,13 +223,15 @@
 							<div class="bg-img">
 								{{content.field_image}}
 							</div>
-							<h2{{title_attributes}} class="inner-title with-bg">
-								{% autoescape %}
-									{{label|raw}}
-								{% endautoescape %}
-							</h2>
+							<div class="with-bg">
+								<h2{{title_attributes}} class="inner-title">
+									{% autoescape %}
+										{{label|raw}}
+									{% endautoescape %}
+								</h2>
 
-							<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
+								<h3 class="title-wrapper">{{ content.field_article_subtitle }}</h3>
+							</div>
 						</section>
 					{% else %}
 						<h2{{title_attributes}}>
@@ -430,31 +432,34 @@
 						<div class="bg-img">
 							{{content.field_image_de_couverture}}
 						</div>
-						<h2{{title_attributes}} class="inner-title with-bg">
-							{% autoescape %}
-								{{label|raw}}
-							{% endautoescape %}
-						</h2>
+						<div class="with-bg">
+
+							<h2{{title_attributes}} class="inner-title">
+								{% autoescape %}
+									{{label|raw}}
+								{% endautoescape %}
+							</h2>
 
 
-						<div>
-							{% if node.field_responsable_dossier.value  %}
+							<div>
+								{% if node.field_responsable_dossier.value  %}
+									<div class="sub-text-title">
+										Sous la responsabilité de
+										{{ content.field_responsable_dossier|raw }}
+									</div>
+								{% endif %}
+
 								<div class="sub-text-title">
-									Sous la responsabilité de
-									{{ content.field_responsable_dossier|raw }}
+									{% if node.field_num_pub.value  %}
+										{{ content.field_num_pub|raw }}
+									{% endif %}
+									{% if node.field_date_pub.value and node.field_num_pub.value %}
+										,
+									{% endif %}
+									{% if node.field_date_pub.value  %}
+										{{ content.field_date_pub|raw }}
+									{% endif %}
 								</div>
-							{% endif %}
-
-							<div class="sub-text-title">
-								{% if node.field_num_pub.value  %}
-									{{ content.field_num_pub|raw }}
-								{% endif %}
-								{% if node.field_date_pub.value and node.field_num_pub.value %}
-									,
-								{% endif %}
-								{% if node.field_date_pub.value  %}
-									{{ content.field_date_pub|raw }}
-								{% endif %}
 							</div>
 						</div>
 					</section>
@@ -697,19 +702,21 @@
 						<div class="bg-img">
 							{{content.field_image_de_couverture}}
 						</div>
-						<h2{{title_attributes}} class="inner-title with-bg">
-							{% autoescape %}
-								{{label|raw}}
-							{% endautoescape %}
-						</h2>
+						<div class="with-bg">
+							<h2{{title_attributes}} class="inner-title with-bg">
+								{% autoescape %}
+									{{label|raw}}
+								{% endautoescape %}
+							</h2>
 
 
-						{% if content.field_dossier_vivarium  %}
+							{% if content.field_dossier_vivarium  %}
 
-							{% if node.field_dossier_vivarium.value  %}
-								<p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
+								{% if node.field_dossier_vivarium.value  %}
+									<p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
+								{% endif %}
 							{% endif %}
-						{% endif %}
+						</div>
 					</div>
 					<main id="contenu" class="w-section section-imp">
 						<div class="w-container">
