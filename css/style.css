@@ -995,6 +995,11 @@ p.exergue,
   text-align: justify;
 }
 
+.header-presentation p img {
+  width: 100%;
+  height: auto;
+}
+
 .informations {
   min-height: calc(100vh - 120px - 64px - 4rem);
   padding: 1rem;
