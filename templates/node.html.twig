@@ -198,18 +198,18 @@
 
 		{{ title_prefix }}
 		{# {% if not page %}
-													<h2{{title_attributes}}>
-														{% autoescape %}
-															<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
-																{% autoescape %}
-																	{{label|raw}}
-																{% endautoescape %}
-															</a>
-										
-														{% endautoescape %}
-													</h2>
-										
-												{% endif %} #}
+																					<h2{{title_attributes}}>
+																						{% autoescape %}
+																							<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
+																								{% autoescape %}
+																									{{label|raw}}
+																								{% endautoescape %}
+																							</a>
+																		
+																						{% endautoescape %}
+																					</h2>
+																		
+																				{% endif %} #}
 		{{ title_suffix }}
 
 		<div{{content_attributes}}>
@@ -220,6 +220,9 @@
 				<main id="contenu" class="w-section section-imp">
 					{% if  node.field_image.value %}
 						<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image.entity.fileuri) }}')">
+							<div class="bg-img">
+								{{content.sfield_image}}
+							</div>
 							<h2{{title_attributes}} class="inner-title">
 								{% autoescape %}
 									{{label|raw}}
@@ -424,6 +427,9 @@
 				{% elseif type == "dossier_vivarium" %}
 
 					<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
+						<div class="bg-img">
+							{{content.sfield_image}}
+						</div>
 						<h2{{title_attributes}} class="inner-title">
 							{% autoescape %}
 								{{label|raw}}
@@ -688,6 +694,9 @@
 					{% endif %}
 				{% elseif type == "article_web" or type == "la_ruche"%}
 					<div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
+						<div class="bg-img">
+							{{content.sfield_image}}
+						</div>
 						<h2{{title_attributes}} class="inner-title">
 							{% autoescape %}
 								{{label|raw}}
