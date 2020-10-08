@@ -629,6 +629,11 @@ ul {
   .bg-img {
     width: 100%;
     height: auto;
+    img
+    {
+      width: 100%;
+      height: 100%;
+    }
   }
   .sub-text-title .field--name-field-num-pub::before {
     content: "#";

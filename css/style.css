@@ -655,6 +655,11 @@ ul.tabs.primary:before {
   height: auto;
 }
 
+.blog-post-banner .bg-img img {
+  width: 100%;
+  height: 100%;
+}
+
 .blog-post-banner .sub-text-title .field--name-field-num-pub::before {
   content: "#";
 }
