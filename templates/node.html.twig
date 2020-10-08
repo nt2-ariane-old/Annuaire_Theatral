@@ -428,7 +428,7 @@
 
 					<section class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
 						<div class="bg-img">
-							{{content.field_image}}
+							{{content.field_image_de_couverture}}
 						</div>
 						<h2{{title_attributes}} class="inner-title">
 							{% autoescape %}
@@ -695,7 +695,7 @@
 				{% elseif type == "article_web" or type == "la_ruche"%}
 					<div class="w-section blog-post-banner" style="background-image:url('{{ file_url(node.field_image_de_couverture.entity.fileuri) }}')">
 						<div class="bg-img">
-							{{content.sfield_image}}
+							{{content.field_image_de_couverture}}
 						</div>
 						<h2{{title_attributes}} class="inner-title">
 							{% autoescape %}
