@@ -1405,7 +1405,22 @@ p.oblic,
 
 .section-imp {
   background-color: transparent;
-  padding: 40px 20px;
+  padding: 40px 0px;
+  .w-container
+  {
+    max-width: 100%;
+    #grid
+    {
+      width: calc(100% + 70px);
+      // width: calc(100% + 70px + 35px + 55px);
+      // margin-left: -35px;
+      // margin-right: -70px;
+      .item
+      {
+        width: auto;
+      }
+    }
+  }
 }
 .see-footnote {
   font-size: 0.8rem !important;

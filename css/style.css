@@ -1485,7 +1485,19 @@ p.oblic,
 
 .section-imp {
   background-color: transparent;
-  padding: 40px 20px;
+  padding: 40px 0px;
+}
+
+.section-imp .w-container {
+  max-width: 100%;
+}
+
+.section-imp .w-container #grid {
+  width: calc(100% + 70px);
+}
+
+.section-imp .w-container #grid .item {
+  width: auto;
 }
 
 .see-footnote {
