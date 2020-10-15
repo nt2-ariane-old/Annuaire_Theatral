@@ -13,19 +13,19 @@
 		{{fields.field_image_de_couverture.content}}
 
 		<div data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link">
-			<a href="{{ fields.view_node.content|striptags}}" class="portfolio-cn-title" >
+			<a href="{{ fields.view_node.content|striptags}}" class="portfolio-cn-title">
 				<h3{{title_attributes}} data-ix="scale-portfolio-title-on-load" class="portfolio-title">
 					{% autoescape %}
 						{{ fields.title.content|raw|striptags}}
 					{% endautoescape %}
 				</h3>
+				{% if fields.field_num_pub.content %}
+					<h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title">
+						{{fields.field_num_pub.content|raw|striptags}}
+					</h4>
+				{% endif %}
+				<div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title">{{fields.field_mots_cles.content|raw|striptags}}</div>
 			</a>
-			{% if fields.field_num_pub.content %}
-				<h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title">
-					{{fields.field_num_pub.content|raw|striptags}}
-				</h4>
-			{% endif %}
-			<div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title">{{fields.field_mots_cles.content|raw|striptags}}</div>
 		</div>
 	</div>
 </div>
