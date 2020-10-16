@@ -198,18 +198,18 @@
 
 		{{ title_prefix }}
 		{# {% if not page %}
-																															<h2{{title_attributes}}>
-																																{% autoescape %}
-																																	<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
+																																	<h2{{title_attributes}}>
 																																		{% autoescape %}
-																																			{{label|raw}}
+																																			<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
+																																				{% autoescape %}
+																																					{{label|raw}}
+																																				{% endautoescape %}
+																																			</a>
+																														
 																																		{% endautoescape %}
-																																	</a>
-																												
-																																{% endautoescape %}
-																															</h2>
-																												
-																														{% endif %} #}
+																																	</h2>
+																														
+																																{% endif %} #}
 		{{ title_suffix }}
 
 		<div{{content_attributes}}>
@@ -217,6 +217,7 @@
 			{# EN FONCTION DU TYPE DE NODE #}
 
 			{% if type == "article" %}
+
 				<main id="contenu" class="w-section section-imp">
 					{% if  node.field_image.value %}
 						<section class="w-section blog-post-banner">
@@ -247,9 +248,11 @@
 							class="w-row">
 							{# SIDEBAR #}
 							{% if  node.field_author.value or  node.field_tags.value or node.field_lectures_connexes.value %}
-								<div
-									class="w-col w-col-3">
-
+								<div class="w-col w-col-3">
+									{% for key in node.field_author|keys %}
+										{{ key }}
+									<div>field_contributor_role</div>
+									{% endfor %}
 									{# Auteurs #}
 									{% if node.field_author.value %}
 										<div class="sidebar-class">
@@ -698,7 +701,7 @@
 						</section>
 					{% endif %}
 				{% elseif type == "article_web" or type == "la_ruche"%}
-					<div class="w-section blog-post-banner" >
+					<div class="w-section blog-post-banner">
 						<div class="bg-img">
 							{{content.field_image_de_couverture}}
 						</div>
