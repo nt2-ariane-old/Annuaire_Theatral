@@ -8,6 +8,11 @@
 						{{fields.title.content |raw}}
 					{% endautoescape %}
 				</h4>
+
+				<h5 data-ix="scale-portfolio-title-on-load" class="portfolio-title author">
+					{{ fields.field_auteur.content|raw|striptags}}
+				</h5>
+
 				<div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title">{{fields.field_auteur.content|raw|striptags}}</div>
 			</div>
 		</a>
