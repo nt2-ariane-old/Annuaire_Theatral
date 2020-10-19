@@ -6,7 +6,7 @@
 
 				<h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title" {{title_attributes}}>
 					{% autoescape %}
-						{{fields.title.content|raw}}
+						{{fields.title.content|raw|striptags}}
 					{% endautoescape %}
 				</h4>
 
