@@ -19,7 +19,7 @@
 						{{ fields.title.content|raw|striptags}}
 					{% endautoescape %}
 				</h3>
-				{% if class == 'recits' || class == 'ruche' || class == 'echappee'  %}
+				{% if class == 'recits' or class == 'ruche' or class == 'echappee'  %}
 				{% for key in fields|keys %}
 					{{ key }}
 				{% endfor %}
