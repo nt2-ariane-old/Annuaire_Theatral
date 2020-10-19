@@ -31,6 +31,21 @@
 				{% endautoescape %}
 			</h4>
 		</a>
+
+		{% if  %}{% endif %}
+		{% if view.id == 'extension_echappees'  %}
+			<h5 class="portfolio-title author">
+				{{ fields.field_author.content|raw|striptags}}
+			</h5>
+		{% elseif view.id == 'extension_recits'  %}
+			<h5  class="portfolio-title author">
+				{{ fields.field_interviewer.content|raw|striptags}}
+			</h5>
+		{% elseif view.id == 'extension_ruches'  %}
+			<h5 class="portfolio-title author">
+				{{ fields.field_auteur.content|raw|striptags}}
+			</h5>
+		{% endif %}
 		<div class="portfolio-sub-title">{{fields.field_mots_cles.content|raw}}</div>
 	</div>
 {% else %}
