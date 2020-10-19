@@ -23,15 +23,16 @@
 					{{ key }}
 				{% endfor %}
 				{% if class == 'recits' or class == 'echappee'  %}
-				author
-					{{ fields.field_author.content}}
-					auteur
-					{{ fields.field_auteur.content}}
-				{% elseif class == 'ruche' %}
 					author
 					{{ fields.field_author.content}}
 					auteur
 					{{ fields.field_auteur.content}}
+				{% elseif class == 'ruche' %}
+					
+					<h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title">
+						{{ fields.field_author.content|raw|striptags}}
+					</h4>
+
 
 				{% endif %}
 				{% if fields.field_num_pub.content %}
