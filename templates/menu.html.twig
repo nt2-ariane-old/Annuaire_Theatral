@@ -36,6 +36,9 @@
 			{% for item in items %}
 				{% if item.below %}
 					<div class="dropdown">
+					{% for key in item.url|keys %}
+						{{ key }}
+					{% endfor %}
 						{% if item.url and item.url is not empty %}
 							<a{{item.attributes}} href='{{item.url}}' class="menu-link">
 								{{item.title|raw}}
