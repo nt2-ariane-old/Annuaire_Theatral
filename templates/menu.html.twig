@@ -36,7 +36,7 @@
 			{% for item in items %}
 				{% if item.below %}
 					<div class="dropdown">
-						{% if item.url && item.url is not empty %}
+						{% if item.url and item.url is not empty %}
 							<a{{item.attributes}} href='{{item.url}}' class="menu-link">
 								{{item.title|raw}}
 								<i class="fa fa-caret-down"></i>
@@ -54,7 +54,7 @@
 						</div>
 					</div>
 				{% else %}
-					{% if item.url  && item.url is not empty %}
+					{% if item.url  and item.url is not empty %}
 						<a{{item.attributes}} href='{{item.url}}' class="menu-link">{{item.title|raw}}</a>
 					{% else %}
 						<div class="menu-link">{{item.title|raw}}</div>
