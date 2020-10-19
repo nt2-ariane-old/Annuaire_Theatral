@@ -32,13 +32,21 @@
 	{% import _self as menus %}
 	{% if items %}
 		<div{{attributes}} class="topnav" id="menu_principal">
-			
+
 			{% for item in items %}
 				{% if item.below %}
 					<div class="dropdown">
-						<a href='{{item.url}}' class="dropbtn menu-link">{{item.title|raw}}
-							<i class="fa fa-caret-down"></i>
-						</a>
+						{% if item.url  %}
+							<a{{item.attributes}} href='{{item.url}}' class="menu-link">
+								{{item.title|raw}}
+								<i class="fa fa-caret-down"></i>
+							</a>
+						{% else %}
+							<div class="menu-link">
+								{{item.title|raw}}
+								<i class="fa fa-caret-down"></i>
+							</div>
+						{% endif %}
 						<div class="dropdown-content">
 							{% for child in item.below %}
 								<a{{child.attributes}} href="{{child.url}}" class="menu-link">{{child.title}}</a>
@@ -46,7 +54,11 @@
 						</div>
 					</div>
 				{% else %}
-					<a{{item.attributes}} href='{{item.url}}' class="menu-link">{{item.title|raw}}</a>
+					{% if item.url  %}
+						<a{{item.attributes}} href='{{item.url}}' class="menu-link">{{item.title|raw}}</a>
+					{% else %}
+						<div class="menu-link">{{item.title|raw}}</div>
+					{% endif %}
 				{% endif %}
 			{% endfor %}
 			<a href="javascript:void(0);" class="icon" onclick="showHamburgerMenu()">&#9776;</a>
