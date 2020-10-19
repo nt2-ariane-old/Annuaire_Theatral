@@ -19,6 +19,11 @@
 						{{ fields.title.content|raw|striptags}}
 					{% endautoescape %}
 				</h3>
+				{% if class == 'recits' || class == 'ruche' || class == 'echappee'  %}
+				{% for key in fields|keys %}
+					{{ key }}
+				{% endfor %}
+				{% endif %}
 				{% if fields.field_num_pub.content %}
 					<h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title">
 						{{fields.field_num_pub.content|raw|striptags}}
