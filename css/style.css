@@ -856,6 +856,10 @@ ul.tabs.primary:before {
   padding: 1rem 0;
 }
 
+.porfolio-tile.author {
+  font-size: 12px;
+}
+
 .extension-preview .portfolio-title {
   color: var(--main-txt-color);
 }
