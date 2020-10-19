@@ -23,9 +23,14 @@
 					{{ key }}
 				{% endfor %}
 				{% if class == 'recits' or class == 'echappee'  %}
+				author
 					{{ fields.field_author.content}}
+					auteur
+					{{ fields.field_auteur.content}}
 				{% elseif class == 'ruche' %}
-
+					author
+					{{ fields.field_author.content}}
+					auteur
 					{{ fields.field_auteur.content}}
 
 				{% endif %}
