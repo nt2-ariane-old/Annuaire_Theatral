@@ -28,12 +28,9 @@
 					auteur
 					{{ fields.field_auteur.content}}
 				{% elseif class == 'ruche' %}
-					
 					<h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title">
 						{{ fields.field_author.content|raw|striptags}}
 					</h4>
-
-
 				{% endif %}
 				{% if fields.field_num_pub.content %}
 					<h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title">
