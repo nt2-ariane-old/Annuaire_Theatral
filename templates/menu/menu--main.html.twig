@@ -38,6 +38,8 @@
 
 
 					<div class="dropdown" role="menu">
+
+						<div>{{ item.url }}</div>
 						{% if item.url  %}
 							<a{{item.attributes}} href='{{item.url}}' class="menu-link">
 								{{item.title|raw}}
