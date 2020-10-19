@@ -856,6 +856,10 @@ ul.tabs.primary:before {
   padding: 1rem 0;
 }
 
+.portfolio-title {
+  font-size: 14px;
+}
+
 .portfolio-title.author {
   font-size: 12px;
 }

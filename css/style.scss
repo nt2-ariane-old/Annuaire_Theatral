@@ -800,9 +800,11 @@ ul {
 .doc {
   padding: 1rem 0;
 }
-.portfolio-title.author
-{
-  font-size: 12px;
+.portfolio-title {
+  font-size: 14px;
+  &.author {
+    font-size: 12px;
+  }
 }
 .extension-preview {
   .portfolio-title {
@@ -1409,17 +1411,14 @@ p.oblic,
 .section-imp {
   background-color: transparent;
   padding: 40px 0px;
-  .w-container
-  {
+  .w-container {
     max-width: 100%;
-    #grid
-    {
+    #grid {
       width: calc(100% + 70px);
       // width: calc(100% + 70px + 35px + 55px);
       // margin-left: -35px;
       // margin-right: -70px;
-      .item
-      {
+      .item {
         width: 33.3%;
       }
     }
