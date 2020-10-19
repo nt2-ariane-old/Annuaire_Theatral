@@ -18,10 +18,7 @@
 					{% autoescape %}
 						{{ fields.title.content|raw|striptags}}
 					{% endautoescape %}
-				</h3>
-				{% for key in fields|keys %}
-					{{ key }}
-				{% endfor %}
+				</h3> 
 				{% if class == 'recits' or class == 'echappee'  %}
 					<h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title">
 						{{ fields.field_author.content|raw|striptags}}
