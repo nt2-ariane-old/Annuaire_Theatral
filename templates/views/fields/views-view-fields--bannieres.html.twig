@@ -1,3 +1,6 @@
-{% for key in view|keys %}
-    {{ key }}
+{% for key in fields|keys %}
+	{{ key }}
 {% endfor %}
+
+{% set current_route_name = \Drupal::service('current_route_match')->getRouteName() %}
+{{ current_route_name }}
