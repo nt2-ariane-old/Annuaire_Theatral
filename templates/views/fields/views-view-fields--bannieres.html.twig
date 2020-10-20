@@ -2,5 +2,4 @@
 	{{ key }}
 {% endfor %}
 
-{% set current_route_name = \Drupal::service('current_route_match')->getRouteName() %}
-{{ current_route_name }}
+{{ route_name}}
