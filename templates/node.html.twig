@@ -360,7 +360,7 @@
 
 					<ul class="nav nav-tabs">
 						<li class="nav-item">
-							<a class="nav-link active" data-toggle="tab" href="#Notes">Notes</a>
+							<a class="nav-link active" data-toggle="tab" href="#Notes">Pour citer cet article</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" data-toggle="tab" href="#biblio">Bibliographie</a>
@@ -370,7 +370,7 @@
 					<!-- Tab panes -->
 					<div class="tab-content">
 						<div class="tab-pane container active" id="Notes">
-							<p>{{content.field_pour_citer}}</p>
+							<p>{{content.field_pour_citer_cet_article}}</p>
 						</div>
 						<div class="tab-pane container fade" id="biblio">
 							<p>{{content.field_biblio}}</p>
@@ -495,10 +495,10 @@
 					</section>
 
 
-					{% if node.field_pour_citer.value  %}
+					{% if node.field_pour_citer_cet_article.value  %}
 						<section id="Notes">
-							<h4 class="post-title">Notes</h4>
-							<p>{{ content.field_pour_citer }}</p>
+							<h4 class="post-title">Pour citer cet article</h4>
+							<p>{{ content.field_pour_citer_cet_article }}</p>
 						</section>
 					{% endif %}
 
@@ -567,14 +567,14 @@
 							</div>
 						</div>
 					</main>
-					{% if  node.field_pour_citer.value or node.field_biblio.value %}
+					{% if  node.field_pour_citer_cet_article.value or node.field_biblio.value %}
 
 						<ul class="nav nav-tabs">
 
 
-							{% if node.field_pour_citer.value  %}
+							{% if node.field_pour_citer_cet_article.value  %}
 								<li class="nav-item">
-									<a class="nav-link active" data-toggle="tab" href="#Notes">Notes</a>
+									<a class="nav-link active" data-toggle="tab" href="#Notes">Pour citer cet article</a>
 								</li>
 							{% endif %}
 							{% if node.field_biblio.value  %}
@@ -586,9 +586,9 @@
 
 						<!-- Tab panes -->
 						<div class="tab-content">
-							{% if node.field_pour_citer.value  %}
+							{% if node.field_pour_citer_cet_article.value  %}
 								<div class="tab-pane container active" id="Notes">
-									<p>{{content.field_pour_citer}}</p>
+									<p>{{content.field_pour_citer_cet_article}}</p>
 								</div>
 							{% endif %}
 							{% if node.field_biblio.value  %}
@@ -769,13 +769,13 @@
 
 									</div>
 								</div>
-								{% if node.field_pour_citer.value or node.field_biblio.value %}
+								{% if node.field_pour_citer_cet_article.value or node.field_biblio.value %}
 
 									{# Notes et Biblio #}
 									<ul class="nav nav-tabs">
-										{% if node.field_pour_citer.value %}
+										{% if node.field_pour_citer_cet_article.value %}
 											<li class="nav-item">
-												<a class="nav-link active" data-toggle="tab" href="#Notes">Notes</a>
+												<a class="nav-link active" data-toggle="tab" href="#Notes">Pour citer cet article</a>
 											</li>
 										{% endif %}
 										{% if node.field_biblio.value %}
@@ -787,9 +787,9 @@
 
 									<!-- Tab panes -->
 									<div class="tab-content">
-										{% if node.field_pour_citer.value %}
+										{% if node.field_pour_citer_cet_article.value %}
 											<div class="tab-pane container active" id="Notes">
-												<p>{{content.field_pour_citer}}</p>
+												<p>{{content.field_pour_citer_cet_article}}</p>
 											</div>
 										{% endif %}
 										{% if node.field_biblio.value %}
