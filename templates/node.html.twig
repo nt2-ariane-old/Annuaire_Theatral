@@ -97,7 +97,7 @@
 							{% endautoescape %}
 						</a>
 					</h3>
-					<p class="meta-tag">Sous la responsabilité de
+					<p class="meta-tag">
 						{{ content.field_responsable_dossier|raw }}</p>
 					<div class="seperator"></div>
 					<p>{{content.body}}</p>
@@ -149,7 +149,7 @@
 							</a>
 						</h3>
 						{% if content.field_editor  %}
-							<div class="meta-tag">Sous la responsabilité de
+							<div class="meta-tag">
 								{{ content.field_editor }}</div>
 						{% endif %}
 
@@ -444,7 +444,6 @@
 							<div>
 								{% if node.field_responsable_dossier.value  %}
 									<div class="sub-text-title">
-										Sous la responsabilité de
 										{{ content.field_responsable_dossier|raw }}
 									</div>
 								{% endif %}
@@ -617,9 +616,9 @@
 									<h1 class="inner-title" aria-labelby="Titre du Dossier" itemprop="name">{{ label }}</h1>
 								</div>
 								<div aria-labelledby="Informations sur le Dossier" class="align-center season-issue">
-									<div class="sub-information line" aria-labelledby="Editeur du Dossier">Sous la responsabilité de
+									<div class="sub-information line" aria-labelledby="Editeur du Dossier">
 										{{ content.group_dossier_informations.field_editor}}</div>
-									<div class="sub-information line" aria-labelledby="Revue Parent du Dossier">Dans le
+									<div class="sub-information line" aria-labelledby="Revue Parent du Dossier">
 										{{ content.group_dossier_informations.field_issue_number}}</div>
 								</div>
 							</div>
