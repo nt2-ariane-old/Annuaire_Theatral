@@ -865,7 +865,8 @@ ul.tabs.primary:before {
 }
 
 .extension-header {
-  margin: 2rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
 .extension-header img {

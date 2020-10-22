@@ -806,11 +806,10 @@ ul {
     font-size: 12px;
   }
 }
-.extension-header
-{
-  margin: 2rem;
-  img
-  {
+.extension-header {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  img {
     width: 100%;
     height: auto;
   }
@@ -1076,8 +1075,7 @@ p.exergue,
   margin: 0;
   padding: 0;
   width: 100%;
-  img
-  {
+  img {
     width: 100%;
     height: auto;
   }
