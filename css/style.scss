@@ -808,7 +808,12 @@ ul {
 }
 .extension-header
 {
-  padding: 2rem;
+  margin: 2rem;
+  img
+  {
+    width: 100%;
+    height: auto;
+  }
 }
 .extension-preview {
   .portfolio-title {
@@ -1071,6 +1076,11 @@ p.exergue,
   margin: 0;
   padding: 0;
   width: 100%;
+  img
+  {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .js .paragraphs-collapsed-description {
