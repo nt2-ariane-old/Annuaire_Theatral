@@ -1,11 +1,11 @@
 window.onload = function () {
     new WOW().init();
 
-    let goback = document.querySelector('#block-gobackblock .button')
+    const goback = document.querySelector('#block-gobackblock .button')
     if (goback)
         goback.innerHTML = 'Retour'
 
-    let goback2 = document.querySelector('#block-gobackblock-2 .button')
+    const goback2 = document.querySelector('#block-gobackblock-2 .button')
     if (goback2)
         goback.innerHTML = 'Retour vers le sommaire'
 
