@@ -5,6 +5,10 @@ window.onload = function () {
     if (goback)
         goback.innerHTML = 'Retour'
 
+    let goback2 = document.querySelector('#block-gobackblock-2 .button')
+    if (goback2)
+        goback.innerHTML = 'Retour vers le sommaire'
+
     // let searchbar = document.getElementById('views-exposed-form-general-search-page-1');
     let searchbar = document.getElementById('views-exposed-form-general-search-default');
     // let searchbar = document.querySelector('.searchbar');

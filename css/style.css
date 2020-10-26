@@ -249,7 +249,8 @@ ul.tabs.primary:before {
   margin-bottom: 1rem;
 }
 
-#block-gobackblock {
+#block-gobackblock,
+#block-gobackblock-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,7 +264,8 @@ ul.tabs.primary:before {
   margin: 1rem 0;
 }
 
-#block-gobackblock .button {
+#block-gobackblock .button,
+#block-gobackblock-2 .button {
   display: block;
   width: 100px;
   text-align: center;
