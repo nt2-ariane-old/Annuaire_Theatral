@@ -198,18 +198,18 @@
 
 		{{ title_prefix }}
 		{# {% if not page %}
-																																	<h2{{title_attributes}}>
-																																		{% autoescape %}
-																																			<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
-																																				{% autoescape %}
-																																					{{label|raw}}
-																																				{% endautoescape %}
-																																			</a>
-																														
-																																		{% endautoescape %}
-																																	</h2>
-																														
-																																{% endif %} #}
+																																					<h2{{title_attributes}}>
+																																						{% autoescape %}
+																																							<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
+																																								{% autoescape %}
+																																									{{label|raw}}
+																																								{% endautoescape %}
+																																							</a>
+																																		
+																																						{% endautoescape %}
+																																					</h2>
+																																		
+																																				{% endif %} #}
 		{{ title_suffix }}
 
 		<div{{content_attributes}}>
@@ -248,11 +248,13 @@
 							class="w-row">
 							{# SIDEBAR #}
 							{% if  node.field_author.value or  node.field_tags.value or node.field_lectures_connexes.value %}
-								<div class="w-col w-col-3">
+								<div
+									class="w-col w-col-3">
 									{# Auteurs #}
 									{% if node.field_author.value %}
 										<div class="sidebar-class">
-											<h4 class="post-title"> Auteur·trice(s)</h4>
+											<h4 class="post-title">
+												Auteur·trice(s)</h4>
 											{{content.group_article_informations.field_author }}
 											{{content.group_article_informations.field_auteur_secondaire }}
 										</div>
@@ -692,6 +694,13 @@
 							</div>
 						</section>
 					{% endif %}
+					{% if node.field_credit_image.value %}
+						<section id="credit-image">
+							<div class="w-row">
+								{{ content.field_credit_image }}
+							</div>
+						</section>
+					{% endif %}
 				{% elseif type == "article_web" or type == "la_ruche"%}
 					<div class="w-section blog-post-banner">
 						<div class="bg-img">
@@ -725,7 +734,8 @@
 										{# Auteurs #}
 										{% if node.field_auteur.value  %}
 											<div class="sidebar-class">
-												<h4 class="post-title"> Auteur·trice(s)</h4>
+												<h4 class="post-title">
+													Auteur·trice(s)</h4>
 												{{content.field_auteur }}
 											</div>
 										{% endif %}
