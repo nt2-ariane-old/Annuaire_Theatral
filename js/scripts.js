@@ -7,7 +7,7 @@ window.onload = function () {
 
     const goback2 = document.querySelector('#block-gobackblock-2 .button')
     if (goback2)
-        goback.innerHTML = 'Retour vers le sommaire'
+        goback2.innerHTML = 'Retour vers le sommaire'
 
     // let searchbar = document.getElementById('views-exposed-form-general-search-page-1');
     let searchbar = document.getElementById('views-exposed-form-general-search-default');
