@@ -274,6 +274,10 @@ ul.tabs.primary:before {
   color: var(--main-txt-color);
 }
 
+#block-gobackblock-2 .button {
+  width: 200px;
+}
+
 #block-cartbutton {
   display: inline-block;
   font-size: 14px;
