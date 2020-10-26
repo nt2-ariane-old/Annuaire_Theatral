@@ -465,7 +465,6 @@
 
 					{% if node.body.value  %}
 						<section id="presentation">
-							<h4 class="post-title">Présentation</h4>
 							{{ content.body }}
 							<div class="views-element-container sidebar-class"></div>
 						</section>
@@ -519,7 +518,7 @@
 
 								{% if  node.field_artiste_invite.value %}
 									<div class="sub-text-title">
-										Artiste invité :
+										Artiste invité.e(s) :
 										{# {{ content.field_artiste_invite }} #}
 										<a href="{{ node.field_artiste_invite.0.entity.path.value|raw}}">
 											{{ node.field_artiste_invite.0.entity.label|raw}}
@@ -669,7 +668,6 @@
 					{% if content.group_contents.editorial_issue_entity_view_1|render  %}
 
 						<section id="editorial">
-							<span class="editorial-name">Présentation</span>
 							{{ content.group_contents.editorial_issue_entity_view_1 }}
 						</section>
 					{% endif %}
