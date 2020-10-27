@@ -11,6 +11,8 @@
   --black-bg-color: #000000;
   --footer-bg-color: #e0e0e0;
   --other-bg-color: #404040;
+  --banner-bg-color:
+;
 }
 
 li {
@@ -327,6 +329,7 @@ ul.tabs.primary:before {
   position: relative;
   width: 100%;
   height: auto;
+  background-color: #525659;
 }
 
 #intro .issue-banner {
