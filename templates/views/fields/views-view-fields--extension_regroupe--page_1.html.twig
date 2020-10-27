@@ -18,7 +18,7 @@
 					{% autoescape %}
 						{{ fields.title.content|raw}}
 					{% endautoescape %}
-				</h3> 
+				</h3>
 				{% if class == 'echappee' %}
 					<h5 data-ix="scale-portfolio-title-on-load" class="portfolio-title author">
 						{{ fields.field_author.content|raw|striptags}}
@@ -31,11 +31,12 @@
 					<h5 data-ix="scale-portfolio-title-on-load" class="portfolio-title author">
 						{{ fields.field_auteur.content|raw|striptags}}
 					</h5>
-				{% endif %}
-				{% if fields.field_num_pub.content %}
-					<h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title">
-						{{fields.field_num_pub.content|raw|striptags}}
-					</h4>
+				{% elseif class == 	'vivarium' %}
+					{% if fields.field_num_pub.content %}
+						<h4 data-ix="scale-portfolio-title-on-load" class="portfolio-title">
+							{{fields.field_num_pub.content|raw|striptags}}
+						</h4>
+					{% endif %}
 				{% endif %}
 				<div data-ix="scale-portfolio-title-on-load-2" class="portfolio-sub-title">{{fields.field_mots_cles.content|raw|striptags}}</div>
 			</a>
