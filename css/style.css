@@ -329,6 +329,7 @@ ul.tabs.primary:before {
   position: relative;
   width: 100%;
   height: auto;
+  background-color: white;
 }
 
 #intro .issue-banner {
