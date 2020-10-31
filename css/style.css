@@ -899,6 +899,10 @@ ul.tabs.primary:before {
   font-size: 14px;
 }
 
+.portfolio-title a {
+  color: white;
+}
+
 .portfolio-title.author {
   font-size: 12px;
 }
