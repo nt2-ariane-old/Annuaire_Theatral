@@ -710,6 +710,10 @@ ul {
 }
 
 .blog-zig-zag {
+  .w-inline-block
+  {
+    height: 100%;
+  }
   .sub-information,
   .season-issue {
     color: var(--main-txt-color);

@@ -743,6 +743,10 @@ ul.tabs.primary:before {
   font-size: 1.3rem;
 }
 
+.blog-zig-zag .w-inline-block {
+  height: 100%;
+}
+
 .blog-zig-zag .sub-information,
 .blog-zig-zag .season-issue {
   color: var(--main-txt-color);
