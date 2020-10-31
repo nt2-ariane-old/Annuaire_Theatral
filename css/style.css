@@ -760,6 +760,13 @@ ul.tabs.primary:before {
   -webkit-box-flex: 1 !important;
       -ms-flex: 1 1 16.6% !important;
           flex: 1 1 16.6% !important;
+  padding: 5px;
+}
+
+#block-views-block-mots-cles-view-block-1 .views-view-grid .views-row .views-col .tags {
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 .blog-zig-zag .w-inline-block {

@@ -720,6 +720,13 @@ ul {
       .views-col
       {
         flex: 1 1 16.6% !important;
+        padding: 5px;
+        .tags
+        {
+          height: 100%;
+          width: 100%;
+          text-align: center;
+        }
       }
     }
   }
