@@ -708,7 +708,22 @@ ul {
 .blog-title a {
   font-size: 1.3rem;
 }
-
+#block-views-block-mots-cles-view-block-1
+{
+  .views-view-grid
+  {
+    .views-row
+    {
+      display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+      .views-col
+      {
+        flex: 1 1 16.6% !important;
+      }
+    }
+  }
+}
 .blog-zig-zag {
   .w-inline-block
   {

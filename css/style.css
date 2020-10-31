@@ -743,6 +743,25 @@ ul.tabs.primary:before {
   font-size: 1.3rem;
 }
 
+#block-views-block-mots-cles-view-block-1 .views-view-grid .views-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#block-views-block-mots-cles-view-block-1 .views-view-grid .views-row .views-col {
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 1 16.6% !important;
+          flex: 1 1 16.6% !important;
+}
+
 .blog-zig-zag .w-inline-block {
   height: 100%;
 }
