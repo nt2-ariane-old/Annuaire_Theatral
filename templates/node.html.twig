@@ -408,12 +408,12 @@
 							<div>
 								{% if (contents_on_contributor_entity_view_1.value is empty or contents_on_contributor_entity_view_2.value is empty) %}
 									<div class="title-wrapper">
-										<h3>Contenu du contributeur</h3>
+										<h3>Article(s)</h3>
 										<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
 									</div>
 									<div>
-										{{ contents_on_contributor_entity_view_1 }}
-										{{ contents_on_contributor_entity_view_2 }}
+										{{ content.contents_on_contributor_entity_view_1 }}
+										{{ content.contents_on_contributor_entity_view_2 }}
 									</div>
 								{% endif %}
 							</div>
