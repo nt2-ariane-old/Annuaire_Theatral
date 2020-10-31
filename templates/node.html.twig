@@ -98,7 +98,8 @@
 						</a>
 					</h3>
 					<p class="meta-tag">
-						Sous la direction de {{ content.field_responsable_dossier|raw }}</p>
+						Sous la direction de
+						{{ content.field_responsable_dossier|raw }}</p>
 					<div class="seperator"></div>
 					<p>{{content.body}}</p>
 					<div class="small-spc">
@@ -198,18 +199,18 @@
 
 		{{ title_prefix }}
 		{# {% if not page %}
-																																					<h2{{title_attributes}}>
-																																						{% autoescape %}
-																																							<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
+																																							<h2{{title_attributes}}>
 																																								{% autoescape %}
-																																									{{label|raw}}
+																																									<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
+																																										{% autoescape %}
+																																											{{label|raw}}
+																																										{% endautoescape %}
+																																									</a>
+																																				
 																																								{% endautoescape %}
-																																							</a>
-																																		
-																																						{% endautoescape %}
-																																					</h2>
-																																		
-																																				{% endif %} #}
+																																							</h2>
+																																				
+																																						{% endif %} #}
 		{{ title_suffix }}
 
 		<div{{content_attributes}}>
@@ -333,6 +334,22 @@
 						</div>
 					</main>
 				{% elseif type == "echappee" %}
+					<div id="intro" class="w-section banner-one window-size">
+						<div class="video-wrapper">
+							<div class="w-embed embed-video">
+								{{ content.field_image_de_couverture }}
+							</div>
+						</div>
+						<div class="w-container container-contact">
+							<div class="align-center issue-banner">
+								<h2{{title_attributes}} class="inner-title">
+									{% autoescape %}
+										{{label|raw}}
+									{% endautoescape %}
+								</h2>
+							</div>
+						</div>
+					</div>
 					<section>
 						<h4 class="post-title">Auteur(s)</h4>
 						{{ content.field_author }}
@@ -446,7 +463,8 @@
 							<div>
 								{% if node.field_responsable_dossier.value  %}
 									<div class="sub-text-title">
-										Sous la direction de {{ content.field_responsable_dossier|raw }}
+										Sous la direction de
+										{{ content.field_responsable_dossier|raw }}
 									</div>
 								{% endif %}
 
