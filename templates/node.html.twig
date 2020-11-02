@@ -270,13 +270,16 @@
 											</div>
 										</div>
 									{% endif %}
-									{% if  node.field_abstract_translation.value %}
+									{% if  node.field_abstract_original_language.value %}
 										{# Mots-Clés #}
 										<div class="views-element-container sidebar-class">
 											<h4 class="post-title">Résumé</h4>
 
 											<div class="w-clearfix">
-												{{ content.group_abstracts.field_abstract_translation }}
+												{{ content.group_abstracts.field_abstract_original_language	 }}
+											</div>
+											<div class="w-clearfix">
+												{{ content.group_abstracts.field_abstract_translation	 }}
 											</div>
 										</div>
 									{% endif %}
