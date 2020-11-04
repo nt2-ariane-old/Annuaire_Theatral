@@ -10,11 +10,11 @@
 
 <div class="item {{class}}">
 	<div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">
-		<a href="{{ fields.view_node.content|striptags}}" class="portfolio-cn-title">
+		<a target="_blank" rel="noopener noreferrer" href="{{ fields.view_node.content|striptags}}" class="portfolio-cn-title">
 			{{fields.field_image_de_couverture.content}}
 		</a>
 		<div data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link">
-			<a href="{{ fields.view_node.content|striptags}}" class="portfolio-cn-title">
+			<a  target="_blank" rel="noopener noreferrer" href="{{ fields.view_node.content|striptags}}" class="portfolio-cn-title">
 				<h3{{title_attributes}} data-ix="scale-portfolio-title-on-load" class="portfolio-title">
 					{% autoescape %}
 						{{ fields.title.content|raw|striptags}}
