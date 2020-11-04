@@ -199,18 +199,18 @@
 
 		{{ title_prefix }}
 		{# {% if not page %}
-																																							<h2{{title_attributes}}>
-																																								{% autoescape %}
-																																									<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
+																																									<h2{{title_attributes}}>
 																																										{% autoescape %}
-																																											{{label|raw}}
+																																											<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
+																																												{% autoescape %}
+																																													{{label|raw}}
+																																												{% endautoescape %}
+																																											</a>
+																																						
 																																										{% endautoescape %}
-																																									</a>
-																																				
-																																								{% endautoescape %}
-																																							</h2>
-																																				
-																																						{% endif %} #}
+																																									</h2>
+																																						
+																																								{% endif %} #}
 		{{ title_suffix }}
 
 		<div{{content_attributes}}>
@@ -270,17 +270,16 @@
 											</div>
 										</div>
 									{% endif %}
-									{% if  node.field_abstract_original_language.value %}
+									{% if  node.field_abstract_original_language.value|render %}
 										{# Mots-Clés #}
 										<div class="views-element-container sidebar-class">
 											<h4 class="post-title">Résumé</h4>
-
 											<div class="w-clearfix">
 												{{ content.group_abstracts.field_abstract_original_language	 }}
 											</div>
 											{# <div class="w-clearfix">
-												{{ content.group_abstracts.field_abstract_translation	 }}
-											</div> #}
+																							{{ content.group_abstracts.field_abstract_translation	 }}
+																						</div> #}
 										</div>
 									{% endif %}
 
