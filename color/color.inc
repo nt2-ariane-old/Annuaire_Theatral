@@ -14,23 +14,24 @@ $info = array(
         'searchbar' => t('Bar de Recherche'),
         'button' => t('Bouton'),
         'other-bg' => t('Autre'),
+        'link' => t('Lien'),
     ],
     // Pre-defined color schemes.
     'schemes' => [
         'default' => [
             'title' => t('Teinte de Gris (Default)'),
             'colors' => [
+                'bg' => '#f7f7f7',
                 'top' => '#ffffff',
                 'secondary' => '#a60540',
                 'footer' => '#e0e0e0',
                 'text' => '#262626',
                 'second_text' => '#1a2b3f',
-                'folder' => '#a60541',
+                'folder' => '#a50331',
                 'searchbar' => '#353a48',
-                'bg' => '#f7f7f7',
-                'link' => '#000000',
                 'button' => '#dbdae5',
                 'other-bg' => '#404040',
+                'link' => '#000000',
 
             ],
         ],
