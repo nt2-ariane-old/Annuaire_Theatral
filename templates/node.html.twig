@@ -199,18 +199,18 @@
 
 		{{ title_prefix }}
 		{# {% if not page %}
-																																											<h2{{title_attributes}}>
-																																												{% autoescape %}
-																																													<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
-																																														{% autoescape %}
-																																															{{label|raw}}
-																																														{% endautoescape %}
-																																													</a>
-																																								
-																																												{% endautoescape %}
-																																											</h2>
-																																								
-																																										{% endif %} #}
+																																																	<h2{{title_attributes}}>
+																																																		{% autoescape %}
+																																																			<a class="blog-title animsition-link" href="{{ url }}" {{title_attributes}}>
+																																																				{% autoescape %}
+																																																					{{label|raw}}
+																																																				{% endautoescape %}
+																																																			</a>
+																																														
+																																																		{% endautoescape %}
+																																																	</h2>
+																																														
+																																																{% endif %} #}
 		{{ title_suffix }}
 
 		<div{{content_attributes}}>
@@ -278,8 +278,8 @@
 												{{ content.group_abstracts.field_abstract_original_language	 }}
 											</div>
 											{# <div class="w-clearfix">
-																																		{{ content.group_abstracts.field_abstract_translation	 }}
-																																	</div> #}
+																																																																			{{ content.group_abstracts.field_abstract_translation	 }}
+																																																																		</div> #}
 										</div>
 									{% endif %}
 
@@ -435,21 +435,27 @@
 								</div>
 							</div>
 							<div>
-								{# {% if (node.contents_on_contributor_entity_view_1.value or node.contents_on_contributor_entity_view_2.value) %} #}
-									<div class="title-wrapper">
-										<h3>Article(s)</h3>
-										<img src="http://percees.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
+								{# {% if (node.contents_on_contributor_entity_view_1.value or node.contents_on_contributor_entity_view_2.value or node.contents_on_contributor_entity_view_3.value or node.contents_on_contributor_entity_view_4.value) %} #}
+								<div class="title-wrapper">
+									<h3>Contenu(s)</h3>
+									<img src="http://percees.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
+								</div>
+								<div>
+									{% for key in content|keys %}
+										{{ key }}
+									{% endfor %}
+									<div>
+										<h4>Article(s)</h4>
+
+										{{ content.contents_on_contributor_entity_view_1 }}
+										{{ content.contents_on_contributor_entity_view_3 }}
 									</div>
 									<div>
-										{% for key in content|keys %}
-											{{ key }}
-										{% endfor %}
-										{% for key in content.contents_on_contributor_entity_view_1|keys %}
-											{{ key }}
-										{% endfor %}
-										{{ content.contents_on_contributor_entity_view_1 }}
+										<h4>Dossier(s)</h4>
 										{{ content.contents_on_contributor_entity_view_2 }}
+										{{ content.contents_on_contributor_entity_view_4 }}
 									</div>
+								</div>
 								{# {% endif %} #}
 							</div>
 						</div>
@@ -751,11 +757,11 @@
 
 
 							{# {% if content.field_dossier_vivarium  %}
-
-								{% if node.field_dossier_vivarium.value  %}
-									<p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
-								{% endif %}
-							{% endif %} #}
+																							
+																															{% if node.field_dossier_vivarium.value  %}
+																																<p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
+																															{% endif %}
+																														{% endif %} #}
 						</div>
 					</div>
 					<main id="contenu" class="w-section section-imp">
