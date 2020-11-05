@@ -1,9 +1,6 @@
 <div class="w-col w-col-2">
 	<div class="align-center">
 		<div class="data-blog cont-ico smll-ico">
-			{% for key in fields|keys %}
-				{{ key }}
-			{% endfor %}
 			<div class="w-embed">
 				{% if fields.field_image %}
 					{{ fields.field_image.content }}
@@ -13,5 +10,8 @@
 			</div>
 		</div>
 		<div class="cont-sub-txt">{{ fields.title.content }}</div>
+		{% for key in fields|keys %}
+			{{ key }}
+		{% endfor %}
 	</div>
 </div>
