@@ -17,7 +17,7 @@
 			<a  target="_blank" rel="noopener noreferrer" href="{{ fields.view_node.content|striptags}}" class="portfolio-cn-title">
 				<h3{{title_attributes}} data-ix="scale-portfolio-title-on-load" class="portfolio-title">
 					{% autoescape %}
-						{{ fields.title.content|raw|striptags}}
+						{{ fields.title.content|raw}}
 					{% endautoescape %}
 				</h3>
 				{% if class == 'echappee' %}

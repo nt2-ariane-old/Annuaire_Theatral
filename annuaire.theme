@@ -44,3 +44,30 @@ function annuaire_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\
 function annuaire_preprocess_page(&$variables) {
   $variables['route_name'] = \Drupal::routeMatch()->getRouteName();
 }
+
+function annuaire_form_system_theme_settings_alter(&$form, &$form_state) {
+  annuaire_theme_settings_add_new_colors();
+  return $form;
+}
+function annuaire_theme_settings_add_new_colors() {
+  // Add in any new colors that are defined in default scheme
+  // but are not defined in the saved palette values.
+  // Supplements logic in color.module color_scheme_form().
+  $theme = 'annuaire';
+  $info = color_get_info($theme);
+  $names = $info['fields'];
+  $palette = color_get_palette($theme); //calls variable_get
+  $default = color_get_palette($theme, TRUE);
+  $new = array();
+  foreach ($default as $name => $value) {
+    if (!isset($palette[$name]) && isset($names[$name])) {
+      $palette[$name] = $default[$name];
+      $new[] = $names[$name];
+    }
+  }
+  if (count($new)) {
+    drupal_set_message(t('One or more new colors are now available: @colors',
+      array('@colors' => implode(', ', $new))));
+    variable_set('color_' . $theme . '_palette', $palette);
+  }
+}

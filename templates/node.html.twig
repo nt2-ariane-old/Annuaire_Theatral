@@ -354,7 +354,7 @@
 						</div>
 						<div class="w-container container-contact">
 							<div class="align-center issue-banner">
-								<h2{{title_attributes}} class="inner-title">
+								<h2{{title_attributes}} class="inner-title black">
 									{% autoescape %}
 										{{label|raw}}
 									{% endautoescape %}
@@ -491,18 +491,6 @@
 										{{ content.field_responsable_dossier|raw }}
 									</div>
 								{% endif %}
-
-								<div class="sub-text-title">
-									{% if node.field_num_pub.value  %}
-										{{ content.field_num_pub|raw }}
-									{% endif %}
-									{% if node.field_date_pub.value and node.field_num_pub.value %}
-										,
-									{% endif %}
-									{% if node.field_date_pub.value  %}
-										{{ content.field_date_pub|raw }}
-									{% endif %}
-								</div>
 							</div>
 						</div>
 					</section>

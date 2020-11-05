@@ -3,6 +3,7 @@
   --second-text-color: #a8a8a8;
 
   --banner-color: #a60540;
+  --folder-color: #a50331;
 
   --main-bg-color: #ffffff;
   --body-bg-color: #f7f7f7;
@@ -1071,6 +1072,10 @@ p.exergue,
 .inner-title {
   font-size: 3rem;
   line-height: 5.5rem;
+  &.black
+  {
+    color: black;
+  }
 }
 
 // .issue-article {
@@ -1441,7 +1446,7 @@ p.oblic,
   }
 }
 .service-icon {
-  color: var(--banner-color);
+  color: var(--folder-color);
 }
 .season-issue .paragraphs-collapsed-description,
 .sub-information .paragraphs-collapsed-description {
@@ -1666,6 +1671,7 @@ p.oblic,
 .w-section a,
 details {
   color: var(--main-txt-color);
+  height: 100%;
 }
 
 .w-section a:hover {

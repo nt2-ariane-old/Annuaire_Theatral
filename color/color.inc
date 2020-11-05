@@ -8,6 +8,7 @@ $info = array(
         'bottom' => t('Pied de Page'),
         'text' => t('Texte'),
         'second_text' => t('Seconde couleur de Texte'),
+        'folder' => t('Couleur des dossiers'),
         'searchbar' => t('Bar de Recherche'),
         'base' => t('Couleur de fond'),
         'button' => t('Bouton'),
@@ -24,6 +25,7 @@ $info = array(
                 'bottom' => '#e0e0e0',
                 'text' => '#262626',
                 'second_text' => '#1a2b3f',
+                'folder' => '#a60541',
                 'searchbar' => '#353a48',
                 'base' => '#f7f7f7',
                 'link' => '#000000',
@@ -41,6 +43,7 @@ $info = array(
                 'text' => '#2C333D',
                 'second_text' => '#a8a8a8',
                 'searchbar' => '#353a48',
+                'folder' => '#a60541',
 
                 'base' => '#F9F8FC',
                 'link' => '#2C333D',
@@ -58,6 +61,7 @@ $info = array(
                 'text' => '#00070D',
                 'second_text' => '#ffffff',
                 'searchbar' => '#000000',
+                'folder' => '#a60541',
 
                 'base' => '#F2F2F2',
                 'link' => '#00070D',
@@ -79,6 +83,8 @@ $info = array(
                 'link' => '#29384C',
                 'button' => '#EBEDF3',
                 'other-bg' => '#29384C',
+                'folder' => '#a60541',
+
 
             ],
         ],
@@ -94,6 +100,7 @@ $info = array(
                 'base' => '#F2F2F2',
                 'link' => '#00070D',
                 'button' => '#F2F2DF',
+                'folder' => '#a60541',
                 'other-bg' => '#000000',
 
             ],

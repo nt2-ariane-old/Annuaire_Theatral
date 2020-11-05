@@ -2,6 +2,7 @@
   --main-txt-color: #262626;
   --second-text-color: #a8a8a8;
   --banner-color: #a60540;
+  --folder-color: #a50331;
   --main-bg-color: #ffffff;
   --body-bg-color: #f7f7f7;
   --bar-bg-color: #ffffff;
@@ -1152,6 +1153,10 @@ p.exergue,
   line-height: 5.5rem;
 }
 
+.inner-title.black {
+  color: black;
+}
+
 .item.blog-item {
   width: 100%;
 }
@@ -1541,7 +1546,7 @@ p.oblic,
 }
 
 .service-icon {
-  color: var(--banner-color);
+  color: var(--folder-color);
 }
 
 .season-issue .paragraphs-collapsed-description,
@@ -1791,6 +1796,7 @@ p.oblic,
 .w-section a,
 details {
   color: var(--main-txt-color);
+  height: 100%;
 }
 
 .w-section a:hover {
