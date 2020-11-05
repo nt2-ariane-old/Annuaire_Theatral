@@ -1,17 +1,17 @@
 <div class="w-col w-col-2">
-    <div class="align-center">
-        <div class="data-blog cont-ico smll-ico">
-            <div class="w-embed">
-            {% for key in fields|keys %}
-                {{ key }}
-            {% endfor %}
-                {% if fields.field_image %}
-                    {{ fields.field_image.content }}
-                {% elseif fields.field_image_de_couverture %}
-                    {{ fields.field_image_de_couverture.content }}
-                {% endif %}
-            </div>
-        </div>
-        <div class="cont-sub-txt">{{ fields.title.content }}</div>
-    </div>
+	<div class="align-center">
+		<div class="data-blog cont-ico smll-ico">
+			{% for key in fields|keys %}
+				{{ key }}
+			{% endfor %}
+			<div class="w-embed">
+				{% if fields.field_image %}
+					{{ fields.field_image.content }}
+				{% elseif fields.field_image_de_couverture %}
+					{{ fields.field_image_de_couverture.content }}
+				{% endif %}
+			</div>
+		</div>
+		<div class="cont-sub-txt">{{ fields.title.content }}</div>
+	</div>
 </div>
