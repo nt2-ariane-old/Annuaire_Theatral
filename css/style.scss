@@ -13,7 +13,7 @@
   --black-bg-color: #000000;
   --footer-bg-color: #e0e0e0;
   --other-bg-color: #404040;
-  --banner-bg-color:
+  --banner-bg-color: ;
 }
 
 li {
@@ -267,10 +267,8 @@ ul {
     color: var(--main-txt-color);
   }
 }
-#block-gobackblock-2
-{
-  .button
-  {
+#block-gobackblock-2 {
+  .button {
     width: 200px;
   }
 }
@@ -708,21 +706,16 @@ ul {
 .blog-title a {
   font-size: 1.3rem;
 }
-#block-views-block-mots-cles-view-block-1
-{
-  .views-view-grid
-  {
-    .views-row
-    {
+#block-views-block-mots-cles-view-block-1 {
+  .views-view-grid {
+    .views-row {
       display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-      .views-col
-      {
+      flex-direction: row;
+      justify-content: space-between;
+      .views-col {
         flex: 1 1 16.6% !important;
         padding: 5px;
-        .tags
-        {
+        .tags {
           height: 100%;
           width: 100%;
           text-align: center;
@@ -732,8 +725,7 @@ ul {
   }
 }
 .blog-zig-zag {
-  .w-inline-block
-  {
+  .w-inline-block {
     height: 100%;
   }
   .sub-information,
@@ -832,14 +824,21 @@ ul {
     padding: 0;
   }
 }
-
+.contributor-contents {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
 .doc {
   padding: 1rem 0;
 }
 .portfolio-title {
   font-size: 14px;
-  a
-  {
+  a {
     color: white;
   }
   &.author {

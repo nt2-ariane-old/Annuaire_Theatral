@@ -11,8 +11,7 @@
   --black-bg-color: #000000;
   --footer-bg-color: #e0e0e0;
   --other-bg-color: #404040;
-  --banner-bg-color:
-;
+  --banner-bg-color: ;
 }
 
 li {
@@ -889,6 +888,17 @@ ul.tabs.primary:before {
 
 .data-blog.cont-ico.smll-ico {
   padding: 0;
+}
+
+.contributor-contents {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.contributor-contents::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .doc {
