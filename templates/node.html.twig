@@ -438,12 +438,14 @@
 								{# {% if (node.contents_on_contributor_entity_view_1.value or node.contents_on_contributor_entity_view_2.value) %} #}
 									<div class="title-wrapper">
 										<h3>Article(s)</h3>
-										<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
+										<img src="http://percees.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
 									</div>
 									<div>
 										{% for key in content|keys %}
 											{{ key }}
 										{% endfor %}
+										{{ node.contents_on_contributor_entity_view_1.value }}
+										{{ node.contents_on_contributor_entity_view_2.value }}
 										{{ content.contents_on_contributor_entity_view_1 }}
 										{{ content.contents_on_contributor_entity_view_2 }}
 									</div>
@@ -668,7 +670,7 @@
 						<div class="w-container">
 							<div class="title-wrapper">
 								<h2>Sommaire</h2>
-								<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
+								<img src="http://percees.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
 							</div>
 							<div>
 								{{ content.group_contents.articles_dossier_entity_view_1 }}
