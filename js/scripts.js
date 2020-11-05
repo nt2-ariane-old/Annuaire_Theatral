@@ -137,6 +137,13 @@ window.onload = function () {
             // menu.hidden = !menu.hidden;
         });
     });
+    const files = document.querySelectorAll('.media--type-file')
+    files.forEach(file => {
+        const links = file.querySelectorAll('a')
+        links.forEach(link => {
+            link.setAttribute('target','_blank')
+        });
+    });
 
 
 }

@@ -363,7 +363,7 @@
 						</div>
 					</div>
 					<section>
-						<h4 class="post-title">Auteur(s)</h4>
+						<h4 class="post-title">Auteur·trice(s)</h4>
 						{{ content.field_author }}
 						<div class="views-element-container sidebar-class"></div>
 					</section>
@@ -376,7 +376,7 @@
 						<div class="views-element-container sidebar-class"></div>
 					</section>
 					<div>
-						<h4 class="post-title">Mots-Clés</h4>
+						<h4 class="post-title">Mots-clés</h4>
 
 						<div class="w-clearfix">
 							{{ content.field_mots_cles}}
@@ -435,16 +435,19 @@
 								</div>
 							</div>
 							<div>
-								{% if (contents_on_contributor_entity_view_1.value is empty or contents_on_contributor_entity_view_2.value is empty) %}
+								{# {% if (node.contents_on_contributor_entity_view_1.value or node.contents_on_contributor_entity_view_2.value) %} #}
 									<div class="title-wrapper">
 										<h3>Article(s)</h3>
 										<img src="http://annuairetheatral.aegir8.uqam.ca/{{base_path ~ directory }}/images/sub-handmade.png">
 									</div>
 									<div>
+										{% for key in content|keys %}
+											{{ key }}
+										{% endfor %}
 										{{ content.contents_on_contributor_entity_view_1 }}
 										{{ content.contents_on_contributor_entity_view_2 }}
 									</div>
-								{% endif %}
+								{# {% endif %} #}
 							</div>
 						</div>
 					</main>
@@ -744,12 +747,12 @@
 							</h2>
 
 
-							{% if content.field_dossier_vivarium  %}
+							{# {% if content.field_dossier_vivarium  %}
 
 								{% if node.field_dossier_vivarium.value  %}
 									<p class="sub-text-title">{{ content.field_dossier_vivarium }}</p>
 								{% endif %}
-							{% endif %}
+							{% endif %} #}
 						</div>
 					</div>
 					<main id="contenu" class="w-section section-imp">
