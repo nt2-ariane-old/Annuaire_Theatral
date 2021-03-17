@@ -76,3 +76,12 @@ function annuaire_theme_settings_add_new_colors()
 		// variable_set('color_' . $theme . '_palette', $palette);
 	}
 }
+
+// Work-around striping of the attributes by filterXssAdmin
+// @see https://www.drupal.org/project/bibcite/issues/3065463
+// @see https://redmine.koumbit.net/issues/35949
+function annuaire_preprocess_bibcite_citation(&$variables) {
+  // Move markup to children for bibcite references.
+  $variables['content']['#children'] = $variables['content']['#markup'];
+  unset($variables['content']['#markup']);
+}
